@@ -34,9 +34,9 @@ namespace Garland.Data.Modules
 
             // FCC shop credit
             var fccredit = _builder.CreateItem("fccredit");
-            fccredit.en = new JObject();
-            fccredit.en.description = "Credits for the enrichment of an Eorzean free company.";
-            fccredit.en.name = "Company Credit";
+            fccredit.chs = new JObject();
+            fccredit.chs.description = "Credits for the enrichment of an Eorzean free company.";
+            fccredit.chs.name = "Company Credit";
             fccredit.fr = new JObject();
             fccredit.fr.name = "Company Credit";
             fccredit.de = new JObject();
@@ -185,8 +185,8 @@ namespace Garland.Data.Modules
 
                 if (!isValid)
                 {
-                    var costNames = listing.Costs.Select(c => c.Count + " " + ((c.ItemKey.HasValue && _builder.Db.ItemsById.ContainsKey(c.ItemKey.Value)) ? _builder.Db.ItemsById[c.ItemKey.Value].en.name : c.ItemId));
-                    var rewardNames = listing.Rewards.Select(c => c.Count + " " + ((c.ItemKey.HasValue && _builder.Db.ItemsById.ContainsKey(c.ItemKey.Value)) ? _builder.Db.ItemsById[c.ItemKey.Value].en.name : c.ItemId));
+                    var costNames = listing.Costs.Select(c => c.Count + " " + ((c.ItemKey.HasValue && _builder.Db.ItemsById.ContainsKey(c.ItemKey.Value)) ? _builder.Db.ItemsById[c.ItemKey.Value].chs.name : c.ItemId));
+                    var rewardNames = listing.Rewards.Select(c => c.Count + " " + ((c.ItemKey.HasValue && _builder.Db.ItemsById.ContainsKey(c.ItemKey.Value)) ? _builder.Db.ItemsById[c.ItemKey.Value].chs.name : c.ItemId));
                     DatabaseBuilder.PrintLine($"Placeholder in '{shop.name}': {string.Join(", ", costNames)} -> {string.Join(", ", rewardNames)}");
                     gShop.GtShopListings.Remove(listing);
                     continue;

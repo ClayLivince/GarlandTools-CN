@@ -102,10 +102,7 @@ namespace Garland.Data.Output
             var data = new JObject(source);
 
             var strings = data[lang];
-            data.Remove("en");
-            data.Remove("fr");
-            data.Remove("de");
-            data.Remove("ja");
+            data.Remove("chs");
 
             foreach (JProperty prop in strings.Reverse())
                 data.AddFirst(new JProperty(prop));

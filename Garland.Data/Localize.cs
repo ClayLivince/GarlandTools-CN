@@ -23,10 +23,7 @@ namespace Garland.Data
             _data = realm.GameData;
             _langs = new Tuple<string, Language>[]
             {
-                Tuple.Create(Language.English.GetCode(), Language.English),
-                Tuple.Create(Language.Japanese.GetCode(), Language.Japanese),
-                Tuple.Create(Language.German.GetCode(), Language.German),
-                Tuple.Create(Language.French.GetCode(), Language.French)
+                Tuple.Create(Language.ChineseSimplified.GetCode(), Language.ChineseSimplified)
             };
         }
 

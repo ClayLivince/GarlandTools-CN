@@ -34,7 +34,7 @@ gt.settings = {
         notifications: 1,
         welcome: 0,
         filters: null,
-        lang: 'en',
+        lang: 'chs',
         listHeaderCollapsed: false,
         disableTouch: false,
         colorblind: 0,
@@ -143,7 +143,7 @@ gt.settings = {
             data.filters = $.extend({}, gt.settings.defaultSearchFilters);
 
         if (!data.lang)
-            data.lang = 'en';
+            data.lang = 'chs';
             
         if (!data.craftCategories)
             data.craftCategories = { Vendor: 1, Other: 1 };

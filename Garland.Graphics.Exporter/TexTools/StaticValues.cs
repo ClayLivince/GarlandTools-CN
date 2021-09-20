@@ -28,52 +28,58 @@ namespace Garland.Graphics.Exporter.TexTools
             switch (race)
             {
                 case XivRace.Hyur_Midlander_Male:
-                    return "Hyur Midlander Male";
+                    return "人族 中原之民 男性";
 
                 case XivRace.Hyur_Midlander_Female:
-                    return "Hyur Midlander Female";
+                    return "人族 中原之民 女性";
 
                 case XivRace.Hyur_Highlander_Male:
-                    return "Hyur Highlander Male";
+                    return "人族 高地之民 男性";
 
                 case XivRace.Hyur_Highlander_Female:
-                    return "Hyur Highlander Female";
+                    return "人族 高地之民 女性";
 
                 case XivRace.Elezen_Male:
-                    return "Elezen Male";
+                    return "精灵 男性";
 
                 case XivRace.Elezen_Female:
-                    return "Elezen Female";
+                    return "精灵 女性";
 
                 case XivRace.Miqote_Male:
-                    return "Miqo'te Male";
+                    return "猫魅 男性";
 
                 case XivRace.Miqote_Female:
-                    return "Miqo'te Female";
+                    return "猫魅 女性";
 
                 case XivRace.Roegadyn_Male:
-                    return "Roegadyn Male";
+                    return "鲁加 男性";
 
                 case XivRace.Roegadyn_Female:
-                    return "Roegadyn Female";
+                    return "鲁加 女性";
 
                 case XivRace.Lalafell_Male:
-                    return "Lalafell Male";
+                    return "拉拉菲尔 男性";
 
                 case XivRace.Lalafell_Female:
-                    return "Lalafell Female";
+                    return "拉拉菲尔 女性";
 
                 case XivRace.AuRa_Male:
-                    return "Au Ra Male";
+                    return "敖龙 男性";
 
                 case XivRace.AuRa_Female:
-                    return "Au Ra Female";
+                    return "敖龙 女性";
 
                 case XivRace.All_Races:
-                    return "ALL";
+                    return "全部";
 
                 case XivRace.Monster:
                     return "";
+
+                case XivRace.Hrothgar:
+                    return "硌狮";
+
+                case XivRace.Viera:
+                    return "维埃拉";
 
                 case XivRace.DemiHuman:
                 case XivRace.Hyur_Midlander_Male_NPC:
@@ -93,6 +99,7 @@ namespace Garland.Graphics.Exporter.TexTools
                 case XivRace.NPC_Male:
                 case XivRace.NPC_Female:
                 default:
+                    Console.WriteLine(race.ToString());
                     throw new NotImplementedException();
             }
         }

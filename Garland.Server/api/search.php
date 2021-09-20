@@ -50,15 +50,15 @@ function gtSanitizeSearchText($text) {
 }
 
 function gtValidateSearchLang($lang) {
-    if ($lang == "en" || $lang == "fr" || $lang == "de" || $lang == "ja")
-        return $lang;
-    return "en";
+    //if ($lang == "en" || $lang == "fr" || $lang == "de" || $lang == "ja")
+    //    return $lang;
+    return "chs";
 }
 
 function gtSearchSql($db, $text, $type, $filters) {
     // Parameters and extra criteria.
     $limit = 100;
-    $lang = gtValidateSearchLang(array_key_exists("lang", $filters) ? $filters["lang"] : "en");
+    $lang = gtValidateSearchLang(array_key_exists("lang", $filters) ? $filters["lang"] : "chs");
     $exact = array_key_exists("exact", $filters) ? true : false;
     $offset = array_key_exists("page", $filters) ? $filters["page"] * $limit : 0;
     $filterCriteria = "";

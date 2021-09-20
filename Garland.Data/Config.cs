@@ -10,7 +10,7 @@ namespace Garland.Data
 {
     public static class Config
     {
-        public const string BasePath = "..\\..\\..\\";
+        public const string BasePath = "..\\..\\..\\..\\";
         public const string ConfigPath = BasePath + "Config.json";
         public const string SupplementalPath = BasePath + "Supplemental\\";
         public const string UpdatesPath = BasePath + "Updates\\";
@@ -20,6 +20,7 @@ namespace Garland.Data
 
         // These values are configured in Config.json.
         public static string ConnectionString { get; private set; }
+        public static string TranslationConnectionString { get; private set; }
         public static string SapphireConnectionString { get; private set; }
         public static string GamePath { get; private set; }
         public static string FilesPath { get; private set; }
@@ -37,6 +38,7 @@ namespace Garland.Data
             dynamic values = JsonConvert.DeserializeObject(text);
 
             Config.ConnectionString = values.database;
+            Config.TranslationConnectionString = values.translationDatabase;
             Config.SapphireConnectionString = values.sapphireDatabase;
             Config.GamePath = values.gamePath;
             Config.FilesPath = values.files;

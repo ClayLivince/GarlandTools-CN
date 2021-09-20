@@ -20,12 +20,32 @@ namespace Garland.Data.Modules
         Dictionary<string, Tuple<int, int, int>> _hackFishingSpotLocations = new Dictionary<string, Tuple<int, int, int>>()
         {
             // Diadem fishing spots have no set coordinates.
-            ["Diadem Grotto"] = Tuple.Create(1647, 14, 34), // 158
-            ["Southern Diadem Lake"] = Tuple.Create(1647, 8, 30), // 149
-            ["Northern Diadem Lake"] = Tuple.Create(1647, 10, 9), // 151
-            ["Blustery Cloudtop"] = Tuple.Create(1647, 31, 11), // 152
-            ["Calm Cloudtop"] = Tuple.Create(1647, 28, 33), // 153
-            ["Swirling Cloudtop"] = Tuple.Create(1647, 13, 24), // 154
+            ["云冠洞穴"] = Tuple.Create(1647, 14, 34), // 158
+            ["云冠西南池"] = Tuple.Create(1647, 8, 30), // 149
+            ["云冠西北池"] = Tuple.Create(1647, 10, 9), // 151
+            ["狂风云海"] = Tuple.Create(1647, 31, 11), // 152
+            ["无风云海"] = Tuple.Create(1647, 28, 33), // 153
+            ["旋风云海"] = Tuple.Create(1647, 13, 24), // 154
+            ["摇风云海"] = Tuple.Create(3444, 30, 16), // 
+            ["息风云海"] = Tuple.Create(3444, 1, 1), // 
+
+            ["多玛飞地"] = Tuple.Create(2813, 8, 5), // 
+
+            ["加拉迪翁湾外海"] = Tuple.Create(3444, 11, 11), // 237
+            ["加拉迪翁湾外海幻海流"] = Tuple.Create(3444, 11, 11), // 238
+            ["梅尔托尔海峡南"] = Tuple.Create(3445, 11, 11), // 239
+            ["梅尔托尔海峡南幻海流"] = Tuple.Create(3445, 11, 11), // 240
+            ["罗塔诺海海面"] = Tuple.Create(3447, 11, 11), // 241
+            ["罗塔诺海海面幻海流"] = Tuple.Create(3447, 11, 11), // 242
+            ["梅尔托尔海峡北"] = Tuple.Create(3446, 11, 11), // 243
+            ["梅尔托尔海峡北幻海流"] = Tuple.Create(3446, 11, 11), // 244
+            ["谢尔达莱群岛近海"] = Tuple.Create(3641, 11, 11), // 246
+            ["谢尔达莱群岛近海幻海流"] = Tuple.Create(3641, 11, 11), // 247
+            ["绯汐海近海"] = Tuple.Create(3642, 11, 11), // 248
+            ["绯汐海近海幻海流"] = Tuple.Create(3642, 11, 11), // 249
+            ["罗斯利特湾近海"] = Tuple.Create(3643, 11, 11), // 250
+            ["罗斯利特湾近海幻海流"] = Tuple.Create(3643, 11, 11), // 251
+
         };
 
         HashSet<int> _hackExcludedFishingSpots = new HashSet<int>() {
@@ -129,12 +149,21 @@ namespace Garland.Data.Modules
             JArray currentNodeItems = null;
 
             var lines = Utils.Tsv(Path.Combine(Config.SupplementalPath, "FFXIV Data - Fishing.tsv"));
+            Clay.ClayMySQL clayManager = new Clay.ClayMySQL();
             foreach (var rLine in lines.Skip(1))
             {
                 // Line data
                 var name = rLine[0];
 
-                if (_fishingSpotsByName.TryGetValue(name, out var fishingSpot))
+                string nameChs = "Not Found";
+                try {
+                    nameChs = clayManager.getPlaceNameChs(name);
+                } catch (NotSupportedException e){
+                    //Console.WriteLine(e.Message);
+                    //Console.WriteLine(e.StackTrace);
+                }
+                
+                if (_fishingSpotsByName.TryGetValue(nameChs, out var fishingSpot))
                 {
                     currentNode = null;
                     currentNodeItems = null;
@@ -144,7 +173,7 @@ namespace Garland.Data.Modules
                 }
 
                 // Name may reference either fishing spot, spearfishing node, or fish - check here.
-                if (_builder.Db.SpearfishingNodesByName.TryGetValue(name, out var node))
+                if (_builder.Db.SpearfishingNodesByName.TryGetValue(nameChs, out var node))
                 {
                     currentFishingSpot = null;
                     currentFishingSpotItems = null;
@@ -161,18 +190,56 @@ namespace Garland.Data.Modules
                 var weather = rLine[5];
                 var predator = rLine[6];
                 var tug = rLine[7];
+
+                switch (tug) {
+
+                    case "Light": {
+                            tug = "轻杆";
+                            break;
+                        }
+                    case "Medium":
+                        {
+                            tug = "中杆";
+                            break;
+                        }
+                    case "Heavy":
+                        {
+                            tug = "重杆";
+                            break;
+                        }
+
+                }
+
                 var hookset = rLine[8];
+
+                switch (hookset) {
+                    case "Precision":
+                        {
+                            hookset = "精准提钩";
+                            break;
+                        }
+                    case "Powerful":
+                        {
+                            hookset = "强力提钩";
+                            break;
+                        }
+                }
+
                 var gathering = rLine[9];
                 var snagging = rLine[10];
                 var fishEyes = rLine[11];
                 var ff14anglerId = rLine[12];
 
                 Console.WriteLine(name);
+                var itemID = 0;
 
                 // Fill item fishing information.
                 try
                 {
-                    var item = GarlandDatabase.Instance.ItemsByName[name];
+                    itemID = clayManager.getItemID(name);
+                    var item = GarlandDatabase.Instance.ItemsById[itemID];
+                    //var item = GarlandDatabase.Instance.ItemsByName[name];
+
                     _fishItems.Add(item);
                     // Some quest fish may not have been previously recognized as a fish.
                     if (item.fish == null)
@@ -202,18 +269,20 @@ namespace Garland.Data.Modules
                     }
                     else if (!string.IsNullOrEmpty(bait))
                     {
+                        bait = clayManager.getItemNameChs(bait.Trim());
                         spot.tmpBait = bait;
 
                         // If not otherwise specified, fish should inherit the time
                         // and weather restrictions of restricted bait (like predators).
+                        //if (!_builder.Db.ItemsByName.TryGetValue(bait, out var baitItem))
                         if (!_builder.Db.ItemsByName.TryGetValue(bait, out var baitItem))
-                            throw new InvalidOperationException($"Can't find bait {bait} for {name} at {currentFishingSpot.en.name}.  Is the spelling correct?");
+                                throw new InvalidOperationException($"Can't find bait {bait} for {name} at {currentFishingSpot.chs.name}.  Is the spelling correct?");
 
                         if (baitItem.fish != null)
                         {
                             dynamic baitSpotView = ((JArray)baitItem.fish?.spots)?.FirstOrDefault(s => s["spot"] == spot.spot && s["node"] == spot.node);
                             if (baitSpotView == null)
-                                throw new InvalidOperationException($"Can't find mooch {bait} for {name} at {currentFishingSpot.en.name}.  Did you forget to add it to the spot?");
+                                throw new InvalidOperationException($"Can't find mooch {bait} for {name} at {currentFishingSpot.chs.name}.  Did you forget to add it to the spot?");
 
                             InheritConditions(spot, baitSpotView, weather, transition, start, end);
                         }
@@ -233,6 +302,9 @@ namespace Garland.Data.Modules
                     if (transition != "")
                     {
                         var transitionList = transition.Split(comma, StringSplitOptions.None);
+                        for (int i = 0; i < transitionList.Length; i++) {
+                            transitionList[i] = clayManager.getWeatherChs(transitionList[i]);
+                        }
                         CheckWeather(transitionList);
                         spot.transition = new JArray(transitionList);
                     }
@@ -240,6 +312,10 @@ namespace Garland.Data.Modules
                     if (weather != "")
                     {
                         var weatherList = weather.Split(comma, StringSplitOptions.None);
+                        for (int i = 0; i < weatherList.Length; i++)
+                        {
+                            weatherList[i] = clayManager.getWeatherChs(weatherList[i]);
+                        }
                         CheckWeather(weatherList);
                         spot.weather = new JArray(weatherList);
                     }
@@ -252,11 +328,13 @@ namespace Garland.Data.Modules
                         for (var i = 0; i < tokens.Length; i += 2)
                         {
                             var predatorName = tokens[i];
-                            spot.predator.Add(BuildPredator(predatorName, tokens[i + 1]));
+                            var predatorID = clayManager.getItemID(predatorName);
+                            spot.predator.Add(BuildPredator(predatorID, tokens[i + 1]));
 
                             // If not otherwise specified, fish should inherit the time
                             // and weather restrictions of restricted predators (like bait).
-                            var predatorItem = _builder.Db.ItemsByName[predatorName];
+                            //var predatorItem = _builder.Db.ItemsByName[predatorName];
+                            var predatorItem = _builder.Db.ItemsById[predatorID];
                             if (predatorItem.fish != null)
                             {
                                 var predatorSpots = (JArray)predatorItem.fish.spots;
@@ -277,7 +355,7 @@ namespace Garland.Data.Modules
 
                     // Other properties.
                     if (hookset != "")
-                        spot.hookset = hookset + " Hookset";
+                        spot.hookset = hookset;
                     if (tug != "")
                         spot.tug = tug;
                     if (gathering != "")
@@ -323,8 +401,16 @@ namespace Garland.Data.Modules
                 catch (KeyNotFoundException e)
                 {
                     Console.WriteLine("No item found with name" + name);
+                    Console.WriteLine("Item id was " + itemID);
                 }
+                catch (NotSupportedException notSupported)
+                {
+                    Console.WriteLine("No item found with name" + name);
+                    Console.WriteLine(notSupported.StackTrace);
+                }
+                
             }
+            clayManager.Stop();
         }
 
         void InheritConditions(dynamic spot, dynamic inheritSpot, string weather, string transition, string start, string end)
@@ -447,7 +533,7 @@ namespace Garland.Data.Modules
                         foreach (var subBaitId in baitSpot.bait)
                         {
                             var subBaitFishItem = _builder.Db.ItemsById[(int)subBaitId];
-                            yield return BuildBait((string)subBaitFishItem.en.name);
+                            yield return BuildBait((string)subBaitFishItem.chs.name);
                         }
                     }
                 }
@@ -462,10 +548,10 @@ namespace Garland.Data.Modules
                 throw new InvalidOperationException($"Bad weather list: {string.Join(", ", weatherList)}");
         }
 
-        dynamic BuildPredator(string name, string amount)
+        dynamic BuildPredator(int id, string amount)
         {
             dynamic obj = new JObject();
-            obj.id = (int)GarlandDatabase.Instance.ItemsByName[name].id;
+            obj.id = id;
             obj.amount = int.Parse(amount);
             return obj;
         }
@@ -475,10 +561,10 @@ namespace Garland.Data.Modules
             var predatorItem = GarlandDatabase.Instance.ItemsById[(int)predator.id];
 
             if (predatorItem.fish == null)
-                throw new InvalidOperationException("Predator " + predatorItem.en.name + " has no fishing data.");
+                throw new InvalidOperationException("Predator " + predatorItem.chs.name + " has no fishing data.");
 
             dynamic view = new JObject();
-            view.name = predatorItem.en.name;
+            view.name = predatorItem.chs.name;
             view.predatorAmount = predator.amount;
 
             // Find the fishing spot for this predator that matches the current spot.
@@ -487,7 +573,7 @@ namespace Garland.Data.Modules
             foreach (var baitId in predatorSpot.bait)
             {
                 var bait = GarlandDatabase.Instance.ItemsById[(int)baitId];
-                view.bait.Add(bait.en.name);
+                view.bait.Add(bait.chs.name);
                 GarlandDatabase.Instance.AddReference(fishItem, "item", (int)baitId, false);
             }
 
@@ -503,7 +589,7 @@ namespace Garland.Data.Modules
             // Convert item fish data into a view for Bell/ffxivfisher.
             dynamic view = new JObject();
 
-            view.name = item.en.name;
+            view.name = item.chs.name;
             view.patch = item.patch;
 
             if (spotView.snagging != null)
@@ -546,7 +632,7 @@ namespace Garland.Data.Modules
             view.func = "fish";
             view.rarity = item.rarity;
 
-            view.title = fishingSpot.en.name;
+            view.title = fishingSpot.chs.name;
             view.category = GetFishingSpotCategoryName((int)fishingSpot.category);
             view.spot = (int)spotView.spot;
             view.lvl = fishingSpot.lvl;
@@ -569,13 +655,13 @@ namespace Garland.Data.Modules
         {
             switch (name)
             {
-                case "Old Gridania":
-                case "New Gridania":
-                    return "Gridania";
+                case "格里达尼亚旧街":
+                case "格里达尼亚新街":
+                    return "格里达尼亚";
 
-                case "Limsa Lominsa Lower Decks":
-                case "Limsa Lominsa Upper Decks":
-                    return "Limsa Lominsa";
+                case "利姆萨·罗敏萨下层甲板":
+                case "利姆萨·罗敏萨上层甲板":
+                    return "利姆萨·罗敏萨";
             }
 
             return name;
@@ -667,14 +753,14 @@ namespace Garland.Data.Modules
         {
             switch (key)
             {
-                case 0: return "Ocean Fishing";
-                case 1: return "Freshwater Fishing";
-                case 2: return "Dunefishing";
-                case 3: return "Skyfishing";
-                case 4: return "Cloudfishing";
-                case 5: return "Hellfishing";
-                case 6: return "Aetherfishing";
-                case 7: return "Saltfishing";
+                case 0: return "海洋垂钓";
+                case 1: return "淡水垂钓";
+                case 2: return "沙海垂钓";
+                case 3: return "浮岛垂钓";
+                case 4: return "云海垂钓";
+                case 5: return "熔岩垂钓";
+                case 6: return "魔泉垂钓";
+                case 7: return "盐湖垂钓";
                 default: throw new NotImplementedException();
             }
         }

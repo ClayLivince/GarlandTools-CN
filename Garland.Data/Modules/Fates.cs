@@ -28,6 +28,7 @@ namespace Garland.Data.Modules
         void ImportSupplementalData()
         {
             var lines = Utils.Tsv(Path.Combine(Config.SupplementalPath, "FFXIV Data - Fates.tsv"));
+            Clay.ClayMySQL clayManager = new Clay.ClayMySQL();
             foreach (var line in lines.Skip(1))
             {
                 var name = line[0];
@@ -42,7 +43,11 @@ namespace Garland.Data.Modules
                 fate.id = id;
 
                 if (zone != "")
-                    fate.zoneid = _builder.Db.LocationIdsByName[zone];
+                {
+                    //fate.zoneid = _builder.Db.LocationIdsByName[zone];
+                    fate.zoneid = clayManager.getPlaceNameID(zone);
+                }
+                    
 
                 if (coords != "")
                     fate.coords = new JArray(Utils.FloatComma(coords));
@@ -52,7 +57,8 @@ namespace Garland.Data.Modules
                     var rewardItemNames = rewardItemNameStr.Split(_separator, StringSplitOptions.RemoveEmptyEntries);
                     foreach (var rewardItemName in rewardItemNames)
                     {
-                        var item = _builder.Db.ItemsByName[rewardItemName];
+                        //var item = _builder.Db.ItemsByName[rewardItemName];
+                        var item = _builder.Db.ItemsById[clayManager.getItemID(rewardItemName)];
                         if (item.fates == null)
                             item.fates = new JArray();
                         item.fates.Add(id);
@@ -66,6 +72,7 @@ namespace Garland.Data.Modules
 
                 _fateDataById[(int)fate.id] = fate;
             }
+            clayManager.Stop();
         }
 
         void BuildFate(Game.Fate sFate)

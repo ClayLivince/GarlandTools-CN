@@ -230,9 +230,11 @@ namespace Garland.Data.Modules
             var viewsByNodeId = new Dictionary<int, dynamic>();
 
             var lines = Utils.Tsv(System.IO.Path.Combine(Config.SupplementalPath, "FFXIV Data - Nodes.tsv"));
+            Clay.ClayMySQL clayManager = new Clay.ClayMySQL();
             foreach (var line in lines.Skip(1))
             {
                 var itemName = line[0];
+                var itemId = clayManager.getItemID(itemName);
                 var slot = line[1];
                 var nodeId = int.Parse(line[2]);
                 var times = Utils.IntComma(line[3]);
@@ -240,7 +242,10 @@ namespace Garland.Data.Modules
                 var coords = Utils.FloatComma(line[5]);
                 var type = line[6];
 
-                var item = _builder.Db.ItemsByName[itemName];
+                var item = _builder.Db.ItemsById[itemId];
+
+                itemName = item.chs.name;
+
 
                 // First match this data to the node object.
                 try
@@ -314,6 +319,7 @@ namespace Garland.Data.Modules
                     Console.WriteLine(nodeId);
                 }
             }
+            clayManager.Stop();
         }
 
         static string TypeToName(int gatheringType)

@@ -4,19 +4,19 @@
     "func": "node",
     "items": [
       {
-        "item": "Spruce Log",
+        "item": "云杉原木",
         "icon": 22413,
         "id": 5395,
         "slot": "6"
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
         "icon": 20407,
         "id": 10335,
         "slot": "?"
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
         "icon": 20019,
         "id": 10099,
         "slot": "?"
@@ -26,8 +26,8 @@
     "time": [
       9
     ],
-    "title": "Providence Point",
-    "zone": "Coerthas Central Highlands",
+    "title": "神意之地",
+    "zone": "库尔札斯中央高地",
     "coords": [
       28.0,
       13.0
@@ -43,7 +43,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Vampire Plant",
+        "item": "吸血枝",
         "icon": 25001,
         "id": 5547,
         "slot": "8"
@@ -53,8 +53,8 @@
     "time": [
       13
     ],
-    "title": "Dragonhead",
-    "zone": "Coerthas Central Highlands",
+    "title": "巨龙首",
+    "zone": "库尔札斯中央高地",
     "coords": [
       26.0,
       22.0
@@ -70,7 +70,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Thavnairian Mistletoe",
+        "item": "萨维奈槲寄生",
         "icon": 25001,
         "id": 5537,
         "slot": "2"
@@ -80,8 +80,8 @@
     "time": [
       17
     ],
-    "title": "Whitebrim",
-    "zone": "Coerthas Central Highlands",
+    "title": "白云崖",
+    "zone": "库尔札斯中央高地",
     "coords": [
       7.0,
       11.0
@@ -97,25 +97,25 @@
     "func": "node",
     "items": [
       {
-        "item": "Prickly Pineapple Seeds",
+        "item": "多刺菠萝种子",
         "icon": 27457,
         "id": 7734,
         "slot": "1"
       },
       {
-        "item": "Prickly Pineapple",
+        "item": "多刺菠萝",
         "icon": 25303,
         "id": 4816,
         "slot": "4"
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
         "icon": 20407,
         "id": 10335,
         "slot": "?"
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
         "icon": 20019,
         "id": 10099,
         "slot": "?"
@@ -125,8 +125,8 @@
     "time": [
       9
     ],
-    "title": "Bloodshore",
-    "zone": "Eastern La Noscea",
+    "title": "鲜血滨",
+    "zone": "东拉诺西亚",
     "coords": [
       30.0,
       27.0
@@ -142,49 +142,49 @@
     "func": "node",
     "items": [
       {
-        "item": "Lightning Cluster",
+        "item": "雷之晶簇",
         "icon": 20017,
         "id": 18,
         "slot": "2"
       },
       {
-        "item": "Fire Cluster",
+        "item": "火之晶簇",
         "icon": 20013,
         "id": 14,
         "slot": "3"
       },
       {
-        "item": "Wind Cluster",
+        "item": "风之晶簇",
         "icon": 20016,
         "id": 16,
         "slot": "4"
       },
       {
-        "item": "Water Cluster",
+        "item": "水之晶簇",
         "icon": 20014,
         "id": 19,
         "slot": "5"
       },
       {
-        "item": "Ice Cluster",
+        "item": "冰之晶簇",
         "icon": 20015,
         "id": 15,
         "slot": "6"
       },
       {
-        "item": "Earth Cluster",
+        "item": "土之晶簇",
         "icon": 20018,
         "id": 17,
         "slot": "7"
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
         "icon": 20407,
         "id": 10335,
         "slot": "?"
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
         "icon": 20019,
         "id": 10099,
         "slot": "?"
@@ -195,8 +195,8 @@
       5,
       9
     ],
-    "title": "North Silvertear",
-    "zone": "Mor Dhona",
+    "title": "银泪湖北岸",
+    "zone": "摩杜纳",
     "coords": [
       32.0,
       11.0
@@ -212,19 +212,19 @@
     "func": "node",
     "items": [
       {
-        "item": "Mazlaya Greens",
+        "item": "马兹拉雅草",
         "icon": 25016,
         "id": 10098,
         "slot": "2"
       },
       {
-        "item": "Silkworm Cocoon",
+        "item": "蚕茧",
         "icon": 21661,
         "id": 5350,
         "slot": "4"
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
         "icon": 20019,
         "id": 10099,
         "slot": "?"
@@ -234,8 +234,8 @@
     "time": [
       1
     ],
-    "title": "Nine Ivies",
-    "zone": "East Shroud",
+    "title": "九藤",
+    "zone": "黑衣森林东部林区",
     "coords": [
       22.0,
       26.0
@@ -251,13 +251,13 @@
     "func": "node",
     "items": [
       {
-        "item": "Trillium",
+        "item": "延龄花",
         "icon": 22627,
         "id": 5545,
         "slot": "1"
       },
       {
-        "item": "Mazlaya Greens",
+        "item": "马兹拉雅草",
         "icon": 25016,
         "id": 10098,
         "slot": "2"
@@ -267,8 +267,8 @@
     "time": [
       5
     ],
-    "title": "The Bramble Patch",
-    "zone": "East Shroud",
+    "title": "荆棘森",
+    "zone": "黑衣森林东部林区",
     "coords": [
       17.0,
       19.0
@@ -284,19 +284,19 @@
     "func": "node",
     "items": [
       {
-        "item": "Mazlaya Greens",
+        "item": "马兹拉雅草",
         "icon": 25016,
         "id": 10098,
         "slot": "2"
       },
       {
-        "item": "Kidragora",
+        "item": "小小蔓德拉",
         "icon": 59442,
         "id": 6209,
         "slot": "7"
       },
       {
-        "item": "Trillium Bulb",
+        "item": "延龄草的球根",
         "icon": 22623,
         "id": 5546,
         "slot": "8"
@@ -306,8 +306,8 @@
     "time": [
       21
     ],
-    "title": "The Honey Yard",
-    "zone": "East Shroud",
+    "title": "蜜场",
+    "zone": "黑衣森林东部林区",
     "coords": [
       13.0,
       23.0
@@ -323,13 +323,13 @@
     "func": "node",
     "items": [
       {
-        "item": "Honey Lemon Seeds",
+        "item": "蜜柠檬种子",
         "icon": 27457,
         "id": 7733,
         "slot": "1"
       },
       {
-        "item": "Honey Lemon",
+        "item": "蜜柠檬",
         "icon": 25305,
         "id": 6147,
         "slot": "2"
@@ -339,8 +339,8 @@
     "time": [
       5
     ],
-    "title": "Bloodshore",
-    "zone": "Eastern La Noscea",
+    "title": "鲜血滨",
+    "zone": "东拉诺西亚",
     "coords": [
       28.0,
       32.0
@@ -356,13 +356,13 @@
     "func": "node",
     "items": [
       {
-        "item": "Dzemael Tomato Seeds",
+        "item": "泽梅尔番茄种子",
         "icon": 27455,
         "id": 7724,
         "slot": "1"
       },
       {
-        "item": "Dzemael Tomato",
+        "item": "泽梅尔番茄",
         "icon": 25209,
         "id": 6148,
         "slot": "3"
@@ -372,8 +372,8 @@
     "time": [
       13
     ],
-    "title": "Raincatcher Gully",
-    "zone": "Eastern La Noscea",
+    "title": "接雨草树林",
+    "zone": "东拉诺西亚",
     "coords": [
       16.0,
       27.0
@@ -389,25 +389,25 @@
     "func": "node",
     "items": [
       {
-        "item": "Mazlaya Greens",
+        "item": "马兹拉雅草",
         "icon": 25016,
         "id": 10098,
         "slot": "2"
       },
       {
-        "item": "Black Truffle",
+        "item": "黑松露",
         "icon": 25403,
         "id": 4800,
         "slot": "7"
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
         "icon": 20407,
         "id": 10335,
         "slot": "?"
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
         "icon": 20019,
         "id": 10099,
         "slot": "?"
@@ -417,8 +417,8 @@
     "time": [
       13
     ],
-    "title": "Drybone",
-    "zone": "Eastern Thanalan",
+    "title": "枯骨",
+    "zone": "东萨纳兰",
     "coords": [
       12.0,
       15.0
@@ -434,25 +434,25 @@
     "func": "node",
     "items": [
       {
-        "item": "Gregarious Worm",
+        "item": "群居蠕虫",
         "icon": 27019,
         "id": 10095,
         "slot": "1"
       },
       {
-        "item": "Darksteel Ore",
+        "item": "玄铁矿",
         "icon": 21205,
         "id": 5121,
         "slot": "3"
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
         "icon": 20407,
         "id": 10335,
         "slot": "?"
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
         "icon": 20019,
         "id": 10099,
         "slot": "?"
@@ -462,8 +462,8 @@
     "time": [
       1
     ],
-    "title": "Dragonhead",
-    "zone": "Coerthas Central Highlands",
+    "title": "巨龙首",
+    "zone": "库尔札斯中央高地",
     "coords": [
       27.0,
       19.0
@@ -479,31 +479,31 @@
     "func": "node",
     "items": [
       {
-        "item": "Gregarious Worm",
+        "item": "群居蠕虫",
         "icon": 27019,
         "id": 10095,
         "slot": "1"
       },
       {
-        "item": "Gold Ore",
+        "item": "金矿",
         "icon": 21212,
         "id": 5118,
         "slot": "6"
       },
       {
-        "item": "Coblyn Larva",
+        "item": "矿爬虫虫",
         "icon": 59433,
         "id": 6199,
         "slot": "7"
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
         "icon": 20407,
         "id": 10335,
         "slot": "?"
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
         "icon": 20019,
         "id": 10099,
         "slot": "?"
@@ -513,8 +513,8 @@
     "time": [
       9
     ],
-    "title": "The Burning Wall",
-    "zone": "Eastern Thanalan",
+    "title": "火墙",
+    "zone": "东萨纳兰",
     "coords": [
       28.0,
       22.0
@@ -530,13 +530,13 @@
     "func": "node",
     "items": [
       {
-        "item": "Volcanic Rock Salt",
+        "item": "拉诺西亚岩盐",
         "icon": 22617,
         "id": 6152,
         "slot": "1"
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
         "icon": 20019,
         "id": 10099,
         "slot": "?"
@@ -546,8 +546,8 @@
     "time": [
       17
     ],
-    "title": "Raincatcher Gully",
-    "zone": "Eastern La Noscea",
+    "title": "接雨草树林",
+    "zone": "东拉诺西亚",
     "coords": [
       18.0,
       32.0
@@ -563,19 +563,19 @@
     "func": "node",
     "items": [
       {
-        "item": "Astral Rock",
+        "item": "星性岩",
         "icon": 21251,
         "id": 5158,
         "slot": "7"
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
         "icon": 20407,
         "id": 10335,
         "slot": "?"
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
         "icon": 20019,
         "id": 10099,
         "slot": "?"
@@ -585,8 +585,8 @@
     "time": [
       21
     ],
-    "title": "Dragonhead",
-    "zone": "Coerthas Central Highlands",
+    "title": "巨龙首",
+    "zone": "库尔札斯中央高地",
     "coords": [
       23.0,
       26.0
@@ -602,19 +602,19 @@
     "func": "node",
     "items": [
       {
-        "item": "Gold Sand",
+        "item": "金沙",
         "icon": 21214,
         "id": 5273,
         "slot": "2"
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
         "icon": 20407,
         "id": 10335,
         "slot": "?"
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
         "icon": 20019,
         "id": 10099,
         "slot": "?"
@@ -624,8 +624,8 @@
     "time": [
       5
     ],
-    "title": "Wellwick Wood",
-    "zone": "Eastern Thanalan",
+    "title": "新植林",
+    "zone": "东萨纳兰",
     "coords": [
       25.0,
       23.0
@@ -641,49 +641,49 @@
     "func": "node",
     "items": [
       {
-        "item": "Lightning Cluster",
+        "item": "雷之晶簇",
         "icon": 20017,
         "id": 18,
         "slot": "2"
       },
       {
-        "item": "Fire Cluster",
+        "item": "火之晶簇",
         "icon": 20013,
         "id": 14,
         "slot": "3"
       },
       {
-        "item": "Wind Cluster",
+        "item": "风之晶簇",
         "icon": 20016,
         "id": 16,
         "slot": "4"
       },
       {
-        "item": "Water Cluster",
+        "item": "水之晶簇",
         "icon": 20014,
         "id": 19,
         "slot": "5"
       },
       {
-        "item": "Ice Cluster",
+        "item": "冰之晶簇",
         "icon": 20015,
         "id": 15,
         "slot": "6"
       },
       {
-        "item": "Earth Cluster",
+        "item": "土之晶簇",
         "icon": 20018,
         "id": 17,
         "slot": "7"
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
         "icon": 20407,
         "id": 10335,
         "slot": "?"
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
         "icon": 20019,
         "id": 10099,
         "slot": "?"
@@ -694,8 +694,8 @@
       17,
       21
     ],
-    "title": "North Silvertear",
-    "zone": "Mor Dhona",
+    "title": "银泪湖北岸",
+    "zone": "摩杜纳",
     "coords": [
       27.0,
       10.0
@@ -711,19 +711,19 @@
     "func": "node",
     "items": [
       {
-        "item": "Scarlet Sap",
+        "item": "绯红树汁",
         "icon": 22601,
         "id": 7590,
         "slot": "4"
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
         "icon": 20407,
         "id": 10335,
         "slot": "?"
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
         "icon": 20019,
         "id": 10099,
         "slot": "?"
@@ -733,8 +733,8 @@
     "time": [
       3
     ],
-    "title": "Alder Springs",
-    "zone": "North Shroud",
+    "title": "桤木泉",
+    "zone": "黑衣森林北部林区",
     "coords": [
       16.0,
       28.0
@@ -750,7 +750,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Apricot",
+        "item": "黄杏",
         "icon": 25317,
         "id": 7592,
         "slot": "2"
@@ -760,8 +760,8 @@
     "time": [
       9
     ],
-    "title": "Summerford",
-    "zone": "Middle La Noscea",
+    "title": "盛夏滩",
+    "zone": "中拉诺西亚",
     "coords": [
       19.0,
       16.0
@@ -777,25 +777,25 @@
     "func": "node",
     "items": [
       {
-        "item": "Blood Orange",
+        "item": "鲜血橙",
         "icon": 25312,
         "id": 7595,
         "slot": "2"
       },
       {
-        "item": "Bamboo Stick",
+        "item": "竹材",
         "icon": 22451,
         "id": 5365,
         "slot": "6"
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
         "icon": 20407,
         "id": 10335,
         "slot": "?"
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
         "icon": 20019,
         "id": 10099,
         "slot": "?"
@@ -805,8 +805,8 @@
     "time": [
       7
     ],
-    "title": "Bronze Lake",
-    "zone": "Upper La Noscea",
+    "title": "石绿湖",
+    "zone": "拉诺西亚高地",
     "coords": [
       29.0,
       25.0
@@ -822,25 +822,25 @@
     "func": "node",
     "items": [
       {
-        "item": "Mazlaya Greens",
+        "item": "马兹拉雅草",
         "icon": 25016,
         "id": 10098,
         "slot": "2"
       },
       {
-        "item": "Shroud Tea Leaves",
+        "item": "提诺尔卡茶叶",
         "icon": 25020,
         "id": 7591,
         "slot": "6"
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
         "icon": 20407,
         "id": 10335,
         "slot": "?"
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
         "icon": 20019,
         "id": 10099,
         "slot": "?"
@@ -850,8 +850,8 @@
     "time": [
       2
     ],
-    "title": "Sorrel Haven",
-    "zone": "Central Shroud",
+    "title": "酸模避风港",
+    "zone": "黑衣森林中央林区",
     "coords": [
       15.0,
       19.0
@@ -867,25 +867,25 @@
     "func": "node",
     "items": [
       {
-        "item": "Mazlaya Greens",
+        "item": "马兹拉雅草",
         "icon": 25016,
         "id": 10098,
         "slot": "2"
       },
       {
-        "item": "La Noscean Leek",
+        "item": "拉诺西亚韭菜",
         "icon": 25216,
         "id": 7593,
         "slot": "6"
       },
       {
-        "item": "Waterfowl Feather",
+        "item": "水鸟之羽",
         "icon": 21902,
         "id": 8024,
         "slot": "?"
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
         "icon": 20019,
         "id": 10099,
         "slot": "?"
@@ -895,8 +895,8 @@
     "time": [
       8
     ],
-    "title": "Quarterstone",
-    "zone": "Western La Noscea",
+    "title": "四分石地",
+    "zone": "西拉诺西亚",
     "coords": [
       34.0,
       28.0
@@ -912,25 +912,25 @@
     "func": "node",
     "items": [
       {
-        "item": "Mazlaya Greens",
+        "item": "马兹拉雅草",
         "icon": 25016,
         "id": 10098,
         "slot": "2"
       },
       {
-        "item": "Young Cieldalaes Spinach",
+        "item": "谢尔达莱嫩菠菜",
         "icon": 25206,
         "id": 7594,
         "slot": "6"
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
         "icon": 20407,
         "id": 10335,
         "slot": "?"
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
         "icon": 20019,
         "id": 10099,
         "slot": "?"
@@ -940,8 +940,8 @@
     "time": [
       6
     ],
-    "title": "Cedarwood",
-    "zone": "Lower La Noscea",
+    "title": "雪松原",
+    "zone": "拉诺西亚低地",
     "coords": [
       32.0,
       11.0
@@ -957,37 +957,37 @@
     "func": "node",
     "items": [
       {
-        "item": "Gregarious Worm",
+        "item": "群居蠕虫",
         "icon": 27019,
         "id": 10095,
         "slot": "1"
       },
       {
-        "item": "Ferberite",
+        "item": "钨铁矿",
         "icon": 21203,
         "id": 7588,
         "slot": "6"
       },
       {
-        "item": "Raw Topaz",
+        "item": "黄玉原石",
         "icon": 21453,
         "id": 5149,
         "slot": "7"
       },
       {
-        "item": "Raw Iolite",
+        "item": "堇青石原石",
         "icon": 21453,
         "id": 5150,
         "slot": "8"
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
         "icon": 20407,
         "id": 10335,
         "slot": "?"
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
         "icon": 20019,
         "id": 10099,
         "slot": "?"
@@ -997,8 +997,8 @@
     "time": [
       3
     ],
-    "title": "Raubahn's Push",
-    "zone": "Northern Thanalan",
+    "title": "劳班缓冲地",
+    "zone": "北萨纳兰",
     "coords": [
       17.0,
       20.0
@@ -1014,37 +1014,37 @@
     "func": "node",
     "items": [
       {
-        "item": "Gregarious Worm",
+        "item": "群居蠕虫",
         "icon": 27019,
         "id": 10095,
         "slot": "1"
       },
       {
-        "item": "Native Gold",
+        "item": "自然金",
         "icon": 20816,
         "id": 7589,
         "slot": "6"
       },
       {
-        "item": "Raw Emerald",
+        "item": "祖母绿原石",
         "icon": 21453,
         "id": 5148,
         "slot": "7"
       },
       {
-        "item": "Raw Diamond",
+        "item": "钻石原石",
         "icon": 21453,
         "id": 5147,
         "slot": "8"
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
         "icon": 20407,
         "id": 10335,
         "slot": "?"
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
         "icon": 20019,
         "id": 10099,
         "slot": "?"
@@ -1054,8 +1054,8 @@
     "time": [
       4
     ],
-    "title": "Black Brush",
-    "zone": "Central Thanalan",
+    "title": "黑尘",
+    "zone": "中萨纳兰",
     "coords": [
       25.0,
       16.0
@@ -1071,31 +1071,31 @@
     "func": "node",
     "items": [
       {
-        "item": "Gregarious Worm",
+        "item": "群居蠕虫",
         "icon": 27019,
         "id": 10095,
         "slot": "1"
       },
       {
-        "item": "Raw Ruby",
+        "item": "红宝石原石",
         "icon": 21453,
         "id": 5146,
         "slot": "7"
       },
       {
-        "item": "Raw Sapphire",
+        "item": "蓝宝石原石",
         "icon": 21453,
         "id": 5151,
         "slot": "8"
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
         "icon": 20407,
         "id": 10335,
         "slot": "?"
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
         "icon": 20019,
         "id": 10099,
         "slot": "?"
@@ -1105,8 +1105,8 @@
     "time": [
       18
     ],
-    "title": "Moraby Bay",
-    "zone": "Lower La Noscea",
+    "title": "莫拉比湾",
+    "zone": "拉诺西亚低地",
     "coords": [
       23.0,
       21.0
@@ -1122,25 +1122,25 @@
     "func": "node",
     "items": [
       {
-        "item": "Fire Cluster",
+        "item": "火之晶簇",
         "icon": 20013,
         "id": 14,
         "slot": "3"
       },
       {
-        "item": "Grade 3 La Noscean Topsoil",
+        "item": "3级拉诺西亚土壤",
         "icon": 27403,
         "id": 7760,
         "slot": "8"
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
         "icon": 20407,
         "id": 10335,
         "slot": "?"
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
         "icon": 20019,
         "id": 10099,
         "slot": "?"
@@ -1150,8 +1150,8 @@
     "time": [
       19
     ],
-    "title": "Zephyr Drift",
-    "zone": "Middle La Noscea",
+    "title": "和风流地",
+    "zone": "中拉诺西亚",
     "coords": [
       24.0,
       27.0
@@ -1167,25 +1167,25 @@
     "func": "node",
     "items": [
       {
-        "item": "Umbral Rock",
+        "item": "灵性岩",
         "icon": 21213,
         "id": 7610,
         "slot": "7"
       },
       {
-        "item": "Grade 3 Shroud Topsoil",
+        "item": "3级黑衣森林土壤",
         "icon": 27406,
         "id": 7763,
         "slot": "8"
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
         "icon": 20407,
         "id": 10335,
         "slot": "?"
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
         "icon": 20019,
         "id": 10099,
         "slot": "?"
@@ -1195,8 +1195,8 @@
     "time": [
       6
     ],
-    "title": "Lower Paths",
-    "zone": "South Shroud",
+    "title": "低径",
+    "zone": "黑衣森林南部林区",
     "coords": [
       18.0,
       31.0
@@ -1212,25 +1212,25 @@
     "func": "node",
     "items": [
       {
-        "item": "Water Cluster",
+        "item": "水之晶簇",
         "icon": 20014,
         "id": 19,
         "slot": "5"
       },
       {
-        "item": "Grade 3 Thanalan Topsoil",
+        "item": "3级萨纳兰土壤",
         "icon": 27409,
         "id": 7766,
         "slot": "8"
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
         "icon": 20407,
         "id": 10335,
         "slot": "?"
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
         "icon": 20019,
         "id": 10099,
         "slot": "?"
@@ -1240,8 +1240,8 @@
     "time": [
       5
     ],
-    "title": "Hammerlea",
-    "zone": "Western Thanalan",
+    "title": "金锤台地",
+    "zone": "西萨纳兰",
     "coords": [
       19.0,
       28.0
@@ -1257,19 +1257,19 @@
     "func": "node",
     "items": [
       {
-        "item": "Fragrant Log",
+        "item": "黑衣香木",
         "icon": 22415,
         "id": 7611,
         "slot": "6"
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
         "icon": 20407,
         "id": 10335,
         "slot": "?"
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
         "icon": 20019,
         "id": 10099,
         "slot": "?"
@@ -1279,8 +1279,8 @@
     "time": [
       2
     ],
-    "title": "Upper Paths",
-    "zone": "South Shroud",
+    "title": "高径",
+    "zone": "黑衣森林南部林区",
     "coords": [
       18.0,
       23.0
@@ -1296,7 +1296,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Redolent Log",
+        "item": "高级黑衣香木",
         "icon": 22415,
         "id": 8031,
         "slot": "6"
@@ -1306,8 +1306,8 @@
     "time": [
       6
     ],
-    "title": "Greentear",
-    "zone": "Central Shroud",
+    "title": "翠泪择伐区",
+    "zone": "黑衣森林中央林区",
     "coords": [
       30.0,
       21.0
@@ -1323,7 +1323,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Antumbral Rock",
+        "item": "强灵性岩",
         "icon": 21213,
         "id": 8030,
         "slot": "7"
@@ -1333,8 +1333,8 @@
     "time": [
       2
     ],
-    "title": "Wellwick Wood",
-    "zone": "Eastern Thanalan",
+    "title": "新植林",
+    "zone": "东萨纳兰",
     "coords": [
       26.0,
       18.0
@@ -1350,25 +1350,25 @@
     "func": "node",
     "items": [
       {
-        "item": "Gregarious Worm",
+        "item": "群居蠕虫",
         "icon": 27019,
         "id": 10095,
         "slot": "1"
       },
       {
-        "item": "Platinum Ore",
+        "item": "白金矿",
         "icon": 21213,
         "id": 5120,
         "slot": "6"
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
         "icon": 20407,
         "id": 10335,
         "slot": "?"
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
         "icon": 20019,
         "id": 10099,
         "slot": "?"
@@ -1378,8 +1378,8 @@
     "time": [
       4
     ],
-    "title": "Broken Water",
-    "zone": "Southern Thanalan",
+    "title": "秽水",
+    "zone": "南萨纳兰",
     "coords": [
       17.0,
       9.0
@@ -1395,7 +1395,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Ebony Log",
+        "item": "黑檀原木",
         "icon": 22402,
         "id": 5394,
         "slot": "6"
@@ -1405,8 +1405,8 @@
     "time": [
       4
     ],
-    "title": "Zephyr Drift",
-    "zone": "Middle La Noscea",
+    "title": "和风流地",
+    "zone": "中拉诺西亚",
     "coords": [
       23.0,
       26.0
@@ -1422,7 +1422,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Cypress Log",
+        "item": "丝柏原木",
         "icon": 22415,
         "id": 9518,
         "slot": "6"
@@ -1432,8 +1432,8 @@
     "time": [
       10
     ],
-    "title": "Bentbranch",
-    "zone": "Central Shroud",
+    "title": "弯枝",
+    "zone": "黑衣森林中央林区",
     "coords": [
       24.0,
       31.0
@@ -1449,7 +1449,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Pumice",
+        "item": "浮石",
         "icon": 21454,
         "id": 9519,
         "slot": "1"
@@ -1459,8 +1459,8 @@
     "time": [
       1
     ],
-    "title": "Raincatcher Gully",
-    "zone": "Eastern La Noscea",
+    "title": "接雨草树林",
+    "zone": "东拉诺西亚",
     "coords": [
       17.0,
       26.0
@@ -1476,13 +1476,13 @@
     "func": "node",
     "items": [
       {
-        "item": "Rosemary",
+        "item": "迷迭香",
         "icon": 25002,
         "id": 10096,
         "slot": "1"
       },
       {
-        "item": "Mazlaya Greens",
+        "item": "马兹拉雅草",
         "icon": 25016,
         "id": 10098,
         "slot": "2"
@@ -1492,8 +1492,8 @@
     "time": [
       17
     ],
-    "title": "Nine Ivies",
-    "zone": "East Shroud",
+    "title": "九藤",
+    "zone": "黑衣森林东部林区",
     "coords": [
       23.0,
       30.0
@@ -1509,13 +1509,13 @@
     "func": "node",
     "items": [
       {
-        "item": "Gregarious Worm",
+        "item": "群居蠕虫",
         "icon": 27019,
         "id": 10095,
         "slot": "1"
       },
       {
-        "item": "Virgin Basilisk Egg",
+        "item": "石蜥蜴的初蛋",
         "icon": 21215,
         "id": 10093,
         "slot": "6"
@@ -1525,8 +1525,8 @@
     "time": [
       17
     ],
-    "title": "Bluefog",
-    "zone": "Northern Thanalan",
+    "title": "蓝雾",
+    "zone": "北萨纳兰",
     "coords": [
       23.0,
       22.0
@@ -1542,7 +1542,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Tungstite",
+        "item": "钨华",
         "icon": 21209,
         "id": 16724,
         "slot": "4"
@@ -1553,8 +1553,8 @@
       2,
       14
     ],
-    "title": "Twinpools",
-    "zone": "Coerthas Western Highlands",
+    "title": "双子池",
+    "zone": "库尔札斯西部高地",
     "coords": [
       10.0,
       10.0
@@ -1570,7 +1570,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Zeolite Ore",
+        "item": "沸石",
         "icon": 21210,
         "id": 16726,
         "slot": "4"
@@ -1581,8 +1581,8 @@
       8,
       20
     ],
-    "title": "The Ruling Quarter",
-    "zone": "The Dravanian Hinterlands",
+    "title": "萨雷安睿哲区",
+    "zone": "龙堡内陆低地",
     "coords": [
       17.0,
       29.0,
@@ -1599,7 +1599,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Luminium Ore",
+        "item": "辉金矿",
         "icon": 21227,
         "id": 16725,
         "slot": "6"
@@ -1610,8 +1610,8 @@
       6,
       18
     ],
-    "title": "Alpha Quadrant",
-    "zone": "Azys Lla",
+    "title": "阿尔法管区",
+    "zone": "魔大陆阿济兹拉",
     "coords": [
       5.0,
       17.0
@@ -1627,7 +1627,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Teak Log",
+        "item": "柚木原木",
         "icon": 22403,
         "id": 5392,
         "slot": "6"
@@ -1638,8 +1638,8 @@
       0,
       12
     ],
-    "title": "The Answering Quarter",
-    "zone": "The Dravanian Hinterlands",
+    "title": "萨雷安治学区",
+    "zone": "龙堡内陆低地",
     "coords": [
       8.0,
       29.0
@@ -1655,7 +1655,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Star Cotton Boll",
+        "item": "星棉",
         "icon": 25032,
         "id": 16721,
         "slot": "4"
@@ -1666,8 +1666,8 @@
       4,
       16
     ],
-    "title": "Delta Quadrant",
-    "zone": "Azys Lla",
+    "title": "德尔塔管区",
+    "zone": "魔大陆阿济兹拉",
     "coords": [
       8.0,
       31.0
@@ -1683,7 +1683,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Brown Mushroom",
+        "item": "棕菇",
         "icon": 25405,
         "id": 16722,
         "slot": "7"
@@ -1694,8 +1694,8 @@
       10,
       22
     ],
-    "title": "Greensward",
-    "zone": "The Churning Mists",
+    "title": "绿茵岛",
+    "zone": "翻云雾海",
     "coords": [
       12.0,
       37.0,
@@ -1712,7 +1712,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Noble Sage",
+        "item": "显贵鼠尾草",
         "icon": 25002,
         "id": 16723,
         "slot": "1"
@@ -1723,8 +1723,8 @@
       6,
       18
     ],
-    "title": "Chocobo Forest",
-    "zone": "The Dravanian Forelands",
+    "title": "陆行鸟之森",
+    "zone": "龙堡参天高地",
     "coords": [
       34.0,
       30.0,
@@ -1741,47 +1741,47 @@
     "func": "node",
     "items": [
       {
-        "item": "Lightning Moraine",
+        "item": "雷砂砾",
         "icon": 21461,
         "id": 5218,
         "slot": "4",
         "reduce": {
-          "item": "Duskborne Aethersand",
+          "item": "微光灵砂",
           "icon": 22613
         }
       },
       {
-        "item": "Radiant Astral Moraine",
+        "item": "星光砾",
         "icon": 21463,
         "id": 15949,
         "slot": "7",
         "reduce": {
-          "item": "Light-kissed Aethersand",
+          "item": "白光灵砂",
           "icon": 22210
         }
       },
       {
-        "item": "Radiant Lightning Moraine",
+        "item": "雷光砾",
         "icon": 21461,
         "id": 5224,
         "slot": "6",
         "reduce": {
-          "item": "Landborne Aethersand",
+          "item": "大地灵砂",
           "icon": 21006
         }
       },
       {
-        "item": "Bright Lightning Rock",
+        "item": "强雷性岩",
         "icon": 21475,
         "id": 12967,
         "slot": "5",
         "reduce": {
-          "item": "Dawnborne Aethersand",
+          "item": "晓光灵砂",
           "icon": 22648
         }
       },
       {
-        "item": "Lightning Cluster",
+        "item": "雷之晶簇",
         "icon": 20017,
         "id": 18,
         "slot": "2"
@@ -1791,8 +1791,8 @@
     "time": [
       20
     ],
-    "title": "Black Iron Bridge",
-    "zone": "Coerthas Western Highlands",
+    "title": "黑铁大桥",
+    "zone": "库尔札斯西部高地",
     "coords": [
       26.4,
       22.1
@@ -1808,17 +1808,17 @@
     "func": "node",
     "items": [
       {
-        "item": "Rarefied Pyrite",
+        "item": "收藏用黄铁矿",
         "icon": 21207,
         "id": 32970
       },
       {
-        "item": "Rarefied Chalcocite",
+        "item": "收藏用辉铜矿",
         "icon": 21209,
         "id": 32971
       },
       {
-        "item": "Rarefied Limonite",
+        "item": "收藏用褐铁矿",
         "icon": 21206,
         "id": 32972
       }
@@ -1827,8 +1827,8 @@
       4,
       16
     ],
-    "title": "The Smoldering Wastes",
-    "zone": "The Dravanian Forelands",
+    "title": "荒烟野地",
+    "zone": "龙堡参天高地",
     "coords": [
       30.6,
       32.1
@@ -1844,47 +1844,47 @@
     "func": "node",
     "items": [
       {
-        "item": "Fire Moraine",
+        "item": "火砂砾",
         "icon": 21456,
         "id": 5214,
         "slot": "5",
         "reduce": {
-          "item": "Duskborne Aethersand",
+          "item": "微光灵砂",
           "icon": 22613
         }
       },
       {
-        "item": "Radiant Astral Moraine",
+        "item": "星光砾",
         "icon": 21463,
         "id": 15949,
         "slot": "6",
         "reduce": {
-          "item": "Light-kissed Aethersand",
+          "item": "白光灵砂",
           "icon": 22210
         }
       },
       {
-        "item": "Bright Fire Rock",
+        "item": "强火性岩",
         "icon": 21471,
         "id": 12966,
         "slot": "8",
         "reduce": {
-          "item": "Dawnborne Aethersand",
+          "item": "晓光灵砂",
           "icon": 22648
         }
       },
       {
-        "item": "Radiant Fire Moraine",
+        "item": "火光砾",
         "icon": 21456,
         "id": 5220,
         "slot": "7",
         "reduce": {
-          "item": "Landborne Aethersand",
+          "item": "大地灵砂",
           "icon": 21006
         }
       },
       {
-        "item": "Fire Cluster",
+        "item": "火之晶簇",
         "icon": 20013,
         "id": 14,
         "slot": "3"
@@ -1894,8 +1894,8 @@
     "time": [
       4
     ],
-    "title": "Avalonia Fallen",
-    "zone": "The Dravanian Forelands",
+    "title": "阿瓦隆尼亚古陆",
+    "zone": "龙堡参天高地",
     "coords": [
       25.9,
       19.6
@@ -1911,13 +1911,13 @@
     "func": "node",
     "items": [
       {
-        "item": "Rarefied Abalathian Spring Water",
+        "item": "收藏用阿巴拉提亚天然水",
         "icon": 22614,
         "id": 32973,
         "slot": " "
       },
       {
-        "item": "Rarefied Aurum Regis Sand",
+        "item": "收藏用皇金沙",
         "icon": 21220,
         "id": 32974
       }
@@ -1926,8 +1926,8 @@
       2,
       14
     ],
-    "title": "The Blue Window",
-    "zone": "The Sea of Clouds",
+    "title": "蓝天窗",
+    "zone": "阿巴拉提亚云海",
     "coords": [
       20.6,
       11.5
@@ -1943,47 +1943,47 @@
     "func": "node",
     "items": [
       {
-        "item": "Fire Moraine",
+        "item": "火砂砾",
         "icon": 21456,
         "id": 5214,
         "slot": "5",
         "reduce": {
-          "item": "Duskborne Aethersand",
+          "item": "微光灵砂",
           "icon": 22613
         }
       },
       {
-        "item": "Radiant Astral Moraine",
+        "item": "星光砾",
         "icon": 21463,
         "id": 15949,
         "slot": "6",
         "reduce": {
-          "item": "Light-kissed Aethersand",
+          "item": "白光灵砂",
           "icon": 22210
         }
       },
       {
-        "item": "Bright Fire Rock",
+        "item": "强火性岩",
         "icon": 21471,
         "id": 12966,
         "slot": "8",
         "reduce": {
-          "item": "Dawnborne Aethersand",
+          "item": "晓光灵砂",
           "icon": 22648
         }
       },
       {
-        "item": "Radiant Fire Moraine",
+        "item": "火光砾",
         "icon": 21456,
         "id": 5220,
         "slot": "7",
         "reduce": {
-          "item": "Landborne Aethersand",
+          "item": "大地灵砂",
           "icon": 21006
         }
       },
       {
-        "item": "Fire Cluster",
+        "item": "火之晶簇",
         "icon": 20013,
         "id": 14,
         "slot": "3"
@@ -1993,8 +1993,8 @@
     "time": [
       8
     ],
-    "title": "The Makers' Quarter",
-    "zone": "The Dravanian Hinterlands",
+    "title": "萨雷安精制区",
+    "zone": "龙堡内陆低地",
     "coords": [
       29.6,
       17.0
@@ -2010,12 +2010,12 @@
     "func": "node",
     "items": [
       {
-        "item": "Rarefied Raw Kyanite",
+        "item": "收藏用蓝晶石原石",
         "icon": 21472,
         "id": 32977
       },
       {
-        "item": "Rarefied Raw Triphane",
+        "item": "收藏用锂辉石原石",
         "icon": 21474,
         "id": 32975
       }
@@ -2024,8 +2024,8 @@
       8,
       20
     ],
-    "title": "Mirage Creek",
-    "zone": "The Fringes",
+    "title": "幻河",
+    "zone": "基拉巴尼亚边区",
     "coords": [
       29.5,
       12.9
@@ -2041,47 +2041,47 @@
     "func": "node",
     "items": [
       {
-        "item": "Fire Moraine",
+        "item": "火砂砾",
         "icon": 21456,
         "id": 5214,
         "slot": "5",
         "reduce": {
-          "item": "Duskborne Aethersand",
+          "item": "微光灵砂",
           "icon": 22613
         }
       },
       {
-        "item": "Radiant Astral Moraine",
+        "item": "星光砾",
         "icon": 21463,
         "id": 15949,
         "slot": "6",
         "reduce": {
-          "item": "Light-kissed Aethersand",
+          "item": "白光灵砂",
           "icon": 22210
         }
       },
       {
-        "item": "Bright Fire Rock",
+        "item": "强火性岩",
         "icon": 21471,
         "id": 12966,
         "slot": "8",
         "reduce": {
-          "item": "Dawnborne Aethersand",
+          "item": "晓光灵砂",
           "icon": 22648
         }
       },
       {
-        "item": "Radiant Fire Moraine",
+        "item": "火光砾",
         "icon": 21456,
         "id": 5220,
         "slot": "7",
         "reduce": {
-          "item": "Landborne Aethersand",
+          "item": "大地灵砂",
           "icon": 21006
         }
       },
       {
-        "item": "Fire Cluster",
+        "item": "火之晶簇",
         "icon": 20013,
         "id": 14,
         "slot": "3"
@@ -2091,8 +2091,8 @@
     "time": [
       12
     ],
-    "title": "The Lost Landlord",
-    "zone": "The Churning Mists",
+    "title": "人王像",
+    "zone": "翻云雾海",
     "coords": [
       19.4,
       36.3
@@ -2108,7 +2108,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Rarefied Raw Star Spinel",
+        "item": "收藏用星尖石原石",
         "icon": 21475,
         "id": 32976
       }
@@ -2117,8 +2117,8 @@
       10,
       22
     ],
-    "title": "The Crab Pots",
-    "zone": "The Ruby Sea",
+    "title": "蟹茹滨",
+    "zone": "红玉海",
     "coords": [
       21.1,
       34.3
@@ -2134,47 +2134,47 @@
     "func": "node",
     "items": [
       {
-        "item": "Lightning Moraine",
+        "item": "雷砂砾",
         "icon": 21461,
         "id": 5218,
         "slot": "4",
         "reduce": {
-          "item": "Duskborne Aethersand",
+          "item": "微光灵砂",
           "icon": 22613
         }
       },
       {
-        "item": "Radiant Astral Moraine",
+        "item": "星光砾",
         "icon": 21463,
         "id": 15949,
         "slot": "7",
         "reduce": {
-          "item": "Light-kissed Aethersand",
+          "item": "白光灵砂",
           "icon": 22210
         }
       },
       {
-        "item": "Radiant Lightning Moraine",
+        "item": "雷光砾",
         "icon": 21461,
         "id": 5224,
         "slot": "6",
         "reduce": {
-          "item": "Landborne Aethersand",
+          "item": "大地灵砂",
           "icon": 21006
         }
       },
       {
-        "item": "Bright Lightning Rock",
+        "item": "强雷性岩",
         "icon": 21475,
         "id": 12967,
         "slot": "5",
         "reduce": {
-          "item": "Dawnborne Aethersand",
+          "item": "晓光灵砂",
           "icon": 22648
         }
       },
       {
-        "item": "Lightning Cluster",
+        "item": "雷之晶簇",
         "icon": 20017,
         "id": 18,
         "slot": "2"
@@ -2184,8 +2184,8 @@
     "time": [
       16
     ],
-    "title": "Ok' Gundu",
-    "zone": "The Sea of Clouds",
+    "title": "衮杜集落",
+    "zone": "阿巴拉提亚云海",
     "coords": [
       26.4,
       30.5
@@ -2201,13 +2201,13 @@
     "func": "node",
     "items": [
       {
-        "item": "Yellow Copper Ore",
+        "item": "黄铜矿",
         "icon": 21207,
         "id": 5108,
         "slot": "2"
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
         "icon": 20407,
         "id": 10335,
         "slot": "?"
@@ -2218,8 +2218,8 @@
       4,
       16
     ],
-    "title": "Riversmeet",
-    "zone": "Coerthas Western Highlands",
+    "title": "交汇河",
+    "zone": "库尔札斯西部高地",
     "coords": [
       29.0,
       24.0
@@ -2235,19 +2235,19 @@
     "func": "node",
     "items": [
       {
-        "item": "Chalcocite",
+        "item": "辉铜矿",
         "icon": 21209,
         "id": 12941,
         "slot": "2"
       },
       {
-        "item": "Pyrite",
+        "item": "黄铁矿",
         "icon": 21207,
         "id": 5109,
         "slot": "3"
       },
       {
-        "item": "Limonite",
+        "item": "褐铁矿",
         "icon": 21206,
         "id": 5112,
         "slot": "4"
@@ -2257,8 +2257,8 @@
       8,
       20
     ],
-    "title": "The Smoldering Wastes",
-    "zone": "The Dravanian Forelands",
+    "title": "荒烟野地",
+    "zone": "龙堡参天高地",
     "coords": [
       27.0,
       17.0
@@ -2274,13 +2274,13 @@
     "func": "node",
     "items": [
       {
-        "item": "Yellow Quartz",
+        "item": "土黄石英",
         "icon": 21458,
         "id": 5162,
         "slot": "4"
       },
       {
-        "item": "Green Quartz",
+        "item": "翠绿石英",
         "icon": 21459,
         "id": 5161,
         "slot": "6"
@@ -2290,8 +2290,8 @@
       6,
       18
     ],
-    "title": "Eil Tohm",
-    "zone": "The Churning Mists",
+    "title": "招恶荒岛",
+    "zone": "翻云雾海",
     "coords": [
       35.0,
       21.0
@@ -2307,13 +2307,13 @@
     "func": "node",
     "items": [
       {
-        "item": "Abalathian Rock Salt",
+        "item": "阿巴拉提亚岩盐",
         "icon": 22617,
         "id": 12901,
         "slot": "1"
       },
       {
-        "item": "Red Quartz",
+        "item": "深绯石英",
         "icon": 21456,
         "id": 5159,
         "slot": "6"
@@ -2323,8 +2323,8 @@
       10,
       22
     ],
-    "title": "The Gauntlet",
-    "zone": "The Sea of Clouds",
+    "title": "试炼群岛",
+    "zone": "阿巴拉提亚云海",
     "coords": [
       7.0,
       7.0
@@ -2340,13 +2340,13 @@
     "func": "node",
     "items": [
       {
-        "item": "Cuprite",
+        "item": "赤铜矿",
         "icon": 21206,
         "id": 12942,
         "slot": "2"
       },
       {
-        "item": "Light Kidney Ore",
+        "item": "赤铁矿",
         "icon": 21206,
         "id": 5117,
         "slot": "3"
@@ -2356,8 +2356,8 @@
       2,
       14
     ],
-    "title": "The Ruling Quarter",
-    "zone": "The Dravanian Hinterlands",
+    "title": "萨雷安睿哲区",
+    "zone": "龙堡内陆低地",
     "coords": [
       35.0,
       30.0
@@ -2373,7 +2373,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Adamantite Ore",
+        "item": "精金矿",
         "icon": 21224,
         "id": 12538,
         "slot": "6"
@@ -2383,8 +2383,8 @@
       0,
       12
     ],
-    "title": "Beta Quadrant",
-    "zone": "Azys Lla",
+    "title": "贝塔管区",
+    "zone": "魔大陆阿济兹拉",
     "coords": [
       23.0,
       5.0
@@ -2400,13 +2400,13 @@
     "func": "node",
     "items": [
       {
-        "item": "Astral Moraine",
+        "item": "星砂砾",
         "icon": 21463,
         "id": 5226,
         "slot": "4"
       },
       {
-        "item": "Violet Quartz",
+        "item": "青紫石英",
         "icon": 21461,
         "id": 5163,
         "slot": "6"
@@ -2417,8 +2417,8 @@
       0,
       12
     ],
-    "title": "Riversmeet",
-    "zone": "Coerthas Western Highlands",
+    "title": "交汇河",
+    "zone": "库尔札斯西部高地",
     "coords": [
       37.0,
       16.0
@@ -2434,13 +2434,13 @@
     "func": "node",
     "items": [
       {
-        "item": "Aurum Regis Ore",
+        "item": "皇金矿",
         "icon": 21225,
         "id": 12536,
         "slot": "6"
       },
       {
-        "item": "Lumythrite Ore",
+        "item": "光银矿",
         "icon": 21221,
         "id": 14148,
         "slot": "2"
@@ -2451,8 +2451,8 @@
       2,
       14
     ],
-    "title": "Greensward",
-    "zone": "The Churning Mists",
+    "title": "绿茵岛",
+    "zone": "翻云雾海",
     "coords": [
       11.0,
       38.0
@@ -2468,7 +2468,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Sun Mica",
+        "item": "金云母",
         "icon": 21227,
         "id": 12540,
         "slot": "2"
@@ -2479,8 +2479,8 @@
       4,
       16
     ],
-    "title": "Voor Sian Siran",
-    "zone": "The Sea of Clouds",
+    "title": "沃仙曦染",
+    "zone": "阿巴拉提亚云海",
     "coords": [
       35.0,
       39.0
@@ -2496,7 +2496,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Blue Quartz",
+        "item": "绀碧石英",
         "icon": 21457,
         "id": 5160,
         "slot": "7"
@@ -2507,8 +2507,8 @@
       6,
       18
     ],
-    "title": "The Answering Quarter",
-    "zone": "The Dravanian Hinterlands",
+    "title": "萨雷安治学区",
+    "zone": "龙堡内陆低地",
     "coords": [
       11.0,
       16.0
@@ -2524,7 +2524,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Red Alumen",
+        "item": "红明矾",
         "icon": 22656,
         "id": 12945,
         "slot": "2"
@@ -2535,8 +2535,8 @@
       10,
       22
     ],
-    "title": "The Habisphere",
-    "zone": "Azys Lla",
+    "title": "生态园",
+    "zone": "魔大陆阿济兹拉",
     "coords": [
       35.0,
       16.0
@@ -2552,35 +2552,35 @@
     "func": "node",
     "items": [
       {
-        "item": "Highland Oregano",
+        "item": "牛至",
         "icon": 25015,
         "id": 12971,
         "slot": "5"
       },
       {
-        "item": "Lover's Laurel",
+        "item": "梅茵菲娜月桂",
         "icon": 25009,
         "id": 15948,
         "slot": "6",
         "reduce": {
-          "item": "Light-kissed Aethersand",
+          "item": "白光灵砂",
           "icon": 22210
         }
       },
       {
-        "item": "Furymint",
+        "item": "留兰",
         "icon": 25016,
         "id": 12972,
         "slot": "7"
       },
       {
-        "item": "Clary Sage",
+        "item": "鼠尾草",
         "icon": 25009,
         "id": 12973,
         "slot": "8"
       },
       {
-        "item": "Wind Cluster",
+        "item": "风之晶簇",
         "icon": 20016,
         "id": 16,
         "slot": "4"
@@ -2590,8 +2590,8 @@
     "time": [
       20
     ],
-    "title": "Ok' Vundu Mok",
-    "zone": "The Sea of Clouds",
+    "title": "莫克温杜集落",
+    "zone": "阿巴拉提亚云海",
     "coords": [
       12.8,
       21.7
@@ -2607,12 +2607,12 @@
     "func": "node",
     "items": [
       {
-        "item": "Rarefied Raw Azurite",
+        "item": "收藏用石青原石",
         "icon": 21472,
         "id": 32978
       },
       {
-        "item": "Rarefied Silvergrace Ore",
+        "item": "收藏用清银矿",
         "icon": 21213,
         "id": 32979
       }
@@ -2621,8 +2621,8 @@
       6,
       18
     ],
-    "title": "The Sea of Blades",
-    "zone": "The Azim Steppe",
+    "title": "刃海",
+    "zone": "太阳神草原",
     "coords": [
       35.9,
       26.4
@@ -2638,35 +2638,35 @@
     "func": "node",
     "items": [
       {
-        "item": "Highland Oregano",
+        "item": "牛至",
         "icon": 25015,
         "id": 12971,
         "slot": "5"
       },
       {
-        "item": "Lover's Laurel",
+        "item": "梅茵菲娜月桂",
         "icon": 25009,
         "id": 15948,
         "slot": "6",
         "reduce": {
-          "item": "Light-kissed Aethersand",
+          "item": "白光灵砂",
           "icon": 22210
         }
       },
       {
-        "item": "Furymint",
+        "item": "留兰",
         "icon": 25016,
         "id": 12972,
         "slot": "7"
       },
       {
-        "item": "Clary Sage",
+        "item": "鼠尾草",
         "icon": 25009,
         "id": 12973,
         "slot": "8"
       },
       {
-        "item": "Wind Cluster",
+        "item": "风之晶簇",
         "icon": 20016,
         "id": 16,
         "slot": "4"
@@ -2676,8 +2676,8 @@
     "time": [
       0
     ],
-    "title": "Red Rim",
-    "zone": "Coerthas Western Highlands",
+    "title": "红沿",
+    "zone": "库尔札斯西部高地",
     "coords": [
       24.2,
       31.6
@@ -2693,12 +2693,12 @@
     "func": "node",
     "items": [
       {
-        "item": "Rarefied Titancopper Ore",
+        "item": "收藏用钛铜矿",
         "icon": 21202,
         "id": 32980
       },
       {
-        "item": "Rarefied Raw Petalite",
+        "item": "收藏用透锂长石原石",
         "icon": 21477,
         "id": 32982
       }
@@ -2707,8 +2707,8 @@
       4,
       16
     ],
-    "title": "The Belt",
-    "zone": "Lakeland",
+    "title": "束带路",
+    "zone": "雷克兰德",
     "coords": [
       31.1,
       24.1
@@ -2724,43 +2724,43 @@
     "func": "node",
     "items": [
       {
-        "item": "Granular Clay",
+        "item": "赤玉土",
         "icon": 27407,
         "id": 12968,
         "slot": "5",
         "reduce": {
-          "item": "Duskborne Aethersand",
+          "item": "微光灵砂",
           "icon": 22613
         }
       },
       {
-        "item": "Lover's Laurel",
+        "item": "梅茵菲娜月桂",
         "icon": 25009,
         "id": 15948,
         "slot": "6",
         "reduce": {
-          "item": "Light-kissed Aethersand",
+          "item": "白光灵砂",
           "icon": 22210
         }
       },
       {
-        "item": "Peat Moss",
+        "item": "灰玉土",
         "icon": 27401,
         "id": 12969,
         "slot": "4",
         "reduce": {
-          "item": "Dawnborne Aethersand",
+          "item": "晓光灵砂",
           "icon": 22648
         }
       },
       {
-        "item": "Black Soil",
+        "item": "黑土",
         "icon": 27404,
         "id": 12970,
         "slot": "8"
       },
       {
-        "item": "Earth Cluster",
+        "item": "土之晶簇",
         "icon": 20018,
         "id": 17,
         "slot": "7"
@@ -2770,8 +2770,8 @@
     "time": [
       8
     ],
-    "title": "Avalonia Fallen",
-    "zone": "The Dravanian Forelands",
+    "title": "阿瓦隆尼亚古陆",
+    "zone": "龙堡参天高地",
     "coords": [
       15.6,
       33.3
@@ -2787,7 +2787,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Rarefied Raw Lazurite",
+        "item": "收藏用青金石原石",
         "icon": 21472,
         "id": 32981
       }
@@ -2796,8 +2796,8 @@
       6,
       18
     ],
-    "title": "Cleric",
-    "zone": "The Rak'tika Greatwood",
+    "title": "书著者树洞",
+    "zone": "拉凯提卡大森林",
     "coords": [
       16.0,
       18.1
@@ -2813,43 +2813,43 @@
     "func": "node",
     "items": [
       {
-        "item": "Granular Clay",
+        "item": "赤玉土",
         "icon": 27407,
         "id": 12968,
         "slot": "5",
         "reduce": {
-          "item": "Duskborne Aethersand",
+          "item": "微光灵砂",
           "icon": 22613
         }
       },
       {
-        "item": "Lover's Laurel",
+        "item": "梅茵菲娜月桂",
         "icon": 25009,
         "id": 15948,
         "slot": "6",
         "reduce": {
-          "item": "Light-kissed Aethersand",
+          "item": "白光灵砂",
           "icon": 22210
         }
       },
       {
-        "item": "Peat Moss",
+        "item": "灰玉土",
         "icon": 27401,
         "id": 12969,
         "slot": "4",
         "reduce": {
-          "item": "Dawnborne Aethersand",
+          "item": "晓光灵砂",
           "icon": 22648
         }
       },
       {
-        "item": "Black Soil",
+        "item": "黑土",
         "icon": 27404,
         "id": 12970,
         "slot": "8"
       },
       {
-        "item": "Earth Cluster",
+        "item": "土之晶簇",
         "icon": 20018,
         "id": 17,
         "slot": "7"
@@ -2859,8 +2859,8 @@
     "time": [
       16
     ],
-    "title": "Greensward",
-    "zone": "The Churning Mists",
+    "title": "绿茵岛",
+    "zone": "翻云雾海",
     "coords": [
       12.1,
       37.0
@@ -2876,12 +2876,12 @@
     "func": "node",
     "items": [
       {
-        "item": "Rarefied Sea Salt",
+        "item": "收藏用海盐",
         "icon": 22617,
         "id": 32983
       },
       {
-        "item": "Rarefied Raw Onyx",
+        "item": "收藏用黑玛瑙原石",
         "icon": 21231,
         "id": 32985
       }
@@ -2890,8 +2890,8 @@
       8,
       20
     ],
-    "title": "The Norvrandt Slope",
-    "zone": "The Tempest",
+    "title": "诺弗兰特大陆坡",
+    "zone": "黑风海",
     "coords": [
       25.0,
       4.4
@@ -2907,43 +2907,43 @@
     "func": "node",
     "items": [
       {
-        "item": "Granular Clay",
+        "item": "赤玉土",
         "icon": 27407,
         "id": 12968,
         "slot": "5",
         "reduce": {
-          "item": "Duskborne Aethersand",
+          "item": "微光灵砂",
           "icon": 22613
         }
       },
       {
-        "item": "Lover's Laurel",
+        "item": "梅茵菲娜月桂",
         "icon": 25009,
         "id": 15948,
         "slot": "6",
         "reduce": {
-          "item": "Light-kissed Aethersand",
+          "item": "白光灵砂",
           "icon": 22210
         }
       },
       {
-        "item": "Peat Moss",
+        "item": "灰玉土",
         "icon": 27401,
         "id": 12969,
         "slot": "4",
         "reduce": {
-          "item": "Dawnborne Aethersand",
+          "item": "晓光灵砂",
           "icon": 22648
         }
       },
       {
-        "item": "Black Soil",
+        "item": "黑土",
         "icon": 27404,
         "id": 12970,
         "slot": "8"
       },
       {
-        "item": "Earth Cluster",
+        "item": "土之晶簇",
         "icon": 20018,
         "id": 17,
         "slot": "7"
@@ -2953,8 +2953,8 @@
     "time": [
       4
     ],
-    "title": "Saint Mocianne's Arboretum",
-    "zone": "The Dravanian Hinterlands",
+    "title": "圣茉夏娜植物园",
+    "zone": "龙堡内陆低地",
     "coords": [
       7.4,
       29.3
@@ -2970,31 +2970,31 @@
     "func": "node",
     "items": [
       {
-        "item": "Chives",
+        "item": "库尔札斯青葱",
         "icon": 25035,
         "id": 12884,
         "slot": "1"
       },
       {
-        "item": "Pearl Sprout Seeds",
+        "item": "小包心菜种子",
         "icon": 27455,
         "id": 13767,
         "slot": "2"
       },
       {
-        "item": "Coerthan Tea Seeds",
+        "item": "库尔札斯茶树种子",
         "icon": 27451,
         "id": 13768,
         "slot": "3"
       },
       {
-        "item": "Pearl Sprouts",
+        "item": "小包心菜",
         "icon": 25208,
         "id": 12877,
         "slot": "6"
       },
       {
-        "item": "Coerthan Tea Leaves",
+        "item": "库尔札斯茶叶",
         "icon": 25020,
         "id": 12882,
         "slot": "7"
@@ -3004,8 +3004,8 @@
       10,
       22
     ],
-    "title": "Riversmeet",
-    "zone": "Coerthas Western Highlands",
+    "title": "交汇河",
+    "zone": "库尔札斯西部高地",
     "coords": [
       31.0,
       20.0
@@ -3021,19 +3021,19 @@
     "func": "node",
     "items": [
       {
-        "item": "Old World Fig Seeds",
+        "item": "旧世界无花果种子",
         "icon": 27457,
         "id": 13765,
         "slot": "1"
       },
       {
-        "item": "Old World Fig",
+        "item": "旧世界无花果",
         "icon": 25318,
         "id": 12896,
         "slot": "2"
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
         "icon": 20407,
         "id": 10335,
         "slot": "?"
@@ -3044,8 +3044,8 @@
       2,
       14
     ],
-    "title": "Chocobo Forest",
-    "zone": "The Dravanian Forelands",
+    "title": "陆行鸟之森",
+    "zone": "龙堡参天高地",
     "coords": [
       27.0,
       14.0
@@ -3061,13 +3061,13 @@
     "func": "node",
     "items": [
       {
-        "item": "Dravanian Mistletoe",
+        "item": "龙堡槲寄生",
         "icon": 25001,
         "id": 12943,
         "slot": "3"
       },
       {
-        "item": "Porcini",
+        "item": "牛肝菌",
         "icon": 25401,
         "id": 12899,
         "slot": "7"
@@ -3077,8 +3077,8 @@
       0,
       12
     ],
-    "title": "Ohl Tahn",
-    "zone": "The Churning Mists",
+    "title": "竖骨岛",
+    "zone": "翻云雾海",
     "coords": [
       25.0,
       6.0
@@ -3094,13 +3094,13 @@
     "func": "node",
     "items": [
       {
-        "item": "Heavens Lemon",
+        "item": "伊修加德柠檬",
         "icon": 25305,
         "id": 12889,
         "slot": "2"
       },
       {
-        "item": "Abalathian Mistletoe",
+        "item": "阿巴拉提亚槲寄生",
         "icon": 25001,
         "id": 12944,
         "slot": "3"
@@ -3110,8 +3110,8 @@
       6,
       18
     ],
-    "title": "Vundu Ok' Bendu",
-    "zone": "The Sea of Clouds",
+    "title": "温杜属本杜集落",
+    "zone": "阿巴拉提亚云海",
     "coords": [
       34.0,
       19.0
@@ -3127,13 +3127,13 @@
     "func": "node",
     "items": [
       {
-        "item": "Cloud Banana",
+        "item": "云海香蕉",
         "icon": 25319,
         "id": 12897,
         "slot": "2"
       },
       {
-        "item": "Morel",
+        "item": "伞蘑",
         "icon": 25408,
         "id": 12898,
         "slot": "7"
@@ -3143,8 +3143,8 @@
       4,
       16
     ],
-    "title": "The Ruling Quarter",
-    "zone": "The Dravanian Hinterlands",
+    "title": "萨雷安睿哲区",
+    "zone": "龙堡内陆低地",
     "coords": [
       19.0,
       36.0
@@ -3160,7 +3160,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Chysahl Greens",
+        "item": "卡贝基野菜",
         "icon": 25222,
         "id": 12900,
         "slot": "6"
@@ -3170,8 +3170,8 @@
       8,
       20
     ],
-    "title": "Twinpools",
-    "zone": "Coerthas Western Highlands",
+    "title": "双子池",
+    "zone": "库尔札斯西部高地",
     "coords": [
       8.0,
       9.0
@@ -3187,19 +3187,19 @@
     "func": "node",
     "items": [
       {
-        "item": "Vanilla Beans",
+        "item": "香草豆",
         "icon": 25014,
         "id": 4833,
         "slot": "3"
       },
       {
-        "item": "Dravanian Paprika",
+        "item": "龙堡红辣椒",
         "icon": 25018,
         "id": 12903,
         "slot": "4"
       },
       {
-        "item": "Frost Cotton Boll",
+        "item": "雪棉",
         "icon": 25032,
         "id": 14154,
         "slot": "5"
@@ -3210,8 +3210,8 @@
       6,
       18
     ],
-    "title": "Twinpools",
-    "zone": "Coerthas Western Highlands",
+    "title": "双子池",
+    "zone": "库尔札斯西部高地",
     "coords": [
       23.0,
       21.0
@@ -3227,7 +3227,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Seventh Heaven",
+        "item": "星极花",
         "icon": 22627,
         "id": 12634,
         "slot": "1"
@@ -3238,8 +3238,8 @@
       4,
       16
     ],
-    "title": "Greensward",
-    "zone": "The Churning Mists",
+    "title": "绿茵岛",
+    "zone": "翻云雾海",
     "coords": [
       16.0,
       36.0
@@ -3255,7 +3255,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Honeydew Almonds",
+        "item": "甜扁桃",
         "icon": 25017,
         "id": 12902,
         "slot": "2"
@@ -3266,8 +3266,8 @@
       0,
       12
     ],
-    "title": "The Gauntlet",
-    "zone": "The Sea of Clouds",
+    "title": "试炼群岛",
+    "zone": "阿巴拉提亚云海",
     "coords": [
       24.0,
       6.0
@@ -3283,7 +3283,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Snurbleberry",
+        "item": "鲜红罗兰莓",
         "icon": 25306,
         "id": 12904,
         "slot": "2"
@@ -3294,8 +3294,8 @@
       10,
       22
     ],
-    "title": "The Makers' Quarter",
-    "zone": "The Dravanian Hinterlands",
+    "title": "萨雷安精制区",
+    "zone": "龙堡内陆低地",
     "coords": [
       39.0,
       26.0
@@ -3311,7 +3311,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Wattle Bark",
+        "item": "金合欢树皮",
         "icon": 23001,
         "id": 12587,
         "slot": "5"
@@ -3322,8 +3322,8 @@
       2,
       14
     ],
-    "title": "Beta Quadrant",
-    "zone": "Azys Lla",
+    "title": "贝塔管区",
+    "zone": "魔大陆阿济兹拉",
     "coords": [
       22.0,
       8.0
@@ -3339,13 +3339,13 @@
     "func": "node",
     "items": [
       {
-        "item": "Crystallized Sap",
+        "item": "树汁结晶",
         "icon": 20018,
         "id": 15647,
         "slot": "4"
       },
       {
-        "item": "Old-growth Camphorwood Log",
+        "item": "樟木古树",
         "icon": 22414,
         "id": 14957,
         "slot": "6"
@@ -3356,8 +3356,8 @@
       8,
       20
     ],
-    "title": "Ohl Tahn",
-    "zone": "The Churning Mists",
+    "title": "竖骨岛",
+    "zone": "翻云雾海",
     "coords": [
       11.0,
       10.0
@@ -3373,13 +3373,13 @@
     "func": "node",
     "items": [
       {
-        "item": "Smithsonite Ore",
+        "item": "菱锌矿",
         "icon": 21473,
         "id": 14151,
         "slot": "2"
       },
       {
-        "item": "Meteorite",
+        "item": "陨石",
         "icon": 21203,
         "id": 15646,
         "slot": "3"
@@ -3390,8 +3390,8 @@
       8,
       20
     ],
-    "title": "The Gauntlet",
-    "zone": "The Sea of Clouds",
+    "title": "试炼群岛",
+    "zone": "阿巴拉提亚云海",
     "coords": [
       38.0,
       14.0
@@ -3407,23 +3407,23 @@
     "func": "node",
     "items": [
       {
-        "item": "Perlite",
+        "item": "珍珠岩",
         "icon": 21463,
         "id": 20010,
         "slot": "8"
       },
       {
-        "item": "Yanxian Soil",
+        "item": "延夏沃土",
         "icon": 21466,
         "id": 23220,
         "slot": "2",
         "reduce": {
-          "item": "Duskglow Aethersand",
+          "item": "黄昏灵砂",
           "icon": 21006
         }
       },
       {
-        "item": "Fire Crystal",
+        "item": "火之水晶",
         "icon": 20007,
         "id": 8,
         "slot": "5"
@@ -3433,8 +3433,8 @@
     "time": [
       20
     ],
-    "title": "Valley of the Fallen Rainbow",
-    "zone": "Yanxia",
+    "title": "七彩溪谷",
+    "zone": "延夏",
     "coords": [
       30.3,
       4.9
@@ -3450,23 +3450,23 @@
     "func": "node",
     "items": [
       {
-        "item": "Almandine",
+        "item": "贵榴石",
         "icon": 21471,
         "id": 20011,
         "slot": "7"
       },
       {
-        "item": "Yanxian Soil",
+        "item": "延夏沃土",
         "icon": 21466,
         "id": 23220,
         "slot": "2",
         "reduce": {
-          "item": "Duskglow Aethersand",
+          "item": "黄昏灵砂",
           "icon": 21006
         }
       },
       {
-        "item": "Ice Crystal",
+        "item": "冰之水晶",
         "icon": 20009,
         "id": 9,
         "slot": "5"
@@ -3476,8 +3476,8 @@
     "time": [
       0
     ],
-    "title": "The High Bank",
-    "zone": "The Lochs",
+    "title": "高岸",
+    "zone": "基拉巴尼亚湖区",
     "coords": [
       13.0,
       29.0
@@ -3493,27 +3493,27 @@
     "func": "node",
     "items": [
       {
-        "item": "Schorl",
+        "item": "黑碧玺",
         "icon": 21476,
         "id": 20009,
         "slot": "4",
         "reduce": {
-          "item": "Dawnlight Aethersand",
+          "item": "极光灵砂",
           "icon": 22210
         }
       },
       {
-        "item": "Yanxian Soil",
+        "item": "延夏沃土",
         "icon": 21466,
         "id": 23220,
         "slot": "2",
         "reduce": {
-          "item": "Duskglow Aethersand",
+          "item": "黄昏灵砂",
           "icon": 21006
         }
       },
       {
-        "item": "Lightning Crystal",
+        "item": "雷之水晶",
         "icon": 20011,
         "id": 12,
         "slot": "5"
@@ -3523,8 +3523,8 @@
     "time": [
       12
     ],
-    "title": "Ragill's Reckoning",
-    "zone": "The Azim Steppe",
+    "title": "拉其儿的失算",
+    "zone": "太阳神草原",
     "coords": [
       34.2,
       22.5
@@ -3540,7 +3540,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Raw Triphane",
+        "item": "锂辉石原石",
         "icon": 21474,
         "id": 19968,
         "slot": "6"
@@ -3551,8 +3551,8 @@
       2,
       14
     ],
-    "title": "The Striped Hills",
-    "zone": "The Fringes",
+    "title": "条纹丘",
+    "zone": "基拉巴尼亚边区",
     "coords": [
       26.0,
       8.6
@@ -3561,8 +3561,8 @@
     "uptime": 120,
     "lvl": 60,
     "id": 497,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 645",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 645<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 4.0
   },
   {
@@ -3570,7 +3570,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Raw Star Spinel",
+        "item": "星尖石原石",
         "icon": 21475,
         "id": 19970,
         "slot": "8"
@@ -3580,8 +3580,8 @@
       0,
       12
     ],
-    "title": "East Othard Coastline",
-    "zone": "The Ruby Sea",
+    "title": "奥萨德东岸",
+    "zone": "红玉海",
     "coords": [
       15.0,
       5.0
@@ -3590,8 +3590,8 @@
     "uptime": 120,
     "lvl": 65,
     "id": 498,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 780",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 780<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 4.0
   },
   {
@@ -3599,13 +3599,13 @@
     "func": "node",
     "items": [
       {
-        "item": "Pummelite",
+        "item": "硬拳石",
         "icon": 21209,
         "id": 17944,
         "slot": "6"
       },
       {
-        "item": "Raw Rhodonite",
+        "item": "蔷薇辉石原石",
         "icon": 21471,
         "id": 19973,
         "slot": "7"
@@ -3615,8 +3615,8 @@
       8,
       20
     ],
-    "title": "Rustrock",
-    "zone": "The Peaks",
+    "title": "红锈岩山",
+    "zone": "基拉巴尼亚山区",
     "coords": [
       26.0,
       13.0
@@ -3625,8 +3625,8 @@
     "uptime": 120,
     "lvl": 70,
     "id": 499,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 846",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 846<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 4.0
   },
   {
@@ -3634,7 +3634,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Raw Imperial Jade",
+        "item": "琅玕原石",
         "icon": 21252,
         "id": 19972,
         "slot": "6"
@@ -3644,8 +3644,8 @@
       6,
       18
     ],
-    "title": "Valley of the Fallen Rainbow",
-    "zone": "Yanxia",
+    "title": "七彩溪谷",
+    "zone": "延夏",
     "coords": [
       30.0,
       9.0
@@ -3654,8 +3654,8 @@
     "uptime": 120,
     "lvl": 70,
     "id": 500,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 829",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 829<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 4.0
   },
   {
@@ -3663,7 +3663,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Raw Azurite",
+        "item": "石青原石",
         "icon": 21472,
         "id": 19971,
         "slot": "7"
@@ -3673,8 +3673,8 @@
       4,
       16
     ],
-    "title": "The Towering Still",
-    "zone": "The Azim Steppe",
+    "title": "挡风巨岩",
+    "zone": "太阳神草原",
     "coords": [
       5.0,
       27.0
@@ -3683,8 +3683,8 @@
     "uptime": 120,
     "lvl": 70,
     "id": 501,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 796",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 796<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 4.0
   },
   {
@@ -3692,7 +3692,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Ala Mhigan Salt Crystal",
+        "item": "阿拉米格盐",
         "icon": 22617,
         "id": 19907,
         "slot": "1"
@@ -3702,8 +3702,8 @@
       0,
       12
     ],
-    "title": "Loch Seld",
-    "zone": "The Lochs",
+    "title": "盐湖",
+    "zone": "基拉巴尼亚湖区",
     "coords": [
       21.0,
       29.0
@@ -3712,8 +3712,8 @@
     "uptime": 120,
     "lvl": 70,
     "id": 502,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 846",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 846<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 4.0
   },
   {
@@ -3721,13 +3721,13 @@
     "func": "node",
     "items": [
       {
-        "item": "Gyr Abanian Spring Water",
+        "item": "基拉巴尼亚清水",
         "icon": 22614,
         "id": 21085,
         "slot": "1"
       },
       {
-        "item": "Chromite Ore",
+        "item": "铬铁矿",
         "icon": 21205,
         "id": 19959,
         "slot": "6"
@@ -3738,8 +3738,8 @@
       10,
       22
     ],
-    "title": "Wightrock",
-    "zone": "The Peaks",
+    "title": "白鬼岩山",
+    "zone": "基拉巴尼亚山区",
     "coords": [
       16.0,
       34.0
@@ -3748,8 +3748,8 @@
     "uptime": 120,
     "lvl": 70,
     "id": 503,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 1200",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 1200<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 4.0
   },
   {
@@ -3757,7 +3757,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Palladium Ore",
+        "item": "钯金矿",
         "icon": 21217,
         "id": 19958,
         "slot": "6"
@@ -3768,8 +3768,8 @@
       4,
       16
     ],
-    "title": "Doma",
-    "zone": "Yanxia",
+    "title": "多玛",
+    "zone": "延夏",
     "coords": [
       20.0,
       10.0
@@ -3778,8 +3778,8 @@
     "uptime": 120,
     "lvl": 70,
     "id": 504,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 1200",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 1200<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 4.0
   },
   {
@@ -3787,27 +3787,27 @@
     "func": "node",
     "items": [
       {
-        "item": "Torreya Branch",
+        "item": "榧树枝",
         "icon": 22416,
         "id": 19937,
         "slot": "3",
         "reduce": {
-          "item": "Everborn Aethersand",
+          "item": "丰饶灵砂",
           "icon": 22649
         }
       },
       {
-        "item": "Yanxian Verbena",
+        "item": "延夏马鞭草",
         "icon": 25009,
         "id": 23221,
         "slot": "4",
         "reduce": {
-          "item": "Duskglow Aethersand",
+          "item": "黄昏灵砂",
           "icon": 21006
         }
       },
       {
-        "item": "Ice Crystal",
+        "item": "冰之水晶",
         "icon": 20009,
         "id": 9,
         "slot": "5"
@@ -3817,8 +3817,8 @@
     "time": [
       4
     ],
-    "title": "The Queen's Gardens",
-    "zone": "The Lochs",
+    "title": "女王花园",
+    "zone": "基拉巴尼亚湖区",
     "coords": [
       28.0,
       10.0
@@ -3834,23 +3834,23 @@
     "func": "node",
     "items": [
       {
-        "item": "Windtea Leaves",
+        "item": "风茶叶",
         "icon": 25022,
         "id": 19916,
         "slot": "1"
       },
       {
-        "item": "Yanxian Verbena",
+        "item": "延夏马鞭草",
         "icon": 25009,
         "id": 23221,
         "slot": "3",
         "reduce": {
-          "item": "Duskglow Aethersand",
+          "item": "黄昏灵砂",
           "icon": 21006
         }
       },
       {
-        "item": "Wind Crystal",
+        "item": "风之水晶",
         "icon": 20010,
         "id": 10,
         "slot": "5"
@@ -3860,8 +3860,8 @@
     "time": [
       16
     ],
-    "title": "The Glittering Basin",
-    "zone": "Yanxia",
+    "title": "无二江流域",
+    "zone": "延夏",
     "coords": [
       26.7,
       25.0
@@ -3877,27 +3877,27 @@
     "func": "node",
     "items": [
       {
-        "item": "Doman Yellow",
+        "item": "黄土",
         "icon": 27407,
         "id": 20012,
         "slot": "7",
         "reduce": {
-          "item": "Dusklight Aethersand",
+          "item": "夜光灵砂",
           "icon": 21219
         }
       },
       {
-        "item": "Yanxian Verbena",
+        "item": "延夏马鞭草",
         "icon": 25009,
         "id": 23221,
         "slot": "3",
         "reduce": {
-          "item": "Duskglow Aethersand",
+          "item": "黄昏灵砂",
           "icon": 21006
         }
       },
       {
-        "item": "Earth Crystal",
+        "item": "土之水晶",
         "icon": 20012,
         "id": 11,
         "slot": "5"
@@ -3907,8 +3907,8 @@
     "time": [
       8
     ],
-    "title": "Nhaama's Retreat",
-    "zone": "The Azim Steppe",
+    "title": "月神沙漠北端",
+    "zone": "太阳神草原",
     "coords": [
       16.0,
       28.0
@@ -3924,7 +3924,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Beech Branch",
+        "item": "山毛榉树枝",
         "icon": 22417,
         "id": 19936,
         "slot": "3"
@@ -3935,8 +3935,8 @@
       6,
       18
     ],
-    "title": "East End",
-    "zone": "The Fringes",
+    "title": "东境混交林",
+    "zone": "基拉巴尼亚边区",
     "coords": [
       10.0,
       20.0
@@ -3945,8 +3945,8 @@
     "uptime": 120,
     "lvl": 60,
     "id": 521,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 645",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 645<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 4.0
   },
   {
@@ -3954,7 +3954,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Bamboo Shoot",
+        "item": "竹笋",
         "icon": 25229,
         "id": 19860,
         "slot": "8"
@@ -3964,8 +3964,8 @@
       10,
       22
     ],
-    "title": "The Glittering Basin",
-    "zone": "Yanxia",
+    "title": "无二江流域",
+    "zone": "延夏",
     "coords": [
       30.0,
       26.0
@@ -3974,8 +3974,8 @@
     "uptime": 120,
     "lvl": 65,
     "id": 522,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 780",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 780<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 4.0
   },
   {
@@ -3983,7 +3983,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Othardian Plum",
+        "item": "奥萨德梅",
         "icon": 25311,
         "id": 19852,
         "slot": "2"
@@ -3993,8 +3993,8 @@
       2,
       14
     ],
-    "title": "Onsal Hakair",
-    "zone": "The Azim Steppe",
+    "title": "昂萨哈凯尔",
+    "zone": "太阳神草原",
     "coords": [
       27.0,
       16.0
@@ -4003,8 +4003,8 @@
     "uptime": 120,
     "lvl": 70,
     "id": 523,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 862",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 862<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 4.0
   },
   {
@@ -4012,7 +4012,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Hallowed Basil",
+        "item": "祝圣罗勒草",
         "icon": 25010,
         "id": 19918,
         "slot": "6"
@@ -4023,8 +4023,8 @@
       6,
       18
     ],
-    "title": "Rustrock",
-    "zone": "The Peaks",
+    "title": "红锈岩山",
+    "zone": "基拉巴尼亚山区",
     "coords": [
       23.0,
       16.0
@@ -4033,8 +4033,8 @@
     "uptime": 120,
     "lvl": 70,
     "id": 524,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 1200",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 1200<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 4.0
   },
   {
@@ -4042,7 +4042,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Lotus Root",
+        "item": "莲藕",
         "icon": 25226,
         "id": 19865,
         "slot": "7"
@@ -4052,8 +4052,8 @@
       8,
       20
     ],
-    "title": "Valley of the Fallen Rainbow",
-    "zone": "Yanxia",
+    "title": "七彩溪谷",
+    "zone": "延夏",
     "coords": [
       28.0,
       8.0
@@ -4062,8 +4062,8 @@
     "uptime": 120,
     "lvl": 70,
     "id": 525,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 796",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 796<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 4.0
   },
   {
@@ -4071,13 +4071,13 @@
     "func": "node",
     "items": [
       {
-        "item": "Rhalgr's Streak",
+        "item": "破坏神之杖",
         "icon": 25507,
         "id": 17948,
         "slot": "1"
       },
       {
-        "item": "Jhammel Ginger",
+        "item": "长颈骆姜",
         "icon": 25012,
         "id": 19857,
         "slot": "3"
@@ -4087,8 +4087,8 @@
       4,
       16
     ],
-    "title": "Abalathia's Skull",
-    "zone": "The Lochs",
+    "title": "阿巴拉提亚龙头",
+    "zone": "基拉巴尼亚湖区",
     "coords": [
       7.0,
       10.0
@@ -4097,8 +4097,8 @@
     "uptime": 120,
     "lvl": 70,
     "id": 526,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 829",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 829<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 4.0
   },
   {
@@ -4106,7 +4106,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Torreya Log",
+        "item": "榧木原木",
         "icon": 22405,
         "id": 19934,
         "slot": "6"
@@ -4117,8 +4117,8 @@
       6,
       18
     ],
-    "title": "The High Bank",
-    "zone": "The Lochs",
+    "title": "高岸",
+    "zone": "基拉巴尼亚湖区",
     "coords": [
       11.0,
       12.0
@@ -4127,8 +4127,8 @@
     "uptime": 120,
     "lvl": 70,
     "id": 527,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 1200",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 1200<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 4.0
   },
   {
@@ -4136,13 +4136,13 @@
     "func": "node",
     "items": [
       {
-        "item": "Rhea",
+        "item": "苎麻",
         "icon": 21651,
         "id": 19991,
         "slot": "4"
       },
       {
-        "item": "Azim Cotton Boll",
+        "item": "太阳棉",
         "icon": 25037,
         "id": 21086,
         "slot": "5"
@@ -4153,8 +4153,8 @@
       0,
       12
     ],
-    "title": "Onsal Hakair",
-    "zone": "The Azim Steppe",
+    "title": "昂萨哈凯尔",
+    "zone": "太阳神草原",
     "coords": [
       20.0,
       10.0
@@ -4163,8 +4163,8 @@
     "uptime": 120,
     "lvl": 70,
     "id": 528,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 1200",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 1200<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 4.0
   },
   {
@@ -4172,13 +4172,13 @@
     "func": "node",
     "items": [
       {
-        "item": "Nightsteel Ore",
+        "item": "夜铁矿",
         "icon": 21203,
         "id": 22417,
         "slot": "3"
       },
       {
-        "item": "Hawk's Eye",
+        "item": "鹰眼石",
         "icon": 21228,
         "id": 23179,
         "slot": "7"
@@ -4189,8 +4189,8 @@
       6,
       18
     ],
-    "title": "East Othard Coastline",
-    "zone": "The Ruby Sea",
+    "title": "奥萨德东岸",
+    "zone": "红玉海",
     "coords": [
       11.0,
       22.0
@@ -4199,8 +4199,8 @@
     "uptime": 120,
     "lvl": 70,
     "id": 535,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 1350",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 1350<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 4.2
   },
   {
@@ -4208,13 +4208,13 @@
     "func": "node",
     "items": [
       {
-        "item": "Azim Spring Water",
+        "item": "太阳神泉水",
         "icon": 22678,
         "id": 24255,
         "slot": "1"
       },
       {
-        "item": "Silvergrace Ore",
+        "item": "清银矿",
         "icon": 21213,
         "id": 22418,
         "slot": "6"
@@ -4225,8 +4225,8 @@
       8,
       20
     ],
-    "title": "Nhaama's Retreat",
-    "zone": "The Azim Steppe",
+    "title": "月神沙漠北端",
+    "zone": "太阳神草原",
     "coords": [
       24.0,
       37.0
@@ -4235,8 +4235,8 @@
     "uptime": 120,
     "lvl": 70,
     "id": 536,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 1350",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 1350<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 4.2
   },
   {
@@ -4244,13 +4244,13 @@
     "func": "node",
     "items": [
       {
-        "item": "Black Willow Log",
+        "item": "黑柳原木",
         "icon": 22402,
         "id": 22419,
         "slot": "6"
       },
       {
-        "item": "Hardened Veteran Tree Sap",
+        "item": "古木树液块",
         "icon": 22638,
         "id": 23180,
         "slot": "4"
@@ -4261,8 +4261,8 @@
       4,
       16
     ],
-    "title": "Pike Falls",
-    "zone": "The Fringes",
+    "title": "尖枪瀑布",
+    "zone": "基拉巴尼亚边区",
     "coords": [
       15.0,
       21.0
@@ -4271,8 +4271,8 @@
     "uptime": 120,
     "lvl": 70,
     "id": 537,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 1350",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 1350<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 4.2
   },
   {
@@ -4280,7 +4280,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Hingan Flax",
+        "item": "真麻",
         "icon": 21673,
         "id": 22420,
         "slot": "4"
@@ -4291,8 +4291,8 @@
       2,
       14
     ],
-    "title": "Mount Yorn",
-    "zone": "The Peaks",
+    "title": "约恩山",
+    "zone": "基拉巴尼亚山区",
     "coords": [
       24.0,
       36.0
@@ -4301,8 +4301,8 @@
     "uptime": 120,
     "lvl": 70,
     "id": 538,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 1350",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 1350<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 4.2
   },
   {
@@ -4310,7 +4310,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Gyr Abanian Ore",
+        "item": "岩铁",
         "icon": 21216,
         "id": 24240,
         "slot": "3"
@@ -4321,8 +4321,8 @@
       0,
       12
     ],
-    "title": "Virdjala",
-    "zone": "The Fringes",
+    "title": "无垢干谷",
+    "zone": "基拉巴尼亚边区",
     "coords": [
       27.0,
       30.0
@@ -4331,8 +4331,8 @@
     "uptime": 120,
     "lvl": 70,
     "id": 555,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 1550",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 1550<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 4.4
   },
   {
@@ -4340,7 +4340,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Evergleam Ore",
+        "item": "常辉矿",
         "icon": 21223,
         "id": 24241,
         "slot": "6"
@@ -4351,8 +4351,8 @@
       10,
       22
     ],
-    "title": "Loch Seld",
-    "zone": "The Lochs",
+    "title": "盐湖",
+    "zone": "基拉巴尼亚湖区",
     "coords": [
       24.0,
       12.0
@@ -4361,8 +4361,8 @@
     "uptime": 120,
     "lvl": 70,
     "id": 556,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 1550",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 1550<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 4.4
   },
   {
@@ -4370,7 +4370,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Urunday Log",
+        "item": "乌仑代硬木原木",
         "icon": 22420,
         "id": 24242,
         "slot": "6"
@@ -4381,8 +4381,8 @@
       4,
       16
     ],
-    "title": "Rustrock",
-    "zone": "The Peaks",
+    "title": "红锈岩山",
+    "zone": "基拉巴尼亚山区",
     "coords": [
       33.0,
       10.0
@@ -4391,8 +4391,8 @@
     "uptime": 120,
     "lvl": 70,
     "id": 557,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 1550",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 1550<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 4.4
   },
   {
@@ -4400,7 +4400,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Yanxian Cotton Boll",
+        "item": "延夏棉",
         "icon": 21652,
         "id": 24243,
         "slot": "4"
@@ -4411,8 +4411,8 @@
       2,
       14
     ],
-    "title": "The Glittering Basin",
-    "zone": "Yanxia",
+    "title": "无二江流域",
+    "zone": "延夏",
     "coords": [
       28.0,
       34.0
@@ -4421,8 +4421,8 @@
     "uptime": 120,
     "lvl": 70,
     "id": 558,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 1550",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 1550<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 4.4
   },
   {
@@ -4430,27 +4430,27 @@
     "func": "node",
     "items": [
       {
-        "item": "Gale Rock",
+        "item": "暴风岩",
         "icon": 21473,
         "id": 27805,
         "slot": "6",
         "reduce": {
-          "item": "Chiaroglow Aethersand",
+          "item": "闪光灵砂",
           "icon": 21235
         }
       },
       {
-        "item": "Water Cluster",
+        "item": "水之晶簇",
         "icon": 20014,
         "id": 19,
         "slot": "5"
       },
       {
-        "item": "Thunder Rock",
+        "item": "轰雷性岩",
         "icon": 21482,
         "id": 30591,
         "reduce": {
-          "item": "Earth Cluster",
+          "item": "土之晶簇",
           "icon": 20018
         }
       }
@@ -4459,8 +4459,8 @@
     "time": [
       0
     ],
-    "title": "The K'mul Astropolis",
-    "zone": "The Rak'tika Greatwood",
+    "title": "星墓塔遗迹群",
+    "zone": "拉凯提卡大森林",
     "coords": [
       24.2,
       13.7
@@ -4476,27 +4476,27 @@
     "func": "node",
     "items": [
       {
-        "item": "Solarite",
+        "item": "光耀石",
         "icon": 21467,
         "id": 27806,
         "slot": "8",
         "reduce": {
-          "item": "Scuroglow Aethersand",
+          "item": "黑暗灵砂",
           "icon": 21233
         }
       },
       {
-        "item": "Lightning Cluster",
+        "item": "雷之晶簇",
         "icon": 20017,
         "id": 18,
         "slot": "2"
       },
       {
-        "item": "Thunder Rock",
+        "item": "轰雷性岩",
         "icon": 21482,
         "id": 30591,
         "reduce": {
-          "item": "Earth Cluster",
+          "item": "土之晶簇",
           "icon": 20018
         }
       }
@@ -4505,8 +4505,8 @@
     "time": [
       8
     ],
-    "title": "The Exarch Gate",
-    "zone": "Lakeland",
+    "title": "水晶公之门",
+    "zone": "雷克兰德",
     "coords": [
       34.3,
       29.0
@@ -4522,27 +4522,27 @@
     "func": "node",
     "items": [
       {
-        "item": "Shade Quartz",
+        "item": "暗影石英",
         "icon": 21462,
         "id": 27807,
         "slot": "7",
         "reduce": {
-          "item": "Agedeep Aethersand",
+          "item": "险山灵砂",
           "icon": 21234
         }
       },
       {
-        "item": "Fire Cluster",
+        "item": "火之晶簇",
         "icon": 20013,
         "id": 14,
         "slot": "3"
       },
       {
-        "item": "Thunder Rock",
+        "item": "轰雷性岩",
         "icon": 21482,
         "id": 30591,
         "reduce": {
-          "item": "Earth Cluster",
+          "item": "土之晶簇",
           "icon": 20018
         }
       }
@@ -4551,8 +4551,8 @@
     "time": [
       16
     ],
-    "title": "Komra",
-    "zone": "Kholusia",
+    "title": "古姆拉村",
+    "zone": "珂露西亚岛",
     "coords": [
       33.2,
       16.7
@@ -4568,7 +4568,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Raw Hematite",
+        "item": "乌钢石原石",
         "icon": 21476,
         "id": 27726,
         "slot": "8"
@@ -4579,8 +4579,8 @@
       2,
       14
     ],
-    "title": "Governor's Row",
-    "zone": "Kholusia",
+    "title": "总督田地",
+    "zone": "珂露西亚岛",
     "coords": [
       34.0,
       23.0
@@ -4589,8 +4589,8 @@
     "uptime": 120,
     "lvl": 70,
     "id": 603,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 1350",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 1350<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 5.0
   },
   {
@@ -4598,7 +4598,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Raw Diaspore",
+        "item": "硬水铝石原石",
         "icon": 21473,
         "id": 27727,
         "slot": "6"
@@ -4608,8 +4608,8 @@
       6,
       18
     ],
-    "title": "Sextuplet Shallow",
-    "zone": "Il Mheg",
+    "title": "六子浅滩",
+    "zone": "伊尔美格",
     "coords": [
       26.0,
       13.0
@@ -4618,8 +4618,8 @@
     "uptime": 120,
     "lvl": 75,
     "id": 604,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 1312",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 1312<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 5.0
   },
   {
@@ -4627,7 +4627,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Raw Lazurite",
+        "item": "青金石原石",
         "icon": 21472,
         "id": 27728,
         "slot": "7"
@@ -4637,8 +4637,8 @@
       4,
       16
     ],
-    "title": "Cleric",
-    "zone": "The Rak'tika Greatwood",
+    "title": "书著者树洞",
+    "zone": "拉凯提卡大森林",
     "coords": [
       19.0,
       20.0
@@ -4647,8 +4647,8 @@
     "uptime": 120,
     "lvl": 75,
     "id": 605,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 1350",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 1350<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 5.0
   },
   {
@@ -4656,7 +4656,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Raw Triplite",
+        "item": "三重石原石",
         "icon": 21471,
         "id": 27729,
         "slot": "7"
@@ -4666,8 +4666,8 @@
       0,
       12
     ],
-    "title": "Ladle",
-    "zone": "Amh Araeng",
+    "title": "水站",
+    "zone": "安穆·艾兰",
     "coords": [
       20.1,
       28.8
@@ -4676,8 +4676,8 @@
     "uptime": 120,
     "lvl": 80,
     "id": 606,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 1421",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 1421<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 5.0
   },
   {
@@ -4685,7 +4685,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Raw Petalite",
+        "item": "透锂长石原石",
         "icon": 21477,
         "id": 27730,
         "slot": "8"
@@ -4695,8 +4695,8 @@
       6,
       18
     ],
-    "title": "Weed",
-    "zone": "Lakeland",
+    "title": "杂草岛",
+    "zone": "雷克兰德",
     "coords": [
       29.0,
       33.0
@@ -4705,8 +4705,8 @@
     "uptime": 120,
     "lvl": 80,
     "id": 607,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 1491",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 1491<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 5.0
   },
   {
@@ -4714,7 +4714,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Raw Onyx",
+        "item": "黑玛瑙原石",
         "icon": 21231,
         "id": 27731,
         "slot": "7"
@@ -4724,8 +4724,8 @@
       0,
       12
     ],
-    "title": "The Caliban Gorge",
-    "zone": "The Tempest",
+    "title": "卡利班深海峡",
+    "zone": "黑风海",
     "coords": [
       15.8,
       21.3
@@ -4734,8 +4734,8 @@
     "uptime": 120,
     "lvl": 80,
     "id": 608,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 1562",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 1562<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 5.0
   },
   {
@@ -4743,13 +4743,13 @@
     "func": "node",
     "items": [
       {
-        "item": "Prismstone",
+        "item": "彩虹晶",
         "icon": 21232,
         "id": 27705,
         "slot": "7"
       },
       {
-        "item": "Beryllium Ore",
+        "item": "轻铍矿",
         "icon": 21455,
         "id": 28717,
         "slot": "5"
@@ -4760,8 +4760,8 @@
       4,
       16
     ],
-    "title": "Saint Fathric's Temple",
-    "zone": "Il Mheg",
+    "title": "圣法斯里克天庭",
+    "zone": "伊尔美格",
     "coords": [
       30.0,
       21.0
@@ -4770,8 +4770,8 @@
     "uptime": 120,
     "lvl": 80,
     "id": 609,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 1840",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 1840<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 5.0
   },
   {
@@ -4779,7 +4779,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Tungsten Ore",
+        "item": "重钨矿",
         "icon": 21203,
         "id": 27704,
         "slot": "3"
@@ -4790,8 +4790,8 @@
       10,
       22
     ],
-    "title": "Where the Dry Return",
-    "zone": "The Tempest",
+    "title": "陆人墓标",
+    "zone": "黑风海",
     "coords": [
       32.7,
       8.0
@@ -4800,8 +4800,8 @@
     "uptime": 120,
     "lvl": 80,
     "id": 610,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 1840",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 1840<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 5.0
   },
   {
@@ -4809,26 +4809,26 @@
     "func": "node",
     "items": [
       {
-        "item": "Bog Sage",
+        "item": "沼泽鼠尾草",
         "icon": 25009,
         "id": 27810,
         "reduce": {
-          "item": "Agewood Aethersand",
+          "item": "古树灵砂",
           "icon": 21236
         }
       },
       {
-        "item": "Earth Cluster",
+        "item": "土之晶簇",
         "icon": 20018,
         "id": 17,
         "slot": "7"
       },
       {
-        "item": "Levin Mint",
+        "item": "雷霆薄荷",
         "icon": 25039,
         "id": 30592,
         "reduce": {
-          "item": "Lightning Cluster",
+          "item": "雷之晶簇",
           "icon": 20017
         }
       }
@@ -4837,8 +4837,8 @@
     "time": [
       12
     ],
-    "title": "The Bridges",
-    "zone": "Lakeland",
+    "title": "石桥",
+    "zone": "雷克兰德",
     "coords": [
       33.3,
       36.0
@@ -4854,27 +4854,27 @@
     "func": "node",
     "items": [
       {
-        "item": "Sweet Marjoram",
+        "item": "甜墨角兰",
         "icon": 25015,
         "id": 27809,
         "slot": "6",
         "reduce": {
-          "item": "Scuroglow Aethersand",
+          "item": "黑暗灵砂",
           "icon": 21233
         }
       },
       {
-        "item": "Wind Cluster",
+        "item": "风之晶簇",
         "icon": 20016,
         "id": 16,
         "slot": "4"
       },
       {
-        "item": "Levin Mint",
+        "item": "雷霆薄荷",
         "icon": 25039,
         "id": 30592,
         "reduce": {
-          "item": "Lightning Cluster",
+          "item": "雷之晶簇",
           "icon": 20017
         }
       }
@@ -4883,8 +4883,8 @@
     "time": [
       4
     ],
-    "title": "The K'mul Astropolis",
-    "zone": "The Rak'tika Greatwood",
+    "title": "星墓塔遗迹群",
+    "zone": "拉凯提卡大森林",
     "coords": [
       24.1,
       15.1
@@ -4900,27 +4900,27 @@
     "func": "node",
     "items": [
       {
-        "item": "White Clay",
+        "item": "白玉土",
         "icon": 22610,
         "id": 27808,
         "slot": "7",
         "reduce": {
-          "item": "Chiaroglow Aethersand",
+          "item": "闪光灵砂",
           "icon": 21235
         }
       },
       {
-        "item": "Ice Cluster",
+        "item": "冰之晶簇",
         "icon": 20015,
         "id": 15,
         "slot": "6"
       },
       {
-        "item": "Levin Mint",
+        "item": "雷霆薄荷",
         "icon": 25039,
         "id": 30592,
         "reduce": {
-          "item": "Lightning Cluster",
+          "item": "雷之晶簇",
           "icon": 20017
         }
       }
@@ -4929,8 +4929,8 @@
     "time": [
       20
     ],
-    "title": "Tomra",
-    "zone": "Kholusia",
+    "title": "图姆拉村",
+    "zone": "珂露西亚岛",
     "coords": [
       18.6,
       5.9
@@ -4946,7 +4946,7 @@
     "func": "node",
     "items": [
       {
-        "item": "White Oak Branch",
+        "item": "白橡木枝",
         "icon": 22416,
         "id": 27816,
         "slot": "3"
@@ -4957,8 +4957,8 @@
       10,
       22
     ],
-    "title": "Venmont Yards",
-    "zone": "Kholusia",
+    "title": "温蒙特造船厂",
+    "zone": "珂露西亚岛",
     "coords": [
       12.0,
       28.0
@@ -4967,8 +4967,8 @@
     "uptime": 120,
     "lvl": 70,
     "id": 627,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 1350",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 1350<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 5.0
   },
   {
@@ -4976,7 +4976,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Broad Beans",
+        "item": "蚕豆",
         "icon": 25353,
         "id": 27833,
         "slot": "2"
@@ -4986,8 +4986,8 @@
       0,
       12
     ],
-    "title": "Phisor Lran",
-    "zone": "Il Mheg",
+    "title": "群树馆",
+    "zone": "伊尔美格",
     "coords": [
       25.0,
       36.0
@@ -4996,8 +4996,8 @@
     "uptime": 120,
     "lvl": 75,
     "id": 628,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 1312",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 1312<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 5.0
   },
   {
@@ -5005,7 +5005,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Peppermint",
+        "item": "欧薄荷",
         "icon": 25016,
         "id": 27836,
         "slot": "6"
@@ -5015,8 +5015,8 @@
       10,
       22
     ],
-    "title": "Embrasure",
-    "zone": "Lakeland",
+    "title": "射孔",
+    "zone": "雷克兰德",
     "coords": [
       27.0,
       21.0
@@ -5025,8 +5025,8 @@
     "uptime": 120,
     "lvl": 75,
     "id": 629,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 1350",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 1350<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 5.0
   },
   {
@@ -5034,7 +5034,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Russet Popoto",
+        "item": "黄新薯",
         "icon": 25204,
         "id": 27822,
         "slot": "7"
@@ -5044,8 +5044,8 @@
       8,
       20
     ],
-    "title": "The Dragging Tail",
-    "zone": "Amh Araeng",
+    "title": "尾之道",
+    "zone": "安穆·艾兰",
     "coords": [
       19.6,
       17.1
@@ -5054,8 +5054,8 @@
     "uptime": 120,
     "lvl": 80,
     "id": 630,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 1421",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 1421<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 5.0
   },
   {
@@ -5063,7 +5063,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Mist Spinach",
+        "item": "迷雾菠菜",
         "icon": 25206,
         "id": 27828,
         "slot": "6"
@@ -5073,8 +5073,8 @@
       0,
       12
     ],
-    "title": "Bowrest",
-    "zone": "The Rak'tika Greatwood",
+    "title": "射手露宿地",
+    "zone": "拉凯提卡大森林",
     "coords": [
       34.7,
       21.5
@@ -5083,8 +5083,8 @@
     "uptime": 120,
     "lvl": 80,
     "id": 631,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 1491",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 1491<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 5.0
   },
   {
@@ -5092,7 +5092,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Lemonette",
+        "item": "小柠檬",
         "icon": 25305,
         "id": 27835,
         "slot": "2"
@@ -5102,8 +5102,8 @@
       6,
       18
     ],
-    "title": "Sharptongue Drip",
-    "zone": "Kholusia",
+    "title": "刺舌滴",
+    "zone": "珂露西亚岛",
     "coords": [
       20.0,
       27.0
@@ -5112,8 +5112,8 @@
     "uptime": 120,
     "lvl": 80,
     "id": 632,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 1562",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 1562<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 5.0
   },
   {
@@ -5121,13 +5121,13 @@
     "func": "node",
     "items": [
       {
-        "item": "Sandalwood Log",
+        "item": "檀香木原木",
         "icon": 22401,
         "id": 27688,
         "slot": "6"
       },
       {
-        "item": "Sandalwood Sap",
+        "item": "檀香木树液",
         "icon": 22638,
         "id": 28716,
         "slot": "4"
@@ -5138,8 +5138,8 @@
       2,
       14
     ],
-    "title": "Mjrl's Regret",
-    "zone": "The Rak'tika Greatwood",
+    "title": "缪栎的乡愁",
+    "zone": "拉凯提卡大森林",
     "coords": [
       24.0,
       36.0
@@ -5148,8 +5148,8 @@
     "uptime": 120,
     "lvl": 80,
     "id": 633,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 1840",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 1840<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 5.0
   },
   {
@@ -5157,7 +5157,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Ethereal Cocoon",
+        "item": "泡茧",
         "icon": 21661,
         "id": 27761,
         "slot": "4"
@@ -5168,8 +5168,8 @@
       8,
       20
     ],
-    "title": "Inviolate Witness",
-    "zone": "Lakeland",
+    "title": "无垢之证",
+    "zone": "雷克兰德",
     "coords": [
       26.0,
       11.0
@@ -5178,8 +5178,8 @@
     "uptime": 120,
     "lvl": 80,
     "id": 634,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 1840",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 1840<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 5.0
   },
   {
@@ -5187,13 +5187,13 @@
     "func": "node",
     "items": [
       {
-        "item": "Fireheart Cobalt",
+        "item": "辉钴铁矿",
         "icon": 21227,
         "id": 29968,
         "slot": "6"
       },
       {
-        "item": "Brashgold Ore",
+        "item": "金锡矿",
         "icon": 21227,
         "id": 30486,
         "slot": "7"
@@ -5204,8 +5204,8 @@
       2,
       14
     ],
-    "title": "The Isle of Ken",
-    "zone": "Lakeland",
+    "title": "贤岛",
+    "zone": "雷克兰德",
     "coords": [
       4.7,
       33.8
@@ -5214,8 +5214,8 @@
     "uptime": 120,
     "lvl": 80,
     "id": 681,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 2140",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 2140<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 5.2
   },
   {
@@ -5223,7 +5223,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Purpure Shell Chip",
+        "item": "尊紫碎块",
         "icon": 21469,
         "id": 29970,
         "slot": "1"
@@ -5234,8 +5234,8 @@
       6,
       18
     ],
-    "title": "Purpure",
-    "zone": "The Tempest",
+    "title": "尊紫洞",
+    "zone": "黑风海",
     "coords": [
       34.4,
       31.3
@@ -5244,8 +5244,8 @@
     "uptime": 120,
     "lvl": 80,
     "id": 682,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 2140",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 2140<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 5.2
   },
   {
@@ -5253,7 +5253,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Merbau Log",
+        "item": "印茄原木",
         "icon": 22423,
         "id": 29972,
         "slot": "6"
@@ -5264,8 +5264,8 @@
       8,
       20
     ],
-    "title": "Anden's Airs",
-    "zone": "Il Mheg",
+    "title": "安登小羊圈",
+    "zone": "伊尔美格",
     "coords": [
       36.5,
       27.4
@@ -5274,8 +5274,8 @@
     "uptime": 120,
     "lvl": 80,
     "id": 683,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 2140",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 2140<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 5.2
   },
   {
@@ -5283,13 +5283,13 @@
     "func": "node",
     "items": [
       {
-        "item": "Imperial Fern",
+        "item": "帝王蕨菜",
         "icon": 25038,
         "id": 29978,
         "slot": "3"
       },
       {
-        "item": "Tender Dill",
+        "item": "柔嫩茴香",
         "icon": 25036,
         "id": 30485,
         "slot": "4"
@@ -5300,8 +5300,8 @@
       0,
       12
     ],
-    "title": "White Oil Falls",
-    "zone": "Kholusia",
+    "title": "白油瀑布",
+    "zone": "珂露西亚岛",
     "coords": [
       28.0,
       21.0
@@ -5310,8 +5310,8 @@
     "uptime": 120,
     "lvl": 80,
     "id": 684,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 2140",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 2140<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 5.2
   },
   {
@@ -5319,7 +5319,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Ashen Alumen",
+        "item": "灰明矾",
         "icon": 22604,
         "id": 29976,
         "slot": "2"
@@ -5330,8 +5330,8 @@
       10,
       22
     ],
-    "title": "Mount Biran Mines",
-    "zone": "Amh Araeng",
+    "title": "比朗大矿山",
+    "zone": "安穆·艾兰",
     "coords": [
       20.1,
       8.6
@@ -5340,8 +5340,8 @@
     "uptime": 120,
     "lvl": 80,
     "id": 713,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 2140",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 2140<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 5.2
   },
   {
@@ -5349,7 +5349,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Duskblooms",
+        "item": "紫草",
         "icon": 25022,
         "id": 29974,
         "slot": "4"
@@ -5360,8 +5360,8 @@
       4,
       16
     ],
-    "title": "The Nabaath Severance",
-    "zone": "Amh Araeng",
+    "title": "拿巴示断绝",
+    "zone": "安穆·艾兰",
     "coords": [
       32.2,
       33.4
@@ -5370,8 +5370,8 @@
     "uptime": 120,
     "lvl": 80,
     "id": 714,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 2140",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 2140<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 5.2
   },
   {
@@ -5379,7 +5379,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Hard Water",
+        "item": "超硬水",
         "icon": 22689,
         "id": 32955
       }
@@ -5389,8 +5389,8 @@
       4,
       16
     ],
-    "title": "The Duergar's Tewel",
-    "zone": "Kholusia",
+    "title": "侏儒烟囱",
+    "zone": "珂露西亚岛",
     "coords": [
       36.1,
       12.2
@@ -5399,8 +5399,8 @@
     "uptime": 120,
     "lvl": 80,
     "id": 758,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 2404",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 2404<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 5.4
   },
   {
@@ -5408,7 +5408,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Solstice Stone",
+        "item": "白夜结晶",
         "icon": 21232,
         "id": 32952
       }
@@ -5418,8 +5418,8 @@
       2,
       14
     ],
-    "title": "Voeburtenburg",
-    "zone": "Il Mheg",
+    "title": "孚布特堡",
+    "zone": "伊尔美格",
     "coords": [
       35.6,
       8.7
@@ -5428,8 +5428,8 @@
     "uptime": 120,
     "lvl": 80,
     "id": 759,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 2404",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 2404<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 5.4
   },
   {
@@ -5437,7 +5437,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Dolomite",
+        "item": "苦灰石",
         "icon": 21225,
         "id": 32951,
         "slot": " "
@@ -5448,8 +5448,8 @@
       8,
       20
     ],
-    "title": "The Husk",
-    "zone": "The Rak'tika Greatwood",
+    "title": "破裂卵壳",
+    "zone": "拉凯提卡大森林",
     "coords": [
       7.5,
       30.1
@@ -5458,8 +5458,8 @@
     "uptime": 120,
     "lvl": 80,
     "id": 760,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 2404",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 2404<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 5.4
   },
   {
@@ -5467,7 +5467,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Wattle Petribark",
+        "item": "硬质金合欢树皮",
         "icon": 22418,
         "id": 32954
       }
@@ -5477,8 +5477,8 @@
       0,
       12
     ],
-    "title": "The Hour of Certain Durance",
-    "zone": "Lakeland",
+    "title": "责罚监狱",
+    "zone": "雷克兰德",
     "coords": [
       5.2,
       26.5
@@ -5487,8 +5487,8 @@
     "uptime": 120,
     "lvl": 80,
     "id": 761,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 2404",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 2404<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 5.4
   },
   {
@@ -5496,7 +5496,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Silver Beech Log",
+        "item": "银山毛榉原木",
         "icon": 22412,
         "id": 32950
       }
@@ -5506,8 +5506,8 @@
       6,
       18
     ],
-    "title": "Garik",
-    "zone": "Amh Araeng",
+    "title": "迦利克村",
+    "zone": "安穆·艾兰",
     "coords": [
       16.0,
       11.0
@@ -5516,8 +5516,8 @@
     "uptime": 120,
     "lvl": 80,
     "id": 762,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 2404",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 2404<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 5.4
   },
   {
@@ -5525,7 +5525,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Raindrop Cotton Boll",
+        "item": "苍棉花",
         "icon": 25040,
         "id": 32953
       }
@@ -5535,8 +5535,8 @@
       10,
       22
     ],
-    "title": "The Isle of Consorts",
-    "zone": "The Rak'tika Greatwood",
+    "title": "快婿树岛",
+    "zone": "拉凯提卡大森林",
     "coords": [
       33.6,
       13.2
@@ -5545,8 +5545,8 @@
     "uptime": 120,
     "lvl": 80,
     "id": 763,
-    "condition": "Perception <If(IntegerParameter(2))>≥<Else/><</If> 2404",
-    "bonus": "<If(IntegerParameter(2))> HQ Available<Else/>Gathering Fortune 0%</If>",
+    "condition": "鉴别力 2404<If(IntegerParameter(2))>以上<Else/>以下</If>",
+    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
     "patch": 5.4
   },
   {
@@ -5554,12 +5554,12 @@
     "func": "node",
     "items": [
       {
-        "item": "Rarefied Reef Rock",
+        "item": "收藏用海底岩",
         "icon": 21203,
         "id": 32984
       },
       {
-        "item": "Rarefied Tungsten Ore",
+        "item": "收藏用重钨矿",
         "icon": 21203,
         "id": 32986
       }
@@ -5569,8 +5569,8 @@
       2,
       14
     ],
-    "title": "The Ondo Cups",
-    "zone": "The Tempest",
+    "title": "鳍人潮池",
+    "zone": "黑风海",
     "coords": [
       32.7,
       20.5
@@ -5586,7 +5586,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Rarefied Gyr Abanian Alumen",
+        "item": "收藏用基拉巴尼亚明矾",
         "icon": 22644,
         "id": 32987
       }
@@ -5596,8 +5596,8 @@
       10,
       22
     ],
-    "title": "Virdjala",
-    "zone": "The Fringes",
+    "title": "无垢干谷",
+    "zone": "基拉巴尼亚边区",
     "coords": [
       31.5,
       31.3
@@ -5613,17 +5613,17 @@
     "func": "node",
     "items": [
       {
-        "item": "Rarefied Dark Chestnut Sap",
+        "item": "收藏用暗栗木树液",
         "icon": 22654,
         "id": 32992
       },
       {
-        "item": "Rarefied Dark Chestnut Log",
+        "item": "收藏用暗栗木原木",
         "icon": 22420,
         "id": 32993
       },
       {
-        "item": "Rarefied Dark Chestnut Branch",
+        "item": "收藏用暗栗树枝",
         "icon": 22416,
         "id": 32994
       }
@@ -5632,8 +5632,8 @@
       10,
       22
     ],
-    "title": "The Smoldering Wastes",
-    "zone": "The Dravanian Forelands",
+    "title": "荒烟野地",
+    "zone": "龙堡参天高地",
     "coords": [
       29.1,
       30.0
@@ -5649,12 +5649,12 @@
     "func": "node",
     "items": [
       {
-        "item": "Rarefied Dark Chestnut",
+        "item": "收藏用毛栗子",
         "icon": 25302,
         "id": 32995
       },
       {
-        "item": "Rarefied Dark Chestnut Resin",
+        "item": "收藏用暗栗木树脂",
         "icon": 22674,
         "id": 32996
       }
@@ -5663,8 +5663,8 @@
       0,
       12
     ],
-    "title": "Avalonia Fallen",
-    "zone": "The Dravanian Forelands",
+    "title": "阿瓦隆尼亚古陆",
+    "zone": "龙堡参天高地",
     "coords": [
       16.1,
       36.4
@@ -5680,12 +5680,12 @@
     "func": "node",
     "items": [
       {
-        "item": "Rarefied Larch Log",
+        "item": "收藏用落叶松原木",
         "icon": 22403,
         "id": 32997
       },
       {
-        "item": "Rarefied Larch Sap",
+        "item": "收藏用落叶松树液",
         "icon": 22642,
         "id": 32999
       }
@@ -5694,8 +5694,8 @@
       2,
       14
     ],
-    "title": "Isari",
-    "zone": "The Ruby Sea",
+    "title": "渔村",
+    "zone": "红玉海",
     "coords": [
       5.9,
       15.7
@@ -5711,7 +5711,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Rarefied Shiitake Mushroom",
+        "item": "收藏用香菇",
         "icon": 25401,
         "id": 32998
       }
@@ -5720,8 +5720,8 @@
       4,
       16
     ],
-    "title": "Shoal Rock",
-    "zone": "The Ruby Sea",
+    "title": "冲之岩",
+    "zone": "红玉海",
     "coords": [
       33.0,
       9.2
@@ -5737,12 +5737,12 @@
     "func": "node",
     "items": [
       {
-        "item": "Rarefied Pine Resin",
+        "item": "收藏用松脂",
         "icon": 22638,
         "id": 33000
       },
       {
-        "item": "Rarefied Pine Log",
+        "item": "收藏用松木原木",
         "icon": 22414,
         "id": 33001
       }
@@ -5751,8 +5751,8 @@
       0,
       12
     ],
-    "title": "Doma",
-    "zone": "Yanxia",
+    "title": "多玛",
+    "zone": "延夏",
     "coords": [
       18.6,
       14.3
@@ -5768,12 +5768,12 @@
     "func": "node",
     "items": [
       {
-        "item": "Rarefied Pixie Apple",
+        "item": "收藏用仙子苹果",
         "icon": 25308,
         "id": 33002
       },
       {
-        "item": "Rarefied Miracle Apple Log",
+        "item": "收藏用仙果木原木",
         "icon": 22404,
         "id": 33004
       }
@@ -5782,8 +5782,8 @@
       10,
       22
     ],
-    "title": "The Woolen Way",
-    "zone": "Il Mheg",
+    "title": "羊毛道",
+    "zone": "伊尔美格",
     "coords": [
       4.0,
       23.1
@@ -5799,7 +5799,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Rarefied White Oak Log",
+        "item": "收藏用白橡木原木",
         "icon": 22407,
         "id": 33003
       }
@@ -5808,8 +5808,8 @@
       8,
       20
     ],
-    "title": "The Chisel",
-    "zone": "Kholusia",
+    "title": "凿岩门",
+    "zone": "珂露西亚岛",
     "coords": [
       27.8,
       32.7
@@ -5825,12 +5825,12 @@
     "func": "node",
     "items": [
       {
-        "item": "Rarefied Sandteak Log",
+        "item": "收藏用沙柚木原木",
         "icon": 22403,
         "id": 33005
       },
       {
-        "item": "Rarefied Amber Cloves",
+        "item": "收藏用琥珀丁香",
         "icon": 25023,
         "id": 33007
       }
@@ -5839,8 +5839,8 @@
       2,
       14
     ],
-    "title": "The Central Hills of Amber",
-    "zone": "Amh Araeng",
+    "title": "中琥珀丘",
+    "zone": "安穆·艾兰",
     "coords": [
       18.5,
       20.4
@@ -5856,12 +5856,12 @@
     "func": "node",
     "items": [
       {
-        "item": "Rarefied Kelp",
+        "item": "收藏用海藻",
         "icon": 25225,
         "id": 33006
       },
       {
-        "item": "Rarefied Coral",
+        "item": "收藏用珊瑚",
         "icon": 29062,
         "id": 33008
       }
@@ -5871,8 +5871,8 @@
       4,
       16
     ],
-    "title": "The Norvrandt Slope",
-    "zone": "The Tempest",
+    "title": "诺弗兰特大陆坡",
+    "zone": "黑风海",
     "coords": [
       37.4,
       11.6
@@ -5888,7 +5888,7 @@
     "func": "node",
     "items": [
       {
-        "item": "Rarefied Urunday Log",
+        "item": "收藏用乌仑代硬木原木",
         "icon": 22420,
         "id": 33009
       }
@@ -5898,8 +5898,8 @@
       0,
       12
     ],
-    "title": "Heather Falls",
-    "zone": "The Peaks",
+    "title": "石楠瀑布",
+    "zone": "基拉巴尼亚山区",
     "coords": [
       30.5,
       6.8

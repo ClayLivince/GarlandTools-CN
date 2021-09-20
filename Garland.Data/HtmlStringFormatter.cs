@@ -69,10 +69,43 @@ namespace Garland.Data
                         var sheetKeyRaw = genericElementArgs[1].Accept(this);
                         if (int.TryParse(sheetKeyRaw.Trim(), out var sheetKey))
                         {
-                            var sheet = DatabaseBuilder.Instance.Realm.GameData.GetSheet(sheetName);
-                            var row = sheet[sheetKey];
-                            var rowIndex = int.Parse(genericElementArgs[2].Accept(this).Trim());
-                            return row[rowIndex].ToString();
+                            SaintCoinach.Xiv.IXivSheet sheet;
+
+                            try
+                            {
+                                sheet = DatabaseBuilder.Instance.Realm.GameData.GetSheet(sheetName);
+                            } catch (KeyNotFoundException e)
+                            {
+                                sheet = DatabaseBuilder.Instance.Realm.GameData.GetSheet(sheetName.Replace("HQ", ""));
+                            }
+
+                            try
+                            {
+                                var row = sheet[sheetKey];
+                                try
+                                {
+                                    var rowIndex = int.Parse(genericElementArgs[2].Accept(this).Trim());
+                                    return row[rowIndex].ToString();
+                                }
+                                catch (IndexOutOfRangeException e)
+                                {
+                                    if (sheetName.Contains("Item"))
+                                    {
+                                        return row[0].ToString();
+                                    }
+                                }
+                                catch (KeyNotFoundException e)
+                                {
+                                    //Console.WriteLine(genericText);
+                                }
+                                catch (Exception aba) { 
+                                    //And What?
+                                }
+                            } catch (KeyNotFoundException keyNotFound) {
+                                //Console.WriteLine("0");
+                                //return String.Format("[{0}]", sheetName);
+                            }
+                            
                         }
                         return "[???]";
                     }
@@ -256,7 +289,13 @@ namespace Garland.Data
                     return "<span class=\"emphasis\">";
 
                 default:
-                    throw new NotImplementedException();
+                   
+                    //throw new NotImplementedException();
+                    Console.WriteLine("0");
+                    
+                    return "";
+                    
+
             }
         }
 

@@ -28,153 +28,153 @@ namespace Garland.Data.Modules
         {
             // Monk
             _jobsByKey[20] = new JobData(GarlandDatabase.LevelCap, new SW[] {
-                new SW("Physical Damage", 15), new SW("Strength", 1),
-                new SW("Determination", .001), new SW("Skill Speed", .001),
-                new SW("Critical Hit", .001), new SW("Direct Hit Rate", .001)
+                new SW("物理基本性能", 15), new SW("力量", 1),
+                new SW("信念", .001), new SW("技能速度", .001),
+                new SW("暴击", .001), new SW("直击", .001)
             });
             _jobsByKey[2] = _jobsByKey[20]; // Pugilist
 
             // Dragoon
             _jobsByKey[22] = new JobData(GarlandDatabase.LevelCap, new SW[] {
-                new SW("Physical Damage", 15), new SW("Strength", 1),
-                new SW("Determination", .001), new SW("Skill Speed", .001),
-                new SW("Critical Hit", .001), new SW("Direct Hit Rate", .001)
+                new SW("物理基本性能", 15), new SW("力量", 1),
+                new SW("信念", .001), new SW("技能速度", .001),
+                new SW("暴击", .001), new SW("直击", .001)
             });
             _jobsByKey[4] = _jobsByKey[22]; // Lancer
 
             // Bard
             _jobsByKey[23] = new JobData(GarlandDatabase.LevelCap, new SW[] {
-                new SW("Physical Damage", 15), new SW("Dexterity", 1),
-                new SW("Determination", .001), new SW("Skill Speed", .001),
-                new SW("Critical Hit", .001), new SW("Direct Hit Rate", .001)
+                new SW("物理基本性能", 15), new SW("灵巧", 1),
+                new SW("信念", .001), new SW("技能速度", .001),
+                new SW("暴击", .001), new SW("直击", .001)
             });
             _jobsByKey[5] = _jobsByKey[23]; // Archer
 
             // Machinist
             _jobsByKey[31] = new JobData(GarlandDatabase.LevelCap, new SW[] {
-                new SW("Physical Damage", 15), new SW("Dexterity", 1),
-                new SW("Determination", .001), new SW("Skill Speed", .001),
-                new SW("Critical Hit", .001), new SW("Direct Hit Rate", .001)
+                new SW("物理基本性能", 15), new SW("灵巧", 1),
+                new SW("信念", .001), new SW("技能速度", .001),
+                new SW("暴击", .001), new SW("直击", .001)
             });
 
             // Black Mage
             _jobsByKey[25] = new JobData(GarlandDatabase.LevelCap, new SW[] {
-                new SW("Magic Damage", 15), new SW("Intelligence", 1),
-                new SW("Determination", .001), new SW("Spell Speed", .001),
-                new SW("Critical Hit", .001), new SW("Direct Hit Rate", .001)
+                new SW("魔法基本性能", 15), new SW("智力", 1),
+                new SW("信念", .001), new SW("咏唱速度", .001),
+                new SW("暴击", .001), new SW("直击", .001)
             });
             _jobsByKey[7] = _jobsByKey[25]; // Thaumaturge
 
             // Summoner (Garuda)
             _jobsByKey[27] = new JobData(GarlandDatabase.LevelCap, new SW[] {
-                new SW("Magic Damage", 15), new SW("Intelligence", 1),
-                new SW("Determination", .001), new SW("Spell Speed", .001),
-                new SW("Critical Hit", .001), new SW("Direct Hit Rate", .001)
+                new SW("魔法基本性能", 15), new SW("智力", 1),
+                new SW("信念", .001), new SW("咏唱速度", .001),
+                new SW("暴击", .001), new SW("直击", .001)
             });
             _jobsByKey[26] = _jobsByKey[27]; // Arcanist
 
             // Ninja
             _jobsByKey[30] = new JobData(GarlandDatabase.LevelCap, new SW[] {
-                new SW("Physical Damage", 15), new SW("Dexterity", 1),
-                new SW("Determination", .001), new SW("Skill Speed", .001),
-                new SW("Critical Hit", .001), new SW("Direct Hit Rate", .001)
+                new SW("物理基本性能", 15), new SW("灵巧", 1),
+                new SW("信念", .001), new SW("技能速度", .001),
+                new SW("暴击", .001), new SW("直击", .001)
             });
             _jobsByKey[29] = _jobsByKey[30]; // Rogue
 
             // Samurai
             _jobsByKey[34] = new JobData(GarlandDatabase.LevelCap, new SW[] {
-                new SW("Physical Damage", 15), new SW("Strength", 1),
-                new SW("Determination", .001), new SW("Skill Speed", .001),
-                new SW("Critical Hit", .001), new SW("Direct Hit Rate", .001)
+                new SW("物理基本性能", 15), new SW("力量", 1),
+                new SW("信念", .001), new SW("技能速度", .001),
+                new SW("暴击", .001), new SW("直击", .001)
             });
 
             // Red Mage
             _jobsByKey[35] = new JobData(GarlandDatabase.LevelCap, new SW[] {
-                new SW("Magic Damage", 15), new SW("Intelligence", 1),
-                new SW("Determination", .001), new SW("Spell Speed", .001),
-                new SW("Critical Hit", .001), new SW("Direct Hit Rate", .001)
+                new SW("魔法基本性能", 15), new SW("智力", 1),
+                new SW("信念", .001), new SW("咏唱速度", .001),
+                new SW("暴击", .001), new SW("直击", .001)
             });
 
             // Blue Mage
             _jobsByKey[36] = new JobData(GarlandDatabase.BlueMageLevelCap, new SW[] {
-                new SW("Magic Damage", 15), new SW("Intelligence", 1),
-                new SW("Determination", .001), new SW("Spell Speed", .001),
-                new SW("Critical Hit", .001), new SW("Direct Hit Rate", .001)
+                new SW("魔法基本性能", 15), new SW("智力", 1),
+                new SW("信念", .001), new SW("咏唱速度", .001),
+                new SW("暴击", .001), new SW("直击", .001)
             });
 
             // Warrior (Defiance)
             _jobsByKey[21] = new JobData(GarlandDatabase.LevelCap, new SW[] {
-                new SW("Physical Damage", 15),
-                new SW("Vitality", 1.3), new SW("Strength", 1),
-                new SW("Defense", 2), new SW("Magic Defense", 2)
+                new SW("物理基本性能", 15),
+                new SW("耐力", 1.3), new SW("力量", 1),
+                new SW("物理防御力", 2), new SW("魔法防御力", 2)
             });
             _jobsByKey[3] = _jobsByKey[21]; // Marauder
 
             // Paladin (Shield Oath)
             _jobsByKey[19] = new JobData(GarlandDatabase.LevelCap, new SW[] {
-                new SW("Physical Damage", 15),
-                new SW("Vitality", 1.3), new SW("Strength", 1),
-                new SW("Defense", 2), new SW("Magic Defense", 2),
-                new SW("Block Strength", 2), new SW("Block Rate", 2)
+                new SW("物理基本性能", 15),
+                new SW("耐力", 1.3), new SW("力量", 1),
+                new SW("物理防御力", 2), new SW("魔法防御力", 2),
+                new SW("格挡发动力", 2), new SW("格挡性能", 2)
             });
             _jobsByKey[1] = _jobsByKey[19]; // Gladiator
 
             // Dark Knight
             _jobsByKey[32] = new JobData(GarlandDatabase.LevelCap, new SW[] {
-                new SW("Physical Damage", 15),
-                new SW("Vitality", 1.3), new SW("Strength", 1),
-                new SW("Defense", 2), new SW("Magic Defense", 2)
+                new SW("物理基本性能", 15),
+                new SW("耐力", 1.3), new SW("力量", 1),
+                new SW("物理防御力", 2), new SW("魔法防御力", 2)
             });
 
             // White Mage
             _jobsByKey[24] = new JobData(GarlandDatabase.LevelCap, new SW[] {
-                new SW("Magic Damage", 15),
-                new SW("Mind", 1), new SW("Vitality", .1),
-                new SW("Defense", .5, true), new SW("Magic Defense", .5, true),
-                new SW("Determination", .001), new SW("Spell Speed", .001),
-                new SW("Critical Hit", .001), new SW("Direct Hit Rate", .001)
+                new SW("魔法基本性能", 15),
+                new SW("精神", 1), new SW("耐力", .1),
+                new SW("物理防御力", .5, true), new SW("魔法防御力", .5, true),
+                new SW("信念", .001), new SW("咏唱速度", .001),
+                new SW("暴击", .001), new SW("直击", .001)
             });
             _jobsByKey[6] = _jobsByKey[24]; // Conjurer
 
             // Astrologian
             _jobsByKey[33] = new JobData(GarlandDatabase.LevelCap, new SW[] {
-                new SW("Magic Damage", 15),
-                new SW("Mind", 1), new SW("Vitality", .1),
-                new SW("Defense", .5, true), new SW("Magic Defense", .5, true),
-                new SW("Determination", .001), new SW("Spell Speed", .001),
-                new SW("Critical Hit", .001), new SW("Direct Hit Rate", .001)
+                new SW("魔法基本性能", 15),
+                new SW("精神", 1), new SW("耐力", .1),
+                new SW("物理防御力", .5, true), new SW("魔法防御力", .5, true),
+                new SW("信念", .001), new SW("咏唱速度", .001),
+                new SW("暴击", .001), new SW("直击", .001)
             });
 
             // Scholar
             _jobsByKey[28] = new JobData(GarlandDatabase.LevelCap, new SW[] {
-                new SW("Magic Damage", 15),
-                new SW("Mind", 1), new SW("Vitality", .1),
-                new SW("Defense", .5, true), new SW("Magic Defense", .5, true),
-                new SW("Determination", .001), new SW("Spell Speed", .001),
-                new SW("Critical Hit", .001), new SW("Direct Hit Rate", .001)
+                new SW("魔法基本性能", 15),
+                new SW("精神", 1), new SW("耐力", .1),
+                new SW("物理防御力", .5, true), new SW("魔法防御力", .5, true),
+                new SW("信念", .001), new SW("咏唱速度", .001),
+                new SW("暴击", .001), new SW("直击", .001)
             });
 
             // Gunbreaker
             _jobsByKey[37] = new JobData(GarlandDatabase.LevelCap, new SW[] {
-                new SW("Physical Damage", 15),
-                new SW("Vitality", 1.3), new SW("Strength", 1),
-                new SW("Defense", 2), new SW("Magic Defense", 2)
+                new SW("物理基本性能", 15),
+                new SW("耐力", 1.3), new SW("力量", 1),
+                new SW("物理防御力", 2), new SW("魔法防御力", 2)
             });
 
             // Dancer
             _jobsByKey[38] = new JobData(GarlandDatabase.LevelCap, new SW[] {
-                new SW("Physical Damage", 15), new SW("Dexterity", 1),
-                new SW("Determination", .001), new SW("Skill Speed", .001),
-                new SW("Critical Hit", .001), new SW("Direct Hit Rate", .001)
+                new SW("物理基本性能", 15), new SW("灵巧", 1),
+                new SW("信念", .001), new SW("技能速度", .001),
+                new SW("暴击", .001), new SW("直击", .001)
             });
 
             // Miner, Botanist, Fisher
-            _jobsByKey[16] = new JobData(GarlandDatabase.LevelCap, new SW[] { new SW("Gathering", 1), new SW("Perception", 1), new SW("GP", 1) });
+            _jobsByKey[16] = new JobData(GarlandDatabase.LevelCap, new SW[] { new SW("获得力", 1), new SW("鉴别力", 1), new SW("采集力", 1) });
             _jobsByKey[17] = _jobsByKey[16];
             _jobsByKey[18] = _jobsByKey[16];
 
             // Disciples of the Hand
-            _jobsByKey[8] = new JobData(GarlandDatabase.LevelCap, new SW[] { new SW("Craftsmanship", .85), new SW("Control", 1), new SW("CP", 1.1) });
+            _jobsByKey[8] = new JobData(GarlandDatabase.LevelCap, new SW[] { new SW("作业精度", .85), new SW("加工精度", 1), new SW("制作力", 1.1) });
             _jobsByKey[9] = _jobsByKey[8];
             _jobsByKey[10] = _jobsByKey[8];
             _jobsByKey[11] = _jobsByKey[8];

@@ -27883,32 +27883,33 @@ ff.model.Weather.getFromIdentifier = function(identifier) {
  * @enum {!ff.model.Weather}
  */
 ff.model.WeatherEnum = {
-  'Aurora': new ff.model.Weather(0, 'Aurora'),
-  'Blizzards': new ff.model.Weather(1, 'Blizzards'),
-  'Clear Skies': new ff.model.Weather(2, 'Clear Skies'),
-  'Darkness': new ff.model.Weather(3, 'Darkness'),
-  'Dust Storms': new ff.model.Weather(4, 'Dust Storms'),
-  'Eruptions': new ff.model.Weather(5, 'Eruptions'),
-  'Fair Skies': new ff.model.Weather(6, 'Fair Skies'),
-  'Fog': new ff.model.Weather(7, 'Fog'),
-  'Gales': new ff.model.Weather(8, 'Gales'),
-  'Gloom': new ff.model.Weather(9, 'Gloom'),
-  'Heat Waves': new ff.model.Weather(10, 'Heat Waves'),
+  '极光': new ff.model.Weather(0, '极光'),
+  '暴雪': new ff.model.Weather(1, '暴雪'),
+  '碧空': new ff.model.Weather(2, '碧空'),
+  '黑暗': new ff.model.Weather(3, '黑暗'),
+  '扬沙': new ff.model.Weather(4, '扬沙'),
+  '烟雾': new ff.model.Weather(5, '烟雾'),
+  '晴朗': new ff.model.Weather(6, '晴朗'),
+  '薄雾': new ff.model.Weather(7, '薄雾'),
+  '强风': new ff.model.Weather(8, '强风'),
+  
+  '妖雾': new ff.model.Weather(9, '妖雾'),
+  '热浪': new ff.model.Weather(10, '热浪'),
   'Hopelessness': new ff.model.Weather(11, 'Hopelessness'),
-  'Hot Spells': new ff.model.Weather(12, 'Hot Spells'),
-  'Lour': new ff.model.Weather(13, 'Lour'),
-  'Clouds': new ff.model.Weather(14, 'Clouds'),
-  'Rain': new ff.model.Weather(15, 'Rain'),
-  'Sandstorms': new ff.model.Weather(16, 'Sandstorms'),
-  'Showers': new ff.model.Weather(17, 'Showers'),
-  'Snow': new ff.model.Weather(18, 'Snow'),
-  'Storm Clouds': new ff.model.Weather(19, 'Storm Clouds'),
-  'Thunder': new ff.model.Weather(20, 'Thunder'),
-  'Thunderstorms': new ff.model.Weather(21, 'Thunderstorms'),
+  '高温': new ff.model.Weather(12, '高温'),
+  '阴沉': new ff.model.Weather(13, '阴沉'),
+  '阴云': new ff.model.Weather(14, '阴云'),
+  '小雨': new ff.model.Weather(15, '小雨'),
+  '沙尘暴': new ff.model.Weather(16, '沙尘暴'),
+  '暴雨': new ff.model.Weather(17, '暴雨'),
+  '小雪': new ff.model.Weather(18, '小雪'),
+  '雷云': new ff.model.Weather(19, '雷云'),
+  '打雷': new ff.model.Weather(20, '打雷'),
+  '雷雨': new ff.model.Weather(21, '雷雨'),
   'Torrential': new ff.model.Weather(22, 'Torrential'),
-  'Wind': new ff.model.Weather(23, 'Wind'),
-  'Umbral Wind': new ff.model.Weather(24, 'Umbral Wind'),
-  'Umbral Static': new ff.model.Weather(25, 'Umbral Static')
+  '微风': new ff.model.Weather(23, '微风'),
+  '灵风': new ff.model.Weather(24, '灵风'),
+  '灵电': new ff.model.Weather(25, '灵电')
 };
 goog.provide('ff.model.Image');
 
@@ -38615,16 +38616,17 @@ goog.provide('ff.model.Region');
  * @enum {string}
  */
 ff.model.Region = {
-  LA_NOSCEA: 'La Noscea',
-  THE_BLACK_SHROUD: 'The Black Shroud',
-  THANALAN: 'Thanalan',
-  COERTHAS: 'Coerthas',
-  MOR_DHONA: 'Mor Dhona',
-  ABALATHIAS_SPINE: "Abalathia's Spine",
-  DRAVANIA: 'Dravania',
-  OTHARD: 'Othard',
-  GYR_ABANIA: 'Gyr Abania',
-  NORVRANDT: 'Norvrandt'
+  LA_NOSCEA: '拉诺西亚',
+  THE_BLACK_SHROUD: '黑衣森林',
+  THANALAN: '萨纳兰',
+  COERTHAS: '库尔札斯',
+  MOR_DHONA: '摩杜纳',
+  ABALATHIAS_SPINE: "阿巴拉提亚",
+  DRAVANIA: '龙堡',
+  OTHARD: '奥萨德',
+  FAR_EAST: '远东之国',
+  GYR_ABANIA: '基拉巴尼亚',
+  NORVRANDT: '诺弗兰特'
 };
 
 goog.provide('ff.model.Area');
@@ -38716,87 +38718,87 @@ ff.model.Area.getEnumFromIdentifier = function(identifier) {
 ff.model.AreaEnum = {
   // La Noscea
   'LIMSA_LOMINSA': new ff.model.Area(
-      0, ff.model.Region.LA_NOSCEA, 'Limsa Lominsa'),
+      0, ff.model.Region.LA_NOSCEA, '利姆萨·罗敏萨'),
   'MIDDLE_LA_NOSCEA': new ff.model.Area(
-      2, ff.model.Region.LA_NOSCEA, 'Middle La Noscea'),
+      2, ff.model.Region.LA_NOSCEA, '中拉诺西亚'),
   'LOWER_LA_NOSCEA': new ff.model.Area(
-      3, ff.model.Region.LA_NOSCEA, 'Lower La Noscea'),
+      3, ff.model.Region.LA_NOSCEA, '拉诺西亚低地'),
   'EASTERN_LA_NOSCEA': new ff.model.Area(
-      4, ff.model.Region.LA_NOSCEA, 'Eastern La Noscea'),
+      4, ff.model.Region.LA_NOSCEA, '东拉诺西亚'),
   'WESTERN_LA_NOSCEA': new ff.model.Area(
-      5, ff.model.Region.LA_NOSCEA, 'Western La Noscea'),
+      5, ff.model.Region.LA_NOSCEA, '西拉诺西亚'),
   'UPPER_LA_NOSCEA': new ff.model.Area(
-      6, ff.model.Region.LA_NOSCEA, 'Upper La Noscea'),
+      6, ff.model.Region.LA_NOSCEA, '拉诺西亚高地'),
   'OUTER_LA_NOSCEA': new ff.model.Area(
-      7, ff.model.Region.LA_NOSCEA, 'Outer La Noscea'),
+      7, ff.model.Region.LA_NOSCEA, '拉诺西亚外地'),
   'MIST': new ff.model.Area(
-      8, ff.model.Region.LA_NOSCEA, 'Mist'),
+      8, ff.model.Region.LA_NOSCEA, '海雾村'),
 
   // The Black Shroud
   'GRIDANIA': new ff.model.Area(
-      9, ff.model.Region.THE_BLACK_SHROUD, 'Gridania'),
+      9, ff.model.Region.THE_BLACK_SHROUD, '格里达尼亚'),
   'CENTRAL_SHROUD': new ff.model.Area(
-      11, ff.model.Region.THE_BLACK_SHROUD, 'Central Shroud'),
+      11, ff.model.Region.THE_BLACK_SHROUD, '黑衣森林中央林区'),
   'EAST_SHROUD': new ff.model.Area(
-      12, ff.model.Region.THE_BLACK_SHROUD, 'East Shroud'),
+      12, ff.model.Region.THE_BLACK_SHROUD, '黑衣森林东部林区'),
   'SOUTH_SHROUD': new ff.model.Area(
-      13, ff.model.Region.THE_BLACK_SHROUD, 'South Shroud'),
+      13, ff.model.Region.THE_BLACK_SHROUD, '黑衣森林南部林区'),
   'NORTH_SHROUD': new ff.model.Area(
-      14, ff.model.Region.THE_BLACK_SHROUD, 'North Shroud'),
+      14, ff.model.Region.THE_BLACK_SHROUD, '黑衣森林北部林区'),
   'LAVENDER_BEDS': new ff.model.Area(
-      15, ff.model.Region.THE_BLACK_SHROUD, 'The Lavender Beds'),
+      15, ff.model.Region.THE_BLACK_SHROUD, '薰衣草苗圃'),
 
   // Thanalan
   'WESTERN_THANALAN': new ff.model.Area(
-      16, ff.model.Region.THANALAN, 'Western Thanalan'),
+      16, ff.model.Region.THANALAN, '西萨纳兰'),
   'CENTRAL_THANALAN': new ff.model.Area(
-      17, ff.model.Region.THANALAN, 'Central Thanalan'),
+      17, ff.model.Region.THANALAN, '中萨纳兰'),
   'EASTERN_THANALAN': new ff.model.Area(
-      18, ff.model.Region.THANALAN, 'Eastern Thanalan'),
+      18, ff.model.Region.THANALAN, '东萨纳兰'),
   'SOUTHERN_THANALAN': new ff.model.Area(
-      19, ff.model.Region.THANALAN, 'Southern Thanalan'),
+      19, ff.model.Region.THANALAN, '南萨纳兰'),
   'NORTHERN_THANALAN': new ff.model.Area(
-      20, ff.model.Region.THANALAN, 'Northern Thanalan'),
+      20, ff.model.Region.THANALAN, '北萨纳兰'),
   'THE_GOBLET': new ff.model.Area(
-      21, ff.model.Region.THANALAN, 'The Goblet'),
+      21, ff.model.Region.THANALAN, '高脚孤丘'),
 
   // Coerthas
   'COERTHAS_CENTRAL_HIGHLANDS': new ff.model.Area(
-      22, ff.model.Region.COERTHAS, 'Coerthas Central Highlands'),
-  'COERTHAS_WESTERN_HIGHLANDS': new ff.model.Area(29, ff.model.Region.COERTHAS, 'Coerthas Western Highlands'),
+      22, ff.model.Region.COERTHAS, '库尔札斯中央高地'),
+  'COERTHAS_WESTERN_HIGHLANDS': new ff.model.Area(29, ff.model.Region.COERTHAS, '库尔札斯西部高地'),
 
   // Mor Dhona
   'MOR_DHONA': new ff.model.Area(
-      23, ff.model.Region.MOR_DHONA, 'Mor Dhona'),
+      23, ff.model.Region.MOR_DHONA, '摩杜纳'),
 
   // Heavensward
-  'SEA_OF_CLOUDS': new ff.model.Area(25, ff.model.Region.ABALATHIAS_SPINE, 'The Sea of Clouds'),
-  'DRAVANIAN_FORELANDS': new ff.model.Area(26, ff.model.Region.DRAVANIA, 'The Dravanian Forelands'),
-  'DRAVANIAN_HINTERLANDS': new ff.model.Area(27, ff.model.Region.DRAVANIA, 'The Dravanian Hinterlands'),
-  'CHURNING_MISTS': new ff.model.Area(28, ff.model.Region.DRAVANIA, 'The Churning Mists'),
-  'AZYS_LLA': new ff.model.Area(24, ff.model.Region.ABALATHIAS_SPINE, 'Azys Lla'),
-  'THE_DIADEM': new ff.model.Area(38, ff.model.Region.ABALATHIAS_SPINE, 'The Diadem'),
+  'SEA_OF_CLOUDS': new ff.model.Area(25, ff.model.Region.ABALATHIAS_SPINE, '阿巴拉提亚云海'),
+  'DRAVANIAN_FORELANDS': new ff.model.Area(26, ff.model.Region.DRAVANIA, '龙堡参天高地'),
+  'DRAVANIAN_HINTERLANDS': new ff.model.Area(27, ff.model.Region.DRAVANIA, '龙堡内陆低地'),
+  'CHURNING_MISTS': new ff.model.Area(28, ff.model.Region.DRAVANIA, '翻云雾海'),
+  'AZYS_LLA': new ff.model.Area(24, ff.model.Region.ABALATHIAS_SPINE, '魔大陆阿济兹拉'),
+  'THE_DIADEM': new ff.model.Area(38, ff.model.Region.ABALATHIAS_SPINE, '云冠群岛'),
 
   // Stormblood
-  'THE_FRINGES': new ff.model.Area(30, ff.model.Region.GYR_ABANIA, 'The Fringes'),
-  'THE_PEAKS': new ff.model.Area(31, ff.model.Region.GYR_ABANIA, 'The Peaks'),
-  'THE_LOCHS': new ff.model.Area(32, ff.model.Region.GYR_ABANIA, 'The Lochs'),
-  'THE_RUBY_SEA': new ff.model.Area(33, ff.model.Region.OTHARD, 'The Ruby Sea'),
-  'YANXIA': new ff.model.Area(34, ff.model.Region.OTHARD, 'Yanxia'),
-  'THE_AZIM_STEPPE': new ff.model.Area(35, ff.model.Region.OTHARD, 'The Azim Steppe'),
-  'KUGANE': new ff.model.Area(36, ff.model.Region.OTHARD, 'Kugane'),
-  'RHALGRS_REACH': new ff.model.Area(37, ff.model.Region.GYR_ABANIA, "Rhalgr's Reach"),
-  'SHIROGANE': new ff.model.Area(39, ff.model.Region.GYR_ABANIA, "Shirogane"),
+  'THE_FRINGES': new ff.model.Area(30, ff.model.Region.GYR_ABANIA, '基拉巴尼亚边区'),
+  'THE_PEAKS': new ff.model.Area(31, ff.model.Region.GYR_ABANIA, '基拉巴尼亚山区'),
+  'THE_LOCHS': new ff.model.Area(32, ff.model.Region.GYR_ABANIA, '基拉巴尼亚湖区'),
+  'THE_RUBY_SEA': new ff.model.Area(33, ff.model.Region.OTHARD, '红玉海'),
+  'YANXIA': new ff.model.Area(34, ff.model.Region.OTHARD, '延夏'),
+  'THE_AZIM_STEPPE': new ff.model.Area(35, ff.model.Region.OTHARD, '太阳神草原'),
+  'KUGANE': new ff.model.Area(36, ff.model.Region.OTHARD, '黄金港'),
+  'RHALGRS_REACH': new ff.model.Area(37, ff.model.Region.GYR_ABANIA, "神拳痕"),
+  'SHIROGANE': new ff.model.Area(39, ff.model.Region.GYR_ABANIA, "白银乡"),
   
   // Norvrandt
-  'THE_CRYSTARIUM': new ff.model.Area(40, ff.model.Region.NORVRANDT, "The Crystarium"),
-  'EULMORE': new ff.model.Area(41, ff.model.Region.NORVRANDT, "Eulmore"),
-  'LAKELAND': new ff.model.Area(42, ff.model.Region.NORVRANDT, "Lakeland"),
-  'KHOLUSIA': new ff.model.Area(43, ff.model.Region.NORVRANDT, "Kholusia"),
-  'AMH_ARAENG': new ff.model.Area(44, ff.model.Region.NORVRANDT, "Amh Araeng"),
-  'IL_MHEG': new ff.model.Area(45, ff.model.Region.NORVRANDT, "Il Mheg"),
-  'THE_RAKTIKA_GREATWOOD': new ff.model.Area(46, ff.model.Region.NORVRANDT, "The Rak'tika Greatwood"),
-  'THE_TEMPEST': new ff.model.Area(47, ff.model.Region.NORVRANDT, "The Tempest")
+  'THE_CRYSTARIUM': new ff.model.Area(40, ff.model.Region.NORVRANDT, "水晶都"),
+  'EULMORE': new ff.model.Area(41, ff.model.Region.NORVRANDT, "游末邦"),
+  'LAKELAND': new ff.model.Area(42, ff.model.Region.NORVRANDT, "雷克兰德"),
+  'KHOLUSIA': new ff.model.Area(43, ff.model.Region.NORVRANDT, "珂露西亚岛"),
+  'AMH_ARAENG': new ff.model.Area(44, ff.model.Region.NORVRANDT, "安穆·艾兰"),
+  'IL_MHEG': new ff.model.Area(45, ff.model.Region.NORVRANDT, "伊尔美格"),
+  'THE_RAKTIKA_GREATWOOD': new ff.model.Area(46, ff.model.Region.NORVRANDT, "拉凯提卡大森林"),
+  'THE_TEMPEST': new ff.model.Area(47, ff.model.Region.NORVRANDT, "黑风海")
 };
 
 
@@ -38846,404 +38848,455 @@ ff.model.Location.prototype.getDetailUrl = function() {
 ff.model.LocationEnum = {
 
   // Limsa Lominsa Upper Decks
-  'Limsa Lominsa Upper Decks': new ff.model.Location(
+  '利姆萨·罗敏萨上层甲板': new ff.model.Location(
       ff.model.AreaEnum.LIMSA_LOMINSA,
-      'Limsa Lominsa Upper Decks'),
+      '利姆萨·罗敏萨上层甲板'),
 
   // Limsa Lominsa Lower Decks
-  'Limsa Lominsa Lower Decks': new ff.model.Location(
+  '利姆萨·罗敏萨下层甲板': new ff.model.Location(
       ff.model.AreaEnum.LIMSA_LOMINSA,
-      'Limsa Lominsa Lower Decks'),
+      '利姆萨·罗敏萨下层甲板'),
 
   // Middle La Noscea
-  'Zephyr Drift': new ff.model.Location(
-      ff.model.AreaEnum.MIDDLE_LA_NOSCEA, 'Zephyr Drift'),
-  'Summerford': new ff.model.Location(
-      ff.model.AreaEnum.MIDDLE_LA_NOSCEA, 'Summerford'),
-  'Rogue River': new ff.model.Location(
-      ff.model.AreaEnum.MIDDLE_LA_NOSCEA, 'Rogue River'),
-  'West Agelyss River': new ff.model.Location(
-      ff.model.AreaEnum.MIDDLE_LA_NOSCEA, 'West Agelyss River'),
-  'Nym River': new ff.model.Location(
-      ff.model.AreaEnum.MIDDLE_LA_NOSCEA, 'Nym River'),
-  'Woad Whisper Canyon': new ff.model.Location(
-      ff.model.AreaEnum.MIDDLE_LA_NOSCEA, 'Woad Whisper Canyon'),
+  '和风流地沿岸': new ff.model.Location(
+      ff.model.AreaEnum.MIDDLE_LA_NOSCEA, '和风流地沿岸'),
+  '盛夏滩沿岸': new ff.model.Location(
+      ff.model.AreaEnum.MIDDLE_LA_NOSCEA, '盛夏滩沿岸'),
+  '无赖川': new ff.model.Location(
+      ff.model.AreaEnum.MIDDLE_LA_NOSCEA, '无赖川'),
+  '西永恒川': new ff.model.Location(
+      ff.model.AreaEnum.MIDDLE_LA_NOSCEA, '西永恒川'),
+  '尼姆河': new ff.model.Location(
+      ff.model.AreaEnum.MIDDLE_LA_NOSCEA, '尼姆河'),
+  '轻声谷': new ff.model.Location(
+      ff.model.AreaEnum.MIDDLE_LA_NOSCEA, '轻声谷'),
 
   // Lower La Noscea
-  'The Mourning Widow': new ff.model.Location(
-      ff.model.AreaEnum.LOWER_LA_NOSCEA, 'The Mourning Widow'),
-  'Moraby Bay': new ff.model.Location(
-      ff.model.AreaEnum.LOWER_LA_NOSCEA, 'Moraby Bay'),
-  'Cedarwood': new ff.model.Location(
-      ff.model.AreaEnum.LOWER_LA_NOSCEA, 'Cedarwood'),
-  'Moraby Drydocks': new ff.model.Location(
-      ff.model.AreaEnum.LOWER_LA_NOSCEA, 'Moraby Drydocks'),
-  'Oschon\'s Torch': new ff.model.Location(
-      ff.model.AreaEnum.LOWER_LA_NOSCEA, 'Oschon\'s Torch'),
-  'The Salt Strand': new ff.model.Location(
-      ff.model.AreaEnum.LOWER_LA_NOSCEA, 'The Salt Strand'),
-  'Candlekeep Quay': new ff.model.Location(
-      ff.model.AreaEnum.LOWER_LA_NOSCEA, 'Candlekeep Quay'),
-  'Empty Heart': new ff.model.Location(
-      ff.model.AreaEnum.LOWER_LA_NOSCEA, 'Empty Heart'),
-  'Blind Iron Mines': new ff.model.Location(
-      ff.model.AreaEnum.LOWER_LA_NOSCEA, 'Blind Iron Mines'),
+  '遗孀泪': new ff.model.Location(
+      ff.model.AreaEnum.LOWER_LA_NOSCEA, '遗孀泪'),
+  '莫拉比湾西岸': new ff.model.Location(
+      ff.model.AreaEnum.LOWER_LA_NOSCEA, '莫拉比湾西岸'),
+  '雪松原沿岸地': new ff.model.Location(
+      ff.model.AreaEnum.LOWER_LA_NOSCEA, '雪松原沿岸地'),
+  '莫拉比造船厂': new ff.model.Location(
+      ff.model.AreaEnum.LOWER_LA_NOSCEA, '莫拉比造船厂'),
+  '奥修昂火炬': new ff.model.Location(
+      ff.model.AreaEnum.LOWER_LA_NOSCEA, '奥修昂火炬'),
+  '砂盐滩': new ff.model.Location(
+      ff.model.AreaEnum.LOWER_LA_NOSCEA, '砂盐滩'),
+  '守炬埠头': new ff.model.Location(
+      ff.model.AreaEnum.LOWER_LA_NOSCEA, '守炬埠头'),
+  '空心穴': new ff.model.Location(
+      ff.model.AreaEnum.LOWER_LA_NOSCEA, '空心穴'),
+  '盲铁坑道': new ff.model.Location(
+      ff.model.AreaEnum.LOWER_LA_NOSCEA, '盲铁坑道'),
 
   // Eastern La Noscea
-  'South Bloodshore': new ff.model.Location(
-      ff.model.AreaEnum.EASTERN_LA_NOSCEA, 'South Bloodshore'),
-  'Costa del Sol': new ff.model.Location(
-      ff.model.AreaEnum.EASTERN_LA_NOSCEA, 'Costa del Sol'),
-  'North Bloodshore': new ff.model.Location(
-      ff.model.AreaEnum.EASTERN_LA_NOSCEA, 'North Bloodshore'),
-  'Hidden Falls': new ff.model.Location(
-      ff.model.AreaEnum.EASTERN_LA_NOSCEA, 'Hidden Falls'),
-  'East Agelyss River': new ff.model.Location(
-      ff.model.AreaEnum.EASTERN_LA_NOSCEA, 'East Agelyss River'),
-  'Raincatcher Gully': new ff.model.Location(
-      ff.model.AreaEnum.EASTERN_LA_NOSCEA, 'Raincatcher Gully'),
-  'The Juggernaut': new ff.model.Location(
-      ff.model.AreaEnum.EASTERN_LA_NOSCEA, 'The Juggernaut'),
-  'Red Mantis Falls': new ff.model.Location(
-      ff.model.AreaEnum.EASTERN_LA_NOSCEA, 'Red Mantis Falls'),
-  'Rhotano Sea (Privateer Forecastle)': new ff.model.Location(
-      ff.model.AreaEnum.EASTERN_LA_NOSCEA, 'Rhotano Sea (Privateer Forecastle)'),
-  'Rhotano Sea (Privateer Sterncastle)': new ff.model.Location(
-      ff.model.AreaEnum.EASTERN_LA_NOSCEA, 'Rhotano Sea (Privateer Sterncastle)'),
+  '南鲜血滨': new ff.model.Location(
+      ff.model.AreaEnum.EASTERN_LA_NOSCEA, '南鲜血滨'),
+  '太阳海岸': new ff.model.Location(
+      ff.model.AreaEnum.EASTERN_LA_NOSCEA, '太阳海岸'),
+  '北鲜血滨': new ff.model.Location(
+      ff.model.AreaEnum.EASTERN_LA_NOSCEA, '北鲜血滨'),
+  '隐秘瀑布': new ff.model.Location(
+      ff.model.AreaEnum.EASTERN_LA_NOSCEA, '隐秘瀑布'),
+  '东永恒川': new ff.model.Location(
+      ff.model.AreaEnum.EASTERN_LA_NOSCEA, '东永恒川'),
+  '接雨草树林': new ff.model.Location(
+      ff.model.AreaEnum.EASTERN_LA_NOSCEA, '接雨草树林'),
+  '接雨草沼泽地': new ff.model.Location(
+      ff.model.AreaEnum.EASTERN_LA_NOSCEA, '接雨草沼泽地'),
+  '红螳螂瀑布': new ff.model.Location(
+      ff.model.AreaEnum.EASTERN_LA_NOSCEA, '红螳螂瀑布'),
+  '罗塔诺海（船首）': new ff.model.Location(
+      ff.model.AreaEnum.EASTERN_LA_NOSCEA, '罗塔诺海（船首）'),
+  '罗塔诺海（船尾）': new ff.model.Location(
+      ff.model.AreaEnum.EASTERN_LA_NOSCEA, '罗塔诺海（船尾）'),
 
   // Western La Noscea
-  'Swiftperch': new ff.model.Location(
-      ff.model.AreaEnum.WESTERN_LA_NOSCEA, 'Swiftperch'),
-  'Skull Valley': new ff.model.Location(
-      ff.model.AreaEnum.WESTERN_LA_NOSCEA, 'Skull Valley'),
-  'Halfstone': new ff.model.Location(
-      ff.model.AreaEnum.WESTERN_LA_NOSCEA, 'Halfstone'),
-  'Isles of Umbra Northshore': new ff.model.Location(
-      ff.model.AreaEnum.WESTERN_LA_NOSCEA, 'Isles of Umbra Northshore'),
-  'Isles of Umbra Southshore': new ff.model.Location(
-      ff.model.AreaEnum.WESTERN_LA_NOSCEA, 'Isles of Umbra Southshore'),
-  'The Brewer\'s Beacon': new ff.model.Location(
-      ff.model.AreaEnum.WESTERN_LA_NOSCEA, 'The Brewer\'s Beacon'),
-  'The Ship Graveyard': new ff.model.Location(
-      ff.model.AreaEnum.WESTERN_LA_NOSCEA, 'The Ship Graveyard'),
-  'Sapsa Spawning Grounds': new ff.model.Location(
-      ff.model.AreaEnum.WESTERN_LA_NOSCEA, 'Sapsa Spawning Grounds'),
-  'Reaver Hide': new ff.model.Location(
-      ff.model.AreaEnum.WESTERN_LA_NOSCEA, 'Reaver Hide'),
+  '雨燕塔殖民地': new ff.model.Location(
+      ff.model.AreaEnum.WESTERN_LA_NOSCEA, '雨燕塔殖民地'),
+  '骷髅谷沿岸地': new ff.model.Location(
+      ff.model.AreaEnum.WESTERN_LA_NOSCEA, '骷髅谷沿岸地'),
+  '二分石沿岸地': new ff.model.Location(
+      ff.model.AreaEnum.WESTERN_LA_NOSCEA, '二分石沿岸地'),
+  '幻影群岛北岸': new ff.model.Location(
+      ff.model.AreaEnum.WESTERN_LA_NOSCEA, '幻影群岛北岸'),
+  '幻影群岛南岸': new ff.model.Location(
+      ff.model.AreaEnum.WESTERN_LA_NOSCEA, '幻影群岛南岸'),
+  '酿酒师灯塔': new ff.model.Location(
+      ff.model.AreaEnum.WESTERN_LA_NOSCEA, '酿酒师灯塔'),
+  '船舶墓场': new ff.model.Location(
+      ff.model.AreaEnum.WESTERN_LA_NOSCEA, '船舶墓场'),
+  '萨普沙产卵地': new ff.model.Location(
+      ff.model.AreaEnum.WESTERN_LA_NOSCEA, '萨普沙产卵地'),
+  '隐秘港': new ff.model.Location(
+      ff.model.AreaEnum.WESTERN_LA_NOSCEA, '隐秘港'),
 
   // Upper La Noscea
-  'Oakwood': new ff.model.Location(
-      ff.model.AreaEnum.UPPER_LA_NOSCEA, 'Oakwood'),
-  'Fool Falls': new ff.model.Location(
-      ff.model.AreaEnum.UPPER_LA_NOSCEA, 'Fool Falls'),
-  'Northwest Bronze Lake': new ff.model.Location(
-      ff.model.AreaEnum.UPPER_LA_NOSCEA, 'Northwest Bronze Lake'),
-  'Northeast Bronze Lake': new ff.model.Location(
-      ff.model.AreaEnum.UPPER_LA_NOSCEA, 'Northeast Bronze Lake'),
-  'Bronze Lake Shallows': new ff.model.Location(
-      ff.model.AreaEnum.UPPER_LA_NOSCEA, 'Bronze Lake Shallows'),
+  '橡树原': new ff.model.Location(
+      ff.model.AreaEnum.UPPER_LA_NOSCEA, '橡树原'),
+  '愚者瀑布': new ff.model.Location(
+      ff.model.AreaEnum.UPPER_LA_NOSCEA, '愚者瀑布'),
+  '石绿湖东北岸': new ff.model.Location(
+      ff.model.AreaEnum.UPPER_LA_NOSCEA, '石绿湖东北岸'),
+  '石绿湖浅滩': new ff.model.Location(
+      ff.model.AreaEnum.UPPER_LA_NOSCEA, '石绿湖浅滩'),
 
   // Outer La Noscea
-  'The Long Climb': new ff.model.Location(
-      ff.model.AreaEnum.OUTER_LA_NOSCEA, 'The Long Climb'),
+  '登天路溪谷': new ff.model.Location(
+      ff.model.AreaEnum.OUTER_LA_NOSCEA, '登天路溪谷'),
+  '石绿湖西北岸': new ff.model.Location(
+      ff.model.AreaEnum.OUTER_LA_NOSCEA, '石绿湖西北岸'),
 
   // Mist
-  'Mist': new ff.model.Location(
-      ff.model.AreaEnum.MIST, 'Mist'),
+  '海雾村': new ff.model.Location(
+      ff.model.AreaEnum.MIST, '海雾村'),
 
   // New Gridania
-  'Jadeite Flood': new ff.model.Location(
-      ff.model.AreaEnum.GRIDANIA, 'Jadeite Flood'),
-  'Lower Black Tea Brook': new ff.model.Location(
-      ff.model.AreaEnum.GRIDANIA, 'Lower Black Tea Brook'),
+  '翡翠湖滨': new ff.model.Location(
+      ff.model.AreaEnum.GRIDANIA, '翡翠湖滨'),
+  '红茶川水系下游': new ff.model.Location(
+      ff.model.AreaEnum.GRIDANIA, '红茶川水系下游'),
 
   // Old Gridania
-  'Whispering Gorge': new ff.model.Location(
-      ff.model.AreaEnum.GRIDANIA, 'Whispering Gorge'),
-  'Upper Black Tea Brook': new ff.model.Location(
-      ff.model.AreaEnum.GRIDANIA, 'Upper Black Tea Brook'),
+  '低语河谷': new ff.model.Location(
+      ff.model.AreaEnum.GRIDANIA, '低语河谷'),
+  '红茶川水系上游': new ff.model.Location(
+      ff.model.AreaEnum.GRIDANIA, '红茶川水系上游'),
 
   // Central Shroud
-  'The Vein': new ff.model.Location(
-      ff.model.AreaEnum.CENTRAL_SHROUD, 'The Vein'),
-  'The Mirror': new ff.model.Location(
-      ff.model.AreaEnum.CENTRAL_SHROUD, 'The Mirror'),
-  'Everschade': new ff.model.Location(
-      ff.model.AreaEnum.CENTRAL_SHROUD, 'Everschade'),
-  'Hopeseed Pond': new ff.model.Location(
-      ff.model.AreaEnum.CENTRAL_SHROUD, 'Hopeseed Pond'),
-  'Haukke Manor': new ff.model.Location(
-      ff.model.AreaEnum.CENTRAL_SHROUD, 'Haukke Manor'),
+  '叶脉水系': new ff.model.Location(
+      ff.model.AreaEnum.CENTRAL_SHROUD, '叶脉水系'),
+  '镜池': new ff.model.Location(
+      ff.model.AreaEnum.CENTRAL_SHROUD, '镜池'),
+  '常影区': new ff.model.Location(
+      ff.model.AreaEnum.CENTRAL_SHROUD, '常影区'),
+  '萌芽池': new ff.model.Location(
+      ff.model.AreaEnum.CENTRAL_SHROUD, '萌芽池'),
+  '静语庄园': new ff.model.Location(
+      ff.model.AreaEnum.CENTRAL_SHROUD, '静语庄园'),
 
   // East Shroud
-  'Sweetbloom Pier': new ff.model.Location(
-      ff.model.AreaEnum.EAST_SHROUD, 'Sweetbloom Pier'),
-  'Verdant Drop': new ff.model.Location(
-      ff.model.AreaEnum.EAST_SHROUD, 'Verdant Drop'),
-  'Springripple Brook': new ff.model.Location(
-      ff.model.AreaEnum.EAST_SHROUD, 'Springripple Brook'),
-  'Sylphlands': new ff.model.Location(
-      ff.model.AreaEnum.EAST_SHROUD, 'Sylphlands'),
-  'Sanctum of the Twelve': new ff.model.Location(
-      ff.model.AreaEnum.EAST_SHROUD, 'Sanctum of the Twelve'),
+  '涟漪小川': new ff.model.Location(
+      ff.model.AreaEnum.EAST_SHROUD, '涟漪小川'),
+  '花蜜栈桥': new ff.model.Location(
+      ff.model.AreaEnum.EAST_SHROUD, '花蜜栈桥'),
+  '十二神大圣堂': new ff.model.Location(
+      ff.model.AreaEnum.EAST_SHROUD, '十二神大圣堂'),
+  '落翠底': new ff.model.Location(
+      ff.model.AreaEnum.EAST_SHROUD, '落翠底'),
+  '妖精领溪谷': new ff.model.Location(
+      ff.model.AreaEnum.EAST_SHROUD, '妖精领溪谷'),
 
   // South Shroud
-  'Upper Hathoeva River': new ff.model.Location(
-      ff.model.AreaEnum.SOUTH_SHROUD, 'Upper Hathoeva River'),
-  'Middle Hathoeva River': new ff.model.Location(
-      ff.model.AreaEnum.SOUTH_SHROUD, 'Middle Hathoeva River'),
-  'Lower Hathoeva River': new ff.model.Location(
-      ff.model.AreaEnum.SOUTH_SHROUD, 'Lower Hathoeva River'),
-  'East Hathoeva River': new ff.model.Location(
-      ff.model.AreaEnum.SOUTH_SHROUD, 'East Hathoeva River'),
-  'Goblinblood': new ff.model.Location(
-      ff.model.AreaEnum.SOUTH_SHROUD, 'Goblinblood'),
-  'Rootslake': new ff.model.Location(
-      ff.model.AreaEnum.SOUTH_SHROUD, 'Rootslake'),
-  'Urth\'s Gift': new ff.model.Location(
-      ff.model.AreaEnum.SOUTH_SHROUD, 'Urth\'s Gift'),
+  '哈希瓦河上游': new ff.model.Location(
+      ff.model.AreaEnum.SOUTH_SHROUD, '哈希瓦河上游'),
+  '哈希瓦河下游': new ff.model.Location(
+      ff.model.AreaEnum.SOUTH_SHROUD, '哈希瓦河下游'),
+  '哈希瓦河东支流': new ff.model.Location(
+      ff.model.AreaEnum.SOUTH_SHROUD, '哈希瓦河东支流'),
+  '哈希瓦河中游': new ff.model.Location(
+      ff.model.AreaEnum.SOUTH_SHROUD, '哈希瓦河中游'),
+  '哥布林血流': new ff.model.Location(
+      ff.model.AreaEnum.SOUTH_SHROUD, '哥布林血流'),
+  '蔓根沼': new ff.model.Location(
+      ff.model.AreaEnum.SOUTH_SHROUD, '蔓根沼'),
+  '兀尔德恩惠地': new ff.model.Location(
+      ff.model.AreaEnum.SOUTH_SHROUD, '兀尔德恩惠地'),
 
   // North Shroud
-  'Murmur Rills': new ff.model.Location(
-      ff.model.AreaEnum.NORTH_SHROUD, 'Murmur Rills'),
-  'Fallgourd Float': new ff.model.Location(
-      ff.model.AreaEnum.NORTH_SHROUD, 'Fallgourd Float'),
-  'Proud Creek': new ff.model.Location(
-      ff.model.AreaEnum.NORTH_SHROUD, 'Proud Creek'),
-  'Lake Tahtotl': new ff.model.Location(
-      ff.model.AreaEnum.NORTH_SHROUD, 'Lake Tahtotl'),
+  '嘈杂川': new ff.model.Location(
+      ff.model.AreaEnum.NORTH_SHROUD, '嘈杂川'),
+  '秋瓜湖畔': new ff.model.Location(
+      ff.model.AreaEnum.NORTH_SHROUD, '秋瓜湖畔'),
+  '荣耀溪': new ff.model.Location(
+      ff.model.AreaEnum.NORTH_SHROUD, '荣耀溪'),
+  '塔赫托特尔湖': new ff.model.Location(
+      ff.model.AreaEnum.NORTH_SHROUD, '塔赫托特尔湖'),
 
   // Lavender Beds
-  'The Lavender Beds': new ff.model.Location(
-      ff.model.AreaEnum.LAVENDER_BEDS, 'The Lavender Beds'),
+  '薰衣草苗圃': new ff.model.Location(
+      ff.model.AreaEnum.LAVENDER_BEDS, '薰衣草苗圃'),
 
   // Western Thanalan
-  'The Silver Bazaar': new ff.model.Location(
-      ff.model.AreaEnum.WESTERN_THANALAN, 'The Silver Bazaar'),
-  'Vesper Bay': new ff.model.Location(
-      ff.model.AreaEnum.WESTERN_THANALAN, 'Vesper Bay'),
-  'Crescent Cove': new ff.model.Location(
-      ff.model.AreaEnum.WESTERN_THANALAN, 'Crescent Cove'),
-  'Nophica\'s Wells': new ff.model.Location(
-      ff.model.AreaEnum.WESTERN_THANALAN, 'Nophica\'s Wells'),
-  'The Footfalls': new ff.model.Location(
-      ff.model.AreaEnum.WESTERN_THANALAN, 'The Footfalls'),
-  'Cape Westwind': new ff.model.Location(
-      ff.model.AreaEnum.WESTERN_THANALAN, 'Cape Westwind'),
-  'Parata\'s Peace': new ff.model.Location(
-      ff.model.AreaEnum.WESTERN_THANALAN, 'Parata\'s Peace'),
-  'Moondrip': new ff.model.Location(
-      ff.model.AreaEnum.WESTERN_THANALAN, 'Moondrip'),
+  '丰饶神井': new ff.model.Location(
+      ff.model.AreaEnum.WESTERN_THANALAN, '丰饶神井'),
+  '足迹谷': new ff.model.Location(
+      ff.model.AreaEnum.WESTERN_THANALAN, '足迹谷'),
+  '黄昏湾': new ff.model.Location(
+      ff.model.AreaEnum.WESTERN_THANALAN, '黄昏湾'),
+  '月牙湾': new ff.model.Location(
+      ff.model.AreaEnum.WESTERN_THANALAN, '月牙湾'),
+  '白银集市': new ff.model.Location(
+      ff.model.AreaEnum.WESTERN_THANALAN, '白银集市'),
+  '月滴洞': new ff.model.Location(
+      ff.model.AreaEnum.WESTERN_THANALAN, '月滴洞'),
+  '西风岬': new ff.model.Location(
+      ff.model.AreaEnum.WESTERN_THANALAN, '西风岬'),
+  '帕拉塔安息地': new ff.model.Location(
+      ff.model.AreaEnum.WESTERN_THANALAN, '帕拉塔安息地'),
 
   // Central Thanalan
-  'Upper Soot Creek': new ff.model.Location(
-      ff.model.AreaEnum.CENTRAL_THANALAN, 'Upper Soot Creek'),
-  'Lower Soot Creek': new ff.model.Location(
-      ff.model.AreaEnum.CENTRAL_THANALAN, 'Lower Soot Creek'),
-  'The Unholy Heir': new ff.model.Location(
-      ff.model.AreaEnum.CENTRAL_THANALAN, 'The Unholy Heir'),
-  'The Clutch': new ff.model.Location(
-      ff.model.AreaEnum.CENTRAL_THANALAN, 'The Clutch'),
+  '污流上游': new ff.model.Location(
+      ff.model.AreaEnum.CENTRAL_THANALAN, '污流上游'),
+  '执掌峡谷': new ff.model.Location(
+      ff.model.AreaEnum.CENTRAL_THANALAN, '执掌峡谷'),
+  '污流下游': new ff.model.Location(
+      ff.model.AreaEnum.CENTRAL_THANALAN, '污流下游'),
+  '邪嗣': new ff.model.Location(
+      ff.model.AreaEnum.CENTRAL_THANALAN, '邪嗣'),
 
   // Eastern Thanalan
-  'North Drybone': new ff.model.Location(
-      ff.model.AreaEnum.EASTERN_THANALAN, 'North Drybone'),
-  'South Drybone': new ff.model.Location(
-      ff.model.AreaEnum.EASTERN_THANALAN, 'South Drybone'),
-  'Yugr\'am River': new ff.model.Location(
-      ff.model.AreaEnum.EASTERN_THANALAN, 'Yugr\'am River'),
-  'The Burning Wall': new ff.model.Location(
-      ff.model.AreaEnum.EASTERN_THANALAN, 'The Burning Wall'),
+  '枯骨北泉': new ff.model.Location(
+      ff.model.AreaEnum.EASTERN_THANALAN, '枯骨北泉'),
+  '枯骨南泉': new ff.model.Location(
+      ff.model.AreaEnum.EASTERN_THANALAN, '枯骨南泉'),
+  '宇格拉姆河': new ff.model.Location(
+      ff.model.AreaEnum.EASTERN_THANALAN, '宇格拉姆河'),
+  '火墙': new ff.model.Location(
+      ff.model.AreaEnum.EASTERN_THANALAN, '火墙'),
 
   // Southern Thanalan
-  'Burnt Lizard Creek': new ff.model.Location(
-      ff.model.AreaEnum.SOUTHERN_THANALAN, 'Burnt Lizard Creek'),
-  'Zahar\'ak': new ff.model.Location(
-      ff.model.AreaEnum.SOUTHERN_THANALAN, 'Zahar\'ak'),
-  'Forgotten Springs': new ff.model.Location(
-      ff.model.AreaEnum.SOUTHERN_THANALAN, 'Forgotten Springs'),
-  'Sagolii Desert': new ff.model.Location(
-      ff.model.AreaEnum.SOUTHERN_THANALAN, 'Sagolii Desert'),
-  'Sagolii Dunes': new ff.model.Location(
-      ff.model.AreaEnum.SOUTHERN_THANALAN, 'Sagolii Dunes'),
+  '火蜥蜴河': new ff.model.Location(
+      ff.model.AreaEnum.SOUTHERN_THANALAN, '火蜥蜴河'),
+  '不悔战泉': new ff.model.Location(
+      ff.model.AreaEnum.SOUTHERN_THANALAN, '不悔战泉'),
+  '撒沟厉沙丘': new ff.model.Location(
+      ff.model.AreaEnum.SOUTHERN_THANALAN, '撒沟厉沙丘'),
+  '撒沟厉沙海': new ff.model.Location(
+      ff.model.AreaEnum.SOUTHERN_THANALAN, '撒沟厉沙海'),
+  '遗忘绿洲': new ff.model.Location(
+      ff.model.AreaEnum.SOUTHERN_THANALAN, '遗忘绿洲'),
 
   // Northern Thanalan
-  'Ceruleum Field': new ff.model.Location(
-      ff.model.AreaEnum.NORTHERN_THANALAN, 'Ceruleum Field'),
-  'Bluefog': new ff.model.Location(
-      ff.model.AreaEnum.NORTHERN_THANALAN, 'Bluefog'),
+  '蓝雾涌泉': new ff.model.Location(
+      ff.model.AreaEnum.NORTHERN_THANALAN, '蓝雾涌泉'),
+  '青磷泉': new ff.model.Location(
+      ff.model.AreaEnum.NORTHERN_THANALAN, '青磷泉'),
 
   // The Goblet
-  'The Goblet': new ff.model.Location(
-      ff.model.AreaEnum.THE_GOBLET, 'The Goblet'),
+  '高脚孤丘': new ff.model.Location(
+      ff.model.AreaEnum.THE_GOBLET, '高脚孤丘'),
 
   // Coerthas Central Highlands
-  'Coerthas River': new ff.model.Location(
-      ff.model.AreaEnum.COERTHAS_CENTRAL_HIGHLANDS, 'Coerthas River'),
-  'Witchdrop': new ff.model.Location(
-      ff.model.AreaEnum.COERTHAS_CENTRAL_HIGHLANDS, 'Witchdrop'),
-  'The Nail': new ff.model.Location(
-      ff.model.AreaEnum.COERTHAS_CENTRAL_HIGHLANDS, 'The Nail'),
-  'The Weeping Saint': new ff.model.Location(
-      ff.model.AreaEnum.COERTHAS_CENTRAL_HIGHLANDS, 'The Weeping Saint'),
-  'Dragonhead Latrines': new ff.model.Location(
+  '圣人旅道': new ff.model.Location(
+      ff.model.AreaEnum.COERTHAS_CENTRAL_HIGHLANDS, '圣人旅道'),
+  '库尔札斯河': new ff.model.Location(
+      ff.model.AreaEnum.COERTHAS_CENTRAL_HIGHLANDS, '库尔札斯河'),
+  '剑峰山麓': new ff.model.Location(
+      ff.model.AreaEnum.COERTHAS_CENTRAL_HIGHLANDS, '剑峰山麓'),
+  '巨龙首营地水库': new ff.model.Location(
+      ff.model.AreaEnum.COERTHAS_CENTRAL_HIGHLANDS, '巨龙首营地水库'),
+  '调查队冰洞': new ff.model.Location(
       ff.model.AreaEnum.COERTHAS_CENTRAL_HIGHLANDS,
-      'Dragonhead Latrines'),
-  'Daniffen Pass': new ff.model.Location(
-      ff.model.AreaEnum.COERTHAS_CENTRAL_HIGHLANDS, 'Daniffen Pass'),
-  'Exploratory Ice Hole': new ff.model.Location(
+      '调查队冰洞'),
+  '伊修加德大云海': new ff.model.Location(
+      ff.model.AreaEnum.COERTHAS_CENTRAL_HIGHLANDS, '伊修加德大云海'),
+  '圣人泪': new ff.model.Location(
       ff.model.AreaEnum.COERTHAS_CENTRAL_HIGHLANDS,
-      'Exploratory Ice Hole'),
-  'Snowcloak': new ff.model.Location(
-      ff.model.AreaEnum.COERTHAS_CENTRAL_HIGHLANDS, 'Snowcloak'),
-  'Sea of Clouds': new ff.model.Location(
-      ff.model.AreaEnum.COERTHAS_CENTRAL_HIGHLANDS, 'Sea of Clouds'),
+      '圣人泪'),
+  '披雪大冰壁': new ff.model.Location(
+      ff.model.AreaEnum.COERTHAS_CENTRAL_HIGHLANDS, '披雪大冰壁'),
+  '落魔崖': new ff.model.Location(
+      ff.model.AreaEnum.COERTHAS_CENTRAL_HIGHLANDS, '落魔崖'),
 
   // Mor Dhona
-  'North Silvertear': new ff.model.Location(
-      ff.model.AreaEnum.MOR_DHONA, 'North Silvertear'),
-  'Rathefrost': new ff.model.Location(
-      ff.model.AreaEnum.MOR_DHONA, 'Rathefrost'),
-  'The Tangle': new ff.model.Location(
-      ff.model.AreaEnum.MOR_DHONA, 'The Tangle'),
-  'The Deep Tangle': new ff.model.Location(
-      ff.model.AreaEnum.MOR_DHONA, 'The Deep Tangle'),
-  'Singing Shards': new ff.model.Location(
-      ff.model.AreaEnum.MOR_DHONA, 'Singing Shards'),
-  'The North Shards': new ff.model.Location(
-      ff.model.AreaEnum.MOR_DHONA, 'The North Shards'),
+  '歌咏裂谷': new ff.model.Location(
+      ff.model.AreaEnum.MOR_DHONA, '歌咏裂谷'),
+  '纠缠沼泽林源流': new ff.model.Location(
+      ff.model.AreaEnum.MOR_DHONA, '纠缠沼泽林源流'),
+  '银泪湖北岸': new ff.model.Location(
+      ff.model.AreaEnum.MOR_DHONA, '银泪湖北岸'),
+  '早霜顶': new ff.model.Location(
+      ff.model.AreaEnum.MOR_DHONA, '早霜顶'),
+  '歌咏裂谷北部': new ff.model.Location(
+      ff.model.AreaEnum.MOR_DHONA, '歌咏裂谷北部'),
+  '纠缠沼泽林': new ff.model.Location(
+      ff.model.AreaEnum.MOR_DHONA, '纠缠沼泽林'),
+
 
   // Heavensward
-  'The Flagship': new ff.model.Location(ff.model.AreaEnum.AZYS_LLA, 'The Flagship'),
-  'The Iron Feast': new ff.model.Location(ff.model.AreaEnum.DRAVANIAN_FORELANDS, 'The Iron Feast'),
-  'Voor Sian Siran': new ff.model.Location(ff.model.AreaEnum.SEA_OF_CLOUDS, 'Voor Sian Siran'),
-  'Clearpool': new ff.model.Location(ff.model.AreaEnum.COERTHAS_WESTERN_HIGHLANDS, 'Clearpool'),
-  'West Banepool': new ff.model.Location(ff.model.AreaEnum.COERTHAS_WESTERN_HIGHLANDS, 'West Banepool'),
-  'Whilom River': new ff.model.Location(ff.model.AreaEnum.DRAVANIAN_FORELANDS, 'Whilom River'),
-  'The Hundred Throes': new ff.model.Location(ff.model.AreaEnum.DRAVANIAN_FORELANDS, 'The Hundred Throes'),
-  'Weston Waters': new ff.model.Location(ff.model.AreaEnum.CHURNING_MISTS, 'Weston Waters'),
-  'Greytail Falls': new ff.model.Location(ff.model.AreaEnum.COERTHAS_WESTERN_HIGHLANDS, 'Greytail Falls'),
-  'Unfrozen Pond': new ff.model.Location(ff.model.AreaEnum.COERTHAS_WESTERN_HIGHLANDS, 'Unfrozen Pond'),
-  'Thaliak River': new ff.model.Location(ff.model.AreaEnum.DRAVANIAN_HINTERLANDS, 'Thaliak River'),
-  'Upper Thaliak River': new ff.model.Location(ff.model.AreaEnum.DRAVANIAN_HINTERLANDS, 'Upper Thaliak River'),
-  'Tharl Oom Khash': new ff.model.Location(ff.model.AreaEnum.CHURNING_MISTS, 'Tharl Oom Khash'),
-  'Eil Tohm': new ff.model.Location(ff.model.AreaEnum.CHURNING_MISTS, 'Eil Tohm'),
-  'Sohm Al Summit': new ff.model.Location(ff.model.AreaEnum.CHURNING_MISTS, 'Sohm Al Summit'),
-  'The Habisphere': new ff.model.Location(ff.model.AreaEnum.AZYS_LLA, 'The Habisphere'),
-  'Middle Thaliak River': new ff.model.Location(ff.model.AreaEnum.DRAVANIAN_HINTERLANDS, 'Middle Thaliak River'),
-  'The Pappus Tree': new ff.model.Location(ff.model.AreaEnum.AZYS_LLA, 'The Pappus Tree'),
-  'The Smoldering Wastes': new ff.model.Location(ff.model.AreaEnum.DRAVANIAN_FORELANDS, 'The Smoldering Wastes'),
-  'Mok Oogl Island': new ff.model.Location(ff.model.AreaEnum.SEA_OF_CLOUDS, 'Mok Oogl Island'),
-  'Halo': new ff.model.Location(ff.model.AreaEnum.DRAVANIAN_FORELANDS, 'Halo'),
-  'Alpha Quadrant': new ff.model.Location(ff.model.AreaEnum.AZYS_LLA, 'Alpha Quadrant'),
-  'Delta Quadrant': new ff.model.Location(ff.model.AreaEnum.AZYS_LLA, 'Delta Quadrant'),
-  'South Banepool': new ff.model.Location(ff.model.AreaEnum.COERTHAS_WESTERN_HIGHLANDS, 'South Banepool'),
-  'Hyperstellar Downconverter': new ff.model.Location(ff.model.AreaEnum.AZYS_LLA, 'Hyperstellar Downconverter'),
-  'Cloudtop': new ff.model.Location(ff.model.AreaEnum.SEA_OF_CLOUDS, 'Cloudtop'),
-  'Quickspill Delta': new ff.model.Location(ff.model.AreaEnum.DRAVANIAN_HINTERLANDS, 'Quickspill Delta'),
-  'Landlord Colony': new ff.model.Location(ff.model.AreaEnum.CHURNING_MISTS, 'Landlord Colony'),
-  'The Eddies': new ff.model.Location(ff.model.AreaEnum.SEA_OF_CLOUDS, 'The Eddies'),
-  'The Blue Window': new ff.model.Location(ff.model.AreaEnum.SEA_OF_CLOUDS, 'The Blue Window'),
-  'Riversmeet': new ff.model.Location(ff.model.AreaEnum.COERTHAS_WESTERN_HIGHLANDS, 'Riversmeet'),
-  'Anyx Old': new ff.model.Location(ff.model.AreaEnum.DRAVANIAN_FORELANDS, 'Anyx Old'),
-  'Mourn': new ff.model.Location(ff.model.AreaEnum.DRAVANIAN_FORELANDS, 'Mourn'),
-  'Ashpool': new ff.model.Location(ff.model.AreaEnum.COERTHAS_WESTERN_HIGHLANDS, 'Ashpool'),
-  'Dragonspit': new ff.model.Location(ff.model.AreaEnum.COERTHAS_WESTERN_HIGHLANDS, 'Dragonspit'),
-  'Aetherochemical Spill': new ff.model.Location(ff.model.AreaEnum.AZYS_LLA, 'Aetherochemical Spill'),
-  'West Mourn': new ff.model.Location(ff.model.AreaEnum.DRAVANIAN_FORELANDS, 'West Mourn'),
-  'Greensward': new ff.model.Location(ff.model.AreaEnum.CHURNING_MISTS, 'Greensward'),
-  'Swirling Cloudtop': new ff.model.Location(ff.model.AreaEnum.THE_DIADEM, 'Swirling Cloudtop'),
-  'Diadem Grotto': new ff.model.Location(ff.model.AreaEnum.THE_DIADEM, 'Diadem Grotto'),
-  'Southern Diadem Lake': new ff.model.Location(ff.model.AreaEnum.THE_DIADEM, 'Southern Diadem Lake'),
-  'Northern Diadem Lake': new ff.model.Location(ff.model.AreaEnum.THE_DIADEM, 'Northern Diadem Lake'),
-  'Calm Cloudtop': new ff.model.Location(ff.model.AreaEnum.THE_DIADEM, 'Calm Cloudtop'),
-  'Blustery Cloudtop': new ff.model.Location(ff.model.AreaEnum.THE_DIADEM, 'Blustery Cloudtop'),
+  
+  // Azys lla
+  '阿尔法管区': new ff.model.Location(ff.model.AreaEnum.AZYS_LLA, '阿尔法管区'),
+  '废液池': new ff.model.Location(ff.model.AreaEnum.AZYS_LLA, '废液池'),
+  '德尔塔管区': new ff.model.Location(ff.model.AreaEnum.AZYS_LLA, '德尔塔管区'),
+  '冠毛大树': new ff.model.Location(ff.model.AreaEnum.AZYS_LLA, '冠毛大树'),
+  '生态园': new ff.model.Location(ff.model.AreaEnum.AZYS_LLA, '生态园'),
+  '超星际通信塔': new ff.model.Location(ff.model.AreaEnum.AZYS_LLA, '超星际通信塔'),
+  '阿济兹拉旗舰岛': new ff.model.Location(ff.model.AreaEnum.AZYS_LLA, '阿济兹拉旗舰岛'),
+
+  // Sea of clouds
+  '沃仙曦染': new ff.model.Location(ff.model.AreaEnum.SEA_OF_CLOUDS, '沃仙曦染'),
+  '云顶': new ff.model.Location(ff.model.AreaEnum.SEA_OF_CLOUDS, '云顶'),
+  '蓝天窗': new ff.model.Location(ff.model.AreaEnum.SEA_OF_CLOUDS, '蓝天窗'),
+  '魔窟离岛': new ff.model.Location(ff.model.AreaEnum.SEA_OF_CLOUDS, '魔窟离岛'),
+  '云水塘': new ff.model.Location(ff.model.AreaEnum.SEA_OF_CLOUDS, '云水塘'),
+
+  // The diadem
+  '云冠西南池': new ff.model.Location(ff.model.AreaEnum.THE_DIADEM, '云冠西南池'),
+  '云冠洞穴': new ff.model.Location(ff.model.AreaEnum.THE_DIADEM, '云冠洞穴'),
+  '云冠西北池': new ff.model.Location(ff.model.AreaEnum.THE_DIADEM, '云冠西北池'),
+  '旋风云海': new ff.model.Location(ff.model.AreaEnum.THE_DIADEM, '旋风云海'),
+  '狂风云海': new ff.model.Location(ff.model.AreaEnum.THE_DIADEM, '狂风云海'),
+  '无风云海': new ff.model.Location(ff.model.AreaEnum.THE_DIADEM, '无风云海'),
+  
+  //Coerthas western highlands
+  '交汇河': new ff.model.Location(ff.model.AreaEnum.COERTHAS_WESTERN_HIGHLANDS, '交汇河'),
+  '灰尾瀑布': new ff.model.Location(ff.model.AreaEnum.COERTHAS_WESTERN_HIGHLANDS, '灰尾瀑布'),
+  '库尔札斯不冻池': new ff.model.Location(ff.model.AreaEnum.COERTHAS_WESTERN_HIGHLANDS, '库尔札斯不冻池'),
+  '灰烬池': new ff.model.Location(ff.model.AreaEnum.COERTHAS_WESTERN_HIGHLANDS, '灰烬池'),
+  '灾祸池南': new ff.model.Location(ff.model.AreaEnum.COERTHAS_WESTERN_HIGHLANDS, '灾祸池南'),
+  '灾祸池西': new ff.model.Location(ff.model.AreaEnum.COERTHAS_WESTERN_HIGHLANDS, '灾祸池西'),
+  '清澈池': new ff.model.Location(ff.model.AreaEnum.COERTHAS_WESTERN_HIGHLANDS, '清澈池'),
+  '龙涎': new ff.model.Location(ff.model.AreaEnum.COERTHAS_WESTERN_HIGHLANDS, '龙涎'),
+
+  // Dravanian forelands 龙堡参天高地
+  '宽慰河': new ff.model.Location(ff.model.AreaEnum.DRAVANIAN_FORELANDS, '宽慰河'),
+  '悲叹飞泉': new ff.model.Location(ff.model.AreaEnum.DRAVANIAN_FORELANDS, '悲叹飞泉'),
+  '荒烟野地': new ff.model.Location(ff.model.AreaEnum.DRAVANIAN_FORELANDS, '荒烟野地'),
+  '彻悟岩窟': new ff.model.Location(ff.model.AreaEnum.DRAVANIAN_FORELANDS, '彻悟岩窟'),
+  '饵食台地': new ff.model.Location(ff.model.AreaEnum.DRAVANIAN_FORELANDS, '饵食台地'),
+  '彻悟岩窟西': new ff.model.Location(ff.model.AreaEnum.DRAVANIAN_FORELANDS, '彻悟岩窟西'),
+  '不洁古像': new ff.model.Location(ff.model.AreaEnum.DRAVANIAN_FORELANDS, '不洁古像'),
+  '光轮祭坛': new ff.model.Location(ff.model.AreaEnum.DRAVANIAN_FORELANDS, '光轮祭坛'),
+
+  // Dravanian hinterlands 龙堡内陆低地
+  '沙利亚克河': new ff.model.Location(ff.model.AreaEnum.DRAVANIAN_HINTERLANDS, '沙利亚克河'),
+  '沙利亚克河上流': new ff.model.Location(ff.model.AreaEnum.DRAVANIAN_HINTERLANDS, '沙利亚克河上流'),
+  '湍流三角地': new ff.model.Location(ff.model.AreaEnum.DRAVANIAN_HINTERLANDS, '湍流三角地'),
+  '沙利亚克河中流': new ff.model.Location(ff.model.AreaEnum.DRAVANIAN_HINTERLANDS, '沙利亚克河中流'),
+
+  // Churning Mists 翻云雾海
+  '人王遗迹': new ff.model.Location(ff.model.AreaEnum.CHURNING_MISTS, '人王遗迹'),
+  '招恶荒岛': new ff.model.Location(ff.model.AreaEnum.CHURNING_MISTS, '招恶荒岛'),
+  '绿茵岛': new ff.model.Location(ff.model.AreaEnum.CHURNING_MISTS, '绿茵岛'),
+  '西方水泉': new ff.model.Location(ff.model.AreaEnum.CHURNING_MISTS, '西方水泉'),
+  '惋惜之晶遗迹': new ff.model.Location(ff.model.AreaEnum.CHURNING_MISTS, '惋惜之晶遗迹'),
+  '索姆阿尔云帽': new ff.model.Location(ff.model.AreaEnum.CHURNING_MISTS, '索姆阿尔云帽'),
 
   // Stormblood
-  'North Isle of Endless Summer': new ff.model.Location(ff.model.AreaEnum.EASTERN_LA_NOSCEA, 'North Isle of Endless Summer'),
-  'Hells\' Lid': new ff.model.Location(ff.model.AreaEnum.THE_RUBY_SEA, 'Hells\' Lid'),
-  'Hak Khaal': new ff.model.Location(ff.model.AreaEnum.THE_AZIM_STEPPE, 'Hak Khaal'),
-  'Shoal Rock': new ff.model.Location(ff.model.AreaEnum.THE_RUBY_SEA, 'Shoal Rock'),
-  'Isari': new ff.model.Location(ff.model.AreaEnum.THE_RUBY_SEA, 'Isari'),
-  'The Isle of Zekki': new ff.model.Location(ff.model.AreaEnum.THE_RUBY_SEA, 'The Isle of Zekki'),
-  'The Ruby Price': new ff.model.Location(ff.model.AreaEnum.THE_RUBY_SEA, 'The Ruby Price'),
-  'Onokoro': new ff.model.Location(ff.model.AreaEnum.THE_RUBY_SEA, 'Onokoro'),
-  'The Isle of Bekko': new ff.model.Location(ff.model.AreaEnum.THE_RUBY_SEA, 'The Isle of Bekko'),
-  'The Ephor': new ff.model.Location(ff.model.AreaEnum.THE_PEAKS, 'The Ephor'),
-  'Heather Falls': new ff.model.Location(ff.model.AreaEnum.THE_PEAKS, 'Heather Falls'),
-  'The Bull\'s Bath': new ff.model.Location(ff.model.AreaEnum.THE_PEAKS, 'The Bull\'s Bath'),
-  'The Arms of Meed': new ff.model.Location(ff.model.AreaEnum.THE_PEAKS, 'The Arms of Meed'),
-  'Grymm & Enid': new ff.model.Location(ff.model.AreaEnum.THE_PEAKS, 'Grymm & Enid'),
-  'Dimwold': new ff.model.Location(ff.model.AreaEnum.THE_FRINGES, 'Dimwold'),
-  'Mirage Creek': new ff.model.Location(ff.model.AreaEnum.THE_FRINGES, 'Mirage Creek'),
-  'The Velodyna River': new ff.model.Location(ff.model.AreaEnum.THE_FRINGES, 'The Velodyna River'),
-  'The Slow Wash': new ff.model.Location(ff.model.AreaEnum.THE_PEAKS, 'The Slow Wash'),
-  "The Comet's Tail": new ff.model.Location(ff.model.AreaEnum.THE_FRINGES, "The Comet's Tail"),
-  "Timmon Beck": new ff.model.Location(ff.model.AreaEnum.THE_FRINGES, "Timmon Beck"),
-  'Kugane Piers': new ff.model.Location(ff.model.AreaEnum.KUGANE, 'Kugane Piers'),
-  'Plum Spring': new ff.model.Location(ff.model.AreaEnum.YANXIA, 'Plum Spring'),
-  'Prism Lake': new ff.model.Location(ff.model.AreaEnum.YANXIA, 'Prism Lake'),
-  'Prism Canyon': new ff.model.Location(ff.model.AreaEnum.YANXIA, 'Prism Canyon'),
-  'Mercantile Docks': new ff.model.Location(ff.model.AreaEnum.YANXIA, 'Mercantile Docks'),
-  'Namai': new ff.model.Location(ff.model.AreaEnum.YANXIA, 'Namai'),
-  'The One River (West)': new ff.model.Location(ff.model.AreaEnum.YANXIA, 'The One River (West)'),
-  'The One River (East)': new ff.model.Location(ff.model.AreaEnum.YANXIA, 'The One River (East)'),
-  'Doma Castle': new ff.model.Location(ff.model.AreaEnum.YANXIA, 'Doma Castle'),
-  "The Heron's Nest": new ff.model.Location(ff.model.AreaEnum.YANXIA, "The Heron's Nest"),
-  "The Heron's Way": new ff.model.Location(ff.model.AreaEnum.YANXIA, "The Heron's Way"),
-  'Azim Khaat': new ff.model.Location(ff.model.AreaEnum.THE_AZIM_STEPPE, 'Azim Khaat'),
-  'Dotharl Khaa': new ff.model.Location(ff.model.AreaEnum.THE_AZIM_STEPPE, 'Dotharl Khaa'),
-  'Nem Khaal': new ff.model.Location(ff.model.AreaEnum.THE_AZIM_STEPPE, 'Nem Khaal'),
-  'Upper Yat Khaal': new ff.model.Location(ff.model.AreaEnum.THE_AZIM_STEPPE, 'Upper Yat Khaal'),
-  'Lower Yat Khaal': new ff.model.Location(ff.model.AreaEnum.THE_AZIM_STEPPE, 'Lower Yat Khaal'),
-  'Tao Khaal': new ff.model.Location(ff.model.AreaEnum.THE_AZIM_STEPPE, 'Tao Khaal'),
-  'Loch Seld': new ff.model.Location(ff.model.AreaEnum.THE_LOCHS, 'Loch Seld'),
-  "Rhalgr's Reach": new ff.model.Location(ff.model.AreaEnum.RHALGRS_REACH, "Rhalgr's Reach"),
-  "Upper Mirage Creek": new ff.model.Location(ff.model.AreaEnum.RHALGRS_REACH, "Upper Mirage Creek"),
-  "The Outer Fist": new ff.model.Location(ff.model.AreaEnum.RHALGRS_REACH, "The Outer Fist"),
-  "Shirogane": new ff.model.Location(ff.model.AreaEnum.SHIROGANE, "Shirogane"),
-  "The Silver Canal": new ff.model.Location(ff.model.AreaEnum.SHIROGANE, "The Silver Canal"),
+  
+  // Expansion - Seasonal Event 
+  '永夏岛北': new ff.model.Location(ff.model.AreaEnum.EASTERN_LA_NOSCEA, '永夏岛北'),
+  
+  // The ruby sea 红玉海
+  '狱之盖近海': new ff.model.Location(ff.model.AreaEnum.THE_RUBY_SEA, '狱之盖近海'),
+  '红玉炮台近海': new ff.model.Location(ff.model.AreaEnum.THE_RUBY_SEA, '红玉炮台近海'),
+  '冲之岩近海': new ff.model.Location(ff.model.AreaEnum.THE_RUBY_SEA, '冲之岩近海'),
+  '渔村沿岸': new ff.model.Location(ff.model.AreaEnum.THE_RUBY_SEA, '渔村沿岸'),
+  '自凝岛近海': new ff.model.Location(ff.model.AreaEnum.THE_RUBY_SEA, '自凝岛近海'),
+  '龟甲岛近海': new ff.model.Location(ff.model.AreaEnum.THE_RUBY_SEA, '龟甲岛近海'),
+  '绝鬼岛近海': new ff.model.Location(ff.model.AreaEnum.THE_RUBY_SEA, '绝鬼岛近海'),
+
+  // The azim steppe 太阳神草原
+  '亚特卡勒河上游': new ff.model.Location(ff.model.AreaEnum.THE_AZIM_STEPPE, '亚特卡勒河上游'),
+  '亚特卡勒河下游': new ff.model.Location(ff.model.AreaEnum.THE_AZIM_STEPPE, '亚特卡勒河下游'),
+  '哈克卡勒河': new ff.model.Location(ff.model.AreaEnum.THE_AZIM_STEPPE, '哈克卡勒河'),
+  '塔奥卡勒河': new ff.model.Location(ff.model.AreaEnum.THE_AZIM_STEPPE, '塔奥卡勒河'),
+  '太阳湖': new ff.model.Location(ff.model.AreaEnum.THE_AZIM_STEPPE, '太阳湖'),
+  '朵塔儿水洲': new ff.model.Location(ff.model.AreaEnum.THE_AZIM_STEPPE, '朵塔儿水洲'),
+  '涅木卡勒河': new ff.model.Location(ff.model.AreaEnum.THE_AZIM_STEPPE, '涅木卡勒河'),
+
+  // Yanxia
+  '苍鹭池': new ff.model.Location(ff.model.AreaEnum.YANXIA, '苍鹭池'),
+  '苍鹭河': new ff.model.Location(ff.model.AreaEnum.YANXIA, '苍鹭河'),
+  '茨菰村水塘': new ff.model.Location(ff.model.AreaEnum.YANXIA, '茨菰村水塘'),
+  '无二江东': new ff.model.Location(ff.model.AreaEnum.YANXIA, '无二江东'),
+  '七彩沟': new ff.model.Location(ff.model.AreaEnum.YANXIA, '七彩沟'),
+  '七彩溪谷': new ff.model.Location(ff.model.AreaEnum.YANXIA, '七彩溪谷'),
+  '城下码头': new ff.model.Location(ff.model.AreaEnum.YANXIA, '城下码头'),
+  '多玛城前': new ff.model.Location(ff.model.AreaEnum.YANXIA, '多玛城前'),
+  '无二江西': new ff.model.Location(ff.model.AreaEnum.YANXIA, '无二江西'),
+  '梅泉乡': new ff.model.Location(ff.model.AreaEnum.YANXIA, '梅泉乡'),
+  '多玛飞地': new ff.model.Location(ff.model.AreaEnum.YANXIA, '多玛飞地'),
+  
+  // Kugane 黄金港
+  '防波堤': new ff.model.Location(ff.model.AreaEnum.KUGANE, '防波堤'),
+  
+  // Shirogane 白银乡
+  "白银乡": new ff.model.Location(ff.model.AreaEnum.SHIROGANE, "白银乡"),
+  "白银水路": new ff.model.Location(ff.model.AreaEnum.SHIROGANE, "白银水路"),
+  
+  // The peaks 基拉巴尼亚山区
+  '夫妇池': new ff.model.Location(ff.model.AreaEnum.THE_PEAKS, '夫妇池'),
+  '慢水涤': new ff.model.Location(ff.model.AreaEnum.THE_PEAKS, '慢水涤'),
+  '石楠瀑布': new ff.model.Location(ff.model.AreaEnum.THE_PEAKS, '石楠瀑布'),
+  '猛牛浴池': new ff.model.Location(ff.model.AreaEnum.THE_PEAKS, '猛牛浴池'),
+  '判官神像': new ff.model.Location(ff.model.AreaEnum.THE_PEAKS, '判官神像'),
+  '赎罪之腕': new ff.model.Location(ff.model.AreaEnum.THE_PEAKS, '赎罪之腕'),
+
+  // The fringes 基拉巴尼亚边区
+  '威罗迪纳河': new ff.model.Location(ff.model.AreaEnum.THE_FRINGES, '威罗迪纳河'),
+  '提蒙河': new ff.model.Location(ff.model.AreaEnum.THE_FRINGES, '提蒙河'),
+  '幻河': new ff.model.Location(ff.model.AreaEnum.THE_FRINGES, '幻河'),
+  '昏暗林': new ff.model.Location(ff.model.AreaEnum.THE_FRINGES, '昏暗林'),
+  '流星尾': new ff.model.Location(ff.model.AreaEnum.THE_FRINGES, '流星尾'),
+
+  // The Lochs 基拉巴尼亚湖区
+  '盐湖': new ff.model.Location(ff.model.AreaEnum.THE_LOCHS, '盐湖'),
+
+  // Rhalgr's reach 神拳痕
+  "幻河上游": new ff.model.Location(ff.model.AreaEnum.RHALGRS_REACH, "幻河上游"),
+  "星导寺入口": new ff.model.Location(ff.model.AreaEnum.RHALGRS_REACH, "星导寺入口"),
+  "神拳痕": new ff.model.Location(ff.model.AreaEnum.RHALGRS_REACH, "神拳痕"),
   
   // Shadowbringers
-  "The Trivium": new ff.model.Location(ff.model.AreaEnum.THE_CRYSTARIUM, "The Trivium"),
-  "The Quadrivium": new ff.model.Location(ff.model.AreaEnum.THE_CRYSTARIUM, "The Quadrivium"),
-  "Crystarium Personal Suites": new ff.model.Location(ff.model.AreaEnum.THE_CRYSTARIUM, "Crystarium Personal Suites"),
-  "The Derelicts": new ff.model.Location(ff.model.AreaEnum.EULMORE, "The Derelicts"),
-  "The Rift of Sighs": new ff.model.Location(ff.model.AreaEnum.LAKELAND, "The Rift of Sighs"),
-  "The Rusted Reservoir": new ff.model.Location(ff.model.AreaEnum.LAKELAND, "The Rusted Reservoir"),
-  "The Source": new ff.model.Location(ff.model.AreaEnum.LAKELAND, "The Source"),
-  "Sullen": new ff.model.Location(ff.model.AreaEnum.LAKELAND, "Sullen"),
-  "The Isle of Ken": new ff.model.Location(ff.model.AreaEnum.LAKELAND, "The Isle of Ken"),
-  "Upper Watts River": new ff.model.Location(ff.model.AreaEnum.KHOLUSIA, "Upper Watts River"),
-  "White Oil Falls": new ff.model.Location(ff.model.AreaEnum.KHOLUSIA, "White Oil Falls"),
-  "Lower Watts River": new ff.model.Location(ff.model.AreaEnum.KHOLUSIA, "Lower Watts River"),
-  "Sharptongue Drip": new ff.model.Location(ff.model.AreaEnum.KHOLUSIA, "Sharptongue Drip"),
-  "The Western Kholusian Coast": new ff.model.Location(ff.model.AreaEnum.KHOLUSIA, "The Western Kholusian Coast"),
-  "Seagazer Shoals": new ff.model.Location(ff.model.AreaEnum.KHOLUSIA, "Seagazer Shoals"),
-  "The Eastern Kholusian Coast": new ff.model.Location(ff.model.AreaEnum.KHOLUSIA, "The Eastern Kholusian Coast"),
-  "The River of Sand": new ff.model.Location(ff.model.AreaEnum.AMH_ARAENG, "The River of Sand"),
-  "The Nabaath Severance": new ff.model.Location(ff.model.AreaEnum.AMH_ARAENG, "The Nabaath Severance"),
-  "The Hills of Amber": new ff.model.Location(ff.model.AreaEnum.AMH_ARAENG, "The Hills of Amber"),
-  "Handmirror Lake": new ff.model.Location(ff.model.AreaEnum.IL_MHEG, "Handmirror Lake"),
-  "Longmirror Lake": new ff.model.Location(ff.model.AreaEnum.IL_MHEG, "Longmirror Lake"),
-  "The Haughty One": new ff.model.Location(ff.model.AreaEnum.IL_MHEG, "The Haughty One"),
-  "The Jealous One": new ff.model.Location(ff.model.AreaEnum.IL_MHEG, "The Jealous One"),
-  "The Spoiled One": new ff.model.Location(ff.model.AreaEnum.IL_MHEG, "The Spoiled One"),
-  "Saint Fathric's Temple": new ff.model.Location(ff.model.AreaEnum.IL_MHEG, "Saint Fathric's Temple"),
-  "Father Collard's Failings": new ff.model.Location(ff.model.AreaEnum.IL_MHEG, "Father Collard's Failings"),
-  "Lake Tusi Mek'ta": new ff.model.Location(ff.model.AreaEnum.THE_RAKTIKA_GREATWOOD, "Lake Tusi Mek'ta"),
-  "The Red Chalice": new ff.model.Location(ff.model.AreaEnum.THE_RAKTIKA_GREATWOOD, "The Red Chalice"),
-  "The Lozatl": new ff.model.Location(ff.model.AreaEnum.THE_RAKTIKA_GREATWOOD, "The Lozatl"),
-  "South Mjrl's Regret": new ff.model.Location(ff.model.AreaEnum.THE_RAKTIKA_GREATWOOD, "South Mjrl's Regret"),
-  "Mjrl's Tears": new ff.model.Location(ff.model.AreaEnum.THE_RAKTIKA_GREATWOOD, "Mjrl's Tears"),
-  "Woven Oath": new ff.model.Location(ff.model.AreaEnum.THE_RAKTIKA_GREATWOOD, "Woven Oath"),
-  "The Flounders' Floor": new ff.model.Location(ff.model.AreaEnum.THE_TEMPEST, "The Flounders' Floor"),
-  "Where the Dry Return": new ff.model.Location(ff.model.AreaEnum.THE_TEMPEST, "Where the Dry Return"),
-  "Northwest Caliban Gorge": new ff.model.Location(ff.model.AreaEnum.THE_TEMPEST, "Northwest Caliban Gorge"),
-  "West Caliban Gap": new ff.model.Location(ff.model.AreaEnum.THE_TEMPEST, "West Caliban Gap"),
-  "East Caliban Gap": new ff.model.Location(ff.model.AreaEnum.THE_TEMPEST, "East Caliban Gap"),
-  "Purpure": new ff.model.Location(ff.model.AreaEnum.THE_TEMPEST, "Purpure"),
-  "The Norvrandt Slope": new ff.model.Location(ff.model.AreaEnum.THE_TEMPEST, "The Norvrandt Slope")
+  
+  // The crystarium 水晶都 & 游末邦
+  "三艺区": new ff.model.Location(ff.model.AreaEnum.THE_CRYSTARIUM, "三艺区"),
+  "四艺区": new ff.model.Location(ff.model.AreaEnum.THE_CRYSTARIUM, "四艺区"),
+  "水晶都起居室": new ff.model.Location(ff.model.AreaEnum.THE_CRYSTARIUM, "水晶都起居室"),
+
+  "废船街": new ff.model.Location(ff.model.AreaEnum.EULMORE, "废船街"),
+  
+  // Lakeland 雷克兰德
+  "始源湖": new ff.model.Location(ff.model.AreaEnum.LAKELAND, "始源湖"),
+  "风化裂痕": new ff.model.Location(ff.model.AreaEnum.LAKELAND, "风化裂痕"),
+  "锈迹贮水池": new ff.model.Location(ff.model.AreaEnum.LAKELAND, "锈迹贮水池"),
+  "阴沉乡": new ff.model.Location(ff.model.AreaEnum.LAKELAND, "阴沉乡"),
+  "贤岛": new ff.model.Location(ff.model.AreaEnum.LAKELAND, "贤岛"),
+
+  // Kholusia 珂露西亚岛
+  "刺舌滴": new ff.model.Location(ff.model.AreaEnum.KHOLUSIA, "刺舌滴"),
+  "沃茨河下游": new ff.model.Location(ff.model.AreaEnum.KHOLUSIA, "沃茨河下游"),
+  "白油瀑布": new ff.model.Location(ff.model.AreaEnum.KHOLUSIA, "白油瀑布"),
+  "珂露西亚岛东海岸": new ff.model.Location(ff.model.AreaEnum.KHOLUSIA, "珂露西亚岛东海岸"),
+  "珂露西亚岛西海岸": new ff.model.Location(ff.model.AreaEnum.KHOLUSIA, "珂露西亚岛西海岸"),
+  "观海湾": new ff.model.Location(ff.model.AreaEnum.KHOLUSIA, "观海湾"),
+  "沃茨河上游": new ff.model.Location(ff.model.AreaEnum.KHOLUSIA, "沃茨河上游"),
+  
+  // Amh araeng 安穆艾兰
+  "沙河": new ff.model.Location(ff.model.AreaEnum.AMH_ARAENG, "沙河"),
+  "拿巴示断绝": new ff.model.Location(ff.model.AreaEnum.AMH_ARAENG, "拿巴示断绝"),
+  "琥珀丘": new ff.model.Location(ff.model.AreaEnum.AMH_ARAENG, "琥珀丘"),
+  
+  // Il mheg 伊尔美格
+  "手镜湖": new ff.model.Location(ff.model.AreaEnum.IL_MHEG, "手镜湖"),
+  "身镜湖": new ff.model.Location(ff.model.AreaEnum.IL_MHEG, "身镜湖"),
+  "傲慢的年长溪流": new ff.model.Location(ff.model.AreaEnum.IL_MHEG, "傲慢的年长溪流"),
+  "圣法斯里克天庭": new ff.model.Location(ff.model.AreaEnum.IL_MHEG, "圣法斯里克天庭"),
+  "嫉妒的年少溪流": new ff.model.Location(ff.model.AreaEnum.IL_MHEG, "嫉妒的年少溪流"),
+  "宠坏的年幼溪流": new ff.model.Location(ff.model.AreaEnum.IL_MHEG, "宠坏的年幼溪流"),
+  "科拉德排水沟": new ff.model.Location(ff.model.AreaEnum.IL_MHEG, "科拉德排水沟"),
+  
+  // The raktika greatwood 拉凯提卡大森林
+  "洛查特尔河": new ff.model.Location(ff.model.AreaEnum.THE_RAKTIKA_GREATWOOD, "洛查特尔河"),
+  "缪栎之泪": new ff.model.Location(ff.model.AreaEnum.THE_RAKTIKA_GREATWOOD, "缪栎之泪"),
+  "缪栎的乡愁南部": new ff.model.Location(ff.model.AreaEnum.THE_RAKTIKA_GREATWOOD, "缪栎的乡愁南部"),
+  "蛇水湖": new ff.model.Location(ff.model.AreaEnum.THE_RAKTIKA_GREATWOOD, "蛇水湖"),
+  "血盅": new ff.model.Location(ff.model.AreaEnum.THE_RAKTIKA_GREATWOOD, "血盅"),
+  "结誓洞窟": new ff.model.Location(ff.model.AreaEnum.THE_RAKTIKA_GREATWOOD, "结誓洞窟"),
+  
+  // The tempest 黑风海
+  "卡利班深海峡西北": new ff.model.Location(ff.model.AreaEnum.THE_TEMPEST, "卡利班深海峡西北"),
+  "尊紫洞": new ff.model.Location(ff.model.AreaEnum.THE_TEMPEST, "尊紫洞"),
+  "陆人墓标": new ff.model.Location(ff.model.AreaEnum.THE_TEMPEST, "陆人墓标"),
+  "卡利班古巢东": new ff.model.Location(ff.model.AreaEnum.THE_TEMPEST, "卡利班古巢东"),
+  "卡利班古巢西": new ff.model.Location(ff.model.AreaEnum.THE_TEMPEST, "卡利班古巢西"),
+  "诺弗兰特大陆坡": new ff.model.Location(ff.model.AreaEnum.THE_TEMPEST, "诺弗兰特大陆坡"),
+  "鳎沙地窖": new ff.model.Location(ff.model.AreaEnum.THE_TEMPEST, "鳎沙地窖")
 };
 
 
@@ -40264,9 +40317,9 @@ ff.service.WeatherService.prototype.getCurrentWeather_ = function() {
     this.onWeatherLoaded_(weather);
 };
 
-ff.service.WeatherService.prototype.zoneWeather = {"Limsa Lominsa":[{"weather":3,"rate":20},{"weather":1,"rate":50},{"weather":2,"rate":80},{"weather":4,"rate":90},{"weather":7,"rate":100}],"Middle La Noscea":[{"weather":3,"rate":20},{"weather":1,"rate":50},{"weather":2,"rate":70},{"weather":5,"rate":80},{"weather":4,"rate":90},{"weather":7,"rate":100}],"Lower La Noscea":[{"weather":3,"rate":20},{"weather":1,"rate":50},{"weather":2,"rate":70},{"weather":5,"rate":80},{"weather":4,"rate":90},{"weather":7,"rate":100}],"Eastern La Noscea":[{"weather":4,"rate":5},{"weather":1,"rate":50},{"weather":2,"rate":80},{"weather":3,"rate":90},{"weather":7,"rate":95},{"weather":8,"rate":100}],"Western La Noscea":[{"weather":4,"rate":10},{"weather":1,"rate":40},{"weather":2,"rate":60},{"weather":3,"rate":80},{"weather":5,"rate":90},{"weather":6,"rate":100}],"Upper La Noscea":[{"weather":1,"rate":30},{"weather":2,"rate":50},{"weather":3,"rate":70},{"weather":4,"rate":80},{"weather":9,"rate":90},{"weather":10,"rate":100}],"Outer La Noscea":[{"weather":1,"rate":30},{"weather":2,"rate":50},{"weather":3,"rate":70},{"weather":4,"rate":85},{"weather":7,"rate":100}],"Mist":[{"weather":3,"rate":20},{"weather":1,"rate":50},{"weather":2,"rate":70},{"weather":2,"rate":80},{"weather":4,"rate":90},{"weather":7,"rate":100}],"Gridania":[{"weather":7,"rate":5},{"weather":7,"rate":20},{"weather":4,"rate":30},{"weather":3,"rate":40},{"weather":2,"rate":55},{"weather":1,"rate":85},{"weather":2,"rate":100}],"Central Shroud":[{"weather":9,"rate":5},{"weather":7,"rate":20},{"weather":4,"rate":30},{"weather":3,"rate":40},{"weather":2,"rate":55},{"weather":1,"rate":85},{"weather":2,"rate":100}],"East Shroud":[{"weather":9,"rate":5},{"weather":7,"rate":20},{"weather":4,"rate":30},{"weather":3,"rate":40},{"weather":2,"rate":55},{"weather":1,"rate":85},{"weather":2,"rate":100}],"South Shroud":[{"weather":4,"rate":5},{"weather":10,"rate":10},{"weather":9,"rate":25},{"weather":4,"rate":30},{"weather":3,"rate":40},{"weather":2,"rate":70},{"weather":1,"rate":100}],"North Shroud":[{"weather":4,"rate":5},{"weather":8,"rate":10},{"weather":7,"rate":25},{"weather":4,"rate":30},{"weather":3,"rate":40},{"weather":2,"rate":70},{"weather":1,"rate":100}],"The Lavender Beds":[{"weather":3,"rate":5},{"weather":7,"rate":20},{"weather":4,"rate":30},{"weather":3,"rate":40},{"weather":2,"rate":55},{"weather":1,"rate":85},{"weather":2,"rate":100}],"Ul'dah":[{"weather":1,"rate":40},{"weather":2,"rate":60},{"weather":3,"rate":85},{"weather":4,"rate":95},{"weather":7,"rate":100}],"Western Thanalan":[{"weather":1,"rate":40},{"weather":2,"rate":60},{"weather":3,"rate":85},{"weather":4,"rate":95},{"weather":7,"rate":100}],"Central Thanalan":[{"weather":11,"rate":15},{"weather":1,"rate":55},{"weather":2,"rate":75},{"weather":3,"rate":85},{"weather":4,"rate":95},{"weather":7,"rate":100}],"Eastern Thanalan":[{"weather":1,"rate":40},{"weather":2,"rate":60},{"weather":3,"rate":70},{"weather":4,"rate":80},{"weather":7,"rate":85},{"weather":8,"rate":100}],"Southern Thanalan":[{"weather":14,"rate":20},{"weather":1,"rate":60},{"weather":2,"rate":80},{"weather":3,"rate":90},{"weather":4,"rate":100}],"Northern Thanalan":[{"weather":1,"rate":5},{"weather":2,"rate":20},{"weather":3,"rate":50},{"weather":4,"rate":100}],"The Goblet":[{"weather":1,"rate":40},{"weather":2,"rate":60},{"weather":3,"rate":85},{"weather":4,"rate":95},{"weather":7,"rate":100}],"Ishgard":[{"weather":15,"rate":60},{"weather":2,"rate":70},{"weather":1,"rate":75},{"weather":3,"rate":90},{"weather":4,"rate":100}],"Coerthas Central Highlands":[{"weather":16,"rate":20},{"weather":15,"rate":60},{"weather":2,"rate":70},{"weather":1,"rate":75},{"weather":3,"rate":90},{"weather":4,"rate":100}],"Coerthas Western Highlands":[{"weather":16,"rate":20},{"weather":15,"rate":60},{"weather":2,"rate":70},{"weather":1,"rate":75},{"weather":3,"rate":90},{"weather":4,"rate":100}],"Mor Dhona":[{"weather":3,"rate":15},{"weather":4,"rate":30},{"weather":17,"rate":60},{"weather":1,"rate":75},{"weather":2,"rate":100}],"The Sea of Clouds":[{"weather":1,"rate":30},{"weather":2,"rate":60},{"weather":3,"rate":70},{"weather":4,"rate":80},{"weather":5,"rate":90},{"weather":49,"rate":100}],"Azys Lla":[{"weather":2,"rate":35},{"weather":3,"rate":70},{"weather":9,"rate":100}],"The Diadem":[{"weather":2,"rate":30},{"weather":4,"rate":60},{"weather":5,"rate":90},{"weather":49,"rate":100}],"The Dravanian Forelands":[{"weather":3,"rate":10},{"weather":4,"rate":20},{"weather":9,"rate":30},{"weather":11,"rate":40},{"weather":1,"rate":70},{"weather":2,"rate":100}],"The Dravanian Hinterlands":[{"weather":3,"rate":10},{"weather":4,"rate":20},{"weather":7,"rate":30},{"weather":8,"rate":40},{"weather":1,"rate":70},{"weather":2,"rate":100}],"The Churning Mists":[{"weather":3,"rate":10},{"weather":6,"rate":20},{"weather":50,"rate":40},{"weather":1,"rate":70},{"weather":2,"rate":100}],"Idyllshire":[{"weather":3,"rate":10},{"weather":4,"rate":20},{"weather":7,"rate":30},{"weather":8,"rate":40},{"weather":1,"rate":70},{"weather":2,"rate":100}],"Rhalgr's Reach":[{"weather":1,"rate":15},{"weather":2,"rate":60},{"weather":3,"rate":80},{"weather":4,"rate":90},{"weather":9,"rate":100}],"The Fringes":[{"weather":1,"rate":15},{"weather":2,"rate":60},{"weather":3,"rate":80},{"weather":4,"rate":90},{"weather":9,"rate":100}],"The Peaks":[{"weather":1,"rate":10},{"weather":2,"rate":60},{"weather":3,"rate":75},{"weather":4,"rate":85},{"weather":5,"rate":95},{"weather":11,"rate":100}],"The Lochs":[{"weather":1,"rate":20},{"weather":2,"rate":60},{"weather":3,"rate":80},{"weather":4,"rate":90},{"weather":10,"rate":100}],"The Ruby Sea":[{"weather":9,"rate":10},{"weather":5,"rate":20},{"weather":3,"rate":35},{"weather":2,"rate":75},{"weather":1,"rate":100}],"Yanxia":[{"weather":8,"rate":5},{"weather":7,"rate":15},{"weather":4,"rate":25},{"weather":3,"rate":40},{"weather":2,"rate":80},{"weather":1,"rate":100}],"The Azim Steppe":[{"weather":6,"rate":5},{"weather":5,"rate":10},{"weather":7,"rate":17},{"weather":4,"rate":25},{"weather":3,"rate":35},{"weather":2,"rate":75},{"weather":1,"rate":100}],"Kugane":[{"weather":7,"rate":10},{"weather":4,"rate":20},{"weather":3,"rate":40},{"weather":2,"rate":80},{"weather":1,"rate":100}],"Shirogane":[{"weather":7,"rate":10},{"weather":4,"rate":20},{"weather":3,"rate":40},{"weather":2,"rate":80},{"weather":1,"rate":100}],"The Crystarium":[{"weather":1,"rate":20},{"weather":2,"rate":60},{"weather":3,"rate":75},{"weather":4,"rate":85},{"weather":7,"rate":95},{"weather":10,"rate":100}],"Eulmore":[{"weather":6,"rate":10},{"weather":7,"rate":20},{"weather":4,"rate":30},{"weather":3,"rate":45},{"weather":2,"rate":85},{"weather":1,"rate":100}],"Lakeland":[{"weather":1,"rate":20},{"weather":2,"rate":60},{"weather":3,"rate":75},{"weather":4,"rate":85},{"weather":7,"rate":95},{"weather":10,"rate":100}],"Kholusia":[{"weather":6,"rate":10},{"weather":7,"rate":20},{"weather":4,"rate":30},{"weather":3,"rate":45},{"weather":2,"rate":85},{"weather":1,"rate":100}],"Amh Araeng":[{"weather":2,"rate":45},{"weather":3,"rate":60},{"weather":11,"rate":70},{"weather":14,"rate":80},{"weather":1,"rate":100}],"Il Mheg":[{"weather":7,"rate":10},{"weather":4,"rate":20},{"weather":3,"rate":35},{"weather":10,"rate":45},{"weather":1,"rate":60},{"weather":2,"rate":100}],"The Rak'tika Greatwood":[{"weather":4,"rate":10},{"weather":7,"rate":20},{"weather":49,"rate":30},{"weather":1,"rate":45},{"weather":2,"rate":85},{"weather":3,"rate":100}],"The Tempest":[{"weather":3,"rate":20},{"weather":2,"rate":80},{"weather":1,"rate":100}]};
+ff.service.WeatherService.prototype.zoneWeather = {"利姆萨·罗敏萨":[{"weather":3,"rate":20},{"weather":1,"rate":50},{"weather":2,"rate":80},{"weather":4,"rate":90},{"weather":7,"rate":100}],"中拉诺西亚":[{"weather":3,"rate":20},{"weather":1,"rate":50},{"weather":2,"rate":70},{"weather":5,"rate":80},{"weather":4,"rate":90},{"weather":7,"rate":100}],"拉诺西亚低地":[{"weather":3,"rate":20},{"weather":1,"rate":50},{"weather":2,"rate":70},{"weather":5,"rate":80},{"weather":4,"rate":90},{"weather":7,"rate":100}],"东拉诺西亚":[{"weather":4,"rate":5},{"weather":1,"rate":50},{"weather":2,"rate":80},{"weather":3,"rate":90},{"weather":7,"rate":95},{"weather":8,"rate":100}],"西拉诺西亚":[{"weather":4,"rate":10},{"weather":1,"rate":40},{"weather":2,"rate":60},{"weather":3,"rate":80},{"weather":5,"rate":90},{"weather":6,"rate":100}],"拉诺西亚高地":[{"weather":1,"rate":30},{"weather":2,"rate":50},{"weather":3,"rate":70},{"weather":4,"rate":80},{"weather":9,"rate":90},{"weather":10,"rate":100}],"拉诺西亚外地":[{"weather":1,"rate":30},{"weather":2,"rate":50},{"weather":3,"rate":70},{"weather":4,"rate":85},{"weather":7,"rate":100}],"海雾村":[{"weather":3,"rate":20},{"weather":1,"rate":50},{"weather":2,"rate":70},{"weather":2,"rate":80},{"weather":4,"rate":90},{"weather":7,"rate":100}],"格里达尼亚":[{"weather":7,"rate":5},{"weather":7,"rate":20},{"weather":4,"rate":30},{"weather":3,"rate":40},{"weather":2,"rate":55},{"weather":1,"rate":85},{"weather":2,"rate":100}],"黑衣森林中央林区":[{"weather":9,"rate":5},{"weather":7,"rate":20},{"weather":4,"rate":30},{"weather":3,"rate":40},{"weather":2,"rate":55},{"weather":1,"rate":85},{"weather":2,"rate":100}],"黑衣森林东部林区":[{"weather":9,"rate":5},{"weather":7,"rate":20},{"weather":4,"rate":30},{"weather":3,"rate":40},{"weather":2,"rate":55},{"weather":1,"rate":85},{"weather":2,"rate":100}],"黑衣森林南部林区":[{"weather":4,"rate":5},{"weather":10,"rate":10},{"weather":9,"rate":25},{"weather":4,"rate":30},{"weather":3,"rate":40},{"weather":2,"rate":70},{"weather":1,"rate":100}],"黑衣森林北部林区":[{"weather":4,"rate":5},{"weather":8,"rate":10},{"weather":7,"rate":25},{"weather":4,"rate":30},{"weather":3,"rate":40},{"weather":2,"rate":70},{"weather":1,"rate":100}],"薰衣草苗圃":[{"weather":3,"rate":5},{"weather":7,"rate":20},{"weather":4,"rate":30},{"weather":3,"rate":40},{"weather":2,"rate":55},{"weather":1,"rate":85},{"weather":2,"rate":100}],"乌尔达哈":[{"weather":1,"rate":40},{"weather":2,"rate":60},{"weather":3,"rate":85},{"weather":4,"rate":95},{"weather":7,"rate":100}],"西萨纳兰":[{"weather":1,"rate":40},{"weather":2,"rate":60},{"weather":3,"rate":85},{"weather":4,"rate":95},{"weather":7,"rate":100}],"中萨纳兰":[{"weather":11,"rate":15},{"weather":1,"rate":55},{"weather":2,"rate":75},{"weather":3,"rate":85},{"weather":4,"rate":95},{"weather":7,"rate":100}],"东萨纳兰":[{"weather":1,"rate":40},{"weather":2,"rate":60},{"weather":3,"rate":70},{"weather":4,"rate":80},{"weather":7,"rate":85},{"weather":8,"rate":100}],"南萨纳兰":[{"weather":14,"rate":20},{"weather":1,"rate":60},{"weather":2,"rate":80},{"weather":3,"rate":90},{"weather":4,"rate":100}],"北萨纳兰":[{"weather":1,"rate":5},{"weather":2,"rate":20},{"weather":3,"rate":50},{"weather":4,"rate":100}],"高脚孤丘":[{"weather":1,"rate":40},{"weather":2,"rate":60},{"weather":3,"rate":85},{"weather":4,"rate":95},{"weather":7,"rate":100}],"伊修加德":[{"weather":15,"rate":60},{"weather":2,"rate":70},{"weather":1,"rate":75},{"weather":3,"rate":90},{"weather":4,"rate":100}],"库尔札斯中央高地":[{"weather":16,"rate":20},{"weather":15,"rate":60},{"weather":2,"rate":70},{"weather":1,"rate":75},{"weather":3,"rate":90},{"weather":4,"rate":100}],"库尔札斯西部高地":[{"weather":16,"rate":20},{"weather":15,"rate":60},{"weather":2,"rate":70},{"weather":1,"rate":75},{"weather":3,"rate":90},{"weather":4,"rate":100}],"摩杜纳":[{"weather":3,"rate":15},{"weather":4,"rate":30},{"weather":17,"rate":60},{"weather":1,"rate":75},{"weather":2,"rate":100}],"阿巴拉提亚云海":[{"weather":1,"rate":30},{"weather":2,"rate":60},{"weather":3,"rate":70},{"weather":4,"rate":80},{"weather":5,"rate":90},{"weather":49,"rate":100}],"魔大陆阿济兹拉":[{"weather":2,"rate":35},{"weather":3,"rate":70},{"weather":9,"rate":100}],"云冠群岛":[{"weather":2,"rate":30},{"weather":4,"rate":60},{"weather":5,"rate":90},{"weather":49,"rate":100}],"龙堡参天高地":[{"weather":3,"rate":10},{"weather":4,"rate":20},{"weather":9,"rate":30},{"weather":11,"rate":40},{"weather":1,"rate":70},{"weather":2,"rate":100}],"龙堡内陆低地":[{"weather":3,"rate":10},{"weather":4,"rate":20},{"weather":7,"rate":30},{"weather":8,"rate":40},{"weather":1,"rate":70},{"weather":2,"rate":100}],"翻云雾海":[{"weather":3,"rate":10},{"weather":6,"rate":20},{"weather":50,"rate":40},{"weather":1,"rate":70},{"weather":2,"rate":100}],"田园郡":[{"weather":3,"rate":10},{"weather":4,"rate":20},{"weather":7,"rate":30},{"weather":8,"rate":40},{"weather":1,"rate":70},{"weather":2,"rate":100}],"神拳痕":[{"weather":1,"rate":15},{"weather":2,"rate":60},{"weather":3,"rate":80},{"weather":4,"rate":90},{"weather":9,"rate":100}],"基拉巴尼亚边区":[{"weather":1,"rate":15},{"weather":2,"rate":60},{"weather":3,"rate":80},{"weather":4,"rate":90},{"weather":9,"rate":100}],"基拉巴尼亚山区":[{"weather":1,"rate":10},{"weather":2,"rate":60},{"weather":3,"rate":75},{"weather":4,"rate":85},{"weather":5,"rate":95},{"weather":11,"rate":100}],"基拉巴尼亚湖区":[{"weather":1,"rate":20},{"weather":2,"rate":60},{"weather":3,"rate":80},{"weather":4,"rate":90},{"weather":10,"rate":100}],"红玉海":[{"weather":9,"rate":10},{"weather":5,"rate":20},{"weather":3,"rate":35},{"weather":2,"rate":75},{"weather":1,"rate":100}],"延夏":[{"weather":8,"rate":5},{"weather":7,"rate":15},{"weather":4,"rate":25},{"weather":3,"rate":40},{"weather":2,"rate":80},{"weather":1,"rate":100}],"太阳神草原":[{"weather":6,"rate":5},{"weather":5,"rate":10},{"weather":7,"rate":17},{"weather":4,"rate":25},{"weather":3,"rate":35},{"weather":2,"rate":75},{"weather":1,"rate":100}],"黄金港":[{"weather":7,"rate":10},{"weather":4,"rate":20},{"weather":3,"rate":40},{"weather":2,"rate":80},{"weather":1,"rate":100}],"白银乡":[{"weather":7,"rate":10},{"weather":4,"rate":20},{"weather":3,"rate":40},{"weather":2,"rate":80},{"weather":1,"rate":100}],"水晶都":[{"weather":1,"rate":20},{"weather":2,"rate":60},{"weather":3,"rate":75},{"weather":4,"rate":85},{"weather":7,"rate":95},{"weather":10,"rate":100}],"游末邦":[{"weather":6,"rate":10},{"weather":7,"rate":20},{"weather":4,"rate":30},{"weather":3,"rate":45},{"weather":2,"rate":85},{"weather":1,"rate":100}],"雷克兰德":[{"weather":1,"rate":20},{"weather":2,"rate":60},{"weather":3,"rate":75},{"weather":4,"rate":85},{"weather":7,"rate":95},{"weather":10,"rate":100}],"珂露西亚岛":[{"weather":6,"rate":10},{"weather":7,"rate":20},{"weather":4,"rate":30},{"weather":3,"rate":45},{"weather":2,"rate":85},{"weather":1,"rate":100}],"安穆·艾兰":[{"weather":2,"rate":45},{"weather":3,"rate":60},{"weather":11,"rate":70},{"weather":14,"rate":80},{"weather":1,"rate":100}],"伊尔美格":[{"weather":7,"rate":10},{"weather":4,"rate":20},{"weather":3,"rate":35},{"weather":10,"rate":45},{"weather":1,"rate":60},{"weather":2,"rate":100}],"拉凯提卡大森林":[{"weather":4,"rate":10},{"weather":7,"rate":20},{"weather":49,"rate":30},{"weather":1,"rate":45},{"weather":2,"rate":85},{"weather":3,"rate":100}],"黑风海":[{"weather":3,"rate":20},{"weather":2,"rate":80},{"weather":1,"rate":100}]};
 
-ff.service.WeatherService.prototype.weatherIndex = ["","Clear Skies","Fair Skies","Clouds","Fog","Wind","Gales","Rain","Showers","Thunder","Thunderstorms","Dust Storms","Sandstorms","Hot Spells","Heat Waves","Snow","Blizzards","Gloom","Auroras","Darkness","Tension","Clouds","Storm Clouds","Rough Seas","Rough Seas","Louring","Heat Waves","Gloom","Gales","Eruptions","Fair Skies","Fair Skies","Fair Skies","Fair Skies","Fair Skies","Irradiance","Core Radiation","Core Radiation","Core Radiation","Core Radiation","Shelf Clouds","Shelf Clouds","Shelf Clouds","Shelf Clouds","Oppression","Oppression","Oppression","Oppression","Oppression","Umbral Wind","Umbral Static","Smoke","Fair Skies","Royal Levin","Hyperelectricity","Royal Levin"];
+ff.service.WeatherService.prototype.weatherIndex = ["", "碧空", "晴朗", "阴云", "薄雾", "微风", "强风", "小雨", "暴雨", "打雷", "雷雨", "扬沙", "沙尘暴", "高温", "热浪", "小雪", "暴雪", "妖雾", "极光", "黑暗", "绝命", "阴云", "雷云", "暴风雨", "暴风雨", "阴沉", "热浪", "妖雾", "暴风", "烟雾", "晴朗", "晴朗", "晴朗", "晴朗", "晴朗", "极光", "辉核", "辉核", "辉核", "辉核", "滩云", "滩云", "滩云", "滩云", "神意", "神意", "神意", "神意", "神意", "灵风", "灵电", "烟武", "晴朗", "兽雷", "雷波", "兽雷", "神意", "打雷", "打雷", "", "神秘", "神秘", "小雨", "晴朗", "小雨", "晴朗", "邪天", "邪天", "晴朗", "平衡", "平衡", "时光", "时光", "时光", "鬼气", "鬼气", "鬼气", "次元", "次元", "次元", "豪雨", "豪雨", "极乐", "极乐", "龙威", "龙威", "豪雨", "迅雷", "打雷", "次元", "晴朗", "碧空", "白旋风", "白旋风", "白旋风", "幻想", "白旋风", "月夜", "月夜", "月夜", "月夜", "红月下", "朱炎", "朱炎", "朱炎", "晴朗", "晴朗", "晴朗", "晴朗", "烈焰", "海啸", "龙卷风", "地震", "青空", "青空", "青空", "乱灵流", "青空", "无尽光", "暴风", "末日", "末日", "妖梦", "妖梦", "妖梦", "光天", "光天", "末日", "末日", "无尽光", "烟雾", "末日", "晴朗", "灵烈火", "灵飘尘", "灵飞电", "灵罡风", "流星雨", "记忆乱流", "阴云", "阴云", "极光", "极光", "雷云", "火风暴", "幻海流", "", "决战", "", "", "", "", "", ""]
 
 ff.service.WeatherService.prototype.eorzeaToLocal = function(date) {
   return new Date(date.getTime() / 20.571428571428573);
@@ -62606,7 +62659,7 @@ ff.fisher.ui.soy.ROOT = function(opt_data, opt_ignored) {
  * @notypecheck
  */
 ff.fisher.ui.soy.HEADER = function(opt_data, opt_ignored) {
-  return '<div class="ff-fisher-header ff-card"><a id="credits-link" href="credits.html">Credits</a><div class="ff-fisher-header-clock-label">Eorzean Time:&nbsp;</div><div id="' + soy.$$escapeHtml(opt_data.ids.CLOCK_CONTAINER) + '" class="ff-fisher-header-clock"></div><div id="' + soy.$$escapeHtml(opt_data.ids.NEW_FISH_BUTTON_CONTAINER) + '" class="ff-fisher-header-new-fish"></div></div>';
+  return '<div class="ff-fisher-header ff-card"><a id="credits-link" href="credits.html">制作人员</a><div class="ff-fisher-header-clock-label">艾欧泽亚时间:&nbsp;</div><div id="' + soy.$$escapeHtml(opt_data.ids.CLOCK_CONTAINER) + '" class="ff-fisher-header-clock"></div><div id="' + soy.$$escapeHtml(opt_data.ids.NEW_FISH_BUTTON_CONTAINER) + '" class="ff-fisher-header-new-fish"></div></div>';
 };
 
 
@@ -62799,7 +62852,7 @@ goog.require('soydata');
  * @notypecheck
  */
 ff.fisher.ui.view.soy.VIEW_CONTROL = function(opt_data, opt_ignored) {
-  return '<div class="ff-fish-view-control ff-card"><div class="ff-fish-view-title">View:</div><input id="' + soy.$$escapeHtml(opt_data.ids.ALL_RADIO_BUTTON) + '" type="radio" name="view_type" class="ff-fish-view-radio-button" value="' + soy.$$escapeHtml(opt_data.views.ALL) + '" /><label for="' + soy.$$escapeHtml(opt_data.ids.ALL_RADIO_BUTTON) + '" class="ff-fish-view-radio-button-label">Next catchable</label><input id="' + opt_data.ids.BY_AREA_RADIO_BUTTON + '" type="radio" name="view_type" class="ff-fish-view-radio-button" value="' + soy.$$escapeHtml(opt_data.views.BY_FISH) + '" /><label for="' + soy.$$escapeHtml(opt_data.ids.BY_AREA_RADIO_BUTTON) + '" class="ff-fish-view-radio-button-label">By area</label><div class="ff-fish-view-filter"><div class="ff-fish-view-title ff-fish-view-title-hide">Hide:</div><div id="' + opt_data.ids.COLOR_ONE + '" class="ff-fish-view-color ff-fish-view-color-one"></div><div id="' + opt_data.ids.COLOR_TWO + '" class="ff-fish-view-color ff-fish-view-color-two"></div><div id="' + opt_data.ids.COLOR_THREE + '" class="ff-fish-view-color ff-fish-view-color-three"></div><div id="' + opt_data.ids.NO_COLOR + '" class="ff-fish-view-color ff-fish-view-no-color"></div></div></div>';
+  return '<div class="ff-fish-view-control ff-card"><div class="ff-fish-view-title">显示顺序:</div><input id="' + soy.$$escapeHtml(opt_data.ids.ALL_RADIO_BUTTON) + '" type="radio" name="view_type" class="ff-fish-view-radio-button" value="' + soy.$$escapeHtml(opt_data.views.ALL) + '" /><label for="' + soy.$$escapeHtml(opt_data.ids.ALL_RADIO_BUTTON) + '" class="ff-fish-view-radio-button-label">按可捕获时间</label><input id="' + opt_data.ids.BY_AREA_RADIO_BUTTON + '" type="radio" name="view_type" class="ff-fish-view-radio-button" value="' + soy.$$escapeHtml(opt_data.views.BY_FISH) + '" /><label for="' + soy.$$escapeHtml(opt_data.ids.BY_AREA_RADIO_BUTTON) + '" class="ff-fish-view-radio-button-label">按地图</label><div class="ff-fish-view-filter"><div class="ff-fish-view-title ff-fish-view-title-hide">隐藏以下类别:</div><div id="' + opt_data.ids.COLOR_ONE + '" class="ff-fish-view-color ff-fish-view-color-one"></div><div id="' + opt_data.ids.COLOR_TWO + '" class="ff-fish-view-color ff-fish-view-color-two"></div><div id="' + opt_data.ids.COLOR_THREE + '" class="ff-fish-view-color ff-fish-view-color-three"></div><div id="' + opt_data.ids.NO_COLOR + '" class="ff-fish-view-color ff-fish-view-no-color"></div></div></div>';
 };
 /**
  * Allows the user to control the view over the fish.
@@ -63326,7 +63379,7 @@ ff.fisher.ui.area.Areas.prototype.toggleAll_ = function() {
  */
 ff.fisher.ui.area.Areas.prototype.update_ = function() {
   // Update the text.
-  var text = this.uiState_.isAllCollapsed() ? 'Expand All' : 'Collapse All';
+  var text = this.uiState_.isAllCollapsed() ? '展开全部' : '折叠全部';
   goog.dom.setTextContent(
       ff.ui.getElementByFragment(
           this, ff.fisher.ui.area.Areas.Id_.TOGGLE_TEXT),

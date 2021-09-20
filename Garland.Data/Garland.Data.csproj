@@ -67,6 +67,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clay\ClayMySQL.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="DatabaseBuilder.cs" />
     <Compile Include="DataReference.cs" />

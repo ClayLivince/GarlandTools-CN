@@ -40,10 +40,10 @@ namespace Garland.Data.Modules
                 .Where(bp => !string.IsNullOrEmpty(bp.Name))
                 .ToArray();
 
-            var gathererParamNames = new string[] { "GP", "Gathering", "Perception" };
+            var gathererParamNames = new string[] { "采集力", "获得力", "鉴别力" };
             _gathererParams = gathererParamNames.Select(n => _baseParams.First(bp => bp.Name == n)).ToArray();
 
-            var crafterParamNames = new string[] { "CP", "Craftsmanship", "Control" };
+            var crafterParamNames = new string[] { "制作力", "作业精度", "加工精度" };
             _crafterParams = crafterParamNames.Select(n => _baseParams.First(bp => bp.Name == n)).ToArray();
 
             foreach (var row in _builder.Sheet("Cabinet"))
@@ -65,7 +65,7 @@ namespace Garland.Data.Modules
                 var item = _builder.CreateItem(sItem.Key);
                 _builder.Localize.Strings(item, sItem, "Name");
                 _builder.Localize.HtmlStrings(item, sItem, "Description");
-                _builder.Db.ItemsByName[(string)item.en.name] = item;
+                _builder.Db.ItemsByName[(string)item.chs.name] = item;
                 item.patch = PatchDatabase.Get("item", sItem.Key);
                 item.patchCategory = PatchDatabase.GetPatchCategory(sItem);
                 item.price = sItem.Ask;

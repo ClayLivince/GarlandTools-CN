@@ -16,6 +16,7 @@ using xivModdingFramework.Materials.FileTypes;
 using xivModdingFramework.Models.DataContainers;
 using xivModdingFramework.Models.FileTypes;
 using xivModdingFramework.Models.ModelTextures;
+using xivModdingFramework.Cache;
 
 namespace Garland.Graphics.Exporter
 {
@@ -37,9 +38,11 @@ namespace Garland.Graphics.Exporter
         {
             ReadConfig();
 
-            var lang = XivLanguage.English;
+            var lang = XivLanguage.Chinese;
 
             _gameDir = new DirectoryInfo(_gamePath);
+            XivCache.SetGameInfo(_gameDir, XivLanguage.Chinese);
+
             _ttObj = new Obj(_gameDir);
             _gear = new Gear(_gameDir, lang);
             _companions = new Companions(_gameDir, lang);
@@ -69,48 +72,72 @@ namespace Garland.Graphics.Exporter
                 "Doman Iron Hatchet", "Doman Iron Pickaxe",
                 "Mammon Lucis", "Kurdalegon Lucis", "Rauni Lucis",
                 "Kurdalegon Supra", "Rauni Supra",
-                "SmallClothes Body", "SmallClothes Feet", "SmallClothes Legs"
+                "SmallClothes Body", "SmallClothes Feet", "SmallClothes Legs", "SmallClothes Body (NPC)",  "SmallClothes Feet (NPC)", "SmallClothes Feet 2 (NPC)", "SmallClothes Legs (NPC)"
             });
 
-            var gearList = _gear.GetGearList()
-                .Where(g => !badGear.Contains(g.Name));
+            var gearList = _gear.GetUnCachedGearList().Result.Where(g => !badGear.Contains(g.Name));
+
+            
             foreach (var item in gearList)
             {
-                var primaryPath = EnsurePath(item.EquipSlotCategory.ToString(), item.ModelInfo);
-                BatchExportItem(primaryPath, item, null, () => _gear.GetRacesForModels(item, item.DataFile));
-
-                if (item.SecondaryModelInfo.ModelID != 0)
+                if (item.Name.StartsWith("过期"))
                 {
-                    var secondaryPath = EnsurePath(item.EquipSlotCategory.ToString(), item.SecondaryModelInfo);
-                    BatchExportItem(secondaryPath, item, item.SecondaryModelInfo, () => _gear.GetRacesForModels(item, item.DataFile));
+                    WriteLine($"Jumped Outdated Item {item.GetType().Name} {item.Name}");
+                    continue;
                 }
+                    
+                var primaryPath = EnsurePath(item.EquipSlotCategory.ToString(), item.ModelInfo);
+                BatchExportItem(primaryPath, item, null, () => _gear.GetRacesForModels(item, item.DataFile).Result);
+
+                // Seconday Model has been deprecated. then just comment here for future changes,
+                /*
+                if (item.ModelInfo == null) {
+                    Console.WriteLine("Error exporting " + item.Name);
+                    continue;
+                }
+                if (item.ModelInfo.SecondaryID != 0)
+                {
+                    var secondaryPath = EnsurePath(item.EquipSlotCategory.ToString(), item.ModelInfo);
+                    BatchExportItem(secondaryPath, item, item.ModelInfo, () => _gear.GetRacesForModels(item, item.DataFile).Result);
+                }
+                */
             }
 
             var monsters = new XivRace[] { XivRace.Monster };
 
             // Minions
-            var minionList = _companions.GetMinionList();
+            /*
+            var minionList = _companions.GetUncachedMinionList().Result;
             foreach (var minion in minionList)
             {
-                var modelKey = $"{minion.ModelInfo.ModelID}-{minion.ModelInfo.Body}-{minion.ModelInfo.Variant}";
+                var modelKey = $"{minion.ModelInfo.PrimaryID}-{minion.ModelInfo.SecondaryID}-{minion.ModelInfo.ImcSubsetID}";
                 var path = EnsurePath("minion", modelKey);
-                BatchExportItem(path, minion, null, () => monsters);
+                try
+                {
+                    BatchExportItem(path, minion, null, () => monsters);
+                }
+                catch (Exception ex) {
+                    Console.WriteLine("Error Exporting " + minion.Name);
+                }
+                
             }
+            
 
             // Mounts
-            var mountList = _companions.GetMountList();
+            var mountList = _companions.GetUncachedMountList().Result;
             foreach (var mount in mountList)
             {
-                var modelKey = $"{mount.ModelInfo.ModelID}-{mount.ModelInfo.Body}-{mount.ModelInfo.Variant}";
+                var modelKey = $"{mount.ModelInfo.PrimaryID}-{mount.ModelInfo.SecondaryID}-{mount.ModelInfo.ImcSubsetID}";
                 var path = EnsurePath("mount", modelKey);
                 BatchExportItem(path, mount, null, () => monsters);
             }
+            */
 
             // Housing
-            var furnitureList = _housing.GetFurnitureList();
+            var furnitureList = _housing.GetUncachedFurnitureList().Result;
             foreach (var furniture in furnitureList)
             {
-                var modelKey = $"{furniture.ModelInfo.ModelID}";
+                var modelKey = $"{furniture.ModelInfo.PrimaryID}";
                 var path = EnsurePath("furniture", modelKey);
 
                 try
@@ -129,7 +156,7 @@ namespace Garland.Graphics.Exporter
             if (File.Exists(path))
                 return;
 
-            WriteLine($"Exporting {item.GetType().Name} {item.Name}: {Path.GetFileNameWithoutExtension(path)}");
+            //WriteLine($"Exporting {item.GetType().Name} {item.Name}: {Path.GetFileNameWithoutExtension(path)}");
 
             var metadata = new ExportMetadata();
             metadata.Name = item.Name;
@@ -138,23 +165,39 @@ namespace Garland.Graphics.Exporter
             var races = getRaces();
             foreach (var race in races)
             {
-                var mdlData = mdl.GetMdlData(item, race, secondaryModelInfo);
-                var textures = TexTools.MaterialsHelper.GetMaterials(_gameDir, item, mdlData, race);
+                    var mdlData = mdl.GetRawMdlData(item, race).Result;
 
-                var set = BatchExportSet(mdlData, textures);
-                set.Name = TexTools.XivStringRaces.ToRaceGenderName(race);
-                metadata.Sets.Add(set);
+                    var textures = TexTools.MaterialsHelper.GetMaterials(_gameDir, item, mdlData, race);
+
+                    try
+                    {
+                        var set = BatchExportSet(mdlData, textures);
+                        set.Name = TexTools.XivStringRaces.ToRaceGenderName(race);
+                        metadata.Sets.Add(set);
+                    }
+                    catch (NotImplementedException e)
+                    {
+
+                    }
+               
+                
+                
+                
+                
             }
 
             var metadataJson = JsonConvert.SerializeObject(metadata);
             File.WriteAllText(path, metadataJson);
+
+            WriteLine($"Exported {item.GetType().Name} {item.Name}: {Path.GetFileNameWithoutExtension(path)}");
         }
 
         static ExportSetMetadata BatchExportSet(XivMdl mdlData, Dictionary<int, ModelTextureData> textures)
         {
             var set = new ExportSetMetadata();
 
-            foreach (var meshData in mdlData.LoDList[0].MeshDataList)
+            TTModel model = TTModel.FromRaw(mdlData);
+            foreach (var meshData in model.MeshGroups)
             {
                 var modelMetadata = new ExportModelMetadata();
 
@@ -164,15 +207,23 @@ namespace Garland.Graphics.Exporter
                 modelMetadata.Obj = _repo.Write(".obj", objBytes);
 
                 // Textures
-                var textureData = textures[meshData.MeshInfo.MaterialIndex];
-                var pixelSettings = new PixelReadSettings(textureData.Width, textureData.Height, StorageType.Char, PixelMapping.RGBA);
-                modelMetadata.Alpha = _repo.Write(textureData.Alpha, pixelSettings, false);
-                modelMetadata.Diffuse = _repo.Write(textureData.Diffuse, pixelSettings, true);
-                modelMetadata.Emissive = _repo.Write(textureData.Emissive, pixelSettings, false);
-                modelMetadata.Normal = _repo.Write(textureData.Normal, pixelSettings, true);
-                modelMetadata.Specular = _repo.Write(textureData.Specular, pixelSettings, false);
+                try
+                {
+                    var textureData = textures[model.Materials.IndexOf(meshData.Material)];
+                    var pixelSettings = new PixelReadSettings(textureData.Width, textureData.Height, StorageType.Char, PixelMapping.RGBA);
+                    modelMetadata.Alpha = _repo.Write(textureData.Alpha, pixelSettings, false);
+                    modelMetadata.Diffuse = _repo.Write(textureData.Diffuse, pixelSettings, true);
+                    modelMetadata.Emissive = _repo.Write(textureData.Emissive, pixelSettings, false);
+                    modelMetadata.Normal = _repo.Write(textureData.Normal, pixelSettings, true);
+                    modelMetadata.Specular = _repo.Write(textureData.Specular, pixelSettings, false);
 
-                set.Models.Add(modelMetadata);
+                    set.Models.Add(modelMetadata);
+                }
+                catch (Exception e) {
+                    Console.WriteLine(e.Message);
+                    continue;
+                }
+                
             }
 
             return set;

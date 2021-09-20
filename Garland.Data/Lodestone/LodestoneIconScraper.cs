@@ -32,9 +32,18 @@ namespace Garland.Data.Lodestone
 
             var count = 0;
             var options = new ParallelOptions() { MaxDegreeOfParallelism = 2 };
+            
             Parallel.ForEach(itemsToFetch, options, sItem =>
             {
                 var num = Interlocked.Increment(ref count);
+
+                string itemName = sItem.Name.ToString();
+                if (itemName.StartsWith("过期") || itemName.StartsWith("风化") || itemName.StartsWith("以太")
+                    || itemName.StartsWith("失传") || itemName.StartsWith("文理") || itemName.EndsWith("+1") || itemName.EndsWith("+2"))
+                    return;
+
+                Clay.ClayMySQL nameManager = new Clay.ClayMySQL();
+                
 
                 // A prior item may share this icon, so always check if it was written.
                 var iconId = (UInt16)sItem.GetRaw("Icon");
@@ -42,21 +51,46 @@ namespace Garland.Data.Lodestone
                     return;
 
                 var progress = $"{num}/{itemsToFetch.Count}, {100*num/itemsToFetch.Count}%";
-
-                // Scrape search data from Lodestone.
-                var itemUrl = SearchItem(iconId, sItem.Name, progress);
-                string hash = null;
-                if (itemUrl != null)
-                    hash = FetchItem(iconId, sItem.Name, itemUrl, progress);
-
-                if (hash == null)
+                var itemEnName = "";
+                try
                 {
-                    // Can't find this entry.  Move on.
+                    itemEnName = nameManager.getItemNameChs(sItem.Name);
+                }
+                catch (NotSupportedException notFound) {
                     return;
                 }
+               
 
-                // Fetch the icon and write entries.
-                WriteIcon(iconId, hash);
+                if ("" == itemEnName)
+                    return;
+
+                try
+                {
+                    // Scrape search data from Lodestone.
+                    var itemUrl = SearchItem(iconId, itemEnName, progress);
+                    string hash = null;
+                    if (itemUrl != null)
+                        hash = FetchItem(iconId, itemEnName, itemUrl, progress);
+
+                    if (hash == null)
+                    {
+                        // Can't find this entry.  Move on.
+                        return;
+                    }
+
+                    // Fetch the icon and write entries.
+                    WriteIcon(iconId, hash);
+                }
+                catch (WebException e)
+                {
+                    Console.WriteLine("Timeout!!!!" + itemName);
+                }
+                catch (Exception ee) {
+                    Console.WriteLine("Error occured when searching " + itemName);
+                }
+                
+
+                nameManager.Stop();
             });
         }
 

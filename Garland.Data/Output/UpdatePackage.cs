@@ -26,12 +26,7 @@ namespace Garland.Data.Output
 
         static UpdatePackage()
         {
-            _languageSort["en"] = 1;
-            _languageSort["de"] = 2;
-            _languageSort["fr"] = 3;
-            _languageSort["jp"] = 4;
-            _languageSort["kr"] = 5;
-            _languageSort["cn"] = 6;
+            _languageSort["chs"] = 1;
         }
 
         public UpdatePackage(string name)
@@ -78,12 +73,7 @@ namespace Garland.Data.Output
         {
             var languageSort = new Dictionary<string, byte>();
             languageSort[""] = 1;
-            languageSort["en"] = 1;
-            languageSort["de"] = 2;
-            languageSort["fr"] = 3;
-            languageSort["ja"] = 4;
-            languageSort["kr"] = 5;
-            languageSort["cn"] = 6;
+            languageSort["chs"] = 2;
 
             return _rows
                 .OrderBy(r => languageSort[r.Lang])
@@ -169,6 +159,19 @@ namespace Garland.Data.Output
             LastRun = DateTime.Now;
         }
 
+        void WriteUpdatePackageSQL(string sql)
+        {
+            var fileName = Config.UpdatesPath + _name + ".sql";
+            sql = sql.Remove(sql.Length - 1, 1);
+            sql = sql + ";";
+            sql = sql.Replace("REPLACE INTO DataJsonTest", "REPLACE INTO DataJson");
+
+            using (var writer = File.AppendText(fileName))
+            {
+                writer.WriteLine(sql);
+            }
+        }
+
         void RunCore(IPrinter output, MySqlCommand cmd)
         {
             var currentHeader = _rows.First().TableHeader;
@@ -182,6 +185,7 @@ namespace Garland.Data.Output
                 count++;
                 if (row.TableHeader != currentHeader || sql.Length > BatchSizeLimit)
                 {
+                    WriteUpdatePackageSQL(sql.ToString());
                     RunBatch(sql, cmd);
                     output.PrintLine($"Wrote {count} / {_rows.Count}");
 
@@ -195,6 +199,7 @@ namespace Garland.Data.Output
             // Send any pending statements.
             if (sql.Length > 0)
             {
+                WriteUpdatePackageSQL(sql.ToString());
                 RunBatch(sql, cmd);
                 output.PrintLine($"Wrote {_rows.Count}");
             }

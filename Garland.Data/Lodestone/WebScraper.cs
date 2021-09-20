@@ -54,7 +54,7 @@ namespace Garland.Data.Lodestone
                 {
                     System.Diagnostics.Debug.WriteLine(ex.Message);
 
-                    if (ex.Message.Contains("Bad Gateway"))
+                    if (ex.Message.Contains("50") || ex.Message.Contains("无法连接到"))
                     {
                         Thread.Sleep(3000);
                         continue;
@@ -66,5 +66,7 @@ namespace Garland.Data.Lodestone
 
             throw new InvalidOperationException("Too many failures retrieving: " + url);
         }
+
+
     }
 }

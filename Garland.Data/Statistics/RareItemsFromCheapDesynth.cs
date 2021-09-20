@@ -35,7 +35,7 @@ namespace Garland.Data.Statistics
                     {
                         if (rareItemsById.TryGetValue((int)ingredient.id, out var rareIngredientItem))
                         {
-                            lines.Add($"{rareIngredientItem.en.name} appears in recipe list of {item.en.name}.");
+                            lines.Add($"{rareIngredientItem.chs.name} appears in recipe list of {item.chs.name}.");
                         }
                     }
                 }

@@ -20,6 +20,7 @@ namespace Garland.Data.Modules
             _venturesByName = _builder.Db.Ventures.Where(v => v.name != null).ToDictionary(v => (string)v.name);
 
             var lines = Utils.Tsv(Path.Combine(Config.SupplementalPath, "FFXIV Data - Items.tsv"));
+            Clay.ClayMySQL clayManager = new Clay.ClayMySQL();
             foreach (var line in lines.Skip(1))
             {
                 var type = line[1];
@@ -28,24 +29,25 @@ namespace Garland.Data.Modules
 
                 try
                 {
-                    var item = _builder.Db.ItemsByName[itemName];
+                    var itemId = clayManager.getItemID(itemName);
+                    var item = _builder.Db.ItemsById[itemId];
 
                     switch (type)
                     {
                         case "Desynth":
-                            BuildDesynth(item, args);
+                            BuildDesynth(clayManager, item,  args);
                             break;
 
                         case "Reduce":
-                            BuildReduce(item, args);
+                            BuildReduce(clayManager, item,  args);
                             break;
 
                         case "Loot":
-                            BuildLoot(item, args);
+                            BuildLoot(clayManager, item,  args);
                             break;
 
                         case "Venture":
-                            BuildVentures(item, args);
+                            BuildVentures(clayManager, item,  args);
                             break;
 
                         case "Node":
@@ -57,7 +59,7 @@ namespace Garland.Data.Modules
                             break;
 
                         case "Instance":
-                            BuildInstances(item, args);
+                            BuildInstances(clayManager, item, args);
                             break;
 
                         case "Voyage":
@@ -65,7 +67,7 @@ namespace Garland.Data.Modules
                             break;
 
                         case "Gardening":
-                            BuildGardening(item, args);
+                            BuildGardening(clayManager, item,  args);
                             break;
 
                         case "Other":
@@ -84,10 +86,11 @@ namespace Garland.Data.Modules
                 {
                     var joinedArgs = string.Join(", ", args);
                     DatabaseBuilder.PrintLine($"Error importing supplemental source '{itemName}' with args '{joinedArgs}': {ex.Message}");
-                    //if (System.Diagnostics.Debugger.IsAttached)
-                    //    System.Diagnostics.Debugger.Break();
+                    if (System.Diagnostics.Debugger.IsAttached)
+                       System.Diagnostics.Debugger.Break();
                 }
             }
+            clayManager.Stop();
         }
 
         void BuildOther(dynamic item, string[] sources)
@@ -99,23 +102,25 @@ namespace Garland.Data.Modules
             item.other = new JArray(sources);
         }
 
-        void BuildGardening(dynamic item, string[] sources)
+        void BuildGardening(Clay.ClayMySQL clayManager, dynamic item,  string[] sources)
         {
             foreach (string seedItemName in sources)
             {
-                var seedItem = _builder.Db.ItemsByName[seedItemName];
+                //var seedItem = _builder.Db.ItemsByName[seedItemName];
+                var seedItem = _builder.Db.ItemsById[clayManager.getItemID(seedItemName)];
                 Items.AddGardeningPlant(_builder, seedItem, item);
             }
         }
 
-        void BuildDesynth(dynamic item, string[] sources)
+        void BuildDesynth(Clay.ClayMySQL clayManager, dynamic item,  string[] sources)
         {
             if (item.desynthedFrom == null)
                 item.desynthedFrom = new JArray();
 
             foreach (string itemName in sources)
             {
-                var desynthItem = _builder.Db.ItemsByName[itemName];
+                var desynthItem = _builder.Db.ItemsById[clayManager.getItemID(itemName)];
+                //var desynthItem = _builder.Db.ItemsByName[itemName];
                 item.desynthedFrom.Add((int)desynthItem.id);
                 _builder.Db.AddReference(item, "item", (int)desynthItem.id, false);
 
@@ -126,14 +131,27 @@ namespace Garland.Data.Modules
             }
         }
 
-        void BuildReduce(dynamic item, string[] sources)
+        void BuildReduce(Clay.ClayMySQL clayManager, dynamic item, string[] sources)
         {
             if (item.reducedFrom == null)
                 item.reducedFrom = new JArray();
 
             foreach (string sourceItemName in sources)
             {
-                var sourceItem = _builder.Db.ItemsByName[sourceItemName];
+                //var sourceItem = _builder.Db.ItemsByName[sourceItemName];
+                int itemID = -1;
+                try
+                {
+                    itemID = clayManager.getItemID(sourceItemName);
+                }
+                catch (NotSupportedException notFound) {
+                    continue;
+                }
+
+                if (itemID == -1)
+                    continue;
+
+                var sourceItem = _builder.Db.ItemsById[itemID];
                 if (sourceItem.reducesTo == null)
                     sourceItem.reducesTo = new JArray();
                 sourceItem.reducesTo.Add((int)item.id);
@@ -151,7 +169,7 @@ namespace Garland.Data.Modules
                         if (slot.id == sourceItem.id && slot.reduce == null)
                         {
                             slot.reduce = new JObject();
-                            slot.reduce.item = item.en.name;
+                            slot.reduce.item = item.chs.name;
                             slot.reduce.icon = item.icon;
                         }
                     }
@@ -172,12 +190,13 @@ namespace Garland.Data.Modules
             }
         }
 
-        void BuildLoot(dynamic item, string[] sources)
+        void BuildLoot(Clay.ClayMySQL clayManager, dynamic item,  string[] sources)
         {
             if (item.treasure == null)
                 item.treasure = new JArray();
 
-            var generators = sources.Select(j => _builder.Db.ItemsByName[j]).ToArray();
+            //var generators = sources.Select(j => _builder.Db.ItemsByName[j]).ToArray();
+            var generators = sources.Select(j => _builder.Db.ItemsById[clayManager.getItemID(j)]).ToArray();
             foreach (var generator in generators)
             {
                 if (generator.loot == null)
@@ -191,11 +210,11 @@ namespace Garland.Data.Modules
             }
         }
 
-        void BuildVentures(dynamic item, string[] sources)
+        void BuildVentures(Clay.ClayMySQL clayManager, dynamic item,string[] sources)
         {
             if (item.ventures != null)
                 throw new InvalidOperationException("item.ventures already exists.");
-            var ventureIds = sources.Select(j => (int)_venturesByName[j].id);
+            var ventureIds = sources.Select(j => (int)_venturesByName[clayManager.getRetainerTaskChs(j)].id);
             item.ventures = new JArray(ventureIds);
         }
 
@@ -247,7 +266,7 @@ namespace Garland.Data.Modules
             }
         }
 
-        void BuildInstances(dynamic item, string[] sources)
+        void BuildInstances(Clay.ClayMySQL clayManager, dynamic item,  string[] sources)
         {
             if (item.instances == null)
                 item.instances = new JArray();
@@ -256,7 +275,7 @@ namespace Garland.Data.Modules
 
             foreach (var name in sources)
             {
-                var instance = _builder.Db.Instances.First(i => i.en.name == name);
+                var instance = _builder.Db.Instances.First(i => i.chs.name == clayManager.getInstanceChs(name));
                 int instanceId = instance.id;
                 if (instance.rewards == null)
                     instance.rewards = new JArray();

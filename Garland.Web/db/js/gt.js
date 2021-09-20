@@ -276,7 +276,7 @@ gt.core = {
     writeErrorMessage: function(message, data) {
         $('#main')
             .empty()
-            .append('<div>Oops!  Something went wrong.  Please copy the below message into a comment on <a href="/">the front page</a>.  Or, you can <a href="/error.html">clear everything</a>.</div>')
+            .append('<div>Orz 发生了错误。如您有时间，请将以下信息复制后联系我们，或者张贴到 <a href="/">主页</a>的评论页面。您或许可以尝试 <a href="/error.html">清除全部数据</a>来解决问题。</div>')
             .append('<div><pre>' + message + '</pre></div>');
 
         if (data)
@@ -451,7 +451,7 @@ gt.core = {
                     });
                 } else if (status == 'error') {
                     // Typically for 404s.  Usually logged by the browser.
-                    result = gt.core.createErrorView(module.type || module.pluralName, id, { message: 'Invalid link ' + url });
+                    result = gt.core.createErrorView(module.type || module.pluralName, id, { message: '链接无效： ' + url });
                 } else {
                     // Send this error.
                     if (window.Sentry && gt.core.isLive)
@@ -494,10 +494,10 @@ gt.core = {
         try {
             gt.core.loadCore(blockData, blockLoaded);
         } catch (ex) {
-            var desc = 'Block reload failed (' + blockData.type + ':' + blockData.id + ')';
+            var desc = '方格重载失败 (' + blockData.type + ':' + blockData.id + ')';
             if (window.Sentry && gt.core.isLive) {
                 window.Sentry.addBreadcrumb({
-                    message: 'Block reload failure',
+                    message: '方格重载失败！',
                     category: 'error',
                     data: blockData
                 });
@@ -811,14 +811,14 @@ gt.core = {
         try {
             hash = decodeURI(location.hash);
         } catch (ex) {
-            gt.display.alertp("There was an error decoding this link.");
+            gt.display.alertp("解码链接失败。");
             return false;
         }
         
         var query = gt.core.parseHashQuery(hash.split(','));
 
         if (query.length > 40) {
-            gt.display.alertp("This link contains too many blocks (" + query.length + ")");
+            gt.display.alertp("这个链接里面的东西太多了……装不下…… (" + query.length + ")");
             return false;
         }
 
@@ -861,7 +861,7 @@ gt.core = {
             gt.list.loadBatch(query, true);
         } catch (ex) {
             console.error(ex);
-            gt.display.alertp("There was an error loading this link.");
+            gt.display.alertp("加载链接失败。");
             return false;
         }
         return true;
@@ -927,12 +927,12 @@ gt.core = {
         var $block = $target.closest('.block');
         var data = $block.data('block');
 
-        gt.display.promptp('Rename the ' + data.type + ':', data.id, function(name) {
+        gt.display.promptp('重命名 ' + data.type + ':', data.id, function(name) {
             if (!name || name == data.id)
                 return;
 
             if (name.indexOf("\"") != -1) {
-                gt.display.alertp('Name can not contain ".  Please try again.');
+                gt.display.alertp('名称中不能含有 "。  请再试一次。');
                 return;
             }
 
@@ -955,7 +955,7 @@ gt.core = {
         if (!data.normalizeUrl || !gt.core.isLive)
             return false;
 
-        var baseUrl = "https://garlandtools.org";
+        var baseUrl = "https://ffxiv.cyanclay.xyz";
         if (window.location.origin.indexOf(baseUrl) == 0)
             return false;
 
@@ -1166,7 +1166,7 @@ function naturalSort (a, b) {
 }
 gt.patch = {
     current: null,
-    pluralName: 'Patches',
+    pluralName: '版本',
     type: 'patch',
     index: {},
     partialIndex: {},
@@ -1239,7 +1239,7 @@ gt.patch = {
             name: '[' + obj.id + '] ' + obj.name,
             template: gt.browse.blockTemplate,
             blockClass: 'tool browse expand-right',
-            subheader: obj.series + ' Patch',
+            subheader: obj.series + ' 版本',
             tool: 1,
             settings: 1,
 
@@ -1399,7 +1399,7 @@ gt.browse = {
             name: module.pluralName,
             template: gt.browse.blockTemplate,
             blockClass: 'tool expand-right',
-            subheader: 'Browse Tool',
+            subheader: '工具',
             tool: 1,
             settings: 1,
 
@@ -1515,11 +1515,11 @@ gt.browse = {
         // Transform into level ranges e.g. 1-4, 5-9, 10-14, etc.
         var low = Math.floor(lvl / step) * step;
         var high = low + step - 1;
-        return 'Level ' + Math.max(1, low) + '-' + high;
+        return '等级 ' + Math.max(1, low) + '-' + high;
     },
 
     transformLevel: function(view) {
-        return 'Level ' + view.lvl;
+        return '等级 ' + view.lvl;
     },
 
     transformLevelAndName: function(view) {
@@ -1569,11 +1569,11 @@ gt.time = {
         return {
             id: id,
             type: 'time',
-            name: 'Eorzea Time',
+            name: '艾欧泽亚时间',
             template: gt.time.blockTemplate,
             blockClass: 'tool noexpand',
             icon: '../files/icons/moon/' + phase.moon + '.png',
-            subheader: 'Time Tool',
+            subheader: '时间',
             tool: 1,
 
             initialTime: gt.time.formatTime(eTime, gt.time.hoursMinutesUTC),
@@ -1586,13 +1586,13 @@ gt.time = {
     getTimePeriod: function(eTime) {
         var hours = eTime.getUTCHours();
         if (hours < 6)
-            return 'night';
+            return '夜间';
         else if (hours < 12)
-            return 'morning';
+            return '早晨';
         else if (hours < 18)
-            return 'day';
+            return '白天';
         else
-            return 'dusk';
+            return '黄昏';
     },
 
     ensureTimeUpdate: function() {
@@ -1846,7 +1846,7 @@ gt.time = {
 };
 gt.item = {
     // Data
-    pluralName: 'Items',
+    pluralName: '物品',
     type: 'item',
     blockTemplate: null,
     halfLinkTemplate: null,
@@ -1855,7 +1855,7 @@ gt.item = {
     materiaSocketsTemplate: null,
     vendorLinkTemplate: null,
     categoryIndex: null,
-    equipSlotNames: [null, 'Main Hand', 'Off Hand', 'Head', 'Body', 'Hands', 'Waist', 'Legs', 'Feet', 'Ears', 'Neck', 'Wrists', 'Rings', 'Main Hand', 'Main Hand', null, null, 'Soul Crystal'],
+    equipSlotNames: [null, '主手', '副手', '头部', '身体', '手臂', '腰带', '腿部', '脚部', '耳部', '颈部', '腕部', '戒指', '主手', '主手', null, null, '灵魂水晶'],
     specialBonusIndex: null,
     seriesIndex: null,
     index: {},
@@ -1863,16 +1863,18 @@ gt.item = {
     ingredients: {},
     complexity: {},
     version: 3,
+	//itemPrimeKeys: ['物理防御力', '魔法防御力', '物理攻击力', '魔法攻击力', '物理自动攻击', '攻击间隔', '格挡发动力', '格挡性能'],
+    //minionPrimeKeys: ['生命值', '攻击力', '防御力', '速度'],
     itemPrimeKeys: ['Defense', 'Magic Defense', 'Physical Damage', 'Magic Damage', 'Auto-attack', 'Delay', 'Block Rate', 'Block Strength'],
     minionPrimeKeys: ['HP', 'Attack', 'Defense', 'Speed'],
     mainAttributeKeys: { Strength: 1, Dexterity: 1, Vitality: 1, Intelligence: 1, Mind: 1 },
     baseParamAbbreviations: {
-        'Magic Damage': 'Damage',
-        'Physical Damage': 'Damage',
-        'Reduced Durability Loss': 'Red. Dur. Loss',
-        'Increased Spiritbond Gain': 'Inc. Spr. Gain',
-        'Careful Desynthesis': 'C. Desynthesis',
-        'Critical Hit Rate': 'Critical Rate'
+        '魔法攻击力': '攻击力',
+        '物理攻击力': '攻击力',
+        '装备损耗耐性': '装备损耗耐性',
+        '精炼度提升量': '精炼度提升量',
+        '分解技能提升率': '分解技能提升率',
+        '直击': '直击'
     },
     // TODO: materiaJoinRates comes from core data, only here temporarily until old cache is removed.
     materiaJoinRates: {"nq":[[90,48,28,16],[82,44,26,16],[70,38,22,14],[58,32,20,12],[17,10,7,5],[17,0,0,0],[17,10,7,5],[17,0,0,0],[100,100,100,100],[100,100,100,100]],"hq":[[80,40,20,10],[72,36,18,10],[60,30,16,8],[48,24,12,6],[12,6,3,2],[12,0,0,0],[12,6,3,2],[12,0,0,0],[100,100,100,100],[100,100,100,100]]},
@@ -1923,7 +1925,7 @@ gt.item = {
             template: gt.item.blockTemplate,
             icon: gt.item.iconPath(item.icon),
             iconBorder: 1,
-            subheader: 'Item Level ' + item.ilvl,
+            subheader: '物品等级 ' + item.ilvl,
             settings: 1,
 
             help: item.description,
@@ -2047,7 +2049,7 @@ gt.item = {
         if (item.special) {
             var specialBonus = gt.item.specialBonusIndex[item.special.bonusId];
             view.special = {
-                name: specialBonus ? specialBonus.name : "Unknown Bonus",
+                name: specialBonus ? specialBonus.name : "未知属性",
                 isSet: item.special.bonusId == 2 || item.special.bonusId == 6,
                 attr: []
             };
@@ -2059,12 +2061,12 @@ gt.item = {
             }
 
             if (item.special.bonusParam && item.special.bonusId == 6)
-                view.special.condition = 'Active Under Lv. ' + item.special.bonusParam;
+                view.special.condition = item.special.bonusParam + "级以下时有效";
 
             for (var i = 0; i < item.special.attr.length; i++) {
                 var bonus = item.special.attr[i];
                 view.special.attr.push({
-                    prefix: view.special.isSet ? (bonus.index + 2 + ' Equipped:') : '',
+                    prefix: view.special.isSet ? (bonus.index + 2 + ' 已装备:') : '',
                     name: bonus.name,
                     value: bonus.value < 0 ? bonus.value : '+' + bonus.value
                 });
@@ -2198,16 +2200,16 @@ gt.item = {
             view.other = _.union(view.other, [gt.model.partial(gt.item, 'wondroustails')]);
 
         if (item.desynthedFrom && item.desynthedFrom.length)
-            view.other = _.union(view.other, gt.model.partialList(gt.item, item.desynthedFrom, function(v) { v.right = 'Desynthesis'; return v; }));
+            view.other = _.union(view.other, gt.model.partialList(gt.item, item.desynthedFrom, function(v) { v.right = '分解'; return v; }));
 
         if (item.achievements)
-            view.other = _.union(view.other, _.map(gt.model.partialList(gt.achievement, item.achievements), function(i) { return $.extend(i, {right: 'Achievement'}); }));
+            view.other = _.union(view.other, _.map(gt.model.partialList(gt.achievement, item.achievements), function(i) { return $.extend(i, {right: '成就'}); }));
 
         if (item.voyages)
-            view.other = _.union(view.other, _.map(item.voyages, function(s) { return { name: s, icon: 'images/Voyage.png', right: 'Voyage' }; }));
+            view.other = _.union(view.other, _.map(item.voyages, function(s) { return { name: s, icon: 'images/Voyage.png', right: '部队探险' }; }));
 
         if (item.treasure)
-            view.other = _.union(view.other, _.map(gt.model.partialList(gt.item, item.treasure), function(i) { return $.extend(i, {right: 'Loot'}); }));
+            view.other = _.union(view.other, _.map(gt.model.partialList(gt.item, item.treasure), function(i) { return $.extend(i, {right: '掉落'}); }));
 
         if (item.fates)
             view.other = _.union(view.other, gt.model.partialList(gt.fate, item.fates));
@@ -2286,9 +2288,9 @@ gt.item = {
             view.marketPrice = itemSettings.marketPrice;
 
             if (itemSettings.sourceType == 'market')
-                view.marketType = 'Buying';
+                view.marketType = '购买';
             else
-                view.marketType = 'Selling';
+                view.marketType = '卖出';
         }
 
         // Minion
@@ -2333,7 +2335,7 @@ gt.item = {
                     var group = null;
                     if (spot.bait || !spot.gig) {
                         group = _.find(view.fish.groups, function(g) { return _.isEqual(g.baitIds, spot.bait); });
-                        view.fish.predatorType = 'Predator';
+                        view.fish.predatorType = '捕鱼人之识';
                     }
                     else {
                         group = _.find(view.fish.groups, function(g) { return _.isEqual(g.gig, spot.gig); });
@@ -2361,7 +2363,7 @@ gt.item = {
                     view.fish.fishEyes = spot.fishEyes;
 
                     if (spot.hookset) {
-                        if (spot.hookset == "Powerful Hookset")
+                        if (spot.hookset == "强力提钩")
                             view.fish.hooksetIcon = 1115;
                         else
                             view.fish.hooksetIcon = 1116;
@@ -2514,10 +2516,10 @@ gt.item = {
         var keys = _.unique(_.union(_.keys(item.attr), _.keys(item.attr_hq), meldKeys)).sort();
         for (var i = 0; i < keys.length; i++) {
             var key = keys[i];
-            if (key == 'action' || key == 'Magic Damage' || key == 'Physical Damage' || key == 'Auto-attack')
+            if (key == 'action' || key == '魔法攻击力' || key == '物理攻击力' || key == '自动攻击')
                 continue; // Skip this bag, and mutually exclusive damage attributes.
 
-            if (minion && key == 'Speed')
+            if (minion && key == '速度')
                 continue; // Done later.
 
             // Calculate melds
@@ -2570,19 +2572,20 @@ gt.item = {
             var speed = gt.item.formatAttribute('Speed', item.attr, null, null, 0, primeKeys);
             speed.stars = 1;
             primes.push(speed);
+			
         }
 
         var itemCategory = gt.item.categoryIndex[item.category];
-        if (itemCategory && (item.attr["Physical Damage"] || item.attr["Magic Damage"])) {
+        if (itemCategory && (item.attr["物理攻击力"] || item.attr["魔法攻击力"])) {
             var dmgKey = itemCategory.attr;
             primes.push(gt.item.formatAttribute(dmgKey, item.attr, item.attr_hq, item.attr_max, 0, primeKeys));
         }
 
-        if (item.attr["Physical Damage"]) {
-            item.attr["Auto-attack"] = gt.item.calculateAutoAttack(item.attr["Physical Damage"], item.attr.Delay);
+        if (item.attr["物理攻击力"]) {
+            item.attr["自动攻击"] = gt.item.calculateAutoAttack(item.attr["物理攻击力"], item.attr.Delay);
             if (item.attr_hq)
-                item.attr_hq["Auto-attack"] = gt.item.calculateAutoAttack(item.attr_hq["Physical Damage"], item.attr.Delay);
-            primes.push(gt.item.formatAttribute('Auto-attack', item.attr, item.attr_hq, item.attr_max, 0, primeKeys));
+                item.attr_hq["自动攻击"] = gt.item.calculateAutoAttack(item.attr_hq["物理攻击力"], item.attr.Delay);
+            primes.push(gt.item.formatAttribute('自动攻击k', item.attr, item.attr_hq, item.attr_max, 0, primeKeys));
         }
 
         bonuses = _.sortBy(bonuses, function(b) { return b.sort; });
@@ -2842,7 +2845,7 @@ gt.item = {
 
     newGroupClicked: function(e) {
         var $block = $(this).closest('.block');
-        gt.group.setup('Crafting List', $block, function(groupData) {
+        gt.group.setup('收集列表', $block, function(groupData) {
             var blockData = $.extend({}, $block.data('block'));
             gt.group.insertGroupCore(blockData, groupData);
         });
@@ -2937,7 +2940,7 @@ gt.item = {
         if (!isViewerInjected) {
             var $modelViewers = $('iframe.model-viewer');
             if ($modelViewers.length > 2) {
-                var html = '<p>Model viewer limit reached.  Please close one and try again.</p>';
+                var html = '<p>模型预览器的数量达到了上限，请关掉一些后再试。</p>';
                 $page.empty().append($(html));
                 return;
             }
@@ -2968,7 +2971,7 @@ gt.item = {
     }
 };
 gt.npc = {
-    pluralName: 'NPCs',
+    pluralName: 'NPC',
     type: 'npc',
     blockTemplate: null,
     tradeEntryTemplate: null,
@@ -2980,7 +2983,7 @@ gt.npc = {
         { type: 'group', prop: 'location' },
         { type: 'sort', prop: 'name' }
     ],
-    availabilityStateText: { 'active': 'Available until', 'dormant': 'Available at', 'spawning': 'Available at' },
+    availabilityStateText: { 'active': '消失', 'dormant': '出现', 'spawning': '出现' },
 
     initialize: function(data) {
         gt.npc.blockTemplate = doT.template($('#block-npc-template').text());
@@ -3040,7 +3043,7 @@ gt.npc = {
             if (location.parentId)
                 view.region = gt.location.index[location.parentId].name;
             else
-                view.region = 'Other';
+                view.region = '其他';
         }
         else {
             view.location = '';
@@ -3113,14 +3116,14 @@ gt.npc = {
                     var alt = v.obj;
                     var altDesc = [];
                     if (alt.s)
-                        altDesc.push(alt.s + ' ' + gt.util.pluralNum('shop', alt.s));
+                        altDesc.push(alt.s + ' 商店');
                     if (alt.q)
-                        altDesc.push(alt.q + ' ' + gt.util.pluralNum('quest', alt.q));
+                        altDesc.push(alt.q + ' 任务');
                     if (alt.k)
-                        altDesc.push(alt.k + ' ' + gt.util.pluralNum('dialogue', alt.k));
+                        altDesc.push(alt.k + ' 对话');
 
                     if (!altDesc.length)
-                        altDesc.push("Other");
+                        altDesc.push("其他");
 
                     v.desc = altDesc.join(', ');
                     v.isCurrent = alt.i == npc.id;
@@ -3224,7 +3227,7 @@ gt.npc = {
         step.sourceType = 'npc';
         step.sourceView = gt.model.partial(gt.npc, id || step.item.vendors[0]);
         step.price = { currency: 1, cost: step.item.price, totalCost: step.item.price, yield: 1 }; // 1 is the id of gil.
-        step.setCategory(['Gil Vendor', 'Vendor']);
+        step.setCategory(['金币商人', '商人']);
     }
 };
 
@@ -3276,12 +3279,12 @@ gt.npc.timer.prototype.next = function(now) {
 gt.npc.timer.prototype.notify = function() {
     gt.util.showNotification(this.view.name, {
         icon: 'images/TripleTriad.png',
-        body: this.view.fullLocation || "Available for Triple Triad",
+        body: this.view.fullLocation || "可进行九宫幻卡对战",
         tag: this.view.id
     });
 };
 gt.mob = {
-    pluralName: 'Mobs',
+    pluralName: 'Mob',
     type: 'mob',
     blockTemplate: null,
     index: {},
@@ -3315,7 +3318,7 @@ gt.mob = {
             name: mob.name,
             template: gt.mob.blockTemplate,
             icon: 'images/Mob.png',
-            subheader: 'Level ' + mob.lvl + ' Mob',
+            subheader: '等级 ' + mob.lvl + ' Mob',
             settings: 1,
             obj: mob,
 
@@ -3331,7 +3334,7 @@ gt.mob = {
             view.location_type = 'instance';
             view.location_id = instance.id;
             view.byline = view.location;
-            view.region = 'Instance';
+            view.region = '副本';
         } else {
             var location = gt.location.index[mob.zoneid];
             view.sourceName = view.name;
@@ -3348,7 +3351,7 @@ gt.mob = {
                 if (location.parentId)
                     view.region = gt.location.index[location.parentId].name;
                 else
-                    view.region = 'Instance';
+                    view.region = '副本';
 
                 if (mob.coords)
                     view.map = gt.map.getViewModel({ location: location, coords: mob.coords, icon: view.icon });
@@ -3359,7 +3362,7 @@ gt.mob = {
             if (mob.drops && mob.drops.length) {
                 view.drops = gt.model.partialList(gt.item, mob.drops);
                 view.drops = _.sortBy(view.drops, function(i) { return i.name; });
-                view.item_text = 'Drops ' + view.drops.length + ' item' + (view.drops.length > 1 ? 's' : '');
+                view.item_text = '掉落 ' + view.drops.length + ' 件物品';
             }
 
             if (mob.currency)
@@ -3383,7 +3386,7 @@ gt.mob = {
         if (partial.t) {
             view.byline = partial.t;
             view.location = partial.t;
-            view.region = 'Instance';
+            view.region = '副本';
             view.sourceName = view.name + ', ' + gt.util.abbr(partial.t);
             view.longSourceName = view.name + ', ' + partial.t;
         } else {
@@ -3394,7 +3397,7 @@ gt.mob = {
             if (location) {
                 view.byline += ', ' + location.name;
                 view.location = location.name;
-                view.region = location.parentId ? gt.location.index[location.parentId].name : 'Instance';
+                view.region = location.parentId ? gt.location.index[location.parentId].name : '副本';
                 view.sourceName += ', ' + gt.util.abbr(location.name);
                 view.longSourceName += ', ' + location.name;
             }
@@ -3415,11 +3418,11 @@ gt.mob = {
 
         step.sourceType = 'mob';
         step.sourceView = mob;
-        step.setCategory(['Mob', 'Other']);
+        step.setCategory(['怪物', '其他']);
     }
 };
 gt.node = {
-    pluralName: 'Gathering Nodes',
+    pluralName: '采集点',
     type: 'node',   
     blockTemplate: null,
     index: {},
@@ -3427,7 +3430,7 @@ gt.node = {
     version: 2,
     bonusIndex: null,
     limitedNodeUpdateKey: null,
-    types: ['Mineral Deposit', 'Rocky Outcropping', 'Mature Tree', 'Lush Vegetation', 'Spearfishing'],
+    types: ['矿脉', '石场', '良材', '草场', '刺鱼'],
     jobAbbreviations: ['MIN', 'MIN', 'BTN', 'BTN', 'FSH'],
     browse: [
         { type: 'icon-list', prop: 'job' },
@@ -3476,7 +3479,7 @@ gt.node = {
             stars: node.stars,
             time: node.time,
             uptime: node.uptime,
-            zone: gt.location.index[node.zoneid] || { name: 'Unknown' },
+            zone: gt.location.index[node.zoneid] || { name: '未知' },
             coords: node.coords,
             obj: node
         };
@@ -3484,7 +3487,7 @@ gt.node = {
         var typePrefix = node.limitType ? (node.limitType + ' ') : '';
 
         view.icon = 'images/' + view.category + '.png';
-        view.subheader = "Level " + node.lvl + gt.util.stars(node.stars) + ' ' + typePrefix + view.category;
+        view.subheader = "等级 " + node.lvl + gt.util.stars(node.stars) + ' ' + typePrefix + view.category;
 
         var typePrefix = node.limitType ? node.limitType + ' ' : '';
         view.byline = 'Lv. ' + view.lvl + gt.util.stars(view.stars) + ' ' + typePrefix + view.category;
@@ -3545,7 +3548,7 @@ gt.node = {
         var name = gt.model.name(partial);
         var category = gt.node.types[partial.t];
         var typePrefix = partial.lt ? (partial.lt + ' ') : '';
-        var zone = gt.location.index[partial.z] || { name: 'Unknown' };
+        var zone = gt.location.index[partial.z] || { name: '未知' };
         var region = gt.location.index[zone.parentId];
 
         return {
@@ -3560,7 +3563,7 @@ gt.node = {
             zone: zone,
             location: zone.name,
             lvl: partial.l,
-            region: region ? region.name : 'Unknown',
+            region: region ? region.name : '未知',
             limited: partial.ti ? 1 : 0,
             stars: partial.s,
             category: category
@@ -3573,7 +3576,7 @@ gt.node = {
             step.sourceType = 'node';
             step.sourceView = view;
         }
-        step.setCategory(['Gathering']);
+        step.setCategory(['采集']);
     },
 
     limitedNodeUpdate: function() {
@@ -3676,13 +3679,13 @@ gt.node = {
 
         if (eorzeaMinutesDifference > 0 && eorzeaMinutesDifference <= 120) {
             // Spawns within 2 hours.
-            info.text = "Spawns at " + gt.time.formatTime(times.lNextSpawn);
+            info.text = "在 " + gt.time.formatTime(times.lNextSpawn) + " 出现";
             info.state = 'spawning';
             info.change = times.lNextSpawn;
         } else if (eorzeaMinutesDifference < 0 && eorzeaMinutesDifference > -view.uptime) {
             // Active for {uptime} minutes.
             var lNextExpire = gt.time.eorzeaToLocal(times.eNextExpire);
-            info.text = "Active until " + gt.time.formatTime(lNextExpire);
+            info.text = "在 " + gt.time.formatTime(lNextExpire) + " 消失";
             info.state = "active";
             info.change = lNextExpire;
             info.progressStart = lNextExpire;
@@ -3692,7 +3695,7 @@ gt.node = {
             var eSpawning = new Date(times.eNextSpawn);
             eSpawning.setUTCHours(eSpawning.getUTCHours() - 2);
 
-            info.text = "Spawns at " + gt.time.formatTime(times.lNextSpawn);
+            info.text = "在 " + gt.time.formatTime(times.lNextSpawn) + " 出现";
             info.state = 'dormant';
             info.change = gt.time.eorzeaToLocal(eSpawning);
         }
@@ -3730,13 +3733,13 @@ gt.node = {
 };
 
 gt.fishing = {
-    pluralName: 'Fishing Spots',
+    pluralName: '鱼池',
     type: 'fishing',
     blockTemplate: null,
     index: {},
     version: 2,
     partialIndex: {},
-    categories: ['Ocean Fishing', 'Freshwater Fishing', 'Dunefishing', 'Skyfishing', 'Cloudfishing', 'Hellfishing', 'Aetherfishing', 'Saltfishing'],
+    categories: ['海洋垂钓', '淡水垂钓', '沙海垂钓', '浮岛垂钓', '云海垂钓', '熔岩垂钓', '魔泉垂钓', '盐湖垂钓'],
     browse: [
         { type: 'group', prop: 'region' },
         { type: 'group', prop: 'location' },
@@ -3769,7 +3772,7 @@ gt.fishing = {
             browseIcon: 'images/FSH.png'
         };
 
-        var zoneName = view.zone ? view.zone.name : "The Diadem";
+        var zoneName = view.zone ? view.zone.name : "云冠群岛";
 
         // Location and source
         view.sourceName = gt.util.abbr(zoneName) + ', Lv. ' + view.lvl;
@@ -3779,7 +3782,7 @@ gt.fishing = {
         if (region)
             view.region = region.name;
         else
-            view.region = "Unknown";
+            view.region = "出海垂钓";
 
         if (data) {
             view.items = gt.model.partialList(gt.item, spot.items, function(v, i) { return { item: v, lvl: i.lvl }; });
@@ -3792,7 +3795,7 @@ gt.fishing = {
             }
         }
 
-        view.subheader = 'Level ' + view.lvl + ' ' + view.category;
+        view.subheader = '等级 ' + view.lvl + ' ' + view.category;
         view.byline = view.subheader;
 
         return view;
@@ -3801,7 +3804,7 @@ gt.fishing = {
     getPartialViewModel: function(partial) {
         var name = gt.model.name(partial);
         var zone = partial.z ? gt.location.index[partial.z] : null;
-        var zoneName = zone ? zone.name : "The Diadem";
+        var zoneName = zone ? zone.name : "云冠群岛";
         var region = zone ? gt.location.index[zone.parentId] : null;
 
         return {
@@ -3810,8 +3813,8 @@ gt.fishing = {
             name: name,
             sourceName: gt.util.abbr(zoneName) + ', Lv. ' + partial.l,
             longSourceName: zoneName + ', Lv. ' + partial.l,
-            byline: 'Level ' + partial.l + ' ' + gt.fishing.categories[partial.c],
-            region: region ? region.name : "Unknown",
+            byline: '等级 ' + partial.l + ' ' + gt.fishing.categories[partial.c],
+            region: region ? region.name : "出海垂钓",
             location: zoneName,
             icon: 'images/FSH.png',
             lvl: partial.l
@@ -3821,11 +3824,11 @@ gt.fishing = {
     resolveCraftSource: function(step, id) {
         step.sourceType = 'fishing';
         step.sourceView = gt.model.partial(gt.fishing, id || step.item.fishingSpots[0]);
-        step.setCategory(['Fishing', 'Gathering']);
+        step.setCategory(['钓鱼', '采集']);
     }
 };
 gt.instance = {
-    pluralName: 'Instances',
+    pluralName: '副本',
     type: 'instance',
     blockTemplate: null,
     index: {},
@@ -3872,7 +3875,7 @@ gt.instance = {
 
         view.requirements = gt.instance.getInstanceRequirements(instance);
         view.byline = view.requirements;
-        view.subheader = "Level " + instance.min_lvl + ' ' + view.category;
+        view.subheader = "等级 " + instance.min_lvl + ' ' + view.category;
 
         if (instance.fullIcon)
             view.fullIcon = '../files/icons/instance/' + instance.fullIcon + '.png';
@@ -3926,25 +3929,25 @@ gt.instance = {
 
     getInstanceRequirements: function(i) {
         var parts = [];
-        parts.push('Lv. ' + i.min_lvl);
+        parts.push('等级 ' + i.min_lvl);
         if (i.max_lvl && i.max_lvl != i.min_lvl)
             parts.push(' - ' + i.max_lvl);
 
         if (i.min_ilvl) {
-             parts.push(', iLv. ' + i.min_ilvl);
+             parts.push(', 平均品级 ' + i.min_ilvl);
 
              if (i.max_ilvl && i.max_ilvl != i.min_ilvl)
                 parts.push(' - ' + i.max_ilvl);
         }
         else if (i.max_ilvl)
-            parts.push(', iLv. 0 - ' + i.max_ilvl);
+            parts.push(', 平均品级 0 - ' + i.max_ilvl);
         return parts.join('');
     },
 
     resolveCraftSource: function(step, id) {
         step.sourceType = 'instance';
         step.sourceView = gt.model.partial(gt.instance, id || step.item.instances[0]);
-        step.setCategory(['Instance', 'Other']);
+        step.setCategory(['副本', '其他']);
     },
 
     getPartialViewModel: function(partial) {
@@ -4261,7 +4264,7 @@ gt.search = {
             gt.search.page = 0;
 
         // Disable search controls if search is blank.
-        if (!query.filters.activeSearch && (!query.name.length || query.name.length < 3)) {
+        if (!query.filters.activeSearch && (!query.name.length || query.name.length < 1 || query.name.indexOf("'") != -1)) {
             $('#search-section').addClass('inactive');
             $('.search-list-page, .search-icons-page', '.search-page').empty();
             $('#search-previous, #search-next').removeClass('show');
@@ -4490,8 +4493,8 @@ gt.settings = {
         filtersOpen: 0,
         globalSearch: { activePage: '_none', 'filters-menu': { activePage: '_none' } },
         header: { activePage: '_none' },
-        current: 'Default',
-        lists: { Default: [] },
+        current: '默认',
+        lists: { 默认: [] },
         path: '',
         items: { },
         craftDepth: 10,
@@ -4501,7 +4504,7 @@ gt.settings = {
         notifications: 1,
         welcome: 0,
         filters: null,
-        lang: 'en',
+        lang: 'chs',
         listHeaderCollapsed: false,
         disableTouch: false,
         colorblind: 0,
@@ -4569,13 +4572,13 @@ gt.settings = {
             data = gt.settings.data;
 
         if (!data.lists)
-            data.lists = { Default: [] };
+            data.lists = { 默认: [] };
 
         if (!data.current || !data.lists[data.current]) {
             data.current = _.keys(data.lists)[0];
             if (!data.current || !data.lists[data.current]) {
-                data.current = "Default";
-                data.lists = { Default: [] };
+                data.current = "默认";
+                data.lists = { 默认: [] };
             }
         }
 
@@ -4601,7 +4604,7 @@ gt.settings = {
             data.alarmVolume = 50;
 
         if (data.alarmTone === undefined)
-            data.alarmTone = 'alarm1';
+            data.alarmTone = '铃声1';
 
         if (data.notifications === undefined)
             data.notifications = 1;
@@ -4610,7 +4613,7 @@ gt.settings = {
             data.filters = $.extend({}, gt.settings.defaultSearchFilters);
 
         if (!data.lang)
-            data.lang = 'en';
+            data.lang = 'chs';
             
         if (!data.craftCategories)
             data.craftCategories = { Vendor: 1, Other: 1 };
@@ -6118,7 +6121,7 @@ gt.list = {
     },
 
     newListClicked: function(e) {
-        gt.display.promptp("Name the new list:", null, function(name) {
+        gt.display.promptp("命名新列表:", null, function(name) {
             if (!name)
                 return;
     
@@ -6130,7 +6133,7 @@ gt.list = {
 
     deleteListClicked: function(e) {
         var listName = gt.settings.data.current;
-        if (gt.settings.data.lists[listName].length && !confirm('Are you sure you want to delete the "' + listName + '" list?'))
+        if (gt.settings.data.lists[listName].length && !confirm('你确定要删除 "' + listName + '" 吗？'))
             return;
 
         // Remove the list.
@@ -6142,8 +6145,8 @@ gt.list = {
         // Create a new default list if needed.
         var keys = _.keys(gt.settings.data.lists);
         if (keys.length == 0) {
-            gt.settings.data.lists = { Default: [] };
-            listName = 'Default';
+            gt.settings.data.lists = { 默认: [] };
+            listName = '默认';
         }
         else
             listName = keys[0];
@@ -6174,17 +6177,17 @@ gt.list = {
 
     shareClicked: function(e) {
         var listName = gt.settings.data.current;
-        if (listName == "Default" || listName == "Links") {
-            gt.display.alertp("Please rename your list to share.");
+        if (listName == "默认" || listName == "Links") {
+            gt.display.alertp("初始表格无法分享，请更名后再分享。");
             return;
         }
         
         var data = { method: 'list-share', name: listName, list: JSON.stringify(gt.list.current) };
         gt.util.api(data, function(result, error) {
             if (error)
-                gt.display.alertp("Share error: " + error);
+                gt.display.alertp("分享出错……: " + error);
             else
-                gt.display.alertp("Copy share link:<br>" + "https://garlandtools.org/db/#list/" + result.id);
+                gt.display.alertp("复制分享链接:<br>" + "https://ffxiv.cyanclay.xyz/db/#list/" + result.id);
         });
     },
 
@@ -6389,7 +6392,7 @@ gt.list = {
     }
 };
 gt.quest = {
-    pluralName: 'Quests',
+    pluralName: '任务',
     type: 'quest',
     blockTemplate: null,
     linkTemplate: null,
@@ -6439,7 +6442,7 @@ gt.quest = {
         };
 
         var genre = gt.quest.genreIndex[quest.genre];
-        view.genre = genre.name || "Adventurer Quests";
+        view.genre = genre.name || "冒险者任务";
         view.category = genre.category;
         view.section = genre.section;
         view.subheader = (view.interval ? (view.interval + ' ') : '') +  view.section;
@@ -6570,7 +6573,7 @@ gt.quest = {
         };
 
         var genre = gt.quest.genreIndex[partial.g];
-        view.genre = genre.name || "Adventurer Quests";
+        view.genre = genre.name || "冒险者任务";
         view.category = genre.category;
         view.section = genre.section;
         view.byline = view.location;
@@ -6602,13 +6605,13 @@ gt.quest = {
     }
 };
 gt.achievement = {
-    pluralName: 'Achievements',
+    pluralName: '成就',
     type: 'achievement',
     blockTemplate: null,
     index: {},
     partialIndex: {},
     categoryIndex: null,
-    missingCategory: { kind: 'Unknown', name: 'Unknown' },
+    missingCategory: { kind: '未知', name: '未知' },
     version: 2,
     browse: [
         { type: 'group', func: function(a) { return a.category.kind; } },
@@ -6645,7 +6648,7 @@ gt.achievement = {
         if (achievement.item)
             view.item = gt.model.partial(gt.item, achievement.item);
 
-        view.subheader = view.category.kind + ': ' + view.category.name + ' Achievement';
+        view.subheader = view.category.kind + ': ' + view.category.name + ' 成就';
 
         // Rewards summary.
         var rewards = [];
@@ -6680,7 +6683,7 @@ gt.action = {
     partialIndex: {},
     categoryIndex: {},
     blockTemplate: null,
-    pluralName: 'Actions',
+    pluralName: '技能',
     type: 'action',
     version: 2,
     browse: [
@@ -6718,14 +6721,14 @@ gt.action = {
             obj: action,
             
             desc: action.description || "",
-            affinity: affinity ? affinity.name : "Other",
-            category: category ? category.name : "Uncategorized",
+            affinity: affinity ? affinity.name : "其他",
+            category: category ? category.name : "未分类",
             lvl: action.lvl,
             cost: action.cost,
             pet: action.pet
         };
 
-        var job = gt.jobs[action.job] || { name: view.category, category: "Other" };
+        var job = gt.jobs[action.job] || { name: view.category, category: "其他" };
 
         view.job = job.name;
         view.jobCategory = job.category;
@@ -6733,7 +6736,7 @@ gt.action = {
         view.byline = view.job + ' ' + view.category;
         if (view.lvl)
             view.byline = 'Lv. ' + action.lvl + ' ' + view.byline;
-        view.subheader = view.job + (action.lvl ? (' Lv. ' + action.lvl) : '') + ' Action';
+        view.subheader = view.job + (action.lvl ? (' Lv. ' + action.lvl) : '') + ' 技能';
 
         if (!data)
             return view;
@@ -6745,34 +6748,34 @@ gt.action = {
         // Non-trait values
         if (view.category != 'Trait') {
             if (action.range == -1)
-                view.range = 'Melee';
+                view.range = '0米';
             else if (action.range !== undefined)
-                view.range = action.range + 'y';
+                view.range = action.range + '米';
 
             view.cast = {
-                name: 'Cast',
+                name: '咏唱时间',
                 prime: true,
-                value: action.cast ? (action.cast / 1000) + 's' : 'Instant'
+                value: action.cast ? (action.cast / 1000) + '秒' : '即时'
             };
 
             view.recast = {
-                name: 'Recast',
+                name: '复唱时间',
                 prime: true,
-                value: action.recast ? (action.recast / 1000) + 's' : 'Instant'
+                value: action.recast ? (action.recast / 1000) + '秒' : '即时'
             };
         }
 
         if (action.resource) {
             view.cost = {
                 prime: true,
-                name: action.resource + ' Cost',
+                name: action.resource + ' 消耗',
                 value: action.cost
             };
 
             if (action.resource == 'Status') {
                 var status = gt.action.getStatusViewModel(action.cost);
                 view.cost.status = '../files/icons/status/' + status.icon + '.png';
-                view.cost.name = 'Status';
+                view.cost.name = '状态中';
             }
         }
 
@@ -6798,8 +6801,8 @@ gt.action = {
             view.traits = gt.model.partialList(gt.action, traits);
 
         // Cooldown
-        if (view.category == 'Weaponskill' || view.category == 'Ability' || view.category == 'Spell')
-            view.gcd = action.gcd ? 'GCD' : 'Off GCD';
+        if (view.category == '战技' || view.category == '能力' || view.category == '魔法')
+            view.gcd = action.gcd ? '占用GCD' : '不占用GCD';
 
         return view;
     },
@@ -6816,15 +6819,15 @@ gt.action = {
             name: gt.model.name(partial) || "",
             icon: '../files/icons/action/' + partial.c + '.png',
             lvl: partial.l,
-            category: category ? category.name : "Uncategorized"
+            category: category ? category.name : "未分类"
         };
 
-        var job = gt.jobs[partial.j] || { name: view.category, category: "Other" };
+        var job = gt.jobs[partial.j] || { name: view.category, category: "其他" };
         view.job = job.name;
         view.jobCategory = job.category;
 
         if (job.name == view.category)
-            view.byline = "Other " + view.category;
+            view.byline = "其他 " + view.category;
         else
             view.byline = job.name + ' ' + view.category;
 
@@ -6847,9 +6850,9 @@ gt.action = {
 gt.status = {
     index: {},
     partialIndex: {},
-    categoryIndex: { 1: 'Beneficial', 2: 'Detrimental' },
+    categoryIndex: { 1: '增益效果', 2: '减益效果' },
     blockTemplate: null,
-    pluralName: 'Status Effects',
+    pluralName: '状态与Buff',
     type: 'Status',
     version: 2,
     browse: [
@@ -6885,7 +6888,7 @@ gt.status = {
             obj: status,
             
             desc: status.description || "",
-            category: category ? category : "Uncategorized",
+            category: category ? category : "未分类",
             canDispel: status.canDispel
         };
 
@@ -6905,7 +6908,7 @@ gt.status = {
             type: 'status',
             name: gt.model.name(partial) || "",
             icon: '../files/icons/status/' + partial.c + '.png',
-            category: category ? category : "Uncategorized"
+            category: category ? category : "未分类"
         };
 
         view.byline = view.category;
@@ -6914,7 +6917,7 @@ gt.status = {
     },
 };
 gt.fate = {
-    pluralName: 'Fates',
+    pluralName: 'Fate',
     type: 'fate',
     blockTemplate: null,
     index: {},
@@ -6970,7 +6973,7 @@ gt.fate = {
         }
 
         var levelRange = fate.lvl == fate.maxlvl ? fate.lvl : (fate.lvl + "-" + fate.maxlvl);
-        view.subheader = "Level " + levelRange + " " + fate.type + " FATE";
+        view.subheader = "等级 " + levelRange + " " + fate.type + " FATE";
 
         if (data && fate.items)
             view.items = gt.model.partialList(gt.item, fate.items);
@@ -6981,7 +6984,7 @@ gt.fate = {
     resolveCraftSource: function(step, id) {
         step.sourceType = 'fate';
         step.sourceView = gt.model.partial(gt.fate, id || step.item.fates[0]);
-        step.setCategory(['FATE', 'Other']);
+        step.setCategory(['FATE', '其他']);
     },
 
     getPartialViewModel: function(partial) {
@@ -7001,7 +7004,7 @@ gt.fate = {
     }
 };
 gt.leve = {
-    pluralName: 'Leves',
+    pluralName: '理符',
     type: 'leve',
     index: {},
     partialIndex: {},
@@ -7061,7 +7064,7 @@ gt.leve = {
 
         view.location = gt.location.index[leve.areaid].name;
         view.byline = 'Lv. ' + leve.lvl + ', ' + view.location;
-        view.subheader = "Level " + leve.lvl + " " + view.jobCategory + " Leve";
+        view.subheader = "等级 " + leve.lvl + " " + view.jobCategory + " 理符任务";
 
         if (leve.gc)
             view.gcIcon = 'images/' + gt.grandCompanies[leve.gc] + '.png';
@@ -7102,7 +7105,7 @@ gt.leve = {
                 view.xpPerComplexityHq = Math.round(2 * leve.xp / view.complexity.hq);
             }
 
-            var isDoH = _.find(gt.jobs, function(j) { return j.abbreviation == view.jobCategory && j.category == 'Disciple of the Hand' });
+            var isDoH = _.find(gt.jobs, function(j) { return j.abbreviation == view.jobCategory && j.category == '能工巧匠' });
             if (isDoH)
                 view.doh = true;
         }
@@ -7133,7 +7136,7 @@ gt.leve = {
     newGroupClicked: function(e) {
         var $block = $(this).closest('.block');
         var view = $block.data('view');
-        gt.group.setup('Leve Calculator', $block, function(groupData) {
+        gt.group.setup('理符计算器', $block, function(groupData) {
             var leveData = { type: 'leve', id: view.id };
             groupData.activePage = 'contents-page';
             groupData.headers = groupData.headers || { };
@@ -7145,7 +7148,7 @@ gt.leve = {
     resolveCraftSource: function(step, id) {
         step.sourceType = 'leve';
         step.sourceView = { id: id, type: 'leve', name: 'Leve', sourceName: 'Leve', icon: 'images/Leve.png' };
-        step.setCategory(['Leve', 'Other']);
+        step.setCategory(['理符', '其他']);
     },
 };
 gt.venture = {
@@ -7214,7 +7217,7 @@ gt.venture = {
     resolveCraftSourceCore: function(step, venture) {
         step.sourceType = 'venture';
         step.sourceView = gt.venture.getViewModel(venture);
-        step.setCategory(['Venture', 'Other']);
+        step.setCategory(['雇员探险', '其他']);
     }
 };
 gt.equip = {
@@ -7257,11 +7260,11 @@ gt.equip = {
             return {
                 id: 'leveling',
                 type: 'equip',
-                name: 'Leveling Equipment',
+                name: '练级用装备',
                 template: gt.equip.menuTemplate,
                 blockClass: 'early tool noexpand',
                 icon: 'images/Leveling.png',
-                subheader: 'Recommendation Tool',
+                subheader: '建议',
                 tool: 1,
                 settings: 1
             };
@@ -7269,11 +7272,11 @@ gt.equip = {
             return {
                 id: 'end',
                 type: 'equip',
-                name: 'End Game Equipment',
+                name: '毕业装备',
                 template: gt.equip.menuTemplate,
                 blockClass: 'end tool noexpand',
                 icon: 'images/Mentor.png',
-                subheader: 'Progression Tool',
+                subheader: '游戏进展',
                 tool: 1,
                 settings: 1
             };
@@ -7301,11 +7304,11 @@ gt.equip = {
         var view = {
             id: data.id,
             type: 'equip',
-            name: 'Leveling ' + job.name,
+            name: '练级装 ' + job.name,
             template: gt.equip.levelingTemplate,
             blockClass: 'early tool noexpand',
             icon: '../files/icons/job/' + job.abbreviation + '.png',
-            subheader: 'Recommendation Tool',
+            subheader: '建议',
             tool: 1,
             settings: 1,
 
@@ -7386,11 +7389,11 @@ gt.equip = {
         var view = {
             id: data.id,
             type: 'equip',
-            name: 'End Game ' + job.name,
+            name: '毕业装 ' + job.name,
             template: gt.equip.endTemplate,
             blockClass: 'end tool noexpand',
             icon: '../files/icons/job/' + job.abbreviation + '.png',
-            subheader: 'Progression Tool',
+            subheader: '游戏进展',
             tool: 1,
             settings: 1,
 
@@ -7471,7 +7474,7 @@ gt.equip = {
     },
 
     createCraftingList: function(items, $block) {
-        gt.group.setup('Crafting List', $block, function(groupData) {
+        gt.group.setup('获取列表', $block, function(groupData) {
             for (var i = 0; i < items.length; i++) {
                 var itemData = items[i];
                 if (gt.item.partialIndex[itemData.id].t == 43) // Ring
@@ -7504,14 +7507,14 @@ gt.equip = {
     weatherIndex: null,
     weatherRateIndex: null,
     regions: [
-        { icon: "images/Region La Noscea.png", name: "La Noscea", page: "LaNoscea", zones: [27, 30, 31, 32, 33, 34, 350, 358, 425] },
-        { icon: "images/Region Black Shroud.png", name: "The Black Shroud", page: "TheBlackShroud", zones: [39, 54, 55, 56, 57, 426] },
-        { icon: "images/Region Thanalan.png", name: "Thanalan", page: "Thanalan", zones: [51, 42, 43, 44, 45, 46, 427] },
-        { icon: "images/Region Ishgard.png", name: "Ishgard and Surrounds", page: "Ishgard", zones: [62, 63, 2200, 2100, 2101, 2082, 2000, 2001, 2002, 1647] },
-        { icon: "images/Region Gyr Abania.png", name: "Gyr Abania", page: "GyrAbania", zones: [2403, 2406, 2407, 2408] },
-        { icon: "images/Region Kugane.png", name: "Far East", page: "FarEast", zones: [513, 2412, 2409, 2410, 2411] },
-        { icon: "images/Region Norvrandt.png", name: "Norvrandt", page: "Norvrandt", zones: [516, 517, 2953, 2954, 2955, 2956, 2957, 2958], },
-        { icon: "images/Aetheryte.png", name: "Others", page: "Others", zones: [67, 2414, 2462, 2530, 2545, 3534] }
+        { icon: "images/Region La Noscea.png", name: "拉诺西亚", page: "LaNoscea", zones: [27, 30, 31, 32, 33, 34, 350, 358, 425] },
+        { icon: "images/Region Black Shroud.png", name: "黑衣森林", page: "TheBlackShroud", zones: [39, 54, 55, 56, 57, 426] },
+        { icon: "images/Region Thanalan.png", name: "萨纳兰", page: "Thanalan", zones: [51, 42, 43, 44, 45, 46, 427] },
+        { icon: "images/Region Ishgard.png", name: "伊修加德及其周边地区", page: "Ishgard", zones: [62, 63, 2200, 2100, 2101, 2082, 2000, 2001, 2002, 1647] },
+        { icon: "images/Region Gyr Abania.png", name: "基拉巴尼亚", page: "GyrAbania", zones: [2403, 2406, 2407, 2408] },
+        { icon: "images/Region Kugane.png", name: "远东之国", page: "FarEast", zones: [513, 2412, 2409, 2410, 2411] },
+        { icon: "images/Region Norvrandt.png", name: "诺弗兰特", page: "Norvrandt", zones: [516, 517, 2953, 2954, 2955, 2956, 2957, 2958], },
+        { icon: "images/Aetheryte.png", name: "其他", page: "Others", zones: [67, 2414, 2462, 2530, 2545, 3534] }
     ],
     weatherUpdateKey: null,
     lWeatherStart: null,
@@ -7533,11 +7536,11 @@ gt.equip = {
         var view = {
             id: id,
             type: 'skywatcher',
-            name: 'Skywatcher',
+            name: '风见鸡',
             template: gt.skywatcher.blockTemplate,
             blockClass: 'tool noexpand',
             icon: 'images/Skywatcher.png',
-            subheader: 'Weather Forecast Tool',
+            subheader: '天气预报',
             tool: 1,
             settings: 1,
 
@@ -8414,7 +8417,7 @@ gt.craft.set.prototype.export = function() {
     });
 
 
-    return "Item,Amount,Type,Source\r\n" + lines.join("\r\n");
+    return "物品,数量,类型,来源\r\n" + lines.join("\r\n");
 };
 
 gt.craft.set.prototype.print = function() {
@@ -8424,11 +8427,11 @@ gt.craft.set.prototype.print = function() {
 
     var gatherSteps = _.filter(this.steps, function(s) { return s.type == 'gathered'; });
     if (gatherSteps.length)
-        parts.push('Gather: ' + _.map(gatherSteps, print).join(', '));
+        parts.push('采集: ' + _.map(gatherSteps, print).join(', '));
 
     var craftSteps = _.filter(this.steps, function(s) { return s.type == 'craft'; });
     if (craftSteps.length)
-        parts.push('Craft: ' + _.map(craftSteps, print).join(', '));
+        parts.push('制作: ' + _.map(craftSteps, print).join(', '));
 
     var crystalSteps = _.filter(this.steps, function(s) { return s.type == 'crystal'; });
     if (crystalSteps.length)
@@ -8585,11 +8588,11 @@ gt.craft.step.prototype.discoverSource = function(itemSettings) {
 
     if (this.item.reducedFrom) {
         const partialList = gt.model.partialList(gt.item, this.item.reducedFrom);
-        var reduceItem = partialList && partialList[0] || { name: '???' };
+        const reduceItem = partialList && partialList[0] || { name: '???' };
         this.sourceType = 'reduction';
-        this.source = { sourceName: reduceItem.name, longSourceName: reduceItem.name + ' Aetherial Reduction', icon: 'images/Reduce.png' };
+        this.source = { sourceName: reduceItem.name, longSourceName: reduceItem.name + ' 精选', icon: 'images/Reduce.png' };
         this.sourceView = this.source;
-        this.setCategory(['Desynthesis / Reduction', 'Gather']);
+        this.setCategory(['分解/精选', '采集']);
         return;
     }
 
@@ -8617,22 +8620,22 @@ gt.craft.step.prototype.discoverSource = function(itemSettings) {
         this.source = { sourceName: this.item.voyages[0], icon: 'images/Voyage.png' };
         this.source.longSourceName = this.source.sourceName;
         this.sourceView = this.source;
-        this.setCategory(['Voyage', 'Other']);
+        this.setCategory(['部队探险', '其他']);
         return;
     }
 
     if (this.item.desynthedFrom) {
         this.sourceType = 'desynthesis';
-        this.source = { sourceName: 'Desynthesis', longSourceName: 'Desynthesis', icon: 'images/Desynth.png' };
+        this.source = { sourceName: '分解', longSourceName: '分解', icon: 'images/Desynth.png' };
         this.sourceView = this.source;
-        this.setCategory(['Desynthesis / Reduction', 'Other']);
+        this.setCategory(['分解/精选', '其他']);
         return;
     }
 
     if (this.item.treasure) {
         this.sourceType = 'map';
         this.sourceView = gt.model.partial(gt.item, this.item.treasure[0]);
-        this.setCategory(['Treasure Map', 'Other']);
+        this.setCategory(['藏宝图', '其他']);
         return;
     }
 
@@ -8648,7 +8651,7 @@ gt.craft.step.prototype.discoverSource = function(itemSettings) {
     }
 
     //console.log('No source found for item', this.item);
-    this.setCategory(['Unknown']);
+    this.setCategory(['未知']);
 };
 
 gt.craft.step.prototype.setTradeSource = function(traderId) {
@@ -8674,7 +8677,7 @@ gt.craft.step.prototype.setTradeSource = function(traderId) {
     this.sourceView = view;
     this.sourceType = 'trade';
     this.price = { currency: currencyId, cost: view.amount, totalCost: view.amount, yield: trade.item[0].amount };
-    this.setCategory(['Currency Vendor', 'Vendor']);
+    this.setCategory(['货币商人', '商人']);
 
     return view;
 };
@@ -8686,7 +8689,7 @@ gt.craft.step.prototype.setCraftSource = function(itemSettings) {
     if (!this.craft)
         this.craft = this.item.craft[0];
 
-    this.setCategory(['Craft']);
+    this.setCategory(['制作']);
 };
 
 gt.craft.step.prototype.setMarketSource = function(itemSettings) {
@@ -8702,7 +8705,7 @@ gt.craft.step.prototype.setMarketSource = function(itemSettings) {
     this.sourceView = view;
     this.sourceType = 'market';
     this.price = { currency: 1, cost: view.amount, totalCost: view.amount, yield: 1 };
-    this.setCategory(['Marketboard']);
+    this.setCategory(['市场交易板']);
 
     return view;
 };
@@ -8710,14 +8713,14 @@ gt.craft.step.prototype.setMarketSource = function(itemSettings) {
 gt.craft.step.prototype.setCategory = function(categories) {
     // Handle special goal items.
     if (this.isGoal) {
-        this.category = 'Goal';
+        this.category = '目标';
         this.type = 'goal';
         return;
     }
 
     // Handle special craft items.
     if (this.craft) {
-        this.category = 'Craft';
+        this.category = '制作';
         this.type = 'craft';
         return;
     }
@@ -8733,7 +8736,7 @@ gt.craft.step.prototype.setCategory = function(categories) {
     }
 
     // No category found, fallback to standard Gather.
-    this.category = 'Gather';
+    this.category = '采集';
     this.type = 'gathered';
 };
 
@@ -8839,11 +8842,11 @@ gt.group = {
     },
 
     newGroupClicked: function(e) {
-        var name = "Group";
+        var name = "组";
         var counter = 2;
 
         while (gt.list.getBlockData('group', name))
-            name = "Group " + counter++;
+            name = "组 " + counter++;
 
         var group = { type: 'group', id: name, blocks: [] };
         gt.list.addBlock(group);
@@ -8973,7 +8976,7 @@ gt.group = {
             template: gt.group.blockTemplate,
             blockClass: 'tool noexpand',
             icon: 'images/Atomos.png',
-            subheader: 'Group Tool',
+            subheader: '工具组',
             tool: 1,
             settings: 1,
 
@@ -9587,8 +9590,8 @@ gt.map = {
     },
 
     sanitizeLocationName: function(name) {
-        if (name.indexOf('The Diadem') == 0)
-            return 'The Diadem';
+        if (name.indexOf('云冠群岛') == 0)
+            return '云冠群岛';
         else
             return name;
     },
@@ -9727,7 +9730,7 @@ gt.note = {
     },
 
     newNoteClicked: function(e) {
-        var name = "Note";
+        var name = "笔记";
         var counter = 2;
 
         while (gt.list.getBlockData('note', name))
@@ -9779,7 +9782,7 @@ gt.note = {
             template: gt.note.blockTemplate,
             blockClass: 'tool expand-right',
             icon: 'images/Note.png',
-            subheader: 'Note Tool',
+            subheader: '笔记',
             tool: 1,
 
             text: data.notes || ''

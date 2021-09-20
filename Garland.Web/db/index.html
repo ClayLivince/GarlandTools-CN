@@ -48,7 +48,7 @@
 
     <script id="materia-select-template" type="text/x-dot-template">
         <div class="materia-select">
-            <h2>Materia Melding</h2>
+            <h2>魔晶石镶嵌</h2>
 
             <div class="filters">
                 <img src="../files/icons/item/20263.png" data-category="category0" class="category0" title="DoWoM Materia">
@@ -58,7 +58,7 @@
 
             <div class="materia line notmelded hover-highlight pointer row" data-id="0">
                 <img class="icon small" src="images/BlankItem.png">
-                <span class="highlight text">Not melded</span>
+                <span class="highlight text">未镶嵌</span>
             </div>
 
             <div class="materia-attribute-groups">
@@ -96,7 +96,7 @@
                             <div class="{{?meld.reduced !== undefined}}highlight-red{{?}}">{{=meld.item.materia.attr}} {{=meld.info}}</div>
                         </div>
                     {{??}}
-                        <span class="meld-info highlight">Not melded</span>
+                        <span class="meld-info highlight">未镶嵌</span>
                     {{?}}
             </div>
         {{ } }}
@@ -248,7 +248,7 @@
                 {{?!it.tool}}
                     {{?it.patch}}
                         {{?it.patchCategory}}<span class="right">{{=it.patchCategory}}</span>{{?}}
-                        <div>Patch {{=it.patch}}</div>
+                        <div>版本 {{=it.patch}}</div>
                     {{?}}
 
                     <div>{{=it.name}} <span class="right">{{=it.type}}#{{=it.id}}</span></div>
@@ -260,7 +260,7 @@
                     <hr>
                 {{?}}
 
-                <span class="action-link unlock-height-link">Toggle block height lock</span>.
+                <span class="action-link unlock-height-link">开关方格高度锁</span>.
             </div>
 
             {{=it.template(it)}}
@@ -280,7 +280,7 @@
                     <h3>{{=pair[0]}}</h3>
                     <div class="subsection">
                         {{~ pair[1] :job:ji}}
-                            {{?it.id == 'leveling' || job.isJob || job.category == "Disciple of the Land"}}
+                            {{?it.id == 'leveling' || job.isJob || job.category == "大地使者"}}
                                 <img src="../files/icons/job/{{=job.abbreviation}}.png" data-id="{{=it.id}}-{{=job.abbreviation}}" data-type="equip" class="icon medium block-link hover-highlight pointer">
                             {{?}}
                         {{~}}
@@ -365,7 +365,7 @@
             <div class="timing subsection">
                 <div class="weather-change">
                     <div class="progress-container"><div class="progress" style="width: {{=it.initialProgressPercent}}%"></div></div>
-                    <span class="change-info">Weather changes at {{=it.initialChangeTime}}</span>
+                    <span class="change-info">天气将会在 {{=it.initialChangeTime}} 改变</span>
                     <span class="time-remaining">{{=it.initialTimeRemaining}}</span>
                 </div>
 
@@ -511,15 +511,16 @@
         <div class="midline">
             <div class="menu tab">
                 <div data-page="contents-page" class="button">Contents{{?it.contents.length}} ({{=it.contents.length}})&#x200E;{{?}}</div>
-                {{?it.shops || it.craftShops || it.materiaShops}}<div data-page="shops-page" class="button">Shops</div>{{?}}
-                {{?it.craftSet}}<div data-page="crafting-page" class="button">Crafting</div>{{?}}
+                {{?it.shops || it.craftShops || it.materiaShops}}<div data-page="shops-page" class="button">商店</div>{{?}}
+                {{?it.craftSet}}<div data-page="crafting-page" class="button">来源</div>{{?}}
             </div>
         </div>
 
         <div class="content main has-pages">
             <div class="header">
                 <img src="images/Atomos.png" class="atomos pointer" title="Atomos inserts every block you open into the group.  Useful for quickly generating crafting lists or equipment sets.">
-                <span class="atomos-message">Atomos is drawing in new blocks!</span>
+                <span class="atomos-message">阿托莫斯正在吸收新添加的方格！
+                </span>
 
                 {{?it.contents.length}}
                     <div class="contents-icons line {{?it.contents.length >= 20}}big{{?}}">
@@ -541,7 +542,7 @@
             <div class="contents-page page bonuses">
                 {{?it.aggregateStats}}
                     <div class="aggregate-stats collapsible collapsed" data-headername="stats-total">
-                        <h3 class="pointer">Equipment Totals</h3>
+                        <h3 class="pointer">装备总评</h3>
 
                         {{?it.averageilvl}}
                             <div class="ilvl left collapse-toggle"><img src="images/ilvl.png"><span class="text">{{=it.averageilvl}}</span></div>
@@ -578,10 +579,10 @@
 
                 {{?it.aggregateLeves}}
                     <div class="aggregate-leves collapsible" data-headername="leves-total">
-                        <h3 class="pointer">Leve Calculator</h3>
+                        <h3 class="pointer">理符计算器</h3>
 
                         <div>
-                            Current Level <input type="number" class="current-level" min="0" max="{{=gt.xp.length-1}}" value="{{=it.currentLevel}}">
+                            当前等级 <input type="number" class="current-level" min="0" max="{{=gt.xp.length-1}}" value="{{=it.currentLevel}}">
                             XP <input type="number" value="{{=it.currentXp}}" class="current-xp" min="0">
                             <hr>
                         </div>
@@ -613,7 +614,7 @@
                                 </div>
 
                                 <div class="attribute">
-                                    <span class="name"># Required</span>
+                                    <span class="name"># 需要</span>
                                     <span class="value">{{=it.aggregateLeves.nqLevesToStep}}{{?it.aggregateLeves.hqLevesToStep}} / {{=it.aggregateLeves.hqLevesToStep}}{{?}}</span>
                                     <hr>
                                 </div>
@@ -668,7 +669,7 @@
                         </div>
                     {{~}}
                 {{??}}
-                    You can drag things in here.
+                    你可以将块拖入这里
                 {{?}}
             </div> <!-- Stats Page End -->
 
@@ -676,21 +677,21 @@
                 <div class="shops-page page">
                     {{?it.shops}}
                         <div class="contents-shops subsection collapsible" data-headername="contents-shops">
-                            <h3 class="pointer">Shops</h3>
+                            <h3 class="pointer">商店</h3>
                             {{=gt.group.shopTemplate(it.shops)}}
                         </div>
                     {{?}}
 
                     {{?it.materiaShops}}
                         <div class="materia-shops subsection collapsible data-headername="materia-shops">
-                            <h3 class="pointer">Materia Shops</h3>
+                            <h3 class="pointer">魔晶石商人</h3>
                             {{=gt.group.shopTemplate(it.materiaShops)}}
                         </div>
                     {{?}}
 
                     {{?it.craftShops}}
                         <div class="craft-shops subsection collapsible" data-headername="craft-shops">
-                            <h3 class="pointer">Crafting Ingredient Shops</h3>
+                            <h3 class="pointer">素材商人</h3>
                             {{=gt.group.shopTemplate(it.craftShops)}}
                         </div>
                     {{?}}
@@ -727,12 +728,12 @@
     <script id="block-item-template" type="text/x-dot-template">
         <div class="midline">
             <div class="menu tab">
-                <div data-page="stats-page" class="button">Stats</div>
+                <div data-page="stats-page" class="button">数据</div>
                 {{?it.hasSourcesUses}}
-                    <div data-page="sources-uses-page" class="button">Sources &amp; Uses</div>
+                    <div data-page="sources-uses-page" class="button">来源 &amp; 用途</div>
                 {{?}}
                 {{?it.craft}}
-                    <div data-page="crafting-page" class="button">Crafting</div>
+                    <div data-page="crafting-page" class="button">制作</div>
                 {{?}}
                 {{?it.models}}
                     <div data-page="models-page" class="button">3D</div>
@@ -800,25 +801,25 @@
                     {{?}}
 
                     <div class="circle-line">
-                        {{?it.untradeable}}<span class="inline-block"><span class="circle"></span>Untradeable</span>{{?}}
-                        {{?it.unique}}<span class="inline-block"><span class="circle"></span>Unique</span>{{?}}
-                        {{?it.unlistable && !it.untradeable}}<span class="inline-block"><span class="circle"></span>Market Prohibited</span>{{?}}
+                        {{?it.untradeable}}<span class="inline-block"><span class="circle"></span>独占</span>{{?}}
+                        {{?it.unique}}<span class="inline-block"><span class="circle"></span>稀有</span>{{?}}
+                        {{?it.unlistable && !it.untradeable}}<span class="inline-block"><span class="circle"></span>无法在市场上交易</span>{{?}}
                         {{?it.craft}}
-                            {{?!it.craft.hq}}<span class="inline-block"><span class="circle"></span>HQ Uncraftable</span>{{?}}
-                            {{?!it.craft.quickSynth}}<span class="inline-block"><span class="circle"></span>No Quick Synth</span>{{?}}
+                            {{?!it.craft.hq}}<span class="inline-block"><span class="circle"></span>不可制作成HQ</span>{{?}}
+                            {{?!it.craft.quickSynth}}<span class="inline-block"><span class="circle"></span>不可分解</span>{{?}}
                         {{?}}
-                        {{?!it.sell_price}}<span class="inline-block"><span class="circle"></span>Unsellable</span>{{?}}
+                        {{?!it.sell_price}}<span class="inline-block"><span class="circle"></span>不可出售</span>{{?}}
                         {{?it.materia}}
-                            <span class="inline-block"><span class="circle"></span>Tier {{=it.materia.tier}}</span>
+                            <span class="inline-block"><span class="circle"></span> {{=it.materia.tier}} 型</span>
                             <span class="inline-block"><span class="circle"></span>{{=it.materia.attr}} +{{=it.materia.value}}</span>
                         {{?}}
-                        {{?it.advancedMeldingForbidden}}<span class="inline-block"><span class="circle"></span>Advanced Melding Forbidden</span>{{?}}
-                        {{?it.tripletriad && it.tripletriad.sellMgp}}<span class="inline-block"><span class="circle"></span>Sells for {{=it.tripletriad.sellMgp}} MGP</span>{{?}}
+                        {{?it.advancedMeldingForbidden}}<span class="inline-block"><span class="circle"></span>不可禁忌镶嵌</span>{{?}}
+                        {{?it.tripletriad && it.tripletriad.sellMgp}}<span class="inline-block"><span class="circle"></span>出售价格 {{=it.tripletriad.sellMgp}} 金币</span>{{?}}
                     </div>
 
                     {{?it.craftSource}}
                         <div class="craft-source subsection">
-                            <h3>Craft Source</h3>
+                            <h3>来源</h3>
                             <div class="line {{?it.craftSourceType}}block-link hover-highlight pointer{{?}}" data-id="{{=it.craftSource.id}}" data-type="{{=it.craftSource.type}}">
                                 <span class="{{?it.craftSource.limited}}specialist{{?}}">
                                     <span {{?it.craftSourceType}}class="highlight"{{?}}>
@@ -859,9 +860,9 @@
                     </table>
                 
                     <div class="verminion-info bonuses subsection">
-                        <div class="bonus"><span class="name">Cost</span>{{=it.obj.cost}}</div>
-                        <div class="bonus"><span class="name">Auto-attack</span>{{?it.obj.aoe}}AoE{{??}}Single-target{{?}}</div>
-                        <div class="bonus"><span class="name">Strengths</span>{{=it.strengths || "None"}}</div>
+                        <div class="bonus"><span class="name">萌宠之王费用</span>{{=it.obj.cost}}</div>
+                        <div class="bonus"><span class="name">自动攻击类型</span>{{?it.obj.aoe}}AoE{{??}}单目标{{?}}</div>
+                        <div class="bonus"><span class="name">力量</span>{{=it.strengths || "None"}}</div>
                     </div>
 
                     {{?it.minionSkillType}}
@@ -900,7 +901,7 @@
                         <span class="tripletriad-left value">{{=it.tripletriad.left}}</span>
                     </div>
 
-                    <div class="block-description">{{=it.tripletriad.en.description}}</div>
+                    <div class="block-description">{{=it.tripletriad.chs.description}}</div>
 
                     <div class="clear"></div>
                 {{??it.fish}}
@@ -913,7 +914,7 @@
 
                     {{?it.fish.guide}}
                         <div class="fish-guide subsection collapsible" data-headername="fish-guide">
-                            <h3 class="pointer">Fish Guide</h3>
+                            <h3 class="pointer">鱼类指南</h3>
 
                             <div class="collapse-toggle block-description"><img src="{{=it.fish.icon}}" class="icon right">{{=it.fish.guide}}</div>
                         </div>
@@ -921,12 +922,12 @@
 
                     {{?it.fish.spots}}
                         <div class="catching subsection collapsible" data-headername="catching">
-                            <h3 class="pointer">Catching<a href="http://en.ff14angler.com/?search={{=encodeURIComponent(it.name)}}" target="_blank" class="right">ff14angler</a></h3>
+                            <h3 class="pointer">捕捞信息<a href="http://en.ff14angler.com/?search={{=encodeURIComponent(it.name)}}" target="_blank" class="right">ff14angler</a></h3>
 
                             {{?it.fish.gatheringReq}}
                                 <div class="line collapse-toggle">
-                                    <span class="name">Requires</span>
-                                    {{=it.fish.gatheringReq}} Gathering
+                                    <span class="name">需要</span>
+                                    {{=it.fish.gatheringReq}} 获得力
                                 </div>
                             {{?}}
 
@@ -955,21 +956,21 @@
                             {{?it.fish.fishEyes}}
                                 <div class="line half collapse-toggle">
                                     <img class="icon small" src="../files/icons/action/1112.png">
-                                    <span class="text">Fish Eyes</span>
+                                    <span class="text">需要鱼眼</span>
                                 </div>
                             {{?}}
 
                             {{?it.fish.snagging}}
                                 <div class="line half collapse-toggle">
                                     <img class="icon mini" src="../files/icons/action/1109.png">
-                                    <span class="text">Snagging</span>
+                                    <span class="text">需要钓组</span>
                                 </div>
                             {{?}}
 
                             {{?it.fish.hookset}}
                                 <div class="line half collapse-toggle">
-                                    <img class="icon small" src="../files/icons/action/{{=it.fish.hooksetIcon}}.png">
-                                    <span class="text">{{=it.fish.hookset}}</span>
+                                    <img class="icon small" src="../files/icons/action/{{=it.fish.hooksetIcon}}.png"> 
+                                    <span class="text">{{=it.fish.hookset.replace("Hookset", "").trim()}}</span>
                                 </div>
                             {{?}}
 
@@ -991,7 +992,7 @@
                                         <div class="line block-link hover-highlight pointer collapse-toggle" data-id="{{=bait.id}}" data-type="item">
                                             <img class="icon small" src="{{=bait.icon}}">
                                             <span class="highlight text">{{=bait.name}}</span>
-                                            <span class="text right">{{?bindex == 0}}Bait{{??}}Mooch{{?}}</span>
+                                            <span class="text right">{{?bindex == 0}}鱼饵{{??}}以小钓大{{?}}</span>
                                         </div>
                                     {{~}}
                                 {{??group.gig}}
@@ -999,11 +1000,11 @@
                                         <div class="line collapse-toggle">
                                             <img class="icon small" src="images/{{=gig}}.png">
                                             <span class="text">{{=gig}}</span>
-                                            <span class="text right">Gig</span>
+                                            <span class="text right">鱼叉尖</span>
                                         </div>
                                     {{~}}
                                 {{??}}
-                                    <div class="line collapse-toggle">No bait information is available.</div>
+                                    <div class="line collapse-toggle">没查到鱼饵...</div>
                                 {{?}}
 
                                 <hr class="collapse-toggle">
@@ -1020,7 +1021,7 @@
                 {{??}}
                     {{?it.bonuses || it.special}}
                         <div class="bonuses subsection">
-                            <h3>Bonuses{{?it.hasBonusMeter}}<span class="bonus-help deemphasize"><span class="value">nq</span> <span class="value">{{?it.obj.attr_hq}}hq{{?}}</span> <span class="value text-right">meld</span> <span class="value">/ max</span></span>{{?}}</h3>
+                            <h3>属性{{?it.hasBonusMeter}}<span class="bonus-help deemphasize"><span class="value">nq</span> <span class="value">{{?it.obj.attr_hq}}hq{{?}}</span> <span class="value text-right">已镶嵌</span> <span class="value">/ 最大</span></span>{{?}}</h3>
 
                             {{?it.bonuses}}
                                 {{~it.bonuses :b:index}}{{=gt.item.attributeValueTemplate(b)}}{{~}}
@@ -1044,7 +1045,7 @@
 
                 {{?it.actions}}
                     <div class="attributes actions subsection">
-                        <h3>Actions</h3>
+                        <h3>使用 </h3>
 
                         {{~it.actions :b:index}}
                             {{=gt.item.attributeValueTemplate(b)}}
@@ -1054,7 +1055,7 @@
 
                 {{?it.sockets}}
                     <div class="materia subsection collapsible {{?!it.melds.length}}collapsed{{?}}" data-headername="materia">
-                        <h3 class="pointer">Materia ({{=it.sockets}} slots) <span class="right">{{=it.repair_job}} Lv. {{=it.meld_lvl}}</span></h3>
+                        <h3 class="pointer">魔晶石 (共 {{=it.sockets}} 孔) <span class="right">{{=it.repair_job}} Lv. {{=it.meld_lvl}}</span></h3>
                         
                         {{=gt.item.materiaSocketsTemplate(it)}}
                     </div>
@@ -1062,19 +1063,19 @@
 
                 {{?it.upgrades || it.downgrades}}
                     <div class="progression subsection collapsible collapsed" data-headername="progression">
-                        <h3 class="pointer">Progression <span class="right">{{=it.progressionText}}</span></h3>
+                        <h3 class="pointer">进度 <span class="right">{{=it.progressionText}}</span></h3>
                         {{~it.upgrades :value:index}}
                             <div class="line block-link hover-highlight pointer collapse-toggle" data-id="{{=value.id}}" data-type="item">
                                 <img class="icon small" src="{{=value.icon}}" title="{{=value.name}}">
                                 <span class="highlight text name">{{=value.name}}</span>
-                                <span class="text right">Upgrade</span>
+                                <span class="text right">升级</span>
                             </div>
                         {{~}}
                         {{~it.downgrades :value:index}}
                             <div class="line block-link hover-highlight pointer collapse-toggle" data-id="{{=value.id}}" data-type="item">
                                 <img class="icon small" src="{{=value.icon}}" title="{{=value.name}}">
                                 <span class="highlight text name">{{=value.name}}</span>
-                                <span class="text right">Downgrade</span>
+                                <span class="text right">降级</span>
                             </div>
                         {{~}}
                     </div>
@@ -1082,7 +1083,7 @@
 
                 {{?it.sharedModels}}
                     <div class="shared-models subsection collapsible collapsed" data-headername="shared-models">
-                        <h3 class="pointer">Shared Models</h3>
+                        <h3 class="pointer">同模型物品</h3>
                         {{~it.sharedModels :value:index}}
                             {{=gt.item.halfLinkTemplate(value)}}
                         {{~}}
@@ -1091,19 +1092,19 @@
 
                 {{?it.elvl && it.repair_job}}
                     <div class="repairs subsection" data-headername="repairs">
-                        <h3>Repairs <span class="right">{{?it.repair_item}}{{=it.repair_item.name}}, {{?}}{{=it.repair_job}} Lv. {{=it.repair_lvl}}</span></h3>
+                        <h3>修理 <span class="right">{{?it.repair_item}}{{=it.repair_item.name}}, {{?}}{{=it.repair_job}} Lv. {{=it.repair_lvl}}</span></h3>
                     </div>
                 {{?}}
 
                 {{?it.desynthSkill}}
                     <div class="desynthSkill subsection">
-                        <h3>Desynthesis <span class="right">{{=it.desynth_job}} [Optimal Skill: {{=it.desynthSkill}}]</span></h3>
+                        <h3>分解 <span class="right">{{=it.desynth_job}} [Optimal Skill: {{=it.desynthSkill}}]</span></h3>
                     </div>
                 {{?}}
 
                 {{?it.orchestrion}}
                     <div class="orchestrion subsection">
-                        <h3>Orchestrion</h3>
+                        <h3>管弦乐琴</h3>
                         <div>{{=it.orchestrion.category}} / {{=it.orchestrion.order}} {{=it.orchestrion.name}}</div>
                         <div>{{=it.orchestrion.description}}</div>
                         <br>
@@ -1111,7 +1112,7 @@
                             <source src="{{=it.orchestrion.path}}" type="audio/ogg">
                         </audio>
                         <br>
-                        <div>Note: This is a shortened, inferior sample of the original music recording and contributes significantly to the database entry.</div>
+                        <div>注意：这只是一个缩略过的音乐样本。</div>
                     </div>
                 {{?}}
             </div> <!-- Stats Page End -->
@@ -1122,32 +1123,32 @@
                         <div class="subsection">
                             {{?it.ingredient_of && it.craft && (it.vendors || it.ventures || it.nodes)}}
                                 <div class="source-link line" data-id="0" data-type="craft">
-                                    <label><input type="checkbox"> Craft with {{=gt.jobs[it.craft.job].abbreviation}} Lv. {{=it.craft.lvl}}</label>
+                                    <label><input type="checkbox"> 制作职业 {{=gt.jobs[it.craft.job].abbreviation}} 等级 {{=it.craft.lvl}}</label>
                                 </div>
                             {{?}}
 
                             {{?it.sell_price}}
-                                <div class="line">Sells to vendors for <img class="icon small" src="../files/icons/item/65002.png" title="Gil"> {{=it.sell_price.toLocaleString()}}</div>
+                                <div class="line">以 <img class="icon small" src="../files/icons/item/65002.png" title="Gil"> {{=it.sell_price.toLocaleString()}} 出售给商人</div>
                             {{?}}
                         </div>
                     {{?}}
 
                     {{?it.ingredient_of}}
-                        <div class="deemphasize">Set preferred craft sources with the checkboxes below.</div>
+                        <div class="deemphasize">在下方选择你更喜欢测材料来源。将会被优先显示。</div>
                     {{?}}
 
                     {{?(it.ingredient_of || it.craft || it.obj.category == 59) && !it.unlistable && !it.untradeable}}
                         <div class="marketboard subsection collapsible collapsed" data-headername="marketboard">
                             <img src="images/Marketboard.png" class="subsection-icon">
-                            <h2 class="pointer">Marketboard{{?it.marketType}}<span class="right">{{=it.marketType}}</span>{{?}}</h2>
+                            <h2 class="pointer">市场交易板{{?it.marketType}}<span class="right">{{=it.marketType}}</span>{{?}}</h2>
 
                             <div class="source-link collapse-toggle line" data-id="0" data-type="market">
                                 <span class="name">
-                                    {{?it.ingredient_of || it.obj.category == 59}}<label><input type="checkbox"> Market Price</label>{{??}}Market Price{{?}}
+                                    {{?it.ingredient_of || it.obj.category == 59}}<label><input type="checkbox"> 市场价格</label>{{??}}市场价格{{?}}
                                 </span>
                                 <input type="number" class="market-price" {{?it.marketPrice}}value="{{=it.marketPrice}}"{{?}}>
 
-                                <a href="https://universalis.app/market/{{=it.id}}" class="right">Open Universalis.</a>
+                                <a href="https://universalis.app/market/{{=it.id}}" class="right">打开 Universalis 查看</a>
                             </div>
                         </div>
                     {{?}}
@@ -1155,7 +1156,7 @@
                     {{?it.vendors}}
                         <div class="vendors subsection collapsible collapsed" data-headername="vendors">
                             <img src="images/Shop.png" class="subsection-icon">
-                            <h2 class="pointer">Shops<span class="right badge">{{=it.vendors.length}}</span></h2>
+                            <h2 class="pointer">商店<span class="right badge">{{=it.vendors.length}}</span></h2>
  
                             {{?it.vendors}}
                                 {{~it.vendors :value:index}}
@@ -1203,7 +1204,7 @@
                     {{?it.tripletriadReward}}
                         <div class="tripletriadreward subsection collapsible" data-headername="tripletriadreward">
                             <img src="images/TripleTriadReward.png" class="subsection-icon">
-                            <h2 class="pointer">Triple Triad Reward</h2>
+                            <h2 class="pointer">九宫幻卡对局奖励</h2>
 
                             {{~it.tripletriadReward :npc:npcIndex}}
                                 <div class="line collapse-toggle hover-highlight block-link pointer" data-id="{{=npc.id}}" data-type="npc">
@@ -1242,7 +1243,7 @@
                     {{?it.drops}}
                         <div class="mobs subsection collapsible collapsed" data-headername="mobs">
                             <img src="images/Mob.png" class="subsection-icon">
-                            <h2 class="pointer">Drops <span class="right badge">{{=it.drops.length}}</span></h2>
+                            <h2 class="pointer">掉落 <span class="right badge">{{=it.drops.length}}</span></h2>
 
                             {{~it.drops :value:index}}
                                 <div class="collapse-toggle line pointer source-link block-link hover-highlight" data-id="{{=value.id}}" data-type="mob">
@@ -1259,13 +1260,13 @@
                     {{?it.nodes}}
                         <div class="nodes subsection collapsible collapsed" data-headername="nodes">
                             <img src="{{=it.nodes[0].icon}}" class="subsection-icon">
-                            <h2 class="pointer">Gathering <span class="right badge">{{=it.nodes.length}}</span></h2>
+                            <h2 class="pointer">采集 <span class="right badge">{{=it.nodes.length}}</span></h2>
 
                             {{?it.unlockItem}}
                                 <div class="block-link line pointer hover-highlight collapse-toggle" data-id="{{=it.unlockItem.id}}" data-type="item">
                                     <img src="{{=it.unlockItem.icon}}" class="icon small">
                                     <span class="highlight">{{=it.unlockItem.name}}</span>
-                                    <span class="right">Unlock</span>
+                                    <span class="right">解锁</span>
                                 </div>
                             {{?}}
 
@@ -1285,7 +1286,7 @@
                     {{?it.gardening}}
                         <div class="gardening subsection collapsible collapsed" data-headername="gardening">
                             <img src="images/Leveling.png" class="subsection-icon">
-                            <h2 class="pointer">Gardening <span class="right badge">{{=it.gardening.length}}</span></h2>
+                            <h2 class="pointer">种植 <span class="right badge">{{=it.gardening.length}}</span></h2>
 
                             <div class="collapse-toggle">
                                 <p><a href="http://www.ffxivgardening.com/seed-details.php?SeedID={{=it.id}}" target="_blank" class="action-link">Open in ffxivgardening.</a></p>
@@ -1304,7 +1305,7 @@
                     {{?it.fishingSpots}}
                         <div class="fishing subsection collapsible collapsed" data-headername="fishing">
                             <img src="../files/icons/job/FSH.png" class="subsection-icon">
-                            <h2 class="pointer">Fishing <span class="right badge">{{=it.fishingSpots.length}}</span></h2>
+                            <h2 class="pointer">钓鱼 <span class="right badge">{{=it.fishingSpots.length}}</span></h2>
 
                             {{~it.fishingSpots :value:index}}
                                 <div class="block-link source-link line pointer hover-highlight collapse-toggle" data-id="{{=value.id}}" data-type="fishing">
@@ -1321,7 +1322,7 @@
                     {{?it.instances}}
                         <div class="instances subsection collapsible collapsed" data-headername="instances">
                             <img src="images/BronzeCoffer.png" class="subsection-icon">
-                            <h2 class="pointer">Instance Coffers <span class="right badge">{{=it.instances.length}}</span></h2>
+                            <h2 class="pointer">副本宝箱 <span class="right badge">{{=it.instances.length}}</span></h2>
 
                             {{~it.instances :value:index}}
                                 <div class="block-link source-link line pointer hover-highlight collapse-toggle" data-id="{{=value.id}}" data-type="instance">
@@ -1339,7 +1340,7 @@
                     {{?it.quests || it.usedInQuest}}
                         <div class="quests subsection collapsible collapsed" data-headername="quests">
                             <img src="../files/icons/journal/61411.png" class="subsection-icon">
-                            <h2 class="pointer">Quests <span class="right badge">{{=(it.quests ? it.quests.length : 0) + (it.usedInQuest ? it.usedInQuest.length : 0)}}</span></h3>
+                            <h2 class="pointer">任务奖励 <span class="right badge">{{=(it.quests ? it.quests.length : 0) + (it.usedInQuest ? it.usedInQuest.length : 0)}}</span></h3>
 
                             {{?it.quests}}
                                 {{~it.quests :value:index}}
@@ -1356,7 +1357,7 @@
                             {{?it.usedInQuest}}
                                 {{~it.usedInQuest :value:index}}
                                     <div class="collapse-toggle line pointer source-link block-link hover-highlight" data-id="{{=value.id}}" data-type="quest">
-                                        <span class="right">Used</span>
+                                        <span class="right">任务需求</span>
                                         <div class="overflow-wrapper">
                                             <span class="highlight">{{=value.name}}</span>
                                             <span class="byline">{{=value.location}}</span>
@@ -1370,12 +1371,12 @@
                     {{?it.leves || it.requiredByLeves}}
                         <div class="leves subsection collapsible collapsed" data-headername="leves">
                             <img src="images/Leve.png" class="subsection-icon">
-                            <h2 class="pointer">Levequests <span class="right badge">{{=(it.leves ? it.leves.length : 0) + (it.requiredByLeves ? it.requiredByLeves.length : 0)}}</span></h2>
+                            <h2 class="pointer">理符任务 <span class="right badge">{{=(it.leves ? it.leves.length : 0) + (it.requiredByLeves ? it.requiredByLeves.length : 0)}}</span></h2>
 
                             {{?it.leves}}
                                 {{~it.leves :value:index}}
                                     <div class="collapse-toggle line pointer source-link block-link hover-highlight" data-id="{{=value.id}}" data-type="leve">
-                                        <span class="right">Reward</span>
+                                        <span class="right">奖励</span>
                                         <div class="overflow-wrapper">
                                            {{?it.ingredient_of}}<input type="checkbox">{{?}}
                                            <span class="highlight">Lv. {{=value.lvl}} {{=value.name}}</span>
@@ -1388,7 +1389,7 @@
                             {{?it.requiredByLeves}}
                                 {{~it.requiredByLeves :value:index}}
                                     <div class="collapse-toggle line pointer source-link block-link hover-highlight" data-id="{{=value.id}}" data-type="leve">
-                                        <span class="right">Used</span>
+                                        <span class="right">需求</span>
                                         <div class="overflow-wrapper">
                                            <span class="highlight">Lv. {{=value.lvl}} {{=value.name}}</span>
                                            <span class="byline">{{=value.location}}</span>
@@ -1402,7 +1403,7 @@
                     {{?it.loot}}
                         <div class="treasure subsection collapsible collapsed" data-headername="treasure">
                             <img src="{{=it.loot[0].icon}}" class="subsection-icon">
-                            <h2 class="pointer">Loot <span class="right badge">{{=it.loot.length}}</span></h2>
+                            <h2 class="pointer">掉落 <span class="right badge">{{=it.loot.length}}</span></h2>
 
                             {{~it.loot :value:index}}
                                 {{=gt.item.halfLinkTemplate(value)}}
@@ -1413,7 +1414,7 @@
                     {{?it.ventures}}
                         <div class="ventures subsection collapsible collapsed" data-headername="ventures">
                             <img src="../files/icons/item/65049.png" class="subsection-icon">
-                            <h2 class="pointer">Ventures <span class="right badge">{{=it.ventures.length}}</span></h2>
+                            <h2 class="pointer">雇员探险 <span class="right badge">{{=it.ventures.length}}</span></h2>
                             {{~it.ventures :value:index}}
                                 <div class="collapse-toggle line grow source-link clear" data-id="{{=value.id}}" data-type="venture">
                                     <div>
@@ -1425,7 +1426,7 @@
                                         <table class="left">
                                             <tr>
                                                 <td><img src="{{=value.requireIcon}}" class="icon small">{{=value.requireList[0]}}</td>
-                                                <td>{{?value.random}}Random{{??}}x{{=value.amounts[0]}}{{?}}</td>
+                                                <td>{{?value.random}}随机物品{{??}}x{{=value.amounts[0]}}{{?}}</td>
                                             </tr>
                                         </table>
                                         <table class="right">
@@ -1439,7 +1440,7 @@
                                             {{~value.requireList :required:reqIndex}}
                                                 <tr>
                                                     <td>{{?reqIndex == 0}}<img src="{{=value.requireIcon}}" class="icon small">{{?}}{{=required}}</td>
-                                                    <td>{{?value.random}}Random{{??}}x{{=value.amounts[reqIndex]}}{{?}}</td>
+                                                    <td>{{?value.random}}随机物品{{??}}x{{=value.amounts[reqIndex]}}{{?}}</td>
                                                 </tr>
                                             {{~}}
                                         </table>
@@ -1461,13 +1462,13 @@
                     {{?it.reducedFrom || it.reducesTo}}
                         <div class="reducedFrom subsection collapsible collapsed" data-headername="reduction">
                             <img src="images/Reduce.png" class="subsection-icon">
-                            <h2 class="pointer">Aetherial Reduction <span class="right badge">{{=it.reduceTotal}}</span></h2>
+                            <h2 class="pointer">精选 <span class="right badge">{{=it.reduceTotal}}</span></h2>
 
                             {{~it.reducedFrom :value:index}}
                                 <div class="block-link line pointer hover-highlight collapse-toggle" data-id="{{=value.id}}" data-type="item">
                                     <img src="{{=value.icon}}" class="icon small">
                                     <span class="highlight">{{=value.name}}</span>
-                                    <span class="right">Reduced From</span>
+                                    <span class="right">可由此精选获得</span>
                                 </div>
                             {{~}}
 
@@ -1475,7 +1476,7 @@
                                 <div class="block-link line pointer hover-highlight collapse-toggle" data-id="{{=value.id}}" data-type="item">
                                     <img src="{{=value.icon}}" class="icon small">
                                     <span class="highlight">{{=value.name}}</span>
-                                    <span class="right">Reduces To</span>
+                                    <span class="right">可以精选为</span>
                                 </div>
                             {{~}}
                         </div>
@@ -1484,7 +1485,7 @@
                     {{?it.other}}
                         <div class="other subsection collapsible collapsed" data-headername="other">
                             <img src="{{=it.other[0].icon}}" class="subsection-icon">
-                            <h2 class="pointer">Other <span class="right badge">{{=it.other.length}}</span></h2>
+                            <h2 class="pointer">其他 <span class="right badge">{{=it.other.length}}</span></h2>
 
                             {{~it.other :value:index}}
                                 {{?value.id}}
@@ -1506,10 +1507,10 @@
                     {{?it.masterpiece}}
                         <div class="masterpiece subsection collapsible collapsed" data-headername="masterpiece">
                             <img src="images/Rowena.png" class="subsection-icon">
-                            <h2 class="pointer">Rowena's House of Splendors</h2>
+                            <h2 class="pointer">罗薇娜商会</h2>
 
                             {{?it.masterpiece.complexity}}
-                                <div class="collapse-toggle deemphasize">Complexity: {{=it.masterpiece.complexity}}, Efficiency Score: ★{{=it.masterpiece.efficiencyScore}}</div>
+                                <div class="collapse-toggle deemphasize">收藏价值: {{=it.masterpiece.complexity}}, 收藏评分: ★{{=it.masterpiece.efficiencyScore}}</div>
                             {{?}}
 
                             <div class="collapse-toggle line source-link block-link pointer hover-highlight" data-id="1012300" data-type="npc">
@@ -1538,9 +1539,9 @@
                             </table>
 
                             <div class="collapse-toggle line source-link block-link pointer hover-highlight" data-id="1012300" data-type="npc">
-                                <span class="right"><span class="highlight">★</span> Bonus, Level {{=it.masterpiece.lvl[0]}}{{?it.masterpiece.lvl[0]!=it.masterpiece.lvl[1]}}-{{=it.masterpiece.lvl[1]}}{{?}}{{?it.masterpiece.stars}} {{=gt.util.stars(it.masterpiece.stars)}}{{?}}</span>
+                                <span class="right"><span class="highlight">★</span> 属性, 等级 {{=it.masterpiece.lvl[0]}}{{?it.masterpiece.lvl[0]!=it.masterpiece.lvl[1]}}-{{=it.masterpiece.lvl[1]}}{{?}}{{?it.masterpiece.stars}} {{=gt.util.stars(it.masterpiece.stars)}}{{?}}</span>
                                 <div class="overflow-wrapper">
-                                    <span class="highlight">Collectable Appraiser</span>
+                                    <span class="highlight">收藏品交易</span>
                                 </div>
                             </div>
 
@@ -1567,7 +1568,7 @@
                     {{?it.satisfaction}}
                         <div class="satisfaction subsection collapsible" data-headername="satisfaction">
                             <img src="images/CustomDelivery.png" class="subsection-icon">
-                            <h2 class="pointer">Custom Deliveries</h2>
+                            <h2 class="pointer">老主顾交易</h2>
 
                             {{~it.satisfaction :satisfaction:sindex}}
                                 <div class="collapse-toggle source-link block-link pointer line hover-highlight" data-id="{{=satisfaction.npc.id}}" data-type="npc">
@@ -1612,7 +1613,7 @@
                     {{?it.supplyReward}}
                         <div class="supply-reward subsection collapsible collapsed" data-headername="supply-reward">
                             <img src="images/Rowena.png" class="subsection-icon">
-                            <h2 class="pointer">Supply Rewards <span class="right badge">{{=it.supplyReward.length}}</span></h2>
+                            <h2 class="pointer">筹备军需品 <span class="right badge">{{=it.supplyReward.length}}</span></h2>
 
                             {{~it.supplyReward :value:index}}
                                 <div class="line pointer block-link collapse-toggle hover-highlight" data-id="{{=value.item.id}}" data-type="item">
@@ -1634,7 +1635,7 @@
                     {{?it.supply || it.delivery}}
                         <div class="supply subsection collapsible collapsed" data-headername="supply">
                             <img src="../files/icons/item/65005.png" class="subsection-icon">
-                            <h2 class="pointer">Grand Company</h2>
+                            <h2 class="pointer">大国防联军</h2>
 
                             {{?it.supply}}
                                 <div class="collapse-toggle line">
@@ -1642,7 +1643,7 @@
                                         <div class="inline-block block-link trade hover-highlight pointer" data-id="22" data-type="item"><img class="icon small" src="../files/icons/item/65005.png" title="Flame Seal">{{=it.supply.seals.toLocaleString()}}</div><div class="inline-block trade"><img class="icon small" src="images/xp.png" title="Experience">{{=it.supply.xp.toLocaleString()}}</div>
                                     </div>
                                     <div class="overflow-wrapper">
-                                        <span>Personnel Officer</span>
+                                        <span>人事负责人</span>
                                         <span class="byline">Supply/Provisioning</span>
                                     </div>
                                 </div>
@@ -1657,8 +1658,8 @@
                                         </div>
                                     </div>
                                     <div class="overflow-wrapper">
-                                        <span>Personnel Officer</span>
-                                        <span class="byline">Expert Delivery</span>
+                                        <span>人事负责人</span>
+                                        <span class="byline">筹备稀有品</span>
                                     </div>
                                 </div>
                             {{?}}
@@ -1668,7 +1669,7 @@
                     {{?it.unlocks}}
                         <div class="unlocks subsection collapsible collapsed" data-headername="unlocks">
                             <img src="{{=it.unlocks[0].icon}}" class="subsection-icon">
-                            <h2 class="pointer">Unlocks <span class="right badge">{{=it.unlocks.length}}</span></h2>
+                            <h2 class="pointer">解锁 <span class="right badge">{{=it.unlocks.length}}</span></h2>
 
                             {{~it.unlocks :value:index}}
                                 {{=gt.item.halfLinkTemplate(value)}}
@@ -1679,7 +1680,7 @@
                     {{?it.ingredient_of}}
                         <div class="ingredient-of subsection collapsible collapsed" data-headername="ingredient-of">
                             <img src="{{=it.ingredient_of[0].icon}}" class="subsection-icon">
-                            <h2 class="pointer">Crafting Ingredient <span class="right badge">{{=it.ingredient_of.length}}</span></h2>
+                            <h2 class="pointer">用于制作 <span class="right badge">{{=it.ingredient_of.length}}</span></h2>
 
                             {{~it.ingredient_of :value:index}}
                                 <div class="line pointer block-link collapse-toggle hover-highlight" data-id="{{=value.i}}" data-type="item">
@@ -1693,14 +1694,14 @@
                     {{?it.desynthedFrom}}
                         <div class="desynthesis subsection collapsible collapsed" data-headername="desynthesis">
                             <img src="images/Desynth.png" class="subsection-icon">
-                            <h2 class="pointer">Desynthesis{{?it.desynth_job}}<span class="right">{{=it.desynth_job}} Lv. {{=it.rlvl}}</span>{{?}}</h2>
+                            <h2 class="pointer">由以下物品分解{{?it.desynth_job}}<span class="right">{{=it.desynth_job}} Lv. {{=it.rlvl}}</span>{{?}}</h2>
 
                             {{?it.desynthedFrom.length}}
                                 {{~it.desynthedFrom :value:index}}
                                     {{=gt.item.halfLinkTemplate(value)}}
                                 {{~}}
                             {{??}}
-                                Something
+                                某个物品
                             {{?}}
                         </div>
                     {{?}}
@@ -1727,7 +1728,7 @@
                     {{?it.customize}}
                         <div class="customize subsection collapsible" data-headername="customize">
                             <img src="../files/icons/customize/{{=it.customize[0]}}.png" class="subsection-icon">
-                            <h2 class="pointer">Character Customization <span class="right badge">{{=it.customize.length}}</span></h2>
+                            <h2 class="pointer">角色外观 <span class="right badge">{{=it.customize.length}}</span></h2>
 
                             <div class="icons collapse-toggle">
                                 {{~it.customize :value:index}}
@@ -1742,11 +1743,11 @@
             {{?it.craft}}
                 <div class="crafting-page page">
                     <div class="craftinfo subsection collapsible" data-headername="craftinfo">
-                        <h3 class="pointer">{{=gt.jobs[it.craft.job].abbreviation}} Lv. {{=it.craft.lvl}}{{=gt.util.stars(it.craft.stars)}} <span class="right deemphasize">rLv. {{=it.craft.rlvl}}</span></h3>
+                        <h3 class="pointer">{{=gt.jobs[it.craft.job].abbreviation}} Lv. {{=it.craft.lvl}}{{=gt.util.stars(it.craft.stars)}} <span class="right deemphasize">配方等级 {{=it.craft.rlvl}}</span></h3>
 
                         {{?it.crafts.length > 1}}
                             <div class="line collapse-toggle">
-                                <span class="name">Select Class</span>
+                                <span class="name">选择职业</span>
                                 <select class="recipe-select">
                                     {{~it.crafts :value:index}}
                                         <option value="{{=value.id}}" {{?it.craft == value}}selected="selected"{{?}}>{{=gt.jobs[value.job].abbreviation}} Lv. {{=value.lvl}}</option>
@@ -1757,27 +1758,27 @@
 
                         {{?it.unlockItem}}
                             <div class="line collapse-toggle">
-                                <span class="name">Unlock Item</span>
+                                <span class="name">解锁该配方</span>
                                 <span class="hover-highlight block-link pointer" data-type="item" data-id="{{=it.unlockItem.id}}"><img class="icon mini" src="{{=it.unlockItem.icon}}"> <span class="highlight">{{=it.unlockItem.name}}</span></span>
                             </div>
                         {{?}}
 
                         {{?it.crafterSoul}}
                             <div class="line collapse-toggle">
-                                <span class="name">Soul Crystal</span>
+                                <span class="name">灵魂水晶</span>
                                 <span class="hover-highlight block-link pointer" data-type="item" data-id="{{=it.crafterSoul.id}}"><img class="icon mini" src="{{=it.crafterSoul.icon}}"> <span class="highlight">{{=it.crafterSoul.name}}</span></span>
                             </div>
                         {{?}}
 
                         {{?it.craft.craftsmanshipReq || it.craft.controlReq}}
                             <div class="line collapse-toggle">
-                                <span class="name">Requires</span>
+                                <span class="name">需要</span>
                                 {{
                                     var craftReqs = [];
                                     if (it.craft.craftsmanshipReq)
-                                        craftReqs.push(it.craft.craftsmanshipReq + ' Craftsmanship');
+                                        craftReqs.push(it.craft.craftsmanshipReq + ' 制作精度');
                                     if (it.craft.controlReq)
-                                        craftReqs.push(it.craft.controlReq + ' Control');
+                                        craftReqs.push(it.craft.controlReq + ' 加工精度');
                                 }}
                                 {{=craftReqs.join(', ')}}
                             </div>
@@ -1785,31 +1786,31 @@
 
                         {{?it.craft.quickSynthCraftsmanship || it.craft.quickSynthControl}}
                             <div class="line collapse-toggle">
-                                <span class="name">Quick Synth</span>
+                                <span class="name">快速制作</span>
                                 {{
                                     var quickSynthReqs = [];
                                     if (it.craft.quickSynthCraftsmanship)
-                                        quickSynthReqs.push(it.craft.quickSynthCraftsmanship + ' Craftsmanship');
+                                        quickSynthReqs.push(it.craft.quickSynthCraftsmanship + ' 制作精度');
                                     if (it.craft.quickSynthControl)
-                                        quickSynthReqs.push(it.craft.quickSynthControl + ' Control');
+                                        quickSynthReqs.push(it.craft.quickSynthControl + ' 加工精度');
                                 }}
                                 {{=quickSynthReqs.join(', ')}}
                             </div>
                         {{?}}
 
                         <div class="line collapse-toggle">
-                            <span class="action-link unselectable copy-recipe">Copy recipe.</span> 
-                            <a href="https://ffxivteamcraft.com/simulator/{{=it.id}}/{{=it.craft.id}}" target="_blank">Open simulator.</a>
-                            <span class="action-link unselectable new-group">Add to crafting list.</span>
+                            <span class="action-link unselectable copy-recipe">复制配方内容 </span> 
+                            <a href="https://ffxivteamcraft.com/simulator/{{=it.id}}/{{=it.craft.id}}" target="_blank">在TeamCraft中打开 </a>
+                            <span class="action-link unselectable new-group">添加到制作列表 </span>
                         </div>
                     </div>
 
                     <div class="recipe subsection">
                         <h3><span class="craft-info center inline-block">
                             {{?it.craft.fc}}
-                                Free Company Craft
+                                部队工房制作
                             {{??}}
-                                Durability {{=it.craft.durability}}, Progress {{=it.craft.progress}}, Quality {{?it.craftSet.startingQuality}}{{=it.craftSet.startingQuality}}/{{?}}{{=it.craft.quality}}{{?it.craft.yield}}, Yields {{=it.craft.yield}}{{?}}
+                                耐久 {{=it.craft.durability}}, 进展 {{=it.craft.progress}}, 品质 {{?it.craftSet.startingQuality}}{{=it.craftSet.startingQuality}}/{{?}}{{=it.craft.quality}}{{?it.craft.yield}}, Yields {{=it.craft.yield}}{{?}}
                             {{?}}
                         </span></h3>
 
@@ -1829,8 +1830,8 @@
     <script id="block-npc-template" type="text/x-dot-template">
         <div class="midline">
             <div class="menu tab">
-                <div data-page="info-page" class="button">Info</div>
-                {{?it.map}}<div data-page="maps-page" class="button">Map</div>{{?}}
+                <div data-page="info-page" class="button">信息</div>
+                {{?it.map}}<div data-page="maps-page" class="button">地图</div>{{?}}
             </div>
         </div>
 
@@ -1856,7 +1857,7 @@
 
                 {{?it.tripletriad}}
                     <div class="tripletriad subsection collapsible collapsed" data-headername="tripletriad">
-                        <h3 class="pointer">Triple Triad</h3>
+                        <h3 class="pointer">九宫幻卡对局</h3>
 
                         {{?it.timer}}
                             <div class="availability collapse-toggle">
@@ -1866,12 +1867,12 @@
                             </div>
                         {{?}}
 
-                        <h4 class="collapse-toggle">Rules</h4>
+                        <h4 class="collapse-toggle">规则</h4>
 
-                        <div class="line collapse-toggle half">Fee: {{=it.tripletriad.fee}} MGP</div>
+                        <div class="line collapse-toggle half">对局费用: {{=it.tripletriad.fee}} 金碟币</div>
 
                         {{?it.tripletriad.regionalRules}}
-                            <div class="line collapse-toggle half">Uses Regional Rules</div>
+                            <div class="line collapse-toggle half">使用地区流行规则</div>
                         {{?}}
 
                         {{?it.tripletriad.rules}}
@@ -1880,14 +1881,14 @@
                             {{~}}
                         {{?}}
 
-                        <h4 class="collapse-toggle">Cards Used</h4>
+                        <h4 class="collapse-toggle">使用的卡片</h4>
 
                         {{~it.tripletriad.cards :value:index}}
                             {{=gt.item.halfLinkTemplate(value)}}
                         {{~}}
 
                         {{?it.tripletriad.rewards}}
-                            <h4 class="collapse-toggle">Cards Rewarded</h4>
+                            <h4 class="collapse-toggle">奖励卡片</h4>
 
                             {{~it.tripletriad.rewards :value:index}}
                                 {{=gt.item.halfLinkTemplate(value)}}
@@ -1928,7 +1929,7 @@
 
                 {{?it.quests}}
                     <div class="quests subsection collapsible collapsed" data-headername="quests">
-                        <h3 class="pointer">Quests</h3>
+                        <h3 class="pointer">任务</h3>
 
                         {{~it.quests :value:index}}
                             <div class="line collapse-toggle">
@@ -1940,45 +1941,45 @@
 
                 {{?it.appearance}}
                     <div class="appearance subsection collapsible collapsed" data-headername="appearance">
-                        <h3 class="pointer">Appearance</h3>
+                        <h3 class="pointer">外貌</h3>
 
                         <table class="collapse-toggle">
-                            <tr><td colspan="4" class="grouping">Body{{?it.appearance.bodyType}} ({{=it.appearance.bodyType}}){{?}}</td></tr>
+                            <tr><td colspan="4" class="grouping">身体{{?it.appearance.bodyType}} ({{=it.appearance.bodyType}}){{?}}</td></tr>
                             {{?it.appearance.hairStyle}}
                                 <tr><td colspan="3"></td><td rowspan="6"><img class="right" src="../files/icons/customize/{{=it.appearance.hairStyle}}.png"></td></tr>
                             {{?}}
-                            <tr><td>Race</td><td>{{=it.appearance.race}}</td></tr>
-                            <tr><td>Tribe</td><td>{{=it.appearance.tribe}}</td></tr>
-                            <tr><td>Gender</td><td>{{=it.appearance.gender}}</td></tr>
-                            <tr><td>Height</td><td>{{=it.appearance.height}}</td></tr>
+                            <tr><td>种族</td><td>{{=it.appearance.race}}</td></tr>
+                            <tr><td>部族</td><td>{{=it.appearance.tribe}}</td></tr>
+                            <tr><td>性别</td><td>{{=it.appearance.gender}}</td></tr>
+                            <tr><td>身高</td><td>{{=it.appearance.height}}</td></tr>
                             {{?it.appearance.muscle !== undefined}}
-                                <tr><td>Muscle Tone</td><td>{{=it.appearance.muscle}}</td></tr>
+                                <tr><td>体型</td><td>{{=it.appearance.muscle}}</td></tr>
                             {{?}}
                             {{?it.appearance.bust !== undefined}}
-                                <tr><td>Bust</td><td>{{=it.appearance.bust}}</td></tr>
+                                <tr><td>胸围</td><td>{{=it.appearance.bust}}</td></tr>
                             {{?}}
                             <tr>
-                                <td>Skin Color</td><td>{{=it.appearance.skinColor}}</td>
+                                <td>肤色</td><td>{{=it.appearance.skinColor}}</td>
                                 <td><span class="color" style="background-color:{{=it.appearance.skinColorCode}};"></span></td>
                             </tr>
                             <tr>
-                                <td>Hair Color</td><td>{{=it.appearance.hairColor}}</td>
+                                <td>发色</td><td>{{=it.appearance.hairColor}}</td>
                                 <td><span class="color" style="background-color:{{=it.appearance.hairColorCode}};"></span></td>
                             </tr>
                             {{?it.appearance.highlightColor}}
                                 <tr>
-                                    <td>Highlights</td><td>{{=it.appearance.highlightColor}}</td>
+                                    <td>挑染</td><td>{{=it.appearance.highlightColor}}</td>
                                     <td><span class="color" style="background-color:{{=it.appearance.highlightColorCode}};"></span></td>
                                 </tr>
                             {{?}}
 
-                            <tr><td colspan="4" class="grouping">Face {{?it.appearance.customFace}}(Custom){{?}}</td></tr>
-                            <tr><td>Face</td><td>#{{=it.appearance.face}}</td></tr>
-                            <tr><td>Jaw</td><td>Type {{=it.appearance.jaw}}</td></tr>
-                            <tr><td>Eye Shape</td><td>Type {{=it.appearance.eyeShape}}</td></tr>
-                            <tr><td>Iris Size</td><td>{{=it.appearance.eyeSize}}</tr>
+                            <tr><td colspan="4" class="grouping">面部 {{?it.appearance.customFace}}(独立建模){{?}}</td></tr>
+                            <tr><td>脸部</td><td>#{{=it.appearance.face}}</td></tr>
+                            <tr><td>脸部轮廓</td><td>类型 {{=it.appearance.jaw}}</td></tr>
+                            <tr><td>眼睛</td><td>类型 {{=it.appearance.eyeShape}}</td></tr>
+                            <tr><td>眼瞳</td><td>{{=it.appearance.eyeSize}}</tr>
                             <tr>
-                                <td>Eye Color</td><td>{{=it.appearance.eyeColor}}</td>
+                                <td>瞳色</td><td>{{=it.appearance.eyeColor}}</td>
                                 <td><span class="color" style="background-color:{{=it.appearance.eyeColorCode}};"></span></td>
                             </tr>
                             {{?it.appearance.heterochromia}}
@@ -1987,24 +1988,24 @@
                                     <td><span class="color" style="background-color:{{=it.appearance.heterochromiaCode}};"></span></td>
                                 </tr>
                             {{?}}
-                            <tr><td>Eyebrows</td><td>Type {{=it.appearance.eyebrows}}</td></tr>
-                            <tr><td>Nose</td><td>Type {{=it.appearance.nose}}</td></tr>
-                            <tr><td>Mouth</td><td>Type {{=it.appearance.mouth}}</td></tr>
+                            <tr><td>眉毛</td><td>类型 {{=it.appearance.eyebrows}}</td></tr>
+                            <tr><td>鼻型</td><td>类型 {{=it.appearance.nose}}</td></tr>
+                            <tr><td>嘴型</td><td>类型 {{=it.appearance.mouth}}</td></tr>
                             {{?it.appearance.lipShade}}
                                 <tr>
-                                    <td>Lip Color</td><td>{{=it.appearance.lipShade}} {{=it.appearance.lipColor}}</td>
+                                    <td>唇色</td><td>{{=it.appearance.lipShade}} {{=it.appearance.lipColor}}</td>
                                     <td><span class="color" style="background-color:{{=it.appearance.lipColorCode}};"></span></td>
                                 </tr>
                             {{?}}
 
                             {{?it.appearance.extraFeatureName}}
                                 <tr><td colspan="4" class="grouping">{{=it.appearance.extraFeatureName}}</td></tr>
-                                <tr><td>Shape</td><td>#{{=it.appearance.extraFeatureShape}}</td></tr>
-                                <tr><td>Size</td><td>{{=it.appearance.extraFeatureSize}}</td></tr>
+                                <tr><td>形状</td><td>#{{=it.appearance.extraFeatureShape}}</td></tr>
+                                <tr><td>大小</td><td>{{=it.appearance.extraFeatureSize}}</td></tr>
                             {{?}}
 
                             {{?it.appearance.facialfeatures}}
-                                <tr><td colspan="4" class="grouping">Facial Features</td></tr>
+                                <tr><td colspan="4" class="grouping">刺青</td></tr>
                                 <tr>
                                     <td colspan="4">
                                         {{~it.appearance.facialfeatures :feature:findex}}
@@ -2013,18 +2014,18 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Color</td><td>{{=it.appearance.facialfeatureColor}}</td>
+                                    <td>刺青颜色</td><td>{{=it.appearance.facialfeatureColor}}</td>
                                 </tr>                            
                             {{?}}
 
                             {{?it.appearance.facepaint}}
-                                <tr><td colspan="4" class="grouping">Face Paint</td></tr>
+                                <tr><td colspan="4" class="grouping">面妆</td></tr>
                                 <tr>
                                     <td><img src="../files/icons/customize/{{=it.appearance.facepaint}}.png"></td>
-                                    <td>{{?it.appearance.facepaintReverse}}Reverse{{?}}</td>
+                                    <td>{{?it.appearance.facepaintReverse}}反转{{?}}</td>
                                 </tr>
                                 <tr>
-                                    <td>Color</td><td>{{=it.appearance.facepaintShade}} {{=it.appearance.facepaintColor}}</td>
+                                    <td>面妆颜色</td><td>{{=it.appearance.facepaintShade}} {{=it.appearance.facepaintColor}}</td>
                                     <td><span class="color" style="background-color:{{=it.appearance.facepaintColorCode}};"></span></td>
                                 </tr>
                             {{?}}
@@ -2034,7 +2035,7 @@
 
                 {{?it.equip}}
                     <div class="equipment subsection collapsible collapsed" data-headername="equipment">
-                        <h3 class="pointer">Equipment</h3>
+                        <h3 class="pointer">装备</h3>
 
                         <div class="collapse-toggle">
                             {{~it.equip :value:index}}
@@ -2043,14 +2044,14 @@
                                         <img class="icon small" src="images/{{=value.slot}}.png">
                                         <span class="text">
                                             {{=value.slot}} {{=value.model}}
-                                            {{?!value.item}}(Custom){{?}}
+                                            {{?!value.item}}(独立建模){{?}}
                                         </span>
                                     </div>
                                     {{?value.item}}
                                         <div class="line collapse-toggle block-link hover-highlight pointer" data-id="{{=value.item.id}}" data-type="item">
                                             <img class="icon small" src="{{=value.item.icon}}">
                                             <span class="highlight text">{{=value.item.name}}</span>
-                                            {{?value.uncertainty}}<span class="text" title="Uncertainty: {{=value.uncertainty}}">(Guess)</span>{{?}}
+                                            {{?value.uncertainty}}<span class="text" title="Uncertainty: {{=value.uncertainty}}">(不确定)</span>{{?}}
                                             {{?value.dye}}<span class="right text">{{=value.dye.name}}</span>{{?}}
                                         </div>
                                     {{?}}
@@ -2062,14 +2063,14 @@
 
                 {{?it.talk}}
                     <div class="talk subsection collapsible collapsed" data-headername="talk">
-                        <h3 class="pointer">Talk Dialogue</h3>
+                        <h3 class="pointer">对话文本</h3>
 
                         {{~it.talk :value:index}}
                             <div class="line collapse-toggle">
                                 {{?value.quest}}
                                     {{=gt.quest.linkTemplate(value.quest)}}
                                 {{??}}
-                                    General Dialogue
+                                    常规对话
                                 {{?}}
                             </div>
                             {{~value.lines :line:lindex}}
@@ -2083,7 +2084,7 @@
 
                 {{?it.alts}}
                     <div class="alts subsection collapsible collapsed" data-headername="alts">
-                        <h3 class="pointer">Alternate Instances</h3>
+                        <h3 class="pointer">其他位置的同一个他</h3>
 
                         {{~it.alts :alt:altIndex}}
                             <div class="block-link pointer hover-highlight collapse-toggle" data-id="{{=alt.id}}" data-type="npc">
@@ -2109,8 +2110,8 @@
     <script id="block-leve-template" type="text/x-dot-template">
         <div class="midline">
             <div class="menu tab">
-                <div data-page="stats-page" class="button">Stats</div>
-                <div data-page="lore-page" class="button">Lore</div>
+                <div data-page="stats-page" class="button">信息</div>
+                <div data-page="lore-page" class="button">剧情</div>
             </div>
         </div>
 
@@ -2127,7 +2128,7 @@
 
                 {{?it.levemete}}
                     <div class="levemete subsection" data-headername="levemete">
-                        <h3>Levemete</h3>
+                        <h3>理符发行人</h3>
 
                         <div class="block-link pointer line hover-highlight" data-id="{{=it.levemete.id}}" data-type="npc">
                             <img class="icon small" src="images/Levequest.png"><span class="highlight text">{{=it.levemete.name}}</span>
@@ -2138,7 +2139,7 @@
 
                 {{?it.requires}}
                     <div class="requires subsection" data-headername="requires">
-                        <h3>Requires{{?it.repeats}}<span class="right">Repeats: {{=it.repeats}}</span>{{?}}</h3>
+                        <h3>需求{{?it.repeats}}<span class="right">可重复次数: {{=it.repeats}}</span>{{?}}</h3>
 
                         {{~it.requires :value:index}}
                             <div class="line half block-link hover-highlight pointer" data-id="{{=value.item.id}}" data-type="item">
@@ -2151,7 +2152,7 @@
 
                 {{?it.xp || it.gil || it.gcseals}}
                     <div class="rewards subsection" data-headername="rewards">
-                        <h3>Rewards</h3>
+                        <h3>奖励</h3>
 
                         {{?it.xp}}
                             <div class="reward prime">
@@ -2171,11 +2172,11 @@
 
                         {{?it.complexity}}
                             <hr>
-                            <div>NQ Complexity: {{=it.complexity.nq}}, XP / NQ Complexity: {{=it.xpPerComplexity}}</div>
-                            <div>HQ Complexity: {{=it.complexity.hq}}, XP / HQ Complexity: {{=it.xpPerComplexityHq}}</div>
+                            <div>NQ 复杂度: {{=it.complexity.nq}}, 每点复杂度的经验奖励: {{=it.xpPerComplexity}}</div>
+                            <div>HQ 复杂度: {{=it.complexity.hq}}, 每点复杂度的经验奖励: {{=it.xpPerComplexityHq}}</div>
 
                             <div>
-                                <span class="action-link unselectable new-group">Add to leve calculator.</span>
+                                <span class="action-link unselectable new-group">添加到理符计算器</span>
                             </div>
                         {{?}}
                     </div>
@@ -2183,7 +2184,7 @@
 
                 {{?it.rewards}}
                     <div class="items subsection collapsible" data-headername="items">
-                        <h3 class="pointer">Items</h3>
+                        <h3 class="pointer">奖励物品</h3>
 
                         {{~it.rewards :value:index}}
                             <div class="line block-link hover-highlight pointer collapse-toggle" data-id="{{=value.item.id}}" data-type="item">
@@ -2214,10 +2215,10 @@
     <script id="block-quest-template" type="text/x-dot-template">
         <div class="midline">
             <div class="menu tab">
-                <div data-page="stats-page" class="button">Stats</div>
-                <div data-page="lore-page" class="button">Lore</div>
+                <div data-page="stats-page" class="button">信息</div>
+                <div data-page="lore-page" class="button">剧情</div>
                 {{?it.issuer && it.issuer.map}}
-                    <div data-page="maps-page" class="button">Maps</div>
+                    <div data-page="maps-page" class="button">地图</div>
                 {{?}}
             </div>
         </div>
@@ -2254,7 +2255,7 @@
                 
                 {{?it.reward}}
                     <div class="rewards subsection" data-headername="rewards">
-                        <h3>Rewards</h3>
+                        <h3>奖励</h3>
 
                         {{?it.reward.xp}}
                             <div class="reward prime">
@@ -2321,7 +2322,7 @@
 
                     {{?it.reward.optional}}
                         <div class="rewards subsection" data-headername="optional-rewards">
-                            <h3>Optional Rewards</h3>
+                            <h3>可选奖励</h3>
 
                             {{~it.reward.optional :value:index}}
                                 <div class="item reward block-link pointer hover-highlight" data-id="{{=value.item.id}}" data-type="item">
@@ -2338,7 +2339,7 @@
 
                 {{?it.next || (it.reward && (it.reward.instance || it.reward.emote))}}
                     <div class="next subsection" data-headername="next">
-                        <h3>Unlocks</h3>
+                        <h3>解锁</h3>
                         {{?it.next}}
                             {{~it.next :value:index}}
                                 {{=gt.quest.linkTemplate(value)}}
@@ -2364,7 +2365,7 @@
 
                 {{?it.usedItems || (it.reqs && (it.reqs.instances || it.reqs.quests))}}
                     <div class="requires subsection" data-headername="requires">
-                        <h3>Requires {{?it.reqs.questsType}}{{=it.reqs.questsType}}{{?}}</h3>
+                        <h3>前置条件 {{?it.reqs.questsType}}{{=it.reqs.questsType}}{{?}}</h3>
                         {{?it.reqs && it.reqs.quests}}
                             {{~it.reqs.quests :value:index}}
                                 {{=gt.quest.linkTemplate(value)}}
@@ -2389,11 +2390,11 @@
                 {{?}}
 
                 <div class="npc subsection collapsible" data-headername="npc">
-                    <h3 class="pointer">Involved NPCs</h3>
+                    <h3 class="pointer">相关NPC</h3>
 
                     {{?it.issuer}}
                         <div class="collapse-toggle line block-link pointer hover-highlight" data-id="{{=it.issuer.id}}" data-type="npc">
-                            <span><span class="highlight">{{=it.issuer.name}}</span> <span class="byline involved-text">Issuer{{?it.target && it.issuer.id == it.target.id}}, Target{{?}}</span></span>
+                            <span><span class="highlight">{{=it.issuer.name}}</span> <span class="byline involved-text">发布{{?it.target && it.issuer.id == it.target.id}}, Target{{?}}</span></span>
                             {{?it.issuer.location}}<span class="location right">{{=it.issuer.location}}</span>{{?}}
                             <div class="clear"></div>
                         </div>
@@ -2401,7 +2402,7 @@
 
                     {{?it.target && (!it.issuer || it.target.id != it.issuer.id)}}
                         <div class="collapse-toggle line block-link pointer hover-highlight" data-id="{{=it.target.id}}" data-type="npc">
-                            <span class="highlight">{{=it.target.name}}</span> <span class="byline involved-text">Target</span>
+                            <span class="highlight">{{=it.target.name}}</span> <span class="byline involved-text">提交</span>
                             {{?it.target.location}}<span class="location right">{{=it.target.location}}</span>{{?}}
                             <div class="clear"></div>
                         </div>
@@ -2421,7 +2422,7 @@
 
             <div class="lore-page page">
                 <div class="objectives subsection collapsible" data-headername="objectives">
-                    <h3 class="pointer">Objectives</h3>
+                    <h3 class="pointer">目标</h3>
 
                     {{~it.objectives :value:index}}
                         <div class="objective-entry collapse-toggle">&#x2713; {{=value}}</div>
@@ -2429,7 +2430,7 @@
                 </div>
 
                 <div class="journal subsection collapsible collapsed" data-headername="journal">
-                    <h3 class="pointer">Journal</h3>
+                    <h3 class="pointer">任务笔记</h3>
 
                     {{~it.journal :value:index}}
                         <div class="journal-entry collapse-toggle">
@@ -2440,7 +2441,7 @@
                 </div>
 
                 <div class="dialogue subsection collapsible collapsed" data-headername="dialogue">
-                    <h3 class="pointer">Dialogue</h3>
+                    <h3 class="pointer">对话</h3>
 
                     {{~it.dialogue :value:index}}
                         <div class="dialogue-entry collapse-toggle {{=value.type}}">
@@ -2451,7 +2452,7 @@
 
                 {{?it.talk}}
                     <div class="talk subsection collapsible collapsed" data-headername="talk">
-                        <h3 class="pointer">Talk Dialogue</h3>
+                        <h3 class="pointer">文字对话</h3>
 
                         {{~it.talk :value:index}}
                             {{?value.npc}}
@@ -2482,8 +2483,8 @@
     <script id="block-mob-template" type="text/x-dot-template">
         <div class="midline">
             <div class="menu tab">
-                {{?it.hasInfo}}<div data-page="info-page" class="button">Info</div>{{?}}
-                {{?it.map}}<div data-page="map-page" class="button">Map</div>{{?}}
+                {{?it.hasInfo}}<div data-page="info-page" class="button">信息</div>{{?}}
+                {{?it.map}}<div data-page="map-page" class="button">地图</div>{{?}}
             </div>
         </div>
 
@@ -2528,8 +2529,8 @@
     <script id="block-fishing-template" type="text/x-dot-template">
         <div class="midline">
             <div class="menu tab">
-                <div data-page="fish-page" class="button">Fish</div>
-                {{?it.map}}<div data-page="map-page" class="button">Map</div>{{?}}
+                <div data-page="fish-page" class="button">捕鱼</div>
+                {{?it.map}}<div data-page="map-page" class="button">地图</div>{{?}}
             </div>
         </div>
 
@@ -2557,8 +2558,8 @@
     <script id="block-fate-template" type="text/x-dot-template">
         <div class="midline">
             <div class="menu tab">
-                <div data-page="map-page" class="button">Map</div>
-                <div data-page="info-page" class="button">Info</div>
+                <div data-page="map-page" class="button">地图</div>
+                <div data-page="info-page" class="button">信息</div>
             </div>
         </div>
 
@@ -2567,7 +2568,7 @@
                 {{?it.map}}
                     {{=gt.map.pageTemplate(it.map)}}
                 {{??}}
-                    Somewhere in {{=it.fullLocation}}.  Please submit coordinates!
+                     {{=it.fullLocation}}某地，暂时没有位置，请帮忙补充！
                 {{?}}
             </div>
 
@@ -2577,7 +2578,7 @@
 
                 {{?it.items}}
                     <div class="subsection">
-                        <h3>Rewards</h3>
+                        <h3>奖励</h3>
                         {{~it.items :value:index}}
                             {{=gt.item.halfLinkTemplate(value)}}
                         {{~}}
@@ -2590,8 +2591,8 @@
     <script id="block-node-template" type="text/x-dot-template">
         <div class="midline">
             <div class="menu tab">
-                <div data-page="info-page" class="button">Info</div>
-                {{?it.map}}<div data-page="map-page" class="button">Map</div>{{?}}
+                <div data-page="info-page" class="button">信息</div>
+                {{?it.map}}<div data-page="map-page" class="button">地图</div>{{?}}
             </div>
         </div>
 
@@ -2651,12 +2652,12 @@
     <script id="block-instance-template" type="text/x-dot-template">
         <div class="type midline">
             <div class="menu tab">
-                <div data-page="stats-page" class="button">Stats</div>
+                <div data-page="stats-page" class="button">信息</div>
                 {{?it.treasure || it.coffers || it.rewards}}
-                    <div data-page="treasures-page" class="button">Treasure</div>
+                    <div data-page="treasures-page" class="button">宝箱/div>
                 {{?}}
                 {{?it.fights}}
-                    <div data-page="fights-page" class="button">Fights</div>
+                    <div data-page="fights-page" class="button">战斗</div>
                 {{?}}
             </div>
         </div>
@@ -2667,7 +2668,7 @@
             {{?}}
 
             <div class="stats-page page">
-                <div class="right">{{=it.time}} minutes</div>
+                <div class="right">{{=it.time}} 分钟</div>
 
                 <div class="highlight-green">
                     {{=it.requirements}}
@@ -2698,7 +2699,7 @@
 
                 {{?it.healer || it.tank || it.dps}}
                     <div class="party subsection collapsible" data-headername="party">
-                        <h3 class="pointer">Party</h3>
+                        <h3 class="pointer">小队组成</h3>
                         <div class="party-line collapse-toggle">
                             {{?it.tank}}
                                 <img class="icon" src="images/Tank.png" title="Tank">
@@ -2711,7 +2712,7 @@
                             {{?}}
 
                             {{?it.dps}}
-                                <img class="icon" src="images/DPS.png" title="DPS (Melee {{=it.melee}}, Ranged {{=it.ranged}})">
+                                <img class="icon" src="images/DPS.png" title="DPS (近战 {{=it.melee}}, 远程 {{=it.ranged}})">
                                 <span class="text">{{=it.dps}}</span>
                             {{?}}
                         </div>
@@ -2720,7 +2721,7 @@
 
                 {{?it.requiredForQuest}}
                     <div class="required-for-quest subsection collapsible" data-headername="requiredfor">
-                        <h3 class="pointer">Required For</h3>
+                        <h3 class="pointer">任务要求</h3>
                         {{~it.requiredForQuest :value:index}}
                             {{=gt.quest.linkTemplate(value)}}
                         {{~}}
@@ -2729,7 +2730,7 @@
 
                 {{?it.unlockedByQuest}}
                     <div class="unlocked-by-quest subsection collapsible" data-headername="unlockedby">
-                        <h3 class="pointer">Unlocked By</h3>
+                        <h3 class="pointer">解锁</h3>
                         {{=gt.quest.linkTemplate(it.unlockedByQuest)}}
                     </div>
                 {{?}}
@@ -2740,7 +2741,7 @@
                     {{?it.coffers}}
                         {{~it.coffers :coffer:cindex}}
                             <div class="coffer subsection collapsible collapsed" data-headername="coffer{{=cindex}}">
-                                <h3 class="pointer">Coffer{{?coffer.coords}} ({{=coffer.coords[0]}}, {{=coffer.coords[1]}}){{?}} <span class="right badge">{{=coffer.items.length}}</span></h3>
+                                <h3 class="pointer">宝箱{{?coffer.coords}} ({{=coffer.coords[0]}}, {{=coffer.coords[1]}}){{?}} <span class="right badge">{{=coffer.items.length}}</span></h3>
                                 {{~coffer.items :item:iindex}}
                                     {{=gt.item.halfLinkTemplate(item)}}
                                 {{~}}
@@ -2750,7 +2751,7 @@
 
                     {{?it.rewards}}
                         <div class="other subsection collapsible collapsed" data-headername="other">
-                            <h3 class="pointer">Other Rewards <span class="right badge">{{=it.rewards.length}}</span></h3>
+                            <h3 class="pointer">其他奖励 <span class="right badge">{{=it.rewards.length}}</span></h3>
                             {{~it.rewards :item:index}}
                                 {{=gt.item.halfLinkTemplate(item)}}
                             {{~}}
@@ -2802,7 +2803,7 @@
     <script id="block-action-template" type="text/x-dot-template">
         <div class="content main">
             <div class="right ranges-container">
-                {{?it.range}}<span class="deemphasize">Range</span> {{=it.range}}{{?}}{{?it.size}} <span class="deemphasize">Radius</span> {{=it.size}}{{?}}
+                {{?it.range}}<span class="deemphasize">距离</span> {{=it.range}}{{?}}{{?it.size}} <span class="deemphasize">范围</span> {{=it.size}}{{?}}
             </div>
 
             {{?it.pet}}<div>{{=it.pet}}</div>{{?}}
@@ -2838,7 +2839,7 @@
 
             <div class="description">{{=it.desc}}</div>
 
-            <div><span class="highlight">Affinity</span> {{=it.affinity}}</div>
+            <div><span class="highlight">相关</span> {{=it.affinity}}</div>
 
             {{?it.status}}
                 <div class="separator"></div>
@@ -2853,11 +2854,11 @@
 
             {{?it.comboFrom || it.comboTo}}
                 <div class="combo subsection collapsible" data-headername="combo">
-                    <h3 class="pointer">Combos</h3>
+                    <h3 class="pointer">连击</h3>
 
                     {{?it.comboFrom}}
                         <div class="collapse-toggle block-link hover-highlight line pointer" data-type="action" data-id="{{=it.comboFrom.id}}">
-                            <span class="text right">From Weaponskill</span>
+                            <span class="text right">上一击</span>
                             <img src="{{=it.comboFrom.icon}}" class="icon small">
                             <span class="highlight text">{{=it.comboFrom.name}}</span>
                         </div>
@@ -2866,7 +2867,7 @@
                     {{?it.comboTo}}
                         {{~it.comboTo :combo:cindex}}
                             <div class="collapse-toggle block-link hover-highlight line pointer" data-type="action" data-id="{{=combo.id}}">
-                                <span class="text right">To Weaponskill</span>
+                                <span class="text right">下一击</span>
                                 <img src="{{=combo.icon}}" class="icon small">
                                 <span class="highlight text">{{=combo.name}}</span>
                             </div>
@@ -2877,7 +2878,7 @@
 
             {{?it.traits}}
                 <div class="trait subsection collapsible" data-headername="traits">
-                    <h3 class="pointer">Traits</h3>
+                    <h3 class="pointer">特殊</h3>
 
                     {{~it.traits :trait:tindex}}
                         <div class="collapse-toggle block-link hover-highlight line half pointer" data-type="action" data-id="{{=trait.id}}">
@@ -2898,8 +2899,8 @@
 
             <hr>
 
-            <div><span class="highlight">Category</span> {{=it.category}}</div>
-            <div><span class="highlight">Can Dispel</span> {{?it.canDispel === true}}Yes{{?}}{{?it.canDispel === false}}No{{?}}</div>
+            <div><span class="highlight">类别</span> {{=it.category}}</div>
+            <div><span class="highlight">可自行解除</span> {{?it.canDispel === true}}是{{?}}{{?it.canDispel === false}}否{{?}}</div>
 
             {{?it.status}}
                 <div class="separator"></div>
@@ -2914,11 +2915,11 @@
 
             {{?it.comboFrom || it.comboTo}}
                 <div class="combo subsection collapsible" data-headername="combo">
-                    <h3 class="pointer">Combos</h3>
+                    <h3 class="pointer">连击</h3>
 
                     {{?it.comboFrom}}
                         <div class="collapse-toggle block-link hover-highlight line pointer" data-type="action" data-id="{{=it.comboFrom.id}}">
-                            <span class="text right">From Weaponskill</span>
+                            <span class="text right">上一击</span>
                             <img src="{{=it.comboFrom.icon}}" class="icon small">
                             <span class="highlight text">{{=it.comboFrom.name}}</span>
                         </div>
@@ -2927,7 +2928,7 @@
                     {{?it.comboTo}}
                         {{~it.comboTo :combo:cindex}}
                             <div class="collapse-toggle block-link hover-highlight line pointer" data-type="action" data-id="{{=combo.id}}">
-                                <span class="text right">To Weaponskill</span>
+                                <span class="text right">下一击</span>
                                 <img src="{{=combo.icon}}" class="icon small">
                                 <span class="highlight text">{{=combo.name}}</span>
                             </div>
@@ -2938,7 +2939,7 @@
 
             {{?it.traits}}
                 <div class="trait subsection collapsible" data-headername="traits">
-                    <h3 class="pointer">Traits</h3>
+                    <h3 class="pointer">特殊</h3>
 
                     {{~it.traits :trait:tindex}}
                         <div class="collapse-toggle block-link hover-highlight line half pointer" data-type="action" data-id="{{=trait.id}}">
@@ -2958,7 +2959,7 @@
 
             {{?it.title || it.item}}
                 <div class="rewards subsection">
-                    <h3>Rewards</h3>
+                    <h3>奖励</h3>
 
                     {{?it.title}}
                         <div><span class="name">Title</span>{{=it.title}}</div>
@@ -2977,7 +2978,7 @@
     <script id="tree-craft-template" type="text/x-dot-template">
         <div class="tree">
             <div class="craft-mode line pointer">
-                <span class="text">Mode: Tree</span> <img src="images/Tree.png" class="icon small"> <span class="text action-link">Change crafting display mode.</span>
+                <span class="text">模式: 树状图</span> <img src="images/Tree.png" class="icon small"> <span class="text action-link">改变显示方式</span>
             </div>
 
             {{?!it.showGoals}}
@@ -3107,11 +3108,11 @@
     <script id="flat-craft-template" type="text/x-dot-template">
         <div class="craft-mode line pointer">
             {{?it.amounts}}
-                <span class="text">Mode: Expanded</span> <img src="images/Amount.png" class="icon small">
+                <span class="text">模式: 拓展</span> <img src="images/Amount.png" class="icon small">
             {{??}}
-                <span class="text">Mode: Flat</span> <img src="images/Flat.png" class="icon small">
+                <span class="text">模式: 展开</span> <img src="images/Flat.png" class="icon small">
             {{?}}
-            <span class="text action-link">Change crafting display mode.</span>
+            <span class="text action-link">更改显示方式</span>
         </div>
 
         {{##def.step:s:
@@ -3163,7 +3164,7 @@
         <div class="profit collapsible collapsed" data-headername="profit">
             <h3 class="pointer">{{?it.profit > 0}}Profit{{??}}Loss{{?}} <span class="right">{{=it.profit.toLocaleString()}}</span></h3>
             <div class="line collapse-toggle">
-                <span class="text">Revenue</span>
+                <span class="text">利润</span>
                 <span class="right">
                     <span class="text">{{=it.revenue.toLocaleString()}}</span>
                     <img class="job-icon" src="../files/icons/item/65002.png">
@@ -3171,7 +3172,7 @@
             </div>
             {{?it.expense > 0}}
                 <div class="line collapse-toggle clear">
-                    <span class="text">Expenses</span>
+                    <span class="text">花费</span>
                     <span class="right">
                         <span class="text">-{{=it.expense.toLocaleString()}}</span>
                         <img class="job-icon" src="../files/icons/item/65002.png">
@@ -3180,7 +3181,7 @@
             {{?}}
             <div class="separator collapse-toggle"></div>
             <div class="line collapse-toggle clear">
-                <span class="text">Net Profit</span>
+                <span class="text">净收益</span>
                 <span class="right">
                     <span class="text">{{=it.profit.toLocaleString()}}</span>
                     <img class="job-icon" src="../files/icons/item/65002.png">
@@ -3229,9 +3230,9 @@
         <div class="content main">
             <div>{{=it.type}}/{{=it.id}}</div>
             <br>
-            <div>An error was logged opening this block.  This is usually caused by a bad link or old cached data.  Please use <b>Ctrl+F5</b> or <b>Shift+F5</b> to refresh.  Sorry for the inconvenience.  This block is safe to close.</div>
+            <div>打开此块出现了错误。  大概是坏了的物品数据导致的.  请使用 <b>Ctrl+F5</b> 或 <b>Shift+F5</b> 来强制刷新。  由此造成的不便我们深表歉意。 此块可以关闭。</div>
             <br>
-            <div class="deemphasize">Details: {{=it.exception.message}}</div>
+            <div class="deemphasize">详细错误信息: {{=it.exception.message}}</div>
         </div>
     </script>
 </head>
@@ -3240,8 +3241,8 @@
         <div class="title center">
             <img id="main-logo" src="images/Garland.png" title="The o is silent.">
             <div class="text">
-                <a class="title-link" href="/">Garland Data</a>
-                <div class="subtitle">An unofficial FFXIV database</div>
+                <a class="title-link" href="/">Garland 数据</a>
+                <div class="subtitle">非官方FF14数据库，非官方GarlandTools中文站</div>
                 <a class="patch-link highlight block-link" data-type="patch">[patch link]</a>
             </div>
         </div>
@@ -3261,46 +3262,46 @@
                 </div>
 
                 <div id="search-filters-page" class="content">
-                    <span class="button" id="clear-filters">Clear Filters</span>
+                    <span class="button" id="clear-filters">清除筛选</span>
 
                     <table>
                         <tr>
-                            <td colspan="2"><h3>Item Filters</h3></td>
+                            <td colspan="2"><h3>筛选物品</h3></td>
                         </tr>
                         <tr>
-                            <td><input type="checkbox" class="filter" id="filter-item-craftable"><label for="filter-item-craftable">Craftable</label></td>
-                            <td><input type="checkbox" class="filter" id="filter-item-desynthable"><label for="filter-item-desynthable">Desynthable</label></td>
+                            <td><input type="checkbox" class="filter" id="filter-item-craftable"><label for="filter-item-craftable">可制作</label></td>
+                            <td><input type="checkbox" class="filter" id="filter-item-desynthable"><label for="filter-item-desynthable">可染色</label></td>
                         </tr>
                         <tr>
-                            <td><label for="filter-item-level-min">Item Level</label></td>
+                            <td><label for="filter-item-level-min">物品等级</label></td>
                             <td><input type="number" id="filter-item-level-min" class="filter" min="0" max="9999"> - <input type="number" id="filter-item-level-max" class="filter" min="0" max="9999"></td>
                         </tr>
                         <tr>
-                            <td><label for="filter-item-equippable">Equippable By</label></td>
+                            <td><label for="filter-item-equippable">职业</label></td>
                             <td>
                                 <select id="filter-item-equippable">
-                                    <option value="0">All</option>
+                                    <option value="0">全部</option>
                                 </select>
                             </td>
                         </tr>
                         <tr>
-                            <td><label for="filter-item-category">Category</label></td>
+                            <td><label for="filter-item-category">类别</label></td>
                             <td>
                                 <select id="filter-item-category">
-                                    <option value="0">All</option>
+                                    <option value="0">全部</option>
                                 </select>
                             </td>
                         </tr>
                         <tr>
-                            <td><label for="filter-item-rarity">Rarity</label></td>
+                            <td><label for="filter-item-rarity">稀有度</label></td>
                             <td>
                                 <select id="filter-item-rarity">
-                                    <option value="0" class="normal-color">All</option>
-                                    <option value="1" class="normal-color">Common</option>
-                                    <option value="2" class="rarity2">Uncommon</option>
-                                    <option value="3" class="rarity3">Rare</option>
-                                    <option value="4" class="rarity4">Relic</option>
-                                    <option value="7" class="rarity7">Aetherial</option>
+                                    <option value="0" class="normal-color">全部</option>
+                                    <option value="1" class="normal-color">普通</option>
+                                    <option value="2" class="rarity2">不凡</option>
+                                    <option value="3" class="rarity3">稀有</option>
+                                    <option value="4" class="rarity4">遗物</option>
+                                    <option value="7" class="rarity7">以太</option>
                                 </select>
                             </td>
                         </tr>
@@ -3309,15 +3310,15 @@
 
                 <div class="search-page">
                     <div class="search-pagination">
-                        <span class="button search-previous">Previous Page</span>
-                        <span class="button search-next">Next Page</span>
+                        <span class="button search-previous">上一页</span>
+                        <span class="button search-next">下一页</span>
                     </div>        
 
                     <div class="midline">
                         <div class="menu tab noclose" data-menu-name="search-menu">
-                            <div class="button" data-page="search-list-page">Results</div>
-                            <div class="button" data-page="search-icons-page">Icons</div>
-                            <div id="search-results-count" class="text">Search</div>
+                            <div class="button" data-page="search-list-page">结果</div>
+                            <div class="button" data-page="search-icons-page">图标</div>
+                            <div id="search-results-count" class="text">搜索</div>
                         </div>
                     </div>
 
@@ -3327,13 +3328,13 @@
                     <div class="search-icons-page content has-pages page"></div>
 
                     <div id="search-loading">
-                        <div>Loading...</div>
+                        <div>加载...</div>
                         <img src="images/Atomos.png">
                     </div>
 
                     <div class="search-pagination">
-                        <span class="button search-previous">Previous Page</span>
-                        <span class="button search-next">Next Page</span>
+                        <span class="button search-previous">上一页</span>
+                        <span class="button search-next">下一页</span>
                     </div>
                 </div>
             </div>
@@ -3348,16 +3349,16 @@
         <div class="title">
             <img src="images/Garland.png" title="The o is silent.">
             <div class="text">
-                <a class="title-link" href="/">Garland Data</a>
-                <div class="subtitle">An unofficial FFXIV database</div>
+                <a class="title-link" href="/">Garland 数据</a>
+                <div class="subtitle">非官方FF14数据库，非官方GarlandTools中文站。</div>
                 <a class="patch-link highlight block-link" data-type="patch">[patch link]</a>
             </div>
         </div>
 
         <div class="menu unselectable">
             <img id="toggle-sidebar" src="images/Collapse.png" class="button" title="Toggle Sidebar">
-            <h3 class="button" data-page="database-page">Database</h3>
-            <h3 class="button" data-page="tools-page">Tools</h3>
+            <h3 class="button" data-page="database-page">数据</h3>
+            <h3 class="button" data-page="tools-page">工具</h3>
             <span class="menu-ext">
                 <img src="images/Help.png" class="button" data-page="about-page" title="About"><img src="images/Setting.png" class="button" data-page="settings-page" title="Settings"><img src="images/Links.png" class="button" data-page="links-page" title="Links"><a href="https://discord.gg/hfzmApj"><img src="images/Discord.svg" class="button" title="Discord"></a>
             </span>
@@ -3372,27 +3373,27 @@
             <div class="database-page page actions">
                 <div class="block-link hover-highlight icon-button" data-type="browse" data-id="patch">
                     <img src="images/LatestPatch.png" class="icon small">
-                    <span class="text">Patches</span>
+                    <span class="text">版本</span>
                 </div>
                 <div class="block-link hover-highlight icon-button" data-type="browse" data-id="action">
                     <img src="../files/icons/action/103.png" class="icon small">
-                    <span class="text">Actions</span>
+                    <span class="text">技能</span>
                 </div>
                 <div class="block-link hover-highlight icon-button" data-type="browse" data-id="status">
                     <img src="../files/icons/status/10101.png" class="icon small">
-                    <span class="text">Status Effects</span>
+                    <span class="text">状态与Buff</span>
                 </div>
                 <div class="block-link hover-highlight icon-button" data-type="browse" data-id="achievement">
                     <img src="../files/icons/achievement/3773.png" class="icon small">
-                    <span class="text">Achievements</span>
+                    <span class="text">成就</span>
                 </div>
                 <div class="block-link hover-highlight icon-button" data-type="browse" data-id="instance">
                     <img src="../files/icons/instance/type/61802.png" class="icon small">
-                    <span class="text">Instances</span>
+                    <span class="text">副本</span>
                 </div>
                 <div class="block-link hover-highlight icon-button" data-type="browse" data-id="quest">
                     <img src="../files/icons/journal/61412.png" class="icon small">
-                    <span class="text">Quests</span>
+                    <span class="text">任务</span>
                 </div>
                 <div class="block-link hover-highlight icon-button" data-type="browse" data-id="fate">
                     <img src="../files/icons/fate/Unknown.png" class="icon small">
@@ -3400,15 +3401,15 @@
                 </div>
                 <div class="block-link hover-highlight icon-button" data-type="browse" data-id="leve">
                     <img src="images/Leve.png" class="icon small">
-                    <span class="text">Leves</span>
+                    <span class="text">理符</span>
                 </div>
                 <div class="block-link hover-highlight icon-button" data-type="browse" data-id="node">
                     <img src="../files/icons/job//MIN.png" class="icon small">
-                    <span class="text">Gathering Nodes</span>
+                    <span class="text">采集点</span>
                 </div>
                 <div class="block-link hover-highlight icon-button" data-type="browse" data-id="fishing">
                     <img src="../files/icons/job//FSH.png" class="icon small">
-                    <span class="text">Fishing Spots</span>
+                    <span class="text">渔池</span>
                 </div>
                 <div class="block-link hover-highlight icon-button" data-type="browse" data-id="npc">
                     <img src="images/Shop.png" class="icon small">
@@ -3416,89 +3417,93 @@
                 </div>
                 <div class="block-link hover-highlight icon-button" data-type="browse" data-id="mob">
                     <img src="images/Mob.png" class="icon small">
-                    <span class="text">Mobs</span>
+                    <span class="text">怪物</span>
                 </div>
             </div>
 
             <div class="tools-page page actions">
                 <div class="icon-button hover-highlight" id="new-group">
                     <img src="images/Atomos.png" class="icon small">
-                    <span class="text">New Group</span>
+                    <span class="text">新建组</span>
                 </div>
                 <div class="icon-button hover-highlight" id="new-note">
                     <img src="images/Note.png" class="icon small">
-                    <span class="text">New Note</span>
+                    <span class="text">新建笔记</span>
                 </div>
                 <div class="icon-button block-link hover-highlight" data-id="all" data-type="time">
                     <img src="../files/icons/moon/Full Moon.png" class="icon small">
-                    <span class="text">Eorzea Time</span>
+                    <span class="text">艾欧泽亚时间</span>
                 </div>
                 <div class="icon-button block-link hover-highlight" data-id="all" data-type="skywatcher">
                     <img src="images/Skywatcher.png" class="icon small">
-                    <span class="text">Skywatcher</span>
+                    <span class="text">天气风向标</span>
                 </div>
                 <div class="icon-button block-link hover-highlight" data-id="leveling" data-type="equip">
                     <img src="images/Leveling.png" class="icon small">
-                    <span class="text">Leveling Equipment</span>
+                    <span class="text">练级用装备</span>
                 </div>
                 <div class="icon-button block-link hover-highlight" data-id="end" data-type="equip">
                     <img src="images/Mentor.png" class="icon small">
-                    <span class="text">End Game Equipment</span>
+                    <span class="text">毕业装备</span>
                 </div>
                 <div class="icon-button hover-highlight">
                     <img src="images/Eraser.svg" class="icon small">
-                    <span class="text" id="clear-list">Clear List</span>
+                    <span class="text" id="clear-list">清空列表</span>
                 </div>
             </div>
 
             <div class="content page about-page short">
-                <div id="credits" class="center">Written by Clorifex Ezalor of Zalera, with special thanks to Rogueadyn.  <a href="credits.html">More credits.</a></div>
+                <div id="credits" class="center">
+                    Written by Clorifex Ezalor of Zalera, with special thanks to Rogueadyn.  <a href="credits.html">More credits.</a><br>
+                    中文翻译 &amp; 国服数据维护 by ClayLivince 林文栖@晨曦王座 特别鸣谢：尼齐尔拉斯@神意之地 葛溫德琳@晨曦王座 马范恩@萌芽池
+                </div>
 
-                <h3>Usage</h3>
+                <h3>用法</h3>
                 <ul>
-                    <li>Everything is a block.</li>
-                    <li>Add blocks with search.</li>
-                    <li>Grab a block title to arrange your list.</li>
+                    <li>各种数据使用不同颜色的块来分隔。</li>
+                    <li>搜索物品即可添加物品块。</li>
+                    <li>拖动方块即可改变位置。</li>
                 </ul>
 
                 <h3>FAQ</h3>
-                <div class="question">Can I contribute to the database?</div>
-                Data can be submitted via the <a href="https://docs.google.com/spreadsheets/d/1hEj9KCDv0TT1NiGJ0S7afS4hfGMPb6tetqXQetYETUE/edit">FFXIV Data Spreadsheet</a>.  Please request permission on the sheet with a note on what you'd like to change.
+                <div class="question">我能为数据做出贡献吗？能添加新来源记录吗？</div>
+                国际服：参与编辑这里的表格来贡献数据。 <a href="https://docs.google.com/spreadsheets/d/1hEj9KCDv0TT1NiGJ0S7afS4hfGMPb6tetqXQetYETUE/edit">FFXIV Data Spreadsheet</a>.  请自行向国际服数据维护人员工作组申请权限，并使用英语来贡献条目。
 
                 <div class="separator"></div>
-                <div class="question">Why are there checkboxes next to item sources?</div>
-                These change your preferred crafting source.
+                <div class="question">物品获取方式旁边的打勾点是干什么的？</div>
+                使用这个来选择你更喜欢的获取方式，他们将来会排在前列。
 
                 <div class="separator"></div>
-                <div class="question">Why are some crafting materials HQ?</div>
-                This marks anything directly used by the craft that will increase starting quality.
+                <div class="question">为什么有些物品制造需求HQ原材料？</div>
+                只是展示使用HQ在制作中可以增加多少初始品质。
 
                 <div class="separator"></div>
-                <div class="question">Will the database have everything?</div>
-                Mostly.  Select legacy data is excluded.
+                <div class="question">数据库涵盖游戏所有数据吗？</div>
+                绝大部分，我也没法保证。 有些联动数据可能没有.
 
                 <div class="separator"></div>
-                <div class="question">Why is the interface weird?</div>
-                It's more fun to see stuff swooshing around.  Traditional UIs are boring, and plenty of other sites cover that.
+                <div class="question">这UI好烂！</div>
+                阿巴阿巴阿巴，我只是搬运工。以下是原话。<br> It's more fun to see stuff swooshing around.  Traditional UIs are boring, and plenty of other sites cover that.
 
                 <div class="separator"></div>
-                <div class="question">Do you accept donations?</div>
-                I'm accepting limited donations for server costs.  Please <a href="https://www.patreon.com/bePatron?u=14110588">see my Patreon</a> if you'd like to contribute.
+                <div class="question">欢迎捐助网站原作者</div>
+               他目前接受网站服务器支出相关的捐献， <a href="https://www.patreon.com/bePatron?u=14110588">在Patreon上支持他</a> 如果你想的话。
 
-                <h3>Notices for game images and data</h3>
-                <div>FINAL FANTASY is a registered trademark of Square Enix Holdings Co., Ltd.</div>
-                <div>FINAL FANTASY XIV © 2010 - 2016 SQUARE ENIX CO., LTD. All Rights Reserved.</div>
-                <div>Garland Tools is not affiliated with Square Enix.</div>
+                <h3>游戏图片与数据声明：</h3>
+                <div>FINAL FANTASY， 最终幻想14 是 Square Enix Holdings Co., Ltd. 史克威尔艾尼克斯公司的注册商标。</div>
+                <div>FINAL FANTASY XIV © 2010 - 2016 SQUARE ENIX CO., LTD. All Rights Reserved. 所有权利保留</div>
+                <div>Garland Tools 不属于 Square Enix. Garland Tools 中文站与盛趣游戏无关。</div>
             </div>
 
             <div class="content page links-page short">
-                <h3>General</h3>
+                <h3>友情链接</h3>
                 <ul>
+                    <li><a href="https://ff14.huijiwiki.com/wiki/%E9%A6%96%E9%A1%B5">最终幻想XIV灰机Wiki</a> 提供游戏新闻、详细中文资讯、剧情解析和 wiki.</li>
                     <li><a href="http://gamerescape.com/">gamerescape</a> News, podcasts, lore and wiki.</li>
                     <li><a href="http://www.reddit.com/r/ffxiv">/r/ffxiv</a></li>
                 </ul>
 
-                <h3>External Tools</h3>
+                <h3>其他工具</h3>
                 <ul>
                     <li><a href="https://ffxivteamcraft.com">FFXIV Teamcraft</a> Shared crafting lists.</li>
                     <li><a href="http://ffxiv.ariyala.com">Ariyala's Final Fantasy XIV Toolkit</a></li>
@@ -3512,7 +3517,7 @@
                     <li><a href="http://ff14fish.carbuncleplushy.com/">FFX|V Fish Tracker App</a></li>
                 </ul>
 
-                <h3>Theorycrafting</h3>
+                <h3>制作理论分析</h3>
                 <ul>
                     <li><a href="https://dervyxiv.wordpress.com/">Dervy does Theorycrafting</a> Source for stat weights.</li>
                     <li><a href="http://forum.square-enix.com/ffxiv/threads/185390-Let-s-talk-about-Hunts-a-detailed-rundown-of-their-assumed-mechanics">Let's talk about Hunts</a></li>
@@ -3521,7 +3526,7 @@
                     <li><a href="https://docs.google.com/document/d/1a8YqXavtbljQmK5cBAD725AN-GPxuuhsqg7BhhasNh8/edit">Spiritbonding for Anybody</a></li>
                 </ul>
 
-                <h3>Advanced</h3>
+                <h3>开发人员</h3>
                 <ul>
                     <li><a href="https://github.com/ufx/SaintCoinach">Saint Coinach, Godbert</a> Datamining.</li>
                     <li><a href="http://ffxivexplorer.fragmenterworks.com/">FFXIV Explorer</a> Datamining.</li>
@@ -3534,176 +3539,176 @@
                     <tr><td colspan="4"><h3>Crafting</h3></td></tr>
 
                     <tr>
-                        <td class="value"><input type="number" id="craft-depth-setting" min="1"></td><td><label for="craft-depth-setting">Craft Depth</label></td>
-                        <td colspan="2" class="deemphasize">Crafting lists will not exceed this ingredient depth.  A depth of 1 only shows immediate ingredients.</td>
+                        <td class="value"><input type="number" id="craft-depth-setting" min="1"></td><td><label for="craft-depth-setting">制作层数</label></td>
+                        <td colspan="2" class="deemphasize">制作列表的层数不会超过他的原材料层数。只有一层说明它已经是最终原材料。</td>
                     </tr>
 
                     <tr>
-                        <td class="value"><input type="checkbox" id="shorter-names-setting"></td><td><label for="shorter-names-setting">Shorter Names</label></td>
-                        <td colspan="2" class="deemphasize">Abbreviates location names.  E.g., ST for Southern Thanalan.  Hover over the location to see its full name.</td>
+                        <td class="value"><input type="checkbox" id="shorter-names-setting"></td><td><label for="shorter-names-setting">简称</label></td>
+                        <td colspan="2" class="deemphasize">地名简称。中文并没有. 例如： ST for Southern Thanalan 南萨纳兰.  悬停在简称上即可看到全称.</td>
                     </tr>
 
                     <tr>
-                        <td class="value"><input type="checkbox" id="prefer-miner-ventures-setting"></td><td><label for="prefer-miner-ventures-setting">Miner Ventures</label></td>
-                        <td colspan="2" class="deemphasize">Prefers miner ventures above manual gathering on crafting lists.</td>
+                        <td class="value"><input type="checkbox" id="prefer-miner-ventures-setting"></td><td><label for="prefer-miner-ventures-setting">采矿筹集委托</label></td>
+                        <td colspan="2" class="deemphasize">将采矿雇员探险置于手动采集之前。</td>
                     </tr>
 
                     <tr>
-                        <td class="value"><input type="checkbox" id="prefer-botany-ventures-setting"></td><td><label for="prefer-botany-ventures-setting">Botany Ventures</label></td>
-                        <td colspan="2" class="deemphasize">Prefers botany ventures above manual gathering on crafting lists.</td>
+                        <td class="value"><input type="checkbox" id="prefer-botany-ventures-setting"></td><td><label for="prefer-botany-ventures-setting">园艺筹集委托</label></td>
+                        <td colspan="2" class="deemphasize">将园艺雇员探险置于手动采集之前。</td>
                     </tr>
 
                     <tr>
-                        <td class="value"><input type="checkbox" id="prefer-fisher-ventures-setting"></td><td><label for="prefer-fisher-ventures-setting">Fisher Ventures</label></td>
-                        <td colspan="2" class="deemphasize">Prefers fisher ventures above manual fishing on crafting lists.</td>
+                        <td class="value"><input type="checkbox" id="prefer-fisher-ventures-setting"></td><td><label for="prefer-fisher-ventures-setting">鱼类筹集委托</label></td>
+                        <td colspan="2" class="deemphasize">将鱼类雇员探险置于手动采集之前。</td>
                     </tr>
                     
                     <tr>
-                        <td class="value"><input type="checkbox" id="prefer-combat-ventures-setting"></td><td><label for="prefer-combat-ventures-setting">Combat Ventures</label></td>
-                        <td colspan="2" class="deemphasize">Prefers combat ventures above manual loot drops on crafting lists.</td>
+                        <td class="value"><input type="checkbox" id="prefer-combat-ventures-setting"></td><td><label for="prefer-combat-ventures-setting">战斗筹集委托</label></td>
+                        <td colspan="2" class="deemphasize">将战斗雇员探险置于手动采集之前。</td>
                     </tr>
 
                     <!-- Crafting Categories -->
-                    <tr><td colspan="4"><h3>Crafting Categories</h3></td></tr>
-                    <tr><td colspan="4" class="deemphasize">Categories separate ingredients on crafting lists.  Any not falling into the below are shown under the catchall "Gather" category.</td></tr>
+                    <tr><td colspan="4"><h3>获取方式类别</h3></td></tr>
+                    <tr><td colspan="4" class="deemphasize">物品的获取方式会用以下的类别分类。不属于以下任何一类的内容会被置于 “采集” 中。</td></tr>
 
-                    <tr><td colspan="4"><h4>Uncommon</h4></td></tr>
+                    <tr><td colspan="4"><h4>麻烦</h4></td></tr>
                     <tr>
-                        <td class="value"><input type="checkbox" id="craft-category-desynth" class="craft-category" data-category="Desynthesis / Reduction"></td><td><label for="craft-category-desynth">Desynthesis / Reduction</label></td>
-                        <td class="value"><input type="checkbox" id="craft-category-voyage" class="craft-category" data-category="Voyage"></td><td><label for="craft-category-voyage">Voyage</label></td>
+                        <td class="value"><input type="checkbox" id="craft-category-desynth" class="craft-category" data-category="Desynthesis / Reduction"></td><td><label for="craft-category-desynth">分解 / 从其他物品开出</label></td>
+                        <td class="value"><input type="checkbox" id="craft-category-voyage" class="craft-category" data-category="Voyage"></td><td><label for="craft-category-voyage">部队探险</label></td>
                     </tr>
                     <tr>
-                        <td class="value"><input type="checkbox" id="craft-category-treasure" class="craft-category" data-category="Treasure Map"></td><td><label for="craft-category-treasure">Treasure Map</label></td>
-                        <td class="value"><input type="checkbox" id="craft-category-instance" class="craft-category" data-category="Instance"></td><td><label for="craft-category-instance">Instance</label></td>
+                        <td class="value"><input type="checkbox" id="craft-category-treasure" class="craft-category" data-category="Treasure Map"></td><td><label for="craft-category-treasure">藏宝图</label></td>
+                        <td class="value"><input type="checkbox" id="craft-category-instance" class="craft-category" data-category="Instance"></td><td><label for="craft-category-instance">副本</label></td>
                     </tr>
                     <tr>
-                        <td class="value"><input type="checkbox" id="craft-category-leve" class="craft-category" data-category="Leve"></td><td><label for="craft-category-leve">Leve</label></td>
+                        <td class="value"><input type="checkbox" id="craft-category-leve" class="craft-category" data-category="Leve"></td><td><label for="craft-category-leve">理符</label></td>
                         <td class="value"><input type="checkbox" id="craft-category-fate" class="craft-category" data-category="FATE"></td><td><label for="craft-category-fate">FATE</label></td>
                     </tr>
                     <tr>
-                        <td class="value"><input type="checkbox" id="craft-category-other" class="craft-category" data-category="Other"></td><td><label for="craft-category-other">Other</label></td>
-                        <td class="value"><input type="checkbox" id="craft-category-unknown" class="craft-category" data-category="Unknown"></td><td><label for="craft-category-unknown">Unknown</label></td>
+                        <td class="value"><input type="checkbox" id="craft-category-other" class="craft-category" data-category="Other"></td><td><label for="craft-category-other">其他</label></td>
+                        <td class="value"><input type="checkbox" id="craft-category-unknown" class="craft-category" data-category="Unknown"></td><td><label for="craft-category-unknown">未知</label></td>
                     </tr>
 
-                    <tr><td colspan="4"><h4>Common</h4></td></tr>
+                    <tr><td colspan="4"><h4>通常</h4></td></tr>
                     <tr>
-                        <td class="value"><input type="checkbox" id="craft-category-venture" class="craft-category" data-category="Venture"></td><td><label for="craft-category-venture">Venture</label></td>
-                        <td class="value"><input type="checkbox" id="craft-category-mob" class="craft-category" data-category="Mob"></td><td><label for="craft-category-mob">Mob</label></td>
+                        <td class="value"><input type="checkbox" id="craft-category-venture" class="craft-category" data-category="Venture"></td><td><label for="craft-category-venture">雇员探险</label></td>
+                        <td class="value"><input type="checkbox" id="craft-category-mob" class="craft-category" data-category="Mob"></td><td><label for="craft-category-mob">怪物掉落</label></td>
                     </tr>
 
-                    <tr><td colspan="4"><h4>Purchased</h4></td></tr>
+                    <tr><td colspan="4"><h4>商店</h4></td></tr>
 
                     <tr>
-                        <td class="value"><input type="checkbox" id="craft-category-gil" class="craft-category" data-category="Gil Vendor"></td><td><label for="craft-category-gil">Gil Vendor</label></td>
-                        <td class="value"><input type="checkbox" id="craft-category-currency" class="craft-category" data-category="Currency Vendor"></td><td><label for="craft-category-currency">Currency Vendor</label></td>
+                        <td class="value"><input type="checkbox" id="craft-category-gil" class="craft-category" data-category="Gil Vendor"></td><td><label for="craft-category-gil">金币商人</label></td>
+                        <td class="value"><input type="checkbox" id="craft-category-currency" class="craft-category" data-category="Currency Vendor"></td><td><label for="craft-category-currency">其他货币商人</label></td>
                     </tr>
                     <tr>
-                        <td class="value"><input type="checkbox" id="craft-category-vendor" class="craft-category" data-category="Vendor"></td><td><label for="craft-category-vendor">Vendor</label></td>
-                        <td class="value"><input type="checkbox" id="craft-category-marketboard" class="craft-category" data-category="Marketboard"></td><td><label for="craft-category-marketboard">Marketboard</label></td>
+                        <td class="value"><input type="checkbox" id="craft-category-vendor" class="craft-category" data-category="Vendor"></td><td><label for="craft-category-vendor">商人</label></td>
+                        <td class="value"><input type="checkbox" id="craft-category-marketboard" class="craft-category" data-category="Marketboard"></td><td><label for="craft-category-marketboard">市场布告板</label></td>
                     </tr>
 
                     <!-- Alerts -->
-                    <tr><td colspan="4"><h3>Alerts</h3></td></tr>
+                    <tr><td colspan="4"><h3>闹钟与提示音</h3></td></tr>
                     <tr>
                         <td class="value">
                             <select id="warning-tone">
-                                <option value="none">None</option>
-                                <option value="alarm1">Tone 1</option>
-                                <option value="alarm2">Tone 2</option>
-                                <option value="alarm3">Tone 3</option>
-                                <option value="alarm4">Tone 4</option>
+                                <option value="none">无</option>
+                                <option value="alarm1">铃声 1</option>
+                                <option value="alarm2">铃声 2</option>
+                                <option value="alarm3">铃声 3</option>
+                                <option value="alarm4">铃声 4</option>
                             </select>
                         </td>
-                        <td><label>Warning Tone</label></td>
-                        <td colspan="2" class="deemphasize">Sound this tone two minutes prior to timer availability.  None disables.</td>
+                        <td><label>警示音</label></td>
+                        <td colspan="2" class="deemphasize">此提示音将会在时间到达之前两分钟响起。选择 无 即可禁用该提示音。</td>
                     </tr>
 
                     <tr>
                         <td class="value">
                             <select id="available-tone">
-                                <option value="none">None</option>
-                                <option value="alarm1">Tone 1</option>
-                                <option value="alarm2">Tone 2</option>
-                                <option value="alarm3">Tone 3</option>
-                                <option value="alarm4">Tone 4</option>
+                                <option value="none">无</option>
+                                <option value="alarm1">铃声 1</option>
+                                <option value="alarm2">铃声 2</option>
+                                <option value="alarm3">铃声 3</option>
+                                <option value="alarm4">铃声 4</option>
                             </select>
                         </td>
-                        <td><label>Available Tone</label></td>
-                        <td colspan="2" class="deemphasize">Sound this tone one second prior to availability.  None disables.</td>
+                        <td><label>采集点就绪提示音</label></td>
+                        <td colspan="2" class="deemphasize">此提示音将会在时间到达之前1秒响起。选择 无 即可禁用该提示音。</td>
                     </tr>
 
                     <tr>
-                        <td class="value"><input type="range" id="alarm-volume" value="50" min="0" max="100"></td><td><label>Alarm Volume</label></td>
-                        <td colspan="2" class="deemphasize">Play any audio alarms at this volume.</td>
+                        <td class="value"><input type="range" id="alarm-volume" value="50" min="0" max="100"></td><td><label>提示音音量</label></td>
+                        <td colspan="2" class="deemphasize">所有提示音的音量都在这里管理。</td>
                     </tr>
 
                     <tr>
-                        <td class="value"><input type="checkbox" id="desktop-notifications"></td><td><label>Desktop Notifications</label></td>
-                        <td colspan="2" class="deemphasize">Display desktop notifications for any alerts.</td>
+                        <td class="value"><input type="checkbox" id="desktop-notifications"></td><td><label>桌面通知（发送到Win10通知中心）</label></td>
+                        <td colspan="2" class="deemphasize">显示桌面提示。</td>
                     </tr>
 
                     <tr>
-                        <td class="value"><input type="checkbox" id="eorzea-time-in-title"></td><td><label for="eorzea-time-in-title">Eorzea Time in Title</label></td>
-                        <td colspan="2" class="deemphasize">Shows the Eorzea time in the site's title.</td>
+                        <td class="value"><input type="checkbox" id="eorzea-time-in-title"></td><td><label for="eorzea-time-in-title">显示艾欧泽亚时间</label></td>
+                        <td colspan="2" class="deemphasize">在标题显示艾欧泽亚时间。</td>
                     </tr>
                     <!-- Accessibility -->
-                    <tr><td colspan="4"><h3>Accessibility</h3></td></tr>
+                    <tr><td colspan="4"><h3>无障碍</h3></td></tr>
                     <tr>
-                        <td class="value"><input type="checkbox" id="colorblind-setting"></td><td><label for="colorblind-setting">Colorblind</label></td>
-                        <td colspan="2" class="deemphasize">Alter colors to better suit colorblind users.</td>
+                        <td class="value"><input type="checkbox" id="colorblind-setting"></td><td><label for="colorblind-setting">色盲模式</label></td>
+                        <td colspan="2" class="deemphasize">启动色盲模式。</td>
                     </tr>
 
                     <!-- System -->
-                    <tr><td colspan="4"><h3>System</h3></td></tr>
+                    <tr><td colspan="4"><h3>系统</h3></td></tr>
                     <tr>
-                        <td class="value"><input type="checkbox" id="disable-touch"></td><td><label for="disable-touch">Disable Touch Mode</label></td>
-                        <td colspan="2" class="deemphasize">Disable the auto-detected touch mode for hybrid devices.</td>
+                        <td class="value"><input type="checkbox" id="disable-touch"></td><td><label for="disable-touch">关闭触摸模式</label></td>
+                        <td colspan="2" class="deemphasize">对于二合一设备，关闭检测到的触摸输入。</td>
                     </tr>
 
                     <tr>
-                        <td class="value"><input type="checkbox" id="unlock-heights"></td><td><label for="unlock-heights">Unlock Block Heights</label></td>
-                        <td colspan="2" class="deemphasize">Block heights match the exact size of their contents.</td>
+                        <td class="value"><input type="checkbox" id="unlock-heights"></td><td><label for="unlock-heights">解锁块高度限制</label></td>
+                        <td colspan="2" class="deemphasize">默认情况下，每个显示的方块高度与其中的内容相关。关闭该选项即可解除这个限制。</td>
                     </tr>
 
                     <tr>
-                        <td class="value"><input type="checkbox" id="sort-melds"></td><td><label for="sort-melds">Sort Materia Melds</label></td>
-                        <td colspan="2" class="deemphasize">Automatically sort new materia melds by tier.</td>
+                        <td class="value"><input type="checkbox" id="sort-melds"></td><td><label for="sort-melds">整理魔晶石</label></td>
+                        <td colspan="2" class="deemphasize">按照魔晶石型号自动整理魔晶石</td>
                     </tr>
 
                     <tr>
-                        <td class="value"><input type="checkbox" id="isearch-on-activate"></td><td><label for="isearch-on-activate">/isearch On Activate</label></td>
-                        <td colspan="2" class="deemphasize">Copies /isearch to the clipboard whenever an item block is activated.</td>
+                        <td class="value"><input type="checkbox" id="isearch-on-activate"></td><td><label for="isearch-on-activate">自动复制/isearch 指令</label></td>
+                        <td colspan="2" class="deemphasize">点击一物品块时，自动复制搜索该物品的宏指令/isearch 至剪贴板。</td>
                     </tr>
                 </table>
             </div>
 
             <div class="content page sync-page short">
-                <h3>Server Sync <span class="right">Last sync: <span id="last-sync-time">Never</span></span></h3>
+                <h3>同步列表与设置 <span class="right">上次同步时间: <span id="last-sync-time">从来没有</span></span></h3>
                 
-                <p>Use this feature to store all lists and settings on the Garland Tools server.
-                    Data is synchronized automatically between devices sharing an <b>Account Key</b>.
-                    Please keep it private.  A new key will be assigned if none is provided.</p>
-                <p><b>Upload and Sync</b> will send data on this device to the server.
-                    Any other devices synced with this account key will have their data erased
-                    and replaced with the data on this device.</p>
-                <p><b>Download and Sync</b> will erase everything on this device and replace
-                    it with the data synced with this account key on the server.</p>
-                <p><b>Stop Sync</b> will halt syncing.  All data will stay on the server
-                    indefinitely, to be downloaded again at any time.</p>
-                <p>Use at your own risk!  Your data can not be retrieved once erased!</p>
+                <p>此功能可以存储所有的物品列表与设置到网站服务器。
+                    使用同一个<b>密钥</b>，这些数据可以在不同的设备间完成同步。 
+                    请妥善保存此密钥。如您没有提供密钥，我们将会自动生成一个新的。</p>
+                <p><b>上传并同步</b> 将会上传资料至服务器。
+                    使用此密钥的其他设备上的数据将会被清除，
+                    然后使用刚才上传的此设备上的数据替代。</p>
+                <p><b>下载并同步</b> 将会删除此设备上的资料，
+                    并下载服务器上的资料替代它。</p>
+                <p><b>停止同步</b> 之后将不会再同步。数据将被保留在服务器上，
+                    以便之后需要。</p>
+                <p>请自行承担数据丢失的潜在风险！数据一旦被删除将无法恢复。</p>
 
                 <div>
-                    <label for="account-key">Account Key</label>
+                    <label for="account-key">密钥</label>
                     <input type="text" maxlength="10" id="account-key">
-                    <input type="button" id="upload-sync" value="💻 Upload and Sync">
-                    <input type="button" id="download-sync" value="☁️ Download and Sync">
-                    <input type="button" id="stop-sync" value="🚫 Stop Sync">
+                    <input type="button" id="upload-sync" value="💻 上传并同步">
+                    <input type="button" id="download-sync" value="☁️ 下载并同步">
+                    <input type="button" id="stop-sync" value="🚫 停止同步">
                 </div>
             </div>
         </div>
 
         <div id="list-container" class="unselectable">
-            <span id="lists"></span><span id="new-list" class="list-item">&#9733;New List</span>
+            <span id="lists"></span><span id="new-list" class="list-item">&#9733;新建列表</span>
         </div>
 
         <div id="list-header"></div>

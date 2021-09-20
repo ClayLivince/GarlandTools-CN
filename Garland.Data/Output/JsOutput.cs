@@ -18,9 +18,9 @@ namespace Garland.Data.Output
         UpdatePackage _update;
         ConcurrentDictionary<object, HashSet<int>> _componentsByItemId = new ConcurrentDictionary<object, HashSet<int>>();
         Dictionary<Tuple<string, string>, Dictionary<string, JObject>> _partialsByLangTypeById = new Dictionary<Tuple<string, string>, Dictionary<string, JObject>>();
-        Dictionary<dynamic, dynamic> _ingredientsByItem = new Dictionary<dynamic, dynamic>();
+        ConcurrentDictionary<dynamic, dynamic> _ingredientsByItem = new ConcurrentDictionary<dynamic, dynamic>();
         readonly static JsonConverter[] _converters = new[] { new WrapperConverter() };
-        readonly static string[] _languagesCodes = new[] { "en", "ja", "de", "fr" };
+        readonly static string[] _languagesCodes = new[] { "chs" };
 
         public JsOutput(UpdatePackage update)
         {
@@ -89,13 +89,13 @@ namespace Garland.Data.Output
                 else if (achievement.item != null)
                 {
                     var item = _db.ItemsById[(int)achievement.item];
-                    rewards.Add((string)item.en.name);
+                    rewards.Add((string)item.chs.name);
                 }
 
                 if (rewards.Count > 0)
                     partial.b = string.Join(", ", rewards);
                 else // todo: need to localize this
-                    partial.b = new string(((string)achievement.en.description).Take(50).ToArray());
+                    partial.b = new string(((string)achievement.chs.description).Take(50).ToArray());
 
                 achievements[(string)achievement.id] = partial;
             }
@@ -585,6 +585,8 @@ namespace Garland.Data.Output
             foreach (var id in componentIds)
             {
                 object ingredientItem = _db.ItemsById[id];
+                if (ingredientItem == null)
+                    continue;
                 var ingredient = GetIngredientData(ingredientItem);
                 if (ingredient == null)
                     continue;
@@ -629,10 +631,8 @@ namespace Garland.Data.Output
             dynamic ingredient = new JObject();
 
             ingredient.id = item.id;
-            ingredient.en = new JObject(new JProperty("name", item.en.name));
-            ingredient.ja = new JObject(new JProperty("name", item.ja.name));
-            ingredient.de = new JObject(new JProperty("name", item.de.name));
-            ingredient.fr = new JObject(new JProperty("name", item.fr.name));
+            ingredient.en = new JObject(new JProperty("name", item.chs.name));
+            ingredient.chs = new JObject(new JProperty("name", item.chs.name));
             ingredient.icon = item.icon;
             ingredient.category = item.category;
             ingredient.ilvl = item.ilvl;

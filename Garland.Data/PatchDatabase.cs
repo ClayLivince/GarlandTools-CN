@@ -21,27 +21,27 @@ namespace Garland.Data
 
         static PatchDatabase()
         {
-            ItemPatchCategories[0] = "Equipment: DoW/DoM";
-            ItemPatchCategories[1] = "Equipment: DoH";
-            ItemPatchCategories[2] = "Equipment: DoL";
-            ItemPatchCategories[3] = "Equipment: Glamour";
-            ItemPatchCategories[4] = "Medicine";
-            ItemPatchCategories[5] = "Miscellaneous";
-            ItemPatchCategories[6] = "Meal";
-            ItemPatchCategories[7] = "Fish";
-            ItemPatchCategories[8] = "Dye";
-            ItemPatchCategories[9] = "Housing";
-            ItemPatchCategories[10] = "Materia";
-            ItemPatchCategories[11] = "Minion";
-            ItemPatchCategories[12] = "Gardening";
-            ItemPatchCategories[13] = "Seasonal";
-            ItemPatchCategories[14] = "Triple Triad";
-            ItemPatchCategories[15] = "Airship";
-            ItemPatchCategories[16] = "Orchestrion";
-            ItemPatchCategories[17] = "Mount";
-            ItemPatchCategories[18] = "Equipment: PvP";
-            ItemPatchCategories[19] = "Elemental"; // For materia categories only.
-            ItemPatchCategories[20] = "Painting";
+            ItemPatchCategories[0] = "装备: 战斗精英/魔法导师";
+            ItemPatchCategories[1] = "装备: 能工巧匠";
+            ItemPatchCategories[2] = "装备: 大地使者";
+            ItemPatchCategories[3] = "装备: 时装";
+            ItemPatchCategories[4] = "药品";
+            ItemPatchCategories[5] = "杂货";
+            ItemPatchCategories[6] = "食品";
+            ItemPatchCategories[7] = "水产品";
+            ItemPatchCategories[8] = "染料";
+            ItemPatchCategories[9] = "房屋相关";
+            ItemPatchCategories[10] = "魔晶石";
+            ItemPatchCategories[11] = "宠物";
+            ItemPatchCategories[12] = "栽培用品";
+            ItemPatchCategories[13] = "季节活动";
+            ItemPatchCategories[14] = "九宫幻卡";
+            ItemPatchCategories[15] = "飞空艇/潜水艇部件";
+            ItemPatchCategories[16] = "管弦乐琴相关";
+            ItemPatchCategories[17] = "坐骑";
+            ItemPatchCategories[18] = "装备: PvP";
+            ItemPatchCategories[19] = "元素"; // For materia categories only.
+            ItemPatchCategories[20] = "绘画作品";
 
             ItemPatchCategoryByUICategory[1] = 0; // Pugilist's Arm
             ItemPatchCategoryByUICategory[2] = 0; // Gladiator's Arm

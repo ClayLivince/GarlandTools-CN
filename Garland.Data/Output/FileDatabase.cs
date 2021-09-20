@@ -5,12 +5,13 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections.Concurrent;
 
 namespace Garland.Data.Output
 {
     public static class FileDatabase
     {
-        static Dictionary<string, uint> _hashesByPath = new Dictionary<string, uint>();
+        static ConcurrentDictionary<string, uint> _hashesByPath = new ConcurrentDictionary<string, uint>();
         static bool _ready;
 
         public static void Initialize()

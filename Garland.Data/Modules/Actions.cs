@@ -385,7 +385,7 @@ namespace Garland.Data.Modules
                 trait.affinity = sTrait.ClassJobCategory.Key;
                 trait.lvl = sTrait.Level;
 
-                string desc = trait.en.description;
+                string desc = trait.chs.description;
 
                 // Link traits if the action name appears somewhere in the trait description.
                 foreach (var action in _linkingActions)
@@ -393,7 +393,7 @@ namespace Garland.Data.Modules
                     if (action.job == null)
                         continue;
 
-                    string name = action.en.name;
+                    string name = action.chs.name;
                     if (name == null || !desc.Contains(name))
                         continue;
 

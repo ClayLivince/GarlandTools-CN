@@ -75,7 +75,7 @@ namespace Garland.Data.Statistics
         public void Print()
         {
             foreach (var pair in _itemCostByItemLevel.OrderBy(i => i.Key))
-                DatabaseBuilder.PrintLine($"ilvl: {pair.Key}, cost: {pair.Value.Cost}, item: {pair.Value.Item.en.name}");
+                DatabaseBuilder.PrintLine($"ilvl: {pair.Key}, cost: {pair.Value.Cost}, item: {pair.Value.Item.chs.name}");
         }
 
         private class ItemCost

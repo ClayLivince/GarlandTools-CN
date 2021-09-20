@@ -31,25 +31,25 @@ namespace Garland.Data.Output
         {
             // Items
             foreach (var item in _db.Items)
-                WriteIndex(item, "item", (string)item.en.name, (string)item.fr.name, (string)item.de.name, (string)item.ja.name);
+                WriteIndex(item, "item", (string)item.chs.name);
 
             // Nodes
             foreach (var node in _db.Nodes)
-                WriteIndex(node, "node", (string)node.name, null, null, null);
+                WriteIndex(node, "node", (string)node.name);
 
             // Fishing Spots
             foreach (var spot in _db.FishingSpots)
-                WriteIndex(spot, "fishing", (string)spot.en.name, (string)spot.fr.name, (string)spot.de.name, (string)spot.ja.name);
+                WriteIndex(spot, "fishing", (string)spot.chs.name);
 
             // Mobs
             foreach (var mob in _db.Mobs)
-                WriteIndex(mob, "mob", (string)mob.en.name, (string)mob.fr.name, (string)mob.de.name, (string)mob.ja.name);
+                WriteIndex(mob, "mob", (string)mob.chs.name);
 
             // NPCs
             var npcNamesUsed = new HashSet<string>();
             foreach (var npc in _db.Npcs)
             {
-                var key = (string)npc.en.name;
+                var key = (string)npc.chs.name;
 
                 // NPCs only need to appear once per name.  Skip duplicates.
                 // Alternate instances can be looked up via the alts UI.
@@ -61,36 +61,36 @@ namespace Garland.Data.Output
                 // todo: localize title too
                 if (npc.title != null)
                     key += " " + (string)npc.title;
-                WriteIndex(npc, "npc", key, (string)npc.fr.name, (string)npc.de.name, (string)npc.ja.name);
+                WriteIndex(npc, "npc", key);
             }
 
             // Actions
             foreach (var action in _db.Actions)
-                WriteIndex(action, "action", (string)action.en.name, (string)action.fr.name, (string)action.de.name, (string)action.ja.name);
+                WriteIndex(action, "action", (string)action.chs.name);
 
             // Leves
             foreach (var leve in _db.Leves)
-                WriteIndex(leve, "leve", (string)leve.en.name, (string)leve.fr.name, (string)leve.de.name, (string)leve.ja.name);
+                WriteIndex(leve, "leve", (string)leve.chs.name);
 
             // Quests
             foreach (var quest in _db.Quests)
-                WriteIndex(quest, "quest", (string)quest.en.name, (string)quest.fr.name, (string)quest.de.name, (string)quest.ja.name);
+                WriteIndex(quest, "quest", (string)quest.chs.name);
 
             // Achievements
             foreach (var achievement in _db.Achievements)
-                WriteIndex(achievement, "achievement", (string)achievement.en.name, (string)achievement.fr.name, (string)achievement.de.name, (string)achievement.ja.name);
+                WriteIndex(achievement, "achievement", (string)achievement.chs.name);
 
             // Instances
             foreach (var instance in _db.Instances)
-                WriteIndex(instance, "instance", (string)instance.en.name, (string)instance.fr.name, (string)instance.de.name, (string)instance.ja.name);
+                WriteIndex(instance, "instance", (string)instance.chs.name);
 
             // Fates
             foreach (var fate in _db.Fates)
-                WriteIndex(fate, "fate", (string)fate.en.name, (string)fate.fr.name, (string)fate.de.name, (string)fate.ja.name);
+                WriteIndex(fate, "fate", (string)fate.chs.name);
 
             // Statuses
             foreach (var status in _db.Statuses)
-                WriteIndex(status, "status", (string)status.en.name, (string)status.fr.name, (string)status.de.name, (string)status.ja.name);
+                WriteIndex(status, "status", (string)status.chs.name);
         }
 
         void WriteItems()
@@ -143,21 +143,13 @@ namespace Garland.Data.Output
                 _update.Include(recipeRow);
         }
 
-        void WriteIndex(dynamic obj, string type, string key_en, string key_fr, string key_de, string key_ja)
+        void WriteIndex(dynamic obj, string type, string key_chs)
         {
             var id = (string)obj.id;
 
-            if (!string.IsNullOrEmpty(key_en))
-                _update.Include(new SearchRow() { Id = id, Type = type, Lang = "en", Name = key_en, Json = JsonConvert.SerializeObject(GetSearchPartial(obj, type, "en", id)) });
+            if (!string.IsNullOrEmpty(key_chs))
+                _update.Include(new SearchRow() { Id = id, Type = type, Lang = "chs", Name = key_chs, Json = JsonConvert.SerializeObject(GetSearchPartial(obj, type, "chs", id)) });
 
-            if (!string.IsNullOrEmpty(key_fr))
-                _update.Include(new SearchRow() { Id = id, Type = type, Lang = "fr", Name = key_fr, Json = JsonConvert.SerializeObject(GetSearchPartial(obj, type, "fr", id)) });
-
-            if (!string.IsNullOrEmpty(key_de))
-                _update.Include(new SearchRow() { Id = id, Type = type, Lang = "de", Name = key_de, Json = JsonConvert.SerializeObject(GetSearchPartial(obj, type, "de", id)) });
-
-            if (!string.IsNullOrEmpty(key_ja))
-                _update.Include(new SearchRow() { Id = id, Type = type, Lang = "ja", Name = key_ja, Json = JsonConvert.SerializeObject(GetSearchPartial(obj, type, "ja", id)) });
         }
 
         dynamic GetSearchPartial(dynamic obj, string type, string lang, string id)
