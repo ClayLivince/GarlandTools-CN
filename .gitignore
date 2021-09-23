@@ -20,3 +20,4 @@ Garland.Server/schema/keystore.sql
 Garland.Server/garland.conf
 Garland.Server/nginx-files.garlandtools.org.conf
 Garland.Server/nginx-garlandtools.org.conf
+Garland.Server/api/config.php

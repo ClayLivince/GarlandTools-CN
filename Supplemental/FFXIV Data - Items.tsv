@@ -62,7 +62,7 @@ Landborne Aethersand	Reduce	Radiant Fire Moraine	Radiant Lightning Moraine
 Leafborne Aethersand	Reduce	Humic Soil	Wild Sage										
 Seaborne Aethersand	Reduce	Thaliak Caiman	Tupuxuara										
 Light-kissed Aethersand	Reduce	Lover's Laurel	Radiant Astral Moraine										
-Dawnlight Aethersand	Reduce	Schorl	Countess Tea	Snow Crab									
+Dawnlight Aethersand	Reduce	Schorl	Countess Tea Leaves	Snow Crab									
 Everbright Aethersand	Reduce	Dacite											
 Dusklight Aethersand	Reduce	Doman Yellow	Rhodolite	False Scad									
 Everdeep Aethersand	Reduce	Sweatfish											
@@ -83,8 +83,8 @@ Lightning Cluster	Reduce	Bright Lightning Rock	Lightning Moraine	Radiant Lightni
 Lightning Crystal	Reduce	Bright Lightning Rock	Lightning Moraine	Radiant Lightning Moraine	Schorl	Yanxian Verbena	Solarite	Levin Mint					
 Water Cluster	Reduce	Radiant Astral Moraine	Dacite	Gale Rock	Poecilia								
 Water Crystal	Reduce	Radiant Astral Moraine	Dacite	Gale Rock	Poecilia								
-Wind Cluster	Reduce	Wild Sage	Water Mint	Pot marjoram	Countess Tea	Yanxian Soil	Sweet Marjoram						
-Wind Crystal	Reduce	Wild Sage	Water Mint	Pot marjoram	Countess Tea	Yanxian Soil	Sweet Marjoram						
+Wind Cluster	Reduce	Wild Sage	Water Mint	Pot marjoram	Countess Tea Leaves	Yanxian Soil	Sweet Marjoram						
+Wind Crystal	Reduce	Wild Sage	Water Mint	Pot marjoram	Countess Tea Leaves	Yanxian Soil	Sweet Marjoram						
 Levinstrike Aethersand	Reduce	Levin Mint	Thunder Rock	Fuchsia Bloom									
 Fire Shard	Loot	Timeworn Leather Map	Timeworn Goatskin Map	Timeworn Toadskin Map	Timeworn Boarskin Map	Timeworn Peisteskin Map							
 Ice Shard	Loot	Timeworn Leather Map	Timeworn Goatskin Map	Timeworn Toadskin Map	Timeworn Boarskin Map	Timeworn Peisteskin Map							
@@ -481,7 +481,7 @@ Wind Silk Wedge Cap	Loot	Iron-trimmed Sack
 Wind-up Edda	Loot	Iron-trimmed Sack	Silver-trimmed Sack	Gold-trimmed Sack									
 Abigail Barding	Loot	Silver-trimmed Sack	Gold-trimmed Sack										
 Inferno Blade	Loot	Silver-trimmed Sack											
-Inferno Claws 	Loot	Silver-trimmed Sack											
+Inferno Claws	Loot	Silver-trimmed Sack											
 Inferno Battleaxe	Loot	Silver-trimmed Sack											
 Inferno Harpoon	Loot	Silver-trimmed Sack											
 Inferno Bow	Loot	Silver-trimmed Sack											
@@ -603,7 +603,7 @@ Night Pegasus Whistle	Loot	Gold-trimmed Sack
 Ona Ramuhda First Edition	Loot	Gold-trimmed Sack											
 Replica High Allagan Blade	Loot	Gold-trimmed Sack											
 The Law of Levin First Edition	Loot	Gold-trimmed Sack											
-Baby Bombfish	Loot	Silver-haloed Sack											
+Bombfish	Loot	Silver-haloed Sack											
 Baby Brachiosaur	Loot	Silver-haloed Sack											
 Black Cherry Blossom Corsage	Loot	Silver-haloed Sack											
 Blissful Barding	Loot	Silver-haloed Sack											
@@ -716,7 +716,7 @@ Sword of the Round	Loot	Platinum-haloed Sack
 The Open Box Orchestrion Roll	Loot	Platinum-haloed Sack											
 Word of the Fiend	Loot	Platinum-haloed Sack											
 Cracked Cluster	Loot	Anemos Lockbox	Pagos Lockbox										
-Eureka Potion	Loot	Anemos Lockbox	Pagos Lockbox	Pyros Lockbox									
+Eurekan Potion	Loot	Anemos Lockbox	Pagos Lockbox	Pyros Lockbox									
 Savage Aim Materia VI	Loot	Anemos Lockbox	Pagos Lockbox	Pyros Lockbox	Hydatos Lockbox								
 Savage Might Materia VI	Loot	Anemos Lockbox	Pagos Lockbox	Pyros Lockbox	Hydatos Lockbox								
 Heavens' Eye Materia VI	Loot	Anemos Lockbox	Pagos Lockbox	Pyros Lockbox	Hydatos Lockbox								
@@ -996,7 +996,7 @@ Modern Aesthetics - Saintly Style	Loot	Fête Present
 Born of the Boughs - The Theme of Gridania Orchestrion Roll	Loot	Fête Present											
 Fealty Orchestrion Roll	Loot	Fête Present											
 Hearthward Orchestrion Roll	Loot	Fête Present											
-Heavens' Ward Orchestrion Roll	Loot	Fête Present											
+The Heavens' Ward Orchestrion Roll	Loot	Fête Present											
 Navigator's Glory - The Theme of Limsa Lominsa Orchestrion Roll	Loot	Fête Present											
 Paradise Found Orchestrion Roll	Loot	Fête Present											
 Stone and Steel Orchestrion Roll	Loot	Fête Present											
@@ -2581,7 +2581,7 @@ Cid Garlond Card	Loot	Gold Triad Card
 Leviathan Card	Loot	Gold Triad Card	Bronze Rowena Cup Classic Card	Silver Rowena Cup Classic Card	Gold Rowena Cup Classic Card								
 Ramuh Card	Loot	Gold Triad Card	Silver Tournament of Champions Card										
 Shiva Card	Loot	Gold Triad Card	Platinum Triad Card	Bronze Spinner's Pull Card									
-The Ultima Weapon Card	Loot	Gold Triad Card	Platinum Triad Card	Gold Spinner's Pull Card	Gold Tournament of Champions Card								
+Ultima Weapon Card	Loot	Gold Triad Card	Platinum Triad Card	Gold Spinner's Pull Card	Gold Tournament of Champions Card								
 Kan-E-Senna Card	Loot	Gold Triad Card											
 Merlwyb Bloefhiswyn Card	Loot	Gold Triad Card											
 Raubahn Aldynn Card	Loot	Gold Triad Card											
@@ -2633,8 +2633,8 @@ Philia Card	Instance	Holminster Switch
 Eros Card	Instance	The Qitana Ravel											
 Storge Card	Instance	Malikah's Well											
 Seeker of Solitude Card	Instance	The Grand Cosmos											
-Unknown	Instance	Anamnesis Anyder											
-Mother Porxie	Instance	Matoya's Relict											
+Unknown Card	Instance	Anamnesis Anyder											
+Mother Porxie Card	Instance	Matoya's Relict											
 Lunar Bahamut Card	Instance	Paglth'an											
 # TRIALS													
 ## Normal mode													
@@ -2646,7 +2646,7 @@ Stormblood Gilgamesh Card	Instance	Kugane Ohashi
 Titania Card	Instance	The Dancing Plague	The Dancing Plague (Extreme)										
 Innocence Card	Instance	The Crown Of The Immaculate	The Crown Of The Immaculate (Extreme)										
 Hades Card	Instance	The Dying Gasp	The Minstrel's Ballad: Hades's Elegy										
-The Ruby Weapon Card	Instance	Cinder Drift	Cinder Drift (Extreme)										
+Ruby Weapon Card	Instance	Cinder Drift	Cinder Drift (Extreme)										
 Shadowbringers Warrior of Light Card	Instance	The Seat of Sacrifice	The Seat of Sacrifice (Extreme)										
 Emerald Weapon Card	Instance	Castrum Marinum	Castrum Marinum (Extreme)										
 Diamond Weapon Card	Instance	The Cloud Deck	The Cloud Deck (Extreme)										
@@ -2724,9 +2724,9 @@ Bronze-trimmed Sack	Instance	The Palace of the Dead (Floors 1-10)	The Palace of 
 Iron-trimmed Sack	Instance	The Palace of the Dead (Floors 51-60)	The Palace of the Dead (Floors 61-70)	The Palace of the Dead (Floors 71-80)	The Palace of the Dead (Floors 81-90)	The Palace of the Dead (Floors 91-100)							
 Silver-trimmed Sack	Instance	The Palace of the Dead (Floors 101-110)	The Palace of the Dead (Floors 111-120)	The Palace of the Dead (Floors 121-130)	The Palace of the Dead (Floors 131-140)	The Palace of the Dead (Floors 141-150)							
 Gold-trimmed Sack	Instance	The Palace of the Dead (Floors 151-160)	The Palace of the Dead (Floors 161-170)	The Palace of the Dead (Floors 171-180)	The Palace of the Dead (Floors 181-190)	The Palace of the Dead (Floors 191-200)							
-Silver-haloed Sack	Instance	Heaven-on-High (Floors 1-10)	Heaven-on-High (Floors 11-20)	Heaven-on-High (Floors 21-30)									
-Gold-haloed Sack	Instance	Heaven-on-High (Floors 31-40)	Heaven-on-High (Floors 41-50)	Heaven-on-High (Floors 51-60)	Heaven-on-High (Floors 61-70)								
-Platinum-haloed Sack	Instance	Heaven-on-High (Floors 71-80)	Heaven-on-High (Floors 81-90)	Heaven-on-High (Floors 91-100)									
+Silver-haloed Sack	Instance	Heaven-on-High  (Floors 1-10)	Heaven-on-High  (Floors 11-20)	Heaven-on-High  (Floors 21-30)									
+Gold-haloed Sack	Instance	Heaven-on-High  (Floors 31-40)	Heaven-on-High  (Floors 41-50)	Heaven-on-High  (Floors 51-60)	Heaven-on-High  (Floors 61-70)								
+Platinum-haloed Sack	Instance	Heaven-on-High  (Floors 71-80)	Heaven-on-High  (Floors 81-90)	Heaven-on-High  (Floors 91-100)									
 Ratanhia Leaves	Instance	The Lost Canals of Uznair											
 Wind-up Namazu	Instance	The Lost Canals of Uznair	The Hidden Canals of Uznair										
 Nagxian Silk	Instance	The Lost Canals of Uznair	The Hidden Canals of Uznair										
@@ -2770,7 +2770,7 @@ Wind-up Fuath	Instance	The Dungeons of Lyhe Ghiah
 Ballroom Etiquette - Decadent Decoration	Instance	The Shifting Oubliettes of Lyhe Ghiah											
 Everywhere and Nowhere Orchestrion Roll	Instance	The Shifting Oubliettes of Lyhe Ghiah											
 Golden Beaver	Instance	The Shifting Oubliettes of Lyhe Ghiah											
-Unmatching Pieces	Instance	The Shifting Oubliettes of Lyhe Ghiah											
+Unmatching Pieces Orchestrion Roll	Instance	The Shifting Oubliettes of Lyhe Ghiah											
 Allagan Melon	Gardening	Allagan Melon Seeds											
 Blue Oldroses	Gardening	Oldrose Seeds											
 Yellow Oldroses	Gardening	Oldrose Seeds											
@@ -2984,7 +2984,7 @@ The Ludus Orchestrion Roll	Instance	Halatali
 The Maiden's Lament Orchestrion Roll	Instance	Haukke Manor											
 Abomination Orchestrion Roll	Instance	Cutter's Cry											
 The Darkhold Orchestrion Roll	Instance	Dzemael Darkhold											
-A Tonberry’s Tears Orchestrion Roll	Instance	The Wanderer's Palace											
+A Tonberry's Tears Orchestrion Roll	Instance	The Wanderer's Palace											
 Beneath Bloodied Banners Orchestrion Roll	Instance	Halatali (Hard)											
 Fury Orchestrion Roll	Instance	Brayflox's Longstop (Hard)											
 Upon the Rocks Orchestrion Roll	Instance	Pharos Sirius (Hard)											
@@ -3117,7 +3117,7 @@ Weight of the World (Prelude Version) Orchestrion Roll	Instance	The Copied Facto
 2P Automaton	Instance	The Puppets' Bunker											
 End of the Unknown Orchestrion Roll	Instance	The Puppets' Bunker											
 Fortress of Lies Orchestrion Roll	Instance	The Puppets' Bunker											
-Grandma - Destruction Orchestrion Roll	Instance	The Puppets' Bunker											
+Grandma (Destruction) Orchestrion Roll	Instance	The Puppets' Bunker											
 Torn from the Heavens/The Dark Colossus Destroys All (Medley Version) Orchestrion Roll	Instance	The Puppets' Bunker											
 2B Card	Instance	The Tower at Paradigm's Breach											
 9S Automaton	Instance	The Tower at Paradigm's Breach											

@@ -143,6 +143,11 @@ namespace Garland.Data.Modules
         {
             var comma = new string[] { ", " };
 
+            Dictionary<string, string> badPlaceNames = new Dictionary<string, string> {
+                {"The Kobayashi Maru", "The <Emphasis>Kobayashi Maru</Emphasis>" },
+                {"The Adventure", "The <Emphasis>Adventure</Emphasis>" },
+            };
+
             dynamic currentFishingSpot = null;
             JArray currentFishingSpotItems = null;
             dynamic currentNode = null;
@@ -153,14 +158,29 @@ namespace Garland.Data.Modules
             foreach (var rLine in lines.Skip(1))
             {
                 // Line data
-                var name = rLine[0];
+                var name = rLine[0].Trim();
+
+                // Deal with Bad place names
+
 
                 string nameChs = "Not Found";
                 try {
                     nameChs = clayManager.getPlaceNameChs(name);
-                } catch (NotSupportedException e){
+                } catch (NotSupportedException e)
+                {
                     //Console.WriteLine(e.Message);
                     //Console.WriteLine(e.StackTrace);
+
+                    if (name.Equals("Sea of Clouds"))
+                    {
+                        Console.WriteLine(e.Message);
+                        Console.WriteLine(e.StackTrace);
+                    }
+
+                    if (badPlaceNames.ContainsKey(name))
+                    {
+                        nameChs = clayManager.getPlaceNameChs(badPlaceNames[name]);
+                    }
                 }
                 
                 if (_fishingSpotsByName.TryGetValue(nameChs, out var fishingSpot))

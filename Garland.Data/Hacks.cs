@@ -27,49 +27,59 @@ namespace Garland.Data
         public static string GetShopName(ScriptInstruction si)
         {
             if (si.Label.Contains("FCCSHOP"))
-                return "Spend company credits (items)";
+                return "军票兑换 (物品)";
             else if (si.Label == "MOBSHOP1")
-                return "Exchange Centurio Seals";
+                return "兵团徽章交易";
             else if (si.Label == "MOBSHOP2")
-                return "Exchange Centurio Seals (Advanced)";
+                return "兵团徽章交易 (高级)";
             else if (si.Label == "SHOP_SPOIL")
-                return "Exchange Spoils";
+                return "通货交易";
             else if (si.Label == "SPECIAL_SHOP0" && si.Argument == 1769813)
-                return "Achievement Rewards";
+                return "成就币交易";
             else if (si.Label == "SPECIAL_SHOP1" && si.Argument == 1769845)
-                return "Achievement Rewards 2";
+                return "成就币交易";
             else if (si.Label == "SPECIAL_SHOP2" && si.Argument == 1769846)
-                return "Achievement Rewards 3";
+                return "成就币交易";
             else if (si.Label == "SHOP_0" && si.Argument == 1769842)
-                return "Gold Certificates of Commendation";
+                return "库洛奖状：金奖交换";
             else if (si.Label == "SHOP_1" && si.Argument == 1769841)
-                return "Silver Certificates of Commendation";
+                return "库洛奖状：银奖交换";
             else if (si.Label == "SHOP_2" && si.Argument == 1769956)
-                return "Bronze Certificates of Commendation";
+                return "库洛奖状：铜奖交换";
             else if (si.Label == "SHOP" && si.Argument == 1769812)
-                return "PVP Rewards";
+                return "PVP 奖励";
             else if (si.Label == "REPLICA_SHOP0" && si.Argument == 262918)
-                return "Purchase a Eureka weapon replica (DoW).";
+                return "复制禁地兵装（战斗精英）";
             else if (si.Label == "REPLICA_SHOP1" && si.Argument == 262922)
-                return "Purchase a Eureka weapon replica (DoM).";
+                return "复制禁地兵装（魔法导师）";
             else if (si.Label == "FREE_SHOP_BATTLE" && si.Argument == 1769898)
-                return "Battle Achievement Rewards";
+                return "成就奖励 战斗";
             else if (si.Label == "FREE_SHOP_PVP" && si.Argument == 1769899)
-                return "PvP Achievement Rewards";
+                return "成就奖励 玩家对战";
             else if (si.Label == "FREE_SHOP_CHARACTER" && si.Argument == 1769900)
-                return "Character Achievement Rewards";
+                return "成就奖励 角色";
             else if (si.Label == "FREE_SHOP_ITEM" && si.Argument == 1769901)
-                return "Item Achievement Rewards";
+                return "成就奖励 道具";
             else if (si.Label == "FREE_SHOP_CRAFT" && si.Argument == 1769902)
-                return "Crafting Achievement Rewards";
+                return "成就奖励 制作";
             else if (si.Label == "FREE_SHOP_GATHERING" && si.Argument == 1769903)
-                return "Gathering Achievement Rewards";
+                return "成就奖励 采集";
             else if (si.Label == "FREE_SHOP_QUEST" && si.Argument == 1769904)
-                return "Quest Achievement Rewards";
+                return "成就奖励 任务";
             else if (si.Label == "FREE_SHOP_EXPLORATION" && si.Argument == 1769905)
-                return "Exploration Achievement Rewards";
+                return "成就奖励 探索";
             else if (si.Label == "FREE_SHOP_GRANDCOMPANY" && si.Argument == 1769906)
-                return "Grand Company Achievement Rewards";
+                return "成就奖励 大国防联军";
+
+            else if (si.Label == "SPSHOP_HANDLER_ID" && si.Argument == 1770041)
+                return "天穹街振兴票";
+            else if (si.Label == "SPSHOP2_HANDLER_ID" && si.Argument == 1770281)
+                return "天穹街振兴票（装备·家具）";
+            else if (si.Label == "SPSHOP3_HANDLER_ID" && si.Argument == 1770301)
+                return "天穹街振兴票（素材·魔晶石·消耗品）";
+            else if (si.Label == "SPSHOP4_HANDLER_ID" && si.Argument == 1770343)
+                return "庆典参加证书";
+
             else
             {
                 DatabaseBuilder.PrintLine($"Unknown shop label {si.Label}, arg {si.Argument}.");
@@ -91,7 +101,7 @@ namespace Garland.Data
             if (name.Length == 0)
                 return true;
 
-            if (name.StartsWith("Dated"))
+            if (name.StartsWith("过期"))
                 return true;
 
             return false;
@@ -118,32 +128,32 @@ namespace Garland.Data
 
             var eunakotor = new ENpc[] { sENpcs[1017338] };
             shopsByKey[1769675].ENpcs = eunakotor;
-            shopsByKey[1769869].Fill("Request to keep your aetherpool gear", eunakotor);
+            shopsByKey[1769869].Fill("将装备带出死者宫殿", eunakotor);
 
             var disreputablePriest = new ENpc[] { sENpcs[1018655] };
             shopsByKey[1769743].Fill("Exchange Wolf Marks (Melee)", disreputablePriest);
             shopsByKey[1769744].Fill("Exchange Wolf Marks (Ranged)", disreputablePriest);
 
             var eurekaGerolt = new ENpc[] { sENpcs[1025047] };
-            shopsByKey[1769820].Fill("Create or augment Eureka gear. (Paladin)", eurekaGerolt);
-            shopsByKey[1769821].Fill("Create or augment Eureka gear. (Warrior)", eurekaGerolt);
-            shopsByKey[1769822].Fill("Create or augment Eureka gear. (Dark Knight)", eurekaGerolt);
-            shopsByKey[1769823].Fill("Create or augment Eureka gear. (Dragoon)", eurekaGerolt);
-            shopsByKey[1769824].Fill("Create or augment Eureka gear. (Monk)", eurekaGerolt);
-            shopsByKey[1769825].Fill("Create or augment Eureka gear. (Ninja)", eurekaGerolt);
-            shopsByKey[1769826].Fill("Create or augment Eureka gear. (Samurai)", eurekaGerolt);
-            shopsByKey[1769827].Fill("Create or augment Eureka gear. (Bard)", eurekaGerolt);
-            shopsByKey[1769828].Fill("Create or augment Eureka gear. (Machinist)", eurekaGerolt);
-            shopsByKey[1769829].Fill("Create or augment Eureka gear. (Black Mage)", eurekaGerolt);
-            shopsByKey[1769830].Fill("Create or augment Eureka gear. (Summoner)", eurekaGerolt);
-            shopsByKey[1769831].Fill("Create or augment Eureka gear. (Red Mage)", eurekaGerolt);
-            shopsByKey[1769832].Fill("Create or augment Eureka gear. (White Mage)", eurekaGerolt);
-            shopsByKey[1769833].Fill("Create or augment Eureka gear. (Scholar)", eurekaGerolt);
-            shopsByKey[1769834].Fill("Create or augment Eureka gear. (Astrologian)", eurekaGerolt);
+            shopsByKey[1769820].Fill("制作或强化禁地兵装（骑士）", eurekaGerolt);
+            shopsByKey[1769821].Fill("制作或强化禁地兵装（战士）", eurekaGerolt);
+            shopsByKey[1769822].Fill("制作或强化禁地兵装（暗黑骑士）", eurekaGerolt);
+            shopsByKey[1769823].Fill("制作或强化禁地兵装（龙骑士）", eurekaGerolt);
+            shopsByKey[1769824].Fill("制作或强化禁地兵装（武僧）", eurekaGerolt);
+            shopsByKey[1769825].Fill("制作或强化禁地兵装（忍者）", eurekaGerolt);
+            shopsByKey[1769826].Fill("制作或强化禁地兵装（武士）", eurekaGerolt);
+            shopsByKey[1769827].Fill("制作或强化禁地兵装（吟游诗人）", eurekaGerolt);
+            shopsByKey[1769828].Fill("制作或强化禁地兵装（机工士）", eurekaGerolt);
+            shopsByKey[1769829].Fill("制作或强化禁地兵装（黑魔法师）", eurekaGerolt);
+            shopsByKey[1769830].Fill("制作或强化禁地兵装（召唤师）", eurekaGerolt);
+            shopsByKey[1769831].Fill("制作或强化禁地兵装（赤魔法师）", eurekaGerolt);
+            shopsByKey[1769832].Fill("制作或强化禁地兵装（白魔法师）", eurekaGerolt);
+            shopsByKey[1769833].Fill("制作或强化禁地兵装（学者）", eurekaGerolt);
+            shopsByKey[1769834].Fill("制作或强化禁地兵装（占星术士）", eurekaGerolt);
 
             var confederateCustodian = new ENpc[] { sENpcs[1025848] };
-            shopsByKey[1769871].Fill("Exchange artifacts", confederateCustodian);
-            shopsByKey[1769870].Fill("Request to keep your empyrean aetherpool gear", confederateCustodian);
+            shopsByKey[1769871].Fill("天之陶器碎片兑换", confederateCustodian);
+            shopsByKey[1769870].Fill("将装备带出天之御柱", confederateCustodian);
 
             // Gil Shops
             var domanJunkmonger = new ENpc[] { sENpcs[1025763] };
@@ -164,12 +174,12 @@ namespace Garland.Data
         {
             switch (attribute)
             {
-                case "Strength":
-                case "Dexterity":
-                case "Vitality":
-                case "Intelligence":
-                case "Mind":
-                case "Piety":
+                case "力量":
+                case "灵巧":
+                case "耐力":
+                case "智力":
+                case "精神":
+                case "信仰":
                     return true;
             }
 
@@ -258,10 +268,10 @@ namespace Garland.Data
         {
             switch (sContentType.Key)
             {
-                case 20: return "Novice Hall";
-                case 22: return "Seasonal Dungeon";
-                case 23: return "Airship Expedition";
-                case 27: return "The Masked Carnivale";
+                case 20: return "初学者学堂";
+                case 22: return "季节活动特殊迷宫";
+                case 23: return "空岛探索";
+                case 27: return "假面狂欢";
             }
 
             throw new InvalidOperationException($"Invalid missing ContentType override for {sContentType}.");

@@ -54,7 +54,7 @@ namespace Garland.Data.Lodestone
                 var itemEnName = "";
                 try
                 {
-                    itemEnName = nameManager.getItemNameChs(sItem.Name);
+                    itemEnName = nameManager.getItemNameEn(sItem.Name);
                 }
                 catch (NotSupportedException notFound) {
                     return;

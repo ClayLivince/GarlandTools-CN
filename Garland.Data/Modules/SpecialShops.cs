@@ -35,8 +35,8 @@ namespace Garland.Data.Modules
             // FCC shop credit
             var fccredit = _builder.CreateItem("fccredit");
             fccredit.chs = new JObject();
-            fccredit.chs.description = "Credits for the enrichment of an Eorzean free company.";
-            fccredit.chs.name = "Company Credit";
+            fccredit.chs.description = "在艾欧泽亚的部队中活跃得到的部队用货币。";
+            fccredit.chs.name = "部队战绩";
             fccredit.fr = new JObject();
             fccredit.fr.name = "Company Credit";
             fccredit.de = new JObject();

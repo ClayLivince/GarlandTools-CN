@@ -27,6 +27,10 @@ namespace Garland.Data.Modules
                 var args = line.Skip(2).Where(c => c != "").ToArray();
                 var itemName = line[0];
 
+                // Jump over comments
+                if (itemName.StartsWith("#"))
+                    continue;
+
                 try
                 {
                     var itemId = clayManager.getItemID(itemName);
@@ -145,13 +149,22 @@ namespace Garland.Data.Modules
                     itemID = clayManager.getItemID(sourceItemName);
                 }
                 catch (NotSupportedException notFound) {
+                    DatabaseBuilder.PrintLine($"Item name '{sourceItemName}' not found in database. Maybe there is a typo?");
                     continue;
                 }
 
                 if (itemID == -1)
                     continue;
-
-                var sourceItem = _builder.Db.ItemsById[itemID];
+                dynamic sourceItem;
+                try
+                {
+                    sourceItem = _builder.Db.ItemsById[itemID];
+                }
+                catch (KeyNotFoundException e) {
+                    DatabaseBuilder.PrintLine($"Item name '{sourceItemName}' with id '{itemID}' not found in game. Maybe not release yet.");
+                    continue;
+                }
+                 
                 if (sourceItem.reducesTo == null)
                     sourceItem.reducesTo = new JArray();
                 sourceItem.reducesTo.Add((int)item.id);
@@ -196,7 +209,26 @@ namespace Garland.Data.Modules
                 item.treasure = new JArray();
 
             //var generators = sources.Select(j => _builder.Db.ItemsByName[j]).ToArray();
-            var generators = sources.Select(j => _builder.Db.ItemsById[clayManager.getItemID(j)]).ToArray();
+            List<dynamic> generators = new List<dynamic>();
+            int sourceID = 0;
+            foreach (string source in sources)
+            {
+                try
+                {
+                    sourceID = clayManager.getItemID(source);
+                    var sourceItem = _builder.Db.ItemsById[sourceID];
+                    generators.Add(sourceItem);
+                } catch (KeyNotFoundException keyNotFound)
+                {
+                    DatabaseBuilder.PrintLine($"Item name '{source}' with id '{sourceID}' not found in game. Maybe not release yet.");
+                    continue;
+                } catch (NotSupportedException notSupported)
+                {
+                    DatabaseBuilder.PrintLine($"Item name '{source}' not found in database. Maybe there is a typo?");
+                    continue;
+                }
+            }
+            
             foreach (var generator in generators)
             {
                 if (generator.loot == null)
