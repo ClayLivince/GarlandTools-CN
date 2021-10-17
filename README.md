@@ -1,3 +1,6 @@
+Now I am in AiFaDian! Thanks for your sponsorship!
+尝试接入了爱发电。感谢大家的支持！
+
 # GarlandTools Chinese Version
 
 This is a modified version of garland tools to extract Chinese game client and produce chinese data.
