@@ -28,18 +28,25 @@ namespace Garland.Data.Modules
 
         void BuildActions()
         {
+            Dictionary<int, Saint.Action> iActionById = new Dictionary<int, Saint.Action>();
+            foreach (var iAction in _builder.InterSheet<Saint.Action>())
+                iActionById[iAction.Key] = iAction;
+
             foreach (var sAction in _builder.Sheet<Saint.Action>())
-                BuildAction(sAction);
+            {
+                iActionById.TryGetValue(sAction.Key, out var iAction);
+                BuildAction(sAction, iAction);
+            }   
 
             _linkingActions = _builder.Db.Actions.ToArray();
         }
 
-        dynamic BuildAction(Saint.Action sAction)
+        dynamic BuildAction(Saint.Action sAction, Saint.Action iAction)
         {
             dynamic action = new JObject();
             action.id = sAction.Key;
-            _builder.Localize.Strings((JObject)action, sAction, "Name");
-            _builder.Localize.HtmlStrings((JObject)action, sAction.ActionTransient, "Description");
+            _builder.Localize.Strings((JObject)action, sAction, iAction, "Name");
+            _builder.Localize.HtmlStrings((JObject)action, sAction.ActionTransient, iAction.ActionTransient, "Description");
             action.patch = PatchDatabase.Get("action", sAction.Key);
             action.category = sAction.ActionCategory.Key;
 
@@ -109,32 +116,32 @@ namespace Garland.Data.Modules
             switch (sAction.CostType)
             {
                 case Saint.ActionCostType.CP:
-                    action.resource = "CP";
+                    action.resource = "制作力";
                     action.cost = sAction.Cost;
                     break;
 
                 case Saint.ActionCostType.GP:
-                    action.resource = "GP";
+                    action.resource = "采集力";
                     action.cost = sAction.Cost;
                     break;
 
                 case Saint.ActionCostType.HPPercent:
-                    action.resource = "HP";
+                    action.resource = "体力";
                     action.cost = sAction.Cost + "%";
                     break;
 
                 case Saint.ActionCostType.LimitBreakGauge:
-                    action.resource = "limitbreak";
+                    action.resource = "极限槽";
                     break;
 
                 case Saint.ActionCostType.MP:
                 case Saint.ActionCostType.MP2:
-                    action.resource = "MP";
+                    action.resource = "魔力";
                     action.cost = sAction.GetMpCost(GarlandDatabase.LevelCap);
                     break;
 
                 case Saint.ActionCostType.MPAll:
-                    action.resource = "MP";
+                    action.resource = "魔力";
                     action.cost = sAction.GetMpCost(GarlandDatabase.LevelCap) + "+";
                     break;
 
@@ -142,7 +149,7 @@ namespace Garland.Data.Modules
                     break;
 
                 case Saint.ActionCostType.StatusAll:
-                    action.resource = "Status";
+                    action.resource = "状态";
                     action.cost = GetStatus(sAction.SourceRow.Sheet.Collection.GetSheet<Saint.Status>("Status")[sAction.Cost]);
                     break;
 
@@ -152,103 +159,103 @@ namespace Garland.Data.Modules
                     break;
 
                 case Saint.ActionCostType.TP:
-                    action.resource = "TP";
+                    action.resource = "技力";
                     action.cost = sAction.Cost;
                     break;
 
                 case Saint.ActionCostType.TPAll:
-                    action.resource = "TP";
-                    action.cost = "All";
+                    action.resource = "技力";
+                    action.cost = "全部";
                     break;
 
                 case Saint.ActionCostType.BeastGauge:
-                    action.resource = "Beast";
+                    action.resource = "兽魂";
                     action.cost = sAction.Cost;
                     break;
 
                 case Saint.ActionCostType.BloodGauge:
-                    action.resource = "Blood";
+                    action.resource = "暗血";
                     action.cost = sAction.Cost;
                     break;
 
                 case Saint.ActionCostType.NinkiGauge:
-                    action.resource = "Ninki";
+                    action.resource = "忍气";
                     action.cost = sAction.Cost;
                     break;
 
                 case Saint.ActionCostType.Chakra:
-                    action.resource = "Chakra";
+                    action.resource = "斗气";
                     action.cost = sAction.Cost;
                     break;
 
                 case Saint.ActionCostType.Aetherflow:
-                    action.resource = "Aetherflow";
+                    action.resource = "以太超流";
                     action.cost = sAction.Cost;
                     break;
 
                 case Saint.ActionCostType.AethertrailAttunement:
-                    action.resource = "Aethertrail";
+                    action.resource = "龙神同调";
                     action.cost = sAction.Cost;
                     break;
 
                 case Saint.ActionCostType.KenkiGauge:
                 case Saint.ActionCostType.KenkiGauge2:
-                    action.resource = "Kenki";
+                    action.resource = "剑气";
                     action.cost = sAction.Cost;
                     break;
 
                 case Saint.ActionCostType.OathGauge:
-                    action.resource = "Oath";
+                    action.resource = "忠义";
                     action.cost = sAction.Cost;
                     break;
 
                 case Saint.ActionCostType.BalanceGauge:
-                    action.resource = "Balance";
+                    action.resource = "魔元";
                     action.cost = sAction.Cost;
                     break;
 
                 case Saint.ActionCostType.FaerieGauge:
-                    action.resource = "Faerie";
+                    action.resource = "异想以太";
                     action.cost = sAction.Cost;
                     break;
 
                 case Saint.ActionCostType.LilyAll:
-                    action.resource = "Lily";
-                    action.cost = "All";
+                    action.resource = "治疗百合";
+                    action.cost = "全部";
                     break;
 
                 case Saint.ActionCostType.Ceruleum:
-                    action.resource = "Ceruleum";
+                    action.resource = "青磷水能量";
                     action.cost = sAction.Cost;
                     break;
 
                 case Saint.ActionCostType.Polyglot:
-                    action.resource = "Polyglot";
+                    action.resource = "通晓";
                     action.cost = sAction.Cost;
                     break;
 
                 case Saint.ActionCostType.FourfoldFeather:
-                    action.resource = "Fourfold Feather";
+                    action.resource = "幻扇";
                     action.cost = sAction.Cost;
                     break;
 
                 case Saint.ActionCostType.Espirit:
-                    action.resource = "Espirit";
+                    action.resource = "伶俐";
                     action.cost = sAction.Cost;
                     break;
 
                 case Saint.ActionCostType.Cartridge:
-                    action.resource = "Cartridge";
+                    action.resource = "晶壤";
                     action.cost = sAction.Cost;
                     break;
 
                 case Saint.ActionCostType.BloodLily:
-                    action.resource = "Blood Lily";
+                    action.resource = "血百合";
                     action.cost = sAction.Cost;
                     break;
 
                 case Saint.ActionCostType.Lily:
-                    action.resource = "Lily";
+                    action.resource = "治疗百合";
                     action.cost = sAction.Cost;
                     break;
 
@@ -258,22 +265,22 @@ namespace Garland.Data.Modules
                     break;
 
                 case Saint.ActionCostType.SoulVoice:
-                    action.resource = "Soul Voice";
+                    action.resource = "灵魂之声";
                     action.cost = sAction.Cost;
                     break;
 
                 case Saint.ActionCostType.Heat:
-                    action.resource = "Heat";
+                    action.resource = "热度";
                     action.cost = sAction.Cost;
                     break;
 
                 case Saint.ActionCostType.Battery:
-                    action.resource = "Battery";
+                    action.resource = "电能";
                     action.cost = sAction.Cost;
                     break;
 
                 case Saint.ActionCostType.Meditation:
-                    action.resource = "Meditation";
+                    action.resource = "剑压";
                     action.cost = sAction.Cost;
                     break;
 
@@ -301,6 +308,10 @@ namespace Garland.Data.Modules
 
         void BuildCraftingActions()
         {
+            Dictionary<int, Saint.CraftAction> iCraftActionById = new Dictionary<int, Saint.CraftAction>();
+            foreach (var iCraftAction in _builder.InterSheet<Saint.CraftAction>())
+                iCraftActionById[iCraftAction.Key] = iCraftAction;
+
             foreach (var sCraftAction in _builder.Sheet<Saint.CraftAction>())
             {
                 if (sCraftAction.Name.ToString() == "")
@@ -311,7 +322,8 @@ namespace Garland.Data.Modules
 
                 dynamic action = new JObject();
                 action.id = sCraftAction.Key;
-                _builder.Localize.HtmlStrings((JObject)action, sCraftAction, "Name", "Description");
+                iCraftActionById.TryGetValue(sCraftAction.Key, out var iCraftAction);
+                _builder.Localize.HtmlStrings((JObject)action, sCraftAction, iCraftAction, "Name", "Description");
                 action.category = 7; // DoH ability
                 action.icon = IconDatabase.EnsureEntry("action", sCraftAction.Icon);
                 action.job = sCraftAction.ClassJob.Key;
@@ -320,7 +332,7 @@ namespace Garland.Data.Modules
 
                 if (sCraftAction.Cost > 0)
                 {
-                    action.resource = "CP";
+                    action.resource = "制作力";
                     action.cost = sCraftAction.Cost;
                 }
 
@@ -365,8 +377,12 @@ namespace Garland.Data.Modules
         {
             dynamic traitCategory = new JObject();
             traitCategory.id = -1;
-            traitCategory.name = "Trait";
+            traitCategory.name = "职业特性";
             _builder.Db.ActionCategories.Add(traitCategory);
+
+            Dictionary<int, Saint.Trait> iTraitById = new Dictionary<int, Saint.Trait>();
+            foreach (var iTrait in _builder.InterSheet<Saint.Trait>())
+                iTraitById[iTrait.Key] = iTrait;
 
             foreach (var sTrait in _builder.Sheet<Saint.Trait>())
             {
@@ -374,11 +390,14 @@ namespace Garland.Data.Modules
                     continue; // Skip adventurer traits atm.
 
                 var sTraitTransient = _builder.Sheet("TraitTransient")[sTrait.Key];
+                var iTraitTransient = _builder.InterSheet("TraitTransient")[sTrait.Key];
 
                 dynamic trait = new JObject();
                 trait.id = sTrait.Key + 50000; // Arbitrary!
-                _builder.Localize.Strings((JObject)trait, sTrait, "Name");
-                _builder.Localize.HtmlStrings((JObject)trait, sTraitTransient, "Description");
+
+                iTraitById.TryGetValue(sTrait.Key, out var iTrait);
+                _builder.Localize.Strings((JObject)trait, sTrait, iTrait, "Name");
+                _builder.Localize.HtmlStrings((JObject)trait, sTraitTransient, iTraitTransient, "Description");
                 trait.category = (int)traitCategory.id;
                 trait.icon = IconDatabase.EnsureEntry("action", sTrait.Icon);
                 trait.job = sTrait.ClassJob.Key;

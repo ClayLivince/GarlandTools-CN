@@ -9,13 +9,16 @@
     <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Garland Data Search" />
     <link rel="manifest" href="manifest.json">
 
-    <script src="https://browser.sentry-cdn.com/5.5.0/bundle.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="ext/image-picker.css">
+
+    <script src="ext/bundle.min.js" crossorigin="anonymous"></script>
     <script src="ext/jquery-3.1.1.min.js"></script>
     <script src="ext/underscore-1.8.3.min.js"></script>
     <script src="ext/isotope-3.0.1.pkgd.min.js"></script>
     <script src="ext/doT.min.js"></script>
     <script src="ext/fastclick.js"></script>
     <script src="ext/he.js"></script>
+    <script src="ext/image-picker.min.js"></script>
 
     <script src="js/gt.js"></script>
 
@@ -254,13 +257,13 @@
                     <div>{{=it.name}} <span class="right">{{=it.type}}#{{=it.id}}</span></div>
 
                     <div class="block-links">
-                        <a href="http://ffxiv.gamerescape.com/wiki/{{=it.name}}">Open on Gamer Escape</a>.
+                        <a href="https://ff14.huijiwiki.com/index.php?search={{=it.name}}" target="_blank">在灰机wiki上搜索</a>.
                     </div>
 
                     <hr>
                 {{?}}
 
-                <span class="action-link unlock-height-link">开关方格高度锁</span>.
+                <span class="action-link unlock-height-link">解锁/锁定此格高度</span>.
             </div>
 
             {{=it.template(it)}}
@@ -325,7 +328,7 @@
             </div>
 
             <div class="action-list">
-                <span class="action-link new-crafting-list unselectable">Add new to crafting list.</span> <span class="action-link unselectable all-crafting-list">Add all to crafting list.</span>
+                <span class="action-link new-crafting-list unselectable">添加到制作列表</span> <span class="action-link unselectable all-crafting-list">Add all to crafting list.</span>
             </div>
 
             <div class="equipment-list">
@@ -519,7 +522,7 @@
         <div class="content main has-pages">
             <div class="header">
                 <img src="images/Atomos.png" class="atomos pointer" title="Atomos inserts every block you open into the group.  Useful for quickly generating crafting lists or equipment sets.">
-                <span class="atomos-message">阿托莫斯正在吸收新添加的方格！
+                <span class="atomos-message">阿托莫斯将会吸入所有新的方格！（点击物品时将会自动装入该计算器中）
                 </span>
 
                 {{?it.contents.length}}
@@ -669,7 +672,7 @@
                         </div>
                     {{~}}
                 {{??}}
-                    你可以将块拖入这里
+                    将其他方格拖进这里！
                 {{?}}
             </div> <!-- Stats Page End -->
 
@@ -730,13 +733,18 @@
             <div class="menu tab">
                 <div data-page="stats-page" class="button">数据</div>
                 {{?it.hasSourcesUses}}
-                    <div data-page="sources-uses-page" class="button">来源 &amp; 用途</div>
+                    <div data-page="sources-uses-page" class="button">来源与用途</div>
                 {{?}}
                 {{?it.craft}}
                     <div data-page="crafting-page" class="button">制作</div>
                 {{?}}
                 {{?it.models}}
                     <div data-page="models-page" class="button">3D</div>
+                {{?}}
+                {{?it.en}}
+                    {{?it.en.name}}
+                        <div data-page="localization-page" class="button">其他语言</div>
+                    {{?}}
                 {{?}}
             </div>
         </div>
@@ -785,14 +793,14 @@
                         {{?}}
 
                         <div class="attributes prime">
-                            {{?it.Defense}}{{=gt.item.attributeValueTemplate(it.Defense)}}{{?}}
-                            {{?it["Magic Defense"]}}{{=gt.item.attributeValueTemplate(it["Magic Defense"])}}{{?}}
-                            {{?it["Magic Damage"]}}{{=gt.item.attributeValueTemplate(it["Magic Damage"])}}{{?}}
-                            {{?it["Physical Damage"]}}{{=gt.item.attributeValueTemplate(it["Physical Damage"])}}{{?}}
-                            {{?it["Auto-attack"]}}{{=gt.item.attributeValueTemplate(it["Auto-attack"])}}{{?}}
-                            {{?it.Delay}}{{=gt.item.attributeValueTemplate(it.Delay)}}{{?}}
-                            {{?it["Block Strength"]}}{{=gt.item.attributeValueTemplate(it["Block Strength"])}}{{?}}
-                            {{?it["Block Rate"]}}{{=gt.item.attributeValueTemplate(it["Block Rate"])}}{{?}}
+                            {{?it["物理防御力"]}}{{=gt.item.attributeValueTemplate(it["物理防御力"])}}{{?}}
+                            {{?it["魔法防御力"]}}{{=gt.item.attributeValueTemplate(it["魔法防御力"])}}{{?}}
+                            {{?it["魔法攻击力"]}}{{=gt.item.attributeValueTemplate(it["魔法攻击力"])}}{{?}}
+                            {{?it["物理攻击力"]}}{{=gt.item.attributeValueTemplate(it["物理攻击力"])}}{{?}}
+                            {{?it["物理自动攻击"]}}{{=gt.item.attributeValueTemplate(it["物理自动攻击"])}}{{?}}
+                            {{?it["攻击间隔"]}}{{=gt.item.attributeValueTemplate(it["攻击间隔"])}}{{?}}
+                            {{?it["格挡性能"]}}{{=gt.item.attributeValueTemplate(it["格挡性能"])}}{{?}}
+                            {{?it["格挡发动力"]}}{{=gt.item.attributeValueTemplate(it["格挡发动力"])}}{{?}}
                         </div>
                     {{?}}
 
@@ -849,10 +857,10 @@
                 
                 {{?it.minion}}
                     <div class="attributes prime clear">
-                        {{=gt.item.attributeValueTemplate(it.HP)}}
-                        {{=gt.item.attributeValueTemplate(it.Attack)}}
-                        {{=gt.item.attributeValueTemplate(it.Defense)}}
-                        {{=gt.item.attributeValueTemplate(it.Speed)}}
+                        {{=gt.item.attributeValueTemplate(it["生命值"])}}
+                        {{=gt.item.attributeValueTemplate(it["攻击力"])}}
+                        {{=gt.item.attributeValueTemplate(it["防御力"])}}
+                        {{=gt.item.attributeValueTemplate(it["速度"])}}
                     </div>
 
                    <table class="right">
@@ -922,7 +930,7 @@
 
                     {{?it.fish.spots}}
                         <div class="catching subsection collapsible" data-headername="catching">
-                            <h3 class="pointer">捕捞信息<a href="http://en.ff14angler.com/?search={{=encodeURIComponent(it.name)}}" target="_blank" class="right">ff14angler</a></h3>
+                            <h3 class="pointer">捕捞信息<a href="http://cn.ff14angler.com/?search={{=encodeURIComponent(it.name)}}" target="_blank" class="right">ff14angler</a></h3>
 
                             {{?it.fish.gatheringReq}}
                                 <div class="line collapse-toggle">
@@ -1148,7 +1156,7 @@
                                 </span>
                                 <input type="number" class="market-price" {{?it.marketPrice}}value="{{=it.marketPrice}}"{{?}}>
 
-                                <a href="https://universalis.app/market/{{=it.id}}" class="right">打开 Universalis 查看</a>
+                                <a href="https://universalis.app/market/{{=it.id}}" class="right" target="_blank">打开 Universalis 查看</a>
                             </div>
                         </div>
                     {{?}}
@@ -1823,6 +1831,69 @@
 
             {{?it.models}}
                 <div class="models-page page"></div>
+            {{?}}
+
+            {{?it.en}}
+                {{?it.en.name}}
+                    <div class="localization-page page">
+                        <div class="subsection collapsible collapsed" data-headername="localize">
+                            <img src="images/en.png" class="subsection-icon">
+                            <h2 class="pointer">{{=it.en.name}}</h2>
+
+                            <div class="source-link collapse-toggle line">
+                                <span class="help">
+                                    {{=it.en.name}}
+                                    <br>
+                                    {{?it.en.description}}
+                                        {{=it.en.description}}
+                                    {{?}}
+                                </span>
+                            </div>
+                        </div>
+                        <div class="subsection collapsible collapsed" data-headername="localize">
+                            <img src="images/jp.png" class="subsection-icon">
+                            <h2 class="pointer">{{=it.ja.name}}</h2>
+
+                            <div class="source-link collapse-toggle line">
+                                <span class="help">
+                                    {{=it.ja.name}}
+                                    <br>
+                                    {{?it.ja.description}}
+                                        {{=it.ja.description}}
+                                    {{?}}
+                                </span>
+                            </div>
+                        </div>
+                        <div class="subsection collapsible collapsed" data-headername="localize">
+                            <img src="images/de.png" class="subsection-icon">
+                            <h2 class="pointer">{{=it.de.name}}</h2>
+
+                            <div class="source-link collapse-toggle line">
+                                <span class="help">
+                                    {{=it.de.name}}
+                                    <br>
+                                    {{?it.de.description}}
+                                        {{=it.de.description}}
+                                    {{?}}
+                                </span>
+                            </div>
+                        </div>
+                        <div class="subsection collapsible collapsed" data-headername="localize">
+                            <img src="images/fr.png" class="subsection-icon">
+                            <h2 class="pointer">{{=it.fr.name}}</h2>
+
+                            <div class="source-link collapse-toggle line">
+                                <span class="help">
+                                    {{=it.fr.name}}
+                                    <br>
+                                    {{?it.fr.description}}
+                                        {{=it.fr.description}}
+                                    {{?}}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                {{?}}
             {{?}}
         </div>
     </script>
@@ -3230,7 +3301,7 @@
         <div class="content main">
             <div>{{=it.type}}/{{=it.id}}</div>
             <br>
-            <div>打开此块出现了错误。  大概是坏了的物品数据导致的.  请使用 <b>Ctrl+F5</b> 或 <b>Shift+F5</b> 来强制刷新。  由此造成的不便我们深表歉意。 此块可以关闭。</div>
+            <div>出现了错误。  这东西可能是有点毛病.  请尝试 <b>Ctrl+F5</b> 或 <b>Shift+F5</b> 来强制刷新。  由此造成的不便我们深表歉意。 如果此问题持续存在请加群反馈。</div>
             <br>
             <div class="deemphasize">详细错误信息: {{=it.exception.message}}</div>
         </div>
@@ -3260,13 +3331,26 @@
 
                         <span id="search-filters-button" class="button" title="Filters"></span>
                 </div>
+                <div id="search-language-selector" class="content">
+                    <select id="filter-lang">
+                        <option value="chs" data-img-src="images/chs.png">汉语</option>
+                        <option value="en" data-img-src="images/en.png">英语</option>
+                        <option value="jp" data-img-src="images/jp.png">日语</option>
+                        <option value="fr" data-img-src="images/fr.png">法语</option>
+                        <option value="de" data-img-src="images/de.png">德语</option>
+                        <option value="global" data-img-src="images/global.png">全部(慢)</option>
+                    </select>
+                    <script>
+                        $("#filter-lang").imagepicker()
+                    </script>
+                </div>
 
                 <div id="search-filters-page" class="content">
                     <span class="button" id="clear-filters">清除筛选</span>
 
                     <table>
                         <tr>
-                            <td colspan="2"><h3>筛选物品</h3></td>
+                            <td colspan="2"><h3>筛选</h3></td>
                         </tr>
                         <tr>
                             <td><input type="checkbox" class="filter" id="filter-item-craftable"><label for="filter-item-craftable">可制作</label></td>
@@ -3454,7 +3538,7 @@
 
             <div class="content page about-page short">
                 <div id="credits" class="center">
-                    Written by Clorifex Ezalor of Zalera, with special thanks to Rogueadyn.  <a href="credits.html">More credits.</a><br>
+                    Written by Clorifex Ezalor of Zalera, with special thanks to Rogueadyn.  <a href="credits.html" target="_blank">More credits.</a><br>
                     中文翻译 &amp; 国服数据维护 by ClayLivince 林文栖@晨曦王座 特别鸣谢：尼齐尔拉斯@神意之地 葛溫德琳@晨曦王座 马范恩@萌芽池
                 </div>
 
@@ -3467,7 +3551,7 @@
 
                 <h3>FAQ</h3>
                 <div class="question">我能为数据做出贡献吗？能添加新来源记录吗？</div>
-                国际服：参与编辑这里的表格来贡献数据。 <a href="https://docs.google.com/spreadsheets/d/1hEj9KCDv0TT1NiGJ0S7afS4hfGMPb6tetqXQetYETUE/edit">FFXIV Data Spreadsheet</a>.  请自行向国际服数据维护人员工作组申请权限，并使用英语来贡献条目。
+                国际服：参与编辑这里的表格来贡献数据。 <a href="https://docs.google.com/spreadsheets/d/1hEj9KCDv0TT1NiGJ0S7afS4hfGMPb6tetqXQetYETUE/edit" target="_blank">FFXIV Data Spreadsheet</a>.  请自行向国际服数据维护人员工作组申请权限，并使用英语来贡献条目。
 
                 <div class="separator"></div>
                 <div class="question">物品获取方式旁边的打勾点是干什么的？</div>
@@ -3486,8 +3570,12 @@
                 阿巴阿巴阿巴，我只是搬运工。以下是原话。<br> It's more fun to see stuff swooshing around.  Traditional UIs are boring, and plenty of other sites cover that.
 
                 <div class="separator"></div>
-                <div class="question">欢迎捐助网站原作者</div>
-               他目前接受网站服务器支出相关的捐献， <a href="https://www.patreon.com/bePatron?u=14110588">在Patreon上支持他</a> 如果你想的话。
+
+                <div class="question">捐助国服维护组</div>
+                啾呜，不胜感激！！！！！ <a href="https://afdian.net/@cyanclay" target="_blank">在爱发电上支持我们</a>
+
+                <div class="question">捐助国际服网站原作者</div>
+                他目前接受网站服务器支出相关的捐献， <a href="https://www.patreon.com/bePatron?u=14110588" target="_blank">在Patreon上支持他</a> 如果你想的话。
 
                 <h3>游戏图片与数据声明：</h3>
                 <div>FINAL FANTASY， 最终幻想14 是 Square Enix Holdings Co., Ltd. 史克威尔艾尼克斯公司的注册商标。</div>
@@ -3536,16 +3624,16 @@
             <div class="content page settings-page short">
                 <table>
                     <!-- Crafting -->
-                    <tr><td colspan="4"><h3>Crafting</h3></td></tr>
+                    <tr><td colspan="4"><h3>制作</h3></td></tr>
 
                     <tr>
-                        <td class="value"><input type="number" id="craft-depth-setting" min="1"></td><td><label for="craft-depth-setting">制作层数</label></td>
-                        <td colspan="2" class="deemphasize">制作列表的层数不会超过他的原材料层数。只有一层说明它已经是最终原材料。</td>
+                        <td class="value"><input type="number" id="craft-depth-setting" min="1"></td><td><label for="craft-depth-setting">原材料层数</label></td>
+                        <td colspan="2" class="deemphasize">制作列表的材料层级不会超过他的原材料层数。只有一层说明它已经是最终原材料。</td>
                     </tr>
 
                     <tr>
-                        <td class="value"><input type="checkbox" id="shorter-names-setting"></td><td><label for="shorter-names-setting">简称</label></td>
-                        <td colspan="2" class="deemphasize">地名简称。中文并没有. 例如： ST for Southern Thanalan 南萨纳兰.  悬停在简称上即可看到全称.</td>
+                        <td class="value"><input type="checkbox" id="shorter-names-setting"></td><td><label for="shorter-names-setting">简称（建议关闭）</label></td>
+                        <td colspan="2" class="deemphasize">地名简称。例如：南萨纳兰 ： 南； 珂露西亚岛： 珂.  悬停在简称上即可看到全称.</td>
                     </tr>
 
                     <tr>
@@ -3643,13 +3731,13 @@
                     </tr>
 
                     <tr>
-                        <td class="value"><input type="checkbox" id="desktop-notifications"></td><td><label>桌面通知（发送到Win10通知中心）</label></td>
-                        <td colspan="2" class="deemphasize">显示桌面提示。</td>
+                        <td class="value"><input type="checkbox" id="desktop-notifications"></td><td><label>桌面通知</label></td>
+                        <td colspan="2" class="deemphasize">推送桌面提示（发送到Win10通知中心）。</td>
                     </tr>
 
                     <tr>
                         <td class="value"><input type="checkbox" id="eorzea-time-in-title"></td><td><label for="eorzea-time-in-title">显示艾欧泽亚时间</label></td>
-                        <td colspan="2" class="deemphasize">在标题显示艾欧泽亚时间。</td>
+                        <td colspan="2" class="deemphasize">在网页标题上显示艾欧泽亚时间。</td>
                     </tr>
                     <!-- Accessibility -->
                     <tr><td colspan="4"><h3>无障碍</h3></td></tr>
@@ -3662,11 +3750,11 @@
                     <tr><td colspan="4"><h3>系统</h3></td></tr>
                     <tr>
                         <td class="value"><input type="checkbox" id="disable-touch"></td><td><label for="disable-touch">关闭触摸模式</label></td>
-                        <td colspan="2" class="deemphasize">对于二合一设备，关闭检测到的触摸输入。</td>
+                        <td colspan="2" class="deemphasize">关闭平板笔记本等二合一设备的触摸输入。</td>
                     </tr>
 
                     <tr>
-                        <td class="value"><input type="checkbox" id="unlock-heights"></td><td><label for="unlock-heights">解锁块高度限制</label></td>
+                        <td class="value"><input type="checkbox" id="unlock-heights"></td><td><label for="unlock-heights">解锁方格高度限制</label></td>
                         <td colspan="2" class="deemphasize">默认情况下，每个显示的方块高度与其中的内容相关。关闭该选项即可解除这个限制。</td>
                     </tr>
 
@@ -3677,7 +3765,7 @@
 
                     <tr>
                         <td class="value"><input type="checkbox" id="isearch-on-activate"></td><td><label for="isearch-on-activate">自动复制/isearch 指令</label></td>
-                        <td colspan="2" class="deemphasize">点击一物品块时，自动复制搜索该物品的宏指令/isearch 至剪贴板。</td>
+                        <td colspan="2" class="deemphasize">点击一物品方格时，自动复制搜索该物品的宏指令/isearch 至剪贴板。</td>
                     </tr>
                 </table>
             </div>

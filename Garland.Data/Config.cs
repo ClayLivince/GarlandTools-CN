@@ -23,6 +23,7 @@ namespace Garland.Data
         public static string TranslationConnectionString { get; private set; }
         public static string SapphireConnectionString { get; private set; }
         public static string GamePath { get; private set; }
+        public static string InterGamePath { get; private set; }
         public static string FilesPath { get; private set; }
         public static string ImageMagickPath { get; private set; }
         public static string PngCrushPath { get; private set; }
@@ -41,6 +42,7 @@ namespace Garland.Data
             Config.TranslationConnectionString = values.translationDatabase;
             Config.SapphireConnectionString = values.sapphireDatabase;
             Config.GamePath = values.gamePath;
+            Config.InterGamePath = values.internationalGamePath;
             Config.FilesPath = values.files;
             Config.ImageMagickPath = values.imageMagickConvert;
             Config.PngCrushPath = values.pngCrush;

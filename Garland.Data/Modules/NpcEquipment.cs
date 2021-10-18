@@ -27,19 +27,40 @@ namespace Garland.Data.Modules
             Index();
 
             var sENpcs = _builder.Realm.GameData.ENpcs;
+            var sBNpcs = _builder.Realm.GameData.GetSheet<Saint.BNpcBase>();
 
             foreach (var npc in _builder.Db.Npcs)
             {
-                var sENpc = sENpcs[(int)npc.id];
-                var sRace = (Saint.Race)sENpc.Base["Race"];
-                if (sRace == null || sRace.Key == 0)
-                    continue; // Filter out demihuman NPCs.
+                var modelKeys = new Dictionary<Saint.EquipSlot, ModelData>();
+                if (null != npc.isBNpc) {
+                    var sBNpc= sBNpcs[int.Parse(npc.baseid.Value)];
 
-                var sNpcEquip = (Saint.XivRow)sENpc.Base["NpcEquip"];
-                var modelKeys = GetModelKeys(sNpcEquip, sENpc.Base);
-                if (modelKeys.Count == 0)
-                    continue;
+                    if (sBNpc.BNpcCustomize.Key == 0)
+                        continue; // Filter out no Customs
+                    if (sBNpc.NpcEquip.Key == 0)
+                        continue; // Filter out no Equipments 
+                    var sRace = (Saint.Race)sBNpc.BNpcCustomize["Race"];
+                    if (sRace == null || sRace.Key == 0)
+                        continue; // Filter out demihuman NPCs.
+                    var sNpcEquip = (Saint.XivRow)sBNpc.NpcEquip;
+                    modelKeys = GetModelKeys(sNpcEquip, null);
+                    if (modelKeys.Count == 0)
+                        continue;
 
+                }
+                else
+                {
+                    var sENpc = sENpcs[(int)npc.id];
+                    var sRace = (Saint.Race)sENpc.Base["Race"];
+                    if (sRace == null || sRace.Key == 0)
+                        continue; // Filter out demihuman NPCs.
+
+                    var sNpcEquip = (Saint.XivRow)sENpc.Base["NpcEquip"];
+                    modelKeys = GetModelKeys(sNpcEquip, sENpc.Base);
+                    if (modelKeys.Count == 0)
+                        continue;
+                   
+                }
                 npc.equipment = new JArray();
 
                 foreach (var pair in modelKeys)
@@ -64,7 +85,6 @@ namespace Garland.Data.Modules
 
                         _builder.Db.AddReference(npc, "item", equipment.Key, false);
                     }
-
                     npc.equipment.Add(obj);
                 }
             }
@@ -156,7 +176,8 @@ namespace Garland.Data.Modules
                 StoreModelKeys(keys, sNpcEquip);
 
             // Next override with ENpcBase data.
-            StoreModelKeys(keys, sENpcBase);
+            if (sENpcBase != null)
+                StoreModelKeys(keys, sENpcBase);
 
             return keys;
         }

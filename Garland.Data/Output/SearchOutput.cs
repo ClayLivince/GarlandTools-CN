@@ -31,19 +31,19 @@ namespace Garland.Data.Output
         {
             // Items
             foreach (var item in _db.Items)
-                WriteIndex(item, "item", (string)item.chs.name);
+                WriteIndex(item, "item");
 
             // Nodes
             foreach (var node in _db.Nodes)
-                WriteIndex(node, "node", (string)node.name);
+                WriteIndex(node, "node", (string)node.name, null, null, null, null);
 
             // Fishing Spots
             foreach (var spot in _db.FishingSpots)
-                WriteIndex(spot, "fishing", (string)spot.chs.name);
+                WriteIndex(spot, "fishing");
 
             // Mobs
             foreach (var mob in _db.Mobs)
-                WriteIndex(mob, "mob", (string)mob.chs.name);
+                WriteIndex(mob, "mob");
 
             // NPCs
             var npcNamesUsed = new HashSet<string>();
@@ -61,36 +61,39 @@ namespace Garland.Data.Output
                 // todo: localize title too
                 if (npc.title != null)
                     key += " " + (string)npc.title;
-                WriteIndex(npc, "npc", key);
+
+                dynamic keyO = new JObject();
+                keyO.name = key;
+                WriteIndex(npc, "npc", keyO, npc.en, npc.fr, npc.de, npc.jp, 0);
             }
 
             // Actions
             foreach (var action in _db.Actions)
-                WriteIndex(action, "action", (string)action.chs.name);
+                WriteIndex(action, "action");
 
             // Leves
             foreach (var leve in _db.Leves)
-                WriteIndex(leve, "leve", (string)leve.chs.name);
+                WriteIndex(leve, "leve");
 
             // Quests
             foreach (var quest in _db.Quests)
-                WriteIndex(quest, "quest", (string)quest.chs.name);
+                WriteIndex(quest, "quest");
 
             // Achievements
             foreach (var achievement in _db.Achievements)
-                WriteIndex(achievement, "achievement", (string)achievement.chs.name);
+                WriteIndex(achievement, "achievement");
 
             // Instances
             foreach (var instance in _db.Instances)
-                WriteIndex(instance, "instance", (string)instance.chs.name);
+                WriteIndex(instance, "instance");
 
             // Fates
             foreach (var fate in _db.Fates)
-                WriteIndex(fate, "fate", (string)fate.chs.name);
+                WriteIndex(fate, "fate");
 
             // Statuses
             foreach (var status in _db.Statuses)
-                WriteIndex(status, "status", (string)status.chs.name);
+                WriteIndex(status, "status");
         }
 
         void WriteItems()
@@ -143,12 +146,39 @@ namespace Garland.Data.Output
                 _update.Include(recipeRow);
         }
 
-        void WriteIndex(dynamic obj, string type, string key_chs)
+        void WriteIndex(dynamic obj, string type)
+        {
+            WriteIndex(obj, type, obj.chs, obj.en, obj.fr, obj.de, obj.jp, 0);
+        }
+        
+        void WriteIndex(dynamic obj, string type, dynamic obj_chs, dynamic obj_en, dynamic obj_fr, dynamic obj_de, dynamic obj_jp, int dummy)
+        {
+            WriteIndex(obj, type,
+                obj_chs == null ? null : (string)obj_chs.name,
+                obj_en == null ? null : (string)obj_en.name,
+                obj_fr == null ? null : (string)obj_fr.name,
+                obj_de == null ? null : (string)obj_de.name,
+                obj_jp == null ? null : (string)obj_jp.name);
+        }
+
+        void WriteIndex(dynamic obj, string type, string key_chs, string key_en, string key_fr, string key_de, string key_jp)
         {
             var id = (string)obj.id;
 
             if (!string.IsNullOrEmpty(key_chs))
                 _update.Include(new SearchRow() { Id = id, Type = type, Lang = "chs", Name = key_chs, Json = JsonConvert.SerializeObject(GetSearchPartial(obj, type, "chs", id)) });
+
+            if (!string.IsNullOrEmpty(key_en))
+                _update.Include(new SearchRow() { Id = id, Type = type, Lang = "en", Name = key_en, Json = JsonConvert.SerializeObject(GetSearchPartial(obj, type, "en", id)) });
+            
+            if (!string.IsNullOrEmpty(key_fr))
+                _update.Include(new SearchRow() { Id = id, Type = type, Lang = "fr", Name = key_fr, Json = JsonConvert.SerializeObject(GetSearchPartial(obj, type, "fr", id)) });
+
+            if (!string.IsNullOrEmpty(key_de))
+                _update.Include(new SearchRow() { Id = id, Type = type, Lang = "de", Name = key_de, Json = JsonConvert.SerializeObject(GetSearchPartial(obj, type, "de", id)) });
+
+            if (!string.IsNullOrEmpty(key_jp))
+                _update.Include(new SearchRow() { Id = id, Type = type, Lang = "jp", Name = key_jp, Json = JsonConvert.SerializeObject(GetSearchPartial(obj, type, "jp", id)) });
 
         }
 

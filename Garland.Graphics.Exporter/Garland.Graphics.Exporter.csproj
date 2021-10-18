@@ -137,6 +137,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\SaintCoinach\SaintCoinach.Graphics.Viewer\SaintCoinach.Graphics.Viewer.csproj">
+      <Project>{226bf71e-334f-4585-8fec-4239704cf539}</Project>
+      <Name>SaintCoinach.Graphics.Viewer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SaintCoinach\SaintCoinach\SaintCoinach.csproj">
+      <Project>{8a7d65eb-3de3-4631-b286-cc73a3126002}</Project>
+      <Name>SaintCoinach</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\xivModdingFramework\xivModdingFramework\xivModdingFramework.csproj">
       <Project>{08241aee-f18e-43dc-bd98-540a9f137e99}</Project>
       <Name>xivModdingFramework</Name>

@@ -14,78 +14,172 @@ namespace Garland.Data
     public class Localize
     {
         private ARealmReversed _realm;
+        private ARealmReversed _interRealm;
         private readonly XivCollection _data;
+        private readonly XivCollection _interData;
         private readonly Tuple<string, Language>[] _langs;
+        private readonly Tuple<string, Language>[] _interLangs;
 
-        public Localize(ARealmReversed realm)
+        public Localize(ARealmReversed realm, ARealmReversed interRealm)
         {
             _realm = realm;
+            _interRealm = interRealm;
             _data = realm.GameData;
+            _interData = interRealm.GameData;
             _langs = new Tuple<string, Language>[]
             {
                 Tuple.Create(Language.ChineseSimplified.GetCode(), Language.ChineseSimplified)
             };
+            _interLangs = new Tuple<string, Language>[]
+            {
+                Tuple.Create(Language.English.GetCode(), Language.English),
+                Tuple.Create(Language.Japanese.GetCode(), Language.Japanese),
+                Tuple.Create(Language.French.GetCode(), Language.French),
+                Tuple.Create(Language.German.GetCode(), Language.German)
+            };
+        }
+
+        public void Strings(JObject obj, IXivRow row, IXivRow interRow, Func<XivString, string> transform, params string[] cols)
+        {
+            if (row != null) {
+                var currentLang = _data.ActiveLanguage;
+                foreach (var langTuple in _langs)
+                {
+                    var code = langTuple.Item1;
+                    var lang = langTuple.Item2;
+                    _data.ActiveLanguage = lang;
+
+                    if (!obj.TryGetValue(code, out var strs))
+                        obj[code] = strs = new JObject();
+
+                    foreach (var col in cols)
+                    {
+                        object value;
+                        bool singularAvaliable = true;
+                        try
+                        {
+                            object dummy = row["Singular"];
+                        }
+                        catch (KeyNotFoundException)
+                        {
+                            singularAvaliable = false;
+                        }
+
+                        if ("Name".Equals(col) && code.Equals("chs") && singularAvaliable)
+                            value = row["Singular"];
+                        else value = row[col];
+
+                        if (value is XivString && string.IsNullOrEmpty((XivString)value))
+                            continue;
+
+                        var sanitizedCol = col.ToLower().Replace("{", "").Replace("}", "");
+                        strs[sanitizedCol] = transform == null ? (value.ToString()) : transform((XivString)value);
+                    }
+                }
+                _data.ActiveLanguage = currentLang;
+            }
+            
+            if (interRow != null)
+            {
+                var iCurrentLang = _interData.ActiveLanguage;
+                foreach (var langTuple in _interLangs)
+                {
+                    var code = langTuple.Item1;
+                    var lang = langTuple.Item2;
+                    _interData.ActiveLanguage = lang;
+                    if (!obj.TryGetValue(code, out var strs))
+                        obj[code] = strs = new JObject();
+
+                    foreach (var col in cols)
+                    {
+                        var value = interRow[col];
+                        if (value is XivString && string.IsNullOrEmpty((XivString)value))
+                            continue;
+
+                        var sanitizedCol = col.ToLower().Replace("{", "").Replace("}", "");
+                        strs[sanitizedCol] = transform == null ? (value.ToString()) : transform((XivString)value);
+                    }
+                }
+                _interData.ActiveLanguage = iCurrentLang;
+            }    
         }
 
         public void Strings(JObject obj, IXivRow row, Func<XivString, string> transform, params string[] cols)
         {
-            var currentLang = _data.ActiveLanguage;
+            Strings(obj, row, null, transform, cols);
+        }
 
-            foreach (var langTuple in _langs)
-            {
-                var code = langTuple.Item1;
-                var lang = langTuple.Item2;
-                _data.ActiveLanguage = lang;
-
-                if (!obj.TryGetValue(code, out var strs))
-                    obj[code] = strs = new JObject();
-
-                foreach (var col in cols)
-                {
-                    var value = row[col];
-                    if (value is XivString && string.IsNullOrEmpty((XivString)value))
-                        continue;
-
-                    var sanitizedCol = col.ToLower().Replace("{", "").Replace("}", "");
-                    strs[sanitizedCol] = transform == null ? (value.ToString()) : transform((XivString)value);
-                }
-            }
-
-            _data.ActiveLanguage = currentLang;
+        public void Strings(JObject obj, IXivRow row, IXivRow interRow, params string[] cols)
+        {
+            Strings(obj, row, interRow, null, cols);
         }
 
         public void Strings(JObject obj, IXivRow row, params string[] cols)
         {
-            Strings(obj, row, null, cols);
+            Strings(obj, row, null, null, cols);
+        }
+
+        public void HtmlStrings(JObject obj, IXivRow row, IXivRow interRow, params string[] cols)
+        {
+            Strings(obj, row, interRow, HtmlStringFormatter.Convert, cols);
         }
 
         public void HtmlStrings(JObject obj, IXivRow row, params string[] cols)
         {
-            Strings(obj, row, HtmlStringFormatter.Convert, cols);
+            Strings(obj, row, null, HtmlStringFormatter.Convert, cols);
         }
 
-        public void Column(JObject obj, IXivRow row, string fromColumn, string toColumn, Func<XivString, string> transform = null)
+        public void Column(JObject obj, IXivRow row, IXivRow interRow, string fromColumn, string toColumn, Func<XivString, string> transform = null)
         {
-            var currentLang = _data.ActiveLanguage;
-
-            foreach (var langTuple in _langs)
+            if (row != null)
             {
-                var code = langTuple.Item1;
-                var lang = langTuple.Item2;
-                _data.ActiveLanguage = lang;
+                var currentLang = _data.ActiveLanguage;
 
-                if (!obj.TryGetValue(code, out var strs))
-                    obj[code] = strs = new JObject();
+                foreach (var langTuple in _langs)
+                {
+                    var code = langTuple.Item1;
+                    var lang = langTuple.Item2;
+                    _data.ActiveLanguage = lang;
 
-                var value = row[fromColumn];
-                var toValue = transform == null ? (value.ToString()) : transform((XivString)value);
-                if (string.IsNullOrEmpty(toValue))
-                    continue;
+                    if (!obj.TryGetValue(code, out var strs))
+                        obj[code] = strs = new JObject();
 
-                strs[toColumn] = toValue;
+                    var value = row[fromColumn];
+                    var toValue = transform == null ? (value.ToString()) : transform((XivString)value);
+                    if (string.IsNullOrEmpty(toValue))
+                        continue;
+
+                    strs[toColumn] = toValue;
+                }
+
+                _data.ActiveLanguage = currentLang;
             }
 
-            _data.ActiveLanguage = currentLang;
+            if (interRow != null)
+            {
+                var currentLang = _interData.ActiveLanguage;
+                foreach (var langTuple in _interLangs)
+                {
+                    var code = langTuple.Item1;
+                    var lang = langTuple.Item2;
+                    _interData.ActiveLanguage = lang;
+
+                    if (!obj.TryGetValue(code, out var strs))
+                        obj[code] = strs = new JObject();
+
+                    var value = interRow[fromColumn];
+                    var toValue = transform == null ? (value.ToString()) : transform((XivString)value);
+                    if (string.IsNullOrEmpty(toValue))
+                        continue;
+
+                    strs[toColumn] = toValue;
+                }
+                _interData.ActiveLanguage = currentLang;
+            }
+        }
+
+        public void Column(JObject obj, IXivRow row, string fromColumn, string toColumn, Func<XivString, string> transform = null) {
+            Column(obj, row, null, fromColumn, toColumn, transform);
         }
     }
 }

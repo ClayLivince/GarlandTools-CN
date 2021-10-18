@@ -33,21 +33,20 @@ namespace Garland.Data.Modules
 
                 try
                 {
-                    var itemId = clayManager.getItemID(itemName);
-                    var item = _builder.Db.ItemsById[itemId];
+                    var item = _builder.Db.ItemsByEnName[itemName];
 
                     switch (type)
                     {
                         case "Desynth":
-                            BuildDesynth(clayManager, item,  args);
+                            BuildDesynth(item,  args);
                             break;
 
                         case "Reduce":
-                            BuildReduce(clayManager, item,  args);
+                            BuildReduce(item,  args);
                             break;
 
                         case "Loot":
-                            BuildLoot(clayManager, item,  args);
+                            BuildLoot(item,  args);
                             break;
 
                         case "Venture":
@@ -71,7 +70,7 @@ namespace Garland.Data.Modules
                             break;
 
                         case "Gardening":
-                            BuildGardening(clayManager, item,  args);
+                            BuildGardening(item,  args);
                             break;
 
                         case "Other":
@@ -106,25 +105,23 @@ namespace Garland.Data.Modules
             item.other = new JArray(sources);
         }
 
-        void BuildGardening(Clay.ClayMySQL clayManager, dynamic item,  string[] sources)
+        void BuildGardening(dynamic item,  string[] sources)
         {
             foreach (string seedItemName in sources)
             {
-                //var seedItem = _builder.Db.ItemsByName[seedItemName];
-                var seedItem = _builder.Db.ItemsById[clayManager.getItemID(seedItemName)];
+                var seedItem = _builder.Db.ItemsByEnName[seedItemName];
                 Items.AddGardeningPlant(_builder, seedItem, item);
             }
         }
 
-        void BuildDesynth(Clay.ClayMySQL clayManager, dynamic item,  string[] sources)
+        void BuildDesynth(dynamic item, string[] sources)
         {
             if (item.desynthedFrom == null)
                 item.desynthedFrom = new JArray();
 
             foreach (string itemName in sources)
             {
-                var desynthItem = _builder.Db.ItemsById[clayManager.getItemID(itemName)];
-                //var desynthItem = _builder.Db.ItemsByName[itemName];
+                var desynthItem = _builder.Db.ItemsByEnName[itemName];
                 item.desynthedFrom.Add((int)desynthItem.id);
                 _builder.Db.AddReference(item, "item", (int)desynthItem.id, false);
 
@@ -135,38 +132,22 @@ namespace Garland.Data.Modules
             }
         }
 
-        void BuildReduce(Clay.ClayMySQL clayManager, dynamic item, string[] sources)
+        void BuildReduce(dynamic item, string[] sources)
         {
             if (item.reducedFrom == null)
                 item.reducedFrom = new JArray();
 
             foreach (string sourceItemName in sources)
             {
-                //var sourceItem = _builder.Db.ItemsByName[sourceItemName];
-                int itemID = -1;
-                try
+                if (!_builder.Db.ItemsByEnName.TryGetValue(sourceItemName, out var sourceItem))
                 {
-                    itemID = clayManager.getItemID(sourceItemName);
-                }
-                catch (NotSupportedException notFound) {
-                    DatabaseBuilder.PrintLine($"Item name '{sourceItemName}' not found in database. Maybe there is a typo?");
-                    continue;
+                    DatabaseBuilder.PrintLine($"Item name '{sourceItemName}' not found in database. Maybe there is a typo? Or not release in Chinese?");
+                    return;
                 }
 
-                if (itemID == -1)
-                    continue;
-                dynamic sourceItem;
-                try
-                {
-                    sourceItem = _builder.Db.ItemsById[itemID];
-                }
-                catch (KeyNotFoundException e) {
-                    DatabaseBuilder.PrintLine($"Item name '{sourceItemName}' with id '{itemID}' not found in game. Maybe not release yet.");
-                    continue;
-                }
-                 
                 if (sourceItem.reducesTo == null)
                     sourceItem.reducesTo = new JArray();
+
                 sourceItem.reducesTo.Add((int)item.id);
                 item.reducedFrom.Add((int)sourceItem.id);
 
@@ -203,29 +184,21 @@ namespace Garland.Data.Modules
             }
         }
 
-        void BuildLoot(Clay.ClayMySQL clayManager, dynamic item,  string[] sources)
+        void BuildLoot(dynamic item,  string[] sources)
         {
             if (item.treasure == null)
                 item.treasure = new JArray();
 
             //var generators = sources.Select(j => _builder.Db.ItemsByName[j]).ToArray();
             List<dynamic> generators = new List<dynamic>();
-            int sourceID = 0;
             foreach (string source in sources)
             {
-                try
+                if (_builder.Db.ItemsByEnName.TryGetValue(source, out var sourceItem))
                 {
-                    sourceID = clayManager.getItemID(source);
-                    var sourceItem = _builder.Db.ItemsById[sourceID];
                     generators.Add(sourceItem);
-                } catch (KeyNotFoundException keyNotFound)
-                {
-                    DatabaseBuilder.PrintLine($"Item name '{source}' with id '{sourceID}' not found in game. Maybe not release yet.");
-                    continue;
-                } catch (NotSupportedException notSupported)
-                {
-                    DatabaseBuilder.PrintLine($"Item name '{source}' not found in database. Maybe there is a typo?");
-                    continue;
+                }
+                else {
+                    DatabaseBuilder.PrintLine($"Item name '{source}' not found in database. Maybe there is a typo? Or not release in Chinese?");
                 }
             }
             
@@ -304,10 +277,11 @@ namespace Garland.Data.Modules
                 item.instances = new JArray();
 
             int itemId = item.id;
+            
 
             foreach (var name in sources)
             {
-                var instance = _builder.Db.Instances.First(i => i.chs.name == clayManager.getInstanceChs(name));
+                var instance = _builder.Db.Instances.First(i => StringComparer.InvariantCultureIgnoreCase.Equals((string)i.en.name, name));
                 int instanceId = instance.id;
                 if (instance.rewards == null)
                     instance.rewards = new JArray();

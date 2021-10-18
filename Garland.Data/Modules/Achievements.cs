@@ -12,7 +12,23 @@ namespace Garland.Data.Modules
     {
         public override string Name => "Achievements";
 
+        // Statuses of International client.
+        // For extracting localization datas.
+        private Dictionary<int, Game.Achievement> iAchieveById = new Dictionary<int, Game.Achievement>();
+
         public override void Start()
+        {
+            IndexLocalize();
+            BuildAchievements();
+        }
+
+        void IndexLocalize()
+        {
+            foreach (var iAchieve in _builder.InterSheet<Game.Achievement>())
+                iAchieveById[iAchieve.Key] = iAchieve;
+        }
+
+        public void BuildAchievements()
         {
             foreach (var sAchievement in _builder.Sheet<Game.Achievement>())
             {
@@ -24,7 +40,8 @@ namespace Garland.Data.Modules
 
                 dynamic achievement = new JObject();
                 achievement.id = sAchievement.Key;
-                _builder.Localize.Strings((JObject)achievement, sAchievement, "Name", "Description");
+                iAchieveById.TryGetValue(sAchievement.Key, out var iAchieve);
+                _builder.Localize.Strings((JObject)achievement, sAchievement, iAchieve, "Name", "Description");
                 achievement.patch = PatchDatabase.Get("achievement", sAchievement.Key);
                 achievement.points = sAchievement.Points;
                 achievement.category = sAchievement.AchievementCategory.Key;

@@ -16,6 +16,7 @@ namespace Garland.Data
     public class DatabaseBuilder
     {
         SaintCoinach.ARealmReversed _realm;
+        SaintCoinach.ARealmReversed _interRealm;
         GarlandDatabase _db;
         SQLite.SQLiteConnection _libra;
 
@@ -30,27 +31,30 @@ namespace Garland.Data
         public SQLite.SQLiteConnection Libra => _libra;
         public Localize Localize;
         public SaintCoinach.ARealmReversed Realm => _realm;
+        public SaintCoinach.ARealmReversed InterRealm => _interRealm;
         public GarlandDatabase Db => _db;
         public Saint.Item[] ItemsToImport;
+        public Dictionary<int, Saint.Item> iItemById = new Dictionary<int, Saint.Item>();
         public Dictionary<int, LocationInfo> LocationInfoByMapId = new Dictionary<int, LocationInfo>();
         public Dictionary<int, string> EmoteNamesById = new Dictionary<int, string>();
         public Dictionary<int, List<MapMarker>> MapMarkersByMapKey = new Dictionary<int, List<MapMarker>>();
         public Dictionary<Saint.InstanceContent, Saint.ContentFinderCondition> ContentFinderConditionByInstanceContent = new Dictionary<Saint.InstanceContent, Saint.ContentFinderCondition>();
         public static IPrinter Printer;
 
-        public DatabaseBuilder(SQLite.SQLiteConnection libra, SaintCoinach.ARealmReversed realm)
+        public DatabaseBuilder(SQLite.SQLiteConnection libra, SaintCoinach.ARealmReversed realm, SaintCoinach.ARealmReversed interRealm)
         {
             _db = GarlandDatabase.Instance;
             _libra = libra;
             _realm = realm;
-            Localize = new Localize(realm);
+            _interRealm = interRealm;
+            Localize = new Localize(realm, interRealm);
             _instance = this;
         }
 
         static DatabaseBuilder _instance;
         public static DatabaseBuilder Instance => _instance;
 
-        public void Build(bool fetchIconsOnly)
+        public void Build(bool fetchIconsOnly, bool buildNpcsOnly)
         {
             OneTimeExports.Run(_realm);
                 
@@ -59,11 +63,14 @@ namespace Garland.Data
                 .Where(i => !Hacks.IsItemSkipped(i.Name, i.Key))
                 .ToArray();
 
+            foreach (var iItem in InterSheet<Saint.Item>())
+                iItemById[iItem.Key] = iItem;
+
             ItemIconDatabase.Initialize(ItemsToImport);
 
             if (fetchIconsOnly)
             {
-                new Lodestone.LodestoneIconScraper().FetchIcons();
+                new Lodestone.LodestoneIconScraper().FetchIcons(this);
                 PrintLine("All icons fetched.  Stopping.");
                 return;
             }
@@ -73,9 +80,13 @@ namespace Garland.Data
 
             var itemSourceComplexityModule = new ItemSourceComplexity();
 
-            // All the modules.
-            var modules = new Queue<Module>(new Module[]
+            Queue<Module> modules;
+
+            if (!buildNpcsOnly)
             {
+                // All the modules.
+                modules = new Queue<Module>(new Module[]
+                {
                 new Indexes(),
                 new Miscellaneous(),
                 new Locations(),
@@ -120,7 +131,32 @@ namespace Garland.Data
                 new Dyes(),
                 new NpcEquipment(itemSourceComplexityModule),
                 new StatisticsModule(itemSourceComplexityModule),
-            });
+                });
+            }
+            else {
+                // Modules require only for build npcs.
+                modules = new Queue<Module>(new Module[]
+                {
+                new Indexes(),
+                new Miscellaneous(),
+                new Locations(),
+                new Items(),
+                //new ItemSets(),
+                new Nodes(),
+                new NPCs(),
+                new Customize(),
+                new Leves(),
+                new Ventures(),
+                itemSourceComplexityModule,
+                new Maps(),
+                new Territories(),
+                new EquipmentScorer(),
+                new Jobs(),
+                new Dyes(),
+                new NpcEquipment(itemSourceComplexityModule),
+                });
+            }
+            
 
             itemSourceComplexityModule = null;
 
@@ -303,6 +339,11 @@ namespace Garland.Data
             return Realm.GameData.GetSheet<T>();
         }
 
+        public Saint.IXivSheet<T> InterSheet<T>() where T : Saint.IXivRow
+        {
+            return InterRealm.GameData.GetSheet<T>();
+        }
+
         public Saint.IXivSheet<T> Sheet<T>(string name) where T : Saint.IXivRow
         {
             return Realm.GameData.GetSheet<T>(name);
@@ -311,6 +352,11 @@ namespace Garland.Data
         public Saint.IXivSheet<Saint.XivRow> Sheet(string name)
         {
             return Realm.GameData.GetSheet(name);
+        }
+
+        public Saint.IXivSheet<Saint.XivRow> InterSheet(string name)
+        {
+            return InterRealm.GameData.GetSheet(name);
         }
 
         public Saint.XivSheet2<Saint.XivSubRow> Sheet2(string name)

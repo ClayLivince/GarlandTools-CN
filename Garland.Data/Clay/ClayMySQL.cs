@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace Garland.Data.Clay
 {
@@ -30,121 +32,30 @@ namespace Garland.Data.Clay
             }
         }
 
-        public int getItemID(String itemNameEnglish) 
-        {
+        public List<dynamic> getAllBNpcs() {
             if (conn.State != System.Data.ConnectionState.Open)
                 Init();
 
-            
-            String query = string.Format("SELECT Id from item_en where Name=\"{0}\";", itemNameEnglish);
-            MySqlCommand cmd = new MySqlCommand(query, conn);
-            Object result = cmd.ExecuteScalar();
-            if (result != null)
-            {
-                int id = int.Parse(result.ToString());
-                return id;
+            String query = "Select * from bnpc;";
+            MySqlDataReader reader = new MySqlCommand(query, conn).ExecuteReader();
+
+            List<dynamic> list = new List<dynamic>();
+
+            while (reader.Read()) {
+                dynamic bnpc = new JObject();
+                bnpc.baseid = reader.GetString(0);
+                bnpc.nameid = reader.GetString(2);
+                bnpc.lvl = reader.GetString(3);
+                bnpc.maps = reader.GetString(4);
+                bnpc.hp = reader.GetString(5);
+
+                if (bnpc.nameid.Value != "")
+
+                    list.Add(bnpc);
             }
-            else
-            {
-                throw new NotSupportedException(string.Format("Item name {0} not found in database.", itemNameEnglish));
-            }
-        }
 
-        public int getItemIDChs(String itemNameChs)
-        {
-            if (conn.State != System.Data.ConnectionState.Open)
-                Init();
-
-
-            String query = string.Format("SELECT Id from item_chs where Singular=\"{0}\";", itemNameChs);
-            MySqlCommand cmd = new MySqlCommand(query, conn);
-            Object result = cmd.ExecuteScalar();
-            if (result != null)
-            {
-                int id = int.Parse(result.ToString());
-                return id;
-            }
-            else
-            {
-                throw new NotSupportedException(string.Format("Item name {0} not found in database.", itemNameChs));
-            }
-        }
-
-
-        public string getItemNameChs(string itemNameEnglish)
-        {
-            int id = getItemID(itemNameEnglish);
-
-            String query = string.Format("SELECT Singular from item_chs where Id=\"{0}\";", id);
-            MySqlCommand cmd = new MySqlCommand(query, conn);
-            Object result = cmd.ExecuteScalar();
-            if (result != null)
-            {
-                string name = result.ToString();
-                return name;
-            }
-            else
-            {
-                throw new NotSupportedException(string.Format("Item name {0} not found in  database.", itemNameEnglish));
-            }
-        }
-
-        public string getItemNameEn(string itemNameChs)
-        {
-            int id = getItemID(itemNameChs);
-
-            String query = string.Format("SELECT Name from item_en where Id=\"{0}\";", id);
-            MySqlCommand cmd = new MySqlCommand(query, conn);
-            Object result = cmd.ExecuteScalar();
-            if (result != null)
-            {
-                string name = result.ToString();
-                return name;
-            }
-            else
-            {
-                throw new NotSupportedException(string.Format("Item name {0} not found in  database.", itemNameChs));
-            }
-        }
-
-        public int getPlaceNameID(String placeNameEnglish)
-        {
-            if (conn.State != System.Data.ConnectionState.Open)
-                Init();
-
-            
-            String query = string.Format("SELECT Id from placename_en where Name=\"{0}\";", placeNameEnglish);
-            MySqlCommand cmd = new MySqlCommand(query, conn);
-            Object result = cmd.ExecuteScalar();
-            if (result != null)
-            {
-                int id = int.Parse(result.ToString());
-                return id;
-            }
-            else
-            {
-                throw new NotSupportedException(string.Format("Place name {0} not found in database.", placeNameEnglish));
-            }
-        }
-
-        public string getPlaceNameChs(string placeNameEnglish) 
-        {
-            if (conn.State != System.Data.ConnectionState.Open)
-                Init();
-
-
-            String query = string.Format("SELECT Name_Chs from placename where Name=\"{0}\";", placeNameEnglish);
-            MySqlCommand cmd = new MySqlCommand(query, conn);
-            Object result = cmd.ExecuteScalar();
-            if (result != null)
-            {
-                string resultStr = result.ToString();
-                return resultStr;
-            }
-            else
-            {
-                throw new NotSupportedException(string.Format("Place name {0} not found in database.", placeNameEnglish));
-            }
+            reader.Close();
+            return list;
         }
 
         public string getWeatherChs(string weatherEng) {
@@ -216,6 +127,7 @@ namespace Garland.Data.Clay
                 try
                 {
                     conn.Close();
+                    conn.Dispose();
                 }
                 catch (MySqlException e)
                 {

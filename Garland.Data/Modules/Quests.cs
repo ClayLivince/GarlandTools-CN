@@ -38,6 +38,10 @@ namespace Garland.Data.Modules
         {
             var lQuestsByKey = _builder.Libra.Table<Libra.Quest>().ToDictionary(q => q.Key);
 
+            Dictionary<int, Saint.Quest> iQuestById = new Dictionary<int, Saint.Quest>();
+            foreach (var iQuest in _builder.InterSheet<Saint.Quest>())
+                iQuestById[iQuest.Key] = iQuest;
+            
             foreach (var sQuest in _builder.Sheet<Saint.Quest>())
             {
                 if (sQuest.Key == 65536 || sQuest.Name == "")
@@ -45,7 +49,9 @@ namespace Garland.Data.Modules
 
                 dynamic quest = new JObject();
                 quest.id = sQuest.Key;
-                _builder.Localize.Strings((JObject)quest, sQuest, Utils.SanitizeQuestName, "Name");
+
+                iQuestById.TryGetValue(sQuest.Key, out var iQuest);
+                _builder.Localize.Strings((JObject)quest, sQuest, iQuest, Utils.SanitizeQuestName, "Name");
                 quest.patch = PatchDatabase.Get("quest", sQuest.Key);
                 quest.sort = sQuest.SortKey;
 
@@ -55,7 +61,11 @@ namespace Garland.Data.Modules
                 if (sPlaceName.Name == "" && questIssuer != null)
                     sPlaceName = questIssuer.Locations.First().PlaceName;
 
-                _builder.Localize.Column((JObject)quest, sPlaceName, "Name", "location",
+                var iPlaceName = iQuest.PlaceName;
+                if (iPlaceName.Name == "" && questIssuer != null)
+                    iPlaceName = questIssuer.Locations.First().PlaceName;
+
+                _builder.Localize.Column((JObject)quest, sPlaceName, iPlaceName, "Name", "location",
                     x => x == "" ? "???" : x.ToString());
 
                 // Repeatability

@@ -69,12 +69,20 @@ namespace Garland.Data.Modules
 
             // Flesh out location/name/map data.
             var placeNameIndex = _builder.Sheet<Game.PlaceName>().ToDictionary(p => p.Key);
+            var iPlaceNameIndex = _builder.InterSheet<Game.PlaceName>().ToDictionary(p => p.Key);
             foreach (var sPlaceName in placeNameIndex.Values)
             {
                 if (sPlaceName.Key == 0)
                     continue;
 
+                
                 var name = Utils.SanitizeTags(ConvertPlaceNameName(sPlaceName));
+                if (iPlaceNameIndex.TryGetValue(sPlaceName.Key, out var iPlaceName))
+                {
+                    var iName = Utils.SanitizeTags(ConvertPlaceNameName(iPlaceName));
+                    CreateInterLocation(iPlaceName.Key, iName);
+                }
+                
                 var loc = CreateLocation(sPlaceName.Key, name);
 
                 // Combine map data.
@@ -114,6 +122,14 @@ namespace Garland.Data.Modules
                     continue;
 
                 _builder.Db.AddLocationReference((int)location.parentId);
+            }
+
+            var iIndex = _builder.Db.LocationIdsByEnName;
+            foreach (var location in _builder.Db.iLocations)
+            {
+                var name = (string)location.name;
+                if (!iIndex.ContainsKey(name))
+                    iIndex[name] = (int)location.id;
             }
         }
 
@@ -183,8 +199,8 @@ namespace Garland.Data.Modules
         static string ConvertPlaceNameName(Game.PlaceName sPlaceName)
         {
             // Shorten this name, it's way too long.
-            if (sPlaceName.Key == 385)
-                return "Observatorium";
+            //if (sPlaceName.Key == 385)
+            //    return "Observatorium";
 
             return sPlaceName.Name.ToString();
         }
@@ -196,6 +212,15 @@ namespace Garland.Data.Modules
             loc.name = name;
             _builder.Db.Locations.Add(loc);
             _builder.Db.LocationsById[id] = loc;
+            return loc;
+        }
+
+        dynamic CreateInterLocation(int id, string name)
+        {
+            dynamic loc = new JObject();
+            loc.id = id;
+            loc.name = name;
+            _builder.Db.iLocations.Add(loc);
             return loc;
         }
     }

@@ -71,10 +71,14 @@ namespace Garland.Data
                         {
                             SaintCoinach.Xiv.IXivSheet sheet;
 
+                            if (sheetName.Trim().Equals("EObj"))
+                                sheetName = "EObjName";
+
                             try
                             {
                                 sheet = DatabaseBuilder.Instance.Realm.GameData.GetSheet(sheetName);
-                            } catch (KeyNotFoundException e)
+                            }
+                            catch (KeyNotFoundException)
                             {
                                 sheet = DatabaseBuilder.Instance.Realm.GameData.GetSheet(sheetName.Replace("HQ", ""));
                             }
@@ -87,22 +91,28 @@ namespace Garland.Data
                                     var rowIndex = int.Parse(genericElementArgs[2].Accept(this).Trim());
                                     return row[rowIndex].ToString();
                                 }
-                                catch (IndexOutOfRangeException e)
+                                catch (IndexOutOfRangeException)
                                 {
-                                    if (sheetName.Contains("Item"))
+                                    if (sheetName.Contains("Item") || sheetName.Contains("EObjName") || sheetName.Contains("BNpcName"))
                                     {
                                         return row[0].ToString();
                                     }
+                                    else {
+                                        Console.WriteLine("0");
+                                    }
+                                    
                                 }
-                                catch (KeyNotFoundException e)
+                                catch (KeyNotFoundException)
                                 {
                                     //Console.WriteLine(genericText);
+                                    Console.WriteLine("0");
                                 }
-                                catch (Exception aba) { 
+                                catch (Exception) {
                                     //And What?
+                                    Console.WriteLine("0");
                                 }
-                            } catch (KeyNotFoundException keyNotFound) {
-                                //Console.WriteLine("0");
+                            } catch (KeyNotFoundException) {
+                                Console.WriteLine("0");
                                 //return String.Format("[{0}]", sheetName);
                             }
                             

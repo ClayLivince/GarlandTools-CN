@@ -595,6 +595,12 @@
     "id": 27590,
     "icon": 27041
   },
+  "不朽巨鱼": {
+    "name": "不朽巨鱼",
+    "id": 28925,
+    "icon": 28475,
+    "mooch": 1
+  },
   "短嘴诱饵鱼": {
     "name": "短嘴诱饵鱼",
     "id": 27588,
@@ -644,6 +650,12 @@
     "name": "引螈",
     "id": 27491,
     "icon": 29593,
+    "mooch": 1
+  },
+  "洛克瓦卫兵": {
+    "name": "洛克瓦卫兵",
+    "id": 28071,
+    "icon": 28474,
     "mooch": 1
   },
   "钻石皮皮拉鱼": {
@@ -719,38 +731,15 @@ gt.bell.fish = [
     "icon": 29003,
     "func": "fish",
     "rarity": 1,
-    "title": "利姆萨·罗敏萨下层甲板",
+    "title": "和风流地沿岸",
     "category": "海洋垂钓",
-    "spot": 35,
+    "spot": 37,
     "lvl": 1,
     "coords": [
-      7.69,
-      12.21
+      18.7,
+      22.0
     ],
-    "radius": 3000,
-    "zone": "利姆萨·罗敏萨"
-  },
-  {
-    "name": "梅尔托尔虾虎",
-    "patch": 1.0,
-    "bait": [
-      "沙蚕"
-    ],
-    "hookset": "精准提钩",
-    "tug": "轻杆",
-    "id": 4869,
-    "icon": 29003,
-    "func": "fish",
-    "rarity": 1,
-    "title": "西永恒川",
-    "category": "淡水垂钓",
-    "spot": 40,
-    "lvl": 1,
-    "coords": [
-      20.22,
-      18.02
-    ],
-    "radius": 400,
+    "radius": 600,
     "zone": "中拉诺西亚"
   },
   {
@@ -765,15 +754,38 @@ gt.bell.fish = [
     "icon": 29003,
     "func": "fish",
     "rarity": 1,
-    "title": "遗孀泪",
-    "category": "淡水垂钓",
-    "spot": 43,
-    "lvl": 1,
+    "title": "盛夏滩沿岸",
+    "category": "海洋垂钓",
+    "spot": 38,
+    "lvl": 5,
     "coords": [
-      24.78,
-      23.02
+      14.65,
+      15.69
     ],
-    "radius": 400,
+    "radius": 600,
+    "zone": "中拉诺西亚"
+  },
+  {
+    "name": "梅尔托尔虾虎",
+    "patch": 1.0,
+    "bait": [
+      "沙蚕"
+    ],
+    "hookset": "精准提钩",
+    "tug": "轻杆",
+    "id": 4869,
+    "icon": 29003,
+    "func": "fish",
+    "rarity": 1,
+    "title": "莫拉比湾西岸",
+    "category": "海洋垂钓",
+    "spot": 44,
+    "lvl": 5,
+    "coords": [
+      26.91,
+      25.98
+    ],
+    "radius": 600,
     "zone": "拉诺西亚低地"
   },
   {
@@ -788,15 +800,15 @@ gt.bell.fish = [
     "icon": 29003,
     "func": "fish",
     "rarity": 1,
-    "title": "遗孀泪",
-    "category": "淡水垂钓",
-    "spot": 43,
-    "lvl": 1,
+    "title": "雪松原沿岸地",
+    "category": "海洋垂钓",
+    "spot": 45,
+    "lvl": 10,
     "coords": [
-      24.78,
-      23.02
+      35.27,
+      18.02
     ],
-    "radius": 400,
+    "radius": 600,
     "zone": "拉诺西亚低地"
   },
   {
@@ -949,13 +961,13 @@ gt.bell.fish = [
     "icon": 29003,
     "func": "fish",
     "rarity": 1,
-    "title": "雨燕塔殖民地",
+    "title": "骷髅谷沿岸地",
     "category": "海洋垂钓",
-    "spot": 59,
-    "lvl": 10,
+    "spot": 60,
+    "lvl": 15,
     "coords": [
-      33.85,
-      31.87
+      26.69,
+      26.99
     ],
     "radius": 600,
     "zone": "西拉诺西亚"
@@ -1156,16 +1168,16 @@ gt.bell.fish = [
     "icon": 29034,
     "func": "fish",
     "rarity": 1,
-    "title": "利姆萨·罗敏萨下层甲板",
+    "title": "和风流地沿岸",
     "category": "海洋垂钓",
-    "spot": 35,
+    "spot": 37,
     "lvl": 1,
     "coords": [
-      7.69,
-      12.21
+      18.7,
+      22.0
     ],
-    "radius": 3000,
-    "zone": "利姆萨·罗敏萨"
+    "radius": 600,
+    "zone": "中拉诺西亚"
   },
   {
     "name": "罗敏萨鳀鱼",
@@ -1363,15 +1375,15 @@ gt.bell.fish = [
     "icon": 29063,
     "func": "fish",
     "rarity": 1,
-    "title": "遗孀泪",
-    "category": "淡水垂钓",
-    "spot": 43,
-    "lvl": 1,
+    "title": "莫拉比湾西岸",
+    "category": "海洋垂钓",
+    "spot": 44,
+    "lvl": 5,
     "coords": [
-      24.78,
-      23.02
+      26.91,
+      25.98
     ],
-    "radius": 400,
+    "radius": 600,
     "zone": "拉诺西亚低地"
   },
   {
@@ -1432,16 +1444,16 @@ gt.bell.fish = [
     "icon": 29008,
     "func": "fish",
     "rarity": 1,
-    "title": "利姆萨·罗敏萨下层甲板",
+    "title": "和风流地沿岸",
     "category": "海洋垂钓",
-    "spot": 35,
+    "spot": 37,
     "lvl": 1,
     "coords": [
-      7.69,
-      12.21
+      18.7,
+      22.0
     ],
-    "radius": 3000,
-    "zone": "利姆萨·罗敏萨"
+    "radius": 600,
+    "zone": "中拉诺西亚"
   },
   {
     "name": "手指虾",
@@ -1524,38 +1536,15 @@ gt.bell.fish = [
     "icon": 29005,
     "func": "fish",
     "rarity": 1,
-    "title": "利姆萨·罗敏萨下层甲板",
+    "title": "和风流地沿岸",
     "category": "海洋垂钓",
-    "spot": 35,
+    "spot": 37,
     "lvl": 1,
     "coords": [
-      7.69,
-      12.21
+      18.7,
+      22.0
     ],
-    "radius": 3000,
-    "zone": "利姆萨·罗敏萨"
-  },
-  {
-    "name": "海云水母",
-    "patch": 1.0,
-    "bait": [
-      "潮虫"
-    ],
-    "hookset": "精准提钩",
-    "tug": "轻杆",
-    "id": 4872,
-    "icon": 29005,
-    "func": "fish",
-    "rarity": 1,
-    "title": "西永恒川",
-    "category": "淡水垂钓",
-    "spot": 40,
-    "lvl": 1,
-    "coords": [
-      20.22,
-      18.02
-    ],
-    "radius": 400,
+    "radius": 600,
     "zone": "中拉诺西亚"
   },
   {
@@ -1570,15 +1559,38 @@ gt.bell.fish = [
     "icon": 29005,
     "func": "fish",
     "rarity": 1,
-    "title": "遗孀泪",
-    "category": "淡水垂钓",
-    "spot": 43,
-    "lvl": 1,
+    "title": "盛夏滩沿岸",
+    "category": "海洋垂钓",
+    "spot": 38,
+    "lvl": 5,
     "coords": [
-      24.78,
-      23.02
+      14.65,
+      15.69
     ],
-    "radius": 400,
+    "radius": 600,
+    "zone": "中拉诺西亚"
+  },
+  {
+    "name": "海云水母",
+    "patch": 1.0,
+    "bait": [
+      "潮虫"
+    ],
+    "hookset": "精准提钩",
+    "tug": "轻杆",
+    "id": 4872,
+    "icon": 29005,
+    "func": "fish",
+    "rarity": 1,
+    "title": "莫拉比湾西岸",
+    "category": "海洋垂钓",
+    "spot": 44,
+    "lvl": 5,
+    "coords": [
+      26.91,
+      25.98
+    ],
+    "radius": 600,
     "zone": "拉诺西亚低地"
   },
   {
@@ -1593,15 +1605,15 @@ gt.bell.fish = [
     "icon": 29005,
     "func": "fish",
     "rarity": 1,
-    "title": "遗孀泪",
-    "category": "淡水垂钓",
-    "spot": 43,
-    "lvl": 1,
+    "title": "雪松原沿岸地",
+    "category": "海洋垂钓",
+    "spot": 45,
+    "lvl": 10,
     "coords": [
-      24.78,
-      23.02
+      35.27,
+      18.02
     ],
-    "radius": 400,
+    "radius": 600,
     "zone": "拉诺西亚低地"
   },
   {
@@ -1708,16 +1720,16 @@ gt.bell.fish = [
     "icon": 29044,
     "func": "fish",
     "rarity": 1,
-    "title": "利姆萨·罗敏萨下层甲板",
+    "title": "和风流地沿岸",
     "category": "海洋垂钓",
-    "spot": 35,
+    "spot": 37,
     "lvl": 1,
     "coords": [
-      7.69,
-      12.21
+      18.7,
+      22.0
     ],
-    "radius": 3000,
-    "zone": "利姆萨·罗敏萨"
+    "radius": 600,
+    "zone": "中拉诺西亚"
   },
   {
     "name": "海港鲱",
@@ -1731,15 +1743,15 @@ gt.bell.fish = [
     "icon": 29044,
     "func": "fish",
     "rarity": 1,
-    "title": "西永恒川",
-    "category": "淡水垂钓",
-    "spot": 40,
-    "lvl": 1,
+    "title": "盛夏滩沿岸",
+    "category": "海洋垂钓",
+    "spot": 38,
+    "lvl": 5,
     "coords": [
-      20.22,
-      18.02
+      14.65,
+      15.69
     ],
-    "radius": 400,
+    "radius": 600,
     "zone": "中拉诺西亚"
   },
   {
@@ -1754,15 +1766,15 @@ gt.bell.fish = [
     "icon": 29044,
     "func": "fish",
     "rarity": 1,
-    "title": "遗孀泪",
-    "category": "淡水垂钓",
-    "spot": 43,
-    "lvl": 1,
+    "title": "雪松原沿岸地",
+    "category": "海洋垂钓",
+    "spot": 45,
+    "lvl": 10,
     "coords": [
-      24.78,
-      23.02
+      35.27,
+      18.02
     ],
-    "radius": 400,
+    "radius": 600,
     "zone": "拉诺西亚低地"
   },
   {
@@ -1984,16 +1996,16 @@ gt.bell.fish = [
     "icon": 29016,
     "func": "fish",
     "rarity": 1,
-    "title": "利姆萨·罗敏萨下层甲板",
+    "title": "和风流地沿岸",
     "category": "海洋垂钓",
-    "spot": 35,
+    "spot": 37,
     "lvl": 1,
     "coords": [
-      7.69,
-      12.21
+      18.7,
+      22.0
     ],
-    "radius": 3000,
-    "zone": "利姆萨·罗敏萨"
+    "radius": 600,
+    "zone": "中拉诺西亚"
   },
   {
     "name": "珊瑚蝶",
@@ -2047,7 +2059,6 @@ gt.bell.fish = [
     "patch": 1.0,
     "bait": [
       "潮虫",
-      "潮虫",
       "海云水母"
     ],
     "hookset": "强力提钩",
@@ -2071,7 +2082,6 @@ gt.bell.fish = [
     "name": "蓝章鱼",
     "patch": 1.0,
     "bait": [
-      "沙蚕",
       "沙蚕",
       "梅尔托尔虾虎"
     ],
@@ -2081,16 +2091,16 @@ gt.bell.fish = [
     "icon": 29051,
     "func": "fish",
     "rarity": 1,
-    "title": "利姆萨·罗敏萨下层甲板",
+    "title": "和风流地沿岸",
     "category": "海洋垂钓",
-    "spot": 35,
+    "spot": 37,
     "lvl": 1,
     "coords": [
-      7.69,
-      12.21
+      18.7,
+      22.0
     ],
-    "radius": 3000,
-    "zone": "利姆萨·罗敏萨"
+    "radius": 600,
+    "zone": "中拉诺西亚"
   },
   {
     "name": "蓝章鱼",
@@ -2105,15 +2115,15 @@ gt.bell.fish = [
     "icon": 29051,
     "func": "fish",
     "rarity": 1,
-    "title": "西永恒川",
-    "category": "淡水垂钓",
-    "spot": 40,
-    "lvl": 1,
+    "title": "盛夏滩沿岸",
+    "category": "海洋垂钓",
+    "spot": 38,
+    "lvl": 5,
     "coords": [
-      20.22,
-      18.02
+      14.65,
+      15.69
     ],
-    "radius": 400,
+    "radius": 600,
     "zone": "中拉诺西亚"
   },
   {
@@ -2121,7 +2131,6 @@ gt.bell.fish = [
     "patch": 1.0,
     "bait": [
       "沙蚕",
-      "沙蚕",
       "梅尔托尔虾虎"
     ],
     "hookset": "强力提钩",
@@ -2130,15 +2139,15 @@ gt.bell.fish = [
     "icon": 29051,
     "func": "fish",
     "rarity": 1,
-    "title": "遗孀泪",
-    "category": "淡水垂钓",
-    "spot": 43,
-    "lvl": 1,
+    "title": "莫拉比湾西岸",
+    "category": "海洋垂钓",
+    "spot": 44,
+    "lvl": 5,
     "coords": [
-      24.78,
-      23.02
+      26.91,
+      25.98
     ],
-    "radius": 400,
+    "radius": 600,
     "zone": "拉诺西亚低地"
   },
   {
@@ -2146,7 +2155,6 @@ gt.bell.fish = [
     "patch": 1.0,
     "bait": [
       "沙蚕",
-      "沙蚕",
       "梅尔托尔虾虎"
     ],
     "hookset": "强力提钩",
@@ -2155,15 +2163,15 @@ gt.bell.fish = [
     "icon": 29051,
     "func": "fish",
     "rarity": 1,
-    "title": "遗孀泪",
-    "category": "淡水垂钓",
-    "spot": 43,
-    "lvl": 1,
+    "title": "雪松原沿岸地",
+    "category": "海洋垂钓",
+    "spot": 45,
+    "lvl": 10,
     "coords": [
-      24.78,
-      23.02
+      35.27,
+      18.02
     ],
-    "radius": 400,
+    "radius": 600,
     "zone": "拉诺西亚低地"
   },
   {
@@ -2219,7 +2227,6 @@ gt.bell.fish = [
     "patch": 1.0,
     "bait": [
       "沙蚕",
-      "沙蚕",
       "梅尔托尔虾虎"
     ],
     "hookset": "强力提钩",
@@ -2244,7 +2251,6 @@ gt.bell.fish = [
     "patch": 1.0,
     "bait": [
       "沙蚕",
-      "沙蚕",
       "梅尔托尔虾虎"
     ],
     "hookset": "强力提钩",
@@ -2253,13 +2259,13 @@ gt.bell.fish = [
     "icon": 29051,
     "func": "fish",
     "rarity": 1,
-    "title": "雨燕塔殖民地",
+    "title": "骷髅谷沿岸地",
     "category": "海洋垂钓",
-    "spot": 59,
-    "lvl": 10,
+    "spot": 60,
+    "lvl": 15,
     "coords": [
-      33.85,
-      31.87
+      26.69,
+      26.99
     ],
     "radius": 600,
     "zone": "西拉诺西亚"
@@ -2344,7 +2350,6 @@ gt.bell.fish = [
     "patch": 2.2,
     "bait": [
       "潮虫",
-      "潮虫",
       "海港鲱"
     ],
     "during": {
@@ -2380,16 +2385,16 @@ gt.bell.fish = [
     "icon": 29028,
     "func": "fish",
     "rarity": 1,
-    "title": "利姆萨·罗敏萨下层甲板",
+    "title": "和风流地沿岸",
     "category": "海洋垂钓",
-    "spot": 35,
+    "spot": 37,
     "lvl": 1,
     "coords": [
-      7.69,
-      12.21
+      18.7,
+      22.0
     ],
-    "radius": 3000,
-    "zone": "利姆萨·罗敏萨"
+    "radius": 600,
+    "zone": "中拉诺西亚"
   },
   {
     "name": "藤皮海参",
@@ -2403,15 +2408,15 @@ gt.bell.fish = [
     "icon": 29028,
     "func": "fish",
     "rarity": 1,
-    "title": "遗孀泪",
-    "category": "淡水垂钓",
-    "spot": 43,
-    "lvl": 1,
+    "title": "莫拉比湾西岸",
+    "category": "海洋垂钓",
+    "spot": 44,
+    "lvl": 5,
     "coords": [
-      24.78,
-      23.02
+      26.91,
+      25.98
     ],
-    "radius": 400,
+    "radius": 600,
     "zone": "拉诺西亚低地"
   },
   {
@@ -2472,16 +2477,16 @@ gt.bell.fish = [
     "icon": 29033,
     "func": "fish",
     "rarity": 1,
-    "title": "利姆萨·罗敏萨下层甲板",
+    "title": "和风流地沿岸",
     "category": "海洋垂钓",
-    "spot": 35,
+    "spot": 37,
     "lvl": 1,
     "coords": [
-      7.69,
-      12.21
+      18.7,
+      22.0
     ],
-    "radius": 3000,
-    "zone": "利姆萨·罗敏萨"
+    "radius": 600,
+    "zone": "中拉诺西亚"
   },
   {
     "name": "神仙鱼",
@@ -2522,16 +2527,16 @@ gt.bell.fish = [
     "icon": 29069,
     "func": "fish",
     "rarity": 2,
-    "title": "利姆萨·罗敏萨下层甲板",
+    "title": "和风流地沿岸",
     "category": "海洋垂钓",
-    "spot": 35,
+    "spot": 37,
     "lvl": 1,
     "coords": [
-      7.69,
-      12.21
+      18.7,
+      22.0
     ],
-    "radius": 3000,
-    "zone": "利姆萨·罗敏萨"
+    "radius": 600,
+    "zone": "中拉诺西亚"
   },
   {
     "name": "蝲蛄",
@@ -2614,16 +2619,16 @@ gt.bell.fish = [
     "icon": 29208,
     "func": "fish",
     "rarity": 1,
-    "title": "海雾村",
-    "category": "海洋垂钓",
-    "spot": 104,
-    "lvl": 30,
+    "title": "翡翠湖滨",
+    "category": "淡水垂钓",
+    "spot": 90,
+    "lvl": 5,
     "coords": [
-      11.01,
-      11.01
+      12.61,
+      14.62
     ],
-    "radius": 3000,
-    "zone": "海雾村"
+    "radius": 600,
+    "zone": "格里达尼亚"
   },
   {
     "name": "蝲蛄",
@@ -3216,16 +3221,16 @@ gt.bell.fish = [
     "icon": 29251,
     "func": "fish",
     "rarity": 1,
-    "title": "海雾村",
-    "category": "海洋垂钓",
-    "spot": 104,
-    "lvl": 30,
+    "title": "翡翠湖滨",
+    "category": "淡水垂钓",
+    "spot": 90,
+    "lvl": 5,
     "coords": [
-      11.01,
-      11.01
+      12.61,
+      14.62
     ],
-    "radius": 3000,
-    "zone": "海雾村"
+    "radius": 600,
+    "zone": "格里达尼亚"
   },
   {
     "name": "潜沙鱼",
@@ -3400,15 +3405,15 @@ gt.bell.fish = [
     "icon": 29062,
     "func": "fish",
     "rarity": 1,
-    "title": "西永恒川",
-    "category": "淡水垂钓",
-    "spot": 40,
-    "lvl": 1,
+    "title": "盛夏滩沿岸",
+    "category": "海洋垂钓",
+    "spot": 38,
+    "lvl": 5,
     "coords": [
-      20.22,
-      18.02
+      14.65,
+      15.69
     ],
-    "radius": 400,
+    "radius": 600,
     "zone": "中拉诺西亚"
   },
   {
@@ -3469,15 +3474,15 @@ gt.bell.fish = [
     "icon": 29031,
     "func": "fish",
     "rarity": 1,
-    "title": "西永恒川",
-    "category": "淡水垂钓",
-    "spot": 40,
-    "lvl": 1,
+    "title": "盛夏滩沿岸",
+    "category": "海洋垂钓",
+    "spot": 38,
+    "lvl": 5,
     "coords": [
-      20.22,
-      18.02
+      14.65,
+      15.69
     ],
-    "radius": 400,
+    "radius": 600,
     "zone": "中拉诺西亚"
   },
   {
@@ -3492,15 +3497,15 @@ gt.bell.fish = [
     "icon": 29031,
     "func": "fish",
     "rarity": 1,
-    "title": "遗孀泪",
-    "category": "淡水垂钓",
-    "spot": 43,
-    "lvl": 1,
+    "title": "莫拉比湾西岸",
+    "category": "海洋垂钓",
+    "spot": 44,
+    "lvl": 5,
     "coords": [
-      24.78,
-      23.02
+      26.91,
+      25.98
     ],
-    "radius": 400,
+    "radius": 600,
     "zone": "拉诺西亚低地"
   },
   {
@@ -3562,15 +3567,15 @@ gt.bell.fish = [
     "icon": 29035,
     "func": "fish",
     "rarity": 1,
-    "title": "西永恒川",
-    "category": "淡水垂钓",
-    "spot": 40,
-    "lvl": 1,
+    "title": "盛夏滩沿岸",
+    "category": "海洋垂钓",
+    "spot": 38,
+    "lvl": 5,
     "coords": [
-      20.22,
-      18.02
+      14.65,
+      15.69
     ],
-    "radius": 400,
+    "radius": 600,
     "zone": "中拉诺西亚"
   },
   {
@@ -3658,15 +3663,15 @@ gt.bell.fish = [
     "icon": 29011,
     "func": "fish",
     "rarity": 1,
-    "title": "西永恒川",
-    "category": "淡水垂钓",
-    "spot": 40,
-    "lvl": 1,
+    "title": "盛夏滩沿岸",
+    "category": "海洋垂钓",
+    "spot": 38,
+    "lvl": 5,
     "coords": [
-      20.22,
-      18.02
+      14.65,
+      15.69
     ],
-    "radius": 400,
+    "radius": 600,
     "zone": "中拉诺西亚"
   },
   {
@@ -3782,15 +3787,15 @@ gt.bell.fish = [
     "icon": 29065,
     "func": "fish",
     "rarity": 2,
-    "title": "西永恒川",
-    "category": "淡水垂钓",
-    "spot": 40,
-    "lvl": 1,
+    "title": "盛夏滩沿岸",
+    "category": "海洋垂钓",
+    "spot": 38,
+    "lvl": 5,
     "coords": [
-      20.22,
-      18.02
+      14.65,
+      15.69
     ],
-    "radius": 400,
+    "radius": 600,
     "zone": "中拉诺西亚"
   },
   {
@@ -4081,16 +4086,16 @@ gt.bell.fish = [
     "icon": 29210,
     "func": "fish",
     "rarity": 1,
-    "title": "海雾村",
-    "category": "海洋垂钓",
-    "spot": 104,
-    "lvl": 30,
+    "title": "翡翠湖滨",
+    "category": "淡水垂钓",
+    "spot": 90,
+    "lvl": 5,
     "coords": [
-      11.01,
-      11.01
+      12.61,
+      14.62
     ],
-    "radius": 3000,
-    "zone": "海雾村"
+    "radius": 600,
+    "zone": "格里达尼亚"
   },
   {
     "name": "白妙鲤",
@@ -4288,13 +4293,13 @@ gt.bell.fish = [
     "icon": 29210,
     "func": "fish",
     "rarity": 1,
-    "title": "嘈杂川",
+    "title": "秋瓜湖畔",
     "category": "淡水垂钓",
-    "spot": 18,
+    "spot": 19,
     "lvl": 15,
     "coords": [
-      26.38,
-      25.1
+      21.02,
+      24.66
     ],
     "radius": 400,
     "zone": "黑衣森林北部林区"
@@ -5435,15 +5440,15 @@ gt.bell.fish = [
     "icon": 29052,
     "func": "fish",
     "rarity": 1,
-    "title": "遗孀泪",
-    "category": "淡水垂钓",
-    "spot": 43,
-    "lvl": 1,
+    "title": "莫拉比湾西岸",
+    "category": "海洋垂钓",
+    "spot": 44,
+    "lvl": 5,
     "coords": [
-      24.78,
-      23.02
+      26.91,
+      25.98
     ],
-    "radius": 400,
+    "radius": 600,
     "zone": "拉诺西亚低地"
   },
   {
@@ -5458,15 +5463,15 @@ gt.bell.fish = [
     "icon": 29052,
     "func": "fish",
     "rarity": 1,
-    "title": "遗孀泪",
-    "category": "淡水垂钓",
-    "spot": 43,
-    "lvl": 1,
+    "title": "雪松原沿岸地",
+    "category": "海洋垂钓",
+    "spot": 45,
+    "lvl": 10,
     "coords": [
-      24.78,
-      23.02
+      35.27,
+      18.02
     ],
-    "radius": 400,
+    "radius": 600,
     "zone": "拉诺西亚低地"
   },
   {
@@ -5573,15 +5578,15 @@ gt.bell.fish = [
     "icon": 29056,
     "func": "fish",
     "rarity": 1,
-    "title": "遗孀泪",
-    "category": "淡水垂钓",
-    "spot": 43,
-    "lvl": 1,
+    "title": "莫拉比湾西岸",
+    "category": "海洋垂钓",
+    "spot": 44,
+    "lvl": 5,
     "coords": [
-      24.78,
-      23.02
+      26.91,
+      25.98
     ],
-    "radius": 400,
+    "radius": 600,
     "zone": "拉诺西亚低地"
   },
   {
@@ -5596,15 +5601,15 @@ gt.bell.fish = [
     "icon": 29056,
     "func": "fish",
     "rarity": 1,
-    "title": "遗孀泪",
-    "category": "淡水垂钓",
-    "spot": 43,
-    "lvl": 1,
+    "title": "雪松原沿岸地",
+    "category": "海洋垂钓",
+    "spot": 45,
+    "lvl": 10,
     "coords": [
-      24.78,
-      23.02
+      35.27,
+      18.02
     ],
-    "radius": 400,
+    "radius": 600,
     "zone": "拉诺西亚低地"
   },
   {
@@ -5780,15 +5785,15 @@ gt.bell.fish = [
     "icon": 29073,
     "func": "fish",
     "rarity": 2,
-    "title": "遗孀泪",
-    "category": "淡水垂钓",
-    "spot": 43,
-    "lvl": 1,
+    "title": "莫拉比湾西岸",
+    "category": "海洋垂钓",
+    "spot": 44,
+    "lvl": 5,
     "coords": [
-      24.78,
-      23.02
+      26.91,
+      25.98
     ],
-    "radius": 400,
+    "radius": 600,
     "zone": "拉诺西亚低地"
   },
   {
@@ -5803,15 +5808,15 @@ gt.bell.fish = [
     "icon": 29012,
     "func": "fish",
     "rarity": 1,
-    "title": "遗孀泪",
-    "category": "淡水垂钓",
-    "spot": 43,
-    "lvl": 1,
+    "title": "雪松原沿岸地",
+    "category": "海洋垂钓",
+    "spot": 45,
+    "lvl": 10,
     "coords": [
-      24.78,
-      23.02
+      35.27,
+      18.02
     ],
-    "radius": 400,
+    "radius": 600,
     "zone": "拉诺西亚低地"
   },
   {
@@ -5918,13 +5923,13 @@ gt.bell.fish = [
     "icon": 29012,
     "func": "fish",
     "rarity": 1,
-    "title": "雨燕塔殖民地",
+    "title": "骷髅谷沿岸地",
     "category": "海洋垂钓",
-    "spot": 59,
-    "lvl": 10,
+    "spot": 60,
+    "lvl": 15,
     "coords": [
-      33.85,
-      31.87
+      26.69,
+      26.99
     ],
     "radius": 600,
     "zone": "西拉诺西亚"
@@ -5987,15 +5992,15 @@ gt.bell.fish = [
     "icon": 29053,
     "func": "fish",
     "rarity": 1,
-    "title": "遗孀泪",
-    "category": "淡水垂钓",
-    "spot": 43,
-    "lvl": 1,
+    "title": "雪松原沿岸地",
+    "category": "海洋垂钓",
+    "spot": 45,
+    "lvl": 10,
     "coords": [
-      24.78,
-      23.02
+      35.27,
+      18.02
     ],
-    "radius": 400,
+    "radius": 600,
     "zone": "拉诺西亚低地"
   },
   {
@@ -6059,15 +6064,15 @@ gt.bell.fish = [
     "icon": 29074,
     "func": "fish",
     "rarity": 2,
-    "title": "遗孀泪",
-    "category": "淡水垂钓",
-    "spot": 43,
-    "lvl": 1,
+    "title": "雪松原沿岸地",
+    "category": "海洋垂钓",
+    "spot": 45,
+    "lvl": 10,
     "coords": [
-      24.78,
-      23.02
+      35.27,
+      18.02
     ],
-    "radius": 400,
+    "radius": 600,
     "zone": "拉诺西亚低地"
   },
   {
@@ -6174,13 +6179,13 @@ gt.bell.fish = [
     "icon": 29015,
     "func": "fish",
     "rarity": 1,
-    "title": "雨燕塔殖民地",
+    "title": "骷髅谷沿岸地",
     "category": "海洋垂钓",
-    "spot": 59,
-    "lvl": 10,
+    "spot": 60,
+    "lvl": 15,
     "coords": [
-      33.85,
-      31.87
+      26.69,
+      26.99
     ],
     "radius": 600,
     "zone": "西拉诺西亚"
@@ -6715,13 +6720,13 @@ gt.bell.fish = [
     "icon": 29280,
     "func": "fish",
     "rarity": 1,
-    "title": "嘈杂川",
+    "title": "秋瓜湖畔",
     "category": "淡水垂钓",
-    "spot": 18,
+    "spot": 19,
     "lvl": 15,
     "coords": [
-      26.38,
-      25.1
+      21.02,
+      24.66
     ],
     "radius": 400,
     "zone": "黑衣森林北部林区"
@@ -7014,16 +7019,16 @@ gt.bell.fish = [
     "icon": 29286,
     "func": "fish",
     "rarity": 1,
-    "title": "海雾村",
-    "category": "海洋垂钓",
-    "spot": 104,
-    "lvl": 30,
+    "title": "翡翠湖滨",
+    "category": "淡水垂钓",
+    "spot": 90,
+    "lvl": 5,
     "coords": [
-      11.01,
-      11.01
+      12.61,
+      14.62
     ],
-    "radius": 3000,
-    "zone": "海雾村"
+    "radius": 600,
+    "zone": "格里达尼亚"
   },
   {
     "name": "沟鲫鱼",
@@ -7152,13 +7157,13 @@ gt.bell.fish = [
     "icon": 29286,
     "func": "fish",
     "rarity": 1,
-    "title": "火蜥蜴河",
+    "title": "不悔战泉",
     "category": "淡水垂钓",
-    "spot": 83,
-    "lvl": 25,
+    "spot": 84,
+    "lvl": 35,
     "coords": [
-      21.74,
-      15.09
+      25.38,
+      21.02
     ],
     "radius": 400,
     "zone": "南萨纳兰"
@@ -7387,13 +7392,13 @@ gt.bell.fish = [
     "icon": 29030,
     "func": "fish",
     "rarity": 1,
-    "title": "雨燕塔殖民地",
+    "title": "骷髅谷沿岸地",
     "category": "海洋垂钓",
-    "spot": 59,
-    "lvl": 10,
+    "spot": 60,
+    "lvl": 15,
     "coords": [
-      33.85,
-      31.87
+      26.69,
+      26.99
     ],
     "radius": 600,
     "zone": "西拉诺西亚"
@@ -7971,16 +7976,16 @@ gt.bell.fish = [
     "icon": 29209,
     "func": "fish",
     "rarity": 1,
-    "title": "撒沟厉沙丘",
-    "category": "沙海垂钓",
-    "spot": 87,
-    "lvl": 35,
+    "title": "蓝雾涌泉",
+    "category": "淡水垂钓",
+    "spot": 89,
+    "lvl": 40,
     "coords": [
-      27.31,
-      36.96
+      24.14,
+      26.0
     ],
-    "radius": 600,
-    "zone": "南萨纳兰"
+    "radius": 400,
+    "zone": "北萨纳兰"
   },
   {
     "name": "骨蝲蛄",
@@ -8343,15 +8348,15 @@ gt.bell.fish = [
     "icon": 29061,
     "func": "fish",
     "rarity": 1,
-    "title": "酿酒师灯塔",
+    "title": "二分石沿岸地",
     "category": "海洋垂钓",
-    "spot": 64,
-    "lvl": 15,
+    "spot": 61,
+    "lvl": 35,
     "coords": [
-      30.15,
-      30.63
+      17.56,
+      20.98
     ],
-    "radius": 200,
+    "radius": 600,
     "zone": "西拉诺西亚"
   },
   {
@@ -8835,15 +8840,15 @@ gt.bell.fish = [
     "icon": 29038,
     "func": "fish",
     "rarity": 1,
-    "title": "酿酒师灯塔",
+    "title": "二分石沿岸地",
     "category": "海洋垂钓",
-    "spot": 64,
-    "lvl": 15,
+    "spot": 61,
+    "lvl": 35,
     "coords": [
-      30.15,
-      30.63
+      17.56,
+      20.98
     ],
-    "radius": 200,
+    "radius": 600,
     "zone": "西拉诺西亚"
   },
   {
@@ -9017,15 +9022,15 @@ gt.bell.fish = [
     "icon": 29029,
     "func": "fish",
     "rarity": 1,
-    "title": "酿酒师灯塔",
+    "title": "二分石沿岸地",
     "category": "海洋垂钓",
-    "spot": 64,
-    "lvl": 15,
+    "spot": 61,
+    "lvl": 35,
     "coords": [
-      30.15,
-      30.63
+      17.56,
+      20.98
     ],
-    "radius": 200,
+    "radius": 600,
     "zone": "西拉诺西亚"
   },
   {
@@ -9063,15 +9068,15 @@ gt.bell.fish = [
     "icon": 29059,
     "func": "fish",
     "rarity": 1,
-    "title": "酿酒师灯塔",
+    "title": "二分石沿岸地",
     "category": "海洋垂钓",
-    "spot": 64,
-    "lvl": 15,
+    "spot": 61,
+    "lvl": 35,
     "coords": [
-      30.15,
-      30.63
+      17.56,
+      20.98
     ],
-    "radius": 200,
+    "radius": 600,
     "zone": "西拉诺西亚"
   },
   {
@@ -9178,15 +9183,15 @@ gt.bell.fish = [
     "icon": 29046,
     "func": "fish",
     "rarity": 1,
-    "title": "酿酒师灯塔",
+    "title": "二分石沿岸地",
     "category": "海洋垂钓",
-    "spot": 64,
-    "lvl": 15,
+    "spot": 61,
+    "lvl": 35,
     "coords": [
-      30.15,
-      30.63
+      17.56,
+      20.98
     ],
-    "radius": 200,
+    "radius": 600,
     "zone": "西拉诺西亚"
   },
   {
@@ -9673,7 +9678,6 @@ gt.bell.fish = [
     "patch": 1.0,
     "bait": [
       "沙蚕",
-      "沙蚕",
       "梅尔托尔虾虎"
     ],
     "hookset": "强力提钩",
@@ -9682,13 +9686,13 @@ gt.bell.fish = [
     "icon": 29025,
     "func": "fish",
     "rarity": 1,
-    "title": "雨燕塔殖民地",
+    "title": "骷髅谷沿岸地",
     "category": "海洋垂钓",
-    "spot": 59,
-    "lvl": 10,
+    "spot": 60,
+    "lvl": 15,
     "coords": [
-      33.85,
-      31.87
+      26.69,
+      26.99
     ],
     "radius": 600,
     "zone": "西拉诺西亚"
@@ -10128,13 +10132,13 @@ gt.bell.fish = [
     "icon": 29277,
     "func": "fish",
     "rarity": 1,
-    "title": "嘈杂川",
+    "title": "秋瓜湖畔",
     "category": "淡水垂钓",
-    "spot": 18,
+    "spot": 19,
     "lvl": 15,
     "coords": [
-      26.38,
-      25.1
+      21.02,
+      24.66
     ],
     "radius": 400,
     "zone": "黑衣森林北部林区"
@@ -10638,13 +10642,13 @@ gt.bell.fish = [
     "icon": 29275,
     "func": "fish",
     "rarity": 1,
-    "title": "火蜥蜴河",
+    "title": "不悔战泉",
     "category": "淡水垂钓",
-    "spot": 83,
-    "lvl": 25,
+    "spot": 84,
+    "lvl": 35,
     "coords": [
-      21.74,
-      15.09
+      25.38,
+      21.02
     ],
     "radius": 400,
     "zone": "南萨纳兰"
@@ -10918,13 +10922,13 @@ gt.bell.fish = [
     "icon": 29216,
     "func": "fish",
     "rarity": 1,
-    "title": "嘈杂川",
+    "title": "秋瓜湖畔",
     "category": "淡水垂钓",
-    "spot": 18,
+    "spot": 19,
     "lvl": 15,
     "coords": [
-      26.38,
-      25.1
+      21.02,
+      24.66
     ],
     "radius": 400,
     "zone": "黑衣森林北部林区"
@@ -11590,16 +11594,16 @@ gt.bell.fish = [
     "icon": 29268,
     "func": "fish",
     "rarity": 1,
-    "title": "石绿湖东北岸",
+    "title": "登天路溪谷",
     "category": "淡水垂钓",
-    "spot": 68,
-    "lvl": 35,
+    "spot": 99,
+    "lvl": 40,
     "coords": [
-      28.15,
-      22.84
+      15.89,
+      11.33
     ],
-    "radius": 600,
-    "zone": "拉诺西亚高地"
+    "radius": 400,
+    "zone": "拉诺西亚外地"
   },
   {
     "name": "巨鲈",
@@ -11636,15 +11640,15 @@ gt.bell.fish = [
     "icon": 29268,
     "func": "fish",
     "rarity": 1,
-    "title": "落翠底",
+    "title": "妖精领溪谷",
     "category": "淡水垂钓",
-    "spot": 7,
-    "lvl": 25,
+    "spot": 9,
+    "lvl": 45,
     "coords": [
-      20.48,
-      21.52
+      26.02,
+      20.74
     ],
-    "radius": 400,
+    "radius": 600,
     "zone": "黑衣森林东部林区"
   },
   {
@@ -11659,16 +11663,16 @@ gt.bell.fish = [
     "icon": 29268,
     "func": "fish",
     "rarity": 1,
-    "title": "撒沟厉沙丘",
-    "category": "沙海垂钓",
-    "spot": 87,
-    "lvl": 35,
+    "title": "蓝雾涌泉",
+    "category": "淡水垂钓",
+    "spot": 89,
+    "lvl": 40,
     "coords": [
-      27.31,
-      36.96
+      24.14,
+      26.0
     ],
-    "radius": 600,
-    "zone": "南萨纳兰"
+    "radius": 400,
+    "zone": "北萨纳兰"
   },
   {
     "name": "巨鲈",
@@ -11705,15 +11709,15 @@ gt.bell.fish = [
     "icon": 29268,
     "func": "fish",
     "rarity": 1,
-    "title": "圣人旅道",
+    "title": "剑峰山麓",
     "category": "淡水垂钓",
-    "spot": 31,
-    "lvl": 35,
+    "spot": 28,
+    "lvl": 40,
     "coords": [
-      13.25,
-      22.8
+      15.63,
+      21.4
     ],
-    "radius": 300,
+    "radius": 400,
     "zone": "库尔札斯中央高地"
   },
   {
@@ -11874,16 +11878,16 @@ gt.bell.fish = [
     "icon": 29303,
     "func": "fish",
     "rarity": 1,
-    "title": "石绿湖东北岸",
+    "title": "登天路溪谷",
     "category": "淡水垂钓",
-    "spot": 68,
-    "lvl": 35,
+    "spot": 99,
+    "lvl": 40,
     "coords": [
-      28.15,
-      22.84
+      15.89,
+      11.33
     ],
-    "radius": 600,
-    "zone": "拉诺西亚高地"
+    "radius": 400,
+    "zone": "拉诺西亚外地"
   },
   {
     "name": "丽舞蟹",
@@ -12176,13 +12180,13 @@ gt.bell.fish = [
     "icon": 29294,
     "func": "fish",
     "rarity": 1,
-    "title": "火蜥蜴河",
+    "title": "不悔战泉",
     "category": "淡水垂钓",
-    "spot": 83,
-    "lvl": 25,
+    "spot": 84,
+    "lvl": 35,
     "coords": [
-      21.74,
-      15.09
+      25.38,
+      21.02
     ],
     "radius": 400,
     "zone": "南萨纳兰"
@@ -12429,16 +12433,16 @@ gt.bell.fish = [
     "icon": 29312,
     "func": "fish",
     "rarity": 1,
-    "title": "撒沟厉沙丘",
-    "category": "沙海垂钓",
-    "spot": 87,
-    "lvl": 35,
+    "title": "蓝雾涌泉",
+    "category": "淡水垂钓",
+    "spot": 89,
+    "lvl": 40,
     "coords": [
-      27.31,
-      36.96
+      24.14,
+      26.0
     ],
-    "radius": 600,
-    "zone": "南萨纳兰"
+    "radius": 400,
+    "zone": "北萨纳兰"
   },
   {
     "name": "银鱼",
@@ -12854,13 +12858,13 @@ gt.bell.fish = [
     "icon": 29255,
     "func": "fish",
     "rarity": 1,
-    "title": "火蜥蜴河",
+    "title": "不悔战泉",
     "category": "淡水垂钓",
-    "spot": 83,
-    "lvl": 25,
+    "spot": 84,
+    "lvl": 35,
     "coords": [
-      21.74,
-      15.09
+      25.38,
+      21.02
     ],
     "radius": 400,
     "zone": "南萨纳兰"
@@ -12946,16 +12950,16 @@ gt.bell.fish = [
     "icon": 29278,
     "func": "fish",
     "rarity": 1,
-    "title": "撒沟厉沙丘",
-    "category": "沙海垂钓",
-    "spot": 87,
-    "lvl": 35,
+    "title": "蓝雾涌泉",
+    "category": "淡水垂钓",
+    "spot": 89,
+    "lvl": 40,
     "coords": [
-      27.31,
-      36.96
+      24.14,
+      26.0
     ],
-    "radius": 600,
-    "zone": "南萨纳兰"
+    "radius": 400,
+    "zone": "北萨纳兰"
   },
   {
     "name": "刀背鱼",
@@ -13369,7 +13373,6 @@ gt.bell.fish = [
     "patch": 1.0,
     "bait": [
       "沙蚕",
-      "沙蚕",
       "梅尔托尔虾虎",
       "梭子鰆"
     ],
@@ -13379,13 +13382,13 @@ gt.bell.fish = [
     "icon": 29037,
     "func": "fish",
     "rarity": 1,
-    "title": "雨燕塔殖民地",
+    "title": "骷髅谷沿岸地",
     "category": "海洋垂钓",
-    "spot": 59,
-    "lvl": 10,
+    "spot": 60,
+    "lvl": 15,
     "coords": [
-      33.85,
-      31.87
+      26.69,
+      26.99
     ],
     "radius": 600,
     "zone": "西拉诺西亚"
@@ -13394,7 +13397,6 @@ gt.bell.fish = [
     "name": "拾荒鮟鱇",
     "patch": 2.2,
     "bait": [
-      "沙蚕",
       "沙蚕",
       "梅尔托尔虾虎",
       "梭子鰆"
@@ -13409,13 +13411,13 @@ gt.bell.fish = [
     "icon": 29070,
     "func": "fish",
     "rarity": 2,
-    "title": "雨燕塔殖民地",
+    "title": "骷髅谷沿岸地",
     "category": "海洋垂钓",
-    "spot": 59,
-    "lvl": 10,
+    "spot": 60,
+    "lvl": 15,
     "coords": [
-      33.85,
-      31.87
+      26.69,
+      26.99
     ],
     "radius": 600,
     "zone": "西拉诺西亚"
@@ -13463,15 +13465,15 @@ gt.bell.fish = [
     "icon": 29004,
     "func": "fish",
     "rarity": 1,
-    "title": "酿酒师灯塔",
+    "title": "二分石沿岸地",
     "category": "海洋垂钓",
-    "spot": 64,
-    "lvl": 15,
+    "spot": 61,
+    "lvl": 35,
     "coords": [
-      30.15,
-      30.63
+      17.56,
+      20.98
     ],
-    "radius": 200,
+    "radius": 600,
     "zone": "西拉诺西亚"
   },
   {
@@ -13509,15 +13511,15 @@ gt.bell.fish = [
     "icon": 29026,
     "func": "fish",
     "rarity": 1,
-    "title": "酿酒师灯塔",
+    "title": "二分石沿岸地",
     "category": "海洋垂钓",
-    "spot": 64,
-    "lvl": 15,
+    "spot": 61,
+    "lvl": 35,
     "coords": [
-      30.15,
-      30.63
+      17.56,
+      20.98
     ],
-    "radius": 200,
+    "radius": 600,
     "zone": "西拉诺西亚"
   },
   {
@@ -13558,15 +13560,15 @@ gt.bell.fish = [
     "icon": 29085,
     "func": "fish",
     "rarity": 2,
-    "title": "酿酒师灯塔",
+    "title": "二分石沿岸地",
     "category": "海洋垂钓",
-    "spot": 64,
-    "lvl": 15,
+    "spot": 61,
+    "lvl": 35,
     "coords": [
-      30.15,
-      30.63
+      17.56,
+      20.98
     ],
-    "radius": 200,
+    "radius": 600,
     "zone": "西拉诺西亚"
   },
   {
@@ -14632,16 +14634,16 @@ gt.bell.fish = [
     "icon": 29245,
     "func": "fish",
     "rarity": 1,
-    "title": "石绿湖东北岸",
+    "title": "登天路溪谷",
     "category": "淡水垂钓",
-    "spot": 68,
-    "lvl": 35,
+    "spot": 99,
+    "lvl": 40,
     "coords": [
-      28.15,
-      22.84
+      15.89,
+      11.33
     ],
-    "radius": 600,
-    "zone": "拉诺西亚高地"
+    "radius": 400,
+    "zone": "拉诺西亚外地"
   },
   {
     "name": "暖水鳟",
@@ -15115,15 +15117,15 @@ gt.bell.fish = [
     "icon": 29250,
     "func": "fish",
     "rarity": 1,
-    "title": "落翠底",
+    "title": "妖精领溪谷",
     "category": "淡水垂钓",
-    "spot": 7,
-    "lvl": 25,
+    "spot": 9,
+    "lvl": 45,
     "coords": [
-      20.48,
-      21.52
+      26.02,
+      20.74
     ],
-    "radius": 400,
+    "radius": 600,
     "zone": "黑衣森林东部林区"
   },
   {
@@ -15138,16 +15140,16 @@ gt.bell.fish = [
     "icon": 29250,
     "func": "fish",
     "rarity": 1,
-    "title": "撒沟厉沙丘",
-    "category": "沙海垂钓",
-    "spot": 87,
-    "lvl": 35,
+    "title": "蓝雾涌泉",
+    "category": "淡水垂钓",
+    "spot": 89,
+    "lvl": 40,
     "coords": [
-      27.31,
-      36.96
+      24.14,
+      26.0
     ],
-    "radius": 600,
-    "zone": "南萨纳兰"
+    "radius": 400,
+    "zone": "北萨纳兰"
   },
   {
     "name": "杜父鱼",
@@ -15641,16 +15643,16 @@ gt.bell.fish = [
     "icon": 29284,
     "func": "fish",
     "rarity": 1,
-    "title": "石绿湖东北岸",
+    "title": "登天路溪谷",
     "category": "淡水垂钓",
-    "spot": 68,
-    "lvl": 35,
+    "spot": 99,
+    "lvl": 40,
     "coords": [
-      28.15,
-      22.84
+      15.89,
+      11.33
     ],
-    "radius": 600,
-    "zone": "拉诺西亚高地"
+    "radius": 400,
+    "zone": "拉诺西亚外地"
   },
   {
     "name": "石绿湖鳟鱼",
@@ -15687,15 +15689,15 @@ gt.bell.fish = [
     "icon": 29284,
     "func": "fish",
     "rarity": 1,
-    "title": "圣人旅道",
+    "title": "剑峰山麓",
     "category": "淡水垂钓",
-    "spot": 31,
-    "lvl": 35,
+    "spot": 28,
+    "lvl": 40,
     "coords": [
-      13.25,
-      22.8
+      15.63,
+      21.4
     ],
-    "radius": 300,
+    "radius": 400,
     "zone": "库尔札斯中央高地"
   },
   {
@@ -15812,16 +15814,16 @@ gt.bell.fish = [
     "icon": 29308,
     "func": "fish",
     "rarity": 1,
-    "title": "石绿湖东北岸",
+    "title": "登天路溪谷",
     "category": "淡水垂钓",
-    "spot": 68,
-    "lvl": 35,
+    "spot": 99,
+    "lvl": 40,
     "coords": [
-      28.15,
-      22.84
+      15.89,
+      11.33
     ],
-    "radius": 600,
-    "zone": "拉诺西亚高地"
+    "radius": 400,
+    "zone": "拉诺西亚外地"
   },
   {
     "name": "火狱蜗牛",
@@ -15881,13 +15883,13 @@ gt.bell.fish = [
     "icon": 29308,
     "func": "fish",
     "rarity": 1,
-    "title": "火蜥蜴河",
+    "title": "不悔战泉",
     "category": "淡水垂钓",
-    "spot": 83,
-    "lvl": 25,
+    "spot": 84,
+    "lvl": 35,
     "coords": [
-      21.74,
-      15.09
+      25.38,
+      21.02
     ],
     "radius": 400,
     "zone": "南萨纳兰"
@@ -15904,16 +15906,16 @@ gt.bell.fish = [
     "icon": 29308,
     "func": "fish",
     "rarity": 1,
-    "title": "撒沟厉沙丘",
-    "category": "沙海垂钓",
-    "spot": 87,
-    "lvl": 35,
+    "title": "蓝雾涌泉",
+    "category": "淡水垂钓",
+    "spot": 89,
+    "lvl": 40,
     "coords": [
-      27.31,
-      36.96
+      24.14,
+      26.0
     ],
-    "radius": 600,
-    "zone": "南萨纳兰"
+    "radius": 400,
+    "zone": "北萨纳兰"
   },
   {
     "name": "火狱蜗牛",
@@ -16046,16 +16048,16 @@ gt.bell.fish = [
     "icon": 29222,
     "func": "fish",
     "rarity": 1,
-    "title": "石绿湖东北岸",
+    "title": "登天路溪谷",
     "category": "淡水垂钓",
-    "spot": 68,
-    "lvl": 35,
+    "spot": 99,
+    "lvl": 40,
     "coords": [
-      28.15,
-      22.84
+      15.89,
+      11.33
     ],
-    "radius": 600,
-    "zone": "拉诺西亚高地"
+    "radius": 400,
+    "zone": "拉诺西亚外地"
   },
   {
     "name": "吞雷鱼",
@@ -16076,16 +16078,16 @@ gt.bell.fish = [
     "icon": 29368,
     "func": "fish",
     "rarity": 2,
-    "title": "石绿湖东北岸",
+    "title": "登天路溪谷",
     "category": "淡水垂钓",
-    "spot": 68,
-    "lvl": 35,
+    "spot": 99,
+    "lvl": 40,
     "coords": [
-      28.15,
-      22.84
+      15.89,
+      11.33
     ],
-    "radius": 600,
-    "zone": "拉诺西亚高地"
+    "radius": 400,
+    "zone": "拉诺西亚外地"
   },
   {
     "name": "抽须王",
@@ -16131,16 +16133,16 @@ gt.bell.fish = [
     "icon": 29212,
     "func": "fish",
     "rarity": 1,
-    "title": "海雾村",
-    "category": "海洋垂钓",
-    "spot": 104,
-    "lvl": 30,
+    "title": "翡翠湖滨",
+    "category": "淡水垂钓",
+    "spot": 90,
+    "lvl": 5,
     "coords": [
-      11.01,
-      11.01
+      12.61,
+      14.62
     ],
-    "radius": 3000,
-    "zone": "海雾村"
+    "radius": 600,
+    "zone": "格里达尼亚"
   },
   {
     "name": "皮皮拉鱼",
@@ -16319,16 +16321,16 @@ gt.bell.fish = [
     "icon": 29057,
     "func": "fish",
     "rarity": 1,
-    "title": "海雾村",
-    "category": "海洋垂钓",
-    "spot": 104,
-    "lvl": 30,
+    "title": "翡翠湖滨",
+    "category": "淡水垂钓",
+    "spot": 90,
+    "lvl": 5,
     "coords": [
-      11.01,
-      11.01
+      12.61,
+      14.62
     ],
-    "radius": 3000,
-    "zone": "海雾村"
+    "radius": 600,
+    "zone": "格里达尼亚"
   },
   {
     "name": "求雨鱼",
@@ -16377,16 +16379,16 @@ gt.bell.fish = [
     "icon": 29076,
     "func": "fish",
     "rarity": 2,
-    "title": "海雾村",
-    "category": "海洋垂钓",
-    "spot": 104,
-    "lvl": 30,
+    "title": "翡翠湖滨",
+    "category": "淡水垂钓",
+    "spot": 90,
+    "lvl": 5,
     "coords": [
-      11.01,
-      11.01
+      12.61,
+      14.62
     ],
-    "radius": 3000,
-    "zone": "海雾村"
+    "radius": 600,
+    "zone": "格里达尼亚"
   },
   {
     "name": "酿血鱼",
@@ -16527,13 +16529,13 @@ gt.bell.fish = [
     "icon": 29230,
     "func": "fish",
     "rarity": 1,
-    "title": "嘈杂川",
+    "title": "秋瓜湖畔",
     "category": "淡水垂钓",
-    "spot": 18,
+    "spot": 19,
     "lvl": 15,
     "coords": [
-      26.38,
-      25.1
+      21.02,
+      24.66
     ],
     "radius": 400,
     "zone": "黑衣森林北部林区"
@@ -16596,15 +16598,15 @@ gt.bell.fish = [
     "icon": 29230,
     "func": "fish",
     "rarity": 1,
-    "title": "圣人旅道",
+    "title": "剑峰山麓",
     "category": "淡水垂钓",
-    "spot": 31,
-    "lvl": 35,
+    "spot": 28,
+    "lvl": 40,
     "coords": [
-      13.25,
-      22.8
+      15.63,
+      21.4
     ],
-    "radius": 300,
+    "radius": 400,
     "zone": "库尔札斯中央高地"
   },
   {
@@ -16734,13 +16736,13 @@ gt.bell.fish = [
     "icon": 29215,
     "func": "fish",
     "rarity": 1,
-    "title": "嘈杂川",
+    "title": "秋瓜湖畔",
     "category": "淡水垂钓",
-    "spot": 18,
+    "spot": 19,
     "lvl": 15,
     "coords": [
-      26.38,
-      25.1
+      21.02,
+      24.66
     ],
     "radius": 400,
     "zone": "黑衣森林北部林区"
@@ -17870,13 +17872,13 @@ gt.bell.fish = [
     "icon": 29204,
     "func": "fish",
     "rarity": 1,
-    "title": "嘈杂川",
+    "title": "秋瓜湖畔",
     "category": "淡水垂钓",
-    "spot": 18,
+    "spot": 19,
     "lvl": 15,
     "coords": [
-      26.38,
-      25.1
+      21.02,
+      24.66
     ],
     "radius": 400,
     "zone": "黑衣森林北部林区"
@@ -18251,15 +18253,15 @@ gt.bell.fish = [
     "icon": 29211,
     "func": "fish",
     "rarity": 1,
-    "title": "落翠底",
+    "title": "妖精领溪谷",
     "category": "淡水垂钓",
-    "spot": 7,
-    "lvl": 25,
+    "spot": 9,
+    "lvl": 45,
     "coords": [
-      20.48,
-      21.52
+      26.02,
+      20.74
     ],
-    "radius": 400,
+    "radius": 600,
     "zone": "黑衣森林东部林区"
   },
   {
@@ -18393,15 +18395,15 @@ gt.bell.fish = [
     "icon": 29263,
     "func": "fish",
     "rarity": 1,
-    "title": "落翠底",
+    "title": "妖精领溪谷",
     "category": "淡水垂钓",
-    "spot": 7,
-    "lvl": 25,
+    "spot": 9,
+    "lvl": 45,
     "coords": [
-      20.48,
-      21.52
+      26.02,
+      20.74
     ],
-    "radius": 400,
+    "radius": 600,
     "zone": "黑衣森林东部林区"
   },
   {
@@ -18443,15 +18445,15 @@ gt.bell.fish = [
     "icon": 29221,
     "func": "fish",
     "rarity": 1,
-    "title": "落翠底",
+    "title": "妖精领溪谷",
     "category": "淡水垂钓",
-    "spot": 7,
-    "lvl": 25,
+    "spot": 9,
+    "lvl": 45,
     "coords": [
-      20.48,
-      21.52
+      26.02,
+      20.74
     ],
-    "radius": 400,
+    "radius": 600,
     "zone": "黑衣森林东部林区"
   },
   {
@@ -18540,15 +18542,15 @@ gt.bell.fish = [
     "icon": 29293,
     "func": "fish",
     "rarity": 1,
-    "title": "落翠底",
+    "title": "妖精领溪谷",
     "category": "淡水垂钓",
-    "spot": 7,
-    "lvl": 25,
+    "spot": 9,
+    "lvl": 45,
     "coords": [
-      20.48,
-      21.52
+      26.02,
+      20.74
     ],
-    "radius": 400,
+    "radius": 600,
     "zone": "黑衣森林东部林区"
   },
   {
@@ -18572,15 +18574,15 @@ gt.bell.fish = [
     "icon": 29387,
     "func": "fish",
     "rarity": 2,
-    "title": "落翠底",
+    "title": "妖精领溪谷",
     "category": "淡水垂钓",
-    "spot": 7,
-    "lvl": 25,
+    "spot": 9,
+    "lvl": 45,
     "coords": [
-      20.48,
-      21.52
+      26.02,
+      20.74
     ],
-    "radius": 400,
+    "radius": 600,
     "zone": "黑衣森林东部林区"
   },
   {
@@ -19112,13 +19114,13 @@ gt.bell.fish = [
     "icon": 29249,
     "func": "fish",
     "rarity": 1,
-    "title": "嘈杂川",
+    "title": "秋瓜湖畔",
     "category": "淡水垂钓",
-    "spot": 18,
+    "spot": 19,
     "lvl": 15,
     "coords": [
-      26.38,
-      25.1
+      21.02,
+      24.66
     ],
     "radius": 400,
     "zone": "黑衣森林北部林区"
@@ -19163,13 +19165,13 @@ gt.bell.fish = [
     "icon": 29340,
     "func": "fish",
     "rarity": 2,
-    "title": "嘈杂川",
+    "title": "秋瓜湖畔",
     "category": "淡水垂钓",
-    "spot": 18,
+    "spot": 19,
     "lvl": 15,
     "coords": [
-      26.38,
-      25.1
+      21.02,
+      24.66
     ],
     "radius": 400,
     "zone": "黑衣森林北部林区"
@@ -19232,16 +19234,16 @@ gt.bell.fish = [
     "icon": 29258,
     "func": "fish",
     "rarity": 1,
-    "title": "撒沟厉沙丘",
-    "category": "沙海垂钓",
-    "spot": 87,
-    "lvl": 35,
+    "title": "蓝雾涌泉",
+    "category": "淡水垂钓",
+    "spot": 89,
+    "lvl": 40,
     "coords": [
-      27.31,
-      36.96
+      24.14,
+      26.0
     ],
-    "radius": 600,
-    "zone": "南萨纳兰"
+    "radius": 400,
+    "zone": "北萨纳兰"
   },
   {
     "name": "黄金鳅",
@@ -20556,13 +20558,13 @@ gt.bell.fish = [
     "icon": 29288,
     "func": "fish",
     "rarity": 1,
-    "title": "火蜥蜴河",
+    "title": "不悔战泉",
     "category": "淡水垂钓",
-    "spot": 83,
-    "lvl": 25,
+    "spot": 84,
+    "lvl": 35,
     "coords": [
-      21.74,
-      15.09
+      25.38,
+      21.02
     ],
     "radius": 400,
     "zone": "南萨纳兰"
@@ -20634,13 +20636,13 @@ gt.bell.fish = [
     "icon": 29241,
     "func": "fish",
     "rarity": 1,
-    "title": "火蜥蜴河",
+    "title": "不悔战泉",
     "category": "淡水垂钓",
-    "spot": 83,
-    "lvl": 25,
+    "spot": 84,
+    "lvl": 35,
     "coords": [
-      21.74,
-      15.09
+      25.38,
+      21.02
     ],
     "radius": 400,
     "zone": "南萨纳兰"
@@ -20664,13 +20666,13 @@ gt.bell.fish = [
     "icon": 29349,
     "func": "fish",
     "rarity": 2,
-    "title": "火蜥蜴河",
+    "title": "不悔战泉",
     "category": "淡水垂钓",
-    "spot": 83,
-    "lvl": 25,
+    "spot": 84,
+    "lvl": 35,
     "coords": [
-      21.74,
-      15.09
+      25.38,
+      21.02
     ],
     "radius": 400,
     "zone": "南萨纳兰"
@@ -20736,15 +20738,15 @@ gt.bell.fish = [
     "icon": 29234,
     "func": "fish",
     "rarity": 1,
-    "title": "遗忘绿洲",
-    "category": "淡水垂钓",
-    "spot": 85,
+    "title": "撒沟厉沙海",
+    "category": "沙海垂钓",
+    "spot": 86,
     "lvl": 35,
     "coords": [
-      15.65,
-      30.95
+      12.37,
+      36.03
     ],
-    "radius": 400,
+    "radius": 600,
     "zone": "南萨纳兰"
   },
   {
@@ -20759,15 +20761,15 @@ gt.bell.fish = [
     "icon": 29604,
     "func": "fish",
     "rarity": 1,
-    "title": "遗忘绿洲",
-    "category": "淡水垂钓",
-    "spot": 85,
+    "title": "撒沟厉沙海",
+    "category": "沙海垂钓",
+    "spot": 86,
     "lvl": 35,
     "coords": [
-      15.65,
-      30.95
+      12.37,
+      36.03
     ],
-    "radius": 400,
+    "radius": 600,
     "zone": "南萨纳兰"
   },
   {
@@ -20805,15 +20807,15 @@ gt.bell.fish = [
     "icon": 29602,
     "func": "fish",
     "rarity": 1,
-    "title": "遗忘绿洲",
-    "category": "淡水垂钓",
-    "spot": 85,
+    "title": "撒沟厉沙海",
+    "category": "沙海垂钓",
+    "spot": 86,
     "lvl": 35,
     "coords": [
-      15.65,
-      30.95
+      12.37,
+      36.03
     ],
-    "radius": 400,
+    "radius": 600,
     "zone": "南萨纳兰"
   },
   {
@@ -20851,15 +20853,15 @@ gt.bell.fish = [
     "icon": 29606,
     "func": "fish",
     "rarity": 1,
-    "title": "遗忘绿洲",
-    "category": "淡水垂钓",
-    "spot": 85,
+    "title": "撒沟厉沙海",
+    "category": "沙海垂钓",
+    "spot": 86,
     "lvl": 35,
     "coords": [
-      15.65,
-      30.95
+      12.37,
+      36.03
     ],
-    "radius": 400,
+    "radius": 600,
     "zone": "南萨纳兰"
   },
   {
@@ -20897,15 +20899,15 @@ gt.bell.fish = [
     "icon": 29601,
     "func": "fish",
     "rarity": 1,
-    "title": "遗忘绿洲",
-    "category": "淡水垂钓",
-    "spot": 85,
+    "title": "撒沟厉沙海",
+    "category": "沙海垂钓",
+    "spot": 86,
     "lvl": 35,
     "coords": [
-      15.65,
-      30.95
+      12.37,
+      36.03
     ],
-    "radius": 400,
+    "radius": 600,
     "zone": "南萨纳兰"
   },
   {
@@ -20944,15 +20946,15 @@ gt.bell.fish = [
     "icon": 29607,
     "func": "fish",
     "rarity": 1,
-    "title": "遗忘绿洲",
-    "category": "淡水垂钓",
-    "spot": 85,
+    "title": "撒沟厉沙海",
+    "category": "沙海垂钓",
+    "spot": 86,
     "lvl": 35,
     "coords": [
-      15.65,
-      30.95
+      12.37,
+      36.03
     ],
-    "radius": 400,
+    "radius": 600,
     "zone": "南萨纳兰"
   },
   {
@@ -20992,15 +20994,15 @@ gt.bell.fish = [
     "icon": 29608,
     "func": "fish",
     "rarity": 1,
-    "title": "遗忘绿洲",
-    "category": "淡水垂钓",
-    "spot": 85,
+    "title": "撒沟厉沙海",
+    "category": "沙海垂钓",
+    "spot": 86,
     "lvl": 35,
     "coords": [
-      15.65,
-      30.95
+      12.37,
+      36.03
     ],
-    "radius": 400,
+    "radius": 600,
     "zone": "南萨纳兰"
   },
   {
@@ -21023,15 +21025,15 @@ gt.bell.fish = [
     "icon": 29610,
     "func": "fish",
     "rarity": 2,
-    "title": "遗忘绿洲",
-    "category": "淡水垂钓",
-    "spot": 85,
+    "title": "撒沟厉沙海",
+    "category": "沙海垂钓",
+    "spot": 86,
     "lvl": 35,
     "coords": [
-      15.65,
-      30.95
+      12.37,
+      36.03
     ],
-    "radius": 400,
+    "radius": 600,
     "zone": "南萨纳兰"
   },
   {
@@ -21058,15 +21060,15 @@ gt.bell.fish = [
     "icon": 29612,
     "func": "fish",
     "rarity": 2,
-    "title": "遗忘绿洲",
-    "category": "淡水垂钓",
-    "spot": 85,
+    "title": "撒沟厉沙海",
+    "category": "沙海垂钓",
+    "spot": 86,
     "lvl": 35,
     "coords": [
-      15.65,
-      30.95
+      12.37,
+      36.03
     ],
-    "radius": 400,
+    "radius": 600,
     "zone": "南萨纳兰"
   },
   {
@@ -21156,16 +21158,16 @@ gt.bell.fish = [
     "icon": 29264,
     "func": "fish",
     "rarity": 1,
-    "title": "撒沟厉沙丘",
-    "category": "沙海垂钓",
-    "spot": 87,
-    "lvl": 35,
+    "title": "蓝雾涌泉",
+    "category": "淡水垂钓",
+    "spot": 89,
+    "lvl": 40,
     "coords": [
-      27.31,
-      36.96
+      24.14,
+      26.0
     ],
-    "radius": 600,
-    "zone": "南萨纳兰"
+    "radius": 400,
+    "zone": "北萨纳兰"
   },
   {
     "name": "雀鳝",
@@ -21204,16 +21206,16 @@ gt.bell.fish = [
     "icon": 29219,
     "func": "fish",
     "rarity": 1,
-    "title": "撒沟厉沙丘",
-    "category": "沙海垂钓",
-    "spot": 87,
-    "lvl": 35,
+    "title": "蓝雾涌泉",
+    "category": "淡水垂钓",
+    "spot": 89,
+    "lvl": 40,
     "coords": [
-      27.31,
-      36.96
+      24.14,
+      26.0
     ],
-    "radius": 600,
-    "zone": "南萨纳兰"
+    "radius": 400,
+    "zone": "北萨纳兰"
   },
   {
     "name": "汉尼拔",
@@ -21235,16 +21237,16 @@ gt.bell.fish = [
     "icon": 29345,
     "func": "fish",
     "rarity": 2,
-    "title": "撒沟厉沙丘",
-    "category": "沙海垂钓",
-    "spot": 87,
-    "lvl": 35,
+    "title": "蓝雾涌泉",
+    "category": "淡水垂钓",
+    "spot": 89,
+    "lvl": 40,
     "coords": [
-      27.31,
-      36.96
+      24.14,
+      26.0
     ],
-    "radius": 600,
-    "zone": "南萨纳兰"
+    "radius": 400,
+    "zone": "北萨纳兰"
   },
   {
     "name": "乌兹刀背鱼",
@@ -21372,15 +21374,15 @@ gt.bell.fish = [
     "icon": 29240,
     "func": "fish",
     "rarity": 1,
-    "title": "圣人旅道",
+    "title": "剑峰山麓",
     "category": "淡水垂钓",
-    "spot": 31,
-    "lvl": 35,
+    "spot": 28,
+    "lvl": 40,
     "coords": [
-      13.25,
-      22.8
+      15.63,
+      21.4
     ],
-    "radius": 300,
+    "radius": 400,
     "zone": "库尔札斯中央高地"
   },
   {
@@ -21481,7 +21483,6 @@ gt.bell.fish = [
     "patch": 1.0,
     "bait": [
       "蛾蛹",
-      "蛾蛹",
       "斑纹虾虎"
     ],
     "hookset": "强力提钩",
@@ -21490,15 +21491,15 @@ gt.bell.fish = [
     "icon": 29266,
     "func": "fish",
     "rarity": 1,
-    "title": "圣人旅道",
+    "title": "剑峰山麓",
     "category": "淡水垂钓",
-    "spot": 31,
-    "lvl": 35,
+    "spot": 28,
+    "lvl": 40,
     "coords": [
-      13.25,
-      22.8
+      15.63,
+      21.4
     ],
-    "radius": 300,
+    "radius": 400,
     "zone": "库尔札斯中央高地"
   },
   {
@@ -21610,15 +21611,15 @@ gt.bell.fish = [
     "icon": 29310,
     "func": "fish",
     "rarity": 1,
-    "title": "圣人旅道",
+    "title": "剑峰山麓",
     "category": "淡水垂钓",
-    "spot": 31,
-    "lvl": 35,
+    "spot": 28,
+    "lvl": 40,
     "coords": [
-      13.25,
-      22.8
+      15.63,
+      21.4
     ],
-    "radius": 300,
+    "radius": 400,
     "zone": "库尔札斯中央高地"
   },
   {
@@ -21810,7 +21811,6 @@ gt.bell.fish = [
     "patch": 1.0,
     "bait": [
       "蛾蛹",
-      "蛾蛹",
       "斑纹虾虎"
     ],
     "hookset": "强力提钩",
@@ -21869,15 +21869,15 @@ gt.bell.fish = [
     "icon": 29220,
     "func": "fish",
     "rarity": 1,
-    "title": "圣人旅道",
+    "title": "剑峰山麓",
     "category": "淡水垂钓",
-    "spot": 31,
-    "lvl": 35,
+    "spot": 28,
+    "lvl": 40,
     "coords": [
-      13.25,
-      22.8
+      15.63,
+      21.4
     ],
-    "radius": 300,
+    "radius": 400,
     "zone": "库尔札斯中央高地"
   },
   {
@@ -21931,7 +21931,6 @@ gt.bell.fish = [
     "patch": 1.0,
     "bait": [
       "蛾蛹",
-      "蛾蛹",
       "斑纹虾虎"
     ],
     "hookset": "强力提钩",
@@ -21940,22 +21939,21 @@ gt.bell.fish = [
     "icon": 29225,
     "func": "fish",
     "rarity": 1,
-    "title": "圣人旅道",
+    "title": "剑峰山麓",
     "category": "淡水垂钓",
-    "spot": 31,
-    "lvl": 35,
+    "spot": 28,
+    "lvl": 40,
     "coords": [
-      13.25,
-      22.8
+      15.63,
+      21.4
     ],
-    "radius": 300,
+    "radius": 400,
     "zone": "库尔札斯中央高地"
   },
   {
     "name": "星光鳟鱼",
     "patch": 2.3,
     "bait": [
-      "火萤",
       "花蝇",
       "阿巴拉提亚公鱼"
     ],
@@ -21973,15 +21971,15 @@ gt.bell.fish = [
     "icon": 29359,
     "func": "fish",
     "rarity": 2,
-    "title": "圣人旅道",
+    "title": "剑峰山麓",
     "category": "淡水垂钓",
-    "spot": 31,
-    "lvl": 35,
+    "spot": 28,
+    "lvl": 40,
     "coords": [
-      13.25,
-      22.8
+      15.63,
+      21.4
     ],
-    "radius": 300,
+    "radius": 400,
     "zone": "库尔札斯中央高地"
   },
   {
@@ -22172,15 +22170,15 @@ gt.bell.fish = [
     "icon": 29657,
     "func": "fish",
     "rarity": 1,
-    "title": "披雪大冰壁",
-    "category": "淡水垂钓",
-    "spot": 33,
+    "title": "伊修加德大云海",
+    "category": "浮岛垂钓",
+    "spot": 34,
     "lvl": 45,
     "coords": [
-      3.16,
-      21.3
+      14.21,
+      13.41
     ],
-    "radius": 400,
+    "radius": 600,
     "zone": "库尔札斯中央高地"
   },
   {
@@ -22218,15 +22216,15 @@ gt.bell.fish = [
     "icon": 29653,
     "func": "fish",
     "rarity": 1,
-    "title": "披雪大冰壁",
-    "category": "淡水垂钓",
-    "spot": 33,
+    "title": "伊修加德大云海",
+    "category": "浮岛垂钓",
+    "spot": 34,
     "lvl": 45,
     "coords": [
-      3.16,
-      21.3
+      14.21,
+      13.41
     ],
-    "radius": 400,
+    "radius": 600,
     "zone": "库尔札斯中央高地"
   },
   {
@@ -22264,15 +22262,15 @@ gt.bell.fish = [
     "icon": 29655,
     "func": "fish",
     "rarity": 1,
-    "title": "披雪大冰壁",
-    "category": "淡水垂钓",
-    "spot": 33,
+    "title": "伊修加德大云海",
+    "category": "浮岛垂钓",
+    "spot": 34,
     "lvl": 45,
     "coords": [
-      3.16,
-      21.3
+      14.21,
+      13.41
     ],
-    "radius": 400,
+    "radius": 600,
     "zone": "库尔札斯中央高地"
   },
   {
@@ -22311,15 +22309,15 @@ gt.bell.fish = [
     "icon": 29651,
     "func": "fish",
     "rarity": 1,
-    "title": "披雪大冰壁",
-    "category": "淡水垂钓",
-    "spot": 33,
+    "title": "伊修加德大云海",
+    "category": "浮岛垂钓",
+    "spot": 34,
     "lvl": 45,
     "coords": [
-      3.16,
-      21.3
+      14.21,
+      13.41
     ],
-    "radius": 400,
+    "radius": 600,
     "zone": "库尔札斯中央高地"
   },
   {
@@ -22358,15 +22356,15 @@ gt.bell.fish = [
     "icon": 29652,
     "func": "fish",
     "rarity": 1,
-    "title": "披雪大冰壁",
-    "category": "淡水垂钓",
-    "spot": 33,
+    "title": "伊修加德大云海",
+    "category": "浮岛垂钓",
+    "spot": 34,
     "lvl": 45,
     "coords": [
-      3.16,
-      21.3
+      14.21,
+      13.41
     ],
-    "radius": 400,
+    "radius": 600,
     "zone": "库尔札斯中央高地"
   },
   {
@@ -22413,15 +22411,15 @@ gt.bell.fish = [
     "icon": 29658,
     "func": "fish",
     "rarity": 2,
-    "title": "披雪大冰壁",
-    "category": "淡水垂钓",
-    "spot": 33,
+    "title": "伊修加德大云海",
+    "category": "浮岛垂钓",
+    "spot": 34,
     "lvl": 45,
     "coords": [
-      3.16,
-      21.3
+      14.21,
+      13.41
     ],
-    "radius": 400,
+    "radius": 600,
     "zone": "库尔札斯中央高地"
   },
   {
@@ -25131,7 +25129,7 @@ gt.bell.fish = [
     "rarity": 1,
     "title": "狂风云海",
     "category": "云海垂钓",
-    "spot": 10025,
+    "spot": 10020,
     "lvl": 80,
     "coords": [
       31.0,
@@ -25196,7 +25194,7 @@ gt.bell.fish = [
     "rarity": 1,
     "title": "狂风云海",
     "category": "云海垂钓",
-    "spot": 10025,
+    "spot": 10020,
     "lvl": 80,
     "coords": [
       31.0,
@@ -25261,7 +25259,7 @@ gt.bell.fish = [
     "rarity": 1,
     "title": "狂风云海",
     "category": "云海垂钓",
-    "spot": 10025,
+    "spot": 10020,
     "lvl": 80,
     "coords": [
       31.0,
@@ -25329,7 +25327,7 @@ gt.bell.fish = [
     "rarity": 1,
     "title": "狂风云海",
     "category": "云海垂钓",
-    "spot": 10025,
+    "spot": 10020,
     "lvl": 80,
     "coords": [
       31.0,
@@ -30640,7 +30638,7 @@ gt.bell.fish = [
     "rarity": 1,
     "title": "狂风云海",
     "category": "云海垂钓",
-    "spot": 10025,
+    "spot": 10020,
     "lvl": 80,
     "coords": [
       31.0,
@@ -38279,7 +38277,7 @@ gt.bell.fish = [
     "zone": "水晶都"
   },
   {
-    "name": "散罪",
+    "name": "散罪鱼",
     "patch": 5.3,
     "folklore": 1,
     "bait": [
@@ -39270,6 +39268,42 @@ gt.bell.fish = [
     "zone": "雷克兰德"
   },
   {
+    "name": "利斯塔克鲨",
+    "patch": 5.55,
+    "folklore": 1,
+    "bait": [
+      "虫箱",
+      "不朽巨鱼"
+    ],
+    "during": {
+      "start": 16,
+      "end": 24
+    },
+    "weather": [
+      "薄雾"
+    ],
+    "transition": [
+      "碧空",
+      "晴朗"
+    ],
+    "hookset": "强力提钩",
+    "tug": "重杆",
+    "id": 33239,
+    "icon": "t/28497",
+    "func": "fish",
+    "rarity": 2,
+    "title": "贤岛",
+    "category": "淡水垂钓",
+    "spot": 206,
+    "lvl": 75,
+    "coords": [
+      9.21,
+      37.64
+    ],
+    "radius": 900,
+    "zone": "雷克兰德"
+  },
+  {
     "name": "食骨虾",
     "patch": 5.0,
     "bait": [
@@ -40179,6 +40213,61 @@ gt.bell.fish = [
     "zone": "珂露西亚岛"
   },
   {
+    "name": "自走鱼偶",
+    "patch": 5.55,
+    "folklore": 1,
+    "bait": [
+      "短嘴诱饵鱼"
+    ],
+    "during": {
+      "start": 10,
+      "end": 16
+    },
+    "predator": [
+      {
+        "name": "变影鱼",
+        "predatorAmount": 1,
+        "bait": [
+          "乌贼丝"
+        ],
+        "id": 33319,
+        "icon": 28036
+      },
+      {
+        "name": "变形鱼",
+        "predatorAmount": 5,
+        "bait": [
+          "藻虾"
+        ],
+        "id": 27452,
+        "icon": 29172
+      }
+    ],
+    "weather": [
+      "强风"
+    ],
+    "transition": [
+      "碧空",
+      "晴朗"
+    ],
+    "hookset": "强力提钩",
+    "tug": "重杆",
+    "id": 33240,
+    "icon": "t/28038",
+    "func": "fish",
+    "rarity": 2,
+    "title": "观海湾",
+    "category": "海洋垂钓",
+    "spot": 212,
+    "lvl": 75,
+    "coords": [
+      16.82,
+      35.83
+    ],
+    "radius": 600,
+    "zone": "珂露西亚岛"
+  },
+  {
     "name": "尖枪乌贼",
     "patch": 5.0,
     "bait": [
@@ -40562,6 +40651,51 @@ gt.bell.fish = [
     "tug": "重杆",
     "id": 28069,
     "icon": 29620,
+    "func": "fish",
+    "rarity": 2,
+    "title": "沙河",
+    "category": "沙海垂钓",
+    "spot": 215,
+    "lvl": 71,
+    "coords": [
+      31.83,
+      12.71
+    ],
+    "radius": 900,
+    "zone": "安穆·艾兰"
+  },
+  {
+    "name": "惊喜蛋",
+    "patch": 5.55,
+    "folklore": 1,
+    "bait": [
+      "沙漠蛙"
+    ],
+    "during": {
+      "start": 0,
+      "end": 2
+    },
+    "predator": [
+      {
+        "name": "沙卵",
+        "predatorAmount": 10,
+        "bait": [
+          "沙漠蛙"
+        ],
+        "id": 27462,
+        "icon": 29617
+      }
+    ],
+    "weather": [
+      "热浪"
+    ],
+    "transition": [
+      "扬沙"
+    ],
+    "hookset": "精准提钩",
+    "tug": "重杆",
+    "id": 33241,
+    "icon": "t/29622",
     "func": "fish",
     "rarity": 2,
     "title": "沙河",
@@ -41433,6 +41567,40 @@ gt.bell.fish = [
     "zone": "伊尔美格"
   },
   {
+    "name": "镜中蝶",
+    "patch": 5.55,
+    "folklore": 1,
+    "bait": [
+      "虫箱"
+    ],
+    "during": {
+      "start": 23,
+      "end": 24
+    },
+    "weather": [
+      "碧空"
+    ],
+    "transition": [
+      "雷雨"
+    ],
+    "hookset": "精准提钩",
+    "tug": "重杆",
+    "id": 33242,
+    "icon": "t/28495",
+    "func": "fish",
+    "rarity": 2,
+    "title": "身镜湖",
+    "category": "淡水垂钓",
+    "spot": 219,
+    "lvl": 73,
+    "coords": [
+      21.02,
+      22.82
+    ],
+    "radius": 2400,
+    "zone": "伊尔美格"
+  },
+  {
     "name": "血眼蛙",
     "patch": 5.0,
     "bait": [
@@ -42160,6 +42328,37 @@ gt.bell.fish = [
     "tug": "重杆",
     "id": 28071,
     "icon": 28474,
+    "func": "fish",
+    "rarity": 2,
+    "title": "蛇水湖",
+    "category": "淡水垂钓",
+    "spot": 225,
+    "lvl": 70,
+    "coords": [
+      7.41,
+      28.73
+    ],
+    "radius": 1800,
+    "zone": "拉凯提卡大森林"
+  },
+  {
+    "name": "隆卡的大水蛇？",
+    "patch": 5.55,
+    "folklore": 1,
+    "bait": [
+      "盗蟹丸",
+      "王冠脂鲤",
+      "引螈",
+      "洛克瓦卫兵"
+    ],
+    "during": {
+      "start": 10,
+      "end": 12
+    },
+    "hookset": "强力提钩",
+    "tug": "重杆",
+    "id": 33243,
+    "icon": "t/28499",
     "func": "fish",
     "rarity": 2,
     "title": "蛇水湖",
@@ -43299,6 +43498,51 @@ gt.bell.fish = [
     "tug": "重杆",
     "id": 33325,
     "icon": 28035,
+    "func": "fish",
+    "rarity": 2,
+    "title": "卡利班深海峡西北",
+    "category": "海洋垂钓",
+    "spot": 232,
+    "lvl": 79,
+    "coords": [
+      11.91,
+      10.91
+    ],
+    "radius": 300,
+    "zone": "黑风海"
+  },
+  {
+    "name": "长吻帆蜥鱼",
+    "patch": 5.55,
+    "folklore": 1,
+    "bait": [
+      "乌贼丝"
+    ],
+    "during": {
+      "start": 0,
+      "end": 2
+    },
+    "predator": [
+      {
+        "name": "奸隐鱼",
+        "predatorAmount": 2,
+        "bait": [
+          "短嘴诱饵鱼"
+        ],
+        "id": 33325,
+        "icon": 28035
+      }
+    ],
+    "weather": [
+      "阴云"
+    ],
+    "transition": [
+      "晴朗"
+    ],
+    "hookset": "强力提钩",
+    "tug": "重杆",
+    "id": 33244,
+    "icon": "t/28033",
     "func": "fish",
     "rarity": 2,
     "title": "卡利班深海峡西北",

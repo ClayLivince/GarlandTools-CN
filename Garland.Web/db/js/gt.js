@@ -1863,10 +1863,10 @@ gt.item = {
     ingredients: {},
     complexity: {},
     version: 3,
-	//itemPrimeKeys: ['物理防御力', '魔法防御力', '物理攻击力', '魔法攻击力', '物理自动攻击', '攻击间隔', '格挡发动力', '格挡性能'],
-    //minionPrimeKeys: ['生命值', '攻击力', '防御力', '速度'],
-    itemPrimeKeys: ['Defense', 'Magic Defense', 'Physical Damage', 'Magic Damage', 'Auto-attack', 'Delay', 'Block Rate', 'Block Strength'],
-    minionPrimeKeys: ['HP', 'Attack', 'Defense', 'Speed'],
+	itemPrimeKeys: ['物理防御力', '魔法防御力', '物理攻击力', '魔法攻击力', '物理自动攻击', '攻击间隔', '格挡发动力', '格挡性能'],
+    minionPrimeKeys: ['生命值', '攻击力', '防御力', '速度'],
+    //itemPrimeKeys: ['Defense', 'Magic Defense', 'Physical Damage', 'Magic Damage', 'Auto-attack', 'Delay', 'Block Rate', 'Block Strength'],
+    //minionPrimeKeys: ['HP', 'Attack', 'Defense', 'Speed'],
     mainAttributeKeys: { Strength: 1, Dexterity: 1, Vitality: 1, Intelligence: 1, Mind: 1 },
     baseParamAbbreviations: {
         '魔法攻击力': '攻击力',
@@ -1968,6 +1968,16 @@ gt.item = {
             return view;
 
         var itemSettings = gt.settings.getItem(item.id);
+
+        // Localizations
+        if (item.en) {
+            if (item.en.name) {
+                view.en = item.en;
+                view.ja = item.ja;
+                view.fr = item.fr;
+                view.de = item.de;
+            }
+        }
 
         // Repairs
         if (item.repair)
@@ -2585,7 +2595,7 @@ gt.item = {
             item.attr["自动攻击"] = gt.item.calculateAutoAttack(item.attr["物理攻击力"], item.attr.Delay);
             if (item.attr_hq)
                 item.attr_hq["自动攻击"] = gt.item.calculateAutoAttack(item.attr_hq["物理攻击力"], item.attr.Delay);
-            primes.push(gt.item.formatAttribute('自动攻击k', item.attr, item.attr_hq, item.attr_max, 0, primeKeys));
+            primes.push(gt.item.formatAttribute('自动攻击', item.attr, item.attr_hq, item.attr_max, 0, primeKeys));
         }
 
         bonuses = _.sortBy(bonuses, function(b) { return b.sort; });
@@ -3980,6 +3990,7 @@ gt.search = {
     resultIndex: { quest: { }, leve: { }, action: { }, achievement: { }, instance: { }, fate: { }, npc: { }, mob: { }, item: { }, fishing: { }, node: { }, status: { } },
     activeQuery: null,
     serverSearchId: 0,
+    currentLang: 'chs',
 
     initialize: function(data) {
         if (!gt.core.isLive)
@@ -4007,6 +4018,7 @@ gt.search = {
             $('#search-section').addClass('inactive');
 
         // Bind events
+        $('#filter-lang').change(gt.search.filterLangChanged);
         $('#filter-item-level-min').change(gt.search.filterItemLevelMinChanged);
         $('#filter-item-level-max').change(gt.search.filterItemLevelMaxChanged);
         $('#filter-item-craftable').change(gt.search.filterItemCraftableChanged);
@@ -4218,6 +4230,10 @@ gt.search = {
 
             // A query is not a cache match when...
 
+            // Language differ.
+            if (!_.isEqual(query.lang, cachedQuery.lang))
+                continue;
+
             // Filters differ.
             if (!_.isEqual(query.filters, cachedQuery.filters))
                 continue;
@@ -4284,11 +4300,11 @@ gt.search = {
     completeSearch: function(matches) {
         // Stats
         if (matches.total == 0)
-            $('#search-results-count').text('No results');
+            $('#search-results-count').text('无结果');
         else if (matches.total == 1)
-            $('#search-results-count').text('1 result');
+            $('#search-results-count').text('1 条结果');
         else
-            $('#search-results-count').text(matches.result.length + ' results, page ' + (gt.search.page + 1));
+            $('#search-results-count').text(matches.result.length + ' 条结果, 第 ' + (gt.search.page + 1) + ' 页');
         
         // Don't have an accurate total page count.  Only show when a multiple of max results.
         $('.search-next').toggleClass('show', matches.result.length > 0 && matches.result.length % gt.search.maxResults == 0);
@@ -4312,7 +4328,8 @@ gt.search = {
             filters: $.extend({}, gt.settings.data.filters),
             name: input.trim(),
             match: null,
-            page: gt.search.page
+            page: gt.search.page,
+            lang: gt.search.currentLang
         };
 
         if (query.filters.equippable) {
@@ -4329,7 +4346,12 @@ gt.search = {
         if (query.name)
             parts.push('text=' + encodeURIComponent(query.name));
 
-        parts.push('lang=' + gt.settings.data.lang);
+        //parts.push('lang=' + gt.settings.data.lang);
+
+        if (gt.search.currentLang != 'global'){
+            parts.push('lang=' + gt.search.currentLang);
+        }
+        query.lang = gt.search.currentLang;
 
         if (query.page)
             parts.push('page=' + query.page);
@@ -4367,6 +4389,12 @@ gt.search = {
     clearFiltersClicked: function(e) {
         gt.settings.data.filters = $.extend({}, gt.settings.defaultSearchFilters);
         gt.search.loadFilters(gt.settings.data.filters);
+        gt.search.execute(e);
+        gt.settings.saveDirty();
+    },
+
+    filterLangChanged: function(e) {
+        gt.search.currentLang = String($(this).val());
         gt.search.execute(e);
         gt.settings.saveDirty();
     },

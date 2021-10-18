@@ -72,11 +72,23 @@ namespace Garland.Data.Modules
                 .Where(n => !Hacks.IsNpcSkipped(n))
                 .ToArray();
 
+            Dictionary<int, Saint.ENpc> iENpcById = new Dictionary<int, Saint.ENpc>();
+            foreach (var iENpc in _builder.InterRealm.GameData.ENpcs)
+                iENpcById[iENpc.Key] = iENpc;
+
             foreach (var sNpc in sENpcs)
             {
                 dynamic npc = new JObject();
                 npc.id = sNpc.Key;
-                _builder.Localize.Column((JObject)npc, sNpc.Resident, "Singular", "name", Utils.CapitalizeWords);
+                if (iENpcById.TryGetValue(sNpc.Key, out var iNpc))
+                {
+                    _builder.Localize.Column((JObject)npc, sNpc.Resident, iNpc.Resident, "Singular", "name", Utils.CapitalizeWords);
+                }
+                else
+                {
+                    _builder.Localize.Column((JObject)npc, sNpc.Resident, "Singular", "name", Utils.CapitalizeWords);
+                }
+
                 string name = npc.chs.name;
                 npc.patch = PatchDatabase.Get("npc", sNpc.Key);
 
@@ -127,7 +139,268 @@ namespace Garland.Data.Modules
                 _builder.Db.Npcs.Add(npc);
                 _builder.Db.NpcsById[sNpc.Key] = npc;
             }
+
+            List<dynamic> BNpcs = FetchBNpcs();
+            var sBNpcBases = _builder.Realm.GameData.GetSheet<Saint.BNpcBase>().ToArray();
+            var sBNpcNames = _builder.Realm.GameData.GetSheet<Saint.BNpcName>().ToArray();
+            var sTerritory = _builder.Realm.GameData.GetSheet<Saint.TerritoryType>().ToArray();
+
+            foreach (dynamic bnpc in BNpcs)
+            {
+                Saint.BNpcBase sBNpc = null;
+                foreach (Saint.BNpcBase bnpcbase in sBNpcBases) {
+                    if (bnpcbase.Key.Equals(int.Parse(bnpc.baseid.Value))){
+                        sBNpc = bnpcbase;
+                        break;
+                    }
+                }
+                if (sBNpc == null)
+                    continue;
+
+                string sBNpcName = "";
+                foreach (Saint.BNpcName bnpcname in sBNpcNames)
+                {
+                    if (bnpcname.Key.Equals(int.Parse(bnpc.nameid.Value))){
+                        sBNpcName = bnpcname.Singular;
+                        break;
+                    }
+                }
+                if (sBNpcName == "")
+                    continue;
+                
+                if (sBNpc.BNpcCustomize.Key != 0 || sBNpc.NpcEquip.Key != 0)
+                {
+                    SanitizeBNpc(bnpc, sBNpcName, sTerritory);
+                    BuildBNpcAppearanceData(bnpc, sBNpc);
+                    _builder.Db.Npcs.Add(bnpc);
+                }               
+            }
         }
+
+        public void SanitizeBNpc(dynamic bnpc, string sName, Saint.TerritoryType[] sZones) {
+            var firstMap = bnpc.maps.Value.Split(',')[0].Trim();
+            bnpc.id = int.Parse("9" + bnpc.baseid + firstMap);
+            bnpc.patch = GarlandDatabase.NextPatch;
+            bnpc.isBNpc = 1;
+
+            Saint.TerritoryType sZone = null;
+            foreach (Saint.TerritoryType zone in sZones) {
+                if (zone.Key.Equals(int.Parse(firstMap))) {
+                    sZone = zone;
+                }
+            }
+            if (sZone != null)
+                bnpc.zoneid = sZone.PlaceName.Key;
+
+            string[] tryTitle = sName.Split(' ');
+            if (tryTitle.Length > 1)
+            {
+                bnpc.title = tryTitle[0];
+                bnpc.chs = new JObject();
+                bnpc.chs.name = tryTitle[1];
+            }
+            else {
+                bnpc.chs = new JObject();
+                bnpc.chs.name = sName;
+            }
+
+            string name = bnpc.chs.name;
+            if (!_alternatesByName.TryGetValue(name, out var alts))
+            {
+                alts = new List<dynamic>();
+                _alternatesByName[name] = alts;
+            }
+            alts.Add(bnpc);
+        }
+
+        public List<dynamic> FetchBNpcs() {
+            Clay.ClayMySQL database = new Clay.ClayMySQL();
+
+            List<dynamic> result = database.getAllBNpcs();
+            database.Stop();
+            return result;
+        }
+
+        public void BuildBNpcAppearanceData(dynamic npc, Saint.BNpcBase sBNpc)
+        {
+            
+            if (sBNpc == null) {
+                DatabaseBuilder.PrintLine(string.Format("Unable to find BnpcBase with id {0} name {1}.", npc.baseid, npc.name));
+                return;
+            }
+            if (sBNpc.BNpcCustomize.Key == 0)
+            {
+                return;
+            }
+            
+            var race = (Saint.Race)sBNpc.BNpcCustomize["Race"];
+            if (race == null || race.Key == 0)
+                return; // Unique or beast NPCs, can't do appearance now.
+
+            dynamic appearance = new JObject();
+            npc.appearance = appearance;
+
+            var gender = (byte)sBNpc.BNpcCustomize["Gender"];
+            var isMale = gender == 0;
+            appearance.gender = isMale ? "男性" : "女性";
+
+            appearance.race = isMale ? race.Masculine.ToString() : race.Feminine.ToString();
+
+            var tribe = (Saint.Tribe)sBNpc.BNpcCustomize["Tribe"];
+            appearance.tribe = isMale ? tribe.Masculine.ToString() : tribe.Feminine.ToString();
+
+            appearance.height = sBNpc.BNpcCustomize["Height"];
+
+            var bodyType = (byte)sBNpc.BNpcCustomize["BodyType"];
+            if (bodyType != 1)
+                appearance.bodyType = GetBodyType(bodyType);
+
+            // Faces
+            var baseFace = (byte)sBNpc.BNpcCustomize["Face"];
+            var face = baseFace % 100; // Value matches the asset number, % 100 approximate face # nicely.
+            appearance.face = face;
+
+            var isValidFace = face < 8;
+            var isCustomFace = baseFace > 7;
+            if (isCustomFace)
+                appearance.customFace = 1;
+
+            appearance.jaw = 1 + (byte)sBNpc.BNpcCustomize["Jaw"];
+
+            appearance.eyebrows = 1 + (byte)sBNpc.BNpcCustomize["Eyebrows"];
+
+            appearance.nose = 1 + (byte)sBNpc.BNpcCustomize["Nose"];
+
+            appearance.skinColor = FormatColorCoordinates((byte)sBNpc.BNpcCustomize["SkinColor"]);
+            appearance.skinColorCode = FormatColor((byte)sBNpc.BNpcCustomize["SkinColor"], GetSkinColorMapIndex(tribe.Key, isMale));
+
+            // Bust & Muscles - flex fields.
+            if (race.Key == 5 || race.Key == 1)
+            {
+                // Roegadyn & Hyur
+                appearance.muscle = (byte)sBNpc.BNpcCustomize["BustOrTone1"];
+                if (!isMale)
+                    appearance.bust = (byte)sBNpc.BNpcCustomize["ExtraFeature2OrBust"];
+            }
+            else if (race.Key == 6 && isMale)
+            {
+                // Au Ra male muscles
+                appearance.muscle = (byte)sBNpc.BNpcCustomize["BustOrTone1"];
+            }
+            else if (!isMale)
+            {
+                // Other female bust sizes
+                appearance.bust = (byte)sBNpc.BNpcCustomize["BustOrTone1"];
+            }
+
+            // Hair & Highlights
+            
+            var hairstyle = (byte)sBNpc.BNpcCustomize["HairStyle"];
+            var hairstyleIcon = CustomizeIcon(GetHairstyleCustomizeIndex(tribe.Key, isMale), 100, hairstyle, npc);
+            if (hairstyleIcon > 0)
+                appearance.hairStyle = hairstyleIcon;
+            
+
+            appearance.hairColor = FormatColorCoordinates((byte)sBNpc.BNpcCustomize["HairColor"]);
+            appearance.hairColorCode = FormatColor((byte)sBNpc.BNpcCustomize["HairColor"], GetHairColorMapIndex(tribe.Key, isMale));
+
+            var highlights = Unpack2((byte)sBNpc.BNpcCustomize["HairHighlight"]);
+            if (highlights.Item1 == 1)
+            {
+                appearance.highlightColor = FormatColorCoordinates((byte)sBNpc.BNpcCustomize["HairHighlightColor"]);
+                appearance.highlightColorCode = FormatColor((byte)sBNpc.BNpcCustomize["HairHighlightColor"], HairHighlightColorOffset);
+            }
+
+            // Eyes & Heterochromia
+            var eyeShape = Unpack2((byte)sBNpc.BNpcCustomize["EyeShape"]);
+            appearance.eyeSize = eyeShape.Item1 == 1 ? "较小" : "较大";
+            appearance.eyeShape = 1 + eyeShape.Item2;
+
+            var eyeColor = (byte)sBNpc.BNpcCustomize["EyeColor"];
+            appearance.eyeColor = FormatColorCoordinates(eyeColor);
+            appearance.eyeColorCode = FormatColor(eyeColor, EyeColorOffset);
+
+            var heterochromia = (byte)sBNpc.BNpcCustomize["EyeHeterochromia"];
+            if (heterochromia != eyeColor)
+            {
+                appearance.heterochromia = FormatColorCoordinates(heterochromia);
+                appearance.heterochromiaCode = FormatColor(heterochromia, EyeColorOffset);
+            }
+
+            // Mouth & Lips
+            var mouth = Unpack2((byte)sBNpc.BNpcCustomize["Mouth"]);
+            appearance.mouth = 1 + mouth.Item2;
+
+            if (mouth.Item1 == 1)
+            {
+                var lipColor = Unpack2((byte)sBNpc.BNpcCustomize["LipColor"]);
+                appearance.lipShade = lipColor.Item1 == 1 ? "清淡" : "浓艳";
+                appearance.lipColor = FormatColorCoordinates(lipColor.Item2);
+                appearance.lipColorCode = FormatColor(lipColor.Item2, lipColor.Item1 == 1 ? LightLipFacePaintColorOffset : DarkLipFacePaintColorOffset);
+            }
+
+            // Extra Features
+            var extraFeatureName = ExtraFeatureName(race.Key);
+            if (extraFeatureName != null)
+            {
+                appearance.extraFeatureName = extraFeatureName;
+
+                appearance.extraFeatureShape = (byte)sBNpc.BNpcCustomize["ExtraFeature1"];
+                appearance.extraFeatureSize = (byte)sBNpc.BNpcCustomize["ExtraFeature2OrBust"];
+            }
+
+            // Facepaint
+            var facepaint = Unpack2((byte)sBNpc.BNpcCustomize["FacePaint"]);
+            var facepaintIcon = CustomizeIcon(GetFacePaintCustomizeIndex(tribe.Key, isMale), 50, facepaint.Item2, npc);
+            if (facepaintIcon > 0)
+            {
+                appearance.facepaint = facepaintIcon;
+
+                if (facepaint.Item1 == 1)
+                    appearance.facepaintReverse = 1;
+
+                var facepaintColor = Unpack2((byte)sBNpc.BNpcCustomize["FacePaintColor"]);
+                appearance.facepaintShade = facepaintColor.Item1 == 1 ? "清淡" : "浓艳";
+                appearance.facepaintColor = FormatColorCoordinates(facepaintColor.Item2);
+                appearance.facepaintColorCode = FormatColor(facepaintColor.Item2, facepaintColor.Item1 == 1 ? LightLipFacePaintColorOffset : DarkLipFacePaintColorOffset);
+            }
+
+            // Facial Features
+            var facialfeature = (byte)sBNpc.BNpcCustomize["FacialFeature"];
+            if (facialfeature != 0 && isValidFace)
+            {
+                var type = CharaMakeTypeRow(tribe.Key, gender);
+
+                appearance.facialfeatures = new JArray();
+
+                // There are only 7 groups of facial features at the moment.
+                var facialfeatures = new System.Collections.BitArray(new byte[] { facialfeature });
+                for (var i = 0; i < 7; i++)
+                {
+                    if (!facialfeatures[i])
+                        continue;
+
+                    var iconIndex = face;
+                    // If it's not hrotgar, shift to -1
+                    if (race.Key != 7)
+                    {
+                        iconIndex--;
+                    }
+
+                    var column = "FacialFeatureOption[" + iconIndex + "][" + i + "]";
+
+                    var icon = (ImageFile)type[column];
+                    if (icon == null)
+                        continue; // Nothing to show.
+                    appearance.facialfeatures.Add(IconDatabase.EnsureEntry("customize", icon));
+                }
+
+                appearance.facialfeatureColor = FormatColorCoordinates((byte)sBNpc.BNpcCustomize["FacialFeatureColor"]);
+                appearance.facialfeatureColorCode = FormatColor((byte)sBNpc.BNpcCustomize["FacialFeatureColor"], 0);
+            }
+        }
+
+
 
         public static void UpdateArea(DatabaseBuilder builder, dynamic npc, Saint.Map sMap, double mapX, double mapY)
         {
@@ -165,7 +438,7 @@ namespace Garland.Data.Modules
 
             var gender = (byte)sNpc.Base["Gender"];
             var isMale = gender == 0;
-            appearance.gender = isMale ? "Male" : "Female";
+            appearance.gender = isMale ? "男性" : "女性";
 
             appearance.race = isMale ? race.Masculine.ToString() : race.Feminine.ToString();
 
@@ -257,7 +530,7 @@ namespace Garland.Data.Modules
             if (mouth.Item1 == 1)
             {
                 var lipColor = Unpack2((byte)sNpc.Base["LipColor"]);
-                appearance.lipShade = lipColor.Item1 == 1 ? "Light" : "Dark";
+                appearance.lipShade = lipColor.Item1 == 1 ? "清淡" : "浓艳";
                 appearance.lipColor = FormatColorCoordinates(lipColor.Item2);
                 appearance.lipColorCode = FormatColor(lipColor.Item2, lipColor.Item1 == 1 ? LightLipFacePaintColorOffset : DarkLipFacePaintColorOffset);
             }
@@ -283,7 +556,7 @@ namespace Garland.Data.Modules
                     appearance.facepaintReverse = 1;
 
                 var facepaintColor = Unpack2((byte)sNpc.Base["FacePaintColor"]);
-                appearance.facepaintShade = facepaintColor.Item1 == 1 ? "Light" : "Dark";
+                appearance.facepaintShade = facepaintColor.Item1 == 1 ? "清淡" : "浓艳";
                 appearance.facepaintColor = FormatColorCoordinates(facepaintColor.Item2);
                 appearance.facepaintColorCode = FormatColor(facepaintColor.Item2, facepaintColor.Item1 == 1 ? LightLipFacePaintColorOffset : DarkLipFacePaintColorOffset);
             }
@@ -371,12 +644,12 @@ namespace Garland.Data.Modules
                 case 2: // Elezen
                 case 3: // Lalafell
                 case 8: // Viera
-                    return "Ears";
+                    return "耳朵";
 
                 case 4: // Miqo'te
                 case 6: // Au Ra
                 case 7: // Hrothgar
-                    return "Tail";
+                    return "尾巴";
             }
 
             throw new NotImplementedException();
@@ -390,6 +663,7 @@ namespace Garland.Data.Modules
                 return Tuple.Create((byte)0, value);
         }
 
+        //CustomizeIcon(GetHairstyleCustomizeIndex(tribe.Key, isMale), 100, hairstyle, npc);
         int CustomizeIcon(int startIndex, int length, byte dataKey, dynamic npc)
         {
             if (dataKey == 0)

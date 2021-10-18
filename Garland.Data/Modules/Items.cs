@@ -63,9 +63,19 @@ namespace Garland.Data.Modules
             foreach (var sItem in _builder.ItemsToImport)
             {
                 var item = _builder.CreateItem(sItem.Key);
-                _builder.Localize.Strings(item, sItem, "Name");
-                _builder.Localize.HtmlStrings(item, sItem, "Description");
+                _builder.iItemById.TryGetValue(sItem.Key, out var iItem);
+                _builder.Localize.Strings((JObject)item, sItem, iItem, Utils.SanitizeSpace, "Name");
+                _builder.Localize.HtmlStrings(item, sItem, iItem, "Description");
                 _builder.Db.ItemsByName[(string)item.chs.name] = item;
+
+                // Index the item if it has english name
+                if (!string.IsNullOrEmpty((string)item.en.name))
+                {
+                    _builder.Db.ItemsByEnName[(string)item.en.name] = item;
+                    //_builder.Db.ItemEnNamesById[item.id] = (string)item.en.name;
+                }
+                    
+
                 item.patch = PatchDatabase.Get("item", sItem.Key);
                 item.patchCategory = PatchDatabase.GetPatchCategory(sItem);
                 item.price = sItem.Ask;
@@ -258,7 +268,24 @@ namespace Garland.Data.Modules
                 item.slot = sEquipment.EquipSlotCategory.Key;
                 item.elvl = sEquipment.EquipmentLevel;
                 item.jobs = sEquipment.ClassJobCategory.Key;
-                _builder.Localize.Column(item, sEquipment.ClassJobCategory, "Name", "jobCategories");
+
+                bool iItemAvaliable = true;
+                if (!_builder.iItemById.TryGetValue(sEquipment.Key, out var iItem))
+                {
+                    DatabaseBuilder.PrintLine("Failed to get iItem for " + sItem.Name + " .");
+                    iItemAvaliable = false;
+                }
+
+                bool iEquipmentAvalible = iItemAvaliable;
+                if (iItemAvaliable && !(iItem is Saint.Items.Equipment))
+                {
+                    DatabaseBuilder.PrintLine("sItem is an equipment but iItem is not an equipment." + sItem.Name);
+                    iEquipmentAvalible = false;
+                }
+
+                Saint.Items.Equipment iEquipment = iEquipmentAvalible ? (Saint.Items.Equipment)iItem : null;
+
+                _builder.Localize.Column(item, sEquipment.ClassJobCategory, iEquipmentAvalible ? iEquipment.ClassJobCategory : null, "Name", "jobCategories");
 
                 // Set all normal and hq parameters specified on the item.
                 Saint.BaseParam[] extraParams = null;
@@ -352,7 +379,6 @@ namespace Garland.Data.Modules
                     }
                 }
             }
-
             if (sItem is Saint.Items.Usable sUsable)
             {
                 JObject action = new JObject();

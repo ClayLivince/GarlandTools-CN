@@ -15,6 +15,7 @@ namespace Garland.Data.Modules
     {
         Dictionary<string, dynamic> _baitByName = new Dictionary<string, dynamic>();
         Dictionary<string, dynamic> _fishingSpotsByName = new Dictionary<string, dynamic>();
+        Dictionary<string, dynamic> _fishingSpotsByEnName = new Dictionary<string, dynamic>();
         List<dynamic> _fishItems = new List<dynamic>();
 
         Dictionary<string, Tuple<int, int, int>> _hackFishingSpotLocations = new Dictionary<string, Tuple<int, int, int>>()
@@ -68,10 +69,18 @@ namespace Garland.Data.Modules
             if (_baitByName.TryGetValue(baitName, out var bait))
                 return bait;
 
-            var item = GarlandDatabase.Instance.ItemsByName[baitName];
+            dynamic item = null;
+            try
+            {
+                item = GarlandDatabase.Instance.ItemsByName[baitName];
+            } catch (KeyNotFoundException)
+            {
+                item = GarlandDatabase.Instance.ItemsByEnName[baitName];
+            }
+            
 
             bait = new JObject();
-            bait.name = baitName;
+            bait.name = item.chs.name;
             bait.id = item.id;
             bait.icon = item.icon;
 
@@ -143,11 +152,6 @@ namespace Garland.Data.Modules
         {
             var comma = new string[] { ", " };
 
-            Dictionary<string, string> badPlaceNames = new Dictionary<string, string> {
-                {"The Kobayashi Maru", "The <Emphasis>Kobayashi Maru</Emphasis>" },
-                {"The Adventure", "The <Emphasis>Adventure</Emphasis>" },
-            };
-
             dynamic currentFishingSpot = null;
             JArray currentFishingSpotItems = null;
             dynamic currentNode = null;
@@ -159,31 +163,8 @@ namespace Garland.Data.Modules
             {
                 // Line data
                 var name = rLine[0].Trim();
-
-                // Deal with Bad place names
-
-
-                string nameChs = "Not Found";
-                try {
-                    nameChs = clayManager.getPlaceNameChs(name);
-                } catch (NotSupportedException e)
-                {
-                    //Console.WriteLine(e.Message);
-                    //Console.WriteLine(e.StackTrace);
-
-                    if (name.Equals("Sea of Clouds"))
-                    {
-                        Console.WriteLine(e.Message);
-                        Console.WriteLine(e.StackTrace);
-                    }
-
-                    if (badPlaceNames.ContainsKey(name))
-                    {
-                        nameChs = clayManager.getPlaceNameChs(badPlaceNames[name]);
-                    }
-                }
                 
-                if (_fishingSpotsByName.TryGetValue(nameChs, out var fishingSpot))
+                if (_fishingSpotsByEnName.TryGetValue(name, out var fishingSpot))
                 {
                     currentNode = null;
                     currentNodeItems = null;
@@ -193,7 +174,7 @@ namespace Garland.Data.Modules
                 }
 
                 // Name may reference either fishing spot, spearfishing node, or fish - check here.
-                if (_builder.Db.SpearfishingNodesByName.TryGetValue(nameChs, out var node))
+                if (_builder.Db.SpearfishingNodesByEnName.TryGetValue(name, out var node))
                 {
                     currentFishingSpot = null;
                     currentFishingSpotItems = null;
@@ -256,9 +237,9 @@ namespace Garland.Data.Modules
                 // Fill item fishing information.
                 try
                 {
-                    itemID = clayManager.getItemID(name);
-                    var item = GarlandDatabase.Instance.ItemsById[itemID];
-                    //var item = GarlandDatabase.Instance.ItemsByName[name];
+                    //itemID = clayManager.getItemID(name);
+                    //var item = GarlandDatabase.Instance.ItemsById[itemID];
+                    var item = GarlandDatabase.Instance.ItemsByEnName[name];
 
                     _fishItems.Add(item);
                     // Some quest fish may not have been previously recognized as a fish.
@@ -289,13 +270,13 @@ namespace Garland.Data.Modules
                     }
                     else if (!string.IsNullOrEmpty(bait))
                     {
-                        bait = clayManager.getItemNameChs(bait.Trim());
+                        //bait = clayManager.getItemNameChs(bait.Trim());
                         spot.tmpBait = bait;
 
                         // If not otherwise specified, fish should inherit the time
                         // and weather restrictions of restricted bait (like predators).
                         //if (!_builder.Db.ItemsByName.TryGetValue(bait, out var baitItem))
-                        if (!_builder.Db.ItemsByName.TryGetValue(bait, out var baitItem))
+                        if (!_builder.Db.ItemsByEnName.TryGetValue(bait, out var baitItem))
                                 throw new InvalidOperationException($"Can't find bait {bait} for {name} at {currentFishingSpot.chs.name}.  Is the spelling correct?");
 
                         if (baitItem.fish != null)
@@ -348,13 +329,13 @@ namespace Garland.Data.Modules
                         for (var i = 0; i < tokens.Length; i += 2)
                         {
                             var predatorName = tokens[i];
-                            var predatorID = clayManager.getItemID(predatorName);
-                            spot.predator.Add(BuildPredator(predatorID, tokens[i + 1]));
+                            //var predatorID = clayManager.getItemID(predatorName);
+                            spot.predator.Add(BuildPredator(predatorName, tokens[i + 1]));
 
                             // If not otherwise specified, fish should inherit the time
                             // and weather restrictions of restricted predators (like bait).
-                            //var predatorItem = _builder.Db.ItemsByName[predatorName];
-                            var predatorItem = _builder.Db.ItemsById[predatorID];
+                            var predatorItem = _builder.Db.ItemsByEnName[predatorName];
+                            //var predatorItem = _builder.Db.ItemsById[predatorID];
                             if (predatorItem.fish != null)
                             {
                                 var predatorSpots = (JArray)predatorItem.fish.spots;
@@ -568,10 +549,10 @@ namespace Garland.Data.Modules
                 throw new InvalidOperationException($"Bad weather list: {string.Join(", ", weatherList)}");
         }
 
-        dynamic BuildPredator(int id, string amount)
+        dynamic BuildPredator(string name, string amount)
         {
             dynamic obj = new JObject();
-            obj.id = id;
+            obj.id = (int)GarlandDatabase.Instance.ItemsByEnName[name].id;
             obj.amount = int.Parse(amount);
             return obj;
         }
@@ -689,6 +670,10 @@ namespace Garland.Data.Modules
 
         void BuildFishingSpots()
         {
+            Dictionary<int, Saint.FishingSpot> iFishingSpotById = new Dictionary<int, Saint.FishingSpot>();
+            foreach (var iFishingSpot in _builder.InterSheet<Saint.FishingSpot>())
+                iFishingSpotById[iFishingSpot.Key] = iFishingSpot;
+            
             foreach (var sFishingSpot in _builder.Sheet<Saint.FishingSpot>())
             {
                 if (sFishingSpot.Key <= 1 || sFishingSpot.GatheringLevel == 0 || sFishingSpot.PlaceName == null)
@@ -700,11 +685,14 @@ namespace Garland.Data.Modules
                 if (sFishingSpot.PlaceName.Name.ToString().Length == 0)
                     continue;
 
+                iFishingSpotById.TryGetValue(sFishingSpot.Key, out var iFishingSpot);
+
                 var name = Utils.Capitalize(sFishingSpot.PlaceName.Name.ToString());
+                var iName = iFishingSpot == null ? name : Utils.Capitalize(iFishingSpot.PlaceName.Name.ToString());
 
                 dynamic spot = new JObject();
                 spot.id = sFishingSpot.Key;
-                _builder.Localize.Column(spot, sFishingSpot, "PlaceName", "name");
+                _builder.Localize.Column(spot, sFishingSpot, iFishingSpot, "PlaceName", "name");
                 spot.patch = PatchDatabase.Get("fishing", sFishingSpot.Key);
                 spot.category = sFishingSpot.FishingSpotCategory - 1;
                 spot.lvl = sFishingSpot.GatheringLevel;
@@ -766,6 +754,7 @@ namespace Garland.Data.Modules
                 _builder.Db.FishingSpotsById[sFishingSpot.Key] = spot;
 
                 _fishingSpotsByName[name] = spot;
+                _fishingSpotsByEnName[iName] = spot;
             }
         }
 

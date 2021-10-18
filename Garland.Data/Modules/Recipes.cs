@@ -163,15 +163,24 @@ namespace Garland.Data.Modules
 
         void BuildCompanyCraftDrafts()
         {
+            Dictionary<int, Saint.CompanyCraftDraft> iCompanyCraftDraftById = new Dictionary<int, Saint.CompanyCraftDraft>();
+            foreach (var iCompanyCraftDraft in _builder.InterSheet<Saint.CompanyCraftDraft>())
+                iCompanyCraftDraftById[iCompanyCraftDraft.Key] = iCompanyCraftDraft;
+
             foreach (var sCompanyCraftDraft in _builder.Sheet<Saint.CompanyCraftDraft>())
             {
                 var name = sCompanyCraftDraft.Name.ToString();
                 if (string.IsNullOrEmpty(name))
                     continue;
 
+                iCompanyCraftDraftById.TryGetValue(sCompanyCraftDraft.Key, out var iCompanyCraftDraft);
+                var iName = iCompanyCraftDraft == null ?
+                    sCompanyCraftDraft.CompanyCraftDraftCategory.Name.ToString() : iCompanyCraftDraft.CompanyCraftDraftCategory.Name.ToString();
+
                 var draft = _builder.CreateItem("draft" + sCompanyCraftDraft.Key);
-                _builder.Localize.Strings((JObject)draft, sCompanyCraftDraft, Utils.CapitalizeWords, "Name");
-                draft.chs.description = "Unlocks company recipes for " + sCompanyCraftDraft.CompanyCraftDraftCategory.Name.ToString() + ".";
+                _builder.Localize.Strings((JObject)draft, sCompanyCraftDraft, iCompanyCraftDraft, Utils.CapitalizeWords, "Name");
+                draft.chs.description = "解锁部队合建配方: " + sCompanyCraftDraft.CompanyCraftDraftCategory.Name.ToString() + ".";
+                draft.en.description = "Unlocks company recipes for " + iName + ".";
                 draft.ilvl = 1;
                 draft.category = -2;
                 draft.icon = "custom/draft";

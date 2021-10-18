@@ -58,6 +58,7 @@ namespace Garland.Data
         public List<dynamic> Items = new List<dynamic>();
         public List<dynamic> Mobs = new List<dynamic>();
         public List<dynamic> Locations = new List<dynamic>();
+        public List<dynamic> iLocations = new List<dynamic>();
         public List<dynamic> Nodes = new List<dynamic>();
         public List<dynamic> NodeBonuses = new List<dynamic>();
         public List<dynamic> Npcs = new List<dynamic>();
@@ -99,11 +100,14 @@ namespace Garland.Data
         public Dictionary<int, dynamic> QuestsById = new Dictionary<int, dynamic>();
         public Dictionary<int, dynamic> LocationsById = new Dictionary<int, dynamic>();
         public Dictionary<string, int> LocationIdsByName = new Dictionary<string, int>();
+        public Dictionary<string, int> LocationIdsByEnName = new Dictionary<string, int>();
         public Dictionary<string, dynamic> ItemsByName = new Dictionary<string, dynamic>();
+        public Dictionary<string, dynamic> ItemsByEnName = new Dictionary<string, dynamic>();
         public Dictionary<int, List<dynamic>> ItemsByInstanceId = new Dictionary<int, List<dynamic>>();
         public Dictionary<int, List<dynamic>> ItemsBySeriesId = new Dictionary<int, List<dynamic>>();
         public Dictionary<int, dynamic> NodesById = new Dictionary<int, dynamic>();
         public Dictionary<string, dynamic> SpearfishingNodesByName = new Dictionary<string, dynamic>();
+        public Dictionary<string, dynamic> SpearfishingNodesByEnName = new Dictionary<string, dynamic>();
         public Dictionary<int, dynamic> VenturesById = new Dictionary<int, dynamic>();
         public Dictionary<int, dynamic> StatusesById = new Dictionary<int, dynamic>();
 

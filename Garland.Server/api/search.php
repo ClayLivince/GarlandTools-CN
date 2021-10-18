@@ -50,15 +50,16 @@ function gtSanitizeSearchText($text) {
 }
 
 function gtValidateSearchLang($lang) {
-    //if ($lang == "en" || $lang == "fr" || $lang == "de" || $lang == "ja")
-    //    return $lang;
+    if ($lang == "en" || $lang == "fr" || $lang == "de" || $lang == "ja" || $lang == "chs")
+       return $lang;
     return "chs";
 }
 
 function gtSearchSql($db, $text, $type, $filters) {
     // Parameters and extra criteria.
     $limit = 100;
-    $lang = gtValidateSearchLang(array_key_exists("lang", $filters) ? $filters["lang"] : "chs");
+    $hasLang = array_key_exists("lang", $filters);
+    $lang = gtValidateSearchLang($hasLang ? $filters["lang"] : "No");
     $exact = array_key_exists("exact", $filters) ? true : false;
     $offset = array_key_exists("page", $filters) ? $filters["page"] * $limit : 0;
     $filterCriteria = "";
@@ -162,7 +163,11 @@ function gtSearchSql($db, $text, $type, $filters) {
         $text = $db->real_escape_string(gtSanitizeSearchText($text));
 
         // Prioritize text that starts a key.
-        $sql = "SELECT Type, Id, Json FROM (SELECT * FROM ((SELECT 2 AS Rank, Search.Type, Search.Id, Search.Name, Search.Json FROM Search $filterJoin WHERE Search.Lang = '$lang' AND Search.Name LIKE '{$text}%' $filterCriteria)";
+        $sql = "SELECT Type, Id, Json FROM (SELECT * FROM ((SELECT 2 AS Rank, Search.Type, Search.Id, Search.Name, Search.Json FROM Search $filterJoin WHERE ";
+        if ($hasLang) {
+            $sql .= "Search.Lang = '$lang' AND ";
+        }
+        $sql .= "Search.Name LIKE '{$text}%' $filterCriteria)";
 
         // Now use the full text index to pull back matches.
         $words = explode(" ", $text);
@@ -170,12 +175,21 @@ function gtSearchSql($db, $text, $type, $filters) {
             $words[$key] = "+{$value}*";
         $wordCriteria = join(" ", $words);
 
-        $sql .= " UNION (SELECT 1 AS Rank, Search.Type, Search.Id, Search.Name, Search.Json FROM Search $filterJoin WHERE Search.Lang = '$lang' AND MATCH(Search.Name) AGAINST('$wordCriteria' IN BOOLEAN MODE) $filterCriteria)";
+        $sql .= " UNION (SELECT 1 AS Rank, Search.Type, Search.Id, Search.Name, Search.Json FROM Search $filterJoin WHERE ";
+        if ($hasLang) {
+            $sql .= "Search.Lang = '$lang' AND ";
+        }
+        $sql .= "MATCH(Search.Name) AGAINST('$wordCriteria' IN BOOLEAN MODE) $filterCriteria)";
 
         $sql .= ") UnorderedResults) Results GROUP BY Type, Id, Json, Name ORDER BY MAX(Rank) DESC, Name LIMIT $limit OFFSET $offset";
         return $sql;
     } else {
-        return "SELECT Search.Type, Search.Id, Search.Json FROM Search $filterJoin WHERE Search.Lang = '$lang' $filterCriteria ORDER BY Search.Name LIMIT $limit OFFSET $offset";
+        $sql = "SELECT Search.Type, Search.Id, Search.Json FROM Search $filterJoin WHERE ";
+        if ($hasLang) {
+            $sql .= "Search.Lang = '$lang' ";
+        }
+        $sql .= "$filterCriteria ORDER BY Search.Name LIMIT $limit OFFSET $offset";
+        return $sql;
     }
 }
 

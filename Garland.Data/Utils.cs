@@ -84,6 +84,12 @@ namespace Garland.Data
             throw new NotImplementedException();
         }
 
+        public static string SanitizeSpace(XivString str)
+        {
+            return str.ToString()
+                .Replace(' ', ' ');
+        }
+
         public static string SanitizeQuestName(XivString str)
         {
             return str.ToString()

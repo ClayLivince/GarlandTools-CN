@@ -23,7 +23,7 @@ namespace Garland.Data.Lodestone
         private const string _itemUrlRegexFormat = "<a href=\"(/lodestone/playguide/db/item/.+)/\" .+>{0}</a>";
         private static Regex _iconSuffixRegex = new Regex("<img src=\"https://img.finalfantasyxiv.com/lds/pc/global/images/itemicon/(.*.png).*\".*>");
 
-        public void FetchIcons()
+        public void FetchIcons(DatabaseBuilder builder)
         {
             // Start at a random place in the set.
             var start = (new Random()).Next(ItemIconDatabase.ItemsNeedingIcons.Count);
@@ -38,12 +38,9 @@ namespace Garland.Data.Lodestone
                 var num = Interlocked.Increment(ref count);
 
                 string itemName = sItem.Name.ToString();
-                if (itemName.StartsWith("过期") || itemName.StartsWith("风化") || itemName.StartsWith("以太")
+                if (itemName.StartsWith("过期") || itemName.StartsWith("风化") || itemName.StartsWith("以太") || itemName.EndsWith("的秘药") || itemName.EndsWith("的仙药") || itemName.EndsWith("的灵药")
                     || itemName.StartsWith("失传") || itemName.StartsWith("文理") || itemName.EndsWith("+1") || itemName.EndsWith("+2"))
                     return;
-
-                Clay.ClayMySQL nameManager = new Clay.ClayMySQL();
-                
 
                 // A prior item may share this icon, so always check if it was written.
                 var iconId = (UInt16)sItem.GetRaw("Icon");
@@ -51,15 +48,11 @@ namespace Garland.Data.Lodestone
                     return;
 
                 var progress = $"{num}/{itemsToFetch.Count}, {100*num/itemsToFetch.Count}%";
-                var itemEnName = "";
-                try
+                if (!builder.iItemById.TryGetValue(sItem.Key, out var iItem))
                 {
-                    itemEnName = nameManager.getItemNameEn(sItem.Name);
-                }
-                catch (NotSupportedException notFound) {
                     return;
                 }
-               
+                var itemEnName = iItem.Name;
 
                 if ("" == itemEnName)
                     return;
@@ -88,9 +81,6 @@ namespace Garland.Data.Lodestone
                 catch (Exception ee) {
                     Console.WriteLine("Error occured when searching " + itemName);
                 }
-                
-
-                nameManager.Stop();
             });
         }
 

@@ -14,6 +14,8 @@
                 <Separator/>
                 <MenuItem Header="Fetch item icons" Click="FetchIcons_Click" />
                 <Separator/>
+                <MenuItem Header="Build NPCs Only" Click="BuildNpcOnly_Click" />
+                <Separator/>
                 <MenuItem Header="Deploy test data to production" Click="DeployTestToProduction_Click" />
             </MenuItem>
             

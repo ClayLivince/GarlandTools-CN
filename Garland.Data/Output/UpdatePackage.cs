@@ -27,6 +27,10 @@ namespace Garland.Data.Output
         static UpdatePackage()
         {
             _languageSort["chs"] = 1;
+            _languageSort["en"] = 2;
+            _languageSort["jp"] = 3;
+            _languageSort["de"] = 4;
+            _languageSort["fr"] = 5;
         }
 
         public UpdatePackage(string name)
@@ -74,6 +78,10 @@ namespace Garland.Data.Output
             var languageSort = new Dictionary<string, byte>();
             languageSort[""] = 1;
             languageSort["chs"] = 2;
+            languageSort["en"] = 3;
+            languageSort["jp"] = 4;
+            languageSort["de"] = 5;
+            languageSort["fr"] = 6;
 
             return _rows
                 .OrderBy(r => languageSort[r.Lang])

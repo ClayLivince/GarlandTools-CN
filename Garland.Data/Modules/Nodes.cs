@@ -9,11 +9,15 @@ namespace Garland.Data.Modules
     public class Nodes : Module
     {
         Dictionary<int, dynamic> _bonusesByKey = new Dictionary<int, dynamic>();
+        Dictionary<int, dynamic> _iSpearFishingNotebookById = new Dictionary<int, dynamic>();
 
         public override string Name => "Nodes";
 
         public override void Start()
         {
+            foreach (var iSpearFishingNotebook in _builder.InterSheet("SpearfishingNotebook"))
+                _iSpearFishingNotebookById[iSpearFishingNotebook.Key] = iSpearFishingNotebook;
+            
             BuildGatheringPointBonuses();
 
             // GatheringItemPoint collection.
@@ -166,6 +170,10 @@ namespace Garland.Data.Modules
                         continue;
 
                     node.name = Utils.SanitizeTags(sSpearfishingNotebook.As<Saint.PlaceName>().Name);
+                    if (_iSpearFishingNotebookById.TryGetValue(sSpearfishingNotebook.Key, out var iSpearfishingNotebook))
+                    {
+                        node.nameen = Utils.SanitizeTags(iSpearfishingNotebook.As<Saint.PlaceName>().Name);
+                    }
                     node.radius = sSpearfishingNotebook.AsInt32("Radius");
 
                     var sTerritoryType = sSpearfishingNotebook.As<Saint.TerritoryType>();
@@ -180,7 +188,12 @@ namespace Garland.Data.Modules
                 string keyName = node.name;
                 if (keyName == "Node")
                     keyName = "Node #" + (int)node.id;
+                string enName = node.nameen;
+                if (string.IsNullOrEmpty(enName) || "Node" == enName)
+                    enName = keyName;
+
                 _builder.Db.SpearfishingNodesByName[keyName] = node;
+                _builder.Db.SpearfishingNodesByEnName[enName] = node;
             }
 
             // Store and return!
@@ -230,11 +243,9 @@ namespace Garland.Data.Modules
             var viewsByNodeId = new Dictionary<int, dynamic>();
 
             var lines = Utils.Tsv(System.IO.Path.Combine(Config.SupplementalPath, "FFXIV Data - Nodes.tsv"));
-            Clay.ClayMySQL clayManager = new Clay.ClayMySQL();
             foreach (var line in lines.Skip(1))
             {
                 var itemName = line[0];
-                var itemId = clayManager.getItemID(itemName);
                 var slot = line[1];
                 var nodeId = int.Parse(line[2]);
                 var times = Utils.IntComma(line[3]);
@@ -242,7 +253,7 @@ namespace Garland.Data.Modules
                 var coords = Utils.FloatComma(line[5]);
                 var type = line[6];
 
-                var item = _builder.Db.ItemsById[itemId];
+                var item = _builder.Db.ItemsByEnName[itemName];
 
                 itemName = item.chs.name;
 
@@ -319,7 +330,6 @@ namespace Garland.Data.Modules
                     Console.WriteLine(nodeId);
                 }
             }
-            clayManager.Stop();
         }
 
         static string TypeToName(int gatheringType)

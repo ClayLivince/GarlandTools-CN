@@ -5,8 +5,12 @@
 	"database": "Persist Security Info=False;database=keystore;server=localhost;user id=my-user;pwd=my-password;CharSet=utf8",
 	"sapphireDatabase": "Persist Security Info=False;database=Sapphire;server=localhost;user id=my-user;pwd=my-password;CharSet=utf8",
 
+	"translationDatabase": "Persist Security Info=False;database=translation;server=localhost;user id=my-user;pwd=my-password;CharSet=utf8",
+
+
 	// File repository
-	"gamePath": "/path/to/game"
+	"gamePath": "/path/to/game",
+	"internationalGamePath": "/path/to/international game",
 	"files": "/path/to/gtfiles",
 
 	// External programs

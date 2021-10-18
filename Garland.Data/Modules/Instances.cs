@@ -28,6 +28,15 @@ namespace Garland.Data.Modules
                     _builder.ContentFinderConditionByInstanceContent[sInstanceContent] = sContentFinderCondition;
             }
 
+            // International localization index
+            Dictionary<int, Saint.InstanceContent> iContentById = new Dictionary<int, Saint.InstanceContent>();
+            foreach (var iContent in _builder.InterSheet<Saint.InstanceContent>())
+                iContentById[iContent.Key] = iContent;
+
+            Dictionary<int, Saint.ContentFinderCondition> iContentFinderConditionByID = new Dictionary<int, Saint.ContentFinderCondition>();
+            foreach (var iContentFinderCondition in _builder.InterSheet<Saint.ContentFinderCondition>())
+                iContentFinderConditionByID[iContentFinderCondition.Key] = iContentFinderCondition;
+
             // todo: add new player bonus currency
             // todo: add weekly restriction stuff?
 
@@ -39,6 +48,7 @@ namespace Garland.Data.Modules
                 // Find entry conditions.
                 if (!_builder.ContentFinderConditionByInstanceContent.TryGetValue(sInstanceContent, out var sContentFinderCondition))
                     continue; // Skip unreleased content.
+                iContentFinderConditionByID.TryGetValue(sContentFinderCondition.Key, out var iContentFinderCondition);
 
                 // Skip some instances.
                 switch (sContentFinderCondition.ContentType.Key)
@@ -55,16 +65,21 @@ namespace Garland.Data.Modules
                     continue;
 
                 var sContentFinderConditionTransient = _builder.Sheet("ContentFinderConditionTransient")[sContentFinderCondition.Key];
+                var iContentFinderConditionTransient = _builder.InterSheet("ContentFinderConditionTransient")[sContentFinderCondition.Key];
 
                 dynamic instance = new JObject();
                 instance.id = sInstanceContent.Key;
-                _builder.Localize.Strings((JObject)instance, sContentFinderCondition, Utils.SanitizeInstanceName, "Name");
+
+                iContentById.TryGetValue(sInstanceContent.Key, out var iInstanceContent);
+                _builder.Localize.Strings((JObject)instance, sContentFinderCondition, iContentFinderCondition, Utils.SanitizeInstanceName, "Name");
+                
                 instance.patch = PatchDatabase.Get("instance", sInstanceContent.Key);
                 instance.categoryIcon = IconDatabase.EnsureEntry("instance/type", sContentFinderCondition.ContentType.Icon);
-                _builder.Localize.Column((JObject)instance, sContentFinderCondition.ContentType, "Name", "category",
+                
+                _builder.Localize.Column((JObject)instance, sContentFinderCondition.ContentType, iContentFinderCondition.ContentType, "Name", "category",
                     x => string.IsNullOrEmpty(x) ? Hacks.GetContentTypeNameOverride(sContentFinderCondition.ContentType) : x);
                
-                _builder.Localize.Strings((JObject)instance, sContentFinderConditionTransient, "Description");
+                _builder.Localize.Strings((JObject)instance, sContentFinderConditionTransient, iContentFinderConditionTransient, "Description");
                 instance.time = (int)sInstanceContent.TimeLimit.TotalMinutes;
                 instance.min_lvl = sContentFinderCondition.RequiredClassJobLevel;
 

@@ -56,7 +56,7 @@ Undyed Velveteen	Desynth	Aged Robe
 Vintage Cooking Sherry	Desynth	Aged Decanter											
 Vitriol	Desynth	Aged Phial											
 Waterproof Cotton Cloth	Desynth	Sweetnewt	The Lone Ripper	Olgoi-Khorkhoi	Shrieker								
-Duskborne Aethersand	Reduce	Fire Moraine	Lightning Moraine	Granular Clay	Pot marjoram								
+Duskborne Aethersand	Reduce	Fire Moraine	Lightning Moraine	Granular Clay	Pot Marjoram								
 Dawnborne Aethersand	Reduce	Bright Fire Rock	Bright Lightning Rock	Peat Moss	Water Mint								
 Landborne Aethersand	Reduce	Radiant Fire Moraine	Radiant Lightning Moraine										
 Leafborne Aethersand	Reduce	Humic Soil	Wild Sage										
@@ -83,8 +83,8 @@ Lightning Cluster	Reduce	Bright Lightning Rock	Lightning Moraine	Radiant Lightni
 Lightning Crystal	Reduce	Bright Lightning Rock	Lightning Moraine	Radiant Lightning Moraine	Schorl	Yanxian Verbena	Solarite	Levin Mint					
 Water Cluster	Reduce	Radiant Astral Moraine	Dacite	Gale Rock	Poecilia								
 Water Crystal	Reduce	Radiant Astral Moraine	Dacite	Gale Rock	Poecilia								
-Wind Cluster	Reduce	Wild Sage	Water Mint	Pot marjoram	Countess Tea Leaves	Yanxian Soil	Sweet Marjoram						
-Wind Crystal	Reduce	Wild Sage	Water Mint	Pot marjoram	Countess Tea Leaves	Yanxian Soil	Sweet Marjoram						
+Wind Cluster	Reduce	Wild Sage	Water Mint	Pot Marjoram	Countess Tea Leaves	Yanxian Soil	Sweet Marjoram						
+Wind Crystal	Reduce	Wild Sage	Water Mint	Pot Marjoram	Countess Tea Leaves	Yanxian Soil	Sweet Marjoram						
 Levinstrike Aethersand	Reduce	Levin Mint	Thunder Rock	Fuchsia Bloom									
 Fire Shard	Loot	Timeworn Leather Map	Timeworn Goatskin Map	Timeworn Toadskin Map	Timeworn Boarskin Map	Timeworn Peisteskin Map							
 Ice Shard	Loot	Timeworn Leather Map	Timeworn Goatskin Map	Timeworn Toadskin Map	Timeworn Boarskin Map	Timeworn Peisteskin Map							
@@ -650,7 +650,7 @@ Wind-up Shiva	Loot	Silver-haloed Sack
 Wind-up Susano	Loot	Silver-haloed Sack											
 Zurvanite Barding	Loot	Silver-haloed Sack											
 Ao Dai	Loot	Gold-haloed Sack											
-Baby Bombfish	Loot	Gold-haloed Sack											
+Bombfish	Loot	Gold-haloed Sack											
 Bibliophobia Orchestrion Roll	Loot	Gold-haloed Sack											
 Cropped Wool Slops	Loot	Gold-haloed Sack											
 Down the Up Staircase Orchestrion Roll	Loot	Gold-haloed Sack											
@@ -2724,9 +2724,9 @@ Bronze-trimmed Sack	Instance	The Palace of the Dead (Floors 1-10)	The Palace of 
 Iron-trimmed Sack	Instance	The Palace of the Dead (Floors 51-60)	The Palace of the Dead (Floors 61-70)	The Palace of the Dead (Floors 71-80)	The Palace of the Dead (Floors 81-90)	The Palace of the Dead (Floors 91-100)							
 Silver-trimmed Sack	Instance	The Palace of the Dead (Floors 101-110)	The Palace of the Dead (Floors 111-120)	The Palace of the Dead (Floors 121-130)	The Palace of the Dead (Floors 131-140)	The Palace of the Dead (Floors 141-150)							
 Gold-trimmed Sack	Instance	The Palace of the Dead (Floors 151-160)	The Palace of the Dead (Floors 161-170)	The Palace of the Dead (Floors 171-180)	The Palace of the Dead (Floors 181-190)	The Palace of the Dead (Floors 191-200)							
-Silver-haloed Sack	Instance	Heaven-on-High  (Floors 1-10)	Heaven-on-High  (Floors 11-20)	Heaven-on-High  (Floors 21-30)									
-Gold-haloed Sack	Instance	Heaven-on-High  (Floors 31-40)	Heaven-on-High  (Floors 41-50)	Heaven-on-High  (Floors 51-60)	Heaven-on-High  (Floors 61-70)								
-Platinum-haloed Sack	Instance	Heaven-on-High  (Floors 71-80)	Heaven-on-High  (Floors 81-90)	Heaven-on-High  (Floors 91-100)									
+Silver-haloed Sack	Instance	Heaven-on-High (Floors 1-10)	Heaven-on-High (Floors 11-20)	Heaven-on-High (Floors 21-30)									
+Gold-haloed Sack	Instance	Heaven-on-High (Floors 31-40)	Heaven-on-High (Floors 41-50)	Heaven-on-High (Floors 51-60)	Heaven-on-High (Floors 61-70)								
+Platinum-haloed Sack	Instance	Heaven-on-High (Floors 71-80)	Heaven-on-High (Floors 81-90)	Heaven-on-High (Floors 91-100)									
 Ratanhia Leaves	Instance	The Lost Canals of Uznair											
 Wind-up Namazu	Instance	The Lost Canals of Uznair	The Hidden Canals of Uznair										
 Nagxian Silk	Instance	The Lost Canals of Uznair	The Hidden Canals of Uznair										
@@ -2770,8 +2770,7 @@ Wind-up Fuath	Instance	The Dungeons of Lyhe Ghiah
 Ballroom Etiquette - Decadent Decoration	Instance	The Shifting Oubliettes of Lyhe Ghiah											
 Everywhere and Nowhere Orchestrion Roll	Instance	The Shifting Oubliettes of Lyhe Ghiah											
 Golden Beaver	Instance	The Shifting Oubliettes of Lyhe Ghiah											
-Unmatching Pieces Orchestrion Roll	Instance	The Shifting Oubliettes of Lyhe Ghiah											
-Allagan Melon	Gardening	Allagan Melon Seeds											
+Unmatching Pieces Orchestrion Roll	Instance	The Shifting Oubliettes of Lyhe Ghiah																					
 Blue Oldroses	Gardening	Oldrose Seeds											
 Yellow Oldroses	Gardening	Oldrose Seeds											
 Green Oldroses	Gardening	Oldrose Seeds											
@@ -3118,7 +3117,7 @@ Weight of the World (Prelude Version) Orchestrion Roll	Instance	The Copied Facto
 End of the Unknown Orchestrion Roll	Instance	The Puppets' Bunker											
 Fortress of Lies Orchestrion Roll	Instance	The Puppets' Bunker											
 Grandma (Destruction) Orchestrion Roll	Instance	The Puppets' Bunker											
-Torn from the Heavens/The Dark Colossus Destroys All (Medley Version) Orchestrion Roll	Instance	The Puppets' Bunker											
+Torn from the Heavens／The Dark Colossus Destroys All (Medley Version) Orchestrion Roll	Instance	The Puppets' Bunker											
 2B Card	Instance	The Tower at Paradigm's Breach											
 9S Automaton	Instance	The Tower at Paradigm's Breach											
 Emil (Despair) Orchestrion Roll	Instance	The Tower at Paradigm's Breach											

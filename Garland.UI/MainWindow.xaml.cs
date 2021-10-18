@@ -63,7 +63,7 @@ namespace Garland.UI
         {
             RunAction(() => 
             {
-                BuildDatabase(false);
+                BuildDatabase(false, false);
                 WriteFiles();
 
                 DatabaseBuilder.PrintLine("Done.");
@@ -74,14 +74,25 @@ namespace Garland.UI
 
         private void FetchIcons_Click(object sender, RoutedEventArgs e)
         {
-            RunAction(() => BuildDatabase(true));
+            RunAction(() => BuildDatabase(true, false));
         }
 
         void ExportData_Click(object sender, RoutedEventArgs e)
         {
             RunAction(() =>
             {
-                BuildDatabase(false);
+                BuildDatabase(false, false);
+                ExportFileZip();
+
+                DatabaseBuilder.PrintLine("Done.");
+            });
+        }
+
+        void BuildNpcOnly_Click(object sender, RoutedEventArgs e)
+        {
+            RunAction(() =>
+            {
+                BuildDatabase(false, true);
                 ExportFileZip();
 
                 DatabaseBuilder.PrintLine("Done.");
@@ -110,22 +121,24 @@ namespace Garland.UI
 
         #endregion
 
-        void BuildDatabase(bool fetchIconsOnly)
+        void BuildDatabase(bool fetchIconsOnly, bool buildNpcOnly)
         {
             var libraPath = System.IO.Path.Combine(Config.SupplementalPath, "app_data.sqlite");
             var realm = new SaintCoinach.ARealmReversed(Config.GamePath, "SaintCoinach.History.zip", SaintCoinach.Ex.Language.ChineseSimplified, libraPath);
+            var interRealm = new SaintCoinach.ARealmReversed(Config.InterGamePath, "SaintCoinach.Inter.History.zip", SaintCoinach.Ex.Language.English, libraPath);
             var libra = new SQLite.SQLiteConnection(libraPath, SQLite.SQLiteOpenFlags.ReadOnly);
-            var builder = new DatabaseBuilder(libra, realm);
+            var builder = new DatabaseBuilder(libra, realm, interRealm);
 
             DatabaseBuilder.PrintLine($"Game version: {realm.GameVersion}");
+            DatabaseBuilder.PrintLine($"International game version: {interRealm.GameVersion}");
             DatabaseBuilder.PrintLine($"Definition version: {realm.DefinitionVersion}");
 
             OneTimeExports.Run(realm);
 
             var processing = Stopwatch.StartNew();
-            builder.Build(fetchIconsOnly);
+            builder.Build(fetchIconsOnly, buildNpcOnly);
 
-            if (!fetchIconsOnly)
+            if (!fetchIconsOnly && !buildNpcOnly)
                 SpecialOutput.Run();
 
             processing.Stop();

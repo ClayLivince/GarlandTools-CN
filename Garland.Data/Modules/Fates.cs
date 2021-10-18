@@ -21,14 +21,19 @@ namespace Garland.Data.Modules
         {
             ImportSupplementalData();
 
+            Dictionary<int, Game.Fate> iFateByID = new Dictionary<int, Game.Fate>();
+            foreach (var iFate in _builder.InterSheet<Game.Fate>())
+                iFateByID[iFate.Key] = iFate;
             foreach (var sFate in _builder.Sheet<Game.Fate>())
-                BuildFate(sFate);
+            {
+                iFateByID.TryGetValue(sFate.Key, out var iFate);
+                BuildFate(sFate, iFate);
+            }    
         }
 
         void ImportSupplementalData()
         {
             var lines = Utils.Tsv(Path.Combine(Config.SupplementalPath, "FFXIV Data - Fates.tsv"));
-            Clay.ClayMySQL clayManager = new Clay.ClayMySQL();
             foreach (var line in lines.Skip(1))
             {
                 var name = line[0];
@@ -44,8 +49,7 @@ namespace Garland.Data.Modules
 
                 if (zone != "")
                 {
-                    //fate.zoneid = _builder.Db.LocationIdsByName[zone];
-                    fate.zoneid = clayManager.getPlaceNameID(zone);
+                    fate.zoneid = _builder.Db.LocationIdsByEnName[zone];
                 }
                     
 
@@ -57,8 +61,8 @@ namespace Garland.Data.Modules
                     var rewardItemNames = rewardItemNameStr.Split(_separator, StringSplitOptions.RemoveEmptyEntries);
                     foreach (var rewardItemName in rewardItemNames)
                     {
-                        //var item = _builder.Db.ItemsByName[rewardItemName];
-                        var item = _builder.Db.ItemsById[clayManager.getItemID(rewardItemName)];
+                        var item = _builder.Db.ItemsByEnName[rewardItemName];
+                        //var item = _builder.Db.ItemsById[clayManager.getItemID(rewardItemName)];
                         if (item.fates == null)
                             item.fates = new JArray();
                         item.fates.Add(id);
@@ -72,18 +76,17 @@ namespace Garland.Data.Modules
 
                 _fateDataById[(int)fate.id] = fate;
             }
-            clayManager.Stop();
         }
 
-        void BuildFate(Game.Fate sFate)
+        void BuildFate(Game.Fate sFate, Game.Fate iFate)
         {
             if (string.IsNullOrEmpty(sFate.Name.ToString()) || sFate.MaximumClassJobLevel <= 1)
                 return;
 
             dynamic fate = new JObject();
             fate.id = sFate.Key;
-            _builder.Localize.Strings((JObject)fate, sFate, x => Utils.RemoveLineBreaks(Utils.SanitizeTags(x)), "Name");
-            _builder.Localize.HtmlStrings(fate, sFate, "Description");
+            _builder.Localize.Strings((JObject)fate, sFate, iFate, x => Utils.RemoveLineBreaks(Utils.SanitizeTags(x)), "Name");
+            _builder.Localize.HtmlStrings(fate, sFate, iFate, "Description");
             fate.patch = PatchDatabase.Get("fate", sFate.Key);
             fate.lvl = sFate.ClassJobLevel;
             fate.maxlvl = sFate.MaximumClassJobLevel;

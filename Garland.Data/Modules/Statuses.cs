@@ -12,9 +12,20 @@ namespace Garland.Data.Modules
     {
         public override string Name => "Statuses";
 
+        // Statuses of International client.
+        // For extracting localization datas.
+        private Dictionary<int, Saint.Status> iStatusById = new Dictionary<int, Saint.Status>();
+
         public override void Start()
         {
+            IndexLocalize();
             BuildStatuses();
+        }
+
+        void IndexLocalize() 
+        {
+            foreach (var iStatus in _builder.InterSheet<Saint.Status>())
+                iStatusById[iStatus.Key] = iStatus;
         }
 
         void BuildStatuses()
@@ -27,8 +38,11 @@ namespace Garland.Data.Modules
         {
             dynamic status = new JObject();
             status.id = sStatus.Key;
-            _builder.Localize.Strings((JObject)status, sStatus, "Name");
-            _builder.Localize.HtmlStrings((JObject)status, sStatus, "Description");
+
+            iStatusById.TryGetValue(sStatus.Key, out var iStatus);
+
+            _builder.Localize.Strings((JObject)status, sStatus, iStatus, "Name");
+            _builder.Localize.HtmlStrings((JObject)status, sStatus, iStatus, "Description");
             status.patch = PatchDatabase.Get("status", sStatus.Key);
             status.category = sStatus.Category;
 

@@ -122,6 +122,10 @@ namespace Garland.Data.Modules
             var sBNpcNames = _builder.Sheet<Saint.BNpcName>();
             var sBNpcBases = _builder.Sheet<Saint.BNpcBase>();
 
+            Dictionary<int, Saint.BNpcName> iBNpcNameById = new Dictionary<int, Saint.BNpcName>();
+            foreach (var iBNpcName in _builder.InterSheet<Saint.BNpcName>())
+                iBNpcNameById[iBNpcName.Key] = iBNpcName;
+
             foreach (var bnpcData in _bnpcDataByFullKey.Values)
             {
                 // No unnamed mobs right now.  Need to figure out how to fit
@@ -129,10 +133,11 @@ namespace Garland.Data.Modules
                 var sBNpcName = sBNpcNames[bnpcData.BNpcNameKey];
                 var sBNpcBase = sBNpcBases[bnpcData.BNpcBaseKey];
 
+                iBNpcNameById.TryGetValue(sBNpcName.Key, out var iBNpcName);
                 dynamic mob = new JObject();
                 mob.id = bnpcData.FullKey;
 
-                _builder.Localize.Column((JObject)mob, sBNpcName, "Singular", "name", Utils.CapitalizeWords);
+                _builder.Localize.Column((JObject)mob, sBNpcName, iBNpcName, "Singular", "name", Utils.CapitalizeWords);
 
                 if (bnpcData.HasSpecialSpawnRules)
                     mob.quest = 1;

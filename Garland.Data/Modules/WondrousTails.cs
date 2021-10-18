@@ -17,10 +17,12 @@ namespace Garland.Data.Modules
             const int id = 2002023;
             var rawBook = _builder.Sheet<Game.EventItem>()[id];
             var rawHelp = _builder.Sheet("EventItemHelp")[id];
+            var iRawBook = _builder.InterSheet<Game.EventItem>()[id];
+            var iRawHelp = _builder.InterSheet("EventItemHelp")[id];
 
             var book = _builder.CreateItem("wondroustails");
-            _builder.Localize.Strings((JObject)book, rawBook, "Name");
-            _builder.Localize.Strings((JObject)book, rawHelp, "Description");
+            _builder.Localize.Strings((JObject)book, rawBook, iRawBook, "Name");
+            _builder.Localize.Strings((JObject)book, rawHelp, iRawHelp, "Description");
             book.ilvl = 1;
             book.category = 63; // Other
             book.icon = "custom/wondroustails";

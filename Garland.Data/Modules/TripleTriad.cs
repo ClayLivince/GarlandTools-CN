@@ -23,6 +23,7 @@ namespace Garland.Data.Modules
 
         void BuildCards()
         {
+
             foreach (var sItem in _builder.ItemsToImport)
             {
                 var unlock = sItem.ItemAction as SaintCoinach.Xiv.ItemActions.TripleTriadCardUnlock;
@@ -37,7 +38,16 @@ namespace Garland.Data.Modules
                 var sResident = unlock.TripleTriadCard.TripleTriadCardResident;
 
                 item.tripletriad = new JObject();
-                _builder.Localize.Strings(item.tripletriad, unlock.TripleTriadCard, "Description");
+
+                Game.TripleTriadCard iCard = null;
+                _builder.iItemById.TryGetValue(sItem.Key, out var iItem);
+                if (iItem != null) 
+                {
+                    var iUnlock = iItem.ItemAction as Game.ItemActions.TripleTriadCardUnlock;
+                    iCard = iUnlock.TripleTriadCard;
+                }
+
+                _builder.Localize.Strings(item.tripletriad, unlock.TripleTriadCard, iCard, "Description");
 
                 var type = sResident.TripleTriadCardType.Name.ToString();
                 if (!string.IsNullOrEmpty(type))
