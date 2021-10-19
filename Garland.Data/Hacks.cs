@@ -306,7 +306,7 @@ namespace Garland.Data
                 case 96: // Samurai's Arm
                 case 106: // Gunbreaker's Arm
                 case 107: // Dancer's Arm
-                    return "Physical Damage";
+                    return "物理基本性能";
 
                 case 6: // One–handed Thaumaturge's Arm
                 case 7: // Two–handed Thaumaturge's Arm
@@ -317,7 +317,7 @@ namespace Garland.Data
                 case 97: // Red Mage's Arm
                 case 98: // Scholar's Arm
                 case 105: // Blue Mage's Arm
-                    return "Magic Damage";
+                    return "魔法基本性能";
 
                 default:
                     return null;

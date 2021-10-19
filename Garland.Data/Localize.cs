@@ -55,19 +55,17 @@ namespace Garland.Data
                     foreach (var col in cols)
                     {
                         object value;
-                        bool singularAvaliable = true;
+
                         try
                         {
-                            object dummy = row["Singular"];
+                            if ("Name".Equals(col) && code.Equals("chs"))
+                                value = row["Singular"];
+                            else value = row[col];
                         }
                         catch (KeyNotFoundException)
                         {
-                            singularAvaliable = false;
+                            value = row[col];
                         }
-
-                        if ("Name".Equals(col) && code.Equals("chs") && singularAvaliable)
-                            value = row["Singular"];
-                        else value = row[col];
 
                         if (value is XivString && string.IsNullOrEmpty((XivString)value))
                             continue;

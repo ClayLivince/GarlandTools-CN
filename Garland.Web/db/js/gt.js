@@ -1863,18 +1863,18 @@ gt.item = {
     ingredients: {},
     complexity: {},
     version: 3,
-	itemPrimeKeys: ['物理防御力', '魔法防御力', '物理攻击力', '魔法攻击力', '物理自动攻击', '攻击间隔', '格挡发动力', '格挡性能'],
+	itemPrimeKeys: ['物理防御力', '魔法防御力', '物理基本性能', '魔法基本性能', '物理自动攻击', '攻击间隔', '格挡发动力', '格挡性能'],
     minionPrimeKeys: ['生命值', '攻击力', '防御力', '速度'],
     //itemPrimeKeys: ['Defense', 'Magic Defense', 'Physical Damage', 'Magic Damage', 'Auto-attack', 'Delay', 'Block Rate', 'Block Strength'],
     //minionPrimeKeys: ['HP', 'Attack', 'Defense', 'Speed'],
     mainAttributeKeys: { Strength: 1, Dexterity: 1, Vitality: 1, Intelligence: 1, Mind: 1 },
     baseParamAbbreviations: {
-        '魔法攻击力': '攻击力',
-        '物理攻击力': '攻击力',
-        '装备损耗耐性': '装备损耗耐性',
-        '精炼度提升量': '精炼度提升量',
-        '分解技能提升率': '分解技能提升率',
-        '直击': '直击'
+        //'魔法攻击力': '攻击力',
+        //'物理攻击力': '攻击力',
+        //'装备损耗耐性': '装备损耗耐性',
+        //'精炼度提升量': '精炼度提升量',
+        //'分解技能提升率': '分解技能提升率',
+        //'直击': '直击'
     },
     // TODO: materiaJoinRates comes from core data, only here temporarily until old cache is removed.
     materiaJoinRates: {"nq":[[90,48,28,16],[82,44,26,16],[70,38,22,14],[58,32,20,12],[17,10,7,5],[17,0,0,0],[17,10,7,5],[17,0,0,0],[100,100,100,100],[100,100,100,100]],"hq":[[80,40,20,10],[72,36,18,10],[60,30,16,8],[48,24,12,6],[12,6,3,2],[12,0,0,0],[12,6,3,2],[12,0,0,0],[100,100,100,100],[100,100,100,100]]},
@@ -2526,7 +2526,7 @@ gt.item = {
         var keys = _.unique(_.union(_.keys(item.attr), _.keys(item.attr_hq), meldKeys)).sort();
         for (var i = 0; i < keys.length; i++) {
             var key = keys[i];
-            if (key == 'action' || key == '魔法攻击力' || key == '物理攻击力' || key == '自动攻击')
+            if (key == 'action' || key == '魔法基本性能' || key == '物理基本性能' || key == '物理自动攻击')
                 continue; // Skip this bag, and mutually exclusive damage attributes.
 
             if (minion && key == '速度')
@@ -2579,23 +2579,30 @@ gt.item = {
         }
 
         if (minion) {
-            var speed = gt.item.formatAttribute('Speed', item.attr, null, null, 0, primeKeys);
+            var speed = gt.item.formatAttribute('速度', item.attr, null, null, 0, primeKeys);
             speed.stars = 1;
             primes.push(speed);
 			
         }
 
         var itemCategory = gt.item.categoryIndex[item.category];
-        if (itemCategory && (item.attr["物理攻击力"] || item.attr["魔法攻击力"])) {
+        if (itemCategory && (item.attr["物理基本性能"] || item.attr["魔法基本性能"])) {
             var dmgKey = itemCategory.attr;
             primes.push(gt.item.formatAttribute(dmgKey, item.attr, item.attr_hq, item.attr_max, 0, primeKeys));
         }
 
-        if (item.attr["物理攻击力"]) {
-            item.attr["自动攻击"] = gt.item.calculateAutoAttack(item.attr["物理攻击力"], item.attr.Delay);
+        if (item.attr["物理基本性能"]) {
+            item.attr["物理自动攻击"] = gt.item.calculateAutoAttack(item.attr["物理基本性能"], item.attr["攻击间隔"]);
             if (item.attr_hq)
-                item.attr_hq["自动攻击"] = gt.item.calculateAutoAttack(item.attr_hq["物理攻击力"], item.attr.Delay);
-            primes.push(gt.item.formatAttribute('自动攻击', item.attr, item.attr_hq, item.attr_max, 0, primeKeys));
+                item.attr_hq["物理自动攻击"] = gt.item.calculateAutoAttack(item.attr_hq["物理基本性能"], item.attr["攻击间隔"]);
+            primes.push(gt.item.formatAttribute('物理自动攻击', item.attr, item.attr_hq, item.attr_max, 0, primeKeys));
+        }
+
+        if (item.attr["魔法基本性能"]) {
+            item.attr["物理自动攻击"] = gt.item.calculateAutoAttack(item.attr["魔法基本性能"], item.attr["攻击间隔"]);
+            if (item.attr_hq)
+                item.attr_hq["物理自动攻击"] = gt.item.calculateAutoAttack(item.attr_hq["魔法基本性能"], item.attr["攻击间隔"]);
+            primes.push(gt.item.formatAttribute('物理自动攻击', item.attr, item.attr_hq, item.attr_max, 0, primeKeys));
         }
 
         bonuses = _.sortBy(bonuses, function(b) { return b.sort; });

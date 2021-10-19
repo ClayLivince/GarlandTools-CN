@@ -795,8 +795,8 @@
                         <div class="attributes prime">
                             {{?it["物理防御力"]}}{{=gt.item.attributeValueTemplate(it["物理防御力"])}}{{?}}
                             {{?it["魔法防御力"]}}{{=gt.item.attributeValueTemplate(it["魔法防御力"])}}{{?}}
-                            {{?it["魔法攻击力"]}}{{=gt.item.attributeValueTemplate(it["魔法攻击力"])}}{{?}}
-                            {{?it["物理攻击力"]}}{{=gt.item.attributeValueTemplate(it["物理攻击力"])}}{{?}}
+                            {{?it["魔法基本性能"]}}{{=gt.item.attributeValueTemplate(it["魔法基本性能"])}}{{?}}
+                            {{?it["物理基本性能"]}}{{=gt.item.attributeValueTemplate(it["物理基本性能"])}}{{?}}
                             {{?it["物理自动攻击"]}}{{=gt.item.attributeValueTemplate(it["物理自动攻击"])}}{{?}}
                             {{?it["攻击间隔"]}}{{=gt.item.attributeValueTemplate(it["攻击间隔"])}}{{?}}
                             {{?it["格挡性能"]}}{{=gt.item.attributeValueTemplate(it["格挡性能"])}}{{?}}
@@ -1353,7 +1353,7 @@
                             {{?it.quests}}
                                 {{~it.quests :value:index}}
                                     <div class="collapse-toggle line pointer source-link block-link hover-highlight" data-id="{{=value.id}}" data-type="quest">
-                                        <span class="right">Reward</span>
+                                        <span class="right">奖励</span>
                                         <div class="overflow-wrapper">
                                             <span class="highlight">{{=value.name}}</span>
                                             <span class="byline">{{=value.location}}</span>
@@ -2465,7 +2465,7 @@
 
                     {{?it.issuer}}
                         <div class="collapse-toggle line block-link pointer hover-highlight" data-id="{{=it.issuer.id}}" data-type="npc">
-                            <span><span class="highlight">{{=it.issuer.name}}</span> <span class="byline involved-text">发布{{?it.target && it.issuer.id == it.target.id}}, Target{{?}}</span></span>
+                            <span><span class="highlight">{{=it.issuer.name}}</span> <span class="byline involved-text">发布{{?it.target && it.issuer.id == it.target.id}}, 提交{{?}}</span></span>
                             {{?it.issuer.location}}<span class="location right">{{=it.issuer.location}}</span>{{?}}
                             <div class="clear"></div>
                         </div>
@@ -2725,7 +2725,7 @@
             <div class="menu tab">
                 <div data-page="stats-page" class="button">信息</div>
                 {{?it.treasure || it.coffers || it.rewards}}
-                    <div data-page="treasures-page" class="button">宝箱/div>
+                    <div data-page="treasures-page" class="button">宝箱</div>
                 {{?}}
                 {{?it.fights}}
                     <div data-page="fights-page" class="button">战斗</div>
@@ -3301,7 +3301,7 @@
         <div class="content main">
             <div>{{=it.type}}/{{=it.id}}</div>
             <br>
-            <div>出现了错误。  这东西可能是有点毛病.  请尝试 <b>Ctrl+F5</b> 或 <b>Shift+F5</b> 来强制刷新。  由此造成的不便我们深表歉意。 如果此问题持续存在请加群反馈。</div>
+            <div>出现了错误。  可能是有点毛病.  请尝试 <b>Ctrl+F5</b> 或 <b>Shift+F5</b> 来强制刷新。  由此造成的不便我们深表歉意。 如果此问题持续存在请加群反馈。</div>
             <br>
             <div class="deemphasize">详细错误信息: {{=it.exception.message}}</div>
         </div>
@@ -3327,26 +3327,28 @@
             <div id="search-section">
                 <div id="search-header">
                     <img src="images/Search.png" title="Search">
-                        <input type="search" id="search-input" placeholder="Search" />
+                        <input type="search" id="search-input" placeholder="搜索" />
 
                         <span id="search-filters-button" class="button" title="Filters"></span>
                 </div>
-                <div id="search-language-selector" class="content">
-                    <select id="filter-lang">
-                        <option value="chs" data-img-src="images/chs.png">汉语</option>
-                        <option value="en" data-img-src="images/en.png">英语</option>
-                        <option value="jp" data-img-src="images/jp.png">日语</option>
-                        <option value="fr" data-img-src="images/fr.png">法语</option>
-                        <option value="de" data-img-src="images/de.png">德语</option>
-                        <option value="global" data-img-src="images/global.png">全部(慢)</option>
-                    </select>
-                    <script>
-                        $("#filter-lang").imagepicker()
-                    </script>
-                </div>
+
 
                 <div id="search-filters-page" class="content">
+                    <div id="search-language-selector" class="content">
+                        <select id="filter-lang">
+                            <option value="chs" data-img-src="images/chs.png">汉语</option>
+                            <option value="en" data-img-src="images/en.png">英语</option>
+                            <option value="jp" data-img-src="images/jp.png">日语</option>
+                            <option value="fr" data-img-src="images/fr.png">法语</option>
+                            <option value="de" data-img-src="images/de.png">德语</option>
+                            <option value="global" data-img-src="images/global.png">全部(慢)</option>
+                        </select>
+                        <script>
+                            $("#filter-lang").imagepicker()
+                        </script>
+                    </div>
                     <span class="button" id="clear-filters">清除筛选</span>
+
 
                     <table>
                         <tr>
@@ -3446,7 +3448,7 @@
             <span class="menu-ext">
                 <img src="images/Help.png" class="button" data-page="about-page" title="About"><img src="images/Setting.png" class="button" data-page="settings-page" title="Settings"><img src="images/Links.png" class="button" data-page="links-page" title="Links"><a href="https://discord.gg/hfzmApj"><img src="images/Discord.svg" class="button" title="Discord"></a>
             </span>
-            <h3 class="button" data-page="sync-page">Sync<span id="dirty-indicator"> 💾</span></h3>
+            <h3 class="button" data-page="sync-page">数据同步<span id="dirty-indicator"> 💾</span></h3>
             <h3 class="language-flag en" data-lang="en"><span class="deemphasize">English</span> EN</h3>
             <h3 class="language-flag fr" data-lang="fr"><span class="deemphasize">Francais</span> FR</h3>
             <h3 class="language-flag de" data-lang="de"><span class="deemphasize">Deutsch</span> DE</h3>
@@ -3544,8 +3546,8 @@
 
                 <h3>用法</h3>
                 <ul>
-                    <li>各种数据使用不同颜色的块来分隔。</li>
-                    <li>搜索物品即可添加物品块。</li>
+                    <li>各种数据使用不同颜色的格子来分隔。</li>
+                    <li>搜索物品即可添加物品格子。</li>
                     <li>拖动方块即可改变位置。</li>
                 </ul>
 
@@ -3563,7 +3565,7 @@
 
                 <div class="separator"></div>
                 <div class="question">数据库涵盖游戏所有数据吗？</div>
-                绝大部分，我也没法保证。 有些联动数据可能没有.
+                绝大部分，我也没法保证。 有些联动数据可能没有. 反馈问题加群217748914.
 
                 <div class="separator"></div>
                 <div class="question">这UI好烂！</div>
@@ -3587,13 +3589,16 @@
                 <h3>友情链接</h3>
                 <ul>
                     <li><a href="https://ff14.huijiwiki.com/wiki/%E9%A6%96%E9%A1%B5">最终幻想XIV灰机Wiki</a> 提供游戏新闻、详细中文资讯、剧情解析和 wiki.</li>
-                    <li><a href="http://gamerescape.com/">gamerescape</a> News, podcasts, lore and wiki.</li>
-                    <li><a href="http://www.reddit.com/r/ffxiv">/r/ffxiv</a></li>
+                    <li><a href="https://ff14.org/">新大陆见闻录</a> FF14豆芽闯关手册.</li>
+                    <li><a href="https://www.ffxiv.cn/v2/">素素攻略站</a> 完善的中文攻略站.</li>
+                    <li><a href="http://gamerescape.com/">gamerescape</a> 国际服Wiki.</li>
+                    <li><a href="http://www.reddit.com/r/ffxiv">/r/ffxiv</a> 国际服讨论站Reddit.</li>
                 </ul>
 
                 <h3>其他工具</h3>
                 <ul>
-                    <li><a href="https://ffxivteamcraft.com">FFXIV Teamcraft</a> Shared crafting lists.</li>
+                    <li><a href="https://ricecake.traveleorzea.com">鱼糕</a> 好用的光之渔夫辅助器.</li>
+                    <li><a href="https://ffxivteamcraft.com">FFXIV Teamcraft</a> 好用的制作模拟器.</li>
                     <li><a href="http://ffxiv.ariyala.com">Ariyala's Final Fantasy XIV Toolkit</a></li>
                     <li><a href="http://www.ffxivcrafting.com">Crafting as a Service</a> Crafting lists.</li>
                     <li><a href="http://super-aardvark.github.io/yuryu/">FFXIV Cactpot Solver</a></li>
@@ -3605,7 +3610,7 @@
                     <li><a href="http://ff14fish.carbuncleplushy.com/">FFX|V Fish Tracker App</a></li>
                 </ul>
 
-                <h3>制作理论分析</h3>
+                <h3>理论分析</h3>
                 <ul>
                     <li><a href="https://dervyxiv.wordpress.com/">Dervy does Theorycrafting</a> Source for stat weights.</li>
                     <li><a href="http://forum.square-enix.com/ffxiv/threads/185390-Let-s-talk-about-Hunts-a-detailed-rundown-of-their-assumed-mechanics">Let's talk about Hunts</a></li>
@@ -3616,6 +3621,7 @@
 
                 <h3>开发人员</h3>
                 <ul>
+                    <li><a href="https://github.com/ClayLivince/GarlandTools">Garland Tools 国服版开源地址</a> Github.</li>
                     <li><a href="https://github.com/ufx/SaintCoinach">Saint Coinach, Godbert</a> Datamining.</li>
                     <li><a href="http://ffxivexplorer.fragmenterworks.com/">FFXIV Explorer</a> Datamining.</li>
                 </ul>
