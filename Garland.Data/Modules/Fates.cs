@@ -85,7 +85,7 @@ namespace Garland.Data.Modules
 
             dynamic fate = new JObject();
             fate.id = sFate.Key;
-            _builder.Localize.Strings((JObject)fate, sFate, iFate, x => Utils.RemoveLineBreaks(Utils.SanitizeTags(x)), "Name");
+            _builder.Localize.Strings((JObject)fate, sFate, iFate, false, x => Utils.RemoveLineBreaks(Utils.SanitizeTags(x)), "Name");
             _builder.Localize.HtmlStrings(fate, sFate, iFate, "Description");
             fate.patch = PatchDatabase.Get("fate", sFate.Key);
             fate.lvl = sFate.ClassJobLevel;

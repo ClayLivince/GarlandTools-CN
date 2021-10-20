@@ -41,7 +41,7 @@ namespace Garland.Data.Modules
                 dynamic achievement = new JObject();
                 achievement.id = sAchievement.Key;
                 iAchieveById.TryGetValue(sAchievement.Key, out var iAchieve);
-                _builder.Localize.Strings((JObject)achievement, sAchievement, iAchieve, "Name", "Description");
+                _builder.Localize.Strings((JObject)achievement, sAchievement, iAchieve, false, "Name", "Description");
                 achievement.patch = PatchDatabase.Get("achievement", sAchievement.Key);
                 achievement.points = sAchievement.Points;
                 achievement.category = sAchievement.AchievementCategory.Key;

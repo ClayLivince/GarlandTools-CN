@@ -41,7 +41,7 @@ namespace Garland.Data.Modules
 
             iStatusById.TryGetValue(sStatus.Key, out var iStatus);
 
-            _builder.Localize.Strings((JObject)status, sStatus, iStatus, "Name");
+            _builder.Localize.Strings((JObject)status, sStatus, iStatus, false, "Name");
             _builder.Localize.HtmlStrings((JObject)status, sStatus, iStatus, "Description");
             status.patch = PatchDatabase.Get("status", sStatus.Key);
             status.category = sStatus.Category;

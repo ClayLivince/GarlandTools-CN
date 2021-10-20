@@ -215,6 +215,8 @@ gt.core = {
             gt.skywatcher.initialize(data);
             gt.note.initialize(data);
 
+            gt.localize.initialize(data);
+
             gt.search.initialize(data);
             gt.browse.initialize(data);
             gt.list.initialize(data);
@@ -937,7 +939,7 @@ gt.core = {
             }
 
             if (gt.list.doesListMatch([{type: data.type, id: name}], gt.list.current)) {
-                gt.display.alertp("A " + data.type + " with that name already exists.");
+                gt.display.alertp(data.type + " 中已经有叫这个名字的东西了唔.");
                 return;
             }
 
@@ -963,8 +965,34 @@ gt.core = {
         return true;
     }
 };
+gt.localize = {
+    localizeTemplate: null,
+
+
+    initialize: function(){
+        gt.localize.localizeTemplate = doT.template($('#page-localize-template').text());
+    },
+
+    localizationTemplate: function(localizeSet) {
+        return gt.localize.localizeTemplate(localizeSet);
+    },
+
+};
 gt.util = {
     abbrCache: {},
+
+    extractLocalize: function(obj, view) {
+        // Localizations
+        if (obj.en) {
+            if (obj.en.name) {
+                view.localize = {};
+                view.localize.en = obj.en;
+                view.localize.ja = obj.ja;
+                view.localize.fr = obj.fr;
+                view.localize.de = obj.de;
+            }
+        }
+    },
 
     pascalCase: function(str) {
         return str.replace(/(\w)(\w*)/g,
@@ -1969,15 +1997,7 @@ gt.item = {
 
         var itemSettings = gt.settings.getItem(item.id);
 
-        // Localizations
-        if (item.en) {
-            if (item.en.name) {
-                view.en = item.en;
-                view.ja = item.ja;
-                view.fr = item.fr;
-                view.de = item.de;
-            }
-        }
+        gt.util.extractLocalize(item, view);
 
         // Repairs
         if (item.repair)
@@ -3086,6 +3106,8 @@ gt.npc = {
             appearance: npc.appearance
         };
 
+        gt.util.extractLocalize(npc, view);
+
         view.byline = view.title;
 
         if (npc.zoneid) {
@@ -3343,6 +3365,8 @@ gt.mob = {
             quest: mob.quest
         };
 
+        gt.util.extractLocalize(mob, view);
+
         if (mob.instance) {
             var instance = gt.model.partial(gt.instance, mob.instance);
             view.location = instance.name;
@@ -3448,7 +3472,7 @@ gt.node = {
     bonusIndex: null,
     limitedNodeUpdateKey: null,
     types: ['矿脉', '石场', '良材', '草场', '刺鱼'],
-    jobAbbreviations: ['MIN', 'MIN', 'BTN', 'BTN', 'FSH'],
+    jobAbbreviations: ['采矿工', '采矿工', '园艺工', '园艺工', '捕鱼人'],
     browse: [
         { type: 'icon-list', prop: 'job' },
         { type: 'group', prop: 'region' },
@@ -3500,6 +3524,8 @@ gt.node = {
             coords: node.coords,
             obj: node
         };
+
+        gt.util.extractLocalize(node, view);
 
         var typePrefix = node.limitType ? (node.limitType + ' ') : '';
 
@@ -3622,7 +3648,7 @@ gt.node = {
                 view.progressStart = info.progressStart;
                 view.progressEnd = info.progressEnd;
 
-                $('.spawn-info', $block).text(info.text);
+                $('.spawn-info', $block).html(info.text);
                 $progress.removeClass('spawning active').addClass(info.state);
                 $block.data('next-spawn-change', info.change.getTime() + 1001);
             }
@@ -3696,13 +3722,13 @@ gt.node = {
 
         if (eorzeaMinutesDifference > 0 && eorzeaMinutesDifference <= 120) {
             // Spawns within 2 hours.
-            info.text = "在 " + gt.time.formatTime(times.lNextSpawn) + " 出现";
+            info.text = "在 <i class=\"xiv local-time-chs\"></i> " + gt.time.formatTime(times.lNextSpawn) + " 出现";
             info.state = 'spawning';
             info.change = times.lNextSpawn;
         } else if (eorzeaMinutesDifference < 0 && eorzeaMinutesDifference > -view.uptime) {
             // Active for {uptime} minutes.
             var lNextExpire = gt.time.eorzeaToLocal(times.eNextExpire);
-            info.text = "在 " + gt.time.formatTime(lNextExpire) + " 消失";
+            info.text = "在 <i class=\"xiv local-time-chs\"></i> " + gt.time.formatTime(lNextExpire) + " 消失";
             info.state = "active";
             info.change = lNextExpire;
             info.progressStart = lNextExpire;
@@ -3712,7 +3738,7 @@ gt.node = {
             var eSpawning = new Date(times.eNextSpawn);
             eSpawning.setUTCHours(eSpawning.getUTCHours() - 2);
 
-            info.text = "在 " + gt.time.formatTime(times.lNextSpawn) + " 出现";
+            info.text = "在 <i class=\"xiv local-time-chs\"></i> " + gt.time.formatTime(times.lNextSpawn) + " 出现";
             info.state = 'dormant';
             info.change = gt.time.eorzeaToLocal(eSpawning);
         }
@@ -3788,6 +3814,8 @@ gt.fishing = {
             category: gt.fishing.categories[spot.category],
             browseIcon: 'images/FSH.png'
         };
+
+        gt.util.extractLocalize(spot, view);
 
         var zoneName = view.zone ? view.zone.name : "云冠群岛";
 
@@ -3886,6 +3914,8 @@ gt.instance = {
             ranged: instance.ranged,
             dps: (instance.ranged || 0) + (instance.melee || 0)
         };
+
+        gt.util.extractLocalize(instance, view);
 
         view.sourceName = gt.util.abbr(instance.name);
         view.longSourceName = instance.name;
@@ -6156,7 +6186,7 @@ gt.list = {
     },
 
     newListClicked: function(e) {
-        gt.display.promptp("命名新列表:", null, function(name) {
+        gt.display.promptp("取个名字叭:", null, function(name) {
             if (!name)
                 return;
     
@@ -6476,6 +6506,8 @@ gt.quest = {
             location: quest.location
         };
 
+        gt.util.extractLocalize(quest, view);
+
         var genre = gt.quest.genreIndex[quest.genre];
         view.genre = genre.name || "冒险者任务";
         view.category = genre.category;
@@ -6680,6 +6712,8 @@ gt.achievement = {
             title: achievement.title
         };
 
+        gt.util.extractLocalize(achievement, view);
+
         if (achievement.item)
             view.item = gt.model.partial(gt.item, achievement.item);
 
@@ -6762,6 +6796,7 @@ gt.action = {
             cost: action.cost,
             pet: action.pet
         };
+        gt.util.extractLocalize(action, view);
 
         var job = gt.jobs[action.job] || { name: view.category, category: "其他" };
 
@@ -6778,7 +6813,7 @@ gt.action = {
 
         // Range
         if (action.size)
-            view.size = action.size + 'y';
+            view.size = action.size + '米';
 
         // Non-trait values
         if (view.category != 'Trait') {
@@ -6927,6 +6962,8 @@ gt.status = {
             canDispel: status.canDispel
         };
 
+        gt.util.extractLocalize(status, view);
+
         view.subheader = view.category + ' Status Effect';
 
         return view;
@@ -6991,6 +7028,8 @@ gt.fate = {
             location: '???',
             fullLocation: '???'
         };
+
+        gt.util.extractLocalize(fate, view);
 
         view.sourceName = view.name;
 
@@ -7096,6 +7135,8 @@ gt.leve = {
             repeats: leve.repeats,
             complexity: leve.complexity
         };
+
+        gt.util.extractLocalize(leve, view);
 
         view.location = gt.location.index[leve.areaid].name;
         view.byline = 'Lv. ' + leve.lvl + ', ' + view.location;

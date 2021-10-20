@@ -10,6 +10,7 @@
     <link rel="manifest" href="manifest.json">
 
     <link rel="stylesheet" href="ext/image-picker.css">
+    <link rel="stylesheet" href="ext/xivfont.css">
 
     <script src="ext/bundle.min.js" crossorigin="anonymous"></script>
     <script src="ext/jquery-3.1.1.min.js"></script>
@@ -226,6 +227,83 @@
         </div>
     </script>
 
+    <script id="page-localize-template" type="text/x-dot-template">
+        <div class="localization-page page">
+            <div class="subsection collapsible collapsed" data-headername="localize">
+                <img src="images/en.png" class="subsection-icon">
+                <h2 class="pointer">{{=it.en.name}}</h2>
+
+                <div class="source-link collapse-toggle line">
+                    <span class="help">
+                        {{=it.en.name}}
+                        <br>
+                        {{?it.en.location}}
+                            <i class="xiv arrow-right"></i>{{=it.en.location}}
+                        {{?}}
+                        <br>
+                        {{?it.en.description}}
+                            {{=it.en.description}}
+                        {{?}}
+                    </span>
+                </div>
+            </div>
+            <div class="subsection collapsible collapsed" data-headername="localize">
+                <img src="images/jp.png" class="subsection-icon">
+                <h2 class="pointer">{{=it.ja.name}}</h2>
+
+                <div class="source-link collapse-toggle line">
+                    <span class="help">
+                        {{=it.ja.name}}
+                        <br>
+                        {{?it.ja.location}}
+                            <i class="xiv arrow-right"></i>{{=it.ja.location}}
+                        {{?}}
+                        <br>
+                        {{?it.ja.description}}
+                            {{=it.ja.description}}
+                        {{?}}
+                    </span>
+                </div>
+            </div>
+            <div class="subsection collapsible collapsed" data-headername="localize">
+                <img src="images/de.png" class="subsection-icon">
+                <h2 class="pointer">{{=it.de.name}}</h2>
+
+                <div class="source-link collapse-toggle line">
+                    <span class="help">
+                        {{=it.de.name}}
+                        <br>
+                        {{?it.de.location}}
+                            <i class="xiv arrow-right"></i>{{=it.de.location}}
+                        {{?}}
+                        <br>
+                        {{?it.de.description}}
+                            {{=it.de.description}}
+                        {{?}}
+                    </span>
+                </div>
+            </div>
+            <div class="subsection collapsible collapsed" data-headername="localize">
+                <img src="images/fr.png" class="subsection-icon">
+                <h2 class="pointer">{{=it.fr.name}}</h2>
+
+                <div class="source-link collapse-toggle line">
+                    <span class="help">
+                        {{=it.fr.name}}
+                        <br>
+                        {{?it.fr.location}}
+                            <i class="xiv arrow-right"></i>{{=it.fr.location}}
+                        {{?}}
+                        <br>
+                        {{?it.fr.description}}
+                            {{=it.fr.description}}
+                        {{?}}
+                     </span>
+                </div>
+            </div>
+        </div>
+    </script>
+
     <script id="block-template" type="text/x-dot-template">
         <div class="block {{=it.type}} {{?it.blockClass}}{{=it.blockClass}}{{?}}" data-id="{{=it.id}}" data-type="{{=it.type}}">
             <div class="block-title handle">
@@ -434,22 +512,22 @@
 
     <script id="block-gearset-template" type="text/x-dot-template">
         <div class="content header">
-            {{=gt.gearset.slotTemplate(it.equipment['Main Hand'])}}
-            {{=gt.gearset.slotTemplate(it.equipment['Off Hand'])}}
-            {{=gt.gearset.slotTemplate(it.equipment['Soul Crystal'])}}
+            {{=gt.gearset.slotTemplate(it.equipment['主手'])}}
+            {{=gt.gearset.slotTemplate(it.equipment['副手'])}}
+            {{=gt.gearset.slotTemplate(it.equipment['灵魂水晶'])}}
             <hr>
-            {{=gt.gearset.slotTemplate(it.equipment['Head'])}}
-            {{=gt.gearset.slotTemplate(it.equipment['Body'])}}
-            {{=gt.gearset.slotTemplate(it.equipment['Hands'])}}
-            {{=gt.gearset.slotTemplate(it.equipment['Waist'])}}
-            {{=gt.gearset.slotTemplate(it.equipment['Legs'])}}
-            {{=gt.gearset.slotTemplate(it.equipment['Feet'])}}
+            {{=gt.gearset.slotTemplate(it.equipment['头部'])}}
+            {{=gt.gearset.slotTemplate(it.equipment['身体'])}}
+            {{=gt.gearset.slotTemplate(it.equipment['手臂'])}}
+            {{=gt.gearset.slotTemplate(it.equipment['腰带'])}}
+            {{=gt.gearset.slotTemplate(it.equipment['腿部'])}}
+            {{=gt.gearset.slotTemplate(it.equipment['脚部'])}}
             <hr>
-            {{=gt.gearset.slotTemplate(it.equipment['Neck'])}}
-            {{=gt.gearset.slotTemplate(it.equipment['Ears'])}}
-            {{=gt.gearset.slotTemplate(it.equipment['Wrists'])}}
-            {{=gt.gearset.slotTemplate(it.equipment['Left Ring'])}}
-            {{=gt.gearset.slotTemplate(it.equipment['Right Ring'])}}
+            {{=gt.gearset.slotTemplate(it.equipment['颈部'])}}
+            {{=gt.gearset.slotTemplate(it.equipment['耳部'])}}
+            {{=gt.gearset.slotTemplate(it.equipment['腕部'])}}
+            {{=gt.gearset.slotTemplate(it.equipment['左手戒指'])}}
+            {{=gt.gearset.slotTemplate(it.equipment['右手戒指'])}}
         </div>
 
         <div class="content detail">
@@ -601,7 +679,7 @@
 
                             {{?it.aggregateLeves.hqXp}}
                                 <div class="attribute">
-                                    <span class="name">HQ XP</span>
+                                    <span class="name"><i class="xiv hq"></i> XP</span>
                                     <span class="value">{{=it.aggregateLeves.hqXp.toLocaleString()}}</span>
                                     <hr>
                                 </div>
@@ -663,7 +741,7 @@
 
                                 {{?model.view.sockets}}
                                     <hr class="collapse-toggle">
-                                    
+
                                     <div class="materia subsection collapse-toggle" data-headername="materia">
                                         {{=gt.item.materiaSocketsTemplate(model.view)}}
                                     </div>
@@ -741,10 +819,8 @@
                 {{?it.models}}
                     <div data-page="models-page" class="button">3D</div>
                 {{?}}
-                {{?it.en}}
-                    {{?it.en.name}}
-                        <div data-page="localization-page" class="button">其他语言</div>
-                    {{?}}
+                {{?it.localize}}
+                    <div data-page="localization-page" class="button">其他语言</div>
                 {{?}}
             </div>
         </div>
@@ -813,7 +889,7 @@
                         {{?it.unique}}<span class="inline-block"><span class="circle"></span>稀有</span>{{?}}
                         {{?it.unlistable && !it.untradeable}}<span class="inline-block"><span class="circle"></span>无法在市场上交易</span>{{?}}
                         {{?it.craft}}
-                            {{?!it.craft.hq}}<span class="inline-block"><span class="circle"></span>不可制作成HQ</span>{{?}}
+                            {{?!it.craft.hq}}<span class="inline-block"><span class="circle"></span>不可制作成高品质<i class="xiv hq"></i></span>{{?}}
                             {{?!it.craft.quickSynth}}<span class="inline-block"><span class="circle"></span>不可分解</span>{{?}}
                         {{?}}
                         {{?!it.sell_price}}<span class="inline-block"><span class="circle"></span>不可出售</span>{{?}}
@@ -854,7 +930,7 @@
                         <span class="elvl highlight-green">Lv. {{=it.elvl}}</span>
                     {{?}}
                 </div>
-                
+
                 {{?it.minion}}
                     <div class="attributes prime clear">
                         {{=gt.item.attributeValueTemplate(it["生命值"])}}
@@ -866,7 +942,7 @@
                    <table class="right">
                         <tr><td>{{=it.minionRace}}</td><td><img src="images/Minion{{=it.minionRace}}.png" class="minion-race-icon"></td></tr>
                     </table>
-                
+
                     <div class="verminion-info bonuses subsection">
                         <div class="bonus"><span class="name">萌宠之王费用</span>{{=it.obj.cost}}</div>
                         <div class="bonus"><span class="name">自动攻击类型</span>{{?it.obj.aoe}}AoE{{??}}单目标{{?}}</div>
@@ -977,7 +1053,7 @@
 
                             {{?it.fish.hookset}}
                                 <div class="line half collapse-toggle">
-                                    <img class="icon small" src="../files/icons/action/{{=it.fish.hooksetIcon}}.png"> 
+                                    <img class="icon small" src="../files/icons/action/{{=it.fish.hooksetIcon}}.png">
                                     <span class="text">{{=it.fish.hookset.replace("Hookset", "").trim()}}</span>
                                 </div>
                             {{?}}
@@ -1029,7 +1105,7 @@
                 {{??}}
                     {{?it.bonuses || it.special}}
                         <div class="bonuses subsection">
-                            <h3>属性{{?it.hasBonusMeter}}<span class="bonus-help deemphasize"><span class="value">nq</span> <span class="value">{{?it.obj.attr_hq}}hq{{?}}</span> <span class="value text-right">已镶嵌</span> <span class="value">/ 最大</span></span>{{?}}</h3>
+                            <h3>属性{{?it.hasBonusMeter}}<span class="bonus-help deemphasize"><span class="value">标准</span> <span class="value">{{?it.obj.attr_hq}}<i class="xiv hq"></i>{{?}}</span> <span class="value text-right">已镶嵌</span> <span class="value">/ 最大</span></span>{{?}}</h3>
 
                             {{?it.bonuses}}
                                 {{~it.bonuses :b:index}}{{=gt.item.attributeValueTemplate(b)}}{{~}}
@@ -1064,7 +1140,7 @@
                 {{?it.sockets}}
                     <div class="materia subsection collapsible {{?!it.melds.length}}collapsed{{?}}" data-headername="materia">
                         <h3 class="pointer">魔晶石 (共 {{=it.sockets}} 孔) <span class="right">{{=it.repair_job}} Lv. {{=it.meld_lvl}}</span></h3>
-                        
+
                         {{=gt.item.materiaSocketsTemplate(it)}}
                     </div>
                 {{?}}
@@ -1165,7 +1241,7 @@
                         <div class="vendors subsection collapsible collapsed" data-headername="vendors">
                             <img src="images/Shop.png" class="subsection-icon">
                             <h2 class="pointer">商店<span class="right badge">{{=it.vendors.length}}</span></h2>
- 
+
                             {{?it.vendors}}
                                 {{~it.vendors :value:index}}
                                     <div class="collapse-toggle source-link block-link pointer line hover-highlight" data-id="{{=value.id}}" data-type="npc">
@@ -1725,7 +1801,7 @@
                                                 <img class="icon" src="{{=option.item.icon}}" title="{{=option.item.name}}">
                                                 {{?option.hq}}<img src="images/HQOverlay.png" class="hq-overlay icon">{{?}}
                                                 {{?option.amount > 1}}{{=option.amount}} {{?}}
-                                            </div> 
+                                            </div>
                                         {{~}}
                                     </div>
                                 {{~}}
@@ -1807,7 +1883,7 @@
                         {{?}}
 
                         <div class="line collapse-toggle">
-                            <span class="action-link unselectable copy-recipe">复制配方内容 </span> 
+                            <span class="action-link unselectable copy-recipe">复制配方内容 </span>
                             <a href="https://ffxivteamcraft.com/simulator/{{=it.id}}/{{=it.craft.id}}" target="_blank">在TeamCraft中打开 </a>
                             <span class="action-link unselectable new-group">添加到制作列表 </span>
                         </div>
@@ -1833,67 +1909,8 @@
                 <div class="models-page page"></div>
             {{?}}
 
-            {{?it.en}}
-                {{?it.en.name}}
-                    <div class="localization-page page">
-                        <div class="subsection collapsible collapsed" data-headername="localize">
-                            <img src="images/en.png" class="subsection-icon">
-                            <h2 class="pointer">{{=it.en.name}}</h2>
-
-                            <div class="source-link collapse-toggle line">
-                                <span class="help">
-                                    {{=it.en.name}}
-                                    <br>
-                                    {{?it.en.description}}
-                                        {{=it.en.description}}
-                                    {{?}}
-                                </span>
-                            </div>
-                        </div>
-                        <div class="subsection collapsible collapsed" data-headername="localize">
-                            <img src="images/jp.png" class="subsection-icon">
-                            <h2 class="pointer">{{=it.ja.name}}</h2>
-
-                            <div class="source-link collapse-toggle line">
-                                <span class="help">
-                                    {{=it.ja.name}}
-                                    <br>
-                                    {{?it.ja.description}}
-                                        {{=it.ja.description}}
-                                    {{?}}
-                                </span>
-                            </div>
-                        </div>
-                        <div class="subsection collapsible collapsed" data-headername="localize">
-                            <img src="images/de.png" class="subsection-icon">
-                            <h2 class="pointer">{{=it.de.name}}</h2>
-
-                            <div class="source-link collapse-toggle line">
-                                <span class="help">
-                                    {{=it.de.name}}
-                                    <br>
-                                    {{?it.de.description}}
-                                        {{=it.de.description}}
-                                    {{?}}
-                                </span>
-                            </div>
-                        </div>
-                        <div class="subsection collapsible collapsed" data-headername="localize">
-                            <img src="images/fr.png" class="subsection-icon">
-                            <h2 class="pointer">{{=it.fr.name}}</h2>
-
-                            <div class="source-link collapse-toggle line">
-                                <span class="help">
-                                    {{=it.fr.name}}
-                                    <br>
-                                    {{?it.fr.description}}
-                                        {{=it.fr.description}}
-                                    {{?}}
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                {{?}}
+            {{?it.localize}}
+                {{=gt.localize.localizationTemplate(it.localize)}}
             {{?}}
         </div>
     </script>
@@ -1903,6 +1920,9 @@
             <div class="menu tab">
                 <div data-page="info-page" class="button">信息</div>
                 {{?it.map}}<div data-page="maps-page" class="button">地图</div>{{?}}
+                {{?it.localize}}
+                <div data-page="localization-page" class="button">其他语言</div>
+                {{?}}
             </div>
         </div>
 
@@ -2086,7 +2106,7 @@
                                 </tr>
                                 <tr>
                                     <td>刺青颜色</td><td>{{=it.appearance.facialfeatureColor}}</td>
-                                </tr>                            
+                                </tr>
                             {{?}}
 
                             {{?it.appearance.facepaint}}
@@ -2175,6 +2195,10 @@
                     {{=gt.map.pageTemplate(it.map)}}
                 </div>
             {{?}}
+
+            {{?it.localize}}
+                {{=gt.localize.localizationTemplate(it.localize)}}
+            {{?}}
         </div>
     </script>
 
@@ -2183,6 +2207,9 @@
             <div class="menu tab">
                 <div data-page="stats-page" class="button">信息</div>
                 <div data-page="lore-page" class="button">剧情</div>
+                {{?it.localize}}
+                <div data-page="localization-page" class="button">其他语言</div>
+                {{?}}
             </div>
         </div>
 
@@ -2243,8 +2270,8 @@
 
                         {{?it.complexity}}
                             <hr>
-                            <div>NQ 复杂度: {{=it.complexity.nq}}, 每点复杂度的经验奖励: {{=it.xpPerComplexity}}</div>
-                            <div>HQ 复杂度: {{=it.complexity.hq}}, 每点复杂度的经验奖励: {{=it.xpPerComplexityHq}}</div>
+                            <div>标准 复杂度: {{=it.complexity.nq}}, 每点复杂度的经验奖励: {{=it.xpPerComplexity}}</div>
+                            <div>高品质<i class="xiv hq"></i> 复杂度: {{=it.complexity.hq}}, 每点复杂度的经验奖励: {{=it.xpPerComplexityHq}}</div>
 
                             <div>
                                 <span class="action-link unselectable new-group">添加到理符计算器</span>
@@ -2280,6 +2307,10 @@
 
                 <div class="clear"></div>
             </div>
+
+            {{?it.localize}}
+            {{=gt.localize.localizationTemplate(it.localize)}}
+            {{?}}
         </div>
     </script>
 
@@ -2290,6 +2321,9 @@
                 <div data-page="lore-page" class="button">剧情</div>
                 {{?it.issuer && it.issuer.map}}
                     <div data-page="maps-page" class="button">地图</div>
+                {{?}}
+                {{?it.localize}}
+                <div data-page="localization-page" class="button">其他语言</div>
                 {{?}}
             </div>
         </div>
@@ -2323,7 +2357,7 @@
                         </span>
                     {{?}}
                 {{?}}
-                
+
                 {{?it.reward}}
                     <div class="rewards subsection" data-headername="rewards">
                         <h3>奖励</h3>
@@ -2548,6 +2582,10 @@
                     {{=gt.map.pageTemplate(it.issuer.map)}}
                 </div>
             {{?}}
+
+            {{?it.localize}}
+            {{=gt.localize.localizationTemplate(it.localize)}}
+            {{?}}
         </div>
     </script>
 
@@ -2556,6 +2594,9 @@
             <div class="menu tab">
                 {{?it.hasInfo}}<div data-page="info-page" class="button">信息</div>{{?}}
                 {{?it.map}}<div data-page="map-page" class="button">地图</div>{{?}}
+                {{?it.localize}}
+                <div data-page="localization-page" class="button">其他语言</div>
+                {{?}}
             </div>
         </div>
 
@@ -2594,6 +2635,10 @@
                     {{=gt.map.pageTemplate(it.map)}}
                 </div>
             {{?}}
+
+            {{?it.localize}}
+            {{=gt.localize.localizationTemplate(it.localize)}}
+            {{?}}
         </div>
     </script>
 
@@ -2602,6 +2647,9 @@
             <div class="menu tab">
                 <div data-page="fish-page" class="button">捕鱼</div>
                 {{?it.map}}<div data-page="map-page" class="button">地图</div>{{?}}
+                {{?it.localize}}
+                <div data-page="localization-page" class="button">其他语言</div>
+                {{?}}
             </div>
         </div>
 
@@ -2611,7 +2659,7 @@
                     {{~it.items :value:index}}
                         <div class="line half block-link hover-highlight pointer" data-id="{{=value.item.id}}" data-type="item">
                             <img class="icon small" src="{{=value.item.icon}}">
-                            <span class="text">{{=value.lvl}}</span> 
+                            <span class="text">{{=value.lvl}}</span>
                             <span class="highlight text">{{=value.item.name}}</span>
                         </div>
                     {{~}}
@@ -2623,6 +2671,10 @@
                     <div class="collapse-toggle">{{=gt.map.pageTemplate(it.map)}}</div>
                 </div>
             {{?}}
+
+            {{?it.localize}}
+            {{=gt.localize.localizationTemplate(it.localize)}}
+            {{?}}
         </div>
     </script>
 
@@ -2631,6 +2683,9 @@
             <div class="menu tab">
                 <div data-page="map-page" class="button">地图</div>
                 <div data-page="info-page" class="button">信息</div>
+                {{?it.localize}}
+                <div data-page="localization-page" class="button">其他语言</div>
+                {{?}}
             </div>
         </div>
 
@@ -2656,6 +2711,10 @@
                     </div>
                 {{?}}
             </div>
+
+            {{?it.localize}}
+            {{=gt.localize.localizationTemplate(it.localize)}}
+            {{?}}
         </div>
     </script>
 
@@ -2664,6 +2723,9 @@
             <div class="menu tab">
                 <div data-page="info-page" class="button">信息</div>
                 {{?it.map}}<div data-page="map-page" class="button">地图</div>{{?}}
+                {{?it.localize}}
+                <div data-page="localization-page" class="button">其他语言</div>
+                {{?}}
             </div>
         </div>
 
@@ -2689,12 +2751,13 @@
                 </div>
 
                 <hr class="clear">
-                <div class="location right">{{=it.location}}{{?it.timeText}} @ {{=it.timeText}} ET{{?}}</div>
+                <div class="location right">{{=it.location}}{{?it.timeText}} <i class="xiv arrow-right"></i> <i class="xiv eorzea-time-chs"></i> {{=it.timeText}} {{?}}</div>
                 <div class="highlight-green">Lv. {{=it.lvl}} {{=it.job}}</div>
 
                 {{?it.time}}
                     <div class="limited subsection">
                         <div class="progress-container"><div class="progress {{=it.spawnState}}" style="width: {{=it.initialProgressPercent}}%;"></div></div>
+
                         <span class="spawn-info">{{=it.spawnText}}</span>
                         <span class="spawn-remaining">{{=it.initialSpawnRemaining}}</span>
                     </div>
@@ -2717,6 +2780,10 @@
                     <div class="collapse-toggle">{{=gt.map.pageTemplate(it.map)}}</div>
                 </div>
             {{?}}
+
+            {{?it.localize}}
+            {{=gt.localize.localizationTemplate(it.localize)}}
+            {{?}}
         </div>
     </script>
 
@@ -2729,6 +2796,9 @@
                 {{?}}
                 {{?it.fights}}
                     <div data-page="fights-page" class="button">战斗</div>
+                {{?}}
+                {{?it.localize}}
+                <div data-page="localization-page" class="button">其他语言</div>
                 {{?}}
             </div>
         </div>
@@ -2868,182 +2938,233 @@
                     {{~}}
                 </div>
             {{?}}
+
+            {{?it.localize}}
+            {{=gt.localize.localizationTemplate(it.localize)}}
+            {{?}}
         </div>
     </script>
 
     <script id="block-action-template" type="text/x-dot-template">
-        <div class="content main">
-            <div class="right ranges-container">
-                {{?it.range}}<span class="deemphasize">距离</span> {{=it.range}}{{?}}{{?it.size}} <span class="deemphasize">范围</span> {{=it.size}}{{?}}
+        <div class="type midline">
+            <div class="menu tab">
+                <div data-page="stats-page" class="button">信息</div>
+                {{?it.localize}}
+                <div data-page="localization-page" class="button">其他语言</div>
+                {{?}}
             </div>
+        </div>
 
-            {{?it.pet}}<div>{{=it.pet}}</div>{{?}}
-            <div class="left">{{=it.category}}</div>
+        <div class="content main">
+            <div class="stats-page page">
+                <div class="right ranges-container">
+                    {{?it.range}}<span class="deemphasize">距离</span> {{=it.range}}{{?}}{{?it.size}} <span class="deemphasize">范围</span> {{=it.size}}{{?}}
+                </div>
 
-            <div class="clear attributes prime right">
-                {{?it.cast}}{{=gt.item.attributeValueTemplate(it.cast)}}{{?}}
-                {{?it.recast}}{{=gt.item.attributeValueTemplate(it.recast)}}{{?}}
-                {{?it.cost}}
-                    {{?!it.cost.status}}
-                        {{=gt.item.attributeValueTemplate(it.cost)}}
-                    {{??}}
-                        <div class="attribute status">
-                            <span class="name">{{=it.cost.name}}</span>
-                            <span class="value"><img src="{{=it.cost.status}}" class="icon small"></span>
-                            <hr>
-                        </div>
+                {{?it.pet}}<div>{{=it.pet}}</div>{{?}}
+                <div class="left">{{=it.category}}</div>
+
+                <div class="clear attributes prime right">
+                    {{?it.cast}}{{=gt.item.attributeValueTemplate(it.cast)}}{{?}}
+                    {{?it.recast}}{{=gt.item.attributeValueTemplate(it.recast)}}{{?}}
+                    {{?it.cost}}
+                        {{?!it.cost.status}}
+                            {{=gt.item.attributeValueTemplate(it.cost)}}
+                        {{??}}
+                            <div class="attribute status">
+                                <span class="name">{{=it.cost.name}}</span>
+                                <span class="value"><img src="{{=it.cost.status}}" class="icon small"></span>
+                                <hr>
+                            </div>
+                        {{?}}
                     {{?}}
+                </div>
+
+                {{?it.gcd}}
+                    <div class="clear-right"></div>
+
+                    <div class="circle-line">
+                        <span class="inline-block"><span class="circle"></span>{{=it.gcd}}</span>
+                    </div>
+                {{?}}
+
+                <div class="clear"></div>
+
+                <hr>
+
+                <div class="description">{{=it.desc}}</div>
+
+                <div><span class="highlight">相关</span> {{=it.affinity}}</div>
+
+                {{?it.status}}
+                    <div class="separator"></div>
+
+                    {{~it.status :status:sindex}}
+                        <div class="collapse-toggle block-link hover-highlight line half pointer" data-type="status" data-id="{{=status.id}}">
+                            <img src="{{=status.icon}}" class="icon small status">
+                            <span class="highlight text">{{=status.name}}</span> <span class="text">{{=status.relationship}}</span>
+                        </div>
+                    {{~}}
+                {{?}}
+
+                {{?it.comboFrom || it.comboTo}}
+                    <div class="combo subsection collapsible" data-headername="combo">
+                        <h3 class="pointer">连击</h3>
+
+                        {{?it.comboFrom}}
+                            <div class="collapse-toggle block-link hover-highlight line pointer" data-type="action" data-id="{{=it.comboFrom.id}}">
+                                <span class="text right">上一击</span>
+                                <img src="{{=it.comboFrom.icon}}" class="icon small">
+                                <span class="highlight text">{{=it.comboFrom.name}}</span>
+                            </div>
+                        {{?}}
+
+                        {{?it.comboTo}}
+                            {{~it.comboTo :combo:cindex}}
+                                <div class="collapse-toggle block-link hover-highlight line pointer" data-type="action" data-id="{{=combo.id}}">
+                                    <span class="text right">下一击</span>
+                                    <img src="{{=combo.icon}}" class="icon small">
+                                    <span class="highlight text">{{=combo.name}}</span>
+                                </div>
+                            {{~}}
+                        {{?}}
+                    </div>
+                {{?}}
+
+                {{?it.traits}}
+                    <div class="trait subsection collapsible" data-headername="traits">
+                        <h3 class="pointer">特殊</h3>
+
+                        {{~it.traits :trait:tindex}}
+                            <div class="collapse-toggle block-link hover-highlight line half pointer" data-type="action" data-id="{{=trait.id}}">
+                                <img src="{{=trait.icon}}" class="icon small">
+                                <span class="highlight text">{{=trait.name}}</span>
+                            </div>
+                       {{~}}
+                    </div>
                 {{?}}
             </div>
 
-            {{?it.gcd}}
-                <div class="clear-right"></div>
-
-                <div class="circle-line">
-                    <span class="inline-block"><span class="circle"></span>{{=it.gcd}}</span>
-                </div>
-            {{?}}
-
-            <div class="clear"></div>
-
-            <hr>
-
-            <div class="description">{{=it.desc}}</div>
-
-            <div><span class="highlight">相关</span> {{=it.affinity}}</div>
-
-            {{?it.status}}
-                <div class="separator"></div>
-
-                {{~it.status :status:sindex}}
-                    <div class="collapse-toggle block-link hover-highlight line half pointer" data-type="status" data-id="{{=status.id}}">
-                            <img src="{{=status.icon}}" class="icon small status">
-                            <span class="highlight text">{{=status.name}}</span> <span class="text">{{=status.relationship}}</span>
-                    </div>
-                {{~}}
-            {{?}}
-
-            {{?it.comboFrom || it.comboTo}}
-                <div class="combo subsection collapsible" data-headername="combo">
-                    <h3 class="pointer">连击</h3>
-
-                    {{?it.comboFrom}}
-                        <div class="collapse-toggle block-link hover-highlight line pointer" data-type="action" data-id="{{=it.comboFrom.id}}">
-                            <span class="text right">上一击</span>
-                            <img src="{{=it.comboFrom.icon}}" class="icon small">
-                            <span class="highlight text">{{=it.comboFrom.name}}</span>
-                        </div>
-                    {{?}}
-
-                    {{?it.comboTo}}
-                        {{~it.comboTo :combo:cindex}}
-                            <div class="collapse-toggle block-link hover-highlight line pointer" data-type="action" data-id="{{=combo.id}}">
-                                <span class="text right">下一击</span>
-                                <img src="{{=combo.icon}}" class="icon small">
-                                <span class="highlight text">{{=combo.name}}</span>
-                            </div>
-                        {{~}}
-                    {{?}}
-                </div>
-            {{?}}
-
-            {{?it.traits}}
-                <div class="trait subsection collapsible" data-headername="traits">
-                    <h3 class="pointer">特殊</h3>
-
-                    {{~it.traits :trait:tindex}}
-                        <div class="collapse-toggle block-link hover-highlight line half pointer" data-type="action" data-id="{{=trait.id}}">
-                            <img src="{{=trait.icon}}" class="icon small">
-                            <span class="highlight text">{{=trait.name}}</span>
-                        </div>
-                    {{~}}
-                </div>
+            {{?it.localize}}
+            {{=gt.localize.localizationTemplate(it.localize)}}
             {{?}}
         </div>
     </script>
 
     <script id="block-status-template" type="text/x-dot-template">
+        <div class="type midline">
+            <div class="menu tab">
+                <div data-page="stats-page" class="button">信息</div>
+
+                {{?it.localize}}
+                <div data-page="localization-page" class="button">其他语言</div>
+                {{?}}
+            </div>
+        </div>
         <div class="content main">
-            <div class="description">{{=it.desc}}</div>
+            <div class="stats-page page">
+                <div class="description">{{=it.desc}}</div>
 
-            <div class="clear"></div>
+                <div class="clear"></div>
 
-            <hr>
+                <hr>
 
-            <div><span class="highlight">类别</span> {{=it.category}}</div>
-            <div><span class="highlight">可自行解除</span> {{?it.canDispel === true}}是{{?}}{{?it.canDispel === false}}否{{?}}</div>
+                <div><span class="highlight">类别</span> {{=it.category}}</div>
+                <div><span class="highlight">可自行解除</span> {{?it.canDispel === true}}是{{?}}{{?it.canDispel === false}}否{{?}}</div>
 
-            {{?it.status}}
-                <div class="separator"></div>
+                {{?it.status}}
+                    <div class="separator"></div>
 
-                {{~it.status :status:sindex}}
-                    <div class="line status">
-                        <img src="{{=status.icon}}" class="icon small" title="{{=status.desc}}">
-                        <span class="text">{{=status.name}} {{=status.relationship}}</span>
-                    </div>
-                {{~}}
-            {{?}}
-
-            {{?it.comboFrom || it.comboTo}}
-                <div class="combo subsection collapsible" data-headername="combo">
-                    <h3 class="pointer">连击</h3>
-
-                    {{?it.comboFrom}}
-                        <div class="collapse-toggle block-link hover-highlight line pointer" data-type="action" data-id="{{=it.comboFrom.id}}">
-                            <span class="text right">上一击</span>
-                            <img src="{{=it.comboFrom.icon}}" class="icon small">
-                            <span class="highlight text">{{=it.comboFrom.name}}</span>
-                        </div>
-                    {{?}}
-
-                    {{?it.comboTo}}
-                        {{~it.comboTo :combo:cindex}}
-                            <div class="collapse-toggle block-link hover-highlight line pointer" data-type="action" data-id="{{=combo.id}}">
-                                <span class="text right">下一击</span>
-                                <img src="{{=combo.icon}}" class="icon small">
-                                <span class="highlight text">{{=combo.name}}</span>
-                            </div>
-                        {{~}}
-                    {{?}}
-                </div>
-            {{?}}
-
-            {{?it.traits}}
-                <div class="trait subsection collapsible" data-headername="traits">
-                    <h3 class="pointer">特殊</h3>
-
-                    {{~it.traits :trait:tindex}}
-                        <div class="collapse-toggle block-link hover-highlight line half pointer" data-type="action" data-id="{{=trait.id}}">
-                            <img src="{{=trait.icon}}" class="icon small">
-                            <span class="highlight text">{{=trait.name}}</span>
+                    {{~it.status :status:sindex}}
+                        <div class="line status">
+                            <img src="{{=status.icon}}" class="icon small" title="{{=status.desc}}">
+                            <span class="text">{{=status.name}} {{=status.relationship}}</span>
                         </div>
                     {{~}}
-                </div>
+                {{?}}
+
+                {{?it.comboFrom || it.comboTo}}
+                    <div class="combo subsection collapsible" data-headername="combo">
+                        <h3 class="pointer">连击</h3>
+
+                        {{?it.comboFrom}}
+                            <div class="collapse-toggle block-link hover-highlight line pointer" data-type="action" data-id="{{=it.comboFrom.id}}">
+                                <span class="text right">上一击</span>
+                                <img src="{{=it.comboFrom.icon}}" class="icon small">
+                                <span class="highlight text">{{=it.comboFrom.name}}</span>
+                            </div>
+                        {{?}}
+
+                        {{?it.comboTo}}
+                            {{~it.comboTo :combo:cindex}}
+                                <div class="collapse-toggle block-link hover-highlight line pointer" data-type="action" data-id="{{=combo.id}}">
+                                    <span class="text right">下一击</span>
+                                    <img src="{{=combo.icon}}" class="icon small">
+                                    <span class="highlight text">{{=combo.name}}</span>
+                                </div>
+                            {{~}}
+                        {{?}}
+                    </div>
+                {{?}}
+
+                {{?it.traits}}
+                    <div class="trait subsection collapsible" data-headername="traits">
+                        <h3 class="pointer">特殊</h3>
+
+                        {{~it.traits :trait:tindex}}
+                            <div class="collapse-toggle block-link hover-highlight line half pointer" data-type="action" data-id="{{=trait.id}}">
+                                <img src="{{=trait.icon}}" class="icon small">
+                                <span class="highlight text">{{=trait.name}}</span>
+                            </div>
+                        {{~}}
+                    </div>
+                {{?}}
+            </div>
+
+            {{?it.localize}}
+            {{=gt.localize.localizationTemplate(it.localize)}}
             {{?}}
         </div>
     </script>
 
     <script id="block-achievement-template" type="text/x-dot-template">
-        <div class="content main">
-            <div class="right points">{{=it.points}}</div>
-            <span>{{=it.desc}}</span>
+        <div class="type midline">
+            <div class="menu tab">
+                <div data-page="stats-page" class="button">信息</div>
 
-            {{?it.title || it.item}}
-                <div class="rewards subsection">
-                    <h3>奖励</h3>
-
-                    {{?it.title}}
-                        <div><span class="name">Title</span>{{=it.title}}</div>
-                    {{?}}
-
-                    {{?it.item}}
-                        {{=gt.item.halfLinkTemplate(it.item)}}
-                    {{?}}
-                </div>
-            {{?}}
-
-            <div class="clear"></div>
+                {{?it.localize}}
+                <div data-page="localization-page" class="button">其他语言</div>
+                {{?}}
+            </div>
         </div>
+        <div class="content main">
+            <div class="stats-page page">
+
+                <div class="right points">{{=it.points}}</div>
+                <span>{{=it.desc}}</span>
+
+                {{?it.title || it.item}}
+                    <div class="rewards subsection">
+                        <h3>奖励</h3>
+
+                        {{?it.title}}
+                            <div><span class="name">Title</span>{{=it.title}}</div>
+                        {{?}}
+
+                        {{?it.item}}
+                            {{=gt.item.halfLinkTemplate(it.item)}}
+                        {{?}}
+                    </div>
+                {{?}}
+
+                <div class="clear"></div>
+            </div>
+            {{?it.localize}}
+            {{=gt.localize.localizationTemplate(it.localize)}}
+            {{?}}
+        </div>
+
+
     </script>
 
     <script id="tree-craft-template" type="text/x-dot-template">
@@ -3398,7 +3519,7 @@
                     <div class="search-pagination">
                         <span class="button search-previous">上一页</span>
                         <span class="button search-next">下一页</span>
-                    </div>        
+                    </div>
 
                     <div class="midline">
                         <div class="menu tab noclose" data-menu-name="search-menu">
@@ -3560,8 +3681,8 @@
                 使用这个来选择你更喜欢的获取方式，他们将来会排在前列。
 
                 <div class="separator"></div>
-                <div class="question">为什么有些物品制造需求HQ原材料？</div>
-                只是展示使用HQ在制作中可以增加多少初始品质。
+                <div class="question">为什么有些物品制造需求高品质<i class="xiv hq"></i>原材料？</div>
+                只是展示使用高品质<i class="xiv hq"></i>在制作中可以增加多少初始品质。
 
                 <div class="separator"></div>
                 <div class="question">数据库涵盖游戏所有数据吗？</div>
@@ -3656,7 +3777,7 @@
                         <td class="value"><input type="checkbox" id="prefer-fisher-ventures-setting"></td><td><label for="prefer-fisher-ventures-setting">鱼类筹集委托</label></td>
                         <td colspan="2" class="deemphasize">将鱼类雇员探险置于手动采集之前。</td>
                     </tr>
-                    
+
                     <tr>
                         <td class="value"><input type="checkbox" id="prefer-combat-ventures-setting"></td><td><label for="prefer-combat-ventures-setting">战斗筹集委托</label></td>
                         <td colspan="2" class="deemphasize">将战斗雇员探险置于手动采集之前。</td>
@@ -3778,9 +3899,9 @@
 
             <div class="content page sync-page short">
                 <h3>同步列表与设置 <span class="right">上次同步时间: <span id="last-sync-time">从来没有</span></span></h3>
-                
+
                 <p>此功能可以存储所有的物品列表与设置到网站服务器。
-                    使用同一个<b>密钥</b>，这些数据可以在不同的设备间完成同步。 
+                    使用同一个<b>密钥</b>，这些数据可以在不同的设备间完成同步。
                     请妥善保存此密钥。如您没有提供密钥，我们将会自动生成一个新的。</p>
                 <p><b>上传并同步</b> 将会上传资料至服务器。
                     使用此密钥的其他设备上的数据将会被清除，

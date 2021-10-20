@@ -3017,7 +3017,7 @@ body .block.expanded .recipe .step .long-name.text {
     width: 0;
     height: 5px;
     position: relative;
-    margin-top: 16px;
+    margin-top: 22px;
     background-color: white;
     border-radius: 4px;
 }
@@ -3762,4 +3762,11 @@ body.touch .menu-closed .menu.tab .text {
 
 body.touch .midline {
     margin-top: 0;
+}
+
+@font-face {
+    font-family: 'FFXIV';
+    src: url('ext/FFXIV_Lodestone_SSF.ttf') format('truetype'),
+    url('ext/FFXIV_Lodestone_SSF.woff') format('woff');
+    unicode-range: U+E020-E0DB;
 }

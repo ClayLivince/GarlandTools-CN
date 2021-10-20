@@ -88,7 +88,20 @@ namespace Garland.Data
                                 var row = sheet[sheetKey];
                                 try
                                 {
+                                    if (genericElementArgs.Length < 3)
+                                    {
+                                        if (sheetName.Contains("Item") || sheetName.Contains("EObjName") || sheetName.Contains("BNpcName"))
+                                        {
+                                            return row[0].ToString();
+                                        }
+                                        else
+                                        {
+                                            Console.WriteLine("0");
+                                        }
+                                    }
+
                                     var rowIndex = int.Parse(genericElementArgs[2].Accept(this).Trim());
+
                                     return row[rowIndex].ToString();
                                 }
                                 catch (IndexOutOfRangeException)
@@ -296,6 +309,9 @@ namespace Garland.Data
                     return "<span class=\"" + GetColorClass(args[0].ToString()) + "\">";
 
                 case SaintCoinach.Text.TagType.Emphasis:
+                    return "<span class=\"emphasis\">";
+
+                case SaintCoinach.Text.TagType.Emphasis2:
                     return "<span class=\"emphasis\">";
 
                 default:

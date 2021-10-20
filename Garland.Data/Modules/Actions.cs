@@ -45,7 +45,7 @@ namespace Garland.Data.Modules
         {
             dynamic action = new JObject();
             action.id = sAction.Key;
-            _builder.Localize.Strings((JObject)action, sAction, iAction, "Name");
+            _builder.Localize.Strings((JObject)action, sAction, iAction, false, "Name");
             _builder.Localize.HtmlStrings((JObject)action, sAction.ActionTransient, iAction.ActionTransient, "Description");
             action.patch = PatchDatabase.Get("action", sAction.Key);
             action.category = sAction.ActionCategory.Key;

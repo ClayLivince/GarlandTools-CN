@@ -39,7 +39,7 @@ namespace Garland.Data
             };
         }
 
-        public void Strings(JObject obj, IXivRow row, IXivRow interRow, Func<XivString, string> transform, params string[] cols)
+        public void Strings(JObject obj, IXivRow row, IXivRow interRow, bool doTry, Func<XivString, string> transform, params string[] cols)
         {
             if (row != null) {
                 var currentLang = _data.ActiveLanguage;
@@ -56,14 +56,20 @@ namespace Garland.Data
                     {
                         object value;
 
-                        try
+                        if (doTry)
                         {
-                            if ("Name".Equals(col) && code.Equals("chs"))
-                                value = row["Singular"];
-                            else value = row[col];
+                            try
+                            {
+                                if ("Name".Equals(col) && code.Equals("chs"))
+                                    value = row["Singular"];
+                                else value = row[col];
+                            }
+                            catch (KeyNotFoundException)
+                            {
+                                value = row[col];
+                            }
                         }
-                        catch (KeyNotFoundException)
-                        {
+                        else { 
                             value = row[col];
                         }
 
@@ -102,14 +108,18 @@ namespace Garland.Data
             }    
         }
 
-        public void Strings(JObject obj, IXivRow row, Func<XivString, string> transform, params string[] cols)
-        {
-            Strings(obj, row, null, transform, cols);
+        public void Strings(JObject obj, IXivRow row, IXivRow interRow, Func<XivString, string> transform, params string[] cols) {
+            Strings(obj, row, interRow, true, transform, cols);
         }
 
         public void Strings(JObject obj, IXivRow row, IXivRow interRow, params string[] cols)
         {
             Strings(obj, row, interRow, null, cols);
+        }
+
+        public void Strings(JObject obj, IXivRow row, IXivRow interRow, bool doTry, params string[] cols)
+        {
+            Strings(obj, row, interRow, doTry, null, cols);
         }
 
         public void Strings(JObject obj, IXivRow row, params string[] cols)
