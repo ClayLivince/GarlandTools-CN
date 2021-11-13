@@ -1,7 +1,7 @@
 <?php
 
-$gtDbUsername = "keystore";
-$gtDbPassword = "configure-me";
-$gtDbName = "keystore";
+$gtDbUsername = "YourDBUserNameHere";
+$gtDbPassword = "YourDBPasswordHere";
+$gtDbName = "YourDBNameHere";
 
 ?>
