@@ -30,6 +30,7 @@ type gt.craft.js >> gt.js
 type gt.group.js >> gt.js
 type gt.map.js >> gt.js
 type gt.note.js >> gt.js
+type gt.tripletriad.js >> gt.js
 
 dir gt.js
 

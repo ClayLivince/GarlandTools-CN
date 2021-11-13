@@ -1,3 +1,29 @@
+gt.localize = {
+    localizeTemplate: null,
+
+
+    initialize: function(){
+        gt.localize.localizeTemplate = doT.template($('#page-localize-template').text());
+    },
+
+    localizationTemplate: function(localizeSet) {
+        return gt.localize.localizeTemplate(localizeSet);
+    },
+
+    extractLocalize: function(obj, view) {
+        // Localizations
+        if (obj.en) {
+            if (obj.en.name) {
+                view.localize = {};
+                view.localize.en = obj.en;
+                view.localize.ja = obj.ja;
+                view.localize.fr = obj.fr;
+                view.localize.de = obj.de;
+            }
+        }
+    },
+};
+
 gt.util = {
     abbrCache: {},
 
@@ -40,7 +66,7 @@ gt.util = {
         var parts = str.replace('(', '').split(' ');
         var result = _.map(parts, function(p) { return p[0]; }).join('');
         gt.util.abbrCache[str] = result;
-        return result;      
+        return result;
     },
 
     pushAll: function(src, dest) {
@@ -144,7 +170,7 @@ gt.util = {
         '`': '&#x60;',
         '=': '&#x3D;'
     },
-      
+
     escapeHtml: function(string) {
         return String(string).replace(/[&<>"'`=\/]/g, function (s) {
             return gt.util.htmlEntityMap[s];

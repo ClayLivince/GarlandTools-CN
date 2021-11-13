@@ -1,11 +1,11 @@
 gt.achievement = {
-    pluralName: 'Achievements',
+    pluralName: '成就',
     type: 'achievement',
     blockTemplate: null,
     index: {},
     partialIndex: {},
     categoryIndex: null,
-    missingCategory: { kind: 'Unknown', name: 'Unknown' },
+    missingCategory: { kind: '未知', name: '未知' },
     version: 2,
     browse: [
         { type: 'group', func: function(a) { return a.category.kind; } },
@@ -39,10 +39,12 @@ gt.achievement = {
             title: achievement.title
         };
 
+        gt.localize.extractLocalize(achievement, view);
+
         if (achievement.item)
             view.item = gt.model.partial(gt.item, achievement.item);
 
-        view.subheader = view.category.kind + ': ' + view.category.name + ' Achievement';
+        view.subheader = view.category.kind + ': ' + view.category.name + ' 成就';
 
         // Rewards summary.
         var rewards = [];
@@ -72,3 +74,4 @@ gt.achievement = {
         };
     }
 };
+

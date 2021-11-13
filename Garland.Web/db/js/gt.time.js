@@ -29,7 +29,7 @@ gt.time = {
         }
 
         if (settings.eorzeaTimeInTitle)
-            gt.time.ensureTimeUpdate();       
+            gt.time.ensureTimeUpdate();
     },
 
     getViewModel: function(id, data) {
@@ -41,11 +41,11 @@ gt.time = {
         return {
             id: id,
             type: 'time',
-            name: 'Eorzea Time',
+            name: '艾欧泽亚时间',
             template: gt.time.blockTemplate,
             blockClass: 'tool noexpand',
             icon: '../files/icons/moon/' + phase.moon + '.png',
-            subheader: 'Time Tool',
+            subheader: '时间',
             tool: 1,
 
             initialTime: gt.time.formatTime(eTime, gt.time.hoursMinutesUTC),
@@ -58,13 +58,13 @@ gt.time = {
     getTimePeriod: function(eTime) {
         var hours = eTime.getUTCHours();
         if (hours < 6)
-            return 'night';
+            return '夜间';
         else if (hours < 12)
-            return 'morning';
+            return '早晨';
         else if (hours < 18)
-            return 'day';
+            return '白天';
         else
-            return 'dusk';
+            return '黄昏';
     },
 
     ensureTimeUpdate: function() {
@@ -139,7 +139,7 @@ gt.time = {
     formatDateTime: function(date) {
         if (!date)
             return '(error)';
-        
+
         return date.toLocaleDateString(gt.time.languageCode, gt.time.monthDay) + ' ' + gt.time.formatTime(date);
     },
 

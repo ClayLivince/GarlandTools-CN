@@ -1,5 +1,5 @@
 gt.mob = {
-    pluralName: 'Mobs',
+    pluralName: 'Mob',
     type: 'mob',
     blockTemplate: null,
     index: {},
@@ -11,11 +11,11 @@ gt.mob = {
         gt.mob.blockTemplate = doT.template($('#block-mob-template').text());
         gt.mob.browse = [
             { type: 'group', func: function(m) {
-                if (m.lvl == '??')
-                    return 'Level ' + m.lvl;
-                else
-                    return gt.browse.transformLevelRangeCore(Number(m.lvl.split(' - ')[0]), 5);
-            } },
+                    if (m.lvl == '??')
+                        return 'Level ' + m.lvl;
+                    else
+                        return gt.browse.transformLevelRangeCore(Number(m.lvl.split(' - ')[0]), 5);
+                } },
             { type: 'group', prop: 'region' },
             { type: 'header', prop: 'location' },
             { type: 'sort', func: gt.browse.transformLevelAndName }
@@ -33,13 +33,15 @@ gt.mob = {
             name: mob.name,
             template: gt.mob.blockTemplate,
             icon: 'images/Mob.png',
-            subheader: 'Level ' + mob.lvl + ' Mob',
+            subheader: '等级 ' + mob.lvl + ' Mob',
             settings: 1,
             obj: mob,
 
             lvl: mob.lvl,
             quest: mob.quest
         };
+
+        gt.localize.extractLocalize(mob, view);
 
         if (mob.instance) {
             var instance = gt.model.partial(gt.instance, mob.instance);
@@ -49,7 +51,7 @@ gt.mob = {
             view.location_type = 'instance';
             view.location_id = instance.id;
             view.byline = view.location;
-            view.region = 'Instance';
+            view.region = '副本';
         } else {
             var location = gt.location.index[mob.zoneid];
             view.sourceName = view.name;
@@ -66,7 +68,7 @@ gt.mob = {
                 if (location.parentId)
                     view.region = gt.location.index[location.parentId].name;
                 else
-                    view.region = 'Instance';
+                    view.region = '副本';
 
                 if (mob.coords)
                     view.map = gt.map.getViewModel({ location: location, coords: mob.coords, icon: view.icon });
@@ -77,7 +79,7 @@ gt.mob = {
             if (mob.drops && mob.drops.length) {
                 view.drops = gt.model.partialList(gt.item, mob.drops);
                 view.drops = _.sortBy(view.drops, function(i) { return i.name; });
-                view.item_text = 'Drops ' + view.drops.length + ' item' + (view.drops.length > 1 ? 's' : '');
+                view.item_text = '掉落 ' + view.drops.length + ' 件物品';
             }
 
             if (mob.currency)
@@ -101,7 +103,7 @@ gt.mob = {
         if (partial.t) {
             view.byline = partial.t;
             view.location = partial.t;
-            view.region = 'Instance';
+            view.region = '副本';
             view.sourceName = view.name + ', ' + gt.util.abbr(partial.t);
             view.longSourceName = view.name + ', ' + partial.t;
         } else {
@@ -112,7 +114,7 @@ gt.mob = {
             if (location) {
                 view.byline += ', ' + location.name;
                 view.location = location.name;
-                view.region = location.parentId ? gt.location.index[location.parentId].name : 'Instance';
+                view.region = location.parentId ? gt.location.index[location.parentId].name : '副本';
                 view.sourceName += ', ' + gt.util.abbr(location.name);
                 view.longSourceName += ', ' + location.name;
             }
@@ -127,12 +129,12 @@ gt.mob = {
             var list = gt.model.partialList(gt.mob, step.item.drops);
             if (!list)
                 return;
-            
+
             mob = _.sortBy(list, function(m) { return (m.quest ? 'zzz' : '') + m.name; })[0];
         }
 
         step.sourceType = 'mob';
         step.sourceView = mob;
-        step.setCategory(['Mob', 'Other']);
+        step.setCategory(['怪物', '其他']);
     }
 };

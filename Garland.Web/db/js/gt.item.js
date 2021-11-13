@@ -1,6 +1,6 @@
 gt.item = {
     // Data
-    pluralName: 'Items',
+    pluralName: '物品',
     type: 'item',
     blockTemplate: null,
     halfLinkTemplate: null,
@@ -9,7 +9,7 @@ gt.item = {
     materiaSocketsTemplate: null,
     vendorLinkTemplate: null,
     categoryIndex: null,
-    equipSlotNames: [null, 'Main Hand', 'Off Hand', 'Head', 'Body', 'Hands', 'Waist', 'Legs', 'Feet', 'Ears', 'Neck', 'Wrists', 'Rings', 'Main Hand', 'Main Hand', null, null, 'Soul Crystal'],
+    equipSlotNames: [null, '主手', '副手', '头部', '身体', '手臂', '腰带', '腿部', '脚部', '耳部', '颈部', '腕部', '戒指', '主手', '主手', null, null, '灵魂水晶'],
     specialBonusIndex: null,
     seriesIndex: null,
     index: {},
@@ -17,21 +17,23 @@ gt.item = {
     ingredients: {},
     complexity: {},
     version: 3,
-    itemPrimeKeys: ['Defense', 'Magic Defense', 'Physical Damage', 'Magic Damage', 'Auto-attack', 'Delay', 'Block Rate', 'Block Strength'],
-    minionPrimeKeys: ['HP', 'Attack', 'Defense', 'Speed'],
+    itemPrimeKeys: ['物理防御力', '魔法防御力', '物理基本性能', '魔法基本性能', '物理自动攻击', '攻击间隔', '格挡发动力', '格挡性能'],
+    minionPrimeKeys: ['生命值', '攻击力', '防御力', '速度'],
+    //itemPrimeKeys: ['Defense', 'Magic Defense', 'Physical Damage', 'Magic Damage', 'Auto-attack', 'Delay', 'Block Rate', 'Block Strength'],
+    //minionPrimeKeys: ['HP', 'Attack', 'Defense', 'Speed'],
     mainAttributeKeys: { Strength: 1, Dexterity: 1, Vitality: 1, Intelligence: 1, Mind: 1 },
     baseParamAbbreviations: {
-        'Magic Damage': 'Damage',
-        'Physical Damage': 'Damage',
-        'Reduced Durability Loss': 'Red. Dur. Loss',
-        'Increased Spiritbond Gain': 'Inc. Spr. Gain',
-        'Careful Desynthesis': 'C. Desynthesis',
-        'Critical Hit Rate': 'Critical Rate'
+        //'魔法攻击力': '攻击力',
+        //'物理攻击力': '攻击力',
+        //'装备损耗耐性': '装备损耗耐性',
+        //'精炼度提升量': '精炼度提升量',
+        //'分解技能提升率': '分解技能提升率',
+        //'直击': '直击'
     },
     // TODO: materiaJoinRates comes from core data, only here temporarily until old cache is removed.
     materiaJoinRates: {"nq":[[90,48,28,16],[82,44,26,16],[70,38,22,14],[58,32,20,12],[17,10,7,5],[17,0,0,0],[17,10,7,5],[17,0,0,0],[100,100,100,100],[100,100,100,100]],"hq":[[80,40,20,10],[72,36,18,10],[60,30,16,8],[48,24,12,6],[12,6,3,2],[12,0,0,0],[12,6,3,2],[12,0,0,0],[100,100,100,100],[100,100,100,100]]},
     browse: [ { type: 'sort', prop: 'name' } ],
-    
+
     // Functions
     initialize: function(data) {
         gt.item.blockTemplate = doT.template($('#block-item-template').text());
@@ -77,7 +79,7 @@ gt.item = {
             template: gt.item.blockTemplate,
             icon: gt.item.iconPath(item.icon),
             iconBorder: 1,
-            subheader: 'Item Level ' + item.ilvl,
+            subheader: '物品等级 ' + item.ilvl,
             settings: 1,
 
             help: item.description,
@@ -120,6 +122,8 @@ gt.item = {
             return view;
 
         var itemSettings = gt.settings.getItem(item.id);
+
+        gt.localize.extractLocalize(item, view);
 
         // Repairs
         if (item.repair)
@@ -201,7 +205,7 @@ gt.item = {
         if (item.special) {
             var specialBonus = gt.item.specialBonusIndex[item.special.bonusId];
             view.special = {
-                name: specialBonus ? specialBonus.name : "Unknown Bonus",
+                name: specialBonus ? specialBonus.name : "未知属性",
                 isSet: item.special.bonusId == 2 || item.special.bonusId == 6,
                 attr: []
             };
@@ -213,12 +217,12 @@ gt.item = {
             }
 
             if (item.special.bonusParam && item.special.bonusId == 6)
-                view.special.condition = 'Active Under Lv. ' + item.special.bonusParam;
+                view.special.condition = item.special.bonusParam + "级以下时有效";
 
             for (var i = 0; i < item.special.attr.length; i++) {
                 var bonus = item.special.attr[i];
                 view.special.attr.push({
-                    prefix: view.special.isSet ? (bonus.index + 2 + ' Equipped:') : '',
+                    prefix: view.special.isSet ? (bonus.index + 2 + ' 已装备:') : '',
                     name: bonus.name,
                     value: bonus.value < 0 ? bonus.value : '+' + bonus.value
                 });
@@ -352,16 +356,16 @@ gt.item = {
             view.other = _.union(view.other, [gt.model.partial(gt.item, 'wondroustails')]);
 
         if (item.desynthedFrom && item.desynthedFrom.length)
-            view.other = _.union(view.other, gt.model.partialList(gt.item, item.desynthedFrom, function(v) { v.right = 'Desynthesis'; return v; }));
+            view.other = _.union(view.other, gt.model.partialList(gt.item, item.desynthedFrom, function(v) { v.right = '分解'; return v; }));
 
         if (item.achievements)
-            view.other = _.union(view.other, _.map(gt.model.partialList(gt.achievement, item.achievements), function(i) { return $.extend(i, {right: 'Achievement'}); }));
+            view.other = _.union(view.other, _.map(gt.model.partialList(gt.achievement, item.achievements), function(i) { return $.extend(i, {right: '成就'}); }));
 
         if (item.voyages)
-            view.other = _.union(view.other, _.map(item.voyages, function(s) { return { name: s, icon: 'images/Voyage.png', right: 'Voyage' }; }));
+            view.other = _.union(view.other, _.map(item.voyages, function(s) { return { name: s, icon: 'images/Voyage.png', right: '部队探险' }; }));
 
         if (item.treasure)
-            view.other = _.union(view.other, _.map(gt.model.partialList(gt.item, item.treasure), function(i) { return $.extend(i, {right: 'Loot'}); }));
+            view.other = _.union(view.other, _.map(gt.model.partialList(gt.item, item.treasure), function(i) { return $.extend(i, {right: '掉落'}); }));
 
         if (item.fates)
             view.other = _.union(view.other, gt.model.partialList(gt.fate, item.fates));
@@ -434,15 +438,15 @@ gt.item = {
             view.sourceType = itemSettings.sourceType;
             view.sourceId = itemSettings.sourceId;
         }
-        
+
         // Marketboard price
         if (itemSettings.marketPrice) {
             view.marketPrice = itemSettings.marketPrice;
 
             if (itemSettings.sourceType == 'market')
-                view.marketType = 'Buying';
+                view.marketType = '购买';
             else
-                view.marketType = 'Selling';
+                view.marketType = '卖出';
         }
 
         // Minion
@@ -487,7 +491,7 @@ gt.item = {
                     var group = null;
                     if (spot.bait || !spot.gig) {
                         group = _.find(view.fish.groups, function(g) { return _.isEqual(g.baitIds, spot.bait); });
-                        view.fish.predatorType = 'Predator';
+                        view.fish.predatorType = '捕鱼人之识';
                     }
                     else {
                         group = _.find(view.fish.groups, function(g) { return _.isEqual(g.gig, spot.gig); });
@@ -515,13 +519,13 @@ gt.item = {
                     view.fish.fishEyes = spot.fishEyes;
 
                     if (spot.hookset) {
-                        if (spot.hookset == "Powerful Hookset")
+                        if (spot.hookset == "强力提钩")
                             view.fish.hooksetIcon = 1115;
                         else
                             view.fish.hooksetIcon = 1116;
                     }
 
-                    if (spot.predator) 
+                    if (spot.predator)
                         view.fish.predator = gt.model.partialList(gt.item, spot.predator, function(v, p) { return { item: v, amount: p.amount }; });
 
                     // List spots beneath the group.
@@ -668,10 +672,10 @@ gt.item = {
         var keys = _.unique(_.union(_.keys(item.attr), _.keys(item.attr_hq), meldKeys)).sort();
         for (var i = 0; i < keys.length; i++) {
             var key = keys[i];
-            if (key == 'action' || key == 'Magic Damage' || key == 'Physical Damage' || key == 'Auto-attack')
+            if (key == 'action' || key == '魔法基本性能' || key == '物理基本性能' || key == '物理自动攻击')
                 continue; // Skip this bag, and mutually exclusive damage attributes.
 
-            if (minion && key == 'Speed')
+            if (minion && key == '速度')
                 continue; // Done later.
 
             // Calculate melds
@@ -721,22 +725,30 @@ gt.item = {
         }
 
         if (minion) {
-            var speed = gt.item.formatAttribute('Speed', item.attr, null, null, 0, primeKeys);
+            var speed = gt.item.formatAttribute('速度', item.attr, null, null, 0, primeKeys);
             speed.stars = 1;
             primes.push(speed);
+
         }
 
         var itemCategory = gt.item.categoryIndex[item.category];
-        if (itemCategory && (item.attr["Physical Damage"] || item.attr["Magic Damage"])) {
+        if (itemCategory && (item.attr["物理基本性能"] || item.attr["魔法基本性能"])) {
             var dmgKey = itemCategory.attr;
             primes.push(gt.item.formatAttribute(dmgKey, item.attr, item.attr_hq, item.attr_max, 0, primeKeys));
         }
 
-        if (item.attr["Physical Damage"]) {
-            item.attr["Auto-attack"] = gt.item.calculateAutoAttack(item.attr["Physical Damage"], item.attr.Delay);
+        if (item.attr["物理基本性能"]) {
+            item.attr["物理自动攻击"] = gt.item.calculateAutoAttack(item.attr["物理基本性能"], item.attr["攻击间隔"]);
             if (item.attr_hq)
-                item.attr_hq["Auto-attack"] = gt.item.calculateAutoAttack(item.attr_hq["Physical Damage"], item.attr.Delay);
-            primes.push(gt.item.formatAttribute('Auto-attack', item.attr, item.attr_hq, item.attr_max, 0, primeKeys));
+                item.attr_hq["物理自动攻击"] = gt.item.calculateAutoAttack(item.attr_hq["物理基本性能"], item.attr["攻击间隔"]);
+            primes.push(gt.item.formatAttribute('物理自动攻击', item.attr, item.attr_hq, item.attr_max, 0, primeKeys));
+        }
+
+        if (item.attr["魔法基本性能"]) {
+            item.attr["物理自动攻击"] = gt.item.calculateAutoAttack(item.attr["魔法基本性能"], item.attr["攻击间隔"]);
+            if (item.attr_hq)
+                item.attr_hq["物理自动攻击"] = gt.item.calculateAutoAttack(item.attr_hq["魔法基本性能"], item.attr["攻击间隔"]);
+            primes.push(gt.item.formatAttribute('物理自动攻击', item.attr, item.attr_hq, item.attr_max, 0, primeKeys));
         }
 
         bonuses = _.sortBy(bonuses, function(b) { return b.sort; });
@@ -771,7 +783,7 @@ gt.item = {
         var itemSettings = gt.settings.getItem(data.id);
         itemSettings.recipe = parseInt($this.val());
         gt.settings.setItem(data.id, itemSettings);
-        
+
         gt.core.redisplay($block);
         gt.item.redisplayUses(data.id);
     },
@@ -996,7 +1008,7 @@ gt.item = {
 
     newGroupClicked: function(e) {
         var $block = $(this).closest('.block');
-        gt.group.setup('Crafting List', $block, function(groupData) {
+        gt.group.setup('收集列表', $block, function(groupData) {
             var blockData = $.extend({}, $block.data('block'));
             gt.group.insertGroupCore(blockData, groupData);
         });
@@ -1027,7 +1039,7 @@ gt.item = {
         var gcTrade = gt.item.findTrade(item.tradeShops, function(tradeItem, type) {
             return type == 'currency' && (tradeItem.id == 20 || tradeItem.id == 21 || tradeItem.id == 22);
         });
-        
+
         if (gcTrade)
             return gcTrade;
 
@@ -1065,7 +1077,7 @@ gt.item = {
     setBlockExpansion: function($block, data) {
         // This function may be called for a group too.  No worries.
         var isExpanded = false;
-        
+
         if (data.craftAmount)
             isExpanded = true;
         else if (data.activePage == 'models-page')
@@ -1091,7 +1103,7 @@ gt.item = {
         if (!isViewerInjected) {
             var $modelViewers = $('iframe.model-viewer');
             if ($modelViewers.length > 2) {
-                var html = '<p>Model viewer limit reached.  Please close one and try again.</p>';
+                var html = '<p>模型预览器的数量达到了上限，请关掉一些后再试。</p>';
                 $page.empty().append($(html));
                 return;
             }

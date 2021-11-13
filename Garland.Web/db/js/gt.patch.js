@@ -1,6 +1,6 @@
 gt.patch = {
     current: null,
-    pluralName: 'Patches',
+    pluralName: '版本',
     type: 'patch',
     index: {},
     partialIndex: {},
@@ -73,7 +73,7 @@ gt.patch = {
             name: '[' + obj.id + '] ' + obj.name,
             template: gt.browse.blockTemplate,
             blockClass: 'tool browse expand-right',
-            subheader: obj.series + ' Patch',
+            subheader: obj.series + ' 版本',
             tool: 1,
             settings: 1,
 
@@ -92,7 +92,7 @@ gt.patch = {
     },
 
     fillPatchGroups: function(obj) {
-        var groupMap = {};  
+        var groupMap = {};
         var rootEntries = gt.browse.groupCategory(_.values(obj.data), gt.patch.majorPatchBrowse, 0, 'root', groupMap);
 
         var processEntry = function(e, index, getViewModel, categoryFunc) {

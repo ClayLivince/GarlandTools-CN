@@ -18,15 +18,15 @@ gt.browse = {
             sortByNatural: function(obj, value, context) {
                 var iterator = _.isFunction(value) ? value : function(obj){ return obj[value]; };
                 return _.pluck(_.map(obj, function(value, index, list) {
-                return {
-                    value: value,
-                    index: index,
-                    criteria: iterator.call(context, value, index, list)
-                };
+                    return {
+                        value: value,
+                        index: index,
+                        criteria: iterator.call(context, value, index, list)
+                    };
                 }).sort(function(left, right) {
-                var a = left.criteria;
-                var b = right.criteria;
-                return naturalSort(a, b);
+                    var a = left.criteria;
+                    var b = right.criteria;
+                    return naturalSort(a, b);
                 }), 'value');
             }
         });
@@ -74,7 +74,7 @@ gt.browse = {
             name: module.pluralName,
             template: gt.browse.blockTemplate,
             blockClass: 'tool expand-right',
-            subheader: 'Browse Tool',
+            subheader: '工具',
             tool: 1,
             settings: 1,
 
@@ -190,11 +190,11 @@ gt.browse = {
         // Transform into level ranges e.g. 1-4, 5-9, 10-14, etc.
         var low = Math.floor(lvl / step) * step;
         var high = low + step - 1;
-        return 'Level ' + Math.max(1, low) + '-' + high;
+        return '等级 ' + Math.max(1, low) + '-' + high;
     },
 
     transformLevel: function(view) {
-        return 'Level ' + view.lvl;
+        return '等级 ' + view.lvl;
     },
 
     transformLevelAndName: function(view) {

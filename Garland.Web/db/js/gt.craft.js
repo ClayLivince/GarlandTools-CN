@@ -252,7 +252,7 @@ gt.craft = {
             // Block may have disappeared.
             if (!$.contains(document, $block[0]))
                 return;
-            
+
             var $newblock = gt.core.redisplay($block);
 
             // Change focus if applicable.
@@ -446,7 +446,7 @@ gt.craft.set.prototype.removeItem = function(ingredient, amount) {
     var self = this;
     step.eachIngredient(function(subIngredient) {
         self.removeItem(subIngredient, subIngredient.amount * newExcessAmount);
-    }); 
+    });
 };
 
 gt.craft.set.prototype.addResult = function(item, amount, skipReadyCheck) {
@@ -532,7 +532,7 @@ gt.craft.set.prototype.export = function() {
     });
 
 
-    return "Item,Amount,Type,Source\r\n" + lines.join("\r\n");
+    return "物品,数量,类型,来源\r\n" + lines.join("\r\n");
 };
 
 gt.craft.set.prototype.print = function() {
@@ -542,11 +542,11 @@ gt.craft.set.prototype.print = function() {
 
     var gatherSteps = _.filter(this.steps, function(s) { return s.type == 'gathered'; });
     if (gatherSteps.length)
-        parts.push('Gather: ' + _.map(gatherSteps, print).join(', '));
+        parts.push('采集: ' + _.map(gatherSteps, print).join(', '));
 
     var craftSteps = _.filter(this.steps, function(s) { return s.type == 'craft'; });
     if (craftSteps.length)
-        parts.push('Craft: ' + _.map(craftSteps, print).join(', '));
+        parts.push('制作: ' + _.map(craftSteps, print).join(', '));
 
     var crystalSteps = _.filter(this.steps, function(s) { return s.type == 'crystal'; });
     if (crystalSteps.length)
@@ -705,9 +705,9 @@ gt.craft.step.prototype.discoverSource = function(itemSettings) {
         const partialList = gt.model.partialList(gt.item, this.item.reducedFrom);
         const reduceItem = partialList && partialList[0] || { name: '???' };
         this.sourceType = 'reduction';
-        this.source = { sourceName: reduceItem.name, longSourceName: reduceItem.name + ' Aetherial Reduction', icon: 'images/Reduce.png' };
+        this.source = { sourceName: reduceItem.name, longSourceName: reduceItem.name + ' 精选', icon: 'images/Reduce.png' };
         this.sourceView = this.source;
-        this.setCategory(['Desynthesis / Reduction', 'Gather']);
+        this.setCategory(['分解/精选', '采集']);
         return;
     }
 
@@ -735,22 +735,22 @@ gt.craft.step.prototype.discoverSource = function(itemSettings) {
         this.source = { sourceName: this.item.voyages[0], icon: 'images/Voyage.png' };
         this.source.longSourceName = this.source.sourceName;
         this.sourceView = this.source;
-        this.setCategory(['Voyage', 'Other']);
+        this.setCategory(['部队探险', '其他']);
         return;
     }
 
     if (this.item.desynthedFrom) {
         this.sourceType = 'desynthesis';
-        this.source = { sourceName: 'Desynthesis', longSourceName: 'Desynthesis', icon: 'images/Desynth.png' };
+        this.source = { sourceName: '分解', longSourceName: '分解', icon: 'images/Desynth.png' };
         this.sourceView = this.source;
-        this.setCategory(['Desynthesis / Reduction', 'Other']);
+        this.setCategory(['分解/精选', '其他']);
         return;
     }
 
     if (this.item.treasure) {
         this.sourceType = 'map';
         this.sourceView = gt.model.partial(gt.item, this.item.treasure[0]);
-        this.setCategory(['Treasure Map', 'Other']);
+        this.setCategory(['藏宝图', '其他']);
         return;
     }
 
@@ -766,7 +766,7 @@ gt.craft.step.prototype.discoverSource = function(itemSettings) {
     }
 
     //console.log('No source found for item', this.item);
-    this.setCategory(['Unknown']);
+    this.setCategory(['未知']);
 };
 
 gt.craft.step.prototype.setTradeSource = function(traderId) {
@@ -792,7 +792,7 @@ gt.craft.step.prototype.setTradeSource = function(traderId) {
     this.sourceView = view;
     this.sourceType = 'trade';
     this.price = { currency: currencyId, cost: view.amount, totalCost: view.amount, yield: trade.item[0].amount };
-    this.setCategory(['Currency Vendor', 'Vendor']);
+    this.setCategory(['货币商人', '商人']);
 
     return view;
 };
@@ -804,7 +804,7 @@ gt.craft.step.prototype.setCraftSource = function(itemSettings) {
     if (!this.craft)
         this.craft = this.item.craft[0];
 
-    this.setCategory(['Craft']);
+    this.setCategory(['制作']);
 };
 
 gt.craft.step.prototype.setMarketSource = function(itemSettings) {
@@ -820,7 +820,7 @@ gt.craft.step.prototype.setMarketSource = function(itemSettings) {
     this.sourceView = view;
     this.sourceType = 'market';
     this.price = { currency: 1, cost: view.amount, totalCost: view.amount, yield: 1 };
-    this.setCategory(['Marketboard']);
+    this.setCategory(['市场交易板']);
 
     return view;
 };
@@ -828,14 +828,14 @@ gt.craft.step.prototype.setMarketSource = function(itemSettings) {
 gt.craft.step.prototype.setCategory = function(categories) {
     // Handle special goal items.
     if (this.isGoal) {
-        this.category = 'Goal';
+        this.category = '目标';
         this.type = 'goal';
         return;
     }
 
     // Handle special craft items.
     if (this.craft) {
-        this.category = 'Craft';
+        this.category = '制作';
         this.type = 'craft';
         return;
     }
@@ -851,7 +851,7 @@ gt.craft.step.prototype.setCategory = function(categories) {
     }
 
     // No category found, fallback to standard Gather.
-    this.category = 'Gather';
+    this.category = '采集';
     this.type = 'gathered';
 };
 

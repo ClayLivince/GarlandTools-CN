@@ -311,9 +311,6 @@ namespace Garland.Data
                 case SaintCoinach.Text.TagType.Emphasis:
                     return "<span class=\"emphasis\">";
 
-                case SaintCoinach.Text.TagType.Emphasis2:
-                    return "<span class=\"emphasis\">";
-
                 default:
                    
                     //throw new NotImplementedException();

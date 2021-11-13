@@ -3,7 +3,7 @@ gt.action = {
     partialIndex: {},
     categoryIndex: {},
     blockTemplate: null,
-    pluralName: 'Actions',
+    pluralName: '技能',
     type: 'action',
     version: 2,
     browse: [
@@ -39,16 +39,17 @@ gt.action = {
             icon: '../files/icons/action/' + action.icon + '.png',
             iconBorder: 1,
             obj: action,
-            
+
             desc: action.description || "",
-            affinity: affinity ? affinity.name : "Other",
-            category: category ? category.name : "Uncategorized",
+            affinity: affinity ? affinity.name : "其他",
+            category: category ? category.name : "未分类",
             lvl: action.lvl,
             cost: action.cost,
             pet: action.pet
         };
+        gt.localize.extractLocalize(action, view);
 
-        var job = gt.jobs[action.job] || { name: view.category, category: "Other" };
+        var job = gt.jobs[action.job] || { name: view.category, category: "其他" };
 
         view.job = job.name;
         view.jobCategory = job.category;
@@ -56,46 +57,46 @@ gt.action = {
         view.byline = view.job + ' ' + view.category;
         if (view.lvl)
             view.byline = 'Lv. ' + action.lvl + ' ' + view.byline;
-        view.subheader = view.job + (action.lvl ? (' Lv. ' + action.lvl) : '') + ' Action';
+        view.subheader = view.job + (action.lvl ? (' Lv. ' + action.lvl) : '') + ' 技能';
 
         if (!data)
             return view;
 
         // Range
         if (action.size)
-            view.size = action.size + 'y';
+            view.size = action.size + '米';
 
         // Non-trait values
         if (view.category != 'Trait') {
             if (action.range == -1)
-                view.range = 'Melee';
+                view.range = '0米';
             else if (action.range !== undefined)
-                view.range = action.range + 'y';
+                view.range = action.range + '米';
 
             view.cast = {
-                name: 'Cast',
+                name: '咏唱时间',
                 prime: true,
-                value: action.cast ? (action.cast / 1000) + 's' : 'Instant'
+                value: action.cast ? (action.cast / 1000) + '秒' : '即时'
             };
 
             view.recast = {
-                name: 'Recast',
+                name: '复唱时间',
                 prime: true,
-                value: action.recast ? (action.recast / 1000) + 's' : 'Instant'
+                value: action.recast ? (action.recast / 1000) + '秒' : '即时'
             };
         }
 
         if (action.resource) {
             view.cost = {
                 prime: true,
-                name: action.resource + ' Cost',
+                name: action.resource + ' 消耗',
                 value: action.cost
             };
 
             if (action.resource == 'Status') {
                 var status = gt.action.getStatusViewModel(action.cost);
                 view.cost.status = '../files/icons/status/' + status.icon + '.png';
-                view.cost.name = 'Status';
+                view.cost.name = '状态中';
             }
         }
 
@@ -121,8 +122,8 @@ gt.action = {
             view.traits = gt.model.partialList(gt.action, traits);
 
         // Cooldown
-        if (view.category == 'Weaponskill' || view.category == 'Ability' || view.category == 'Spell')
-            view.gcd = action.gcd ? 'GCD' : 'Off GCD';
+        if (view.category == '战技' || view.category == '能力' || view.category == '魔法')
+            view.gcd = action.gcd ? '占用GCD' : '不占用GCD';
 
         return view;
     },
@@ -139,15 +140,15 @@ gt.action = {
             name: gt.model.name(partial) || "",
             icon: '../files/icons/action/' + partial.c + '.png',
             lvl: partial.l,
-            category: category ? category.name : "Uncategorized"
+            category: category ? category.name : "未分类"
         };
 
-        var job = gt.jobs[partial.j] || { name: view.category, category: "Other" };
+        var job = gt.jobs[partial.j] || { name: view.category, category: "其他" };
         view.job = job.name;
         view.jobCategory = job.category;
 
         if (job.name == view.category)
-            view.byline = "Other " + view.category;
+            view.byline = "其他 " + view.category;
         else
             view.byline = job.name + ' ' + view.category;
 
@@ -167,3 +168,4 @@ gt.action = {
         };
     }
 };
+

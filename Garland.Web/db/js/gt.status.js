@@ -1,9 +1,9 @@
 gt.status = {
     index: {},
     partialIndex: {},
-    categoryIndex: { 1: 'Beneficial', 2: 'Detrimental' },
+    categoryIndex: { 1: '增益效果', 2: '减益效果' },
     blockTemplate: null,
-    pluralName: 'Status Effects',
+    pluralName: '状态与Buff',
     type: 'Status',
     version: 2,
     browse: [
@@ -37,11 +37,13 @@ gt.status = {
             icon: '../files/icons/status/' + status.icon + '.png',
             iconBorder: 0,
             obj: status,
-            
+
             desc: status.description || "",
-            category: category ? category : "Uncategorized",
+            category: category ? category : "未分类",
             canDispel: status.canDispel
         };
+
+        gt.localize.extractLocalize(status, view);
 
         view.subheader = view.category + ' Status Effect';
 
@@ -59,7 +61,7 @@ gt.status = {
             type: 'status',
             name: gt.model.name(partial) || "",
             icon: '../files/icons/status/' + partial.c + '.png',
-            category: category ? category : "Uncategorized"
+            category: category ? category : "未分类"
         };
 
         view.byline = view.category;
@@ -67,3 +69,4 @@ gt.status = {
         return view;
     },
 };
+

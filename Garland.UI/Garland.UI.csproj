@@ -176,14 +176,6 @@
       <Project>{f367f606-0294-4302-9410-d1e9ec9a7c9f}</Project>
       <Name>Garland.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\lib\SaintCoinach\DotSquish\DotSquish.csproj">
-      <Project>{f9681545-4bea-4fd3-9ab9-a67bd37ab36d}</Project>
-      <Name>DotSquish</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\lib\SaintCoinach\YamlDotNet\YamlDotNet.csproj">
-      <Project>{bf32de1b-6276-4341-b212-f8862adbba7a}</Project>
-      <Name>YamlDotNet</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="sqlite3.dll">

@@ -1,5 +1,5 @@
 gt.quest = {
-    pluralName: 'Quests',
+    pluralName: '任务',
     type: 'quest',
     blockTemplate: null,
     linkTemplate: null,
@@ -37,7 +37,7 @@ gt.quest = {
             template: gt.quest.blockTemplate,
             settings: 1,
             icon: '../files/icons/event/' + quest.eventIcon + '.png',
-            
+
             genreIcon: gt.quest.getGenreIcon(quest.genre),
             interval: quest.interval ? gt.util.pascalCase(quest.interval) : null,
             issuer: quest.issuer ? gt.model.partial(gt.npc, quest.issuer) : null,
@@ -48,8 +48,10 @@ gt.quest = {
             location: quest.location
         };
 
+        gt.localize.extractLocalize(quest, view);
+
         var genre = gt.quest.genreIndex[quest.genre];
-        view.genre = genre.name || "Adventurer Quests";
+        view.genre = genre.name || "冒险者任务";
         view.category = genre.category;
         view.section = genre.section;
         view.subheader = (view.interval ? (view.interval + ' ') : '') +  view.section;
@@ -158,7 +160,7 @@ gt.quest = {
                     var speakerNpc = gt.model.partial(gt.npc, talk.npcid);
                     if (!speakerNpc)
                         continue;
-                    
+
                     view.talk.push({ type: 'speaker', npc: speakerNpc, text: talk.name });
                     for (var ii = 0; ii < talk.lines.length; ii++)
                         view.talk.push({ type: 'dialogue-line', text: talk.lines[ii] });
@@ -180,7 +182,7 @@ gt.quest = {
         };
 
         var genre = gt.quest.genreIndex[partial.g];
-        view.genre = genre.name || "Adventurer Quests";
+        view.genre = genre.name || "冒险者任务";
         view.category = genre.category;
         view.section = genre.section;
         view.byline = view.location;
@@ -211,3 +213,4 @@ gt.quest = {
         return '../files/icons/journal/61411.png';
     }
 };
+

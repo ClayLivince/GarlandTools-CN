@@ -117,6 +117,10 @@ namespace Garland.Data
         public List<dynamic> NodeViews = new List<dynamic>();
         public List<dynamic> Fish = new List<dynamic>();
 
+        // For Additional tools write things:
+        public Dictionary<int, dynamic> CardItemByCardId = new Dictionary<int, dynamic>();
+        public List<dynamic> CardNpcs = new List<dynamic>();
+
         #region Singleton
         private GarlandDatabase() { }
 

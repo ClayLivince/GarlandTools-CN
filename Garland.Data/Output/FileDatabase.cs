@@ -54,8 +54,9 @@ namespace Garland.Data.Output
         {
             // Hashes are not used for local filesystem files.
             var fullPath = Config.BasePath + relativePath;
-            if (File.ReadAllText(fullPath) == contents)
-                return;
+            if (File.Exists(fullPath))
+                if (File.ReadAllText(fullPath) == contents)
+                    return;
 
             DatabaseBuilder.PrintLine($"Writing {fullPath}");
             File.WriteAllText(fullPath, contents, Encoding.UTF8);

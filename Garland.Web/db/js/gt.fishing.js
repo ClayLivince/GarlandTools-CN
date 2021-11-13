@@ -1,11 +1,11 @@
 gt.fishing = {
-    pluralName: 'Fishing Spots',
+    pluralName: '鱼池',
     type: 'fishing',
     blockTemplate: null,
     index: {},
     version: 2,
     partialIndex: {},
-    categories: ['Ocean Fishing', 'Freshwater Fishing', 'Dunefishing', 'Skyfishing', 'Cloudfishing', 'Hellfishing', 'Aetherfishing', 'Saltfishing'],
+    categories: ['海洋垂钓', '淡水垂钓', '沙海垂钓', '浮岛垂钓', '云海垂钓', '熔岩垂钓', '魔泉垂钓', '盐湖垂钓'],
     browse: [
         { type: 'group', prop: 'region' },
         { type: 'group', prop: 'location' },
@@ -38,7 +38,9 @@ gt.fishing = {
             browseIcon: 'images/FSH.png'
         };
 
-        var zoneName = view.zone ? view.zone.name : "The Diadem";
+        gt.localize.extractLocalize(spot, view);
+
+        var zoneName = view.zone ? view.zone.name : "云冠群岛";
 
         // Location and source
         view.sourceName = gt.util.abbr(zoneName) + ', Lv. ' + view.lvl;
@@ -48,7 +50,7 @@ gt.fishing = {
         if (region)
             view.region = region.name;
         else
-            view.region = "Unknown";
+            view.region = "出海垂钓";
 
         if (data) {
             view.items = gt.model.partialList(gt.item, spot.items, function(v, i) { return { item: v, lvl: i.lvl }; });
@@ -61,7 +63,7 @@ gt.fishing = {
             }
         }
 
-        view.subheader = 'Level ' + view.lvl + ' ' + view.category;
+        view.subheader = '等级 ' + view.lvl + ' ' + view.category;
         view.byline = view.subheader;
 
         return view;
@@ -70,7 +72,7 @@ gt.fishing = {
     getPartialViewModel: function(partial) {
         var name = gt.model.name(partial);
         var zone = partial.z ? gt.location.index[partial.z] : null;
-        var zoneName = zone ? zone.name : "The Diadem";
+        var zoneName = zone ? zone.name : "云冠群岛";
         var region = zone ? gt.location.index[zone.parentId] : null;
 
         return {
@@ -79,8 +81,8 @@ gt.fishing = {
             name: name,
             sourceName: gt.util.abbr(zoneName) + ', Lv. ' + partial.l,
             longSourceName: zoneName + ', Lv. ' + partial.l,
-            byline: 'Level ' + partial.l + ' ' + gt.fishing.categories[partial.c],
-            region: region ? region.name : "Unknown",
+            byline: '等级 ' + partial.l + ' ' + gt.fishing.categories[partial.c],
+            region: region ? region.name : "出海垂钓",
             location: zoneName,
             icon: 'images/FSH.png',
             lvl: partial.l
@@ -90,6 +92,7 @@ gt.fishing = {
     resolveCraftSource: function(step, id) {
         step.sourceType = 'fishing';
         step.sourceView = gt.model.partial(gt.fishing, id || step.item.fishingSpots[0]);
-        step.setCategory(['Fishing', 'Gathering']);
+        step.setCategory(['钓鱼', '采集']);
     }
 };
+

@@ -23,8 +23,8 @@ gt.settings = {
         filtersOpen: 0,
         globalSearch: { activePage: '_none', 'filters-menu': { activePage: '_none' } },
         header: { activePage: '_none' },
-        current: 'Default',
-        lists: { Default: [] },
+        current: '默认',
+        lists: { 默认: [] },
         path: '',
         items: { },
         craftDepth: 10,
@@ -45,7 +45,9 @@ gt.settings = {
         botanyVentures: 0,
         fisherVentures: 0,
         combatVentures: 0,
-        isearchOnActivate: 0
+        isearchOnActivate: 0,
+        collectedCards: {},
+        playedCardNpcs: {},
     },
 
     getItem: function(id) {
@@ -102,13 +104,13 @@ gt.settings = {
             data = gt.settings.data;
 
         if (!data.lists)
-            data.lists = { Default: [] };
+            data.lists = { 默认: [] };
 
         if (!data.current || !data.lists[data.current]) {
             data.current = _.keys(data.lists)[0];
             if (!data.current || !data.lists[data.current]) {
-                data.current = "Default";
-                data.lists = { Default: [] };
+                data.current = "默认";
+                data.lists = { 默认: [] };
             }
         }
 
@@ -134,7 +136,7 @@ gt.settings = {
             data.alarmVolume = 50;
 
         if (data.alarmTone === undefined)
-            data.alarmTone = 'alarm1';
+            data.alarmTone = '铃声1';
 
         if (data.notifications === undefined)
             data.notifications = 1;
@@ -144,9 +146,15 @@ gt.settings = {
 
         if (!data.lang)
             data.lang = 'chs';
-            
+
         if (!data.craftCategories)
             data.craftCategories = { Vendor: 1, Other: 1 };
+
+        if (!data.collectedCards)
+            data.collectedCards = {};
+
+        if (!data.playedCardNpcs)
+            data.playedCardNpcs = {};
 
         gt.settings.bindEvents(data);
 
@@ -231,7 +239,7 @@ gt.settings = {
 
         $('.language-flag').click(gt.settings.languageFlagClicked);
         $('.language-flag.' + data.lang).addClass('visible');
-        
+
         $('.settings-page .craft-category')
             .change(gt.settings.craftCategoryChanged);
 
@@ -342,7 +350,7 @@ gt.settings = {
         var $this = $(this);
         var value = $this.is(':checked');
         var category = $this.data('category');
-        
+
         var craftCategories = gt.settings.data.craftCategories;
         if (craftCategories[category])
             delete craftCategories[category];
@@ -411,7 +419,7 @@ gt.settings = {
             gt.display.alertp('Account Key must be 10 characters or blank.');
             return;
         }
-        
+
         $('.sync-page').addClass('enabled');
         gt.settings.saveClean({ syncEnabled: 1 });
         gt.settings.dirty = true;
@@ -431,7 +439,7 @@ gt.settings = {
     startSync: function(time) {
         if (gt.settings.syncKey)
             clearTimeout(gt.settings.syncKey);
-        
+
         gt.settings.syncKey = setTimeout(gt.settings.sync, time);
     },
 

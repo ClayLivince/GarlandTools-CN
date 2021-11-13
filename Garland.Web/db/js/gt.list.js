@@ -7,26 +7,26 @@ gt.list = {
     specialIcons: {
         DOL: 'DOL', GATHER: 'DOL', GATHERING: 'DOL', GATHERER: 'DOL',
         DOH: 'DOH', CRAFT: 'DOH', CRAFTING: 'DOH', CRAFTER: 'DOH',
-    
+
         SCRIP: 'images/Rowena.png', SCRIPS: 'images/Rowena.png',
         'RED SCRIP': '../files/icons/item/65031.png', 'RED SCRIPS': '../files/icons/item/65031.png',
         'YELLOW SCRIP': '../files/icons/item/65044.png',
-    
+
         GLAMOUR: '../files/icons/item/28010.png', GLAM: '../files/icons/item/28010.png', FASHION: '../files/icons/item/28010.png',
-    
+
         SPIRITBOND: 'images/Convert.png', SPIRITBONDING: 'images/Convert.png',
-    
+
         VOYAGE: 'images/Voyage.png', VOYAGES: 'images/Voyage.png',
         AIRSHIP: 'images/Voyage.png', AIRSHIPS: 'images/Voyage.png',
         SUB: 'images/Voyage.png', SUBS: 'images/Voyage.png',
         SUBMARINE: 'images/Voyage.png', SUBMARINES: 'images/Voyage.png',
-    
+
         HOUSE: 'images/House.png', HOUSING: 'images/House.png',
         MANSION: 'images/House.png', COTTAGE: 'images/House.png',
         APARTMENT: 'images/House.png',
         DECORATION: 'images/House.png', DECORATIONS: 'images/House.png',
         FURNISHING: 'images/House.png', FURNISHINGS: 'images/House.png',
-    
+
         PATCH: 'LatestPatch',
         DAILY: '../files/icons/event/71222.png', DAILIES: '../files/icons/event/71222.png',
         QUEST: '../files/icons/event/71221.png', QUESTS: '../files/icons/event/71221.png',
@@ -305,32 +305,32 @@ gt.list = {
     },
 
     newListClicked: function(e) {
-        gt.display.promptp("Name the new list:", null, function(name) {
+        gt.display.promptp("取个名字叭:", null, function(name) {
             if (!name)
                 return;
-    
+
             gt.settings.data.lists[name] = [];
             gt.list.switchToList(name);
-            gt.core.setHash(null);    
+            gt.core.setHash(null);
         });
     },
 
     deleteListClicked: function(e) {
         var listName = gt.settings.data.current;
-        if (gt.settings.data.lists[listName].length && !confirm('Are you sure you want to delete the "' + listName + '" list?'))
+        if (gt.settings.data.lists[listName].length && !confirm('你确定要删除 "' + listName + '" 吗？'))
             return;
 
         // Remove the list.
         delete gt.settings.data.lists[listName];
 
         if (gt.settings.data.listData)
-          delete gt.settings.data.listData[listName];
+            delete gt.settings.data.listData[listName];
 
         // Create a new default list if needed.
         var keys = _.keys(gt.settings.data.lists);
         if (keys.length == 0) {
-            gt.settings.data.lists = { Default: [] };
-            listName = 'Default';
+            gt.settings.data.lists = { 默认: [] };
+            listName = '默认';
         }
         else
             listName = keys[0];
@@ -361,17 +361,17 @@ gt.list = {
 
     shareClicked: function(e) {
         var listName = gt.settings.data.current;
-        if (listName == "Default" || listName == "Links") {
-            gt.display.alertp("Please rename your list to share.");
+        if (listName == "默认" || listName == "Links") {
+            gt.display.alertp("初始表格无法分享，请更名后再分享。");
             return;
         }
-        
+
         var data = { method: 'list-share', name: listName, list: JSON.stringify(gt.list.current) };
         gt.util.api(data, function(result, error) {
             if (error)
-                gt.display.alertp("Share error: " + error);
+                gt.display.alertp("分享出错……: " + error);
             else
-                gt.display.alertp("Copy share link:<br>" + "https://garlandtools.org/db/#list/" + result.id);
+                gt.display.alertp("复制分享链接:<br>" + "https://ffxiv.cyanclay.xyz/db/#list/" + result.id);
         });
     },
 
@@ -575,3 +575,4 @@ gt.list = {
         });
     }
 };
+

@@ -21,7 +21,7 @@ namespace Garland.Data.Output
         ConcurrentDictionary<dynamic, dynamic> _ingredientsByItem = new ConcurrentDictionary<dynamic, dynamic>();
         readonly static JsonConverter[] _converters = new[] { new WrapperConverter() };
         readonly static string[] _languagesCodes = new[] { "chs" };
-        readonly static string[] _searchLangCodes = new[] { "en", "jp", "de", "fr", "chs" };
+        readonly static string[] _searchLangCodes = new[] { "en", "ja", "de", "fr", "chs" };
 
         public JsOutput(UpdatePackage update)
         {
@@ -57,6 +57,9 @@ namespace Garland.Data.Output
 
                 PatchDatabase.WritePatchLists(this, _update, lang);
             }
+
+            // Supplemental writes for tools
+            WriteTripleTriads();
 
             PatchDatabase.WriteMasterPatchList();
         }
@@ -624,6 +627,61 @@ namespace Garland.Data.Output
             _update.IncludeDocument("fishing", "browse", lang, 2, wrap(_partialsByLangTypeById[Tuple.Create(lang, "fishing")].Values));
             _update.IncludeDocument("node", "browse", lang, 2, wrap(_partialsByLangTypeById[Tuple.Create(lang, "node")].Values));
             _update.IncludeDocument("status", "browse", lang, 2, wrap(_partialsByLangTypeById[Tuple.Create(lang, "status")].Values));
+        }
+
+        void WriteTripleTriads()
+        {
+            Dictionary<int, dynamic> wrappers = new Dictionary<int, dynamic>();
+            Dictionary<int, dynamic> wrappersExtraCards = new Dictionary<int,  dynamic>();
+            foreach (int id in _db.CardItemByCardId.Keys)
+            {
+                // do card extraction here. we only want to keep what we need.
+                // Be sure to change the name replace and language code here.
+                var tmpCard = new JObject(_db.CardItemByCardId[id]);
+
+                dynamic chs = tmpCard["chs"];
+                tmpCard.Remove("chs");
+                tmpCard.Remove("en");
+                tmpCard.Remove("de");
+                tmpCard.Remove("ja");
+                tmpCard.Remove("fr");
+                tmpCard.Remove("rarity");
+                tmpCard.Remove("icon");
+
+                var strings = tmpCard["tripletriad"];
+                tmpCard.Remove("tripletriad");
+
+                foreach (JProperty prop in strings.Reverse())
+                    // do not add localizing things to minimize the size
+                    if (!_searchLangCodes.Contains(prop.Name))
+                        tmpCard.AddFirst(new JProperty(prop));
+
+                dynamic card = new JObject(tmpCard);
+                card.itemId = card.id;
+                card.id = id;
+                card.name = ((string) chs.name).Replace("九宫幻卡：", "");
+                card.description = strings["chs"]["description"];
+
+                var wrapper = new JsWrapper("chs", "tripletriad", card);
+                AddPartials(wrapper, _db.ItemsById[card.itemId.Value]);
+                //_update.IncludeDocument(id.ToString(), "tripletriad", "chs", 1, Wrapper(wrapper));
+                
+                if (card.extra.Value)
+                {
+                    wrappersExtraCards.Add(card.displayId.Value, wrapper);
+                }
+                else
+                {
+                    wrappers.Add(card.displayId.Value, wrapper);
+                }
+            }
+
+
+            var contents = "gt.tripletriad.cards = " + Wrapper(wrappers) + ";\r\n" +
+                "gt.tripletriad.extraCards = " + Wrapper(wrappersExtraCards) + ";\r\n" +
+                "gt.tripletriad.npcs = " + Json(DatabaseBuilder.Instance.Db.CardNpcs);
+
+            FileDatabase.WriteFile("Garland.Web\\db\\js\\tripletriad.js", contents);
         }
 
         #region Utility

@@ -28,7 +28,7 @@ namespace Garland.Data.Output
         {
             _languageSort["chs"] = 1;
             _languageSort["en"] = 2;
-            _languageSort["jp"] = 3;
+            _languageSort["ja"] = 3;
             _languageSort["de"] = 4;
             _languageSort["fr"] = 5;
         }
@@ -79,7 +79,7 @@ namespace Garland.Data.Output
             languageSort[""] = 1;
             languageSort["chs"] = 2;
             languageSort["en"] = 3;
-            languageSort["jp"] = 4;
+            languageSort["ja"] = 4;
             languageSort["de"] = 5;
             languageSort["fr"] = 6;
 

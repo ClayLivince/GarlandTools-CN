@@ -2072,6 +2072,14 @@ body.dirty #dirty-indicator {
     z-index: 3;
 }
 
+.block.item .tripletriad-stars {
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    width: 26px;
+    z-index: 3;
+}
+
 .block.item .tripletriad-top {
     top: 86px;
     left: 46px;
@@ -3770,3 +3778,154 @@ body.touch .midline {
     url('ext/FFXIV_Lodestone_SSF.woff') format('woff');
     unicode-range: U+E020-E0DB;
 }
+
+input[type='checkbox'].switch {
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+    width: 40px;
+    height: 20px;
+    background: #ccc;
+    border-radius: 10px;
+    transition: border-color .3s, background-color .3s;
+}
+
+input[type='checkbox'].switch::after {
+    content: '';
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0 2px #999;
+    transition: .4s;
+    top: 2px;
+    position: absolute;
+    left: 2px;
+}
+
+input[type='checkbox'].switch:checked {
+    background: rgb(19, 206, 102);
+}
+
+input[type='checkbox'].switch:checked::after {
+    content: '';
+    position: absolute;
+    left: 55%;
+    top: 2px;
+}
+
+body .page-selector span{
+    margin-left: 8px;
+    margin-right: 8px;
+    padding: 2px;
+}
+
+body .page-selector .selected{
+    border-radius: 5px;
+    border: 3px solid #eba03c;
+    box-shadow: 0 0 3px 2px #b47b2d;
+    padding: 0px 2px;
+    background-color: #4b4b4b;
+}
+
+body .page-selector .left-arrow::before{
+    content: " \27A4\27A4";
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    display: inline-block;
+    color: #8C847C;
+    margin-left: 4px;
+    font-size: 11px;
+}
+
+body .page-selector .right-arrow::before{
+    content: " \27A4\27A4";
+    display: inline-block;
+    color: #8C847C;
+    margin-left: 4px;
+    font-size: 11px;
+}
+
+body .card-list-page{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+body .card-list-page .divider{
+    margin: 4px 0;
+}
+
+body .card-list-page .tripletriad-card-container{
+    display: block;
+    margin: 0 4px 38px 4px;
+    min-height: 128px;
+}
+
+body .card-list-page .tripletriad-collect-mode{
+    margin: 10px 8px 30px 0;
+}
+
+body .card-list-page #tripletriad-collect{
+    background-color: #888888;
+    color: white;
+    border-radius: 15px;
+}
+
+body .card-list-page .tripletriad-collect-it{
+    margin: 20px auto;
+    text-align: center;
+    display: block;
+}
+
+body .card-list-page .tripletriad-list{
+    display: block;
+    float: left;
+}
+
+body .tripletraid-list-row .spacer div{
+    display: inline;
+    margin: 22px;
+}
+
+body .tripletriad-list-row img{
+    padding: 3px;
+}
+
+body .tripletriad-list-row .selected{
+    border-radius: 8px;
+    border: 3px solid #FFF;
+    box-shadow: 0 0 3px 2px #AAA;
+    padding: 0;
+}
+
+body .tripletriad-collected{
+    float: right;
+    margin: 0 0 5px 0;
+    font-size: 12px;
+    color: #ffffff;
+    /*-webkit-text-fill-color: #e0bd9e;*/
+    text-shadow: #eba03c .1rem 0 .1rem, #eba03c -.1rem 0 .1rem, #eba03c 0 .1rem .1rem,  #eba03c 0 -.1rem .1rem;
+    /*-webkit-text-stroke: 1px #eba03c;*/
+}
+
+body .card-list-page .tripletriad-card-type{
+    text-align: right;
+    float: right;
+}
+
+body .card-list-page .tripletraid-card-info{
+    width: inherit;
+}
+
+body .card-list-page .card-name{
+    font-size: 15px;
+    color: #ddd2b6;
+}
+body .card-list-page .card-description{
+    white-space: normal;
+    word-wrap:break-word;
+}
+

@@ -38,11 +38,11 @@ gt.equip = {
             return {
                 id: 'leveling',
                 type: 'equip',
-                name: 'Leveling Equipment',
+                name: '练级用装备',
                 template: gt.equip.menuTemplate,
                 blockClass: 'early tool noexpand',
                 icon: 'images/Leveling.png',
-                subheader: 'Recommendation Tool',
+                subheader: '建议',
                 tool: 1,
                 settings: 1
             };
@@ -50,11 +50,11 @@ gt.equip = {
             return {
                 id: 'end',
                 type: 'equip',
-                name: 'End Game Equipment',
+                name: '毕业装备',
                 template: gt.equip.menuTemplate,
                 blockClass: 'end tool noexpand',
                 icon: 'images/Mentor.png',
-                subheader: 'Progression Tool',
+                subheader: '游戏进展',
                 tool: 1,
                 settings: 1
             };
@@ -82,11 +82,11 @@ gt.equip = {
         var view = {
             id: data.id,
             type: 'equip',
-            name: 'Leveling ' + job.name,
+            name: '练级装 ' + job.name,
             template: gt.equip.levelingTemplate,
             blockClass: 'early tool noexpand',
             icon: '../files/icons/job/' + job.abbreviation + '.png',
-            subheader: 'Recommendation Tool',
+            subheader: '建议',
             tool: 1,
             settings: 1,
 
@@ -156,7 +156,7 @@ gt.equip = {
             if (hasItems)
                 view.equipment[slot] = items;
         }
-        
+
         view.maxLvl = equipment.length;
         view.startLevel = startLevel;
         view.endLevel = endLevel;
@@ -167,11 +167,11 @@ gt.equip = {
         var view = {
             id: data.id,
             type: 'equip',
-            name: 'End Game ' + job.name,
+            name: '毕业装 ' + job.name,
             template: gt.equip.endTemplate,
             blockClass: 'end tool noexpand',
             icon: '../files/icons/job/' + job.abbreviation + '.png',
-            subheader: 'Progression Tool',
+            subheader: '游戏进展',
             tool: 1,
             settings: 1,
 
@@ -188,7 +188,7 @@ gt.equip = {
                     items.push(null);
                     continue;
                 }
-                
+
                 items.push(gt.model.partial(gt.item, rank.id));
             }
             return items;
@@ -252,7 +252,7 @@ gt.equip = {
     },
 
     createCraftingList: function(items, $block) {
-        gt.group.setup('Crafting List', $block, function(groupData) {
+        gt.group.setup('获取列表', $block, function(groupData) {
             for (var i = 0; i < items.length; i++) {
                 var itemData = items[i];
                 if (gt.item.partialIndex[itemData.id].t == 43) // Ring
@@ -280,3 +280,4 @@ gt.equip = {
         gt.settings.saveDirty();
     }
 };
+

@@ -1,5 +1,5 @@
 gt.instance = {
-    pluralName: 'Instances',
+    pluralName: '副本',
     type: 'instance',
     blockTemplate: null,
     index: {},
@@ -41,12 +41,14 @@ gt.instance = {
             dps: (instance.ranged || 0) + (instance.melee || 0)
         };
 
+        gt.localize.extractLocalize(instance, view);
+
         view.sourceName = gt.util.abbr(instance.name);
         view.longSourceName = instance.name;
 
         view.requirements = gt.instance.getInstanceRequirements(instance);
         view.byline = view.requirements;
-        view.subheader = "Level " + instance.min_lvl + ' ' + view.category;
+        view.subheader = "等级 " + instance.min_lvl + ' ' + view.category;
 
         if (instance.fullIcon)
             view.fullIcon = '../files/icons/instance/' + instance.fullIcon + '.png';
@@ -100,25 +102,25 @@ gt.instance = {
 
     getInstanceRequirements: function(i) {
         var parts = [];
-        parts.push('Lv. ' + i.min_lvl);
+        parts.push('等级 ' + i.min_lvl);
         if (i.max_lvl && i.max_lvl != i.min_lvl)
             parts.push(' - ' + i.max_lvl);
 
         if (i.min_ilvl) {
-             parts.push(', iLv. ' + i.min_ilvl);
+            parts.push(', 平均品级 ' + i.min_ilvl);
 
-             if (i.max_ilvl && i.max_ilvl != i.min_ilvl)
+            if (i.max_ilvl && i.max_ilvl != i.min_ilvl)
                 parts.push(' - ' + i.max_ilvl);
         }
         else if (i.max_ilvl)
-            parts.push(', iLv. 0 - ' + i.max_ilvl);
+            parts.push(', 平均品级 0 - ' + i.max_ilvl);
         return parts.join('');
     },
 
     resolveCraftSource: function(step, id) {
         step.sourceType = 'instance';
         step.sourceView = gt.model.partial(gt.instance, id || step.item.instances[0]);
-        step.setCategory(['Instance', 'Other']);
+        step.setCategory(['副本', '其他']);
     },
 
     getPartialViewModel: function(partial) {
@@ -142,3 +144,4 @@ gt.instance = {
         };
     }
 };
+

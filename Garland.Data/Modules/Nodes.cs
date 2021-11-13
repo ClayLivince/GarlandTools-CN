@@ -336,10 +336,10 @@ namespace Garland.Data.Modules
         {
             switch (gatheringType)
             {
-                case 0: return "Mineral Deposit";
-                case 1: return "Rocky Outcropping";
-                case 2: return "Mature Tree";
-                case 3: return "Lush Vegetation";
+                case 0: return "矿脉";
+                case 1: return "石场";
+                case 2: return "良材";
+                case 3: return "草场";
                 default: throw new NotImplementedException();
             }
         }

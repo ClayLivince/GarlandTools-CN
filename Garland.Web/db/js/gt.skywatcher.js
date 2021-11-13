@@ -4,14 +4,14 @@ gt.skywatcher = {
     weatherIndex: null,
     weatherRateIndex: null,
     regions: [
-        { icon: "images/Region La Noscea.png", name: "La Noscea", page: "LaNoscea", zones: [27, 30, 31, 32, 33, 34, 350, 358, 425] },
-        { icon: "images/Region Black Shroud.png", name: "The Black Shroud", page: "TheBlackShroud", zones: [39, 54, 55, 56, 57, 426] },
-        { icon: "images/Region Thanalan.png", name: "Thanalan", page: "Thanalan", zones: [51, 42, 43, 44, 45, 46, 427] },
-        { icon: "images/Region Ishgard.png", name: "Ishgard and Surrounds", page: "Ishgard", zones: [62, 63, 2200, 2100, 2101, 2082, 2000, 2001, 2002, 1647] },
-        { icon: "images/Region Gyr Abania.png", name: "Gyr Abania", page: "GyrAbania", zones: [2403, 2406, 2407, 2408] },
-        { icon: "images/Region Kugane.png", name: "Far East", page: "FarEast", zones: [513, 2412, 2409, 2410, 2411] },
-        { icon: "images/Region Norvrandt.png", name: "Norvrandt", page: "Norvrandt", zones: [516, 517, 2953, 2954, 2955, 2956, 2957, 2958], },
-        { icon: "images/Aetheryte.png", name: "Others", page: "Others", zones: [67, 2414, 2462, 2530, 2545, 3534] }
+        { icon: "images/Region La Noscea.png", name: "拉诺西亚", page: "LaNoscea", zones: [27, 30, 31, 32, 33, 34, 350, 358, 425] },
+        { icon: "images/Region Black Shroud.png", name: "黑衣森林", page: "TheBlackShroud", zones: [39, 54, 55, 56, 57, 426] },
+        { icon: "images/Region Thanalan.png", name: "萨纳兰", page: "Thanalan", zones: [51, 42, 43, 44, 45, 46, 427] },
+        { icon: "images/Region Ishgard.png", name: "伊修加德及其周边地区", page: "Ishgard", zones: [62, 63, 2200, 2100, 2101, 2082, 2000, 2001, 2002, 1647] },
+        { icon: "images/Region Gyr Abania.png", name: "基拉巴尼亚", page: "GyrAbania", zones: [2403, 2406, 2407, 2408] },
+        { icon: "images/Region Kugane.png", name: "远东之国", page: "FarEast", zones: [513, 2412, 2409, 2410, 2411] },
+        { icon: "images/Region Norvrandt.png", name: "诺弗兰特", page: "Norvrandt", zones: [516, 517, 2953, 2954, 2955, 2956, 2957, 2958], },
+        { icon: "images/Aetheryte.png", name: "其他", page: "Others", zones: [67, 2414, 2462, 2530, 2545, 3534] }
     ],
     weatherUpdateKey: null,
     lWeatherStart: null,
@@ -33,11 +33,11 @@ gt.skywatcher = {
         var view = {
             id: id,
             type: 'skywatcher',
-            name: 'Skywatcher',
+            name: '风见鸡',
             template: gt.skywatcher.blockTemplate,
             blockClass: 'tool noexpand',
             icon: 'images/Skywatcher.png',
-            subheader: 'Weather Forecast Tool',
+            subheader: '天气预报',
             tool: 1,
             settings: 1,
 
@@ -216,7 +216,7 @@ gt.skywatcher = {
 
         gt.skywatcher.weatherUpdateKey = setInterval(gt.skywatcher.weatherUpdate, 1000);
     },
-    
+
     weatherUpdate: function() {
         var $block = $('.skywatcher.block');
         if (!$block.length) {

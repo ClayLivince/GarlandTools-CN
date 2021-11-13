@@ -1,6 +1,6 @@
 ﻿gt.bell.nodes = [
   {
-    "type": "Mature Tree",
+    "type": "良材",
     "func": "node",
     "items": [
       {
@@ -39,7 +39,7 @@
     "patch": 2.0
   },
   {
-    "type": "Mature Tree",
+    "type": "良材",
     "func": "node",
     "items": [
       {
@@ -66,7 +66,7 @@
     "patch": 2.0
   },
   {
-    "type": "Mature Tree",
+    "type": "良材",
     "func": "node",
     "items": [
       {
@@ -93,7 +93,7 @@
     "patch": 2.0
   },
   {
-    "type": "Mature Tree",
+    "type": "良材",
     "func": "node",
     "items": [
       {
@@ -138,7 +138,7 @@
     "patch": 2.0
   },
   {
-    "type": "Mature Tree",
+    "type": "良材",
     "func": "node",
     "items": [
       {
@@ -208,7 +208,7 @@
     "patch": 2.0
   },
   {
-    "type": "Lush Vegetation",
+    "type": "草场",
     "func": "node",
     "items": [
       {
@@ -247,7 +247,7 @@
     "patch": 2.0
   },
   {
-    "type": "Lush Vegetation",
+    "type": "草场",
     "func": "node",
     "items": [
       {
@@ -280,7 +280,7 @@
     "patch": 2.0
   },
   {
-    "type": "Lush Vegetation",
+    "type": "草场",
     "func": "node",
     "items": [
       {
@@ -319,7 +319,7 @@
     "patch": 2.0
   },
   {
-    "type": "Lush Vegetation",
+    "type": "草场",
     "func": "node",
     "items": [
       {
@@ -352,7 +352,7 @@
     "patch": 2.0
   },
   {
-    "type": "Lush Vegetation",
+    "type": "草场",
     "func": "node",
     "items": [
       {
@@ -385,7 +385,7 @@
     "patch": 2.0
   },
   {
-    "type": "Lush Vegetation",
+    "type": "草场",
     "func": "node",
     "items": [
       {
@@ -430,7 +430,7 @@
     "patch": 2.0
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -475,7 +475,7 @@
     "patch": 2.0
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -526,7 +526,7 @@
     "patch": 2.0
   },
   {
-    "type": "Rocky Outcropping",
+    "type": "石场",
     "func": "node",
     "items": [
       {
@@ -559,7 +559,7 @@
     "patch": 2.0
   },
   {
-    "type": "Rocky Outcropping",
+    "type": "石场",
     "func": "node",
     "items": [
       {
@@ -598,7 +598,7 @@
     "patch": 2.0
   },
   {
-    "type": "Rocky Outcropping",
+    "type": "石场",
     "func": "node",
     "items": [
       {
@@ -637,7 +637,7 @@
     "patch": 2.0
   },
   {
-    "type": "Rocky Outcropping",
+    "type": "石场",
     "func": "node",
     "items": [
       {
@@ -707,7 +707,7 @@
     "patch": 2.0
   },
   {
-    "type": "Mature Tree",
+    "type": "良材",
     "func": "node",
     "items": [
       {
@@ -746,7 +746,7 @@
     "patch": 2.2
   },
   {
-    "type": "Mature Tree",
+    "type": "良材",
     "func": "node",
     "items": [
       {
@@ -773,7 +773,7 @@
     "patch": 2.2
   },
   {
-    "type": "Mature Tree",
+    "type": "良材",
     "func": "node",
     "items": [
       {
@@ -818,7 +818,7 @@
     "patch": 2.0
   },
   {
-    "type": "Lush Vegetation",
+    "type": "草场",
     "func": "node",
     "items": [
       {
@@ -863,7 +863,7 @@
     "patch": 2.2
   },
   {
-    "type": "Lush Vegetation",
+    "type": "草场",
     "func": "node",
     "items": [
       {
@@ -908,7 +908,7 @@
     "patch": 2.2
   },
   {
-    "type": "Lush Vegetation",
+    "type": "草场",
     "func": "node",
     "items": [
       {
@@ -953,7 +953,7 @@
     "patch": 2.2
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -1010,7 +1010,7 @@
     "patch": 2.0
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -1067,7 +1067,7 @@
     "patch": 2.0
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -1118,7 +1118,7 @@
     "patch": 2.0
   },
   {
-    "type": "Rocky Outcropping",
+    "type": "石场",
     "func": "node",
     "items": [
       {
@@ -1163,7 +1163,7 @@
     "patch": 2.0
   },
   {
-    "type": "Rocky Outcropping",
+    "type": "石场",
     "func": "node",
     "items": [
       {
@@ -1208,7 +1208,7 @@
     "patch": 2.2
   },
   {
-    "type": "Rocky Outcropping",
+    "type": "石场",
     "func": "node",
     "items": [
       {
@@ -1253,7 +1253,7 @@
     "patch": 2.0
   },
   {
-    "type": "Mature Tree",
+    "type": "良材",
     "func": "node",
     "items": [
       {
@@ -1292,7 +1292,7 @@
     "patch": 2.2
   },
   {
-    "type": "Mature Tree",
+    "type": "良材",
     "func": "node",
     "items": [
       {
@@ -1319,7 +1319,7 @@
     "patch": 2.3
   },
   {
-    "type": "Rocky Outcropping",
+    "type": "石场",
     "func": "node",
     "items": [
       {
@@ -1346,7 +1346,7 @@
     "patch": 2.3
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -1391,7 +1391,7 @@
     "patch": 2.0
   },
   {
-    "type": "Mature Tree",
+    "type": "良材",
     "func": "node",
     "items": [
       {
@@ -1418,7 +1418,7 @@
     "patch": 2.0
   },
   {
-    "type": "Mature Tree",
+    "type": "良材",
     "func": "node",
     "items": [
       {
@@ -1445,7 +1445,7 @@
     "patch": 2.45
   },
   {
-    "type": "Rocky Outcropping",
+    "type": "石场",
     "func": "node",
     "items": [
       {
@@ -1472,7 +1472,7 @@
     "patch": 2.45
   },
   {
-    "type": "Lush Vegetation",
+    "type": "草场",
     "func": "node",
     "items": [
       {
@@ -1505,7 +1505,7 @@
     "patch": 2.5
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -1538,7 +1538,7 @@
     "patch": 2.5
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -1566,7 +1566,7 @@
     "patch": 3.4
   },
   {
-    "type": "Rocky Outcropping",
+    "type": "石场",
     "func": "node",
     "items": [
       {
@@ -1595,7 +1595,7 @@
     "patch": 3.4
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -1623,7 +1623,7 @@
     "patch": 3.4
   },
   {
-    "type": "Mature Tree",
+    "type": "良材",
     "func": "node",
     "items": [
       {
@@ -1651,7 +1651,7 @@
     "patch": 3.0
   },
   {
-    "type": "Lush Vegetation",
+    "type": "草场",
     "func": "node",
     "items": [
       {
@@ -1679,7 +1679,7 @@
     "patch": 3.4
   },
   {
-    "type": "Mature Tree",
+    "type": "良材",
     "func": "node",
     "items": [
       {
@@ -1708,7 +1708,7 @@
     "patch": 3.4
   },
   {
-    "type": "Lush Vegetation",
+    "type": "草场",
     "func": "node",
     "items": [
       {
@@ -1737,7 +1737,7 @@
     "patch": 3.4
   },
   {
-    "type": "Rocky Outcropping",
+    "type": "石场",
     "func": "node",
     "items": [
       {
@@ -1804,7 +1804,7 @@
     "patch": 3.0
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -1840,7 +1840,7 @@
     "patch": 0.0
   },
   {
-    "type": "Rocky Outcropping",
+    "type": "石场",
     "func": "node",
     "items": [
       {
@@ -1907,7 +1907,7 @@
     "patch": 3.0
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -1939,7 +1939,7 @@
     "patch": 0.0
   },
   {
-    "type": "Rocky Outcropping",
+    "type": "石场",
     "func": "node",
     "items": [
       {
@@ -2006,7 +2006,7 @@
     "patch": 3.0
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -2037,7 +2037,7 @@
     "patch": 0.0
   },
   {
-    "type": "Rocky Outcropping",
+    "type": "石场",
     "func": "node",
     "items": [
       {
@@ -2104,7 +2104,7 @@
     "patch": 3.0
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -2130,7 +2130,7 @@
     "patch": 0.0
   },
   {
-    "type": "Rocky Outcropping",
+    "type": "石场",
     "func": "node",
     "items": [
       {
@@ -2197,7 +2197,7 @@
     "patch": 3.0
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -2231,7 +2231,7 @@
     "patch": 3.0
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -2270,7 +2270,7 @@
     "patch": 3.0
   },
   {
-    "type": "Rocky Outcropping",
+    "type": "石场",
     "func": "node",
     "items": [
       {
@@ -2303,7 +2303,7 @@
     "patch": 3.0
   },
   {
-    "type": "Rocky Outcropping",
+    "type": "石场",
     "func": "node",
     "items": [
       {
@@ -2336,7 +2336,7 @@
     "patch": 3.0
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -2369,7 +2369,7 @@
     "patch": 3.0
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -2396,7 +2396,7 @@
     "patch": 3.0
   },
   {
-    "type": "Rocky Outcropping",
+    "type": "石场",
     "func": "node",
     "items": [
       {
@@ -2430,7 +2430,7 @@
     "patch": 3.0
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -2464,7 +2464,7 @@
     "patch": 3.0
   },
   {
-    "type": "Rocky Outcropping",
+    "type": "石场",
     "func": "node",
     "items": [
       {
@@ -2492,7 +2492,7 @@
     "patch": 3.0
   },
   {
-    "type": "Rocky Outcropping",
+    "type": "石场",
     "func": "node",
     "items": [
       {
@@ -2520,7 +2520,7 @@
     "patch": 3.0
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -2548,7 +2548,7 @@
     "patch": 3.0
   },
   {
-    "type": "Lush Vegetation",
+    "type": "草场",
     "func": "node",
     "items": [
       {
@@ -2603,7 +2603,7 @@
     "patch": 3.0
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -2634,7 +2634,7 @@
     "patch": 0.0
   },
   {
-    "type": "Lush Vegetation",
+    "type": "草场",
     "func": "node",
     "items": [
       {
@@ -2689,7 +2689,7 @@
     "patch": 3.0
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -2720,7 +2720,7 @@
     "patch": 0.0
   },
   {
-    "type": "Lush Vegetation",
+    "type": "草场",
     "func": "node",
     "items": [
       {
@@ -2783,7 +2783,7 @@
     "patch": 3.0
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -2809,7 +2809,7 @@
     "patch": 0.0
   },
   {
-    "type": "Lush Vegetation",
+    "type": "草场",
     "func": "node",
     "items": [
       {
@@ -2872,7 +2872,7 @@
     "patch": 3.0
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -2903,7 +2903,7 @@
     "patch": 0.0
   },
   {
-    "type": "Lush Vegetation",
+    "type": "草场",
     "func": "node",
     "items": [
       {
@@ -2966,7 +2966,7 @@
     "patch": 3.0
   },
   {
-    "type": "Lush Vegetation",
+    "type": "草场",
     "func": "node",
     "items": [
       {
@@ -3017,7 +3017,7 @@
     "patch": 3.0
   },
   {
-    "type": "Lush Vegetation",
+    "type": "草场",
     "func": "node",
     "items": [
       {
@@ -3057,7 +3057,7 @@
     "patch": 3.0
   },
   {
-    "type": "Mature Tree",
+    "type": "良材",
     "func": "node",
     "items": [
       {
@@ -3090,7 +3090,7 @@
     "patch": 3.0
   },
   {
-    "type": "Mature Tree",
+    "type": "良材",
     "func": "node",
     "items": [
       {
@@ -3123,7 +3123,7 @@
     "patch": 3.0
   },
   {
-    "type": "Mature Tree",
+    "type": "良材",
     "func": "node",
     "items": [
       {
@@ -3156,7 +3156,7 @@
     "patch": 3.0
   },
   {
-    "type": "Lush Vegetation",
+    "type": "草场",
     "func": "node",
     "items": [
       {
@@ -3183,7 +3183,7 @@
     "patch": 3.0
   },
   {
-    "type": "Lush Vegetation",
+    "type": "草场",
     "func": "node",
     "items": [
       {
@@ -3223,7 +3223,7 @@
     "patch": 3.0
   },
   {
-    "type": "Lush Vegetation",
+    "type": "草场",
     "func": "node",
     "items": [
       {
@@ -3251,7 +3251,7 @@
     "patch": 3.0
   },
   {
-    "type": "Mature Tree",
+    "type": "良材",
     "func": "node",
     "items": [
       {
@@ -3279,7 +3279,7 @@
     "patch": 3.0
   },
   {
-    "type": "Lush Vegetation",
+    "type": "草场",
     "func": "node",
     "items": [
       {
@@ -3307,7 +3307,7 @@
     "patch": 3.0
   },
   {
-    "type": "Mature Tree",
+    "type": "良材",
     "func": "node",
     "items": [
       {
@@ -3335,7 +3335,7 @@
     "patch": 3.0
   },
   {
-    "type": "Mature Tree",
+    "type": "良材",
     "func": "node",
     "items": [
       {
@@ -3369,7 +3369,7 @@
     "patch": 3.2
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -3403,7 +3403,7 @@
     "patch": 3.2
   },
   {
-    "type": "Rocky Outcropping",
+    "type": "石场",
     "func": "node",
     "items": [
       {
@@ -3446,7 +3446,7 @@
     "patch": 4.0
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -3489,7 +3489,7 @@
     "patch": 4.0
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -3536,7 +3536,7 @@
     "patch": 4.0
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -3566,7 +3566,7 @@
     "patch": 4.0
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -3595,7 +3595,7 @@
     "patch": 4.0
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -3630,7 +3630,7 @@
     "patch": 4.0
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -3659,7 +3659,7 @@
     "patch": 4.0
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -3688,7 +3688,7 @@
     "patch": 4.0
   },
   {
-    "type": "Rocky Outcropping",
+    "type": "石场",
     "func": "node",
     "items": [
       {
@@ -3717,7 +3717,7 @@
     "patch": 4.0
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -3753,7 +3753,7 @@
     "patch": 4.0
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -3783,7 +3783,7 @@
     "patch": 4.0
   },
   {
-    "type": "Mature Tree",
+    "type": "良材",
     "func": "node",
     "items": [
       {
@@ -3830,7 +3830,7 @@
     "patch": 4.0
   },
   {
-    "type": "Lush Vegetation",
+    "type": "草场",
     "func": "node",
     "items": [
       {
@@ -3873,7 +3873,7 @@
     "patch": 4.0
   },
   {
-    "type": "Lush Vegetation",
+    "type": "草场",
     "func": "node",
     "items": [
       {
@@ -3920,7 +3920,7 @@
     "patch": 4.0
   },
   {
-    "type": "Mature Tree",
+    "type": "良材",
     "func": "node",
     "items": [
       {
@@ -3950,7 +3950,7 @@
     "patch": 4.0
   },
   {
-    "type": "Mature Tree",
+    "type": "良材",
     "func": "node",
     "items": [
       {
@@ -3979,7 +3979,7 @@
     "patch": 4.0
   },
   {
-    "type": "Mature Tree",
+    "type": "良材",
     "func": "node",
     "items": [
       {
@@ -4008,7 +4008,7 @@
     "patch": 4.0
   },
   {
-    "type": "Lush Vegetation",
+    "type": "草场",
     "func": "node",
     "items": [
       {
@@ -4038,7 +4038,7 @@
     "patch": 4.0
   },
   {
-    "type": "Lush Vegetation",
+    "type": "草场",
     "func": "node",
     "items": [
       {
@@ -4067,7 +4067,7 @@
     "patch": 4.0
   },
   {
-    "type": "Lush Vegetation",
+    "type": "草场",
     "func": "node",
     "items": [
       {
@@ -4102,7 +4102,7 @@
     "patch": 4.0
   },
   {
-    "type": "Mature Tree",
+    "type": "良材",
     "func": "node",
     "items": [
       {
@@ -4132,7 +4132,7 @@
     "patch": 4.0
   },
   {
-    "type": "Lush Vegetation",
+    "type": "草场",
     "func": "node",
     "items": [
       {
@@ -4168,7 +4168,7 @@
     "patch": 4.0
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -4204,7 +4204,7 @@
     "patch": 4.2
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -4240,7 +4240,7 @@
     "patch": 4.2
   },
   {
-    "type": "Mature Tree",
+    "type": "良材",
     "func": "node",
     "items": [
       {
@@ -4276,7 +4276,7 @@
     "patch": 4.2
   },
   {
-    "type": "Lush Vegetation",
+    "type": "草场",
     "func": "node",
     "items": [
       {
@@ -4306,7 +4306,7 @@
     "patch": 4.2
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -4336,7 +4336,7 @@
     "patch": 4.4
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -4366,7 +4366,7 @@
     "patch": 4.4
   },
   {
-    "type": "Mature Tree",
+    "type": "良材",
     "func": "node",
     "items": [
       {
@@ -4396,7 +4396,7 @@
     "patch": 4.4
   },
   {
-    "type": "Lush Vegetation",
+    "type": "草场",
     "func": "node",
     "items": [
       {
@@ -4426,7 +4426,7 @@
     "patch": 4.4
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -4472,7 +4472,7 @@
     "patch": 5.0
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -4518,7 +4518,7 @@
     "patch": 5.0
   },
   {
-    "type": "Rocky Outcropping",
+    "type": "石场",
     "func": "node",
     "items": [
       {
@@ -4564,7 +4564,7 @@
     "patch": 5.0
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -4594,7 +4594,7 @@
     "patch": 5.0
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -4623,7 +4623,7 @@
     "patch": 5.0
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -4652,7 +4652,7 @@
     "patch": 5.0
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -4681,7 +4681,7 @@
     "patch": 5.0
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -4710,7 +4710,7 @@
     "patch": 5.0
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -4739,7 +4739,7 @@
     "patch": 5.0
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -4775,7 +4775,7 @@
     "patch": 5.0
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -4805,7 +4805,7 @@
     "patch": 5.0
   },
   {
-    "type": "Lush Vegetation",
+    "type": "草场",
     "func": "node",
     "items": [
       {
@@ -4850,7 +4850,7 @@
     "patch": 5.0
   },
   {
-    "type": "Lush Vegetation",
+    "type": "草场",
     "func": "node",
     "items": [
       {
@@ -4896,7 +4896,7 @@
     "patch": 5.0
   },
   {
-    "type": "Lush Vegetation",
+    "type": "草场",
     "func": "node",
     "items": [
       {
@@ -4942,7 +4942,7 @@
     "patch": 5.0
   },
   {
-    "type": "Mature Tree",
+    "type": "良材",
     "func": "node",
     "items": [
       {
@@ -4972,7 +4972,7 @@
     "patch": 5.0
   },
   {
-    "type": "Lush Vegetation",
+    "type": "草场",
     "func": "node",
     "items": [
       {
@@ -5001,7 +5001,7 @@
     "patch": 5.0
   },
   {
-    "type": "Lush Vegetation",
+    "type": "草场",
     "func": "node",
     "items": [
       {
@@ -5030,7 +5030,7 @@
     "patch": 5.0
   },
   {
-    "type": "Lush Vegetation",
+    "type": "草场",
     "func": "node",
     "items": [
       {
@@ -5059,7 +5059,7 @@
     "patch": 5.0
   },
   {
-    "type": "Lush Vegetation",
+    "type": "草场",
     "func": "node",
     "items": [
       {
@@ -5088,7 +5088,7 @@
     "patch": 5.0
   },
   {
-    "type": "Mature Tree",
+    "type": "良材",
     "func": "node",
     "items": [
       {
@@ -5117,7 +5117,7 @@
     "patch": 5.0
   },
   {
-    "type": "Mature Tree",
+    "type": "良材",
     "func": "node",
     "items": [
       {
@@ -5153,7 +5153,7 @@
     "patch": 5.0
   },
   {
-    "type": "Lush Vegetation",
+    "type": "草场",
     "func": "node",
     "items": [
       {
@@ -5183,7 +5183,7 @@
     "patch": 5.0
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -5219,7 +5219,7 @@
     "patch": 5.2
   },
   {
-    "type": "Rocky Outcropping",
+    "type": "石场",
     "func": "node",
     "items": [
       {
@@ -5249,7 +5249,7 @@
     "patch": 5.2
   },
   {
-    "type": "Mature Tree",
+    "type": "良材",
     "func": "node",
     "items": [
       {
@@ -5279,7 +5279,7 @@
     "patch": 5.2
   },
   {
-    "type": "Lush Vegetation",
+    "type": "草场",
     "func": "node",
     "items": [
       {
@@ -5315,7 +5315,7 @@
     "patch": 5.2
   },
   {
-    "type": "Rocky Outcropping",
+    "type": "石场",
     "func": "node",
     "items": [
       {
@@ -5345,7 +5345,7 @@
     "patch": 5.2
   },
   {
-    "type": "Lush Vegetation",
+    "type": "草场",
     "func": "node",
     "items": [
       {
@@ -5375,7 +5375,7 @@
     "patch": 5.2
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -5404,7 +5404,7 @@
     "patch": 5.4
   },
   {
-    "type": "Rocky Outcropping",
+    "type": "石场",
     "func": "node",
     "items": [
       {
@@ -5433,7 +5433,7 @@
     "patch": 5.4
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -5463,7 +5463,7 @@
     "patch": 5.4
   },
   {
-    "type": "Mature Tree",
+    "type": "良材",
     "func": "node",
     "items": [
       {
@@ -5492,7 +5492,7 @@
     "patch": 5.4
   },
   {
-    "type": "Mature Tree",
+    "type": "良材",
     "func": "node",
     "items": [
       {
@@ -5521,7 +5521,7 @@
     "patch": 5.4
   },
   {
-    "type": "Lush Vegetation",
+    "type": "草场",
     "func": "node",
     "items": [
       {
@@ -5550,7 +5550,7 @@
     "patch": 5.4
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -5582,7 +5582,7 @@
     "patch": 5.4
   },
   {
-    "type": "Mineral Deposit",
+    "type": "矿脉",
     "func": "node",
     "items": [
       {
@@ -5609,7 +5609,7 @@
     "patch": 5.4
   },
   {
-    "type": "Mature Tree",
+    "type": "良材",
     "func": "node",
     "items": [
       {
@@ -5645,7 +5645,7 @@
     "patch": 5.4
   },
   {
-    "type": "Mature Tree",
+    "type": "良材",
     "func": "node",
     "items": [
       {
@@ -5676,7 +5676,7 @@
     "patch": 5.4
   },
   {
-    "type": "Mature Tree",
+    "type": "良材",
     "func": "node",
     "items": [
       {
@@ -5707,7 +5707,7 @@
     "patch": 5.4
   },
   {
-    "type": "Mature Tree",
+    "type": "良材",
     "func": "node",
     "items": [
       {
@@ -5733,7 +5733,7 @@
     "patch": 5.4
   },
   {
-    "type": "Mature Tree",
+    "type": "良材",
     "func": "node",
     "items": [
       {
@@ -5764,7 +5764,7 @@
     "patch": 5.4
   },
   {
-    "type": "Mature Tree",
+    "type": "良材",
     "func": "node",
     "items": [
       {
@@ -5795,7 +5795,7 @@
     "patch": 5.4
   },
   {
-    "type": "Mature Tree",
+    "type": "良材",
     "func": "node",
     "items": [
       {
@@ -5821,7 +5821,7 @@
     "patch": 5.4
   },
   {
-    "type": "Mature Tree",
+    "type": "良材",
     "func": "node",
     "items": [
       {
@@ -5852,7 +5852,7 @@
     "patch": 5.4
   },
   {
-    "type": "Mature Tree",
+    "type": "良材",
     "func": "node",
     "items": [
       {
@@ -5884,7 +5884,7 @@
     "patch": 5.4
   },
   {
-    "type": "Mature Tree",
+    "type": "良材",
     "func": "node",
     "items": [
       {

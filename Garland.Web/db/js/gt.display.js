@@ -62,7 +62,7 @@ gt.display = {
 
         if ($this) {
             var pageName = $this.data('page');
-            if (pageName) 
+            if (pageName)
                 gt.settings.data.sidebar.activePage = pageName;
         }
     },
@@ -88,7 +88,7 @@ gt.display = {
 
             var activeButton = null;
             if (menuData.activePage != '_none') {
-                var $matches = $buttons.filter('[data-page=' + menuData.activePage + ']'); 
+                var $matches = $buttons.filter('[data-page=' + menuData.activePage + ']');
 
                 if ($matches.length)
                     activeButton = $matches[0];
@@ -235,7 +235,7 @@ gt.display = {
 
     toggleCollapseState: function($collapsibleArea, isVisible) {
         $collapsibleArea.toggleClass('collapsed', !isVisible);
-        $('.collapse-toggle', $collapsibleArea).toggle(isVisible);      
+        $('.collapse-toggle', $collapsibleArea).toggle(isVisible);
     },
 
     // Drag and drop
@@ -363,7 +363,7 @@ gt.display = {
     },
 
     draggableMove: function(e) {
-        if (!gt.display.current) 
+        if (!gt.display.current)
             return;
 
         var pos = e.changedTouches ? e.changedTouches[0] : e;
@@ -819,3 +819,4 @@ gt.display = {
             callback(null);
     }
 };
+

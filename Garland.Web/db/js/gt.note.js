@@ -16,7 +16,7 @@ gt.note = {
     },
 
     newNoteClicked: function(e) {
-        var name = "Note";
+        var name = "笔记";
         var counter = 2;
 
         while (gt.list.getBlockData('note', name))
@@ -68,7 +68,7 @@ gt.note = {
             template: gt.note.blockTemplate,
             blockClass: 'tool expand-right',
             icon: 'images/Note.png',
-            subheader: 'Note Tool',
+            subheader: '笔记',
             tool: 1,
 
             text: data.notes || ''

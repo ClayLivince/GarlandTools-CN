@@ -35,11 +35,11 @@ gt.group = {
     },
 
     newGroupClicked: function(e) {
-        var name = "Group";
+        var name = "组";
         var counter = 2;
 
         while (gt.list.getBlockData('group', name))
-            name = "Group " + counter++;
+            name = "组 " + counter++;
 
         var group = { type: 'group', id: name, blocks: [] };
         gt.list.addBlock(group);
@@ -115,7 +115,7 @@ gt.group = {
 
         gt.list.removeBlock(blockData);
         gt.core.removeBlockCore($block, false);
-        
+
         var $replacement = gt.core.redisplay($group);
         $group.data('view', $replacement.data('view'));
     },
@@ -169,7 +169,7 @@ gt.group = {
             template: gt.group.blockTemplate,
             blockClass: 'tool noexpand',
             icon: 'images/Atomos.png',
-            subheader: 'Group Tool',
+            subheader: '工具组',
             tool: 1,
             settings: 1,
 
@@ -319,7 +319,7 @@ gt.group = {
             var xpToStep = -data.currentXp || 0;
             for (var level = data.currentLevel; level < maxLevel && level < gt.xp.length - 1; level++)
                 xpToStep += gt.xp[level];
-            
+
             if (xpToStep > 0) {
                 sums.toStep = xpToStep;
                 sums.levelStep = maxLevel;
@@ -411,7 +411,7 @@ gt.group = {
                     var meldAggregate = sumMelds[meld.item.id];
                     if (!meldAggregate)
                         sumMelds[meld.item.id] = meldAggregate = { item: meld.item, amount: 0, estimate: 0 };
-                    
+
                     meldAggregate.amount++;
                     meldAggregate.estimate += 100 / (meld.hqRate || 100);
                 }
@@ -588,7 +588,7 @@ gt.group = {
             var shop = shops[shopIndex];
             for (var itemIndex = 0; itemIndex < shop.items.length; itemIndex++) {
                 var itemView = shop.items[itemIndex];
-                
+
                 if (itemView.vendors) {
                     var cost = itemView.groupAmount * itemView.price;
                     currency[1] = (currency[1] || 0) + cost;

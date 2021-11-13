@@ -37,7 +37,7 @@ gt.map = {
             console.error("Can't find canvas, skipping map setup.");
             return;
         }
-        
+
         var image = new Image();
         image.src = $canvas.data('image');
         image.onload = function(e) {
@@ -84,7 +84,7 @@ gt.map = {
                     if (iconfilter)
                         context.filter = iconfilter;
                     context.drawImage(iconImage, x - 12, y - 12, 25, 25);
-                };             
+                };
             }
         };
 
@@ -126,8 +126,8 @@ gt.map = {
     },
 
     sanitizeLocationName: function(name) {
-        if (name.indexOf('The Diadem') == 0)
-            return 'The Diadem';
+        if (name.indexOf('云冠群岛') == 0)
+            return '云冠群岛';
         else
             return name;
     },

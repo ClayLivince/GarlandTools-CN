@@ -99,7 +99,7 @@ gt.core = {
     hashExpression: /#?(\w+)\/(.*)/,
     groupHashExpression: /(.+?)\{(.*)\}/,
     errorTemplate: null,
-    isLive: window.location.hostname != 'localhost' && window.location.hostname != 'test.garlandtools.org',
+    isLive: window.location.hostname !== '127.0.0.1' && window.location.hostname !== 'localhost' && window.location.hostname !== 'test.garlandtools.org',
     //isLive: true,
 
     initialize: function() {
@@ -109,9 +109,9 @@ gt.core = {
 
             if (window.Sentry && gt.core.isLive) {
                 Sentry.init({
-                    dsn: 'https://b4e595358f314806a2bd3063f04fb1d7@sentry.io/172355',
-                    environment: gt.core.isLive ? 'prod' : 'dev'
-                 });
+                    dsn: "https://e741c1b9590f46db927a13b665bfc071@o1053929.ingest.sentry.io/6038945",
+                    //environment: gt.core.isLive ? 'prod' : 'dev'
+                });
             }
 
             // Sanity check for essential resources.
@@ -122,7 +122,8 @@ gt.core = {
             var modules = [gt.time, gt.patch, gt.map, gt.craft, gt.item, gt.npc, gt.fate, gt.mob,
                 gt.node, gt.fishing, gt.instance, gt.quest, gt.achievement, gt.action, gt.status, gt.leve,
                 gt.group, gt.equip, gt.skywatcher, gt.note, gt.search, gt.browse, gt.list,
-                gt.settings, gt.display, gt.venture, gt.util, window.doT, window.Isotope,
+                gt.settings, gt.display, gt.venture, gt.util, gt.tripletriad,
+                window.doT, window.Isotope,
                 window.$, window.he];
             if (!_.all(modules)) {
                 var moduleLoadInfo = JSON.stringify(_.map(modules, function(m) { return m ? 1 : 0; }));
@@ -215,6 +216,9 @@ gt.core = {
             gt.skywatcher.initialize(data);
             gt.note.initialize(data);
 
+            gt.localize.initialize(data);
+            gt.tripletriad.initialize(data);
+
             gt.search.initialize(data);
             gt.browse.initialize(data);
             gt.list.initialize(data);
@@ -276,7 +280,7 @@ gt.core = {
     writeErrorMessage: function(message, data) {
         $('#main')
             .empty()
-            .append('<div>Oops!  Something went wrong.  Please copy the below message into a comment on <a href="/">the front page</a>.  Or, you can <a href="/error.html">clear everything</a>.</div>')
+            .append('<div>Orz 发生了错误。如您有时间，请将以下信息复制后联系我们，或者张贴到 <a href="/">主页</a>的评论页面。您或许可以尝试 <a href="/error.html">清除全部数据</a>来解决问题。</div>')
             .append('<div><pre>' + message + '</pre></div>');
 
         if (data)
@@ -451,7 +455,7 @@ gt.core = {
                     });
                 } else if (status == 'error') {
                     // Typically for 404s.  Usually logged by the browser.
-                    result = gt.core.createErrorView(module.type || module.pluralName, id, { message: 'Invalid link ' + url });
+                    result = gt.core.createErrorView(module.type || module.pluralName, id, { message: '链接无效： ' + url });
                 } else {
                     // Send this error.
                     if (window.Sentry && gt.core.isLive)
@@ -494,10 +498,10 @@ gt.core = {
         try {
             gt.core.loadCore(blockData, blockLoaded);
         } catch (ex) {
-            var desc = 'Block reload failed (' + blockData.type + ':' + blockData.id + ')';
+            var desc = '方格重载失败 (' + blockData.type + ':' + blockData.id + ')';
             if (window.Sentry && gt.core.isLive) {
                 window.Sentry.addBreadcrumb({
-                    message: 'Block reload failure',
+                    message: '方格重载失败！',
                     category: 'error',
                     data: blockData
                 });
@@ -622,7 +626,7 @@ gt.core = {
         rules.push('.block.xlarge .content.main { height: ' + sizes[3] + 'px; overflow-y: auto; overflow-x: hidden; }');
         console.log(rules.join("\n"));
     },
-    
+
     initializeBlock: function($block, blockData, view) {
         var bindEvents = gt[blockData.type].bindEvents;
         if (!view.error && bindEvents)
@@ -666,7 +670,7 @@ gt.core = {
             console.error("Invalid block to close.");
             return false;
         }
-        
+
         gt.list.removeBlock(data);
         gt.core.removeBlockCore($block, data.pin);
 
@@ -811,14 +815,14 @@ gt.core = {
         try {
             hash = decodeURI(location.hash);
         } catch (ex) {
-            gt.display.alertp("There was an error decoding this link.");
+            gt.display.alertp("解码链接失败。");
             return false;
         }
-        
+
         var query = gt.core.parseHashQuery(hash.split(','));
 
         if (query.length > 40) {
-            gt.display.alertp("This link contains too many blocks (" + query.length + ")");
+            gt.display.alertp("这个链接里面的东西太多了……装不下…… (" + query.length + ")");
             return false;
         }
 
@@ -861,7 +865,7 @@ gt.core = {
             gt.list.loadBatch(query, true);
         } catch (ex) {
             console.error(ex);
-            gt.display.alertp("There was an error loading this link.");
+            gt.display.alertp("加载链接失败。");
             return false;
         }
         return true;
@@ -927,17 +931,17 @@ gt.core = {
         var $block = $target.closest('.block');
         var data = $block.data('block');
 
-        gt.display.promptp('Rename the ' + data.type + ':', data.id, function(name) {
+        gt.display.promptp('重命名 ' + data.type + ':', data.id, function(name) {
             if (!name || name == data.id)
                 return;
 
             if (name.indexOf("\"") != -1) {
-                gt.display.alertp('Name can not contain ".  Please try again.');
+                gt.display.alertp('名称中不能含有 "。  请再试一次。');
                 return;
             }
 
             if (gt.list.doesListMatch([{type: data.type, id: name}], gt.list.current)) {
-                gt.display.alertp("A " + data.type + " with that name already exists.");
+                gt.display.alertp(data.type + " 中已经有叫这个名字的东西了唔.");
                 return;
             }
 
@@ -950,12 +954,12 @@ gt.core = {
             gt.settings.saveDirty();
         });
     },
-    
+
     ensureNormalizedUrl: function(data) {
         if (!data.normalizeUrl || !gt.core.isLive)
             return false;
 
-        var baseUrl = "https://garlandtools.org";
+        var baseUrl = "https://ffxiv.cyanclay.xyz";
         if (window.location.origin.indexOf(baseUrl) == 0)
             return false;
 

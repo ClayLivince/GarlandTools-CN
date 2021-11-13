@@ -1,3 +1,4 @@
+use xivsearch;
 -- Lists
 CREATE TABLE Lists (
   Id char(10) NOT NULL,
@@ -22,7 +23,7 @@ CREATE TABLE Search (
     Type varchar(15) not null,
     Name varchar(200) character set utf8 not null,
     OriginalName varchar(200) character set utf8 not null,
-    Lang char(2) not null,
+    Lang char(3) not null,
     HashCode int unsigned not null,
     Json text character set utf8 not null,
     primary key(Id, Type, Lang),
@@ -63,7 +64,7 @@ CREATE TABLE SearchRecipe (
 CREATE TABLE DataJson (
     Id varchar(15) not null,
     Type varchar(15) not null,
-    Lang char(2) not null,
+    Lang char(3) not null,
     Version smallint unsigned not null,
     HashCode int unsigned not null,
     Json mediumtext character set utf8 not null,
@@ -75,7 +76,7 @@ CREATE TABLE DataJson (
 CREATE TABLE DataJsonTest (
     Id varchar(15) not null,
     Type varchar(15) not null,
-    Lang char(2) not null,
+    Lang char(3) not null,
     Version smallint unsigned not null,
     HashCode int unsigned not null,
     Json mediumtext character set utf8 not null,
@@ -99,7 +100,7 @@ CREATE TABLE Comment (
     IP varchar(100) not null,
     Score smallint not null default 0,
     ForType varchar(15) not null,
-    ForLang char(2) not null,
+    ForLang char(3) not null,
     ForId varchar(15) not null,
     SourceType varchar(15),
     SourceId varchar(15),

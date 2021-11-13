@@ -1,5 +1,5 @@
 gt.leve = {
-    pluralName: 'Leves',
+    pluralName: '理符',
     type: 'leve',
     index: {},
     partialIndex: {},
@@ -57,9 +57,11 @@ gt.leve = {
             complexity: leve.complexity
         };
 
+        gt.localize.extractLocalize(leve, view);
+
         view.location = gt.location.index[leve.areaid].name;
         view.byline = 'Lv. ' + leve.lvl + ', ' + view.location;
-        view.subheader = "Level " + leve.lvl + " " + view.jobCategory + " Leve";
+        view.subheader = "等级 " + leve.lvl + " " + view.jobCategory + " 理符任务";
 
         if (leve.gc)
             view.gcIcon = 'images/' + gt.grandCompanies[leve.gc] + '.png';
@@ -100,11 +102,11 @@ gt.leve = {
                 view.xpPerComplexityHq = Math.round(2 * leve.xp / view.complexity.hq);
             }
 
-            var isDoH = _.find(gt.jobs, function(j) { return j.abbreviation == view.jobCategory && j.category == 'Disciple of the Hand' });
+            var isDoH = _.find(gt.jobs, function(j) { return j.abbreviation == view.jobCategory && j.category == '能工巧匠' });
             if (isDoH)
                 view.doh = true;
         }
-        
+
         return view;
     },
 
@@ -131,7 +133,7 @@ gt.leve = {
     newGroupClicked: function(e) {
         var $block = $(this).closest('.block');
         var view = $block.data('view');
-        gt.group.setup('Leve Calculator', $block, function(groupData) {
+        gt.group.setup('理符计算器', $block, function(groupData) {
             var leveData = { type: 'leve', id: view.id };
             groupData.activePage = 'contents-page';
             groupData.headers = groupData.headers || { };
@@ -143,6 +145,7 @@ gt.leve = {
     resolveCraftSource: function(step, id) {
         step.sourceType = 'leve';
         step.sourceView = { id: id, type: 'leve', name: 'Leve', sourceName: 'Leve', icon: 'images/Leve.png' };
-        step.setCategory(['Leve', 'Other']);
+        step.setCategory(['理符', '其他']);
     },
 };
+

@@ -1,14 +1,14 @@
 gt.node = {
-    pluralName: 'Gathering Nodes',
-    type: 'node',   
+    pluralName: '采集点',
+    type: 'node',
     blockTemplate: null,
     index: {},
     partialIndex: {},
     version: 2,
     bonusIndex: null,
     limitedNodeUpdateKey: null,
-    types: ['Mineral Deposit', 'Rocky Outcropping', 'Mature Tree', 'Lush Vegetation', 'Spearfishing'],
-    jobAbbreviations: ['MIN', 'MIN', 'BTN', 'BTN', 'FSH'],
+    types: ['矿脉', '石场', '良材', '草场', '刺鱼'],
+    jobAbbreviations: ['采矿工', '采矿工', '园艺工', '园艺工', '捕鱼人'],
     browse: [
         { type: 'icon-list', prop: 'job' },
         { type: 'group', prop: 'region' },
@@ -56,15 +56,17 @@ gt.node = {
             stars: node.stars,
             time: node.time,
             uptime: node.uptime,
-            zone: gt.location.index[node.zoneid] || { name: 'Unknown' },
+            zone: gt.location.index[node.zoneid] || { name: '未知' },
             coords: node.coords,
             obj: node
         };
 
+        gt.localize.extractLocalize(node, view);
+
         var typePrefix = node.limitType ? (node.limitType + ' ') : '';
 
         view.icon = 'images/' + view.category + '.png';
-        view.subheader = "Level " + node.lvl + gt.util.stars(node.stars) + ' ' + typePrefix + view.category;
+        view.subheader = "等级 " + node.lvl + gt.util.stars(node.stars) + ' ' + typePrefix + view.category;
 
         var typePrefix = node.limitType ? node.limitType + ' ' : '';
         view.byline = 'Lv. ' + view.lvl + gt.util.stars(view.stars) + ' ' + typePrefix + view.category;
@@ -125,7 +127,7 @@ gt.node = {
         var name = gt.model.name(partial);
         var category = gt.node.types[partial.t];
         var typePrefix = partial.lt ? (partial.lt + ' ') : '';
-        var zone = gt.location.index[partial.z] || { name: 'Unknown' };
+        var zone = gt.location.index[partial.z] || { name: '未知' };
         var region = gt.location.index[zone.parentId];
 
         return {
@@ -140,7 +142,7 @@ gt.node = {
             zone: zone,
             location: zone.name,
             lvl: partial.l,
-            region: region ? region.name : 'Unknown',
+            region: region ? region.name : '未知',
             limited: partial.ti ? 1 : 0,
             stars: partial.s,
             category: category
@@ -153,7 +155,7 @@ gt.node = {
             step.sourceType = 'node';
             step.sourceView = view;
         }
-        step.setCategory(['Gathering']);
+        step.setCategory(['采集']);
     },
 
     limitedNodeUpdate: function() {
@@ -182,7 +184,7 @@ gt.node = {
                 view.progressStart = info.progressStart;
                 view.progressEnd = info.progressEnd;
 
-                $('.spawn-info', $block).text(info.text);
+                $('.spawn-info', $block).html(info.text);
                 $progress.removeClass('spawning active').addClass(info.state);
                 $block.data('next-spawn-change', info.change.getTime() + 1001);
             }
@@ -256,13 +258,13 @@ gt.node = {
 
         if (eorzeaMinutesDifference > 0 && eorzeaMinutesDifference <= 120) {
             // Spawns within 2 hours.
-            info.text = "Spawns at " + gt.time.formatTime(times.lNextSpawn);
+            info.text = "在 <i class=\"xiv local-time-chs\"></i> " + gt.time.formatTime(times.lNextSpawn) + " 出现";
             info.state = 'spawning';
             info.change = times.lNextSpawn;
         } else if (eorzeaMinutesDifference < 0 && eorzeaMinutesDifference > -view.uptime) {
             // Active for {uptime} minutes.
             var lNextExpire = gt.time.eorzeaToLocal(times.eNextExpire);
-            info.text = "Active until " + gt.time.formatTime(lNextExpire);
+            info.text = "在 <i class=\"xiv local-time-chs\"></i> " + gt.time.formatTime(lNextExpire) + " 消失";
             info.state = "active";
             info.change = lNextExpire;
             info.progressStart = lNextExpire;
@@ -272,7 +274,7 @@ gt.node = {
             var eSpawning = new Date(times.eNextSpawn);
             eSpawning.setUTCHours(eSpawning.getUTCHours() - 2);
 
-            info.text = "Spawns at " + gt.time.formatTime(times.lNextSpawn);
+            info.text = "在 <i class=\"xiv local-time-chs\"></i> " + gt.time.formatTime(times.lNextSpawn) + " 出现";
             info.state = 'dormant';
             info.change = gt.time.eorzeaToLocal(eSpawning);
         }

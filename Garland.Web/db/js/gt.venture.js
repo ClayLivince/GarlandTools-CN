@@ -47,7 +47,7 @@ gt.venture = {
             var venture = gt.venture.index[itemVentureId];
             if (!venture)
                 continue;
-                
+
             if ((venture.jobs == 17 && settings.minerVentures) ||
                 (venture.jobs == 18 && settings.botanyVentures) ||
                 (venture.jobs == 19 && settings.fisherVentures) ||
@@ -64,6 +64,7 @@ gt.venture = {
     resolveCraftSourceCore: function(step, venture) {
         step.sourceType = 'venture';
         step.sourceView = gt.venture.getViewModel(venture);
-        step.setCategory(['Venture', 'Other']);
+        step.setCategory(['雇员探险', '其他']);
     }
 };
+

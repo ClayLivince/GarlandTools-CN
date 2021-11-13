@@ -1,5 +1,5 @@
 gt.npc = {
-    pluralName: 'NPCs',
+    pluralName: 'NPC',
     type: 'npc',
     blockTemplate: null,
     tradeEntryTemplate: null,
@@ -11,7 +11,7 @@ gt.npc = {
         { type: 'group', prop: 'location' },
         { type: 'sort', prop: 'name' }
     ],
-    availabilityStateText: { 'active': 'Available until', 'dormant': 'Available at', 'spawning': 'Available at' },
+    availabilityStateText: { 'active': '消失', 'dormant': '出现', 'spawning': '出现' },
 
     initialize: function(data) {
         gt.npc.blockTemplate = doT.template($('#block-npc-template').text());
@@ -71,11 +71,15 @@ gt.npc = {
             if (location.parentId)
                 view.region = gt.location.index[location.parentId].name;
             else
-                view.region = 'Other';
+                view.region = '其他';
         }
         else {
             view.location = '';
             view.region = '';
+        }
+
+        if (partial.c){
+            view.coords = partial.c;
         }
 
         return view;
@@ -96,6 +100,8 @@ gt.npc = {
             obj: npc,
             appearance: npc.appearance
         };
+
+        gt.localize.extractLocalize(npc, view);
 
         view.byline = view.title;
 
@@ -144,14 +150,14 @@ gt.npc = {
                     var alt = v.obj;
                     var altDesc = [];
                     if (alt.s)
-                        altDesc.push(alt.s + ' ' + gt.util.pluralNum('shop', alt.s));
+                        altDesc.push(alt.s + ' 商店');
                     if (alt.q)
-                        altDesc.push(alt.q + ' ' + gt.util.pluralNum('quest', alt.q));
+                        altDesc.push(alt.q + ' 任务');
                     if (alt.k)
-                        altDesc.push(alt.k + ' ' + gt.util.pluralNum('dialogue', alt.k));
+                        altDesc.push(alt.k + ' 对话');
 
                     if (!altDesc.length)
-                        altDesc.push("Other");
+                        altDesc.push("其他");
 
                     v.desc = altDesc.join(', ');
                     v.isCurrent = alt.i == npc.id;
@@ -236,7 +242,7 @@ gt.npc = {
 
         if (npc.appearance && npc.appearance.hairStyle)
             return '../files/icons/customize/' + npc.appearance.hairStyle + '.png';
-        
+
         return 'images/UnknownNpc.png';
     },
 
@@ -255,7 +261,7 @@ gt.npc = {
         step.sourceType = 'npc';
         step.sourceView = gt.model.partial(gt.npc, id || step.item.vendors[0]);
         step.price = { currency: 1, cost: step.item.price, totalCost: step.item.price, yield: 1 }; // 1 is the id of gil.
-        step.setCategory(['Gil Vendor', 'Vendor']);
+        step.setCategory(['金币商人', '商人']);
     }
 };
 
@@ -307,7 +313,7 @@ gt.npc.timer.prototype.next = function(now) {
 gt.npc.timer.prototype.notify = function() {
     gt.util.showNotification(this.view.name, {
         icon: 'images/TripleTriad.png',
-        body: this.view.fullLocation || "Available for Triple Triad",
+        body: this.view.fullLocation || "可进行九宫幻卡对战",
         tag: this.view.id
     });
 };

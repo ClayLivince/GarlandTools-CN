@@ -56,7 +56,15 @@ namespace Garland.Data.Modules
                 if (sResident.SaleValue > 0)
                     item.tripletriad.sellMgp = sResident.SaleValue;
 
+                // Mark out true id and extra cards
+                item.tripletriad.displayId = sResident["Order"];
+                item.tripletriad.extra = sResident["UIPriority"].Equals((byte)5);
+
                 // unlock.TripleTriadCard.Icon is only 40x40 and looks awful.
+                // then let's do some magic and make that to be 80x80 one.
+                // and also keep a 40x in that directory.
+                item.tripletriad.icon = IconDatabase.EnsureEntry("triad\\icon", unlock.TripleTriadCard.Icon);
+                IconDatabase.EnsureEntryHQ("triad\\icon", unlock.TripleTriadCard.Icon);
                 item.tripletriad.plate = IconDatabase.EnsureEntry("triad\\plate", sCard.PlateIcon);
 
                 item.tripletriad.rarity = sResident.TripleTriadCardRarity.Key;
@@ -82,6 +90,8 @@ namespace Garland.Data.Modules
                     item.tripletriad.right = sResident.Right;
 
                 _itemsByTripleTriadCardId[sCard.Key] = item;
+
+                _builder.Db.CardItemByCardId[sCard.Key] = item;
             }
         }
 
@@ -149,7 +159,28 @@ namespace Garland.Data.Modules
                     item.tripletriad.rewardFrom.Add(sNpc.Key);
                     _builder.Db.AddReference(item, "npc", sNpc.Key, false);
                 }
+
+                BuildExternalPartial(npc);
             }
+        }
+
+        void BuildExternalPartial(dynamic npc)
+        {
+            dynamic partial = new JObject(npc.tripletriad);
+
+            // Be sure to change the language code here!!!!
+            partial.name = npc.chs.name;
+            if (npc.title != null)
+                partial.title = npc.title;
+
+            if (npc.zoneid != null)
+                partial.locationId = npc.zoneid;
+
+            if (npc.coords != null)
+                partial.coords = npc.coords;
+
+
+            _builder.Db.CardNpcs.Add(partial);
         }
     }
 }

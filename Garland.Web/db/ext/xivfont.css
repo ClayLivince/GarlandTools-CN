@@ -380,6 +380,39 @@ i.xiv.number-9::before {
 i.xiv.e069::before {
   content: '\e069';
 }
+i.xiv.number-10::before {
+  content: '\e061\e060';
+}
+i.xiv.number-11::before {
+  content: '\e061\e061';
+}
+i.xiv.number-12::before {
+  content: '\e061\e062';
+}
+i.xiv.number-13::before {
+  content: '\e061\e063';
+}
+i.xiv.number-14::before {
+  content: '\e061\e064';
+}
+i.xiv.number-15::before {
+  content: '\e061\e065';
+}
+i.xiv.number-16::before {
+  content: '\e061\e066';
+}
+i.xiv.number-17::before {
+  content: '\e061\e067';
+}
+i.xiv.number-18::before {
+  content: '\e061\e068';
+}
+i.xiv.number-19::before {
+  content: '\e061\e069';
+}
+i.xiv.number-20::before {
+  content: '\e062\e060';
+}
 i.xiv.lv::before {
   content: '\e06a';
 }

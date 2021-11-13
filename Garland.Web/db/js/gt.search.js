@@ -7,6 +7,7 @@ gt.search = {
     resultIndex: { quest: { }, leve: { }, action: { }, achievement: { }, instance: { }, fate: { }, npc: { }, mob: { }, item: { }, fishing: { }, node: { }, status: { } },
     activeQuery: null,
     serverSearchId: 0,
+    currentLang: 'chs',
 
     initialize: function(data) {
         if (!gt.core.isLive)
@@ -34,6 +35,7 @@ gt.search = {
             $('#search-section').addClass('inactive');
 
         // Bind events
+        $('#filter-lang').change(gt.search.filterLangChanged);
         $('#filter-item-level-min').change(gt.search.filterItemLevelMinChanged);
         $('#filter-item-level-max').change(gt.search.filterItemLevelMaxChanged);
         $('#filter-item-craftable').change(gt.search.filterItemCraftableChanged);
@@ -236,7 +238,7 @@ gt.search = {
             gt.search.activeQuery = query;
             var models = _.map(result, gt.search.getViewModel);
             gt.search.completeSearch({ total: models.length, result: models });
-       });
+        });
     },
 
     isQueryCached: function(query) {
@@ -244,6 +246,10 @@ gt.search = {
             var cachedQuery = gt.search.cachedQueries[i];
 
             // A query is not a cache match when...
+
+            // Language differ.
+            if (!_.isEqual(query.lang, cachedQuery.lang))
+                continue;
 
             // Filters differ.
             if (!_.isEqual(query.filters, cachedQuery.filters))
@@ -287,11 +293,11 @@ gt.search = {
             return;
 
         // Reset page if we came from an interaction event.
-        if (e) 
+        if (e)
             gt.search.page = 0;
 
         // Disable search controls if search is blank.
-        if (!query.filters.activeSearch && (!query.name.length || query.name.length < 3)) {
+        if (!query.filters.activeSearch && (!query.name.length || query.name.length < 1 || query.name.indexOf("'") != -1)) {
             $('#search-section').addClass('inactive');
             $('.search-list-page, .search-icons-page', '.search-page').empty();
             $('#search-previous, #search-next').removeClass('show');
@@ -311,12 +317,12 @@ gt.search = {
     completeSearch: function(matches) {
         // Stats
         if (matches.total == 0)
-            $('#search-results-count').text('No results');
+            $('#search-results-count').text('无结果');
         else if (matches.total == 1)
-            $('#search-results-count').text('1 result');
+            $('#search-results-count').text('1 条结果');
         else
-            $('#search-results-count').text(matches.result.length + ' results, page ' + (gt.search.page + 1));
-        
+            $('#search-results-count').text(matches.result.length + ' 条结果, 第 ' + (gt.search.page + 1) + ' 页');
+
         // Don't have an accurate total page count.  Only show when a multiple of max results.
         $('.search-next').toggleClass('show', matches.result.length > 0 && matches.result.length % gt.search.maxResults == 0);
         $('.search-previous').toggleClass('show', gt.search.page > 0);
@@ -339,7 +345,8 @@ gt.search = {
             filters: $.extend({}, gt.settings.data.filters),
             name: input.trim(),
             match: null,
-            page: gt.search.page
+            page: gt.search.page,
+            lang: gt.search.currentLang
         };
 
         if (query.filters.equippable) {
@@ -356,7 +363,12 @@ gt.search = {
         if (query.name)
             parts.push('text=' + encodeURIComponent(query.name));
 
-        parts.push('lang=' + gt.settings.data.lang);
+        //parts.push('lang=' + gt.settings.data.lang);
+
+        if (gt.search.currentLang != 'global'){
+            parts.push('lang=' + gt.search.currentLang);
+        }
+        query.lang = gt.search.currentLang;
 
         if (query.page)
             parts.push('page=' + query.page);
@@ -394,6 +406,12 @@ gt.search = {
     clearFiltersClicked: function(e) {
         gt.settings.data.filters = $.extend({}, gt.settings.defaultSearchFilters);
         gt.search.loadFilters(gt.settings.data.filters);
+        gt.search.execute(e);
+        gt.settings.saveDirty();
+    },
+
+    filterLangChanged: function(e) {
+        gt.search.currentLang = String($(this).val());
         gt.search.execute(e);
         gt.settings.saveDirty();
     },
@@ -495,3 +513,4 @@ gt.search = {
         return false;
     }
 };
+

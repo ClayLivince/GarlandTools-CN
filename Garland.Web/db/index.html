@@ -22,6 +22,7 @@
     <script src="ext/image-picker.min.js"></script>
 
     <script src="js/gt.js"></script>
+    <script src="js/tripletriad.js"></script>
 
     <script>
         $(gt.core.initialize);
@@ -150,7 +151,7 @@
             <div class="map-container" data-x="{{=it.coords[0]}}" data-y="{{=it.coords[1]}}" {{?it.radius}}data-r="{{=it.radius}}"{{?}} data-id="{{=it.location.id}}">
                 <span class="region">{{=it.location.name}}</span>
                 <span class="position" data-original="{{=it.displayCoords[0]}}, {{=it.displayCoords[1]}}">{{=it.displayCoords[0]}}, {{=it.displayCoords[1]}}</span>
-                <canvas data-image="{{=it.image}}" {{?it.icon}}data-icon="{{=it.icon}}"{{?}} {{?it.iconfilter}}data-iconfilter="{{=it.iconfilter}}"{{?}} width="2048" height="2048" class="map">
+                <canvas data-image="{{=it.image}}" {{?it.icon}}data-icon="{{=it.icon}}"{{?}} {{?it.iconfilter}}data-iconfilter="{{=it.iconfilter}}"{{?}} width="2048" height="2048" class="map"></canvas>
             </div>
         </div>
     </script>
@@ -352,6 +353,316 @@
         <div class="content main">
             <textarea class="note-text">{{=it.text}}</textarea>
         </div>
+    </script>
+
+    <script id="tripletriad-card-template" type="text/x-dot-template">
+        <span class="tripletriad-card-number">编号{{?it.extra}}外{{?}} {{=it.displayId}}</span>
+        <span class="tripletriad-card-type">{{?it.type}}{{=it.type}}{{?}}</span>
+        <div class="tripletriad-card block-link" data-type="item" data-id="{{=it.itemId}}" >
+            <div class="tripletriad-plate-container">
+                <img src="../files/icons/triad/plate/{{=it.plate}}.png" class="left tripletriad-plate">
+                <img src="../files/icons/triad/star/{{=it.rarity}}.png" class="tripletriad-stars">
+                <div class="tripletriad-plate-background"></div>
+                <span class="tripletriad-top value">{{=it.top}}</span>
+                <span class="tripletriad-right value">{{=it.right}}</span>
+                <span class="tripletriad-bottom value">{{=it.bottom}}</span>
+                <span class="tripletriad-left value">{{=it.left}}</span>
+            </div>
+        </div>
+    </script>
+
+    <script id="tripletriad-source-template" type="text/x-dot-template">
+        {{?it.vendors}}
+        <div class="vendors subsection collapsible collapsed" data-headername="vendors">
+            <img src="images/Shop.png" class="subsection-icon">
+            <h2 class="pointer">商店<span class="right badge">{{=it.vendors.length}}</span></h2>
+
+            {{?it.vendors}}
+            {{~it.vendors :value:index}}
+            <div class="collapse-toggle source-link block-link pointer line hover-highlight" data-id="{{=value.id}}" data-type="npc">
+                <div class="right"><img class="icon small" src="../files/icons/item/65002.png">{{=it.price.toLocaleString()}}</div>
+                    <div class="overflow-wrapper">
+                        {{?it.ingredient_of}}<input type="checkbox">{{?}}
+                        <span class="highlight">{{=value.name}}</span>
+                        {{?value.location}}<span class="byline"> {{=value.location}}</span>{{?}}
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            {{~}}
+            {{?}}
+        </div>
+        {{?}}
+
+        {{?it.trades}}
+        {{~it.trades :shop:shopIndex}}
+        <div class="trades subsection collapsible collapsed" data-headername="trade {{=shop.shop}}">
+            <img src="images/Trader.png" class="subsection-icon">
+            <h2 class="pointer">{{=shop.shop}}<span class="right badge">{{=shop.listings.length}}</span></h2>
+
+            <div class="subsection-header">
+                {{~shop.npcs :npc:npcIndex}}
+                <div class="source-link line collapse-toggle" data-id="{{=npc.id}}" data-type="trade">
+                    {{?it.ingredient_of}}<input type="checkbox"> {{?}}
+                    <div class="inline-block block-link pointer hover-highlight collapse-toggle" data-id="{{=npc.id}}" data-type="npc">
+                        <span class="highlight">{{=npc.name}}</span>
+                        {{?npc.location}}<span class="byline">{{=npc.location}}</span>{{?}}
+                    </div>
+                </div>
+                {{~}}
+            </div>
+
+            {{~shop.listings :listing:listingIndex}}
+            <div class="line collapse-toggle">
+                {{=gt.npc.tradeEntryTemplate(listing)}}
+            </div>
+            {{~}}
+        </div>
+        {{~}}
+        {{?}}
+
+        {{?it.tripletriadReward}}
+        <div class="tripletriadreward subsection collapsible" data-headername="tripletriadreward">
+            <img src="images/TripleTriadReward.png" class="subsection-icon">
+            <h2 class="pointer">九宫幻卡对局奖励</h2>
+
+            {{~it.tripletriadReward :npc:npcIndex}}
+            <div class="line collapse-toggle hover-highlight block-link pointer" data-id="{{=npc.id}}" data-type="npc">
+                <img src="{{=npc.icon}}" class="icon small">
+                <span class="highlight">{{=npc.name}}</span>
+                {{?npc.location}}<span class="byline">{{=npc.location}}</span>{{?}}
+                {{?npc.coords}}<span class="byline">{{=npc.coords}}</span>{{?}}
+            </div>
+            {{~}}
+        </div>
+        {{?}}
+
+        {{?it.disposal}}
+        <div class="disposal subsection collapsible" data-headername="disposal">
+            <img src="{{=it.disposal[0].item.icon}}" class="subsection-icon">
+            <h2 class="pointer">Disposal Shop <span class="right badge">{{=it.disposal.length}}</span></h2>
+
+            {{~it.disposal :shop:index}}
+            <h4 class="line collapse-toggle hover-highlight block-link pointer" data-id="{{=shop.item.id}}" data-type="item">
+                <div class="right">
+                    <div class="inline-block trade"><img class="icon small" src="{{=shop.item.icon}}" title="{{=shop.item.name}}">{{=shop.amount.toLocaleString()}}</div>
+                </div>
+
+                <div class="overflow-wrapper">{{=shop.shop}}</div>
+                <div class="clear"></div>
+            </h4>
+            {{~shop.npcs :npc:nindex}}
+            <div class="line collapse-toggle block-link hover-highlight pointer" data-id="{{=npc.id}}" data-type="npc">
+                <span class="highlight">{{=npc.name}}</span>
+                {{?npc.location}}<span class="byline">{{=npc.location}}</span>{{?}}
+            </div>
+            {{~}}
+            {{~}}
+        </div>
+        {{?}}
+
+        {{?it.drops}}
+        <div class="mobs subsection collapsible collapsed" data-headername="mobs">
+            <img src="images/Mob.png" class="subsection-icon">
+            <h2 class="pointer">掉落 <span class="right badge">{{=it.drops.length}}</span></h2>
+
+            {{~it.drops :value:index}}
+            <div class="collapse-toggle line pointer source-link block-link hover-highlight" data-id="{{=value.id}}" data-type="mob">
+                <div class="overflow-wrapper">
+                    {{?it.ingredient_of}}<input type="checkbox">{{?}}
+                    <span class="highlight">Lv. {{=value.lvl}} {{=value.name}}</span>
+                    <span class="byline">{{=value.location}}</span>
+                </div>
+            </div>
+            {{~}}
+        </div>
+        {{?}}
+
+        {{?it.instances}}
+        <div class="instances subsection collapsible collapsed" data-headername="instances">
+            <img src="images/BronzeCoffer.png" class="subsection-icon">
+            <h2 class="pointer">副本宝箱 <span class="right badge">{{=it.instances.length}}</span></h2>
+
+            {{~it.instances :value:index}}
+            <div class="block-link source-link line pointer hover-highlight collapse-toggle" data-id="{{=value.id}}" data-type="instance">
+                <div class="overflow-wrapper">
+                    {{?it.ingredient_of}}<input type="checkbox">{{?}}
+                    <img src="{{=value.icon}}" class="icon small">
+                    <span class="highlight"> {{=value.name}}</span>
+                    <span class="byline">{{=value.byline}}</span>
+                </div>
+            </div>
+            {{~}}
+        </div>
+        {{?}}
+
+        {{?it.quests || it.usedInQuest}}
+        <div class="quests subsection collapsible collapsed" data-headername="quests">
+            <img src="../files/icons/journal/61411.png" class="subsection-icon">
+            <h2 class="pointer">任务奖励 <span class="right badge">{{=(it.quests ? it.quests.length : 0) + (it.usedInQuest ? it.usedInQuest.length : 0)}}</span></h2>
+
+                {{?it.quests}}
+                {{~it.quests :value:index}}
+                <div class="collapse-toggle line pointer source-link block-link hover-highlight" data-id="{{=value.id}}" data-type="quest">
+                    <span class="right">奖励</span>
+                    <div class="overflow-wrapper">
+                        <span class="highlight">{{=value.name}}</span>
+                        <span class="byline">{{=value.location}}</span>
+                    </div>
+                </div>
+                {{~}}
+                {{?}}
+
+                {{?it.usedInQuest}}
+                {{~it.usedInQuest :value:index}}
+                <div class="collapse-toggle line pointer source-link block-link hover-highlight" data-id="{{=value.id}}" data-type="quest">
+                    <span class="right">任务需求</span>
+                    <div class="overflow-wrapper">
+                        <span class="highlight">{{=value.name}}</span>
+                        <span class="byline">{{=value.location}}</span>
+                    </div>
+                </div>
+                {{~}}
+                {{?}}
+        </div>
+        {{?}}
+
+        {{?it.loot}}
+        <div class="treasure subsection collapsible collapsed" data-headername="treasure">
+            <img src="{{=it.loot[0].icon}}" class="subsection-icon">
+            <h2 class="pointer">掉落 <span class="right badge">{{=it.loot.length}}</span></h2>
+
+            {{~it.loot :value:index}}
+            {{=gt.item.halfLinkTemplate(value)}}
+            {{~}}
+        </div>
+        {{?}}
+
+        {{?it.other}}
+            <div class="other subsection collapsible collapsed" data-headername="other">
+                <img src="{{=it.other[0].icon}}" class="subsection-icon">
+                <h2 class="pointer">其他 <span class="right badge">{{=it.other.length}}</span></h2>
+
+                {{~it.other :value:index}}
+                    {{?value.id}}
+                        <div class="block-link collapse-toggle pointer line hover-highlight" data-type="{{=value.type}}" data-id="{{=value.id}}">
+                    {{??}}
+                        <div class="collapse-toggle line">
+                    {{?}}
+                            {{?value.right}}<span class="right">{{=value.right}}</span>{{?}}
+                            <div class="overflow-wrapper">
+                                <img class="icon small" src="{{=value.icon}}">
+                                <span class="highlight">{{=value.name}}</span>
+                                {{?value.byline}}<span class="byline">{{=value.byline}}</span>{{?}}
+                            </div>
+                        </div>
+                {{~}}
+            </div>
+        {{?}}
+
+        {{?it.unlocks}}
+            <div class="unlocks subsection collapsible collapsed" data-headername="unlocks">
+                <img src="{{=it.unlocks[0].icon}}" class="subsection-icon">
+                <h2 class="pointer">解锁 <span class="right badge">{{=it.unlocks.length}}</span></h2>
+
+                {{~it.unlocks :value:index}}
+                {{=gt.item.halfLinkTemplate(value)}}
+                {{~}}
+            </div>
+            {{?}}
+
+            {{?it.desynthedFrom}}
+            <div class="desynthesis subsection collapsible collapsed" data-headername="desynthesis">
+                <img src="images/Desynth.png" class="subsection-icon">
+                <h2 class="pointer">由以下物品分解{{?it.desynth_job}}<span class="right">{{=it.desynth_job}} Lv. {{=it.rlvl}}</span>{{?}}</h2>
+
+                {{?it.desynthedFrom.length}}
+                {{~it.desynthedFrom :value:index}}
+                {{=gt.item.halfLinkTemplate(value)}}
+                {{~}}
+                {{??}}
+                某个物品
+                {{?}}
+            </div>
+            {{?}}
+
+        {{?it.bingoData}}
+            {{~it.bingoData :list:lindex}}
+            <div class="bingo-rewards-other bingo-rewards subsection collapsible collapsed" data-headername="bingo-{{=list.name}}">
+                <h3 class="pointer">{{=list.name}}</h3>
+                {{~list.rewards :reward:rindex}}
+                <div class="bingo-reward collapse-toggle">
+                    {{~reward :option:oindex}}
+                    <div class="block-link pointer hover-highlight reward-item" data-id="{{=option.item.id}}" data-type="item">
+                        <img class="icon" src="{{=option.item.icon}}" title="{{=option.item.name}}">
+                        {{?option.hq}}<img src="images/HQOverlay.png" class="hq-overlay icon">{{?}}
+                        {{?option.amount > 1}}{{=option.amount}} {{?}}
+                    </div>
+                    {{~}}
+                </div>
+                {{~}}
+            </div>
+            {{~}}
+        {{?}}
+    </script>
+
+    <script id="block-tripletriad-template" type="text/x-dot-template">
+            <div class="midline">
+                <div class="menu tab">
+                    <div data-page="card-list-page" class="button">幻卡列表</div>
+                    <div data-page="npc-list-page" class="button">对战NPC</div>
+                </div>
+            </div>
+
+            <div class="content main has-pages">
+                <div class="card-list-page page">
+                    <div class="page-selector subsection">
+                        {{=gt.tripletriad.generatePageList(it.currentPage)}}
+                    </div>
+                    <div class="tripletriad-list subsection">
+                        <div class="tripletriad-list">
+                            <div class="tripletriad-list-container">
+                                {{=gt.tripletriad.generateList(it.currentPage, 1, null)}}
+                            </div>
+                            <div class="tripletriad-summary">
+                                <span class="tripletriad-filter"></span>
+                                <span class="tripletriad-collected">总计 {{=it.collected}}/{{=it.total}}</span>
+                            </div>
+                        </div>
+
+                        <div class="tripletriad-right-panel" style="float: right">
+                            <div class="tripletriad-collect-mode" >
+                                <input type="checkbox" id="collect-mode" class="switch"/>
+                                <span style="margin: auto 0;">点击时收集</span>
+                            </div>
+                            <div class="tripletriad-card-container">
+                                {{=gt.tripletriad.cardTemplate(it.current)}}
+                            </div>
+                            <div class="tripletriad-collect-it" style="width: 100%">
+                                <button id="tripletriad-collect">
+                                    {{?it.firstCollected}}
+                                        <span style="color: #29fa4a">✔</span> 拿到了
+                                    {{??}}
+                                        <span>❌</span> 没拿到
+                                    {{?}}
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="divider">
+                        <hr>
+                    </div>
+
+                    <div class="tripletriad-card-info subsection" style="display: block;">
+                        <div class="tripletriad-card-number">编号 {{=it.current.displayId}}</div>
+                        <div class="card-name">{{=it.current.name}}</div>
+                        <div class="card-description">{{=it.current.description}}</div><br>
+                        <div class="label-card-get-method">获取方式</div>
+                        <br>
+                        <div class="sources-uses-page">{{=gt.tripletriad.cardSourceTemplate(it.current)}}</div>
+                    </div>
+                </div>
+            </div>
     </script>
 
     <script id="menu-equip-template" type="text/x-dot-template">
@@ -764,7 +1075,7 @@
                     {{?}}
 
                     {{?it.materiaShops}}
-                        <div class="materia-shops subsection collapsible data-headername="materia-shops">
+                        <div class="materia-shops subsection collapsible" data-headername="materia-shops">
                             <h3 class="pointer">魔晶石商人</h3>
                             {{=gt.group.shopTemplate(it.materiaShops)}}
                         </div>
@@ -898,7 +1209,7 @@
                             <span class="inline-block"><span class="circle"></span>{{=it.materia.attr}} +{{=it.materia.value}}</span>
                         {{?}}
                         {{?it.advancedMeldingForbidden}}<span class="inline-block"><span class="circle"></span>不可禁忌镶嵌</span>{{?}}
-                        {{?it.tripletriad && it.tripletriad.sellMgp}}<span class="inline-block"><span class="circle"></span>出售价格 {{=it.tripletriad.sellMgp}} 金币</span>{{?}}
+                        {{?it.tripletriad && it.tripletriad.sellMgp}}<span class="inline-block"><span class="circle"></span>出售价格 {{=it.tripletriad.sellMgp}} 金碟币</span>{{?}}
                     </div>
 
                     {{?it.craftSource}}
@@ -1152,14 +1463,14 @@
                             <div class="line block-link hover-highlight pointer collapse-toggle" data-id="{{=value.id}}" data-type="item">
                                 <img class="icon small" src="{{=value.icon}}" title="{{=value.name}}">
                                 <span class="highlight text name">{{=value.name}}</span>
-                                <span class="text right">升级</span>
+                                <span class="text right">上位替代</span>
                             </div>
                         {{~}}
                         {{~it.downgrades :value:index}}
                             <div class="line block-link hover-highlight pointer collapse-toggle" data-id="{{=value.id}}" data-type="item">
                                 <img class="icon small" src="{{=value.icon}}" title="{{=value.name}}">
                                 <span class="highlight text name">{{=value.name}}</span>
-                                <span class="text right">降级</span>
+                                <span class="text right">下位替代</span>
                             </div>
                         {{~}}
                     </div>
@@ -1218,7 +1529,7 @@
                     {{?}}
 
                     {{?it.ingredient_of}}
-                        <div class="deemphasize">在下方选择你更喜欢测材料来源。将会被优先显示。</div>
+                        <div class="deemphasize">在下方选择你更喜欢的材料来源。将会被优先显示。</div>
                     {{?}}
 
                     {{?(it.ingredient_of || it.craft || it.obj.category == 59) && !it.unlistable && !it.untradeable}}
@@ -2612,7 +2923,7 @@
                     {{?it.currency}}
                         <div class="currency line">
                             {{~it.currency :value:index}}
-                                <img class="icon small" src="{{=gt.item.iconPath(value.item.c)}}" title="{{=value.item.n}}">
+                                <img class="icon small" src="{{=value.item.icon}}" title="{{=value.item.name}}">
                                 <span class="text">{{=value.amount}}</span>
                             {{~}}
                         </div>
@@ -3459,7 +3770,7 @@
                         <select id="filter-lang">
                             <option value="chs" data-img-src="images/chs.png">汉语</option>
                             <option value="en" data-img-src="images/en.png">英语</option>
-                            <option value="jp" data-img-src="images/jp.png">日语</option>
+                            <option value="ja" data-img-src="images/jp.png">日语</option>
                             <option value="fr" data-img-src="images/fr.png">法语</option>
                             <option value="de" data-img-src="images/de.png">德语</option>
                             <option value="global" data-img-src="images/global.png">全部(慢)</option>
@@ -3652,6 +3963,10 @@
                 <div class="icon-button block-link hover-highlight" data-id="end" data-type="equip">
                     <img src="images/Mentor.png" class="icon small">
                     <span class="text">毕业装备</span>
+                </div>
+                <div class="icon-button block-link hover-highlight" data-id="tripletriad" data-type="tripletriad">
+                    <img src="../files/icons/item/27671.png" class="icon small">
+                    <span class="text">九宫幻卡图鉴</span>
                 </div>
                 <div class="icon-button hover-highlight">
                     <img src="images/Eraser.svg" class="icon small">

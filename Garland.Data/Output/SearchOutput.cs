@@ -178,7 +178,7 @@ namespace Garland.Data.Output
                 _update.Include(new SearchRow() { Id = id, Type = type, Lang = "de", Name = key_de, Json = JsonConvert.SerializeObject(GetSearchPartial(obj, type, "de", id)) });
 
             if (!string.IsNullOrEmpty(key_jp))
-                _update.Include(new SearchRow() { Id = id, Type = type, Lang = "jp", Name = key_jp, Json = JsonConvert.SerializeObject(GetSearchPartial(obj, type, "jp", id)) });
+                _update.Include(new SearchRow() { Id = id, Type = type, Lang = "ja", Name = key_jp, Json = JsonConvert.SerializeObject(GetSearchPartial(obj, type, "ja", id)) });
 
         }
 

@@ -1,5 +1,5 @@
 gt.fate = {
-    pluralName: 'Fates',
+    pluralName: 'Fate',
     type: 'fate',
     blockTemplate: null,
     index: {},
@@ -30,7 +30,7 @@ gt.fate = {
             icon: '../files/icons/fate/' + fate.type + '.png',
             byline: 'Lv. ' + fate.lvl,
             obj: fate,
-            
+
             description: fate.description,
             lvl: fate.lvl,
             maxlvl: fate.maxlvl,
@@ -38,6 +38,8 @@ gt.fate = {
             location: '???',
             fullLocation: '???'
         };
+
+        gt.localize.extractLocalize(fate, view);
 
         view.sourceName = view.name;
 
@@ -55,7 +57,7 @@ gt.fate = {
         }
 
         var levelRange = fate.lvl == fate.maxlvl ? fate.lvl : (fate.lvl + "-" + fate.maxlvl);
-        view.subheader = "Level " + levelRange + " " + fate.type + " FATE";
+        view.subheader = "等级 " + levelRange + " " + fate.type + " FATE";
 
         if (data && fate.items)
             view.items = gt.model.partialList(gt.item, fate.items);
@@ -66,7 +68,7 @@ gt.fate = {
     resolveCraftSource: function(step, id) {
         step.sourceType = 'fate';
         step.sourceView = gt.model.partial(gt.fate, id || step.item.fates[0]);
-        step.setCategory(['FATE', 'Other']);
+        step.setCategory(['FATE', '其他']);
     },
 
     getPartialViewModel: function(partial) {
@@ -85,3 +87,4 @@ gt.fate = {
         };
     }
 };
+
