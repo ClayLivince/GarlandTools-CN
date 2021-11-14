@@ -40,7 +40,7 @@ function gtIP() {
 }
 
 function gtConnect() {
-    $db = new mysqli("localhost", $GLOBALS['gtDbUsername'], $GLOBALS['gtDbPassword'], $GLOBALS['gtDbName']);
+    $db = new mysqli("localhost", $GLOBALS['gtDbUsername'], $GLOBALS['gtDbPassword'], $GLOBALS['gtDbName'], 3305);
     if ($db->connect_errno)
         exit("Failed to connect: (" . $db->connect_errno . ") " . $db->connect_error);
 
