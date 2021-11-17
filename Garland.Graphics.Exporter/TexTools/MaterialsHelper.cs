@@ -23,11 +23,11 @@ namespace Garland.Graphics.Exporter.TexTools
         /// Gets the materials for the model
         /// </summary>
         /// <returns>A dictionary containing the mesh number(key) and the associated texture data (value)</returns>
-        public static Dictionary<int, ModelTextureData> GetMaterials(
+        public static Dictionary<string, ModelTextureData> GetMaterials(
             DirectoryInfo gameDirectory, IItemModel item, XivMdl mdlData, XivRace race)
         {
-            var textureDataDictionary = new Dictionary<int, ModelTextureData>();
-            var mtrlDictionary = new Dictionary<int, XivMtrl>();
+            var textureDataDictionary = new Dictionary<string, ModelTextureData>();
+            var mtrlDictionary = new Dictionary<string, XivMtrl>();
             var mtrl = new Mtrl(gameDirectory);
             var mtrlFilePaths = mdlData.PathData.MaterialList;
             var hasColorChangeShader = false;
@@ -209,7 +209,9 @@ namespace Garland.Graphics.Exporter.TexTools
 
                 var dxVersion = int.Parse(Settings.Default.DX_Version);
 
-                var mtrlFile = filePath.Remove(0, 1);
+                var mtrlFile = filePath;
+                if (mtrlFile.StartsWith("/"))
+                    mtrlFile = mtrlFile.Remove(0, 1);
                 XivMtrl mtrlData;
                 try
                 {
@@ -249,7 +251,7 @@ namespace Garland.Graphics.Exporter.TexTools
                     hasColorChangeShader = true;
                 }
 
-                mtrlDictionary.Add(materialNum, mtrlData);
+                mtrlDictionary.Add(mtrlFilePath, mtrlData);
 
                 materialNum++;
             }

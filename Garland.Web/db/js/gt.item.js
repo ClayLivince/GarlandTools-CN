@@ -666,6 +666,12 @@ gt.item = {
         var primes = [];
         var hasBonusMeter = false;
         var minion = item.category == 81;
+        if (minion){
+            item.attr["生命值"] = item.attr.HP;
+            item.attr["攻击力"] = item.attr.Attack;
+            item.attr["防御力"] = item.attr.Defense;
+            item.attr["速度"] = item.attr.Speed;
+        }
         var primeKeys = minion ? gt.item.minionPrimeKeys : gt.item.itemPrimeKeys;
 
         var meldKeys = melds ? _.map(melds, function(m) { return m.item.materia.attr; }) : [];

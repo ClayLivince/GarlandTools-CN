@@ -17,6 +17,7 @@ using xivModdingFramework.Models.DataContainers;
 using xivModdingFramework.Models.FileTypes;
 using xivModdingFramework.Models.ModelTextures;
 using xivModdingFramework.Cache;
+using xivModdingFramework.Items.Enums;
 
 namespace Garland.Graphics.Exporter
 {
@@ -72,7 +73,9 @@ namespace Garland.Graphics.Exporter
                 "Doman Iron Hatchet", "Doman Iron Pickaxe",
                 "Mammon Lucis", "Kurdalegon Lucis", "Rauni Lucis",
                 "Kurdalegon Supra", "Rauni Supra",
-                "SmallClothes Body", "SmallClothes Feet", "SmallClothes Legs", "SmallClothes Body (NPC)",  "SmallClothes Feet (NPC)", "SmallClothes Feet 2 (NPC)", "SmallClothes Legs (NPC)"
+                "SmallClothes Body", "SmallClothes Feet", "SmallClothes Legs",
+                "SmallClothes Body (NPC)",  "SmallClothes Feet (NPC)",
+                "SmallClothes Feet 2 (NPC)", "SmallClothes Legs (NPC)"
             });
 
             var gearList = _gear.GetUnCachedGearList().Result.Where(g => !badGear.Contains(g.Name));
@@ -87,6 +90,7 @@ namespace Garland.Graphics.Exporter
                 }
                     
                 var primaryPath = EnsurePath(item.EquipSlotCategory.ToString(), item.ModelInfo);
+                
                 BatchExportItem(primaryPath, item, null, () => _gear.GetRacesForModels(item, item.DataFile).Result);
 
                 // Seconday Model has been deprecated. then just comment here for future changes,
@@ -105,8 +109,6 @@ namespace Garland.Graphics.Exporter
 
             var monsters = new XivRace[] { XivRace.Monster };
 
-            // Minions
-            /*
             var minionList = _companions.GetUncachedMinionList().Result;
             foreach (var minion in minionList)
             {
@@ -122,7 +124,7 @@ namespace Garland.Graphics.Exporter
                 
             }
             
-
+            
             // Mounts
             var mountList = _companions.GetUncachedMountList().Result;
             foreach (var mount in mountList)
@@ -131,7 +133,7 @@ namespace Garland.Graphics.Exporter
                 var path = EnsurePath("mount", modelKey);
                 BatchExportItem(path, mount, null, () => monsters);
             }
-            */
+            
 
             // Housing
             var furnitureList = _housing.GetUncachedFurnitureList().Result;
@@ -158,32 +160,75 @@ namespace Garland.Graphics.Exporter
 
             //WriteLine($"Exporting {item.GetType().Name} {item.Name}: {Path.GetFileNameWithoutExtension(path)}");
 
+            var items = new List<IItemModel>();
+
             var metadata = new ExportMetadata();
             metadata.Name = item.Name;
 
             var mdl = new Mdl(_gameDir, item.DataFile);
             var races = getRaces();
+
+            items.Add(item);
+
+            if (item.ModelInfo is XivMonsterModelInfo)
+            {
+                var info = item.ModelInfo as XivMonsterModelInfo;
+                if (info.ModelType.Equals(XivItemType.demihuman) && item is XivMount)
+                {
+                    items.Clear();
+                    var met = item.Clone() as XivMount;
+                    met.TertiaryCategory = "头部";
+                    var top = item.Clone() as XivMount;
+                    top.TertiaryCategory = "身体";
+                    var glv = item.Clone() as XivMount;
+                    glv.TertiaryCategory = "手臂";
+                    var dwn = item.Clone() as XivMount;
+                    dwn.TertiaryCategory = "腿部";
+                    var sho = item.Clone() as XivMount;
+                    sho.TertiaryCategory = "脚部";
+
+                    items.Add(met);
+                    items.Add(top);
+                    items.Add(glv);
+                    items.Add(dwn);
+                    items.Add(sho);
+                }
+            }
+            
             foreach (var race in races)
             {
-                    var mdlData = mdl.GetRawMdlData(item, race).Result;
-
-                    var textures = TexTools.MaterialsHelper.GetMaterials(_gameDir, item, mdlData, race);
-
+                var mdlDatas = new List<XivMdl>();
+                var textureSets = new List<Dictionary<string, ModelTextureData>>();
+                
+                foreach (var iItem in items)
+                {
                     try
                     {
-                        var set = BatchExportSet(mdlData, textures);
-                        set.Name = TexTools.XivStringRaces.ToRaceGenderName(race);
-                        metadata.Sets.Add(set);
-                    }
-                    catch (NotImplementedException e)
-                    {
+                        var mdlData = mdl.GetRawMdlData(iItem, race).Result;
+                        if (mdlData != null)
+                        {
+                            mdlDatas.Add(mdlData);
 
-                    }
-               
-                
-                
-                
-                
+                            textureSets.Add(TexTools.MaterialsHelper.GetMaterials(_gameDir, item, mdlData, race));
+
+                            continue;
+                        }
+                    } 
+                    catch (Exception)
+                    {}
+                    WriteLine($"Failed to get {iItem.Name}.");
+                    if (items.Count > 1)
+                        WriteLine($"{iItem.Name} has no components like {iItem.TertiaryCategory}.");
+                }
+
+                try
+                {
+                    var set = BatchExportSets(mdlDatas, textureSets);
+                    set.Name = TexTools.XivStringRaces.ToRaceGenderName(race);
+                    metadata.Sets.Add(set);
+                }
+                catch (NotImplementedException e)
+                { }
             }
 
             var metadataJson = JsonConvert.SerializeObject(metadata);
@@ -192,10 +237,25 @@ namespace Garland.Graphics.Exporter
             WriteLine($"Exported {item.GetType().Name} {item.Name}: {Path.GetFileNameWithoutExtension(path)}");
         }
 
-        static ExportSetMetadata BatchExportSet(XivMdl mdlData, Dictionary<int, ModelTextureData> textures)
+        static ExportSetMetadata BatchExportSet(XivMdl mdlData, Dictionary<string, ModelTextureData> textures)
         {
             var set = new ExportSetMetadata();
+            DoSingleExportSet(mdlData, textures, set);
+            return set;
+        }
 
+        static ExportSetMetadata BatchExportSets(List<XivMdl> mdlDatas, List<Dictionary<string, ModelTextureData>> textures)
+        {
+            var set = new ExportSetMetadata();
+            for(int cursor = 0; cursor < mdlDatas.Count; cursor++)
+            {
+                DoSingleExportSet(mdlDatas[cursor], textures[cursor], set);
+            }
+            return set;
+        }
+
+        static void DoSingleExportSet(XivMdl mdlData, Dictionary<string, ModelTextureData> textures, ExportSetMetadata set)
+        {
             TTModel model = TTModel.FromRaw(mdlData);
             foreach (var meshData in model.MeshGroups)
             {
@@ -209,7 +269,7 @@ namespace Garland.Graphics.Exporter
                 // Textures
                 try
                 {
-                    var textureData = textures[model.Materials.IndexOf(meshData.Material)];
+                    var textureData = textures[meshData.Material];
                     var pixelSettings = new PixelReadSettings(textureData.Width, textureData.Height, StorageType.Char, PixelMapping.RGBA);
                     modelMetadata.Alpha = _repo.Write(textureData.Alpha, pixelSettings, false);
                     modelMetadata.Diffuse = _repo.Write(textureData.Diffuse, pixelSettings, true);
@@ -219,14 +279,13 @@ namespace Garland.Graphics.Exporter
 
                     set.Models.Add(modelMetadata);
                 }
-                catch (Exception e) {
+                catch (Exception e)
+                {
                     Console.WriteLine(e.Message);
                     continue;
                 }
-                
-            }
 
-            return set;
+            }
         }
 
         static string EnsurePath(string category, XivModelInfo modelInfo)

@@ -2542,6 +2542,12 @@ gt.item = {
         var primes = [];
         var hasBonusMeter = false;
         var minion = item.category == 81;
+        if (minion){
+            item.attr["生命值"] = item.attr.HP;
+            item.attr["攻击力"] = item.attr.Attack;
+            item.attr["防御力"] = item.attr.Defense;
+            item.attr["速度"] = item.attr.Speed;
+        }
         var primeKeys = minion ? gt.item.minionPrimeKeys : gt.item.itemPrimeKeys;
 
         var meldKeys = melds ? _.map(melds, function(m) { return m.item.materia.attr; }) : [];
@@ -9935,7 +9941,6 @@ gt.tripletriad = {
 
     bindEvents: function($block, data, view){
         $('.tripletriad-list-row img', $block).click(gt.tripletriad.cardListImgClicked);
-        //$('.tripletriad-card-container', $block).click(gt.tripletriad.cardClicked);
         $('.card-page-number', $block).click(gt.tripletriad.pageClicked);
         $('#collect-mode', $block).click(gt.tripletriad.collectModeClicked);
         $('#tripletriad-collect', $block).click(gt.tripletriad.collectItClicked);
@@ -9943,7 +9948,6 @@ gt.tripletriad = {
 
     rebindEvents: function($block){
         $('.tripletriad-list-row img', $block).click(gt.tripletriad.cardListImgClicked);
-        //$('.tripletriad-card-container', $block).click(gt.tripletriad.cardClicked);
         $('.card-page-number', $block).click(gt.tripletriad.pageClicked);
     },
 
@@ -9962,7 +9966,8 @@ gt.tripletriad = {
             currentPage: this.currentPage,
             total: this.total,
             totalPages: this.totalPages,
-            collected: Object.keys(gt.settings.data.collectedCards).length
+            collected: Object.keys(gt.settings.data.collectedCards).length,
+            firstCollected: this.isCardCollected(1)
         };
     },
 
@@ -10045,13 +10050,21 @@ gt.tripletriad = {
     },
 
     isNpcPlayed: function (id){
-        return gt.settings.data.playedCardNpcs.has(id);
+        id = id.toString();
+        return gt.settings.data.playedCardNpcs[id];
     },
 
     setNpcPlayed: function (id){
+        id = id.toString();
+        let result;
         if (this.isNpcPlayed(id)){
-            gt.settings.data.playedCardNpcs.delete(id);
+            delete gt.settings.data.playedCardNpcs[id];
+            result = false;
+        } else {
+            gt.settings.data.playedCardNpcs[id] = true;
         }
+        gt.settings.saveDirty();
+        return result;
     },
 
     generateList: function (page, position){
