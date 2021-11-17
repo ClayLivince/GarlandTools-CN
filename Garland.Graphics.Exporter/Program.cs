@@ -73,7 +73,7 @@ namespace Garland.Graphics.Exporter
                 "Doman Iron Hatchet", "Doman Iron Pickaxe",
                 "Mammon Lucis", "Kurdalegon Lucis", "Rauni Lucis",
                 "Kurdalegon Supra", "Rauni Supra",
-                "SmallClothes Body", "SmallClothes Feet", "SmallClothes Legs",
+                "SmallClothes Body", "SmallClothes Feet", "SmallClothes Legs", "SmallClothes Hands",
                 "SmallClothes Body (NPC)",  "SmallClothes Feet (NPC)",
                 "SmallClothes Feet 2 (NPC)", "SmallClothes Legs (NPC)"
             });
@@ -209,7 +209,7 @@ namespace Garland.Graphics.Exporter
                         {
                             mdlDatas.Add(mdlData);
 
-                            textureSets.Add(TexTools.MaterialsHelper.GetMaterials(_gameDir, item, mdlData, race));
+                            textureSets.Add(TexTools.MaterialsHelper.GetMaterials(_gameDir, item, mdlData, race).Result);
 
                             continue;
                         }

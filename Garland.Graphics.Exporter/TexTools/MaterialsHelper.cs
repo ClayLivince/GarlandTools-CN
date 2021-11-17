@@ -14,6 +14,7 @@ using xivModdingFramework.Models.ModelTextures;
 using Color = SharpDX.Color;
 using ColorConverter = System.Windows.Media.ColorConverter;
 using WinColor = System.Windows.Media.Color;
+using System.Threading.Tasks;
 
 namespace Garland.Graphics.Exporter.TexTools
 {
@@ -23,7 +24,7 @@ namespace Garland.Graphics.Exporter.TexTools
         /// Gets the materials for the model
         /// </summary>
         /// <returns>A dictionary containing the mesh number(key) and the associated texture data (value)</returns>
-        public static Dictionary<string, ModelTextureData> GetMaterials(
+        public static async Task<Dictionary<string, ModelTextureData>> GetMaterials(
             DirectoryInfo gameDirectory, IItemModel item, XivMdl mdlData, XivRace race)
         {
             var textureDataDictionary = new Dictionary<string, ModelTextureData>();
@@ -212,10 +213,10 @@ namespace Garland.Graphics.Exporter.TexTools
                 var mtrlFile = filePath;
                 if (mtrlFile.StartsWith("/"))
                     mtrlFile = mtrlFile.Remove(0, 1);
-                XivMtrl mtrlData;
+                XivMtrl mtrlData = null;
                 try
                 {
-                    mtrlData = mtrl.GetMtrlData(mtrlItem, mtrlFile, dxVersion).Result;
+                    mtrlData = await mtrl.GetMtrlData(mtrlItem, mtrlFile, dxVersion);
                 }
                 catch (Exception ee)
                 {
@@ -223,21 +224,14 @@ namespace Garland.Graphics.Exporter.TexTools
                         Console.WriteLine(ee.Message);
                         continue;
                     }
-                       
-
-                    // Fall back to material data from the primary model.
-                    mtrlData = mtrl.GetMtrlData(item, mtrlFile, dxVersion).Result;
                 }
 
                 if (mtrlData == null) {
-                    if (mtrlItem.ModelInfo.PrimaryID == item.ModelInfo.PrimaryID) {
-                     
-                    }
-
+                    
                     // Fall back to material data from the primary model.
                     try
                     {
-                        mtrlData = mtrl.GetMtrlData(item, mtrlFile, dxVersion).Result;
+                        mtrlData = await mtrl.GetMtrlData(item, mtrlFile, dxVersion);
                     }catch (Exception eee)
                     {
                         Console.WriteLine(eee.Message);
@@ -261,7 +255,7 @@ namespace Garland.Graphics.Exporter.TexTools
 
                 if (hasColorChangeShader)
                 {
-                    var modelMaps = ModelTexture.GetModelMaps(gameDirectory, xivMtrl.Value).Result;
+                    var modelMaps = await ModelTexture.GetModelMaps(gameDirectory, xivMtrl.Value);
 
                     textureDataDictionary.Add(xivMtrl.Key, modelMaps);
                 }
@@ -288,7 +282,7 @@ namespace Garland.Graphics.Exporter.TexTools
                         //customColor = new CustomModelColors(winColor.R, winColor.G, winColor.B, winColor.A);
                     }
 
-                    var modelMaps = ModelTexture.GetModelMaps(gameDirectory, xivMtrl.Value, customColor).Result;
+                    var modelMaps = await ModelTexture.GetModelMaps(gameDirectory, xivMtrl.Value, customColor);
 
                     textureDataDictionary.Add(xivMtrl.Key, modelMaps);
                 }
