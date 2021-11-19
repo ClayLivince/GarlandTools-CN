@@ -890,7 +890,7 @@ gt.core = {
             hash += '{' + contents.join('|') + '}';
         }
 
-        return hash;
+        return encodeURI(hash);
     },
 
     setHash: function($block) {

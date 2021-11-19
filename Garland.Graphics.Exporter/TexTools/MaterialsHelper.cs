@@ -222,7 +222,7 @@ namespace Garland.Graphics.Exporter.TexTools
                 {
                     if (mtrlItem.ModelInfo.PrimaryID == item.ModelInfo.PrimaryID) {
                         Console.WriteLine(ee.Message);
-                        continue;
+                        throw;
                     }
                 }
 
@@ -235,11 +235,13 @@ namespace Garland.Graphics.Exporter.TexTools
                     }catch (Exception eee)
                     {
                         Console.WriteLine(eee.Message);
+                        throw;
                     }
-                    
                 }
+
                 if (mtrlData == null)
                     continue;
+
                 if (mtrlData.Shader.Contains("colorchange"))
                 {
                     hasColorChangeShader = true;

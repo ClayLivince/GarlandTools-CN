@@ -91,7 +91,13 @@ namespace Garland.Graphics.Exporter
                     
                 var primaryPath = EnsurePath(item.EquipSlotCategory.ToString(), item.ModelInfo);
                 
-                BatchExportItem(primaryPath, item, null, () => _gear.GetRacesForModels(item, item.DataFile).Result);
+                try
+                {
+                    BatchExportItem(primaryPath, item, null, () => _gear.GetRacesForModels(item, item.DataFile).Result);
+                } catch (Exception e)
+                {
+                    WriteLine($"Failed to export item {item.Name}.");
+                }
 
                 // Seconday Model has been deprecated. then just comment here for future changes,
                 /*
@@ -214,11 +220,12 @@ namespace Garland.Graphics.Exporter
                             continue;
                         }
                     } 
-                    catch (Exception)
+                    catch (Exception e)
                     {}
-                    WriteLine($"Failed to get {iItem.Name}.");
+                    WriteLine($"Failed to get {iItem.Name}。 Got null.");
                     if (items.Count > 1)
                         WriteLine($"{iItem.Name} has no components like {iItem.TertiaryCategory}.");
+
                 }
 
                 try
@@ -229,6 +236,11 @@ namespace Garland.Graphics.Exporter
                 }
                 catch (NotImplementedException e)
                 { }
+            }
+            if (metadata.Sets[0].Models.Count == 0)
+            {
+                WriteLine($"Empty model {item.Name}.");
+                return;
             }
 
             var metadataJson = JsonConvert.SerializeObject(metadata);
