@@ -16,8 +16,6 @@ namespace Garland.Data.Modules
 
         public Dictionary<string, dynamic> _instanceByEnName = new Dictionary<string, dynamic>();
         Dictionary<string, int> _tomestoneIdByName = new Dictionary<string, int>();
-        string _coordsRegex = @"X: ([0-9, \.]*) Y: ([0-9, \.]*)";
-
 
 
         public override void Start()
@@ -486,14 +484,12 @@ namespace Garland.Data.Modules
                 }
             }
 
-            if (jCoffer.coord != null)
+            if (jCoffer.coords != null)
             {
                 var coords = new JArray();
                 coffer.coords = coords;
-
-                Match match = Regex.Match(jCoffer.coord.Value, _coordsRegex);
-                coords.Add(float.Parse(match.Groups[1].Value));
-                coords.Add(float.Parse(match.Groups[2].Value));
+                coords.Add(jCoffer.coords.x);
+                coords.Add(jCoffer.coords.y);
             }
             
             return coffer;

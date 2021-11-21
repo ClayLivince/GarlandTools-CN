@@ -17,7 +17,7 @@ namespace Garland.Data.Modules
         {
             foreach (var iSpearFishingNotebook in _builder.InterSheet("SpearfishingNotebook"))
                 _iSpearFishingNotebookById[iSpearFishingNotebook.Key] = iSpearFishingNotebook;
-            
+
             BuildGatheringPointBonuses();
 
             // GatheringItemPoint collection.
@@ -261,57 +261,57 @@ namespace Garland.Data.Modules
                 // First match this data to the node object.
                 try
                 {
-                var node = _builder.Db.NodesById[nodeId];                
+                    var node = _builder.Db.NodesById[nodeId];
 
-                node.limitType = type;
-                node.uptime = uptime;
-                if (coords != null)
-                    node.coords = new JArray(coords);
-                node.time = new JArray(times);
+                    node.limitType = type;
+                    node.uptime = uptime;
+                    if (coords != null)
+                        node.coords = new JArray(coords);
+                    node.time = new JArray(times);
 
-                if (node.areaid == null)
-                    throw new Exception($"No area name for node {nodeId}.");
+                    if (node.areaid == null)
+                        throw new Exception($"No area name for node {nodeId}.");
 
-                var nodeItems = (JArray)node.items;
-                dynamic nodeItem = nodeItems.FirstOrDefault(ni => (int)ni["id"] == (int)item.id);
-                if (nodeItem == null)
-                    throw new Exception($"Invalid item {itemName} on node {nodeId}.");
-                nodeItem.slot = slot;
+                    var nodeItems = (JArray)node.items;
+                    dynamic nodeItem = nodeItems.FirstOrDefault(ni => (int)ni["id"] == (int)item.id);
+                    if (nodeItem == null)
+                        throw new Exception($"Invalid item {itemName} on node {nodeId}.");
+                    nodeItem.slot = slot;
 
-                // Next build up the gathering node view.
-                if (!viewsByNodeId.TryGetValue(nodeId, out var view))
-                {
-                    view = new JObject();
-                    viewsByNodeId[nodeId] = view;
-                    _builder.Db.NodeViews.Add(view);
-
-                    view.type = TypeToName((int)node.type);
-                    view.func = "node";
-                    view.items = new JArray();
-
-                    if (node.stars != null)
-                        view.stars = node.stars;
-
-                    view.time = node.time;
-                    view.title = node.name;
-
-                    var zone = _builder.Db.LocationsById[(int)node.zoneid];
-                    view.zone = zone.name;
-
-                    view.coords = node.coords;
-                    view.name = type;
-                    view.uptime = uptime;
-                    view.lvl = node.lvl;
-                    view.id = nodeId;
-
-                    if (node.bonus != null)
+                    // Next build up the gathering node view.
+                    if (!viewsByNodeId.TryGetValue(nodeId, out var view))
                     {
-                        var bonus = _bonusesByKey[(int)node.bonus[0]];
-                        view.condition = bonus.condition;
-                        view.bonus = bonus.bonus;
-                    }
+                        view = new JObject();
+                        viewsByNodeId[nodeId] = view;
+                        _builder.Db.NodeViews.Add(view);
 
-                    view.patch = node.patch;
+                        view.type = TypeToName((int)node.type);
+                        view.func = "node";
+                        view.items = new JArray();
+
+                        if (node.stars != null)
+                            view.stars = node.stars;
+
+                        view.time = node.time;
+                        view.title = node.name;
+
+                        var zone = _builder.Db.LocationsById[(int)node.zoneid];
+                        view.zone = zone.name;
+
+                        view.coords = node.coords;
+                        view.name = type;
+                        view.uptime = uptime;
+                        view.lvl = node.lvl;
+                        view.id = nodeId;
+
+                        if (node.bonus != null)
+                        {
+                            var bonus = _bonusesByKey[(int)node.bonus[0]];
+                            view.condition = bonus.condition;
+                            view.bonus = bonus.bonus;
+                        }
+
+                        view.patch = node.patch;
                     }
 
                     // Add items to the view.

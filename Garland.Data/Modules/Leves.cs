@@ -9,12 +9,14 @@ namespace Garland.Data.Modules
     public class Leves : Module
     {
         Dictionary<Game.Leve, Game.CraftLeve> _craftLevesByLeve;
+        Dictionary<int, Game.GatheringExp> _gatherExpByLvl;
 
         public override string Name => "Leves";
 
         public override void Start()
         {
             _craftLevesByLeve = _builder.Sheet<Game.CraftLeve>().ToDictionary(d => d.Leve);
+            _gatherExpByLvl = _builder.Sheet<Game.GatheringExp>().ToDictionary(d => d.Key);
 
             foreach (var sLeveRewardItem in _builder.Sheet<Game.LeveRewardItem>())
                 BuildLeveReward(sLeveRewardItem);
@@ -23,12 +25,12 @@ namespace Garland.Data.Modules
             foreach (var iLeve in _builder.InterSheet<Game.Leve>())
                 iLeveById[iLeve.Key] = iLeve;
 
+
             foreach (var sLeve in _builder.Sheet<Game.Leve>())
             {
                 iLeveById.TryGetValue(sLeve.Key, out var iLeve);
                 BuildLeve(sLeve, iLeve);
             }
-                
         }
 
         void BuildLeveReward(Game.LeveRewardItem sLeveRewardItem)
@@ -99,6 +101,13 @@ namespace Garland.Data.Modules
 
             if (sLeve.ExpReward > 0)
                 leve.xp = sLeve.ExpReward;
+            else if (sLeve.ClassJobCategory.Name.Equals("采矿工")
+                    || sLeve.ClassJobCategory.Name.Equals("园艺工")
+                    || sLeve.ClassJobCategory.Name.Equals("捕鱼人"))
+            {
+                if ((float)sLeve["ExpFactor"] > 0)
+                    leve.xp = ((float)sLeve["ExpFactor"]) * _gatherExpByLvl[leve.lvl.Value].Exp;
+            }
 
             if (sLeve.GilReward > 0)
                 leve.gil = sLeve.GilReward;
