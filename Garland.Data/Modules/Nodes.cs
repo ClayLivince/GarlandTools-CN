@@ -109,7 +109,7 @@ namespace Garland.Data.Modules
             var nameModifier = (byte)sGatheringPoint[0];
             if (nameModifier == 6)
             {
-                node.limitType = "Concealed";
+                node.limitType = "隐藏的";
                 node.name = lastNode.name;
             }
 

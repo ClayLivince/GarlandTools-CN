@@ -108,6 +108,12 @@ namespace Garland.Data
                 .Replace("  ", " ");
         }
 
+        public static IEnumerable<string[]> Csv(string path)
+        {
+            var lines = System.IO.File.ReadAllLines(path);
+            return lines.Select(l => l.Split(','));
+        }
+
         public static IEnumerable<string[]> Tsv(string path)
         {
             var lines = System.IO.File.ReadAllLines(path);

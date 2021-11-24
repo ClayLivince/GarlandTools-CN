@@ -3,6 +3,7 @@ using Newtonsoft.Json.Linq;
 using SaintCoinach.Imaging;
 using SaintCoinach.Xiv;
 using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,8 @@ namespace Garland.Data.Modules
             IndexRetiredTomestones();
             IndexMapMarkers();
             IndexMateriaJoinRates();
+
+            IndexMappy();
         }
 
         void IndexTomestones()
@@ -123,6 +126,11 @@ namespace Garland.Data.Modules
             }
 
             _builder.Db.MateriaJoinRates = rates;
+        }
+
+        void IndexMappy()
+        {
+            
         }
     }
 }

@@ -213,28 +213,31 @@ namespace Garland.Graphics.Exporter.TexTools
                 var mtrlFile = filePath;
                 if (mtrlFile.StartsWith("/"))
                     mtrlFile = mtrlFile.Remove(0, 1);
+
                 XivMtrl mtrlData = null;
                 try
                 {
                     mtrlData = await mtrl.GetMtrlData(mtrlItem, mtrlFile, dxVersion);
                 }
-                catch (Exception ee)
+                catch (Exception e)
                 {
-                    if (mtrlItem.ModelInfo.PrimaryID == item.ModelInfo.PrimaryID) {
-                        Console.WriteLine(ee.Message);
+                    if (mtrlItem.ModelInfo.PrimaryID == item.ModelInfo.PrimaryID)
+                    {
+                        Console.WriteLine(e.Message);
                         throw;
                     }
                 }
 
-                if (mtrlData == null) {
-                    
+                if (mtrlData == null)
+                {
                     // Fall back to material data from the primary model.
                     try
                     {
                         mtrlData = await mtrl.GetMtrlData(item, mtrlFile, dxVersion);
-                    }catch (Exception eee)
+                    }
+                    catch (Exception ee)
                     {
-                        Console.WriteLine(eee.Message);
+                        Console.WriteLine(ee.Message);
                         throw;
                     }
                 }

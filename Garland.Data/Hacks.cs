@@ -168,6 +168,24 @@ namespace Garland.Data
             shopsByKey[1769962].ENpcs = new ENpc[] { sENpcs[1027665] }; // Sul Lad, Il Mheg
             shopsByKey[1769963].ENpcs = new ENpc[] { sENpcs[1027709] }; // Nacille, Rak'tika
             shopsByKey[1769964].ENpcs = new ENpc[] { sENpcs[1027766] }; // ??, Tempest
+
+
+            // Faux Leaves
+            var fauxCommander = new ENpc[] { sENpcs[1033921] };
+            shopsByKey[1770282].Fill("幻巧叶兑换", fauxCommander);
+
+            // Faire Voucher
+            shopsByKey[1770286].Name = "兑换红莲节票据";
+
+            // TODO: Fill the shop name via territory sheet
+            // e.g. Bozja are at custom/006/CtsMycExorcismTrade_00679
+
+            // Bozja Shops
+            var resistanceSuppliers = new ENpc[] { sENpcs[1034007], // Southern Front Cluster exchange
+                sENpcs[1036895] // Zadnor Cluster exchange
+            };
+
+            shopsByKey[1770087].Fill("博兹雅晶簇交易", resistanceSuppliers);
         }
 
         public static bool IsMainAttribute (string attribute)
