@@ -101,20 +101,6 @@ namespace Garland.Graphics.Exporter
 
                 // Seconday Model has been deprecated. then just comment here for future changes,
                 /*
-                if (item.ModelInfo == null) {
-                    Console.WriteLine("Error exporting " + item.Name);
-                    continue;
-                }
-                if (item.ModelInfo.SecondaryID != 0)
-                {
-                    var secondaryPath = EnsurePath(item.EquipSlotCategory.ToString(), item.ModelInfo);
-                    BatchExportItem(secondaryPath, item, item.ModelInfo, () => _gear.GetRacesForModels(item, item.DataFile).Result);
-                }
-                */
-            }
-
-                // Seconday Model has been deprecated. then just comment here for future changes,
-                /*
                 if (item.ModelInfo.SecondaryID != 0)
                 {
                     var secondaryPath = EnsurePath(item.EquipSlotCategory.ToString(), item.ModelInfo);
@@ -152,6 +138,7 @@ namespace Garland.Graphics.Exporter
             
 
             // Housing
+            /*
             var furnitureList = _housing.GetUncachedFurnitureList().Result;
             foreach (var furniture in furnitureList)
             {
