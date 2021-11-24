@@ -113,6 +113,16 @@ namespace Garland.Graphics.Exporter
                 */
             }
 
+                // Seconday Model has been deprecated. then just comment here for future changes,
+                /*
+                if (item.ModelInfo.SecondaryID != 0)
+                {
+                    var secondaryPath = EnsurePath(item.EquipSlotCategory.ToString(), item.ModelInfo);
+                    BatchExportItem(secondaryPath, item, item.ModelInfo, () => _gear.GetRacesForModels(item, item.DataFile).Result);
+                }
+                */
+            }
+
             var monsters = new XivRace[] { XivRace.Monster };
 
             var minionList = _companions.GetUncachedMinionList().Result;
@@ -157,6 +167,7 @@ namespace Garland.Graphics.Exporter
                     WriteLine($"Unable to export {furniture.Name}: {ex.Message}");
                 }
             }
+            */
         }
 
         static void BatchExportItem(string path, IItemModel item, XivModelInfo secondaryModelInfo, Func<IEnumerable<XivRace>> getRaces)
