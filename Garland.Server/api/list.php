@@ -47,7 +47,8 @@ function gtListShare() {
     echo json_encode(array('id' => $id));
 }
 
-function gtListShareCore($id, $name, $list, $ip, $shared) {
+function gtListShareCore($id, $name, $list, $ip, $shared)
+{
     $salt = "qajexcu1GuwiQojkIOmJ";
     $hash = sha1($list . $salt);
     $db = gtConnect();
@@ -66,6 +67,7 @@ function gtListShareCore($id, $name, $list, $ip, $shared) {
     gtExecute($db, "INSERT INTO Lists (Id, Name, Hash, IP, Shared, List) VALUES(?, ?, ?, ?, ?, ?)", "ssssss", $id, $name, $hash, $ip, $shared, $list);
 
     return $id;
+}
 
 function gtMain() {
     $method = $_POST["method"];

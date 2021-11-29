@@ -93,7 +93,7 @@ namespace Garland.UI
             RunAction(() =>
             {
                 BuildDatabase(false, true);
-                ExportFileZip();
+                //ExportFileZip();
 
                 DatabaseBuilder.PrintLine("Done.");
             });

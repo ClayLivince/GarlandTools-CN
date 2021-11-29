@@ -1,0 +1,7 @@
+{
+    "require": {
+        "ext-sockets": "*",
+        "php-amqplib/php-amqplib": ">=3.0",
+		"php-ds/php-ds": "@stable"
+    }
+}

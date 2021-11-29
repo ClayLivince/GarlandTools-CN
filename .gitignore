@@ -21,6 +21,7 @@ Garland.Server/garland.conf
 Garland.Server/nginx-files.garlandtools.org.conf
 Garland.Server/nginx-garlandtools.org.conf
 Garland.Server/api/config.php
+Garland.Server/vendor/*
 Garland.Web/files
 Garland.Web/db/test.html
 lib/SaintCoinach - for international/

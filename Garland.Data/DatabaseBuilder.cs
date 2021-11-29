@@ -134,7 +134,7 @@ namespace Garland.Data
                 });
             }
             else {
-                // Modules require only for build npcs.
+                // Test for build.
                 modules = new Queue<Module>(new Module[]
                 {
                 new Indexes(),
@@ -142,18 +142,45 @@ namespace Garland.Data
                 new Locations(),
                 new Items(),
                 //new ItemSets(),
+                new Orchestrion(),
+                new Actions(),
+                new Statuses(),
+                new Emotes(),
+                new Weather(),
+                new Instances(),
                 new Nodes(),
                 new NPCs(),
+                new SpecialShops(),
+                new DisposalShops(),
+                new Recipes(),
+                new Specializations(),
+                new Mounts(),
+                new Minions(),
+                new Furniture(),
+                new TripleTriad(),
                 new Customize(),
+                new Mobs(),
+                //new Quests(),
+                new Talk(),
+                new FishingSpots(),
                 new Leves(),
+                new Achievements(),
+                new Fates(),
+                new JobCategories(),
                 new Ventures(),
+                new Materia(),
+                new WondrousTails(),
+                new OtherItemSources(),
+                new Relics(),
                 itemSourceComplexityModule,
+                new SupplyDuties(itemSourceComplexityModule),
                 new Maps(),
                 new Territories(),
                 new EquipmentScorer(),
                 new Jobs(),
                 new Dyes(),
                 new NpcEquipment(itemSourceComplexityModule),
+                new StatisticsModule(itemSourceComplexityModule),
                 });
             }
             

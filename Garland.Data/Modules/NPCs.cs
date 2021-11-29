@@ -509,7 +509,7 @@ namespace Garland.Data.Modules
 
             // Eyes & Heterochromia
             var eyeShape = Unpack2((byte)sNpc.Base["EyeShape"]);
-            appearance.eyeSize = eyeShape.Item1 == 1 ? "Small" : "Large";
+            appearance.eyeSize = eyeShape.Item1 == 1 ? "较小" : "较大";
             appearance.eyeShape = 1 + eyeShape.Item2;
 
             var eyeColor = (byte)sNpc.Base["EyeColor"];
