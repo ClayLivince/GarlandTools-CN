@@ -18,12 +18,12 @@ namespace Garland.Data.Modules
 
         private static int[] CURRENCIES = new int[] {
             10309,
-            17833,
-            10311,
-            17834,
-            10307,
             25199,
+            10311,
             25200,
+            10307,
+            33913,
+            33914,
             21072,
             21073,
             21074,
@@ -79,7 +79,7 @@ namespace Garland.Data.Modules
                         continue;
                     if (key >= 12 && key < 14)
                         continue;
-                } 
+                }
 
                 var sItem = (sCollectablesShopItem["Item"] as Saint.Item);
                 if (sItem == null)
@@ -195,6 +195,7 @@ namespace Garland.Data.Modules
                         obj.job = 17;
                         break;
                     case 4:
+                    case 5:
                         obj.job = 18;
                         break;
                 }

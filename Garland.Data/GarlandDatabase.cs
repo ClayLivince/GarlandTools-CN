@@ -44,6 +44,8 @@ namespace Garland.Data
             new Patch(5.3m, "Reflections in Crystal", "Shadowbringers"),
             new Patch(5.4m, "Futures Rewritten", "Shadowbringers"),
             new Patch(5.5m, "Death unto Dawn", "Shadowbringers"),
+
+            new Patch(6m, "Endwalker", "Endwalker"),
         };
 
         public static int LevelCap = -1; // Filled in from Miscellaneous.

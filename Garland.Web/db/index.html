@@ -1986,6 +1986,7 @@
                             <h2 class="pointer">筹备军需品 <span class="right badge">{{=it.supplyReward.length}}</span></h2>
 
                             {{~it.supplyReward :value:index}}
+                            {{?value.job}}
                                 <div class="line pointer block-link collapse-toggle hover-highlight" data-id="{{=value.item.id}}" data-type="item">
                                     <span class="right">
                                         {{=value.reward}}
@@ -1998,6 +1999,7 @@
                                         <span class="deemphasize">★{{=value.efficiencyScore}}</span>
                                     </div>
                                 </div>
+                            {{?}}
                             {{~}}
                         </div>
                     {{?}}
