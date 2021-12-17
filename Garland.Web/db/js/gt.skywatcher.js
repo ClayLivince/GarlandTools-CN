@@ -34,11 +34,11 @@ gt.skywatcher = {
         var view = {
             id: id,
             type: 'skywatcher',
-            name: '�����',
+            name: '风见鸡',
             template: gt.skywatcher.blockTemplate,
             blockClass: 'tool noexpand',
-            icon: 'images/Skywatcher.png',
-            subheader: '����Ԥ��',
+            icon: 'images/marker/Skywatcher.png',
+            subheader: '工具',
             tool: 1,
             settings: 1,
 

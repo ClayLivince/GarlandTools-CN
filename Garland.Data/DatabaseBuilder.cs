@@ -18,6 +18,7 @@ namespace Garland.Data
         SaintCoinach.ARealmReversed _realm;
         SaintCoinach.ARealmReversed _interRealm;
         GarlandDatabase _db;
+        ItemIconDatabase _itemIconDatabase;
         SQLite.SQLiteConnection _libra;
 
         #region Builder state - to organize
@@ -33,6 +34,7 @@ namespace Garland.Data
         public SaintCoinach.ARealmReversed Realm => _realm;
         public SaintCoinach.ARealmReversed InterRealm => _interRealm;
         public GarlandDatabase Db => _db;
+        public ItemIconDatabase ItemIconDatabase => _itemIconDatabase;
         public Saint.Item[] ItemsToImport;
         public Saint.Item[] GlobalItemsToImport;
         public Dictionary<int, Saint.Item> iItemById = new Dictionary<int, Saint.Item>();
@@ -58,8 +60,10 @@ namespace Garland.Data
         public void Build(bool fetchIconsOnly, bool buildNpcsOnly)
         {
             OneTimeExports.Run(_realm);
-                
+
             // Miscellaneous initialization
+            _itemIconDatabase = new ItemIconDatabase();
+
             ItemsToImport = Sheet<Saint.Item>()
                 .Where(i => !Hacks.IsItemSkipped(i.Name, i.Key))
                 .ToArray();
@@ -70,11 +74,11 @@ namespace Garland.Data
             foreach (var iItem in InterSheet<Saint.Item>())
                 iItemById[iItem.Key] = iItem;
 
-            ItemIconDatabase.Initialize(ItemsToImport);
+            _itemIconDatabase.Initialize(ItemsToImport);
 
             if (fetchIconsOnly)
             {
-                new Lodestone.LodestoneIconScraper().FetchIcons(this);
+                new Lodestone.LodestoneIconScraper(_itemIconDatabase).FetchIcons();
                 PrintLine("All icons fetched.  Stopping.");
                 return;
             }

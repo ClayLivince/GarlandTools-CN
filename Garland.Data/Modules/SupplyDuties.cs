@@ -2,6 +2,7 @@
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -104,7 +105,7 @@ namespace Garland.Data.Modules
             foreach (var sCollectablesShopItem in _builder.Sheet2("CollectablesShopItem"))
             {
                 // throw outdated 12-22 but 14 fish is still them
-                float key = float.Parse(sCollectablesShopItem.FullKey);
+                float key = float.Parse(sCollectablesShopItem.FullKey, CultureInfo.InvariantCulture);
                 if (key < 23)
                 {
                     if (key >= 15)

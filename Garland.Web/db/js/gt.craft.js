@@ -680,6 +680,16 @@ gt.craft.step.prototype.discoverSource = function(itemSettings) {
         return; // Don't bother with other sources for crystals.
     }
 
+    if (gt.settings.data.preferGathering && this.item.nodes) {
+        gt.node.resolveCraftSource(this);
+        return;
+    }
+
+    if (gt.settings.data.preferCrafting && this.item.craft) {
+        this.setCraftSource(itemSettings);
+        return;
+    }
+
     // Vendors are the easiest and best source.
     if (this.item.vendors) {
         gt.npc.resolveCraftSource(this);
@@ -705,7 +715,7 @@ gt.craft.step.prototype.discoverSource = function(itemSettings) {
         const partialList = gt.model.partialList(gt.item, this.item.reducedFrom);
         const reduceItem = partialList && partialList[0] || { name: '???' };
         this.sourceType = 'reduction';
-        this.source = { sourceName: reduceItem.name, longSourceName: reduceItem.name + ' 精选', icon: 'images/Reduce.png' };
+        this.source = { sourceName: reduceItem.name, longSourceName: reduceItem.name + ' 精选', icon: 'images/item/Reduce.png' };
         this.sourceView = this.source;
         this.setCategory(['分解/精选', '采集']);
         return;
@@ -741,7 +751,7 @@ gt.craft.step.prototype.discoverSource = function(itemSettings) {
 
     if (this.item.desynthedFrom) {
         this.sourceType = 'desynthesis';
-        this.source = { sourceName: '分解', longSourceName: '分解', icon: 'images/Desynth.png' };
+        this.source = { sourceName: '分解', longSourceName: '分解', icon: 'images/item/Desynth.png' };
         this.sourceView = this.source;
         this.setCategory(['分解/精选', '其他']);
         return;

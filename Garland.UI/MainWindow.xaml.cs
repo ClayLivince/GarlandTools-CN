@@ -77,6 +77,13 @@ namespace Garland.UI
             RunAction(() => BuildDatabase(true, false));
         }
 
+        private void CalibrateIcon_Click(object sender, RoutedEventArgs e)
+        {
+            Window window = new Views.IconCalibrationWindow();
+            window.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            window.ShowDialog();
+        }
+
         void ExportData_Click(object sender, RoutedEventArgs e)
         {
             RunAction(() =>
@@ -132,8 +139,6 @@ namespace Garland.UI
             DatabaseBuilder.PrintLine($"Game version: {realm.GameVersion}");
             DatabaseBuilder.PrintLine($"Global game version: {interRealm.GameVersion}");
             DatabaseBuilder.PrintLine($"Definition version: {realm.DefinitionVersion}");
-
-            OneTimeExports.Run(realm);
 
             var processing = Stopwatch.StartNew();
             builder.Build(fetchIconsOnly, buildNpcOnly);

@@ -212,38 +212,38 @@ gt.npc = {
     getPartialIcon: function(partial) {
         if (partial.s) {
             if (partial.r)
-                return 'images/Trader.png'
+                return 'images/marker/Trader.png'
             else
-                return 'images/Shop.png';
+                return 'images/marker/Shop.png';
         }
 
         if (partial.q)
-            return 'images/Quest.png';
+            return 'images/marker/Quest.png';
 
         if (partial.k)
             return 'images/Journal.png';
 
-        return 'images/UnknownNpc.png';
+        return 'images/marker/UnknownNpc.png';
     },
 
     getIcon: function(npc) {
         if (npc.shops) {
             if (npc.trade)
-                return 'images/Trader.png'
+                return 'images/marker/Trader.png'
             else
-                return 'images/Shop.png';
+                return 'images/marker/Shop.png';
         }
 
         if (npc.quests)
-            return 'images/Quest.png';
+            return 'images/marker/Quest.png';
 
         if (npc.talk)
             return 'images/Journal.png';
 
         if (npc.appearance && npc.appearance.hairStyle)
             return '../files/icons/customize/' + npc.appearance.hairStyle + '.png';
-
-        return 'images/UnknownNpc.png';
+        
+        return 'images/marker/UnknownNpc.png';
     },
 
     resolveCraftSource: function(step, id) {
@@ -312,7 +312,7 @@ gt.npc.timer.prototype.next = function(now) {
 
 gt.npc.timer.prototype.notify = function() {
     gt.util.showNotification(this.view.name, {
-        icon: 'images/TripleTriad.png',
+        icon: 'images/marker/TripleTriad.png',
         body: this.view.fullLocation || "可进行九宫幻卡对战",
         tag: this.view.id
     });

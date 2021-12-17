@@ -131,6 +131,7 @@ namespace Garland.Data.Modules
                 if (!iIndex.ContainsKey(name))
                     iIndex[name] = (int)location.id;
             }
+            _builder.Db.LocationIndex = locationIndex;
         }
 
         void HackApplyTownWeatherRates()

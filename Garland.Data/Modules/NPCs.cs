@@ -490,13 +490,13 @@ namespace Garland.Data.Modules
             }
 
             // Hair & Highlights
-            /*
             var hairstyle = (byte)sNpc.Base["HairStyle"];
-            var hairstyleIcon = CustomizeIcon(GetHairstyleCustomizeIndex(tribe.Key, isMale), 100, hairstyle, npc);
+            var hairstyleIcon = CustomizeIcon(GetHairstyleCustomizeIndex(tribe.Key, isMale), 100, hairstyle, npc, appearance);
             if (hairstyleIcon > 0)
+            {
                 appearance.hairStyle = hairstyleIcon;
-              */  
-
+            }
+             
             appearance.hairColor = FormatColorCoordinates((byte)sNpc.Base["HairColor"]);
             appearance.hairColorCode = FormatColor((byte)sNpc.Base["HairColor"], GetHairColorMapIndex(tribe.Key, isMale));
 
@@ -547,7 +547,7 @@ namespace Garland.Data.Modules
 
             // Facepaint
             var facepaint = Unpack2((byte)sNpc.Base["FacePaint"]);
-            var facepaintIcon = CustomizeIcon(GetFacePaintCustomizeIndex(tribe.Key, isMale), 50, facepaint.Item2, npc);
+            var facepaintIcon = CustomizeIcon(GetFacePaintCustomizeIndex(tribe.Key, isMale), 50, facepaint.Item2, npc, appearance);
             if (facepaintIcon > 0)
             {
                 appearance.facepaint = facepaintIcon;
@@ -663,8 +663,7 @@ namespace Garland.Data.Modules
                 return Tuple.Create((byte)0, value);
         }
 
-        //CustomizeIcon(GetHairstyleCustomizeIndex(tribe.Key, isMale), 100, hairstyle, npc);
-        int CustomizeIcon(int startIndex, int length, byte dataKey, dynamic npc)
+        int CustomizeIcon(int startIndex, int length, byte dataKey, dynamic npc, dynamic appearence)
         {
             if (dataKey == 0)
                 return 0; // Custom or not specified.
@@ -675,6 +674,12 @@ namespace Garland.Data.Modules
                 if ((byte)row[0] == dataKey)
                 {
                     var icon = (ImageFile)row["Icon"];
+                    var hintitem = row["HintItem"] as Saint.Item;
+                    if (hintitem != null && hintitem.Key != 0)
+                    {
+                        appearence.hairstyleItem = hintitem.Key;
+                        _builder.Db.AddReference(npc, "item", hintitem.Key, false);
+                    }
                     return IconDatabase.EnsureEntry("customize", icon);
                 }
             }
@@ -728,7 +733,7 @@ namespace Garland.Data.Modules
                     return 1400;
                 case 15: // Rava
                 case 16: // Veena
-                    return 1500;
+                    return isMale ? 1600 : 1700;
             }
 
             throw new NotImplementedException();
@@ -736,7 +741,7 @@ namespace Garland.Data.Modules
 
         static int GetFacePaintCustomizeIndex(int tribeKey, bool isMale)
         {
-            const int baseRowKey = 1600; // SH
+            const int baseRowKey = 2000; // EW - [update by patch required]
 
             switch (tribeKey)
             {
@@ -752,17 +757,23 @@ namespace Garland.Data.Modules
                 case 10: // Hellsguard
                 case 11: // Raen
                 case 12: // Xaela
+                case 13: // Helions
+                case 14: // The Lost
+                case 15: // Rava
+                case 16: // Veena
                     var tribeOffset = baseRowKey + ((tribeKey - 1) * 100);
                     return isMale ? tribeOffset : tribeOffset + 50;
-
+                
+                /*
                 case 13: // Helions
-                    return 2800;
+                    return 3200;
                 case 14: // The Lost
-                    return 2850;
+                    return 3300;
                 case 15: // Rava
-                    return 2900;
+                    return 3400;
                 case 16: // Veena
-                    return 2950;
+                    return 3500;
+                */
             }
 
             throw new NotImplementedException();

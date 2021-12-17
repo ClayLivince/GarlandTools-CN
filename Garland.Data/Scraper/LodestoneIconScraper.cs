@@ -22,13 +22,19 @@ namespace Garland.Data.Lodestone
         private const string _baseSearchFormat = _baseUrl + "/lodestone/playguide/db/item/?db_search_category=item&category2=&q=\"{0}\"";
         private const string _itemUrlRegexFormat = "<a href=\"(/lodestone/playguide/db/item/.+)/\" .+>{0}</a>";
         private static Regex _iconSuffixRegex = new Regex("<img src=\"https://img.finalfantasyxiv.com/lds/pc/global/images/itemicon/(.*.png).*\".*>");
+        private ItemIconDatabase _itemIconDatabase;
+
+        public LodestoneIconScraper(ItemIconDatabase itemIconDatabase)
+        {
+            _itemIconDatabase = itemIconDatabase;
+        }
 
         public void FetchIcons(DatabaseBuilder builder)
         {
             // Start at a random place in the set.
-            var start = (new Random()).Next(ItemIconDatabase.ItemsNeedingIcons.Count);
-            var itemsToFetch = new List<Saint.Item>(ItemIconDatabase.ItemsNeedingIcons.Skip(start));
-            itemsToFetch.AddRange(ItemIconDatabase.ItemsNeedingIcons.Take(start));
+            var start = (new Random()).Next(_itemIconDatabase.ItemsNeedingIcons.Count);
+            var itemsToFetch = new List<Saint.Item>(_itemIconDatabase.ItemsNeedingIcons.Skip(start));
+            itemsToFetch.AddRange(_itemIconDatabase.ItemsNeedingIcons.Take(start));
 
             var count = 0;
             var options = new ParallelOptions() { MaxDegreeOfParallelism = 2 };
@@ -44,7 +50,7 @@ namespace Garland.Data.Lodestone
 
                 // A prior item may share this icon, so always check if it was written.
                 var iconId = (UInt16)sItem.GetRaw("Icon");
-                if (ItemIconDatabase.HasIcon(iconId))
+                if (_itemIconDatabase.HasIcon(iconId))
                     return;
 
                 var progress = $"{num}/{itemsToFetch.Count}, {100*num/itemsToFetch.Count}%";
@@ -88,7 +94,7 @@ namespace Garland.Data.Lodestone
         {
             var url = _baseItemIconUrl + hash;
             var bytes = RequestBytes(url);
-            ItemIconDatabase.WriteIcon(iconId, bytes);
+            _itemIconDatabase.WriteIcon(iconId, bytes);
         }
 
         string SearchItem(UInt16 iconId, string name, string progress)

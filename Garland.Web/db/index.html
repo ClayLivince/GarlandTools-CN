@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="ext/image-picker.css">
     <link rel="stylesheet" href="ext/xivfont.css">
 
-    <script src="ext/bundle.min.js" crossorigin="anonymous"></script>
+    <script src="ext/sentry.bundle.min.js"></script>
     <script src="ext/jquery-3.1.1.min.js"></script>
     <script src="ext/underscore-1.8.3.min.js"></script>
     <script src="ext/isotope-3.0.1.pkgd.min.js"></script>
@@ -37,7 +37,7 @@
             {{??it.groupTradeSource && it.groupTradeSource.item}}
                 <div class="right">
                     {{?it.groupTradeSource.item[0].amount > 1}}<span>x{{=it.groupTradeSource.item[0].amount}} for</span>{{?}}
-                    {{~it.groupTradeSource.currency :currency:currencyIndex}}<div class="inline-block block-link trade hover-highlight pointer" data-id="{{=currency.id}}" data-type="item"><img class="icon small" src="{{=currency.obj.icon}}" title="{{=currency.obj.name}}">{{=currency.amount.toLocaleString()}}{{?currency.hq}} <img class="hq-icon" src="images/hq.png">{{?}}{{?currency.collectability}} <img class="icon small" src="images/Collectable.png" title="Collectability Rating">{{=currency.collectability}}{{?}}</span></div>{{~}}
+                    {{~it.groupTradeSource.currency :currency:currencyIndex}}<div class="inline-block block-link trade hover-highlight pointer" data-id="{{=currency.id}}" data-type="item"><img class="icon small" src="{{=currency.obj.icon}}" title="{{=currency.obj.name}}">{{=currency.amount.toLocaleString()}}{{?currency.hq}} <img class="hq-icon" src="images/item/hq.png">{{?}}{{?currency.collectability}} <img class="icon small" src="images/item/Collectable.png" title="Collectability Rating">{{=currency.collectability}}{{?}}</span></div>{{~}}
                 </div>
             {{??}}
                 <div class="right">?</div>
@@ -62,7 +62,7 @@
             </div>
 
             <div class="materia line notmelded hover-highlight pointer row" data-id="0">
-                <img class="icon small" src="images/BlankItem.png">
+                <img class="icon small" src="images/item/BlankItem.png">
                 <span class="highlight text">未镶嵌</span>
             </div>
 
@@ -309,12 +309,12 @@
         <div class="block {{=it.type}} {{?it.blockClass}}{{=it.blockClass}}{{?}}" data-id="{{=it.id}}" data-type="{{=it.type}}">
             <div class="block-title handle">
                 {{?it.audio}}
-                    <img src="images/Speaker.svg" title="Play audio and desktop notifications" class="notifications-button button">
+                    <img src="images/site/Speaker.svg" title="Play audio and desktop notifications" class="notifications-button button">
                 {{?}}
                 {{?it.settings}}
-                    <img src="images/Setting.png" class="settings-button button">
+                    <img src="images/site/Setting.png" class="settings-button button">
                 {{?}}
-                <img src="images/x.svg" class="close-button button">
+                <img src="images/site/x.svg" class="close-button button">
                 {{?it.icon}}
                     <img src="{{=it.icon}}" class="icon title-icon {{?it.iconBorder}}border{{?}} {{?it.type === 'status'}}status{{?}}">
                 {{?}}
@@ -852,7 +852,7 @@
             </div>
         {{??}}
             <div class="slot {{=it.slot}} empty">
-                <img src="images/{{=it.slot}}.png" class="slot-icon">
+                <img src="images/slot/{{=it.slot}}.png" class="slot-icon">
             </div>
         {{?}}
     </script>
@@ -872,7 +872,7 @@
             </div>
         {{??}}
             <div class="slot {{=it.slot}} empty">
-                <img src="images/{{=it.slot}}.png" class="slot-icon">
+                <img src="images/slot/{{=it.slot}}.png" class="slot-icon">
             </div>
         {{?}}
     </script>
@@ -919,8 +919,8 @@
                         {{~it.contents :model:index}}
                             <div class="contents-link pointer hover-highlight inline-block" data-type="{{=model.type}}" data-id="{{=model.view.id}}">
                                 <img src="{{=model.view.icon}}" class="icon size42" title="{{=model.view.name}}">
-                                {{?model.view.obj.tradeShops}}<img src="images/Trader.png" class="icon-badge icon mini">
-                                {{??model.view.vendors}}<img src="images/Shop.png" class="icon-badge icon mini">
+                                {{?model.view.obj.tradeShops}}<img src="images/marker/Trader.png" class="icon-badge icon mini">
+                                {{??model.view.vendors}}<img src="images/marker/Shop.png" class="icon-badge icon mini">
                                 {{??model.view.craft}}<img src="../files/icons/job/{{=gt.jobs[model.view.craft.job].abbreviation}}.png" class="icon-badge icon mini">{{?}}
                                 {{?model.amount}}<span class="text">{{=model.amount}} </span>{{?}}
                             </div>
@@ -937,7 +937,7 @@
                         <h3 class="pointer">装备总评</h3>
 
                         {{?it.averageilvl}}
-                            <div class="ilvl left collapse-toggle"><img src="images/ilvl.png"><span class="text">{{=it.averageilvl}}</span></div>
+                            <div class="ilvl left collapse-toggle"><img src="images/item/ilvl.png"><span class="text">{{=it.averageilvl}}</span></div>
                         {{?}}
 
                         <div class="attributes prime collapse-toggle">
@@ -1019,7 +1019,7 @@
                     {{~it.contents :model:index}}
                         <div class="block-stats {{?model.stats}}collapsible collapsed{{?}}" data-type="{{=model.type}}" data-id="{{=model.view.id}}" data-headername="contents-{{=model.view.id}}">
                             <h3 class="block-name line pointer">
-                                <img src="images/x.svg" class="close-button remove-group-block">
+                                <img src="images/site/x.svg" class="close-button remove-group-block">
                                 <img class="icon small" src="{{=model.view.icon}}">
                                 <input type="number" value="{{=model.amount || 1}}" min="1" max="999" class="amount">
                                 <span class="text">{{=model.view.name}}</span>
@@ -1143,35 +1143,35 @@
 
                     <span class="icon-container original-size" {{?it.tooltip}}title="{{=it.tooltip}}"{{?}}>
                         <img class="icon full" src="{{=it.icon}}">
-                        <img class="reflection-overlay icon full" src="images/ReflectionOverlayCropped.png">
+                        <img class="reflection-overlay icon full" src="images/item/ReflectionOverlayCropped.png">
                     </span>
 
                     {{?it.desynthSkill}}
-                        <img class="icon mini" src="images/Desynth.png" title="Desynthesis">
+                        <img class="icon mini" src="images/item/Desynth.png" title="Desynthesis">
                     {{?}}
 
                     {{?it.reducible}}
-                        <img class="icon mini" src="images/Reduce.png" title="Aetherial Reduction">
+                        <img class="icon mini" src="images/item/Reduce.png" title="Aetherial Reduction">
                     {{?}}
 
                     {{?it.convertable}}
-                        <img class="icon mini" src="images/Convert.png" title="Materia Conversion">
+                        <img class="icon mini" src="images/item/Convert.png" title="Materia Conversion">
                     {{?}}
 
                     {{?it.dyeable}}
-                        <img class="icon mini" src="images/Dye.png" title="Dye">
+                        <img class="icon mini" src="images/item/Dye.png" title="Dye">
                     {{?}}
 
                     {{?it.crestworthy}}
-                        <img class="icon mini" src="images/Crestworthy.png" title="Crestworthy">
+                        <img class="icon mini" src="images/item/Crestworthy.png" title="Crestworthy">
                     {{?}}
 
                     {{?it.glamourous}}
-                        <img class="icon mini" src="images/GlamourConvertable.png" title="Glamour Dresser Convertable">
+                        <img class="icon mini" src="images/item/GlamourConvertable.png" title="Glamour Dresser Convertable">
                     {{?}}
 
                     {{?it.storable}}
-                        <img class="icon mini" src="images/ArmoireStorable.png" title="Armoire Storable">
+                        <img class="icon mini" src="images/item/ArmoireStorable.png" title="Armoire Storable">
                     {{?}}
 
                     {{?it.hasPrimes && !it.minion}}
@@ -1251,7 +1251,7 @@
                     </div>
 
                    <table class="right">
-                        <tr><td>{{=it.minionRace}}</td><td><img src="images/Minion{{=it.minionRace}}.png" class="minion-race-icon"></td></tr>
+                        <tr><td>{{=it.minionRace}}</td><td><img src="images/minion/Minion{{=it.minionRace}}.png" class="minion-race-icon"></td></tr>
                     </table>
 
                     <div class="verminion-info bonuses subsection">
@@ -1263,7 +1263,7 @@
                     {{?it.minionSkillType}}
                         <div class="verminion-special subsection">
                             <h3>{{=it.specialAction}} ({{=it.minionSkillType}})<span class="right">{{=it.bonuses[0].value}} Points{{?it.specialActionAngle}}, {{=it.specialActionAngle}}°{{?}}</h3>
-                            <img class="right minion-skill-icon" src="images/MinionAngle{{=it.specialActionAngle}}.png">
+                            <img class="right minion-skill-icon" src="images/minion/MinionAngle{{=it.specialActionAngle}}.png">
                             <div class="line">{{=it.specialActionDesc}}</div>
                         </div>
                     {{?}}
@@ -1343,7 +1343,7 @@
 
                             {{?it.fish.during}}
                                 <div class="line half collapse-toggle">
-                                    <img class="icon small" src="images/Clock.svg">
+                                    <img class="icon small" src="images/site/Clock.svg">
                                     <span class="text">{{=gt.time.formatHours(it.fish.during.start)}} - {{=gt.time.formatHours(it.fish.during.end)}}</span>
                                 </div>
                             {{?}}
@@ -1393,7 +1393,7 @@
                                 {{??group.gig}}
                                     {{~group.gig :gig:gindex}}
                                         <div class="line collapse-toggle">
-                                            <img class="icon small" src="images/{{=gig}}.png">
+                                            <img class="icon small" src="images/node/{{=gig}}.png">
                                             <span class="text">{{=gig}}</span>
                                             <span class="text right">鱼叉尖</span>
                                         </div>
@@ -1534,7 +1534,7 @@
 
                     {{?(it.ingredient_of || it.craft || it.obj.category == 59) && !it.unlistable && !it.untradeable}}
                         <div class="marketboard subsection collapsible collapsed" data-headername="marketboard">
-                            <img src="images/Marketboard.png" class="subsection-icon">
+                            <img src="images/marker/Marketboard.png" class="subsection-icon">
                             <h2 class="pointer">市场交易板{{?it.marketType}}<span class="right">{{=it.marketType}}</span>{{?}}</h2>
 
                             <div class="source-link collapse-toggle line" data-id="0" data-type="market">
@@ -1550,7 +1550,7 @@
 
                     {{?it.vendors}}
                         <div class="vendors subsection collapsible collapsed" data-headername="vendors">
-                            <img src="images/Shop.png" class="subsection-icon">
+                            <img src="images/marker/Shop.png" class="subsection-icon">
                             <h2 class="pointer">商店<span class="right badge">{{=it.vendors.length}}</span></h2>
 
                             {{?it.vendors}}
@@ -1572,7 +1572,7 @@
                     {{?it.trades}}
                         {{~it.trades :shop:shopIndex}}
                             <div class="trades subsection collapsible collapsed" data-headername="trade {{=shop.shop}}">
-                                <img src="images/Trader.png" class="subsection-icon">
+                                <img src="images/marker/Trader.png" class="subsection-icon">
                                 <h2 class="pointer">{{=shop.shop}}<span class="right badge">{{=shop.listings.length}}</span></h2>
 
                                 <div class="subsection-header">
@@ -1598,7 +1598,7 @@
 
                     {{?it.tripletriadReward}}
                         <div class="tripletriadreward subsection collapsible" data-headername="tripletriadreward">
-                            <img src="images/TripleTriadReward.png" class="subsection-icon">
+                            <img src="images/marker/TripleTriadReward.png" class="subsection-icon">
                             <h2 class="pointer">九宫幻卡对局奖励</h2>
 
                             {{~it.tripletriadReward :npc:npcIndex}}
@@ -1716,7 +1716,7 @@
 
                     {{?it.instances}}
                         <div class="instances subsection collapsible collapsed" data-headername="instances">
-                            <img src="images/BronzeCoffer.png" class="subsection-icon">
+                            <img src="images/marker/BronzeCoffer.png" class="subsection-icon">
                             <h2 class="pointer">副本宝箱 <span class="right badge">{{=it.instances.length}}</span></h2>
 
                             {{~it.instances :value:index}}
@@ -1765,7 +1765,7 @@
 
                     {{?it.leves || it.requiredByLeves}}
                         <div class="leves subsection collapsible collapsed" data-headername="leves">
-                            <img src="images/Leve.png" class="subsection-icon">
+                            <img src="images/marker/Leve.png" class="subsection-icon">
                             <h2 class="pointer">理符任务 <span class="right badge">{{=(it.leves ? it.leves.length : 0) + (it.requiredByLeves ? it.requiredByLeves.length : 0)}}</span></h2>
 
                             {{?it.leves}}
@@ -1827,7 +1827,7 @@
                                         <table class="right">
                                             <tr>
                                                 <td>Lv. {{=value.lvl}}</td>
-                                                <td><img src="images/Clock.svg" class="icon small">{{=value.minutes}}m</td>
+                                                <td><img src="images/site/Clock.svg" class="icon small">{{=value.minutes}}m</td>
                                             </tr>
                                         </table>
                                     {{??value.requireList}}
@@ -1843,7 +1843,7 @@
                                         <table class="right">
                                             <tr>
                                                 <td>Lv. {{=value.lvl}}</td>
-                                                <td><img src="images/Clock.svg" class="icon small">{{=value.minutes}}m</td>
+                                                <td><img src="images/site/Clock.svg" class="icon small">{{=value.minutes}}m</td>
                                             </tr>
                                             <tr><td>{{=value.lvl+10}}</td><td>{{=Math.floor(value.minutes*.84)}}m</td></tr>
                                             <tr><td>{{=value.lvl+20}}</td><td>{{=Math.floor(value.minutes*.67)}}m</td></tr>
@@ -1856,7 +1856,7 @@
 
                     {{?it.reducedFrom || it.reducesTo}}
                         <div class="reducedFrom subsection collapsible collapsed" data-headername="reduction">
-                            <img src="images/Reduce.png" class="subsection-icon">
+                            <img src="images/item/Reduce.png" class="subsection-icon">
                             <h2 class="pointer">精选 <span class="right badge">{{=it.reduceTotal}}</span></h2>
 
                             {{~it.reducedFrom :value:index}}
@@ -1901,7 +1901,7 @@
 
                     {{?it.masterpiece}}
                         <div class="masterpiece subsection collapsible collapsed" data-headername="masterpiece">
-                            <img src="images/Rowena.png" class="subsection-icon">
+                            <img src="images/marker/Rowena.png" class="subsection-icon">
                             <h2 class="pointer">罗薇娜商会</h2>
 
                             {{?it.masterpiece.complexity}}
@@ -1917,7 +1917,7 @@
 
                             <table class="collapse-toggle">
                                 <tr>
-                                    <td><img src="images/Collectable.png" class="icon small">{{=it.masterpiece.rating[0]}}-{{=it.masterpiece.rating[1]-1}}</td>
+                                    <td><img src="images/item/Collectable.png" class="icon small">{{=it.masterpiece.rating[0]}}-{{=it.masterpiece.rating[1]-1}}</td>
                                     <td><img src="images/xp.png" class="icon small">{{=it.masterpiece.xp[0].toLocaleString()}}</td>
                                     <td><img class="icon small" src="{{=it.masterpiece.rewardItem.icon}}" title="{{=it.masterpiece.rewardItem.name}}">{{=it.masterpiece.rewardAmount[0]}}</td>
                                 </tr>
@@ -1937,7 +1937,7 @@
 
                     {{?it.satisfaction}}
                         <div class="satisfaction subsection collapsible" data-headername="satisfaction">
-                            <img src="images/CustomDelivery.png" class="subsection-icon">
+                            <img src="images/marker/CustomDelivery.png" class="subsection-icon">
                             <h2 class="pointer">老主顾交易</h2>
 
                             {{~it.satisfaction :satisfaction:sindex}}
@@ -1952,8 +1952,8 @@
 
                                 <table class="collapse-toggle">
                                     <tr>
-                                        <td><img src="images/Collectable.png" class="icon small">{{=satisfaction.rating[0]}}</td>
-                                        <td><img src="images/Satisfaction.png" class="icon small">{{=satisfaction.satisfaction[0]}}</td>
+                                        <td><img src="images/item/Collectable.png" class="icon small">{{=satisfaction.rating[0]}}</td>
+                                        <td><img src="images/marker/Satisfaction.png" class="icon small">{{=satisfaction.satisfaction[0]}}</td>
                                         <td><img src="../files/icons/item/65002.png" class="icon small" >{{=satisfaction.gil[0].toLocaleString()}}</td>
                                         {{~satisfaction.items :rewardItem:rindex}}
                                             <td><img class="icon small" src="{{=rewardItem.icon}}" title="{{=rewardItem.name}}">{{=rewardItem.amount[0]}}</td>
@@ -1982,8 +1982,8 @@
 
                     {{?it.supplyReward}}
                         <div class="supply-reward subsection collapsible collapsed" data-headername="supply-reward">
-                            <img src="images/Rowena.png" class="subsection-icon">
-                            <h2 class="pointer">筹备军需品 <span class="right badge">{{=it.supplyReward.length}}</span></h2>
+                            <img src="images/marker/Rowena.png" class="subsection-icon">
+                            <h2 class="pointer">收藏品交易 <span class="right badge">{{=it.supplyReward.length}}</span></h2>
 
                             {{~it.supplyReward :value:index}}
                             {{?value.job}}
@@ -2065,7 +2065,7 @@
 
                     {{?it.desynthedFrom}}
                         <div class="desynthesis subsection collapsible collapsed" data-headername="desynthesis">
-                            <img src="images/Desynth.png" class="subsection-icon">
+                            <img src="images/item/Desynth.png" class="subsection-icon">
                             <h2 class="pointer">由以下物品分解{{?it.desynth_job}}<span class="right">{{=it.desynth_job}} Lv. {{=it.rlvl}}</span>{{?}}</h2>
 
                             {{?it.desynthedFrom.length}}
@@ -2087,7 +2087,7 @@
                                         {{~reward :option:oindex}}
                                             <div class="block-link pointer hover-highlight reward-item" data-id="{{=option.item.id}}" data-type="item">
                                                 <img class="icon" src="{{=option.item.icon}}" title="{{=option.item.name}}">
-                                                {{?option.hq}}<img src="images/HQOverlay.png" class="hq-overlay icon">{{?}}
+                                                {{?option.hq}}<img src="images/item/HQOverlay.png" class="hq-overlay icon">{{?}}
                                                 {{?option.amount > 1}}{{=option.amount}} {{?}}
                                             </div>
                                         {{~}}
@@ -2420,7 +2420,7 @@
                             {{~it.equip :value:index}}
                                 <div class="slot">
                                     <div class="line">
-                                        <img class="icon small" src="images/{{=value.slot}}.png">
+                                        <img class="icon small" src="images/slot/{{=value.slot}}.png">
                                         <span class="text">
                                             {{=value.slot}} {{=value.model}}
                                             {{?!value.item}}(独立建模){{?}}
@@ -2517,7 +2517,7 @@
                         <h3>理符发行人</h3>
 
                         <div class="block-link pointer line hover-highlight" data-id="{{=it.levemete.id}}" data-type="npc">
-                            <img class="icon small" src="images/Levequest.png"><span class="highlight text">{{=it.levemete.name}}</span>
+                            <img class="icon small" src="images/marker/Levequest.png"><span class="highlight text">{{=it.levemete.name}}</span>
                             {{?it.levemete.location}}<span class="byline text">{{=it.levemete.location}}</span>{{?}}
                         </div>
                     </div>
@@ -2690,7 +2690,7 @@
 
                         {{?it.reward.aetherCurrent}}
                             <div class="reward">
-                                <img class="reward-icon" src="images/AetherCurrent.png" title="Aether Current">
+                                <img class="reward-icon" src="images/marker/AetherCurrent.png" title="Aether Current">
                             </div>
                         {{?}}
 
@@ -2705,7 +2705,7 @@
                                 <div class="item reward block-link pointer hover-highlight" data-id="{{=value.item.id}}" data-type="item">
                                     <span class="icon-container">
                                         <img class="reward-icon" src="{{=value.item.icon}}" title="{{=value.item.name}}">
-                                        {{?value.hq}}<img src="images/HQOverlay.png" class="hq-overlay reward-icon">{{?}}
+                                        {{?value.hq}}<img src="images/item/HQOverlay.png" class="hq-overlay reward-icon">{{?}}
                                     </span>
                                     {{?value.num}}<span class="item-amount">{{=value.num}}</span>{{?}}
                                 </div>
@@ -2721,7 +2721,7 @@
                                 <div class="item reward block-link pointer hover-highlight" data-id="{{=value.item.id}}" data-type="item">
                                     <span class="icon-container">
                                         <img class="reward-icon" src="{{=value.item.icon}}" title="{{=value.item.name}}">
-                                        {{?value.hq}}<img src="images/HQOverlay.png" class="hq-overlay reward-icon">{{?}}
+                                        {{?value.hq}}<img src="images/item/HQOverlay.png" class="hq-overlay reward-icon">{{?}}
                                     </span>
                                     {{?value.num}}<span class="item-amount">{{=value.num}}</span>{{?}}
                                 </div>
@@ -3024,7 +3024,7 @@
                         <div class="line clear">
                             {{?value.reduce}}
                                 <div class="block-link hover-highlight pointer right" title="Reduces to {{=value.reduce.name}}" data-id="{{=value.reduce.id}}" data-type="item">
-                                    <img class="icon small" src="images/Reduce.png">
+                                    <img class="icon small" src="images/item/Reduce.png">
                                     <img class="icon small" src="{{=value.reduce.icon}}">
                                 </div>
                             {{?}}
@@ -3131,17 +3131,17 @@
                         <h3 class="pointer">小队组成</h3>
                         <div class="party-line collapse-toggle">
                             {{?it.tank}}
-                                <img class="icon" src="images/Tank.png" title="Tank">
+                                <img class="icon" src="images/job/Tank.png" title="Tank">
                                 <span class="text">{{=it.tank}}</span>
                             {{?}}
 
                             {{?it.healer}}
-                                <img class="icon" src="images/Healer.png" title="Healer">
+                                <img class="icon" src="images/job/Healer.png" title="Healer">
                                 <span class="text">{{=it.healer}}</span>
                             {{?}}
 
                             {{?it.dps}}
-                                <img class="icon" src="images/DPS.png" title="DPS (近战 {{=it.melee}}, 远程 {{=it.ranged}})">
+                                <img class="icon" src="images/job/DPS.png" title="DPS (近战 {{=it.melee}}, 远程 {{=it.ranged}})">
                                 <span class="text">{{=it.dps}}</span>
                             {{?}}
                         </div>
@@ -3458,7 +3458,7 @@
     <script id="tree-craft-template" type="text/x-dot-template">
         <div class="tree">
             <div class="craft-mode line pointer">
-                <span class="text">模式: 树状图</span> <img src="images/Tree.png" class="icon small"> <span class="text action-link">改变显示方式</span>
+                <span class="text">模式: 树状图</span> <img src="images/site/Tree.png" class="icon small"> <span class="text action-link">改变显示方式</span>
             </div>
 
             {{?!it.showGoals}}
@@ -3502,7 +3502,7 @@
             <div class="line pointer block-link hover-highlight" data-id="{{=it.item.id}}" data-type="item">
                 <span class="icon-container">
                     <img class="icon small" src="{{=it.view.icon}}">
-                    {{?it.affectsQuality}}<img src="images/HQOverlay.png" class="hq-overlay icon small">{{?}}
+                    {{?it.affectsQuality}}<img src="images/item/HQOverlay.png" class="hq-overlay icon small">{{?}}
                 </span>
 
                 <span class="text">{{=it.required - it.finished}} <span class="highlight">{{=it.view.name}}</span>{{?it.craft && it.craft.yield > 1}}({{=it.craft.yield}}){{?}}</span>
@@ -3541,7 +3541,7 @@
             <span class="pointer block-link hover-highlight inline-block" data-id="{{=it.item.id}}" data-type="item">
                 <span class="icon-container">
                     <img class="icon small" src="{{=it.view.icon}}">
-                    {{?it.affectsQuality}}<img src="images/HQOverlay.png" class="hq-overlay icon small">{{?}}
+                    {{?it.affectsQuality}}<img src="images/item/HQOverlay.png" class="hq-overlay icon small">{{?}}
                 </span>
 
                 <span class="text"><span class="highlight">{{=it.view.name}}</span>{{?it.craft && it.craft.yield > 1}}({{=it.craft.yield}}){{?}}</span>
@@ -3588,9 +3588,9 @@
     <script id="flat-craft-template" type="text/x-dot-template">
         <div class="craft-mode line pointer">
             {{?it.amounts}}
-                <span class="text">模式: 拓展</span> <img src="images/Amount.png" class="icon small">
+                <span class="text">模式: 拓展</span> <img src="images/site/Amount.png" class="icon small">
             {{??}}
-                <span class="text">模式: 展开</span> <img src="images/Flat.png" class="icon small">
+                <span class="text">模式: 展开</span> <img src="images/site/Flat.png" class="icon small">
             {{?}}
             <span class="text action-link">更改显示方式</span>
         </div>
@@ -3675,7 +3675,7 @@
             <div class="inline-block block-link hover-highlight trade pointer" data-id="{{=item.id}}" data-type="item">
                 <img class="icon small" src="{{=item.icon}}" title="{{=item.name}}">
                 {{?item.amount > 1}}{{=item.amount}} {{?}}
-                <span class="highlight">{{=item.name}}{{?item.hq}} <img class="hq-icon small" src="images/hq.png">{{?}}</span>
+                <span class="highlight">{{=item.name}}{{?item.hq}} <img class="hq-icon small" src="images/item/hq.png">{{?}}</span>
             </div>
         {{~}}
 
@@ -3684,7 +3684,7 @@
                 {{~it.currency :currency:currencyIndex}}
                     <div class="inline-block block-link trade hover-highlight pointer" data-id="{{=currency.id}}" data-type="item">
                         <img class="icon small" src="{{=currency.icon}}" title="{{=currency.name}}">
-                        <span class="right"> {{=currency.amount.toLocaleString()}}{{?currency.hq}} <img class="hq-icon" src="images/hq.png">{{?}}{{?currency.collectability}} <img class="icon small" src="images/Collectable.png" title="Collectability Rating">{{=currency.collectability}}{{?}}</span>
+                        <span class="right"> {{=currency.amount.toLocaleString()}}{{?currency.hq}} <img class="hq-icon" src="images/item/hq.png">{{?}}{{?currency.collectability}} <img class="icon small" src="images/item/Collectable.png" title="Collectability Rating">{{=currency.collectability}}{{?}}</span>
                     </div>
                 {{~}}
             </div>
@@ -3699,9 +3699,9 @@
         <input type="text" value="{{=it.displayName}}">
         <div class="right list-actions">
             <span class="badge">{{=it.amount}}</span>
-            <img src="images/Share.svg" id="share-list">
-            <img src="images/SortAlpha.svg" id="sort-alpha">
-            <img src="images/x.svg" class="close-button" id="delete-list">
+            <img src="images/site/Share.svg" id="share-list">
+            <img src="images/site/SortAlpha.svg" id="sort-alpha">
+            <img src="images/site/x.svg" class="close-button" id="delete-list">
         </div>
         <div class="clear"></div>
     </script>
@@ -3719,7 +3719,7 @@
 <body>
     <div id="sidebar">
         <div class="title center">
-            <img id="main-logo" src="images/Garland.png" title="The o is silent.">
+            <img id="main-logo" src="images/site/Garland.png" title="The o is silent.">
             <div class="text">
                 <a class="title-link" href="/">Garland 数据</a>
                 <div class="subtitle">非官方FF14数据库，非官方GarlandTools中文站</div>
@@ -3730,12 +3730,12 @@
         <div id="pin-marker"></div>
         <div id="pinned"></div>
 
-        <img src="images/Search.png" title="Search" id="open-search-button">
+        <img src="images/site/Search.png" title="Search" id="open-search-button">
 
         <div id="sidebar-search-container">
             <div id="search-section">
                 <div id="search-header">
-                    <img src="images/Search.png" title="Search">
+                    <img src="images/site/Search.png" title="Search">
                         <input type="search" id="search-input" placeholder="搜索" />
 
                         <span id="search-filters-button" class="button" title="Filters"></span>
@@ -3842,7 +3842,7 @@
 
     <div id="header">
         <div class="title">
-            <img src="images/Garland.png" title="The o is silent.">
+            <img src="images/site/Garland.png" title="The o is silent.">
             <div class="text">
                 <a class="title-link" href="/">Garland 数据</a>
                 <div class="subtitle">非官方FF14数据库，非官方GarlandTools中文站。</div>
@@ -3851,11 +3851,11 @@
         </div>
 
         <div class="menu unselectable">
-            <img id="toggle-sidebar" src="images/Collapse.png" class="button" title="Toggle Sidebar">
+            <img id="toggle-sidebar" src="images/site/Collapse.png" class="button" title="Toggle Sidebar">
             <h3 class="button" data-page="database-page">数据</h3>
             <h3 class="button" data-page="tools-page">工具</h3>
             <span class="menu-ext">
-                <img src="images/Help.png" class="button" data-page="about-page" title="About"><img src="images/Setting.png" class="button" data-page="settings-page" title="Settings"><img src="images/Links.png" class="button" data-page="links-page" title="Links"><a href="https://discord.gg/hfzmApj"><img src="images/Discord.svg" class="button" title="Discord"></a>
+                <img src="images/site/Help.png" class="button" data-page="about-page" title="About"><img src="images/site/Setting.png" class="button" data-page="settings-page" title="Settings"><img src="images/site/Links.png" class="button" data-page="links-page" title="Links"><a href="https://discord.gg/hfzmApj" target="_blank"><img src="images/site/Discord.svg" class="button" title="Discord"></a>
             </span>
             <h3 class="button" data-page="sync-page">数据同步<span id="dirty-indicator"> 💾</span></h3>
             <h3 class="language-flag en" data-lang="en"><span class="deemphasize">English</span> EN</h3>
@@ -3895,7 +3895,7 @@
                     <span class="text">Fates</span>
                 </div>
                 <div class="block-link hover-highlight icon-button" data-type="browse" data-id="leve">
-                    <img src="images/Leve.png" class="icon small">
+                    <img src="images/marker/Leve.png" class="icon small">
                     <span class="text">理符</span>
                 </div>
                 <div class="block-link hover-highlight icon-button" data-type="browse" data-id="node">
@@ -3907,7 +3907,7 @@
                     <span class="text">渔池</span>
                 </div>
                 <div class="block-link hover-highlight icon-button" data-type="browse" data-id="npc">
-                    <img src="images/Shop.png" class="icon small">
+                    <img src="images/marker/Shop.png" class="icon small">
                     <span class="text">NPCs</span>
                 </div>
                 <div class="block-link hover-highlight icon-button" data-type="browse" data-id="mob">
@@ -3922,7 +3922,7 @@
                     <span class="text">新建组</span>
                 </div>
                 <div class="icon-button hover-highlight" id="new-note">
-                    <img src="images/Note.png" class="icon small">
+                    <img src="images/site/Note.png" class="icon small">
                     <span class="text">新建笔记</span>
                 </div>
                 <div class="icon-button block-link hover-highlight" data-id="all" data-type="time">
@@ -3930,7 +3930,7 @@
                     <span class="text">艾欧泽亚时间</span>
                 </div>
                 <div class="icon-button block-link hover-highlight" data-id="all" data-type="skywatcher">
-                    <img src="images/Skywatcher.png" class="icon small">
+                    <img src="images/marker/Skywatcher.png" class="icon small">
                     <span class="text">天气风向标</span>
                 </div>
                 <div class="icon-button block-link hover-highlight" data-id="leveling" data-type="equip">
@@ -3946,7 +3946,7 @@
                     <span class="text">九宫幻卡图鉴</span>
                 </div>
                 <div class="icon-button hover-highlight">
-                    <img src="images/Eraser.svg" class="icon small">
+                    <img src="images/site/Eraser.svg" class="icon small">
                     <span class="text" id="clear-list">清空列表</span>
                 </div>
             </div>
@@ -4025,11 +4025,11 @@
 
                 <h3>理论分析</h3>
                 <ul>
-                    <li><a href="https://dervyxiv.wordpress.com/">Dervy does Theorycrafting</a> Source for stat weights.</li>
-                    <li><a href="http://forum.square-enix.com/ffxiv/threads/185390-Let-s-talk-about-Hunts-a-detailed-rundown-of-their-assumed-mechanics">Let's talk about Hunts</a></li>
-                    <li><a href="http://forum.square-enix.com/ffxiv/threads/181498-Desynthesis-Endgame-Guide">Desynthesis Endgame Guide</a></li>
-                    <li><a href="http://forum.square-enix.com/ffxiv/threads/245872-Airship-Guide">Airship Guide</a></li>
-                    <li><a href="https://docs.google.com/document/d/1a8YqXavtbljQmK5cBAD725AN-GPxuuhsqg7BhhasNh8/edit">Spiritbonding for Anybody</a></li>
+                    <li><a href="https://dervyxiv.wordpress.com/" target="_blank">Dervy does Theorycrafting</a> Source for stat weights.</li>
+                    <li><a href="http://forum.square-enix.com/ffxiv/threads/185390-Let-s-talk-about-Hunts-a-detailed-rundown-of-their-assumed-mechanics" target="_blank">Let's talk about Hunts</a></li>
+                    <li><a href="http://forum.square-enix.com/ffxiv/threads/181498-Desynthesis-Endgame-Guide" target="_blank">Desynthesis Endgame Guide</a></li>
+                    <li><a href="http://forum.square-enix.com/ffxiv/threads/245872-Airship-Guide" target="_blank">Airship Guide</a></li>
+                    <li><a href="https://docs.google.com/document/d/1a8YqXavtbljQmK5cBAD725AN-GPxuuhsqg7BhhasNh8/edit" target="_blank">Spiritbonding for Anybody</a></li>
                 </ul>
 
                 <h3>开发人员</h3>
@@ -4073,6 +4073,16 @@
                     <tr>
                         <td class="value"><input type="checkbox" id="prefer-combat-ventures-setting"></td><td><label for="prefer-combat-ventures-setting">战斗筹集委托</label></td>
                         <td colspan="2" class="deemphasize">将战斗雇员探险置于手动采集之前。</td>
+                    </tr>
+
+                    <tr>
+                        <td class="value"><input type="checkbox" id="prefer-gathering"></td><td><label for="prefer-gathering">Gathering</label></td>
+                        <td colspan="2" class="deemphasize">Prefers manual gathering than npc shops.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="value"><input type="checkbox" id="prefer-crafting"></td><td><label for="prefer-crafting">Crafting</label></td>
+                        <td colspan="2" class="deemphasize">Prefers manual crafting than npc shops.</td>
                     </tr>
 
                     <!-- Crafting Categories -->

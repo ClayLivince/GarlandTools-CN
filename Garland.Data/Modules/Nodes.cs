@@ -10,6 +10,10 @@ namespace Garland.Data.Modules
     {
         Dictionary<int, dynamic> _bonusesByKey = new Dictionary<int, dynamic>();
         Dictionary<int, dynamic> _iSpearFishingNotebookById = new Dictionary<int, dynamic>();
+        Dictionary<int, Saint.Level> _levelByGatheringPointId = new Dictionary<int, Saint.Level>();
+        Dictionary<int, Saint.XivRow> _transientById = new Dictionary<int, Saint.XivRow>();
+        Dictionary<int, dynamic> _viewsByNodeId = new Dictionary<int, dynamic>();
+
 
         public override string Name => "Nodes";
 
@@ -19,6 +23,7 @@ namespace Garland.Data.Modules
                 _iSpearFishingNotebookById[iSpearFishingNotebook.Key] = iSpearFishingNotebook;
 
             BuildGatheringPointBonuses();
+            IndexRequiredSaintSheets();
 
             // GatheringItemPoint collection.
             var sGatheringItemSheet = _builder.Sheet<Saint.GatheringItem>();
@@ -40,6 +45,10 @@ namespace Garland.Data.Modules
                     node = BuildNode(sGatheringPoint, lastNode);
                     if (node == null)
                         continue;
+                }
+                else
+                {
+                    AddPointToNode(node, sGatheringPoint);
                 }
 
                 // All potential bonuses are stored.
@@ -68,11 +77,102 @@ namespace Garland.Data.Modules
                 lastNode = node;
             }
 
-            BuildLimitedNodes();
+            //BuildLimitedNodes();
+            //Hacks.CreateDiademNodes(_builder.Db);
 
-            Hacks.CreateDiademNodes(_builder.Db);
+            SortNodes();
+        }
 
-            Cleanup();
+        void AddPointToNode(dynamic node, Saint.GatheringPoint sGatheringPoint)
+        {
+            // Add subpoint to the node
+            dynamic point = new JObject();
+            point.id = sGatheringPoint.Key;
+            point.count = sGatheringPoint.AsInt32("Count");
+
+            var sGatheringPointTransient = _transientById[sGatheringPoint.Key];
+            var sStartTime = sGatheringPointTransient.As<UInt16>("EphemeralStartTime");
+            var sEndTime = sGatheringPointTransient.As<UInt16>("EphemeralEndTime");
+            var sTimeTable = sGatheringPointTransient["GatheringRarePopTimeTable"];
+            if (sStartTime != 65535 && !(sEndTime == 0 && sStartTime == 0))
+            {
+                node.limitType = "Ephemeral";
+                if (sEndTime == 0)
+                {
+                    sEndTime = 2400;
+                }
+                point.times = new JArray() {sStartTime / 100};
+                point.uptime = ((sEndTime / 100) - (sStartTime / 100)) * 60;
+            }
+            else if (sTimeTable != null && ((Saint.XivRow) sTimeTable).Key != 0)
+            {
+                node.limitType = "Unspoiled";
+                var sTimeTableRow = sTimeTable as Saint.XivRow;
+                var times = new JArray();
+                for (int i = 0; i < 3; i++)
+                {
+                    if (sTimeTableRow.As<UInt16>($"StartTime[{i}]") != 65535)
+                    {
+                        times.Add(sTimeTableRow.As<UInt16>($"StartTime[{i}]") / 100);
+                    }
+                    else
+                        break;
+                }
+                
+                // All three duration is same, we just take first one.
+                var sUptime = sTimeTableRow.As<UInt16>("Duration(m)[0]");
+                // This is confusing
+                switch (sUptime)
+                {
+                    case 300:
+                        point.uptime = 180;
+                        break;
+                    case 160:
+                        point.uptime = 120;
+                        break;
+                    case 0:
+                        break;
+                    default:
+                        DatabaseBuilder.PrintLine($"Bad duration time {sUptime} for node {node.name}.");
+                        break;
+                }
+
+                if (times.Count > 0)
+                {
+                    point.times = times;
+                }
+            }
+
+            // Add coords for point
+            if (_levelByGatheringPointId.TryGetValue(sGatheringPoint.Key, out var sLevel))
+            {
+                if (sLevel.Map.Key != 0)
+                {
+                    point.zoneid = sLevel.Map.PlaceName.Key;
+                    point.coords = new JArray()
+                    {
+                        sLevel.MapX, sLevel.MapY
+                    };
+                }
+            }
+            node.points.Add(point);
+        }
+
+        void IndexRequiredSaintSheets()
+        {
+            foreach (Saint.Level sLevel in _builder.Sheet<Saint.Level>())
+            {
+                if (sLevel.Object is Saint.GatheringPoint)
+                {
+                    var sGatheringPoint = sLevel.Object as Saint.GatheringPoint;
+                    _levelByGatheringPointId[sGatheringPoint.Key] = sLevel;
+                }
+            }
+
+            foreach (var row in _builder.Sheet("GatheringPointTransient"))
+            {
+                _transientById[row.Key] = row;
+            }
         }
 
         void AddNodeBonuses(dynamic node, Saint.GatheringPoint sGatheringPoint)
@@ -99,7 +199,10 @@ namespace Garland.Data.Modules
             node.patch = PatchDatabase.Get("node", sGatheringPoint.Base.Key);
             node.type = sGatheringPoint.Base.Type.Key;
             node.lvl = sGatheringPoint.Base.GatheringLevel;
+            node.points = new JArray();
             node.items = new JArray();
+
+            AddPointToNode(node, sGatheringPoint);
 
             if (sGatheringPoint.Base.IsLimited)
                 node.limited = 1;
@@ -332,6 +435,179 @@ namespace Garland.Data.Modules
             }
         }
 
+        void SortNodes()
+        {
+            // Clean out invalid nodes, and add node IDs to items.
+            // And do some links\limit builds, also create view here
+
+            List<dynamic> nodesToRemove = new List<dynamic>();
+            var sPlaceNames = _builder.Sheet<Saint.PlaceName>();
+            Dictionary<int, Saint.XivRow> ExportedPointByBaseId = new Dictionary<int, Saint.XivRow>();
+
+            foreach (Saint.IXivRow sExportedGatheringPoint in _builder.Sheet("ExportedGatheringPoint"))
+            {
+                ExportedPointByBaseId[sExportedGatheringPoint.Key] = (Saint.XivRow)sExportedGatheringPoint;
+            }
+
+            foreach (var node in _builder.Db.Nodes)
+            {
+                // Fill zone id for it, if it don't have one
+                if (node.points != null)
+                {
+                    if (node.zoneid == null)
+                    {
+                        foreach (dynamic point in node.points)
+                        {
+                            if (point.zoneid != null)
+                            {
+                                node.zoneid = point.zoneid;
+                                break;
+                            }
+                        }
+                    }
+                }
+
+                if (node.zoneid != null)
+                {
+                    // Add coords and radius to the node
+                    if (ExportedPointByBaseId.TryGetValue((int)node.id.Value, out var sExportedBase))
+                    {
+                        node.radius = sExportedBase.AsInt32("Radius");
+
+                        _builder.Db.LocationIndex.TryGetValue(sPlaceNames
+                            .Where(s => s.Key == (int)node.zoneid).First(), out var info);
+
+                        if (info == null)
+                        {
+                            DatabaseBuilder.PrintLine($"Place name {node.zoneid} not found in locations.");
+                            continue;
+                        }
+
+                        node.coords = new JArray
+                        {
+                            Math.Round(info.Map.ToMapCoordinate2d(sExportedBase.AsInt32("X"), 0) + 20.5, 2),
+                            Math.Round(info.Map.ToMapCoordinate2d(sExportedBase.AsInt32("Y"), 0) + 20.5, 2)
+                        };
+                    }
+
+                    // Add Reference of items
+                    foreach (var gi in node.items)
+                    {
+                        int itemId = gi.id;
+                        var item = _builder.Db.ItemsById[itemId];
+                        if (item.nodes == null)
+                            item.nodes = new JArray();
+                        item.nodes.Add(node.id);
+                        _builder.Db.AddReference(node, "item", itemId, false);
+                        _builder.Db.AddReference(item, "node", (int)node.id, true);
+                    }
+                }
+                else
+                {
+                    // These nodes are probably just used for testing, or they're for
+                    // areas that don't exist yet in Saint.
+                    nodesToRemove.Add(node);
+                    continue;
+                }
+
+                // This must be after the coords was set
+                if (node.points != null)
+                {
+                    // Union all times of this node
+                    HashSet<int> allTimes = new HashSet<int>();
+                    var uptime = 0;
+                    foreach (dynamic point in node.points)
+                    {
+                        if (point.times != null)
+                        {
+                            allTimes.UnionWith(((JArray)point.times).AsEnumerable().Select(t => (int)t));
+                            uptime = point.uptime.Value;
+                        }
+
+                    }
+
+                    // Add times to node
+                    if (allTimes.Count > 0)
+                    {
+                        node.time = new JArray(allTimes);
+                        node.uptime = uptime;
+
+                        // Folklore things are legendary one
+                        if (node.unlockId != null)
+                        {
+                            node.limitType = "Legendary";
+                        }
+                        BuildNodeView(node);
+                    }
+                }
+            }
+
+            foreach (dynamic node in nodesToRemove)
+            {
+                _builder.Db.Nodes.Remove(node);
+            }
+        }
+
+        void BuildNodeView(dynamic node)
+        {
+            try
+            {
+                var nodeId = (int)node.id.Value;
+                // Next build up the gathering node view.
+                if (!_viewsByNodeId.TryGetValue(nodeId, out var view))
+                {
+                    view = new JObject();
+                    _viewsByNodeId[nodeId] = view;
+                    _builder.Db.NodeViews.Add(view);
+
+                        view.type = TypeToName((int)node.type);
+                        view.func = "node";
+                        view.items = new JArray();
+
+                        if (node.stars != null)
+                            view.stars = node.stars;
+
+                        view.time = node.time;
+                        view.title = node.name;
+
+                        var zone = _builder.Db.LocationsById[(int)node.zoneid];
+                        view.zone = zone.name;
+
+                    view.coords = node.coords;
+                    view.name = node.limitType;
+                    view.uptime = node.uptime;
+                    view.lvl = node.lvl;
+                    view.id = nodeId;
+
+                        if (node.bonus != null)
+                        {
+                            var bonus = _bonusesByKey[(int)node.bonus[0]];
+                            view.condition = bonus.condition;
+                            view.bonus = bonus.bonus;
+                        }
+
+                    view.patch = node.patch;
+                }
+
+                // Add items to the view.
+                foreach (dynamic nodeItem in (JArray)node.items)
+                {
+                    dynamic item = _builder.Db.ItemsById[(int)nodeItem.id];
+                    dynamic itemView = new JObject();
+                    itemView.item = item.en.name;
+                    itemView.icon = item.icon;
+                    itemView.id = item.id;
+
+                    view.items.Add(itemView);
+                }
+            } catch (Exception e)
+            {
+                System.Diagnostics.Debugger.Break();
+            }
+            
+            
+        }
+
         static string TypeToName(int gatheringType)
         {
             switch (gatheringType)
@@ -344,32 +620,5 @@ namespace Garland.Data.Modules
             }
         }
 
-        void Cleanup()
-        {
-            // Clean out invalid nodes, and add node IDs to items.
-
-            var allNodes = _builder.Db.Nodes.ToArray();
-            foreach (var node in allNodes)
-            {
-                if (node.zoneid == null)
-                {
-                    // These nodes are probably just used for testing, or they're for
-                    // areas that don't exist yet in Saint.
-                    _builder.Db.Nodes.Remove(node);
-                    continue;
-                }
-
-                foreach (var gi in node.items)
-                {
-                    int itemId = gi.id;
-                    var item = _builder.Db.ItemsById[itemId];
-                    if (item.nodes == null)
-                        item.nodes = new JArray();
-                    item.nodes.Add(node.id);
-                    _builder.Db.AddReference(node, "item", itemId, false);
-                    _builder.Db.AddReference(item, "node", (int)node.id, true);
-                }
-            }
-        }
     }
 }

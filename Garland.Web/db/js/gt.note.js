@@ -67,7 +67,7 @@ gt.note = {
             displayName: he.encode(data.id),
             template: gt.note.blockTemplate,
             blockClass: 'tool expand-right',
-            icon: 'images/Note.png',
+            icon: 'images/site/Note.png',
             subheader: '笔记',
             tool: 1,
 
