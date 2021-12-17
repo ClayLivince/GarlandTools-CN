@@ -120,10 +120,9 @@ namespace Garland.Data
             return lines.Select(l => l.Split('\t'));
         }
 
-        public static IEnumerable<string[]> Csv(string path)
+        public static SaintCoinach.Xiv.ClientType GetClientType(SaintCoinach.Xiv.IXivRow row)
         {
-            var lines = System.IO.File.ReadAllLines(path);
-            return lines.Select(l => l.Split(','));
+            return row.Sheet.Collection.ClientType;
         }
 
         public static JToken Json(string path)

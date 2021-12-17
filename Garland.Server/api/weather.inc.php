@@ -126,6 +126,7 @@ $zoneWeather = array('利姆萨·罗敏萨' => array(array('Rate' => 20, 'Weathe
     '完璧王座' => array(array('Rate' => 100, 'Weather' => 118)),
     '丽耶美格梦园' => array(array('Rate' => 100, 'Weather' => 4)),
     '天穹街' => array(array('Rate' => 60, 'Weather' => 15), array('Rate' => 70, 'Weather' => 2), array('Rate' => 75, 'Weather' => 1), array('Rate' => 90, 'Weather' => 3), array('Rate' => 100, 'Weather' => 4)),
-    '南方博兹雅战线' => array(array('Rate' => 52, 'Weather' => 2), array('Rate' => 64, 'Weather' => 7), array('Rate' => 76, 'Weather' => 5), array('Rate' => 88, 'Weather' => 9), array('Rate' => 100, 'Weather' => 11)));
+    '南方博兹雅战线' => array(array('Rate' => 52, 'Weather' => 2), array('Rate' => 64, 'Weather' => 7), array('Rate' => 76, 'Weather' => 5), array('Rate' => 88, 'Weather' => 9), array('Rate' => 100, 'Weather' => 11)),
+    '扎杜诺尔高原' => array(array('Rate' => 60, 'Weather' => 2), array('Rate' => 70, 'Weather' => 7), array('Rate' => 80, 'Weather' => 5), array('Rate' => 90, 'Weather' => 9), array('Rate' => 100, 'Weather' => 15)));
 
 ?>

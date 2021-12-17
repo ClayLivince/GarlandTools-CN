@@ -64,7 +64,7 @@ namespace Garland.Data.Modules
                 // then let's do some magic and make that to be 80x80 one.
                 // and also keep a 40x in that directory.
                 item.tripletriad.icon = IconDatabase.EnsureEntry("triad\\icon", unlock.TripleTriadCard.Icon);
-                IconDatabase.EnsureEntryHQ("triad\\icon", unlock.TripleTriadCard.Icon);
+                IconDatabase.EnsureEntryHQ("triad\\icon", unlock.TripleTriadCard.Icon, _builder.Realm);
                 item.tripletriad.plate = IconDatabase.EnsureEntry("triad\\plate", sCard.PlateIcon);
 
                 item.tripletriad.rarity = sResident.TripleTriadCardRarity.Key;

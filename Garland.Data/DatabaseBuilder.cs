@@ -78,7 +78,7 @@ namespace Garland.Data
 
             if (fetchIconsOnly)
             {
-                new Lodestone.LodestoneIconScraper(_itemIconDatabase).FetchIcons();
+                new Lodestone.LodestoneIconScraper(_itemIconDatabase).FetchIcons(this);
                 PrintLine("All icons fetched.  Stopping.");
                 return;
             }

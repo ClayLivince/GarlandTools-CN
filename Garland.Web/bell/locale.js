@@ -1,5 +1,5 @@
 ﻿gt.locale = {
-    lang: 'chs',
+    lang: 'cn',
 
     translate: function(obj) {
         if (!obj)

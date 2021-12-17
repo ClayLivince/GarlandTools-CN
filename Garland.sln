@@ -32,8 +32,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaintCoinach.Cmd", "..\Sain
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaintCoinach.Graphics.Viewer", "..\SaintCoinach\SaintCoinach.Graphics.Viewer\SaintCoinach.Graphics.Viewer.csproj", "{226BF71E-334F-4585-8FEC-4239704CF539}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmallDataExporter2", "SmallDataExporter2\SmallDataExporter2.csproj", "{0B9D87DD-93B2-4268-9C25-133F7E7C7D5A}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -152,18 +150,6 @@ Global
 		{226BF71E-334F-4585-8FEC-4239704CF539}.Release-Unsigned|Any CPU.Build.0 = Release|Any CPU
 		{226BF71E-334F-4585-8FEC-4239704CF539}.Release-Unsigned|x64.ActiveCfg = Release|Any CPU
 		{226BF71E-334F-4585-8FEC-4239704CF539}.Release-Unsigned|x64.Build.0 = Release|Any CPU
-		{0B9D87DD-93B2-4268-9C25-133F7E7C7D5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0B9D87DD-93B2-4268-9C25-133F7E7C7D5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0B9D87DD-93B2-4268-9C25-133F7E7C7D5A}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{0B9D87DD-93B2-4268-9C25-133F7E7C7D5A}.Debug|x64.Build.0 = Debug|Any CPU
-		{0B9D87DD-93B2-4268-9C25-133F7E7C7D5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0B9D87DD-93B2-4268-9C25-133F7E7C7D5A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0B9D87DD-93B2-4268-9C25-133F7E7C7D5A}.Release|x64.ActiveCfg = Release|Any CPU
-		{0B9D87DD-93B2-4268-9C25-133F7E7C7D5A}.Release|x64.Build.0 = Release|Any CPU
-		{0B9D87DD-93B2-4268-9C25-133F7E7C7D5A}.Release-Unsigned|Any CPU.ActiveCfg = Release|Any CPU
-		{0B9D87DD-93B2-4268-9C25-133F7E7C7D5A}.Release-Unsigned|Any CPU.Build.0 = Release|Any CPU
-		{0B9D87DD-93B2-4268-9C25-133F7E7C7D5A}.Release-Unsigned|x64.ActiveCfg = Release|Any CPU
-		{0B9D87DD-93B2-4268-9C25-133F7E7C7D5A}.Release-Unsigned|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

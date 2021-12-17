@@ -1,5 +1,5 @@
 gt.node = {
-    pluralName: '�ɼ���',
+    pluralName: '采集点',
     type: 'node',
     blockTemplate: null,
     index: {},
@@ -65,7 +65,7 @@ gt.node = {
 
         view.icon = 'images/node/' + view.category + '.png';
         if (node.limitType) {
-            typePrefix = node.limitType + ' ';
+            typePrefix = gt.node.getTypePrefix(node.limitType);
             view.icon = 'images/node/' + view.category + " Limited" + '.png';
         }
         view.subheader = "等级 " + node.lvl + gt.util.stars(node.stars) + ' ' + typePrefix + view.category;
@@ -124,6 +124,20 @@ gt.node = {
         return view;
     },
 
+    getTypePrefix: function(type) {
+        var typePrefix = "";
+        if (type == "Legendary")
+            typePrefix = "传说的";
+        else if (type == "Unspoiled")
+            typePrefix = "未知的";
+        else if (type == "Concealed")
+            typePrefix = "隐藏的";
+        else if (type == "Ephemeral")
+            typePrefix = "限时的";
+
+        return typePrefix;
+    },
+
     getPartialViewModel: function(partial) {
         var name = gt.model.name(partial);
         var category = gt.node.types[partial.t];
@@ -131,7 +145,7 @@ gt.node = {
         if (partial.lt){
             iconName += " Limited";
         }
-        var typePrefix = partial.lt ? (partial.lt + ' ') : '';
+        var typePrefix = partial.lt ? (gt.node.getTypePrefix(partial.lt)) : '';
         var zone = gt.location.index[partial.z] || { name: 'δ֪' };
         var region = gt.location.index[zone.parentId];
 
@@ -160,7 +174,7 @@ gt.node = {
             step.sourceType = 'node';
             step.sourceView = view;
         }
-        step.setCategory(['�ɼ�']);
+        step.setCategory(['采集']);
     },
 
     limitedNodeUpdate: function() {
@@ -263,13 +277,13 @@ gt.node = {
 
         if (eorzeaMinutesDifference > 0 && eorzeaMinutesDifference <= 120) {
             // Spawns within 2 hours.
-            info.text = "�� <i class=\"xiv local-time-chs\"></i> " + gt.time.formatTime(times.lNextSpawn) + " ����";
+            info.text = "在 <i class=\"xiv local-time-chs\"></i> " + gt.time.formatTime(times.lNextSpawn) + " 出现";
             info.state = 'spawning';
             info.change = times.lNextSpawn;
         } else if (eorzeaMinutesDifference < 0 && eorzeaMinutesDifference > -view.uptime) {
             // Active for {uptime} minutes.
             var lNextExpire = gt.time.eorzeaToLocal(times.eNextExpire);
-            info.text = "�� <i class=\"xiv local-time-chs\"></i> " + gt.time.formatTime(lNextExpire) + " ��ʧ";
+            info.text = "目前可采集！ 在 <i class=\"xiv local-time-chs\"></i> " + gt.time.formatTime(lNextExpire) + " 消失";
             info.state = "active";
             info.change = lNextExpire;
             info.progressStart = lNextExpire;
@@ -279,7 +293,7 @@ gt.node = {
             var eSpawning = new Date(times.eNextSpawn);
             eSpawning.setUTCHours(eSpawning.getUTCHours() - 2);
 
-            info.text = "�� <i class=\"xiv local-time-chs\"></i> " + gt.time.formatTime(times.lNextSpawn) + " ����";
+            info.text = "在 <i class=\"xiv local-time-chs\"></i> " + gt.time.formatTime(times.lNextSpawn) + " 出现";
             info.state = 'dormant';
             info.change = gt.time.eorzeaToLocal(eSpawning);
         }

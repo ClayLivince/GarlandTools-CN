@@ -148,8 +148,10 @@ namespace Garland.Data.Modules
             foreach (dynamic bnpc in BNpcs)
             {
                 Saint.BNpcBase sBNpc = null;
-                foreach (Saint.BNpcBase bnpcbase in sBNpcBases) {
-                    if (bnpcbase.Key.Equals(int.Parse(bnpc.baseid.Value))){
+                foreach (Saint.BNpcBase bnpcbase in sBNpcBases)
+                {
+                    if (bnpcbase.Key.Equals(int.Parse(bnpc.baseid.Value)))
+                    {
                         sBNpc = bnpcbase;
                         break;
                     }
@@ -160,32 +162,36 @@ namespace Garland.Data.Modules
                 string sBNpcName = "";
                 foreach (Saint.BNpcName bnpcname in sBNpcNames)
                 {
-                    if (bnpcname.Key.Equals(int.Parse(bnpc.nameid.Value))){
+                    if (bnpcname.Key.Equals(int.Parse(bnpc.nameid.Value)))
+                    {
                         sBNpcName = bnpcname.Singular;
                         break;
                     }
                 }
                 if (sBNpcName == "")
                     continue;
-                
+
                 if (sBNpc.BNpcCustomize.Key != 0 || sBNpc.NpcEquip.Key != 0)
                 {
                     SanitizeBNpc(bnpc, sBNpcName, sTerritory);
                     BuildBNpcAppearanceData(bnpc, sBNpc);
                     _builder.Db.Npcs.Add(bnpc);
-                }               
+                }
             }
         }
 
-        public void SanitizeBNpc(dynamic bnpc, string sName, Saint.TerritoryType[] sZones) {
+        public void SanitizeBNpc(dynamic bnpc, string sName, Saint.TerritoryType[] sZones)
+        {
             var firstMap = bnpc.maps.Value.Split(',')[0].Trim();
             bnpc.id = int.Parse("9" + bnpc.baseid + firstMap);
             bnpc.patch = GarlandDatabase.NextPatch;
             bnpc.isBNpc = 1;
 
             Saint.TerritoryType sZone = null;
-            foreach (Saint.TerritoryType zone in sZones) {
-                if (zone.Key.Equals(int.Parse(firstMap))) {
+            foreach (Saint.TerritoryType zone in sZones)
+            {
+                if (zone.Key.Equals(int.Parse(firstMap)))
+                {
                     sZone = zone;
                 }
             }
@@ -199,7 +205,8 @@ namespace Garland.Data.Modules
                 bnpc.chs = new JObject();
                 bnpc.chs.name = tryTitle[1];
             }
-            else {
+            else
+            {
                 bnpc.chs = new JObject();
                 bnpc.chs.name = sName;
             }
@@ -213,7 +220,8 @@ namespace Garland.Data.Modules
             alts.Add(bnpc);
         }
 
-        public List<dynamic> FetchBNpcs() {
+        public List<dynamic> FetchBNpcs()
+        {
             Clay.ClayMySQL database = new Clay.ClayMySQL();
 
             List<dynamic> result = database.getAllBNpcs();
@@ -223,8 +231,9 @@ namespace Garland.Data.Modules
 
         public void BuildBNpcAppearanceData(dynamic npc, Saint.BNpcBase sBNpc)
         {
-            
-            if (sBNpc == null) {
+
+            if (sBNpc == null)
+            {
                 DatabaseBuilder.PrintLine(string.Format("Unable to find BnpcBase with id {0} name {1}.", npc.baseid, npc.name));
                 return;
             }
@@ -232,7 +241,7 @@ namespace Garland.Data.Modules
             {
                 return;
             }
-            
+
             var race = (Saint.Race)sBNpc.BNpcCustomize["Race"];
             if (race == null || race.Key == 0)
                 return; // Unique or beast NPCs, can't do appearance now.
@@ -294,12 +303,12 @@ namespace Garland.Data.Modules
             }
 
             // Hair & Highlights
-            
+
             var hairstyle = (byte)sBNpc.BNpcCustomize["HairStyle"];
-            var hairstyleIcon = CustomizeIcon(GetHairstyleCustomizeIndex(tribe.Key, isMale), 100, hairstyle, npc);
+            var hairstyleIcon = CustomizeIcon(GetHairstyleCustomizeIndex(tribe.Key, isMale, sBNpc.ClientType), 100, hairstyle, npc, appearance);
             if (hairstyleIcon > 0)
                 appearance.hairStyle = hairstyleIcon;
-            
+
 
             appearance.hairColor = FormatColorCoordinates((byte)sBNpc.BNpcCustomize["HairColor"]);
             appearance.hairColorCode = FormatColor((byte)sBNpc.BNpcCustomize["HairColor"], GetHairColorMapIndex(tribe.Key, isMale));
@@ -351,7 +360,7 @@ namespace Garland.Data.Modules
 
             // Facepaint
             var facepaint = Unpack2((byte)sBNpc.BNpcCustomize["FacePaint"]);
-            var facepaintIcon = CustomizeIcon(GetFacePaintCustomizeIndex(tribe.Key, isMale), 50, facepaint.Item2, npc);
+            var facepaintIcon = CustomizeIcon(GetFacePaintCustomizeIndex(tribe.Key, isMale, sBNpc.ClientType), 50, facepaint.Item2, npc, appearance);
             if (facepaintIcon > 0)
             {
                 appearance.facepaint = facepaintIcon;
@@ -491,12 +500,12 @@ namespace Garland.Data.Modules
 
             // Hair & Highlights
             var hairstyle = (byte)sNpc.Base["HairStyle"];
-            var hairstyleIcon = CustomizeIcon(GetHairstyleCustomizeIndex(tribe.Key, isMale), 100, hairstyle, npc, appearance);
+            var hairstyleIcon = CustomizeIcon(GetHairstyleCustomizeIndex(tribe.Key, isMale, sNpc.Base.ClientType), 100, hairstyle, npc, appearance);
             if (hairstyleIcon > 0)
             {
                 appearance.hairStyle = hairstyleIcon;
             }
-             
+
             appearance.hairColor = FormatColorCoordinates((byte)sNpc.Base["HairColor"]);
             appearance.hairColorCode = FormatColor((byte)sNpc.Base["HairColor"], GetHairColorMapIndex(tribe.Key, isMale));
 
@@ -547,7 +556,7 @@ namespace Garland.Data.Modules
 
             // Facepaint
             var facepaint = Unpack2((byte)sNpc.Base["FacePaint"]);
-            var facepaintIcon = CustomizeIcon(GetFacePaintCustomizeIndex(tribe.Key, isMale), 50, facepaint.Item2, npc, appearance);
+            var facepaintIcon = CustomizeIcon(GetFacePaintCustomizeIndex(tribe.Key, isMale, sNpc.Base.ClientType), 50, facepaint.Item2, npc, appearance);
             if (facepaintIcon > 0)
             {
                 appearance.facepaint = facepaintIcon;
@@ -580,7 +589,7 @@ namespace Garland.Data.Modules
                     // If it's not hrotgar, shift to -1
                     if (race.Key != 7)
                     {
-                        iconIndex --;
+                        iconIndex--;
                     }
 
                     var column = "FacialFeatureOption[" + iconIndex + "][" + i + "]";
@@ -677,7 +686,10 @@ namespace Garland.Data.Modules
                     var hintitem = row["HintItem"] as Saint.Item;
                     if (hintitem != null && hintitem.Key != 0)
                     {
-                        appearence.hairstyleItem = hintitem.Key;
+                        if (appearence.unlockItems == null)
+                            appearence.unlockItems = new JArray();
+
+                        ((JArray)appearence.unlockItems).Add(hintitem.Key);
                         _builder.Db.AddReference(npc, "item", hintitem.Key, false);
                     }
                     return IconDatabase.EnsureEntry("customize", icon);
@@ -702,7 +714,7 @@ namespace Garland.Data.Modules
             return listIndex * 256;
         }
 
-        static int GetHairstyleCustomizeIndex(int tribeKey, bool isMale)
+        static int GetHairstyleCustomizeIndex(int tribeKey, bool isMale, Saint.ClientType client)
         {
             switch (tribeKey)
             {
@@ -733,49 +745,80 @@ namespace Garland.Data.Modules
                     return 1400;
                 case 15: // Rava
                 case 16: // Veena
-                    return isMale ? 1600 : 1700;
+                    switch (client)
+                    {
+                        case Saint.ClientType.GLOBAL:
+                            return isMale ? 1600 : 1700;
+                        case Saint.ClientType.CHINA:
+                            return 1500;
+                    }
+                    break;
             }
-
             throw new NotImplementedException();
         }
 
-        static int GetFacePaintCustomizeIndex(int tribeKey, bool isMale)
+        static int GetFacePaintCustomizeIndex(int tribeKey, bool isMale, Saint.ClientType client)
         {
-            const int baseRowKey = 2000; // EW - [update by patch required]
-
-            switch (tribeKey)
+            int baseRowKey;
+            switch (client)
             {
-                case 1: // Midlander
-                case 2: // Highlander
-                case 3: // Wildwood
-                case 4: // Duskwight
-                case 5: // Plainsfolks
-                case 6: // Dunesfolk
-                case 7: // Seeker of the Sun
-                case 8: // Keeper of the Moon
-                case 9: // Sea Wolf
-                case 10: // Hellsguard
-                case 11: // Raen
-                case 12: // Xaela
-                case 13: // Helions
-                case 14: // The Lost
-                case 15: // Rava
-                case 16: // Veena
-                    var tribeOffset = baseRowKey + ((tribeKey - 1) * 100);
-                    return isMale ? tribeOffset : tribeOffset + 50;
-                
-                /*
-                case 13: // Helions
-                    return 3200;
-                case 14: // The Lost
-                    return 3300;
-                case 15: // Rava
-                    return 3400;
-                case 16: // Veena
-                    return 3500;
-                */
-            }
+                case Saint.ClientType.GLOBAL:
+                    baseRowKey = 2000; // EW - [update by patch required]
 
+                    switch (tribeKey)
+                    {
+                        case 1: // Midlander
+                        case 2: // Highlander
+                        case 3: // Wildwood
+                        case 4: // Duskwight
+                        case 5: // Plainsfolks
+                        case 6: // Dunesfolk
+                        case 7: // Seeker of the Sun
+                        case 8: // Keeper of the Moon
+                        case 9: // Sea Wolf
+                        case 10: // Hellsguard
+                        case 11: // Raen
+                        case 12: // Xaela
+                        case 13: // Helions
+                        case 14: // The Lost
+                        case 15: // Rava
+                        case 16: // Veena
+                            var tribeOffset = baseRowKey + ((tribeKey - 1) * 100);
+                            return isMale ? tribeOffset : tribeOffset + 50;
+                    }
+                    break;
+
+                case Saint.ClientType.CHINA:
+                    baseRowKey = 1600; // SH
+
+                    switch (tribeKey)
+                    {
+                        case 1: // Midlander
+                        case 2: // Highlander
+                        case 3: // Wildwood
+                        case 4: // Duskwight
+                        case 5: // Plainsfolks
+                        case 6: // Dunesfolk
+                        case 7: // Seeker of the Sun
+                        case 8: // Keeper of the Moon
+                        case 9: // Sea Wolf
+                        case 10: // Hellsguard
+                        case 11: // Raen
+                        case 12: // Xaela
+                            var tribeOffset = baseRowKey + ((tribeKey - 1) * 100);
+                            return isMale ? tribeOffset : tribeOffset + 50;
+
+                        case 13: // Helions
+                            return 2800;
+                        case 14: // The Lost
+                            return 2850;
+                        case 15: // Rava
+                            return 2900;
+                        case 16: // Veena
+                            return 2950;
+                    }
+                    break;
+            }
             throw new NotImplementedException();
         }
 
