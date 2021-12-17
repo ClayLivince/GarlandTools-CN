@@ -1,5 +1,5 @@
 gt.node = {
-    pluralName: '采集点',
+    pluralName: '�ɼ���',
     type: 'node',
     blockTemplate: null,
     index: {},
@@ -7,8 +7,8 @@ gt.node = {
     version: 2,
     bonusIndex: null,
     limitedNodeUpdateKey: null,
-    types: ['矿脉', '石场', '良材', '草场', '刺鱼'],
-    jobAbbreviations: ['采矿工', '采矿工', '园艺工', '园艺工', '捕鱼人'],
+    types: ['矿脉', '石场', '良材', '草场', '刺鱼', '刺鱼'],
+    jobAbbreviations: ['采矿工', '采矿工', '园艺工', '园艺工', '捕鱼人', '捕鱼人'],
     browse: [
         { type: 'icon-list', prop: 'job' },
         { type: 'group', prop: 'region' },
@@ -56,7 +56,7 @@ gt.node = {
             stars: node.stars,
             time: node.time,
             uptime: node.uptime,
-            zone: gt.location.index[node.zoneid] || { name: '未知' },
+            zone: gt.location.index[node.zoneid] || { name: 'δ֪' },
             coords: node.coords,
             obj: node
         };
@@ -66,7 +66,7 @@ gt.node = {
         var typePrefix = node.limitType ? (node.limitType + ' ') : '';
 
         view.icon = 'images/' + view.category + '.png';
-        view.subheader = "等级 " + node.lvl + gt.util.stars(node.stars) + ' ' + typePrefix + view.category;
+        view.subheader = "�ȼ� " + node.lvl + gt.util.stars(node.stars) + ' ' + typePrefix + view.category;
 
         var typePrefix = node.limitType ? node.limitType + ' ' : '';
         view.byline = 'Lv. ' + view.lvl + gt.util.stars(view.stars) + ' ' + typePrefix + view.category;
@@ -127,7 +127,7 @@ gt.node = {
         var name = gt.model.name(partial);
         var category = gt.node.types[partial.t];
         var typePrefix = partial.lt ? (partial.lt + ' ') : '';
-        var zone = gt.location.index[partial.z] || { name: '未知' };
+        var zone = gt.location.index[partial.z] || { name: 'δ֪' };
         var region = gt.location.index[zone.parentId];
 
         return {
@@ -142,7 +142,7 @@ gt.node = {
             zone: zone,
             location: zone.name,
             lvl: partial.l,
-            region: region ? region.name : '未知',
+            region: region ? region.name : 'δ֪',
             limited: partial.ti ? 1 : 0,
             stars: partial.s,
             category: category
@@ -155,7 +155,7 @@ gt.node = {
             step.sourceType = 'node';
             step.sourceView = view;
         }
-        step.setCategory(['采集']);
+        step.setCategory(['�ɼ�']);
     },
 
     limitedNodeUpdate: function() {
@@ -258,13 +258,13 @@ gt.node = {
 
         if (eorzeaMinutesDifference > 0 && eorzeaMinutesDifference <= 120) {
             // Spawns within 2 hours.
-            info.text = "在 <i class=\"xiv local-time-chs\"></i> " + gt.time.formatTime(times.lNextSpawn) + " 出现";
+            info.text = "�� <i class=\"xiv local-time-chs\"></i> " + gt.time.formatTime(times.lNextSpawn) + " ����";
             info.state = 'spawning';
             info.change = times.lNextSpawn;
         } else if (eorzeaMinutesDifference < 0 && eorzeaMinutesDifference > -view.uptime) {
             // Active for {uptime} minutes.
             var lNextExpire = gt.time.eorzeaToLocal(times.eNextExpire);
-            info.text = "在 <i class=\"xiv local-time-chs\"></i> " + gt.time.formatTime(lNextExpire) + " 消失";
+            info.text = "�� <i class=\"xiv local-time-chs\"></i> " + gt.time.formatTime(lNextExpire) + " ��ʧ";
             info.state = "active";
             info.change = lNextExpire;
             info.progressStart = lNextExpire;
@@ -274,7 +274,7 @@ gt.node = {
             var eSpawning = new Date(times.eNextSpawn);
             eSpawning.setUTCHours(eSpawning.getUTCHours() - 2);
 
-            info.text = "在 <i class=\"xiv local-time-chs\"></i> " + gt.time.formatTime(times.lNextSpawn) + " 出现";
+            info.text = "�� <i class=\"xiv local-time-chs\"></i> " + gt.time.formatTime(times.lNextSpawn) + " ����";
             info.state = 'dormant';
             info.change = gt.time.eorzeaToLocal(eSpawning);
         }
