@@ -104,6 +104,9 @@ namespace Garland.Data
             if (name.StartsWith("过期"))
                 return true;
 
+            if (name.StartsWith("Outdated"))
+                return true;
+
             return false;
         }
 

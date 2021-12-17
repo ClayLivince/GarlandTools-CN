@@ -83,7 +83,7 @@ namespace Garland.Data
                 _data.ActiveLanguage = currentLang;
             }
             
-            if (interRow != null)
+            if (interRow != null && (interRow.Key != 0 || !string.IsNullOrEmpty(interRow.ToString())))
             {
                 var iCurrentLang = _interData.ActiveLanguage;
                 foreach (var langTuple in _interLangs)
@@ -163,7 +163,7 @@ namespace Garland.Data
                 _data.ActiveLanguage = currentLang;
             }
 
-            if (interRow != null)
+            if (interRow != null && (interRow.Key != 0 || !string.IsNullOrEmpty(interRow.ToString())))
             {
                 var currentLang = _interData.ActiveLanguage;
                 foreach (var langTuple in _interLangs)

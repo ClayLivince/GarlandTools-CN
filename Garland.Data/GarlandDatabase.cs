@@ -14,42 +14,43 @@ namespace Garland.Data
     {
         // NOTE: This section must be updated with every patch!
         public const decimal NextPatch = 5.57m;
+        public const decimal GlobalPatch = 6m;
         public static Patch[] MajorPatches = new[] {
-            new Patch(1m, "Legacy", "Legacy"),
+            new Patch(1m, "遗产", "遗产"),
 
-            new Patch(2m, "A Realm Reborn", "A Realm Reborn"),
-            new Patch(2.1m, "A Realm Awoken", "A Realm Reborn"),
-            new Patch(2.2m, "Through the Maelstrom", "A Realm Reborn"),
-            new Patch(2.3m, "Defenders of Eorzea", "A Realm Reborn"),
-            new Patch(2.4m, "Dreams of Ice", "A Realm Reborn"),
-            new Patch(2.5m, "Before the Fall", "A Realm Reborn"),
+            new Patch(2m, "重生之境", "重生之境"),
+            new Patch(2.1m, "觉醒之境", "重生之境"),
+            new Patch(2.2m, "混沌的漩涡", "重生之境"),
+            new Patch(2.3m, "艾欧泽亚的守护者", "重生之境"),
+            new Patch(2.4m, "寒冰的幻想", "重生之境"),
+            new Patch(2.5m, "希望的灯火", "重生之境"),
 
-            new Patch(3m, "Heavensward", "Heavensward"),
-            new Patch(3.1m, "As Goes Light, So Goes Darkness", "Heavensward"),
-            new Patch(3.2m, "The Gears of Change", "Heavensward"),
-            new Patch(3.3m, "Revenge of the Horde", "Heavensward"),
-            new Patch(3.4m, "Soul Surrender", "Heavensward"),
-            new Patch(3.5m, "The Far Edge of Fate", "Heavensward"),
+            new Patch(3m, "苍穹之禁城", "苍穹之禁城"),
+            new Patch(3.1m, "光与暗的分界", "苍穹之禁城"),
+            new Patch(3.2m, "命运的齿轮", "苍穹之禁城"),
+            new Patch(3.3m, "绝命怒嚎", "苍穹之禁城"),
+            new Patch(3.4m, "灵魂继承者", "苍穹之禁城"),
+            new Patch(3.5m, "命运的止境", "苍穹之禁城"),
 
-            new Patch(4m, "Stormblood", "Stormblood"),
-            new Patch(4.1m, "The Legend Returns", "Stormblood"),
-            new Patch(4.2m, "Rise of a New Sun", "Stormblood"),
-            new Patch(4.3m, "Under the Moonlight", "Stormblood"),
-            new Patch(4.4m, "Prelude in Violet", "Stormblood"),
-            new Patch(4.5m, "A Requiem for Heroes", "Stormblood"),
+            new Patch(4m, "红莲之狂潮", "红莲之狂潮"),
+            new Patch(4.1m, "英雄归来", "红莲之狂潮"),
+            new Patch(4.2m, "曙光微明", "红莲之狂潮"),
+            new Patch(4.3m, "月下芳华", "红莲之狂潮"),
+            new Patch(4.4m, "狂乱前奏", "红莲之狂潮"),
+            new Patch(4.5m, "英雄挽歌", "红莲之狂潮"),
 
-            new Patch(5m, "Shadowbringers", "Shadowbringers"),
-            new Patch(5.1m, "Vows of Virtue, Deeds of Cruelty", "Shadowbringers"),
-            new Patch(5.2m, "Echoes of a Fallen Star", "Shadowbringers"),
-            new Patch(5.3m, "Reflections in Crystal", "Shadowbringers"),
-            new Patch(5.4m, "Futures Rewritten", "Shadowbringers"),
-            new Patch(5.5m, "Death unto Dawn", "Shadowbringers"),
+            new Patch(5m, "暗影之逆焰", "暗影之逆焰"),
+            new Patch(5.1m, "纯白誓约，漆黑密约", "暗影之逆焰"),
+            new Patch(5.2m, "追忆的凶星", "暗影之逆焰"),
+            new Patch(5.3m, "水晶的残光", "暗影之逆焰"),
+            new Patch(5.4m, "另一个未来", "暗影之逆焰"),
+            new Patch(5.5m, "死斗至黎明", "暗影之逆焰"),
 
-            new Patch(6m, "Endwalker", "Endwalker"),
+            new Patch(6m, "晓月之终途", "晓月之终途"),
         };
 
         public static int LevelCap = -1; // Filled in from Miscellaneous.
-        public static int BlueMageLevelCap = 50;
+        public static int BlueMageLevelCap = 70;
 
         public HashSet<int> LocationReferences = new HashSet<int>();
         public Dictionary<object, List<DataReference>> DataReferencesBySource = new Dictionary<object, List<DataReference>>();

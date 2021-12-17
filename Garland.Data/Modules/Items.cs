@@ -316,9 +316,6 @@ namespace Garland.Data.Modules
                     }
                 }
 
-                /**
-                 * TODO Fix -- 
-                 * I just guess the viera male code is 1900, maybe update in SaintCoinach
                 var characterType = sEquipment.GetModelCharacterType();
                 if (characterType != 0 && !Hacks.NoModelCategories.Contains(sEquipment.ItemUICategory.Key))
                 {
@@ -343,7 +340,6 @@ namespace Garland.Data.Modules
                         itemsWithModel.Add(item);
                     }
                 }
-                */
 
                 // ItemSpecialBonus
                 if (sEquipment.ItemSpecialBonus != null && sEquipment.ItemSpecialBonus.Name != "")

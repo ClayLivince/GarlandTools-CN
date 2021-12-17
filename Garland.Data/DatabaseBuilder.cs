@@ -34,6 +34,7 @@ namespace Garland.Data
         public SaintCoinach.ARealmReversed InterRealm => _interRealm;
         public GarlandDatabase Db => _db;
         public Saint.Item[] ItemsToImport;
+        public Saint.Item[] GlobalItemsToImport;
         public Dictionary<int, Saint.Item> iItemById = new Dictionary<int, Saint.Item>();
         public Dictionary<int, LocationInfo> LocationInfoByMapId = new Dictionary<int, LocationInfo>();
         public Dictionary<int, string> EmoteNamesById = new Dictionary<int, string>();
@@ -60,6 +61,9 @@ namespace Garland.Data
                 
             // Miscellaneous initialization
             ItemsToImport = Sheet<Saint.Item>()
+                .Where(i => !Hacks.IsItemSkipped(i.Name, i.Key))
+                .ToArray();
+            GlobalItemsToImport = InterSheet<Saint.Item>()
                 .Where(i => !Hacks.IsItemSkipped(i.Name, i.Key))
                 .ToArray();
 

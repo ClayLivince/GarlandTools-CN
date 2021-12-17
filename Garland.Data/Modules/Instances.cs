@@ -20,14 +20,16 @@ namespace Garland.Data.Modules
 
         public override void Start()
         {
-            var sTomestonesItems = _builder.InterSheet<Saint.TomestonesItem>()
+            var iTomestonesItems = _builder.InterSheet<Saint.TomestonesItem>()
                     .Where(t => t.Tomestone.Key > 0)
                     .OrderBy(t => t.Tomestone.Key)
                     .ToArray();
 
-            _tomestoneIdByName[sTomestonesItems[0].Item.Name] = sTomestonesItems[0].Item.Key;
-            _tomestoneIdByName[sTomestonesItems[1].Item.Name] = sTomestonesItems[1].Item.Key;
-            _tomestoneIdByName[sTomestonesItems[2].Item.Name] = sTomestonesItems[2].Item.Key;
+            foreach (var stone in iTomestonesItems)
+            {
+                _tomestoneIdByName[stone.Item.Name] = stone.Item.Key;
+            }
+
 
             BuildDutyRoulette();
 

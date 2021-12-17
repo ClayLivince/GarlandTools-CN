@@ -6260,33 +6260,6 @@ gt.bell.fish = [
     "zone": "西萨纳兰"
   },
   {
-    "name": "麻希鲯鳅",
-    "patch": 1.0,
-    "bait": [
-      "弓角"
-    ],
-    "during": {
-      "start": 10,
-      "end": 18
-    },
-    "hookset": "强力提钩",
-    "tug": "重杆",
-    "id": 4915,
-    "icon": 29050,
-    "func": "fish",
-    "rarity": 1,
-    "title": "奥修昂火炬",
-    "category": "海洋垂钓",
-    "spot": 47,
-    "lvl": 10,
-    "coords": [
-      24.5,
-      39.72
-    ],
-    "radius": 600,
-    "zone": "拉诺西亚低地"
-  },
-  {
     "name": "银君",
     "patch": 2.2,
     "bait": [

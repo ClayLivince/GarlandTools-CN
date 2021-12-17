@@ -170,18 +170,18 @@ namespace Garland.Data.Modules
 
             // Reaper
             _jobsByKey[39] = new JobData(GarlandDatabase.LevelCap, new SW[] {
-                new SW("Physical Damage", 15), new SW("Strength", 1),
-                new SW("Determination", .001), new SW("Skill Speed", .001),
-                new SW("Critical Hit", .001), new SW("Direct Hit Rate", .001)
+                new SW("物理基本性能", 15), new SW("力量", 1),
+                new SW("信念", .001), new SW("技能速度", .001),
+                new SW("暴击", .001), new SW("直击", .001)
             });
 
             // Sage
             _jobsByKey[40] = new JobData(GarlandDatabase.LevelCap, new SW[] {
-                new SW("Magic Damage", 15),
-                new SW("Mind", 1), new SW("Vitality", .1),
-                new SW("Defense", .5, true), new SW("Magic Defense", .5, true),
-                new SW("Determination", .001), new SW("Spell Speed", .001),
-                new SW("Critical Hit", .001), new SW("Direct Hit Rate", .001)
+                new SW("魔法基本性能", 15),
+                new SW("精神", 1), new SW("耐力", .1),
+                new SW("物理防御力", .5, true), new SW("魔法防御力", .5, true),
+                new SW("信念", .001), new SW("咏唱速度", .001),
+                new SW("暴击", .001), new SW("直击", .001)
             });
 
             // Miner, Botanist, Fisher
