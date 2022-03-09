@@ -101,7 +101,7 @@ namespace Garland.Data
                             continue;
 
                         var sanitizedCol = col.ToLower().Replace("{", "").Replace("}", "");
-                        strs[sanitizedCol] = transform == null ? (value.ToString()) : transform((XivString)value);
+                        strs[sanitizedCol] = transform == null ? (value.ToString().TrimEnd()) : transform((XivString)value);
                     }
                 }
                 _interData.ActiveLanguage = iCurrentLang;

@@ -281,7 +281,7 @@ namespace Garland.Data.Modules
 
             foreach (var name in sources)
             {
-                var instance = _builder.Db.Instances.First(i => StringComparer.InvariantCultureIgnoreCase.Equals((string)i.en.name, name));
+                var instance = _builder.Db.Instances.First(i => i.en.name.ToString().ToUpper() == name.ToUpper());
                 int instanceId = instance.id;
                 if (instance.rewards == null)
                     instance.rewards = new JArray();

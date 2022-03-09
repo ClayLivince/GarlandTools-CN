@@ -25,6 +25,10 @@ gt.localize = {
 };
 
 gt.util = {
+    abbrDict: {
+        "Lakeland": "Lk",
+        "Labyrinthos": "Lb",
+    },
     abbrCache: {},
 
     pascalCase: function(str) {
@@ -48,6 +52,9 @@ gt.util = {
     },
 
     abbr2: function(str) {
+        if (gt.util.abbrDict[str])
+            return gt.util.abbrDict[str];
+
         var parts = str.trim().replace('(', '').split(' ');
         var a = parts[0].length ? parts[0][0] : '';
         if (parts.length == 1)
@@ -59,6 +66,9 @@ gt.util = {
     abbr: function(str) {
         if (!str)
             return '';
+
+        if (gt.util.abbrDict[str])
+            return gt.util.abbrDict[str];
 
         if (gt.util.abbrCache[str])
             return gt.util.abbrCache[str];

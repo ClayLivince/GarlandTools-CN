@@ -86,6 +86,10 @@ Water Crystal	Reduce	Radiant Astral Moraine	Dacite	Gale Rock	Poecilia
 Wind Cluster	Reduce	Wild Sage	Water Mint	Pot Marjoram	Countess Tea Leaves	Yanxian Soil	Sweet Marjoram						
 Wind Crystal	Reduce	Wild Sage	Water Mint	Pot Marjoram	Countess Tea Leaves	Yanxian Soil	Sweet Marjoram						
 Levinstrike Aethersand	Reduce	Levin Mint	Thunder Rock	Fuchsia Bloom									
+Moonlight Aethersand	Reduce	Gilled Topknot	Red Bowfin	Lunar Quartz	Ewer Clay								
+Endwood Aethersand	Reduce	Palm Chippings											
+Endstone Aethersand	Reduce	Ghostly Umbral Rock											
+Endtide Aethersand	Reduce	Eehs Forhnesh	Othardian Lumpsucker										
 Fire Shard	Loot	Timeworn Leather Map	Timeworn Goatskin Map	Timeworn Toadskin Map	Timeworn Boarskin Map	Timeworn Peisteskin Map							
 Ice Shard	Loot	Timeworn Leather Map	Timeworn Goatskin Map	Timeworn Toadskin Map	Timeworn Boarskin Map	Timeworn Peisteskin Map							
 Wind Shard	Loot	Timeworn Leather Map	Timeworn Goatskin Map	Timeworn Toadskin Map	Timeworn Boarskin Map	Timeworn Peisteskin Map							
@@ -474,7 +478,7 @@ Replica Allagan Visor of Maiming	Loot	Iron-trimmed Sack
 Replica Allagan Visor of Striking	Loot	Iron-trimmed Sack											
 Replica Heavy Allagan Armor	Loot	Iron-trimmed Sack											
 Replica Heavy Allagan Cuisses	Loot	Iron-trimmed Sack											
-Replica Heavy Allagan Flanchard	Loot	Iron-trimmed Sack											
+Replica Heavy Allagan Sollerets	Loot	Iron-trimmed Sack											
 Replica Heavy Allagan Gauntlets	Loot	Iron-trimmed Sack											
 Uraeus Body Armor	Loot	Iron-trimmed Sack											
 Wind Silk Wedge Cap	Loot	Iron-trimmed Sack											
@@ -1020,7 +1024,7 @@ Sophic Barding	Loot	Fête Present
 Tidal Barding	Loot	Fête Present											
 Zurvanite Barding	Loot	Fête Present											
 Craftsman's Apron	Loot	Fête Present											
-Craftsman's Singlet	Loot	Fête Present											
+Craftsman's Singlet	Loot	Fête Present											
 Craftsman's Coverall Bottoms	Loot	Fête Present											
 Craftsman's Leather Shoes	Loot	Fête Present											
 Skyworker's Helmet	Loot	Fête Present											
@@ -1042,22 +1046,22 @@ Plush Pile	Loot	Fête Present
 Stuffed Cait Sith	Loot	Fête Present											
 Stuffed Estinien	Loot	Fête Present											
 Verdant Partition	Loot	Fête Present											
-Genji Shichishito	Loot	Genji Coffer											
-Genji Shield	Loot	Genji Coffer											
-Genji Greataxe	Loot	Genji Coffer											
-Genji Nagamaki	Loot	Genji Coffer											
-Genji Naginata	Loot	Genji Coffer											
-Genji Chakrams	Loot	Genji Coffer											
-Genji Katana	Loot	Genji Coffer											
-Genji Phurpa	Loot	Genji Coffer											
-Genji Greatbow	Loot	Genji Coffer											
-Genji Arquebus	Loot	Genji Coffer											
-Genji Rod	Loot	Genji Coffer											
-Genji Grimoire	Loot	Genji Coffer											
-Genji Rapier	Loot	Genji Coffer											
-Genji Cane	Loot	Genji Coffer											
-Genji Codex	Loot	Genji Coffer											
-Genji Ephemeris	Loot	Genji Coffer											
+Genji Shichishito	Loot	Genji Weapon Coffer											
+Genji Shield	Loot	Genji Weapon Coffer											
+Genji Greataxe	Loot	Genji Weapon Coffer											
+Genji Nagamaki	Loot	Genji Weapon Coffer											
+Genji Naginata	Loot	Genji Weapon Coffer											
+Genji Chakrams	Loot	Genji Weapon Coffer											
+Genji Katana	Loot	Genji Weapon Coffer											
+Genji Phurpa	Loot	Genji Weapon Coffer											
+Genji Greatbow	Loot	Genji Weapon Coffer											
+Genji Arquebus	Loot	Genji Weapon Coffer											
+Genji Rod	Loot	Genji Weapon Coffer											
+Genji Grimoire	Loot	Genji Weapon Coffer											
+Genji Rapier	Loot	Genji Weapon Coffer											
+Genji Cane	Loot	Genji Weapon Coffer											
+Genji Codex	Loot	Genji Weapon Coffer											
+Genji Ephemeris	Loot	Genji Weapon Coffer											
 Diamond Sword	Loot	Diamond Weapon Coffer											
 Diamond Shield	Loot	Diamond Weapon Coffer											
 Diamond Axe	Loot	Diamond Weapon Coffer											
@@ -2770,7 +2774,7 @@ Wind-up Fuath	Instance	The Dungeons of Lyhe Ghiah
 Ballroom Etiquette - Decadent Decoration	Instance	The Shifting Oubliettes of Lyhe Ghiah											
 Everywhere and Nowhere Orchestrion Roll	Instance	The Shifting Oubliettes of Lyhe Ghiah											
 Golden Beaver	Instance	The Shifting Oubliettes of Lyhe Ghiah											
-Unmatching Pieces Orchestrion Roll	Instance	The Shifting Oubliettes of Lyhe Ghiah																					
+Unmatching Pieces Orchestrion Roll	Instance	The Shifting Oubliettes of Lyhe Ghiah											
 Blue Oldroses	Gardening	Oldrose Seeds											
 Yellow Oldroses	Gardening	Oldrose Seeds											
 Green Oldroses	Gardening	Oldrose Seeds											

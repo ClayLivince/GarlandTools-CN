@@ -23,7 +23,7 @@ namespace Garland.Data.Modules
             Directory.CreateDirectory(_resultMusicPath);
             Directory.CreateDirectory("output");
 
-            var sOrchestrions = _builder.Sheet("Orchestrion");
+            //var sOrchestrions = _builder.Sheet("Orchestrion");
             var sOrchestrionUiparams = _builder.Sheet("OrchestrionUiparam");
 
             foreach (var sItem in _builder.Sheet<Saint.Item>())
@@ -32,7 +32,10 @@ namespace Garland.Data.Modules
                 if (unlock == null)
                     continue;
 
-                var sOrchestrion = sOrchestrions[unlock.GetData(0)];
+                var sOrchestrion = sItem.AdditionalData as Saint.XivRow;
+                if (sOrchestrion == null)
+                    continue;
+
                 var sOrchestrionUiparam = sOrchestrionUiparams[sOrchestrion.Key];
 
                 var item = _builder.Db.ItemsById[sItem.Key];

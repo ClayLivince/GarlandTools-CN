@@ -74,6 +74,15 @@ gt.model = {
         return result.length ? result : null;
     },
 
+    partialListArray: function(module, sourceLists, transform){
+        var result = [];
+        for (var i = 0; i < sourceLists.length; i++) {
+            result.push(gt.model.partialList(module, sourceLists[i], transform))
+        }
+
+        return result.length ? result : null;
+    },
+
     availableView: function(block) {
         var module = gt[block.type];
         if (!module) {
@@ -994,6 +1003,10 @@ gt.localize = {
 };
 
 gt.util = {
+    abbrDict: {
+        "Lakeland": "Lk",
+        "Labyrinthos": "Lb",
+    },
     abbrCache: {},
 
     pascalCase: function(str) {
@@ -1017,6 +1030,9 @@ gt.util = {
     },
 
     abbr2: function(str) {
+        if (gt.util.abbrDict[str])
+            return gt.util.abbrDict[str];
+
         var parts = str.trim().replace('(', '').split(' ');
         var a = parts[0].length ? parts[0][0] : '';
         if (parts.length == 1)
@@ -1028,6 +1044,9 @@ gt.util = {
     abbr: function(str) {
         if (!str)
             return '';
+
+        if (gt.util.abbrDict[str])
+            return gt.util.abbrDict[str];
 
         if (gt.util.abbrCache[str])
             return gt.util.abbrCache[str];
@@ -1906,6 +1925,12 @@ gt.item = {
         //'分解技能提升率': '分解技能提升率',
         //'直击': '直击'
     },
+    fishShadowHint:{
+        'S': 'Small',
+        'M': 'Average',
+        'L': 'Large',
+        'Map': 'Treasure Map'
+    },
     // TODO: materiaJoinRates comes from core data, only here temporarily until old cache is removed.
     materiaJoinRates: {"nq":[[90,48,28,16],[82,44,26,16],[70,38,22,14],[58,32,20,12],[17,10,7,5],[17,0,0,0],[17,10,7,5],[17,0,0,0],[100,100,100,100],[100,100,100,100]],"hq":[[80,40,20,10],[72,36,18,10],[60,30,16,8],[48,24,12,6],[12,6,3,2],[12,0,0,0],[12,6,3,2],[12,0,0,0],[100,100,100,100],[100,100,100,100]]},
     browse: [ { type: 'sort', prop: 'name' } ],
@@ -2356,7 +2381,8 @@ gt.item = {
                 icon: '../files/icons/fish/' + item.fish.icon + '.png',
                 spots: item.fish.spots ? [] : null,
                 folklore: item.fish.folklore ? gt.model.partial(gt.item, item.fish.folklore) : null,
-                groups: []
+                groups: [],
+                note: item.fish.note,
             };
 
             if (item.fish.spots) {
@@ -2374,16 +2400,16 @@ gt.item = {
                         view.fish.predatorType = 'Shadows';
                     }
 
-                    if (!group) {
-                        group = {
-                            baitIds: spot.bait,
-                            bait: spot.bait ? gt.model.partialList(gt.item, spot.bait) : null,
-                            gig: spot.gig,
-                            spots: []
-                        };
+                        if (!group) {
+                            group = {
+                                baitIds: spot.baits,
+                                baits: spot.baits ? gt.model.partialListArray(gt.item, spot.baits) : null,
+                                gig: spot.gig,
+                                spots: []
+                            };
 
-                        view.fish.groups.push(group);
-                    }
+                            view.fish.groups.push(group);
+                        }
 
                     // Push common conditions up to the main fish view.
                     view.fish.during = spot.during;
@@ -2414,6 +2440,16 @@ gt.item = {
                         spotView.spotType = 'node';
                     }
                     group.spots.push(spotView);
+
+
+                    // Push common conditions up to the main fish view.
+                    view.fish.during = spot.during;
+                    view.fish.transition = spot.transition;
+                    view.fish.weather = spot.weather;
+                    view.fish.hookset = spot.hookset;
+                    view.fish.gatheringReq = spot.gatheringReq;
+                    view.fish.snagging = spot.snagging;
+                    view.fish.fishEyes = spot.fishEyes;
                 }
             }
         }
@@ -2438,6 +2474,34 @@ gt.item = {
                 path: '../files/orchestrion/' + item.orchestrion.id + '.ogg',
                 order: gt.util.zeroPad(item.orchestrion.order, 3)
             };
+        }
+
+        // Field Note
+        if (item.fieldnote) {
+            view.fieldnote = {
+                id: item.fieldnote.id,
+                name: item.fieldnote.name,
+                description: item.fieldnote.description,
+                icon: '../files/icons/fieldnote/' + item.fieldnote.icon + '.png',
+                image: '../files/icons/fieldnote/image/' + item.fieldnote.image + '.png',
+                rarity: item.fieldnote.rarity
+            };
+        }
+
+        // Fashion Accessory
+        if (item.ornament) {
+            view.ornament = {
+                id: item.ornament.id,
+                name: item.ornament.name,
+                description: item.ornament.description,
+                icon: '../files/icons/ornament/' + item.ornament.icon + '.png',
+                image: '../files/icons/ornament/image/' + item.ornament.image + '.png'
+            };
+        }
+
+        // Unlock Achievement
+        if (item.achievement) {
+            view.achievement = gt.model.partial(gt.achievement, item.achievement);
         }
 
         // Gardening

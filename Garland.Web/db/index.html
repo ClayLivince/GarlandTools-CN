@@ -1381,25 +1381,41 @@
                                 {{~}}
                             {{?}}
 
+                            {{?it.fish.note}}
+                                <div class="line half collapse-toggle">
+                                    <span class="text">{{=it.fish.note}}</span>
+                                </div>
+                            {{?}}
+
                             {{~it.fish.groups :group:gindex}}
                                 <hr class="collapse-toggle">
 
-                                {{?group.bait}}
-                                    {{~group.bait :bait:bindex}}
-                                        <div class="line block-link hover-highlight pointer collapse-toggle" data-id="{{=bait.id}}" data-type="item">
-                                            <img class="icon small" src="{{=bait.icon}}">
-                                            <span class="highlight text">{{=bait.name}}</span>
-                                            <span class="text right">{{?bindex == 0}}鱼饵{{??}}以小钓大{{?}}</span>
-                                        </div>
+                                {{?group.baits}}
+                                    {{~group.baits :baitGroup:bGindex}}
+                                        {{~baitGroup :bait:bindex}}
+                                            <div class="line block-link hover-highlight pointer collapse-toggle" data-id="{{=bait.id}}" data-type="item">
+                                                <img class="icon small" src="{{=bait.icon}}">
+                                                <span class="highlight text">{{=bait.name}}</span>
+                                                <span class="text right">{{?bindex == 0}}Bait{{??}}Mooch{{?}}</span>
+                                            </div>
+                                        {{~}}
+                                        {{?group.baits[bGindex + 1]}}<hr class="collapse-toggle" style="border-bottom: dashed 1px;"/>{{?}}
                                     {{~}}
-                                {{??group.gig}}
-                                    {{~group.gig :gig:gindex}}
-                                        <div class="line collapse-toggle">
-                                            <img class="icon small" src="images/node/{{=gig}}.png">
-                                            <span class="text">{{=gig}}</span>
-                                            <span class="text right">鱼叉尖</span>
-                                        </div>
-                                    {{~}}
+                                {{??group.shadow}}
+                                    {{?group.buff}}
+                                        {{~group.buff :buff:bindex}}
+                                            <div class="line half collapse-toggle">
+                                                <img class="icon mini" src="{{=buff.icon}}">
+                                                <span class="text">{{=buff.name}}</span>
+                                            </div>
+                                        {{~}}
+                                    {{?}}
+
+                                    <div class="line collapse-toggle">
+                                        <img class="small fish-shadow" src="images/fish/{{=group.shadow}}.png">
+                                        <span class="text">{{=group.shadowHint}}</span>
+                                        <span class="text right fish-speed">{{=group.speed}}</span>
+                                    </div>
                                 {{??}}
                                     <div class="line collapse-toggle">没查到鱼饵...</div>
                                 {{?}}
@@ -1510,6 +1526,37 @@
                         </audio>
                         <br>
                         <div>注意：这只是一个缩略过的音乐样本。</div>
+                    </div>
+                {{?}}
+
+                {{?it.fieldnote}}
+                    <div class="fieldnote subsection collapsible">
+                        <h3>Field Note #{{=it.fieldnote.id}}</h3>
+                        <div>
+                            <img class="left icon fieldnote-icon" src="{{=it.fieldnote.icon}}"/>
+                            <div class="highlight fieldnote-name">{{=it.fieldnote.name}}</div>
+                        </div>
+                        <hr>
+                        <img class="right fieldnote-image collapse-toggle" src="{{=it.fieldnote.image}}"/>
+                        <div class="block-description fieldnote-note collapse-toggle">{{=it.fieldnote.description}}</div>
+                        <div class="clear"></div>
+                    </div>
+                {{?}}
+
+                {{?it.ornament}}
+                    <div class="ornament subsection">
+                        <h3>Fashion Accessory</h3>
+                        <img class="left icon fieldnote-icon" src="{{=it.ornament.icon}}"/>
+                        <div class="highlight fieldnote-name">{{=it.ornament.name}}</div>
+                        <div class="block-description">{{=it.ornament.description}}</div>
+                        <img class="right fieldnote-image" src="{{=it.ornament.image}}"/>
+                    </div>
+                {{?}}
+
+                {{?it.achievement}}
+                    <div class="subsection">
+                        <h3>Unlocks Achievement</h3>
+                        {{=gt.search.resultTemplate(it.achievement)}}
                     </div>
                 {{?}}
             </div> <!-- Stats Page End -->
@@ -3974,7 +4021,9 @@
 
                 <h3>FAQ</h3>
                 <div class="question">我能为数据做出贡献吗？能添加新来源记录吗？</div>
-                国际服：参与编辑这里的表格来贡献数据。 <a href="https://docs.google.com/spreadsheets/d/1hEj9KCDv0TT1NiGJ0S7afS4hfGMPb6tetqXQetYETUE/edit" target="_blank">FFXIV Data Spreadsheet</a>.  请自行向国际服数据维护人员工作组申请权限，并使用英语来贡献条目。
+                国际服：参与编辑这里的表格来贡献数据。 <a href="https://docs.google.com/spreadsheets/d/1pMlRaaFnaVnFeKNu_CaKPrWHdMk94pXumscZVBe3pIA/edit" target="_blank">FFXIV Data Spreadsheet</a>.  请自行向国际服数据维护人员工作组申请权限，并使用英语来贡献条目。
+                或者直接进群敲群主。
+                国服：直接进群敲群主。
 
                 <div class="separator"></div>
                 <div class="question">物品获取方式旁边的打勾点是干什么的？</div>

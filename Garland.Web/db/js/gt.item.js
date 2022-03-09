@@ -30,6 +30,12 @@ gt.item = {
         //'分解技能提升率': '分解技能提升率',
         //'直击': '直击'
     },
+    fishShadowHint:{
+        'S': 'Small',
+        'M': 'Average',
+        'L': 'Large',
+        'Map': 'Treasure Map'
+    },
     // TODO: materiaJoinRates comes from core data, only here temporarily until old cache is removed.
     materiaJoinRates: {"nq":[[90,48,28,16],[82,44,26,16],[70,38,22,14],[58,32,20,12],[17,10,7,5],[17,0,0,0],[17,10,7,5],[17,0,0,0],[100,100,100,100],[100,100,100,100]],"hq":[[80,40,20,10],[72,36,18,10],[60,30,16,8],[48,24,12,6],[12,6,3,2],[12,0,0,0],[12,6,3,2],[12,0,0,0],[100,100,100,100],[100,100,100,100]]},
     browse: [ { type: 'sort', prop: 'name' } ],
@@ -480,7 +486,8 @@ gt.item = {
                 icon: '../files/icons/fish/' + item.fish.icon + '.png',
                 spots: item.fish.spots ? [] : null,
                 folklore: item.fish.folklore ? gt.model.partial(gt.item, item.fish.folklore) : null,
-                groups: []
+                groups: [],
+                note: item.fish.note,
             };
 
             if (item.fish.spots) {
@@ -489,40 +496,43 @@ gt.item = {
 
                     // Group fishing spots by bait chain.
                     var group = null;
-                    if (spot.bait || !spot.gig) {
-                        group = _.find(view.fish.groups, function(g) { return _.isEqual(g.baitIds, spot.bait); });
+                    if (spot.baits || !spot.node) {
+                        group = _.find(view.fish.groups, function(g) { return _.isEqual(g.baitIds, spot.baits); });
                         view.fish.predatorType = '捕鱼人之识';
+
+                        if (!group) {
+                            group = {
+                                baitIds: spot.baits,
+                                baits: spot.baits ? gt.model.partialListArray(gt.item, spot.baits) : null,
+                                gig: spot.gig,
+                                spots: []
+                            };
+
+                            view.fish.groups.push(group);
+                        }
+
+                        if (spot.hookset) {
+                            if (spot.hookset == "强力提钩")
+                                view.fish.hooksetIcon = 1115;
+                            else
+                                view.fish.hooksetIcon = 1116;
+                        }
                     }
                     else {
-                        group = _.find(view.fish.groups, function(g) { return _.isEqual(g.gig, spot.gig); });
-                        view.fish.predatorType = 'Shadows';
-                    }
+                        group = _.find(view.fish.groups, function(g) { return _.isEqual(g.node, spot.node); });
+                        view.fish.predatorType = '渔鹰之眼';
 
-                    if (!group) {
-                        group = {
-                            baitIds: spot.bait,
-                            bait: spot.bait ? gt.model.partialList(gt.item, spot.bait) : null,
-                            gig: spot.gig,
-                            spots: []
-                        };
+                        if (!group) {
+                            group = {
+                                speed: spot.speed,
+                                shadow: spot.shadow,
+                                shadowHint: gt.item.fishShadowHint[spot.shadow],
+                                buff: gt.model.partialList(gt.status, spot.buff),
+                                spots: []
+                            };
 
-                        view.fish.groups.push(group);
-                    }
-
-                    // Push common conditions up to the main fish view.
-                    view.fish.during = spot.during;
-                    view.fish.transition = spot.transition;
-                    view.fish.weather = spot.weather;
-                    view.fish.hookset = spot.hookset;
-                    view.fish.gatheringReq = spot.gatheringReq;
-                    view.fish.snagging = spot.snagging;
-                    view.fish.fishEyes = spot.fishEyes;
-
-                    if (spot.hookset) {
-                        if (spot.hookset == "强力提钩")
-                            view.fish.hooksetIcon = 1115;
-                        else
-                            view.fish.hooksetIcon = 1116;
+                            view.fish.groups.push(group);
+                        }
                     }
 
                     if (spot.predator)
@@ -538,6 +548,16 @@ gt.item = {
                         spotView.spotType = 'node';
                     }
                     group.spots.push(spotView);
+
+
+                    // Push common conditions up to the main fish view.
+                    view.fish.during = spot.during;
+                    view.fish.transition = spot.transition;
+                    view.fish.weather = spot.weather;
+                    view.fish.hookset = spot.hookset;
+                    view.fish.gatheringReq = spot.gatheringReq;
+                    view.fish.snagging = spot.snagging;
+                    view.fish.fishEyes = spot.fishEyes;
                 }
             }
         }
@@ -562,6 +582,34 @@ gt.item = {
                 path: '../files/orchestrion/' + item.orchestrion.id + '.ogg',
                 order: gt.util.zeroPad(item.orchestrion.order, 3)
             };
+        }
+
+        // Field Note
+        if (item.fieldnote) {
+            view.fieldnote = {
+                id: item.fieldnote.id,
+                name: item.fieldnote.name,
+                description: item.fieldnote.description,
+                icon: '../files/icons/fieldnote/' + item.fieldnote.icon + '.png',
+                image: '../files/icons/fieldnote/image/' + item.fieldnote.image + '.png',
+                rarity: item.fieldnote.rarity
+            };
+        }
+
+        // Fashion Accessory
+        if (item.ornament) {
+            view.ornament = {
+                id: item.ornament.id,
+                name: item.ornament.name,
+                description: item.ornament.description,
+                icon: '../files/icons/ornament/' + item.ornament.icon + '.png',
+                image: '../files/icons/ornament/image/' + item.ornament.image + '.png'
+            };
+        }
+
+        // Unlock Achievement
+        if (item.achievement) {
+            view.achievement = gt.model.partial(gt.achievement, item.achievement);
         }
 
         // Gardening
