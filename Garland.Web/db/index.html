@@ -3158,8 +3158,10 @@
 
                 <div class="currency line clear">
                     {{~it.currency :value:index}}
+                    {{?value.item}}
                         <img class="icon small" src="{{=value.item.icon}}" title="{{=value.item.name}}">
                         <span class="text">{{=value.amount}}</span>
+                    {{?}}
                     {{~}}
 
                     {{?it.roulette}}
@@ -3252,8 +3254,10 @@
                             {{?fight.currency}}
                                 <div class="currency line collapse-toggle">
                                     {{~fight.currency :value:index}}
+                                    {{?value.item}}
                                         <img class="icon small" src="{{=value.item.icon}}" title="{{=value.item.name}}">
                                         <span class="text">{{=value.amount}}</span>
+                                    {{?}}
                                     {{~}}
                                 </div>
                             {{?}}

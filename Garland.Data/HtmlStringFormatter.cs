@@ -69,10 +69,16 @@ namespace Garland.Data
                         var sheetKeyRaw = genericElementArgs[1].Accept(this);
                         if (int.TryParse(sheetKeyRaw.Trim(), out var sheetKey))
                         {
-                            SaintCoinach.Xiv.IXivSheet sheet;
+                            SaintCoinach.Xiv.IXivSheet sheet = null;
 
                             if (sheetName.Trim().Equals("EObj"))
                                 sheetName = "EObjName";
+
+                            if (sheetName.Trim().Equals("ItemHQ"))
+                                sheetName = "Item";
+
+                            if (sheetName.Trim().Equals("ItemMP"))
+                                sheetName = "Item";
 
                             try
                             {
@@ -80,7 +86,8 @@ namespace Garland.Data
                             }
                             catch (KeyNotFoundException)
                             {
-                                sheet = DatabaseBuilder.Instance.Realm.GameData.GetSheet(sheetName.Replace("HQ", ""));
+                                if (System.Diagnostics.Debugger.IsAttached)
+                                    System.Diagnostics.Debugger.Break();
                             }
 
                             try

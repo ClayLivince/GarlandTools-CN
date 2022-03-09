@@ -1,5 +1,5 @@
 gt.fishing = {
-    pluralName: '���',
+    pluralName: '钓鱼',
     type: 'fishing',
     blockTemplate: null,
     index: {},
@@ -40,7 +40,7 @@ gt.fishing = {
 
         gt.localize.extractLocalize(spot, view);
 
-        var zoneName = view.zone ? view.zone.name : "�ƹ�Ⱥ��";
+        var zoneName = view.zone ? view.zone.name : "云冠群岛";
 
         // Location and source
         view.sourceName = gt.util.abbr(zoneName) + ', Lv. ' + view.lvl;
@@ -50,7 +50,7 @@ gt.fishing = {
         if (region)
             view.region = region.name;
         else
-            view.region = "��������";
+            view.region = "出海垂钓";
 
         if (data) {
             view.items = gt.model.partialList(gt.item, spot.items, function(v, i) { return { item: v, lvl: i.lvl }; });
@@ -63,7 +63,7 @@ gt.fishing = {
             }
         }
 
-        view.subheader = '�ȼ� ' + view.lvl + ' ' + view.category;
+        view.subheader = '等级 ' + view.lvl + ' ' + view.category;
         view.byline = view.subheader;
 
         return view;
@@ -72,7 +72,7 @@ gt.fishing = {
     getPartialViewModel: function(partial) {
         var name = gt.model.name(partial);
         var zone = partial.z ? gt.location.index[partial.z] : null;
-        var zoneName = zone ? zone.name : "�ƹ�Ⱥ��";
+        var zoneName = zone ? zone.name : "云冠群岛";
         var region = zone ? gt.location.index[zone.parentId] : null;
 
         return {
@@ -81,8 +81,8 @@ gt.fishing = {
             name: name,
             sourceName: gt.util.abbr(zoneName) + ', Lv. ' + partial.l,
             longSourceName: zoneName + ', Lv. ' + partial.l,
-            byline: '�ȼ� ' + partial.l + ' ' + gt.fishing.categories[partial.c],
-            region: region ? region.name : "��������",
+            byline: '等级 ' + partial.l + ' ' + gt.fishing.categories[partial.c],
+            region: region ? region.name : "出海垂钓",
             location: zoneName,
             icon: 'images/job/FSH.png',
             lvl: partial.l
@@ -92,7 +92,7 @@ gt.fishing = {
     resolveCraftSource: function(step, id) {
         step.sourceType = 'fishing';
         step.sourceView = gt.model.partial(gt.fishing, id || step.item.fishingSpots[0]);
-        step.setCategory(['����', '�ɼ�']);
+        step.setCategory(['钓鱼', '采集']);
     }
 };
 

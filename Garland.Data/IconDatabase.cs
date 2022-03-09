@@ -21,7 +21,9 @@ namespace Garland.Data
                 // to bad data crept in somewhere.  Check up the stack!
                 // Protip: The first row of many sheets is filled with 0s and 
                 // can be safely skipped.
-                throw new ArgumentException("bad icon", "icon");
+                //throw new ArgumentException("bad icon", "icon");
+
+                return 0;
             }
 
             // Check the type-id combo is already stored.

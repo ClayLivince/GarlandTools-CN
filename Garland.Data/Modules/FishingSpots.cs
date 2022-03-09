@@ -107,8 +107,21 @@ namespace Garland.Data.Modules
 
         void BuildFish()
         {
+            Dictionary<int, Saint.FishParameter> iFishParameterIndex = new Dictionary<int, Saint.FishParameter>();
+            Dictionary<int, Saint.SpearfishingItem> iSpearfishingItemIndex = new Dictionary<int, Saint.SpearfishingItem>();
+            foreach (var iFishParameter in _builder.InterSheet<Saint.FishParameter>())
+            {
+                iFishParameterIndex[iFishParameter.Key] = iFishParameter;
+            }
+            foreach (var iSpearfishingItem in _builder.InterSheet<Saint.SpearfishingItem>())
+            {
+                iSpearfishingItemIndex[iSpearfishingItem.Key] = iSpearfishingItem;
+            }
+
             foreach (var sFishParameter in _builder.Sheet<Saint.FishParameter>())
             {
+                var iFishParameter = iFishParameterIndex[sFishParameter.Key];
+                
                 var guideText = sFishParameter.Text.ToString();
                 if (string.IsNullOrEmpty(guideText))
                     continue;
@@ -116,6 +129,7 @@ namespace Garland.Data.Modules
                 var item = GarlandDatabase.Instance.ItemsById[sFishParameter.Item.Key];
                 item.fish = new JObject();
                 item.fish.guide = guideText;
+                _builder.Localize.Column(item.fish, sFishParameter, iFishParameter, "Text", "guide", null);
                 item.fish.icon = GetFishIcon((UInt16)sFishParameter.Item.GetRaw("Icon"));
 
                 if (sFishParameter.WeatherRestricted)
@@ -139,6 +153,7 @@ namespace Garland.Data.Modules
 
             foreach (var sSpearfishingItem in _builder.Sheet<Saint.SpearfishingItem>())
             {
+                var iSpearfishingItem = iSpearfishingItemIndex[sSpearfishingItem.Key];
                 var guideText = sSpearfishingItem["Description"]?.ToString();
                 if (string.IsNullOrEmpty(guideText))
                     continue;
@@ -147,6 +162,7 @@ namespace Garland.Data.Modules
                 var item = GarlandDatabase.Instance.ItemsById[sItem.Key];
                 item.fish = new JObject();
                 item.fish.guide = guideText;
+                _builder.Localize.Column(item.fish, sSpearfishingItem, iSpearfishingItem, "Description", "guide");
                 item.fish.icon = GetFishIcon((UInt16)sItem.GetRaw("Icon"));
             }
         }
@@ -179,7 +195,7 @@ namespace Garland.Data.Modules
                 if (name.StartsWith("#"))
                     continue;
 
-                if (_fishingSpotsByName.TryGetValue(name, out var fishingSpot))
+                if (_fishingSpotsByEnName.TryGetValue(name, out var fishingSpot))
                 {
                     currentNode = null;
                     currentNodeItems = null;

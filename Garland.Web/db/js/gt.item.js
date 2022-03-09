@@ -31,11 +31,19 @@ gt.item = {
         //'直击': '直击'
     },
     fishShadowHint:{
-        'S': 'Small',
-        'M': 'Average',
-        'L': 'Large',
-        'Map': 'Treasure Map'
+        'S': '小型鱼',
+        'M': '中型鱼',
+        'L': '大型鱼',
+        'Map': '宝藏地图'
     },
+    fishSpeedHint: {
+        'Slow': '慢',
+        'Average': '中速',
+        'Fast': '快',
+        'Very Fast': '非常快',
+        'V. Fast': '非常快'
+    },
+
     // TODO: materiaJoinRates comes from core data, only here temporarily until old cache is removed.
     materiaJoinRates: {"nq":[[90,48,28,16],[82,44,26,16],[70,38,22,14],[58,32,20,12],[17,10,7,5],[17,0,0,0],[17,10,7,5],[17,0,0,0],[100,100,100,100],[100,100,100,100]],"hq":[[80,40,20,10],[72,36,18,10],[60,30,16,8],[48,24,12,6],[12,6,3,2],[12,0,0,0],[12,6,3,2],[12,0,0,0],[100,100,100,100],[100,100,100,100]]},
     browse: [ { type: 'sort', prop: 'name' } ],
@@ -524,7 +532,7 @@ gt.item = {
 
                         if (!group) {
                             group = {
-                                speed: spot.speed,
+                                speed: gt.item.fishSpeedHint[spot.speed],
                                 shadow: spot.shadow,
                                 shadowHint: gt.item.fishShadowHint[spot.shadow],
                                 buff: gt.model.partialList(gt.status, spot.buff),
@@ -980,7 +988,7 @@ gt.item = {
             var materiaItems = _.filter(_.values(gt.item.partialIndex), function(i) { return i.materia && i.materia.value; });
             materiaItems = _.map(materiaItems, function(i) {
                 var view = gt.model.partial(gt.item, i.i);
-                view.text = view.name.replace(" Materia", "");
+                view.text = view.name.replace(" 魔晶石", "");
                 return view;
             });
             var materiaGroups = _.groupBy(materiaItems, function(i) { return i.materia.attr; });

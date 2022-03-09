@@ -45,6 +45,8 @@
     "uptime": 180,
     "lvl": 50,
     "id": 211,
+    "condition": "鉴别力 327以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
   {
@@ -93,6 +95,8 @@
     "uptime": 180,
     "lvl": 50,
     "id": 212,
+    "condition": "鉴别力 327以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
   {
@@ -141,6 +145,8 @@
     "uptime": 180,
     "lvl": 50,
     "id": 213,
+    "condition": "鉴别力 327以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
   {
@@ -198,6 +204,8 @@
     "uptime": 180,
     "lvl": 50,
     "id": 214,
+    "condition": "鉴别力 327以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
   {
@@ -292,6 +300,8 @@
     "uptime": 180,
     "lvl": 50,
     "id": 215,
+    "condition": "鉴别力 327以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
   {
@@ -349,6 +359,8 @@
     "uptime": 180,
     "lvl": 50,
     "id": 216,
+    "condition": "鉴别力 327以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
   {
@@ -406,6 +418,8 @@
     "uptime": 180,
     "lvl": 50,
     "id": 217,
+    "condition": "鉴别力 327以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
   {
@@ -472,6 +486,8 @@
     "uptime": 180,
     "lvl": 50,
     "id": 218,
+    "condition": "鉴别力 327以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
   {
@@ -529,6 +545,8 @@
     "uptime": 180,
     "lvl": 50,
     "id": 219,
+    "condition": "鉴别力 327以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
   {
@@ -586,6 +604,8 @@
     "uptime": 180,
     "lvl": 50,
     "id": 220,
+    "condition": "鉴别力 327以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
   {
@@ -643,6 +663,8 @@
     "uptime": 180,
     "lvl": 50,
     "id": 221,
+    "condition": "鉴别力 327以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
   {
@@ -700,6 +722,8 @@
     "uptime": 180,
     "lvl": 50,
     "id": 222,
+    "condition": "鉴别力 327以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
   {
@@ -766,6 +790,8 @@
     "uptime": 180,
     "lvl": 50,
     "id": 223,
+    "condition": "鉴别力 327以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
   {
@@ -814,6 +840,8 @@
     "uptime": 180,
     "lvl": 50,
     "id": 224,
+    "condition": "鉴别力 327以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
   {
@@ -862,6 +890,8 @@
     "uptime": 180,
     "lvl": 50,
     "id": 225,
+    "condition": "鉴别力 327以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
   {
@@ -910,6 +940,8 @@
     "uptime": 180,
     "lvl": 50,
     "id": 226,
+    "condition": "鉴别力 327以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
   {
@@ -1004,6 +1036,8 @@
     "uptime": 180,
     "lvl": 50,
     "id": 227,
+    "condition": "鉴别力 327以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
   {
@@ -1052,6 +1086,8 @@
     "uptime": 180,
     "lvl": 50,
     "id": 230,
+    "condition": "鉴别力 327以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.2
   },
   {
@@ -1100,6 +1136,8 @@
     "uptime": 180,
     "lvl": 50,
     "id": 231,
+    "condition": "鉴别力 327以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.2
   },
   {
@@ -1157,6 +1195,8 @@
     "uptime": 180,
     "lvl": 50,
     "id": 232,
+    "condition": "鉴别力 327以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
   {
@@ -1214,6 +1254,8 @@
     "uptime": 180,
     "lvl": 50,
     "id": 233,
+    "condition": "鉴别力 327以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.2
   },
   {
@@ -1280,6 +1322,8 @@
     "uptime": 180,
     "lvl": 50,
     "id": 234,
+    "condition": "鉴别力 327以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.2
   },
   {
@@ -1337,6 +1381,8 @@
     "uptime": 180,
     "lvl": 50,
     "id": 235,
+    "condition": "鉴别力 327以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.2
   },
   {
@@ -1412,6 +1458,8 @@
     "uptime": 180,
     "lvl": 50,
     "id": 236,
+    "condition": "鉴别力 327以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
   {
@@ -1487,6 +1535,8 @@
     "uptime": 180,
     "lvl": 50,
     "id": 237,
+    "condition": "鉴别力 327以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
   {
@@ -1553,6 +1603,8 @@
     "uptime": 180,
     "lvl": 50,
     "id": 238,
+    "condition": "鉴别力 327以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
   {
@@ -1610,6 +1662,8 @@
     "uptime": 180,
     "lvl": 50,
     "id": 239,
+    "condition": "鉴别力 327以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
   {
@@ -1667,6 +1721,8 @@
     "uptime": 180,
     "lvl": 50,
     "id": 240,
+    "condition": "鉴别力 327以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.2
   },
   {
@@ -1724,6 +1780,8 @@
     "uptime": 180,
     "lvl": 50,
     "id": 241,
+    "condition": "鉴别力 327以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
   {
@@ -1772,6 +1830,8 @@
     "uptime": 180,
     "lvl": 50,
     "id": 242,
+    "condition": "鉴别力 327以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.2
   },
   {
@@ -1820,6 +1880,8 @@
     "uptime": 180,
     "lvl": 50,
     "id": 245,
+    "condition": "鉴别力 327以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.3
   },
   {
@@ -1850,6 +1912,8 @@
     "uptime": 180,
     "lvl": 50,
     "id": 246,
+    "condition": "鉴别力 327以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.3
   },
   {
@@ -1907,6 +1971,8 @@
     "uptime": 180,
     "lvl": 50,
     "id": 247,
+    "condition": "鉴别力 327以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
   {
@@ -1955,6 +2021,8 @@
     "uptime": 180,
     "lvl": 50,
     "id": 248,
+    "condition": "鉴别力 327以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
   {
@@ -2003,6 +2071,8 @@
     "uptime": 180,
     "lvl": 50,
     "id": 249,
+    "condition": "鉴别力 327以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.45
   },
   {
@@ -2033,6 +2103,8 @@
     "uptime": 180,
     "lvl": 50,
     "id": 250,
+    "condition": "鉴别力 327以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.45
   },
   {
@@ -2072,6 +2144,8 @@
     "uptime": 180,
     "lvl": 50,
     "id": 251,
+    "condition": "鉴别力 327以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.5
   },
   {
@@ -2129,6 +2203,8 @@
     "uptime": 180,
     "lvl": 50,
     "id": 252,
+    "condition": "鉴别力 327以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.5
   },
   {
@@ -2703,7 +2779,7 @@
         "itemDE": "Roh-Onyx (Sammlerstück)",
         "icon": 21231,
         "id": 32985,
-        "scrip": "大地白票"
+        "scrip": "大地黄票"
       }
     ],
     "time": [
@@ -2905,133 +2981,6 @@
     "patch": 3.0
   },
   {
-    "type": "矿脉",
-    "func": "node",
-    "items": [
-      {
-        "item": "黄铜矿",
-        "itemEN": "Yellow Copper Ore",
-        "itemJA": "黄銅鉱",
-        "itemFR": "Minerai de cuivre jaune",
-        "itemDE": "Kupferkies",
-        "icon": 21207,
-        "id": 5108
-      },
-      {
-        "item": "暗物质晶簇",
-        "itemEN": "Dark Matter Cluster",
-        "itemJA": "ダークマタークラスター",
-        "itemFR": "Agrégat de matière sombre",
-        "itemDE": "Dunkelmaterie",
-        "icon": 20407,
-        "id": 10335
-      }
-    ],
-    "stars": 3,
-    "time": [
-      4,
-      16
-    ],
-    "title": "交汇河",
-    "zone": "库尔札斯西部高地",
-    "coords": [
-      29.63,
-      22.28
-    ],
-    "name": "Unspoiled",
-    "uptime": 120,
-    "lvl": 50,
-    "id": 315,
-    "patch": 3.0
-  },
-  {
-    "type": "矿脉",
-    "func": "node",
-    "items": [
-      {
-        "item": "黄铁矿",
-        "itemEN": "Pyrite",
-        "itemJA": "黄鉄鉱",
-        "itemFR": "Minerai de pyrite",
-        "itemDE": "Schwefelkies",
-        "icon": 21207,
-        "id": 5109
-      },
-      {
-        "item": "褐铁矿",
-        "itemEN": "Limonite",
-        "itemJA": "褐鉄鉱",
-        "itemFR": "Minerai de limonite",
-        "itemDE": "Braun<SoftHyphen/>ei<SoftHyphen/>sen<SoftHyphen/>stein",
-        "icon": 21206,
-        "id": 5112
-      },
-      {
-        "item": "辉铜矿",
-        "itemEN": "Chalcocite",
-        "itemJA": "輝銅鉱",
-        "itemFR": "Minerai de chalcocite",
-        "itemDE": "Chalkosin",
-        "icon": 21209,
-        "id": 12941
-      }
-    ],
-    "time": [
-      8,
-      20
-    ],
-    "title": "荒烟野地",
-    "zone": "龙堡参天高地",
-    "coords": [
-      26.09,
-      16.59
-    ],
-    "name": "Unspoiled",
-    "uptime": 120,
-    "lvl": 55,
-    "id": 316,
-    "patch": 3.0
-  },
-  {
-    "type": "石场",
-    "func": "node",
-    "items": [
-      {
-        "item": "翠绿石英",
-        "itemEN": "Green Quartz",
-        "itemJA": "グリーンクォーツ",
-        "itemFR": "Quartz vert",
-        "itemDE": "Grüner Quarz",
-        "icon": 21459,
-        "id": 5161
-      },
-      {
-        "item": "土黄石英",
-        "itemEN": "Yellow Quartz",
-        "itemJA": "イエロークォーツ",
-        "itemFR": "Quartz jaune",
-        "itemDE": "Gelber Quarz",
-        "icon": 21458,
-        "id": 5162
-      }
-    ],
-    "time": [
-      6,
-      18
-    ],
-    "title": "招恶荒岛",
-    "zone": "翻云雾海",
-    "coords": [
-      33.98,
-      21.9
-    ],
-    "name": "Unspoiled",
-    "uptime": 120,
-    "lvl": 55,
-    "id": 317,
-    "patch": 3.0
-  },
-  {
     "type": "石场",
     "func": "node",
     "items": [
@@ -3068,45 +3017,8 @@
     "uptime": 120,
     "lvl": 60,
     "id": 318,
-    "patch": 3.0
-  },
-  {
-    "type": "矿脉",
-    "func": "node",
-    "items": [
-      {
-        "item": "赤铁矿",
-        "itemEN": "Light Kidney Ore",
-        "itemJA": "赤鉄鉱",
-        "itemFR": "Minerai d'hématite",
-        "itemDE": "Hämatit",
-        "icon": 21206,
-        "id": 5117
-      },
-      {
-        "item": "赤铜矿",
-        "itemEN": "Cuprite",
-        "itemJA": "赤銅鉱",
-        "itemFR": "Minerai de cuprite",
-        "itemDE": "Cuprit",
-        "icon": 21206,
-        "id": 12942
-      }
-    ],
-    "time": [
-      2,
-      14
-    ],
-    "title": "萨雷安睿哲区",
-    "zone": "龙堡内陆低地",
-    "coords": [
-      35.32,
-      29.78
-    ],
-    "name": "Unspoiled",
-    "uptime": 120,
-    "lvl": 60,
-    "id": 319,
+    "condition": "鉴别力 631以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.0
   },
   {
@@ -3137,6 +3049,8 @@
     "uptime": 120,
     "lvl": 60,
     "id": 320,
+    "condition": "鉴别力 656以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.0
   },
   {
@@ -3177,6 +3091,8 @@
     "uptime": 120,
     "lvl": 60,
     "id": 321,
+    "condition": "鉴别力 829以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.0
   },
   {
@@ -3217,6 +3133,8 @@
     "uptime": 120,
     "lvl": 60,
     "id": 323,
+    "condition": "鉴别力 829以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.0
   },
   {
@@ -3248,6 +3166,8 @@
     "uptime": 120,
     "lvl": 60,
     "id": 324,
+    "condition": "鉴别力 829以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.0
   },
   {
@@ -3279,6 +3199,8 @@
     "uptime": 120,
     "lvl": 60,
     "id": 325,
+    "condition": "鉴别力 829以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.0
   },
   {
@@ -3310,6 +3232,8 @@
     "uptime": 120,
     "lvl": 60,
     "id": 326,
+    "condition": "鉴别力 829以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.0
   },
   {
@@ -3986,6 +3910,8 @@
     "uptime": 120,
     "lvl": 55,
     "id": 339,
+    "condition": "鉴别力 617以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.0
   },
   {
@@ -4035,6 +3961,8 @@
     "uptime": 120,
     "lvl": 50,
     "id": 340,
+    "condition": "鉴别力 327以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.0
   },
   {
@@ -4074,6 +4002,8 @@
     "uptime": 120,
     "lvl": 55,
     "id": 341,
+    "condition": "鉴别力 612以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.0
   },
   {
@@ -4113,6 +4043,8 @@
     "uptime": 120,
     "lvl": 60,
     "id": 342,
+    "condition": "鉴别力 631以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.0
   },
   {
@@ -4152,6 +4084,8 @@
     "uptime": 120,
     "lvl": 60,
     "id": 343,
+    "condition": "鉴别力 635以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.0
   },
   {
@@ -4182,6 +4116,8 @@
     "uptime": 120,
     "lvl": 60,
     "id": 344,
+    "condition": "鉴别力 656以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.0
   },
   {
@@ -4231,6 +4167,8 @@
     "uptime": 120,
     "lvl": 60,
     "id": 345,
+    "condition": "鉴别力 829以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.0
   },
   {
@@ -4336,6 +4274,8 @@
     "uptime": 120,
     "lvl": 60,
     "id": 347,
+    "condition": "鉴别力 829以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.0
   },
   {
@@ -4367,6 +4307,8 @@
     "uptime": 120,
     "lvl": 60,
     "id": 348,
+    "condition": "鉴别力 829以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.0
   },
   {
@@ -4398,6 +4340,8 @@
     "uptime": 120,
     "lvl": 60,
     "id": 349,
+    "condition": "鉴别力 829以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.0
   },
   {
@@ -4429,6 +4373,8 @@
     "uptime": 120,
     "lvl": 60,
     "id": 350,
+    "condition": "鉴别力 829以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.0
   },
   {
@@ -4469,6 +4415,8 @@
     "uptime": 120,
     "lvl": 60,
     "id": 395,
+    "condition": "鉴别力 829以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.2
   },
   {
@@ -4574,6 +4522,8 @@
     "uptime": 120,
     "lvl": 60,
     "id": 397,
+    "condition": "鉴别力 829以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.2
   },
   {
@@ -4598,7 +4548,7 @@
         "itemDE": "Wolframerzklumpen (Sammlerstück)",
         "icon": 21203,
         "id": 32986,
-        "scrip": "大地白票"
+        "scrip": "大地黄票"
       }
     ],
     "stars": 1,
@@ -4630,7 +4580,7 @@
         "itemDE": "Abanischer Alaun (Sammlerstück)",
         "icon": 22644,
         "id": 32987,
-        "scrip": "大地白票"
+        "scrip": "大地黄票"
       }
     ],
     "stars": 1,
@@ -4836,6 +4786,8 @@
     "uptime": 120,
     "lvl": 60,
     "id": 289,
+    "condition": "鉴别力 945以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.4
   },
   {
@@ -4867,6 +4819,8 @@
     "uptime": 120,
     "lvl": 60,
     "id": 290,
+    "condition": "鉴别力 945以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.4
   },
   {
@@ -4898,6 +4852,8 @@
     "uptime": 120,
     "lvl": 60,
     "id": 291,
+    "condition": "鉴别力 945以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.4
   },
   {
@@ -4929,6 +4885,8 @@
     "uptime": 120,
     "lvl": 60,
     "id": 292,
+    "condition": "鉴别力 945以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.0
   },
   {
@@ -4960,6 +4918,8 @@
     "uptime": 120,
     "lvl": 60,
     "id": 293,
+    "condition": "鉴别力 945以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.4
   },
   {
@@ -4991,6 +4951,8 @@
     "uptime": 120,
     "lvl": 60,
     "id": 299,
+    "condition": "鉴别力 945以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.4
   },
   {
@@ -5022,6 +4984,8 @@
     "uptime": 120,
     "lvl": 60,
     "id": 301,
+    "condition": "鉴别力 945以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.4
   },
   {
@@ -5053,8 +5017,8 @@
     "uptime": 120,
     "lvl": 60,
     "id": 497,
-    "condition": "鉴别力 645<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 829以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 4.0
   },
   {
@@ -5085,8 +5049,8 @@
     "uptime": 120,
     "lvl": 65,
     "id": 498,
-    "condition": "鉴别力 780<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 1003以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 4.0
   },
   {
@@ -5126,8 +5090,8 @@
     "uptime": 120,
     "lvl": 70,
     "id": 499,
-    "condition": "鉴别力 846<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 1088以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 4.0
   },
   {
@@ -5158,8 +5122,8 @@
     "uptime": 120,
     "lvl": 70,
     "id": 500,
-    "condition": "鉴别力 829<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 1067以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 4.0
   },
   {
@@ -5190,8 +5154,8 @@
     "uptime": 120,
     "lvl": 70,
     "id": 501,
-    "condition": "鉴别力 796<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 1024以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 4.0
   },
   {
@@ -5222,8 +5186,8 @@
     "uptime": 120,
     "lvl": 70,
     "id": 502,
-    "condition": "鉴别力 846<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 1088以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 4.0
   },
   {
@@ -5264,8 +5228,8 @@
     "uptime": 120,
     "lvl": 70,
     "id": 503,
-    "condition": "鉴别力 1200<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 1206以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 4.0
   },
   {
@@ -5297,8 +5261,8 @@
     "uptime": 120,
     "lvl": 70,
     "id": 504,
-    "condition": "鉴别力 1200<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 1206以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 4.0
   },
   {
@@ -5445,39 +5409,6 @@
     "func": "node",
     "items": [
       {
-        "item": "山毛榉树枝",
-        "itemEN": "Beech Branch",
-        "itemJA": "ビーチの枝",
-        "itemFR": "Branche de hêtre",
-        "itemDE": "Buchenast",
-        "icon": 22417,
-        "id": 19936
-      }
-    ],
-    "stars": 2,
-    "time": [
-      6,
-      18
-    ],
-    "title": "东境混交林",
-    "zone": "基拉巴尼亚边区",
-    "coords": [
-      11.17,
-      18.78
-    ],
-    "name": "Unspoiled",
-    "uptime": 120,
-    "lvl": 60,
-    "id": 521,
-    "condition": "鉴别力 645<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
-    "patch": 4.0
-  },
-  {
-    "type": "良材",
-    "func": "node",
-    "items": [
-      {
         "item": "竹笋",
         "itemEN": "Bamboo Shoot",
         "itemJA": "タケノコ",
@@ -5501,8 +5432,8 @@
     "uptime": 120,
     "lvl": 65,
     "id": 522,
-    "condition": "鉴别力 780<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 1003以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 4.0
   },
   {
@@ -5533,8 +5464,8 @@
     "uptime": 120,
     "lvl": 70,
     "id": 523,
-    "condition": "鉴别力 862<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 1109以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 4.0
   },
   {
@@ -5566,8 +5497,8 @@
     "uptime": 120,
     "lvl": 70,
     "id": 524,
-    "condition": "鉴别力 1200<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 1206以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 4.0
   },
   {
@@ -5598,8 +5529,8 @@
     "uptime": 120,
     "lvl": 70,
     "id": 525,
-    "condition": "鉴别力 796<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 1024以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 4.0
   },
   {
@@ -5639,8 +5570,8 @@
     "uptime": 120,
     "lvl": 70,
     "id": 526,
-    "condition": "鉴别力 829<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 1067以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 4.0
   },
   {
@@ -5672,8 +5603,8 @@
     "uptime": 120,
     "lvl": 70,
     "id": 527,
-    "condition": "鉴别力 1200<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 1206以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 4.0
   },
   {
@@ -5714,8 +5645,8 @@
     "uptime": 120,
     "lvl": 70,
     "id": 528,
-    "condition": "鉴别力 1200<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 1206以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 4.0
   },
   {
@@ -5756,8 +5687,8 @@
     "uptime": 120,
     "lvl": 70,
     "id": 535,
-    "condition": "鉴别力 1350<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 1399以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 4.2
   },
   {
@@ -5798,8 +5729,8 @@
     "uptime": 120,
     "lvl": 70,
     "id": 536,
-    "condition": "鉴别力 1350<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 1399以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 4.2
   },
   {
@@ -5840,8 +5771,8 @@
     "uptime": 120,
     "lvl": 70,
     "id": 537,
-    "condition": "鉴别力 1350<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 1399以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 4.2
   },
   {
@@ -5873,8 +5804,8 @@
     "uptime": 120,
     "lvl": 70,
     "id": 538,
-    "condition": "鉴别力 1350<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 1399以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 4.2
   },
   {
@@ -5906,8 +5837,8 @@
     "uptime": 120,
     "lvl": 70,
     "id": 555,
-    "condition": "鉴别力 1550<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 1592以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 4.4
   },
   {
@@ -5939,8 +5870,8 @@
     "uptime": 120,
     "lvl": 70,
     "id": 556,
-    "condition": "鉴别力 1550<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 1592以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 4.4
   },
   {
@@ -5972,8 +5903,8 @@
     "uptime": 120,
     "lvl": 70,
     "id": 557,
-    "condition": "鉴别力 1550<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 1592以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 4.4
   },
   {
@@ -6005,8 +5936,8 @@
     "uptime": 120,
     "lvl": 70,
     "id": 558,
-    "condition": "鉴别力 1550<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 1592以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 4.4
   },
   {
@@ -6233,8 +6164,8 @@
     "uptime": 120,
     "lvl": 70,
     "id": 603,
-    "condition": "鉴别力 1350<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 1399以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.0
   },
   {
@@ -6265,8 +6196,8 @@
     "uptime": 120,
     "lvl": 75,
     "id": 604,
-    "condition": "鉴别力 1312<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 1688以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.0
   },
   {
@@ -6297,8 +6228,8 @@
     "uptime": 120,
     "lvl": 75,
     "id": 605,
-    "condition": "鉴别力 1350<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 1737以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.0
   },
   {
@@ -6329,8 +6260,8 @@
     "uptime": 120,
     "lvl": 80,
     "id": 606,
-    "condition": "鉴别力 1421<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 1828以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.0
   },
   {
@@ -6361,8 +6292,8 @@
     "uptime": 120,
     "lvl": 80,
     "id": 607,
-    "condition": "鉴别力 1491<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 1919以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.0
   },
   {
@@ -6393,8 +6324,8 @@
     "uptime": 120,
     "lvl": 80,
     "id": 608,
-    "condition": "鉴别力 1562<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 2010以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.0
   },
   {
@@ -6435,8 +6366,8 @@
     "uptime": 120,
     "lvl": 80,
     "id": 609,
-    "condition": "鉴别力 1840<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 2105以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.0
   },
   {
@@ -6468,8 +6399,8 @@
     "uptime": 120,
     "lvl": 80,
     "id": 610,
-    "condition": "鉴别力 1840<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 2105以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.0
   },
   {
@@ -6668,39 +6599,6 @@
     "patch": 5.0
   },
   {
-    "type": "良材",
-    "func": "node",
-    "items": [
-      {
-        "item": "白橡木枝",
-        "itemEN": "White Oak Branch",
-        "itemJA": "ホワイトオークの枝",
-        "itemFR": "Branche de chêne blanc",
-        "itemDE": "Weißeichen-Ast",
-        "icon": 22416,
-        "id": 27816
-      }
-    ],
-    "stars": 2,
-    "time": [
-      10,
-      22
-    ],
-    "title": "温蒙特造船厂",
-    "zone": "珂露西亚岛",
-    "coords": [
-      12.07,
-      29.23
-    ],
-    "name": "Unspoiled",
-    "uptime": 120,
-    "lvl": 70,
-    "id": 627,
-    "condition": "鉴别力 1350<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
-    "patch": 5.0
-  },
-  {
     "type": "草场",
     "func": "node",
     "items": [
@@ -6728,8 +6626,8 @@
     "uptime": 120,
     "lvl": 75,
     "id": 628,
-    "condition": "鉴别力 1312<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 1688以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.0
   },
   {
@@ -6760,8 +6658,8 @@
     "uptime": 120,
     "lvl": 75,
     "id": 629,
-    "condition": "鉴别力 1350<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 1737以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.0
   },
   {
@@ -6792,8 +6690,8 @@
     "uptime": 120,
     "lvl": 80,
     "id": 630,
-    "condition": "鉴别力 1421<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 1828以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.0
   },
   {
@@ -6824,8 +6722,8 @@
     "uptime": 120,
     "lvl": 80,
     "id": 631,
-    "condition": "鉴别力 1491<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 1919以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.0
   },
   {
@@ -6856,8 +6754,8 @@
     "uptime": 120,
     "lvl": 80,
     "id": 632,
-    "condition": "鉴别力 1562<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 2010以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.0
   },
   {
@@ -6898,8 +6796,8 @@
     "uptime": 120,
     "lvl": 80,
     "id": 633,
-    "condition": "鉴别力 1840<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 2105以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.0
   },
   {
@@ -6931,8 +6829,8 @@
     "uptime": 120,
     "lvl": 80,
     "id": 634,
-    "condition": "鉴别力 1840<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 2105以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.0
   },
   {
@@ -6973,8 +6871,8 @@
     "uptime": 120,
     "lvl": 80,
     "id": 681,
-    "condition": "鉴别力 2140<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 2316以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.2
   },
   {
@@ -7006,8 +6904,8 @@
     "uptime": 120,
     "lvl": 80,
     "id": 682,
-    "condition": "鉴别力 2140<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 2316以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.2
   },
   {
@@ -7039,8 +6937,8 @@
     "uptime": 120,
     "lvl": 80,
     "id": 683,
-    "condition": "鉴别力 2140<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 2316以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.2
   },
   {
@@ -7081,8 +6979,8 @@
     "uptime": 120,
     "lvl": 80,
     "id": 684,
-    "condition": "鉴别力 2140<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 2316以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.2
   },
   {
@@ -7292,7 +7190,7 @@
         "itemDE": "Bernsteinnelke (Sammlerstück)",
         "icon": 25023,
         "id": 33007,
-        "scrip": "大地白票"
+        "scrip": "大地黄票"
       }
     ],
     "time": [
@@ -7333,7 +7231,7 @@
         "itemDE": "Koralle (Sammlerstück)",
         "icon": 29062,
         "id": 33008,
-        "scrip": "大地白票"
+        "scrip": "大地黄票"
       }
     ],
     "stars": 1,
@@ -7365,7 +7263,7 @@
         "itemDE": "Urunday-Holzscheit (Sammlerstück)",
         "icon": 22420,
         "id": 33009,
-        "scrip": "大地白票"
+        "scrip": "大地黄票"
       }
     ],
     "stars": 1,
@@ -7414,8 +7312,8 @@
     "uptime": 120,
     "lvl": 80,
     "id": 713,
-    "condition": "鉴别力 2140<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 2316以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.2
   },
   {
@@ -7447,8 +7345,8 @@
     "uptime": 120,
     "lvl": 80,
     "id": 714,
-    "condition": "鉴别力 2140<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 2316以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.2
   },
   {
@@ -7480,8 +7378,8 @@
     "uptime": 120,
     "lvl": 80,
     "id": 758,
-    "condition": "鉴别力 2404<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 2605以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.4
   },
   {
@@ -7513,8 +7411,8 @@
     "uptime": 120,
     "lvl": 80,
     "id": 759,
-    "condition": "鉴别力 2404<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 2605以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.4
   },
   {
@@ -7546,8 +7444,8 @@
     "uptime": 120,
     "lvl": 80,
     "id": 760,
-    "condition": "鉴别力 2404<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 2605以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.4
   },
   {
@@ -7579,8 +7477,8 @@
     "uptime": 120,
     "lvl": 80,
     "id": 761,
-    "condition": "鉴别力 2404<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 2605以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.4
   },
   {
@@ -7612,8 +7510,8 @@
     "uptime": 120,
     "lvl": 80,
     "id": 762,
-    "condition": "鉴别力 2404<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 2605以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.4
   },
   {
@@ -7645,8 +7543,838 @@
     "uptime": 120,
     "lvl": 80,
     "id": 763,
-    "condition": "鉴别力 2404<If(IntegerParameter(2))>以上<Else/>以下</If>",
-    "bonus": "<If(IntegerParameter(2))>可获得优质道具<Else/>优质获得率 0％</If>",
+    "condition": "鉴别力 2605以上",
+    "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.4
+  },
+  {
+    "type": "石场",
+    "func": "node",
+    "items": [
+      {
+        "item": "月石英",
+        "itemEN": "Lunar Quartz",
+        "itemJA": "ルナクォーツ",
+        "itemFR": "Quartz lunaire",
+        "itemDE": "Mondquarz",
+        "icon": 21459,
+        "id": 36285,
+        "reduce": {
+          "item": "晓月灵砂",
+          "icon": 21233
+        }
+      },
+      {
+        "item": "土之水晶",
+        "itemEN": "Earth Crystal",
+        "itemJA": "アースクリスタル",
+        "itemFR": "Cristal de terre",
+        "itemDE": "Erdkristall",
+        "icon": 20012,
+        "id": 11
+      },
+      {
+        "item": "土之晶簇",
+        "itemEN": "Earth Cluster",
+        "itemJA": "アースクラスター",
+        "itemFR": "Agrégat de terre",
+        "itemDE": "Erdpolykristall",
+        "icon": 20018,
+        "id": 17
+      }
+    ],
+    "time": [
+      0
+    ],
+    "title": "灵冰之剑",
+    "zone": "叹息海",
+    "coords": [
+      21.68,
+      34.73
+    ],
+    "name": "Ephemeral",
+    "uptime": 240,
+    "lvl": 90,
+    "id": 827,
+    "patch": 6.0
+  },
+  {
+    "type": "矿脉",
+    "func": "node",
+    "items": [
+      {
+        "item": "暗性岩",
+        "itemEN": "Ghostly Umbral Rock",
+        "itemJA": "闇性岩",
+        "itemFR": "Pierre de Ténèbres",
+        "itemDE": " Schwarzschattenfels",
+        "icon": 21472,
+        "id": 36286,
+        "reduce": {
+          "item": "巨岩灵砂",
+          "icon": 21234
+        }
+      },
+      {
+        "item": "雷之水晶",
+        "itemEN": "Lightning Crystal",
+        "itemJA": "ライトニングクリスタル",
+        "itemFR": "Cristal de foudre",
+        "itemDE": "Blitzkristall",
+        "icon": 20011,
+        "id": 12
+      },
+      {
+        "item": "雷之晶簇",
+        "itemEN": "Lightning Cluster",
+        "itemJA": "ライトニングクラスター",
+        "itemFR": "Agrégat de foudre",
+        "itemDE": "Blitzpolykristall",
+        "icon": 20017,
+        "id": 18
+      }
+    ],
+    "time": [
+      20
+    ],
+    "title": "开放广场",
+    "zone": "加雷马",
+    "coords": [
+      10.11,
+      15.31
+    ],
+    "name": "Ephemeral",
+    "uptime": 240,
+    "lvl": 90,
+    "id": 828,
+    "patch": 6.0
+  },
+  {
+    "type": "矿脉",
+    "func": "node",
+    "items": [
+      {
+        "item": "收藏用紫黄晶原石",
+        "itemEN": "Rarefied Raw Ametrine",
+        "itemJA": "収集用のアメトリン原石",
+        "itemFR": "Amétrine brute collectionnable",
+        "itemDE": "Roh-Ametrin (Sammlerstück)",
+        "icon": 21475,
+        "id": 36293,
+        "scrip": "大地黄票"
+      },
+      {
+        "item": "收藏用北洋岩盐",
+        "itemEN": "Rarefied Sharlayan Rock Salt",
+        "itemJA": "収集用の北洋岩塩",
+        "itemFR": "Sel gemme des mers du Nord collectionnable",
+        "itemDE": "Nordsteinsalz (Sammlerstück)",
+        "icon": 22688,
+        "id": 36295,
+        "scrip": "大地黄票"
+      }
+    ],
+    "time": [
+      0,
+      12
+    ],
+    "title": "心之风",
+    "zone": "迷津",
+    "coords": [
+      32.51,
+      21.26
+    ],
+    "name": "Unspoiled",
+    "uptime": 120,
+    "lvl": 85,
+    "id": 829,
+    "patch": 6.0
+  },
+  {
+    "type": "矿脉",
+    "func": "node",
+    "items": [
+      {
+        "item": "收藏用铋矿",
+        "itemEN": "Rarefied Bismuth Ore",
+        "itemJA": "収集用の蒼鉛鉱",
+        "itemFR": "Minerai de bismuth collectionnable",
+        "itemDE": "Bismuterz (Sammlerstück)",
+        "icon": 21217,
+        "id": 36294,
+        "scrip": "大地黄票"
+      }
+    ],
+    "time": [
+      6,
+      18
+    ],
+    "title": "灵水之剑",
+    "zone": "叹息海",
+    "coords": [
+      16.38,
+      32.65
+    ],
+    "name": "Unspoiled",
+    "uptime": 120,
+    "lvl": 85,
+    "id": 830,
+    "patch": 6.0
+  },
+  {
+    "type": "石场",
+    "func": "node",
+    "items": [
+      {
+        "item": "收藏用弗里金矿",
+        "itemEN": "Rarefied Phrygian Gold Ore",
+        "itemJA": "収集用のフリギアンゴールド鉱",
+        "itemFR": "Minerai d'or phrygien collectionnable",
+        "itemDE": "Phrygien-Gold (Sammlerstück)",
+        "icon": 21206,
+        "id": 36296,
+        "scrip": "大地黄票"
+      },
+      {
+        "item": "收藏用艾布拉纳明矾",
+        "itemEN": "Rarefied Eblan Alumen",
+        "itemJA": "収集用のエブラーナアルメン",
+        "itemFR": "Alun d'Éblana collectionnable",
+        "itemDE": "Eblan-Alaun (Sammlerstück)",
+        "icon": 22616,
+        "id": 36298,
+        "scrip": "大地白票"
+      }
+    ],
+    "time": [
+      2,
+      14
+    ],
+    "title": "平原仓库",
+    "zone": "加雷马",
+    "coords": [
+      12.79,
+      21.9
+    ],
+    "name": "Unspoiled",
+    "uptime": 120,
+    "lvl": 90,
+    "id": 831,
+    "patch": 6.0
+  },
+  {
+    "type": "石场",
+    "func": "node",
+    "items": [
+      {
+        "item": "收藏用蓝锆石原石",
+        "itemEN": "Rarefied Blue Zircon",
+        "itemJA": "収集用のブルージルコン原石",
+        "itemFR": "Zircon bleu brut collectionnable",
+        "itemDE": "Roh-Blauzirkon (Sammlerstück)",
+        "icon": 21472,
+        "id": 36297,
+        "scrip": "大地黄票"
+      },
+      {
+        "item": "收藏用铁云母",
+        "itemEN": "Rarefied Annite",
+        "itemJA": "収集用の鉄雲母",
+        "itemFR": "Annite collectionnable",
+        "itemDE": "Glimmereisen (Sammlerstück)",
+        "icon": 21226,
+        "id": 36299,
+        "scrip": "大地白票"
+      }
+    ],
+    "stars": 1,
+    "time": [
+      10,
+      22
+    ],
+    "title": "十二奇园",
+    "zone": "厄尔庇斯",
+    "coords": [
+      8.25,
+      36.59
+    ],
+    "name": "Unspoiled",
+    "uptime": 120,
+    "lvl": 90,
+    "id": 832,
+    "patch": 6.0
+  },
+  {
+    "type": "石场",
+    "func": "node",
+    "items": [
+      {
+        "item": "收藏用白镴矿",
+        "itemEN": "Rarefied Pewter Ore",
+        "itemJA": "収集用の白目鉱",
+        "itemFR": "Minerai de manganèse collectionnable",
+        "itemDE": "Hartzinnklumpen (Sammlerstück)",
+        "icon": 21211,
+        "id": 36300,
+        "scrip": "大地白票"
+      }
+    ],
+    "stars": 1,
+    "time": [
+      4,
+      16
+    ],
+    "title": "神我寺",
+    "zone": "萨维奈岛",
+    "coords": [
+      32.55,
+      24.96
+    ],
+    "name": "Unspoiled",
+    "uptime": 120,
+    "lvl": 90,
+    "id": 833,
+    "patch": 6.0
+  },
+  {
+    "type": "矿脉",
+    "func": "node",
+    "items": [
+      {
+        "item": "极硬水",
+        "itemEN": "Stonehard Water",
+        "itemJA": "極硬水",
+        "itemFR": "Eau ex<SoftHyphen/>trê<SoftHyphen/>me<SoftHyphen/>ment dure",
+        "itemDE": "Superhartes Quellwasser",
+        "icon": 22678,
+        "id": 36215
+      },
+      {
+        "item": "北洲苦灰石",
+        "itemEN": "Rime Dolomite",
+        "itemJA": "北州苦灰石",
+        "itemFR": "Minerai de dolomite boréale",
+        "itemDE": "Nordilsabarder Dolomitklumpen",
+        "icon": 21225,
+        "id": 36216
+      }
+    ],
+    "stars": 1,
+    "time": [
+      0,
+      12
+    ],
+    "title": "朱图尔娜七号水上钻井平台",
+    "zone": "加雷马",
+    "coords": [
+      32.17,
+      34.89
+    ],
+    "name": "Legendary",
+    "uptime": 120,
+    "lvl": 90,
+    "id": 834,
+    "condition": "鉴别力 3401以上",
+    "bonus": "额外采集奖励发生率＋40%",
+    "patch": 6.0
+  },
+  {
+    "type": "石场",
+    "func": "node",
+    "items": [
+      {
+        "item": "极硬水",
+        "itemEN": "Stonehard Water",
+        "itemJA": "極硬水",
+        "itemFR": "Eau ex<SoftHyphen/>trê<SoftHyphen/>me<SoftHyphen/>ment dure",
+        "itemDE": "Superhartes Quellwasser",
+        "icon": 22678,
+        "id": 36215
+      },
+      {
+        "item": "月精金矿",
+        "itemEN": "Lunar Adamantite Ore",
+        "itemJA": "ルナアダマン鉱",
+        "itemFR": "Minerai d'adamantium sélénien",
+        "itemDE": "Lunares Adamantit-Erz",
+        "icon": 21224,
+        "id": 36167
+      }
+    ],
+    "stars": 1,
+    "time": [
+      2,
+      14
+    ],
+    "title": "西德尼亚丘陵",
+    "zone": "叹息海",
+    "coords": [
+      9.53,
+      23.34
+    ],
+    "name": "Legendary",
+    "uptime": 120,
+    "lvl": 90,
+    "id": 835,
+    "condition": "鉴别力 3401以上",
+    "bonus": "额外采集奖励发生率＋40%",
+    "patch": 6.0
+  },
+  {
+    "type": "石场",
+    "func": "node",
+    "items": [
+      {
+        "item": "极硬水",
+        "itemEN": "Stonehard Water",
+        "itemJA": "極硬水",
+        "itemFR": "Eau ex<SoftHyphen/>trê<SoftHyphen/>me<SoftHyphen/>ment dure",
+        "itemDE": "Superhartes Quellwasser",
+        "icon": 22678,
+        "id": 36215
+      },
+      {
+        "item": "铑金沙",
+        "itemEN": "Rhodium Sand",
+        "itemJA": "ロジウム砂",
+        "itemFR": "Sable de rhodium",
+        "itemDE": "Rhodiumsand",
+        "icon": 21244,
+        "id": 36179
+      }
+    ],
+    "stars": 1,
+    "time": [
+      4,
+      16
+    ],
+    "title": "极北造物院",
+    "zone": "厄尔庇斯",
+    "coords": [
+      13.57,
+      7.19
+    ],
+    "name": "Legendary",
+    "uptime": 120,
+    "lvl": 90,
+    "id": 836,
+    "condition": "鉴别力 3401以上",
+    "bonus": "额外采集奖励发生率＋40%",
+    "patch": 6.0
+  },
+  {
+    "type": "草场",
+    "func": "node",
+    "items": [
+      {
+        "item": "水瓶土",
+        "itemEN": "Ewer Clay",
+        "itemJA": "水瓶土",
+        "itemFR": "Argile de l'Érudit",
+        "itemDE": "Krugeslehm",
+        "icon": 21465,
+        "id": 36287,
+        "reduce": {
+          "item": "晓月灵砂",
+          "icon": 21233
+        }
+      },
+      {
+        "item": "风之水晶",
+        "itemEN": "Wind Crystal",
+        "itemJA": "ウィンドクリスタル",
+        "itemFR": "Cristal de vent",
+        "itemDE": "Windkristall",
+        "icon": 20010,
+        "id": 10
+      },
+      {
+        "item": "风之晶簇",
+        "itemEN": "Wind Cluster",
+        "itemJA": "ウィンドクラスター",
+        "itemFR": "Agrégat de vent",
+        "itemDE": "Windpolykristall",
+        "icon": 20016,
+        "id": 16
+      }
+    ],
+    "time": [
+      8
+    ],
+    "title": "理性其三",
+    "zone": "迷津",
+    "coords": [
+      9.97,
+      34.91
+    ],
+    "name": "Ephemeral",
+    "uptime": 240,
+    "lvl": 90,
+    "id": 849,
+    "patch": 6.0
+  },
+  {
+    "type": "良材",
+    "func": "node",
+    "items": [
+      {
+        "item": "棕榈碎皮",
+        "itemEN": "Palm Chippings",
+        "itemJA": "パームチップ",
+        "itemFR": "Écorce de palmier",
+        "itemDE": "Palmenrinde",
+        "icon": 22418,
+        "id": 36288,
+        "reduce": {
+          "item": "巨树灵砂",
+          "icon": 21236
+        }
+      },
+      {
+        "item": "火之水晶",
+        "itemEN": "Fire Crystal",
+        "itemJA": "ファイアクリスタル",
+        "itemFR": "Cristal de feu",
+        "itemDE": "Feuerkristall",
+        "icon": 20007,
+        "id": 8
+      },
+      {
+        "item": "火之晶簇",
+        "itemEN": "Fire Cluster",
+        "itemJA": "ファイアクラスター",
+        "itemFR": "Agrégat de feu",
+        "itemDE": "Feuerpolykristall",
+        "icon": 20013,
+        "id": 14
+      }
+    ],
+    "time": [
+      12
+    ],
+    "title": "帕瓦纳的悔悟",
+    "zone": "萨维奈岛",
+    "coords": [
+      25.22,
+      14.35
+    ],
+    "name": "Ephemeral",
+    "uptime": 240,
+    "lvl": 90,
+    "id": 850,
+    "patch": 6.0
+  },
+  {
+    "type": "良材",
+    "func": "node",
+    "items": [
+      {
+        "item": "收藏用棕榈原木",
+        "itemEN": "Rarefied Palm Log",
+        "itemJA": "収集用のパーム原木",
+        "itemFR": "Rondin de palmier collectionnable",
+        "itemDE": "Palmenholzscheit (Sammlerstück)",
+        "icon": 22410,
+        "id": 36303,
+        "scrip": "大地黄票"
+      },
+      {
+        "item": "收藏用椰子",
+        "itemEN": "Rarefied Coconut",
+        "itemJA": "収集用のココナッツ",
+        "itemFR": "Noix de coco collectionnable",
+        "itemDE": "Kokosnuss (Sammlerstück)",
+        "icon": 25323,
+        "id": 36305,
+        "scrip": "大地黄票"
+      }
+    ],
+    "time": [
+      2,
+      14
+    ],
+    "title": "桓娑牧场遗址",
+    "zone": "萨维奈岛",
+    "coords": [
+      14.39,
+      14.53
+    ],
+    "name": "Unspoiled",
+    "uptime": 120,
+    "lvl": 85,
+    "id": 851,
+    "patch": 6.0
+  },
+  {
+    "type": "良材",
+    "func": "node",
+    "items": [
+      {
+        "item": "收藏用红松原木",
+        "itemEN": "Rarefied Red Pine Log",
+        "itemJA": "収集用のレッドパイン原木",
+        "itemFR": "Rondin de pin sylvestre collectionnable",
+        "itemDE": "Rotkiefer-Holzscheit (Sammlerstück)",
+        "icon": 22403,
+        "id": 36304,
+        "scrip": "大地黄票"
+      }
+    ],
+    "time": [
+      4,
+      16
+    ],
+    "title": "青磷管道",
+    "zone": "加雷马",
+    "coords": [
+      35.07,
+      5.82
+    ],
+    "name": "Unspoiled",
+    "uptime": 120,
+    "lvl": 85,
+    "id": 852,
+    "patch": 6.0
+  },
+  {
+    "type": "良材",
+    "func": "node",
+    "items": [
+      {
+        "item": "收藏用无花果",
+        "itemEN": "Rarefied Sykon",
+        "itemJA": "収集用のシューコン",
+        "itemFR": "Sycon collectionnable",
+        "itemDE": "Lykon-Frucht (Sammlerstück)",
+        "icon": 25318,
+        "id": 36306,
+        "scrip": "大地黄票"
+      },
+      {
+        "item": "收藏用古代肉豆蔻",
+        "itemEN": "Rarefied Elder Nutmeg",
+        "itemJA": "収集用のエルダーナツメグ",
+        "itemFR": "Muscade de l'ancien temps collectionnable",
+        "itemDE": "Großmuskatnuss (Sammlerstück)",
+        "icon": 25021,
+        "id": 36308,
+        "scrip": "大地白票"
+      }
+    ],
+    "time": [
+      0,
+      12
+    ],
+    "title": "翠牙园",
+    "zone": "厄尔庇斯",
+    "coords": [
+      24.98,
+      5.64
+    ],
+    "name": "Unspoiled",
+    "uptime": 120,
+    "lvl": 90,
+    "id": 853,
+    "patch": 6.0
+  },
+  {
+    "type": "草场",
+    "func": "node",
+    "items": [
+      {
+        "item": "收藏用裸麦",
+        "itemEN": "Rarefied Dark Rye",
+        "itemJA": "収集用の黒麦",
+        "itemFR": "Seigle noir collectionnable",
+        "itemDE": "Schwarzkorn (Sammlerstück)",
+        "icon": 25359,
+        "id": 36307,
+        "scrip": "大地黄票"
+      },
+      {
+        "item": "收藏用冰山莴苣",
+        "itemEN": "Rarefied Iceberg Lettuce",
+        "itemJA": "収集用のアイスバーグレタス",
+        "itemFR": "Laitue iceberg collectionnable",
+        "itemDE": "Eisbergsalat (Sammlerstück)",
+        "icon": 25219,
+        "id": 36309,
+        "scrip": "大地白票"
+      }
+    ],
+    "stars": 1,
+    "time": [
+      6,
+      18
+    ],
+    "title": "理性其二",
+    "zone": "迷津",
+    "coords": [
+      9.81,
+      22.08
+    ],
+    "name": "Unspoiled",
+    "uptime": 120,
+    "lvl": 90,
+    "id": 854,
+    "patch": 6.0
+  },
+  {
+    "type": "草场",
+    "func": "node",
+    "items": [
+      {
+        "item": "收藏用迷彩棉",
+        "itemEN": "Rarefied AR-Caean Cotton Boll",
+        "itemJA": "収集用のカエアン綿",
+        "itemFR": "Fleur de coton de Caean collectionnable",
+        "itemDE": "Caean-Samenkapsel (Sammlerstück)",
+        "icon": 25032,
+        "id": 36310,
+        "scrip": "大地白票"
+      }
+    ],
+    "stars": 1,
+    "time": [
+      8,
+      20
+    ],
+    "title": "诸神黄昏号魔导船",
+    "zone": "天外天垓",
+    "coords": [
+      9.47,
+      33.23
+    ],
+    "name": "Unspoiled",
+    "uptime": 120,
+    "lvl": 90,
+    "id": 855,
+    "patch": 6.0
+  },
+  {
+    "type": "良材",
+    "func": "node",
+    "items": [
+      {
+        "item": "天然香料",
+        "itemEN": "Potent Spice",
+        "itemJA": "天然香辛料",
+        "itemFR": "Épices naturelles",
+        "itemDE": "Natürliche Gewürze",
+        "icon": 25024,
+        "id": 36214
+      },
+      {
+        "item": "藤春木原木",
+        "itemEN": "Mempisang Log",
+        "itemJA": "メンピサン原木",
+        "itemFR": "Rondin de mempisang",
+        "itemDE": "Mempisang-Holzscheit",
+        "icon": 22405,
+        "id": 36195
+      }
+    ],
+    "stars": 1,
+    "time": [
+      6,
+      18
+    ],
+    "title": "忘海",
+    "zone": "厄尔庇斯",
+    "coords": [
+      33.17,
+      14.77
+    ],
+    "name": "Legendary",
+    "uptime": 120,
+    "lvl": 90,
+    "id": 856,
+    "condition": "鉴别力 3401以上",
+    "bonus": "额外采集奖励发生率＋40%",
+    "patch": 6.0
+  },
+  {
+    "type": "草场",
+    "func": "node",
+    "items": [
+      {
+        "item": "天然香料",
+        "itemEN": "Potent Spice",
+        "itemJA": "天然香辛料",
+        "itemFR": "Épices naturelles",
+        "itemDE": "Natürliche Gewürze",
+        "icon": 25024,
+        "id": 36214
+      },
+      {
+        "item": "金茧",
+        "itemEN": "Golden Cocoon",
+        "itemJA": "金マユ",
+        "itemFR": "Cocon doré",
+        "itemDE": "Goldkokon",
+        "icon": 21682,
+        "id": 36207
+      }
+    ],
+    "stars": 1,
+    "time": [
+      8,
+      20
+    ],
+    "title": "众僧林园",
+    "zone": "萨维奈岛",
+    "coords": [
+      25.3,
+      21.7
+    ],
+    "name": "Legendary",
+    "uptime": 120,
+    "lvl": 90,
+    "id": 857,
+    "condition": "鉴别力 3401以上",
+    "bonus": "额外采集奖励发生率＋40%",
+    "patch": 6.0
+  },
+  {
+    "type": "草场",
+    "func": "node",
+    "items": [
+      {
+        "item": "天然香料",
+        "itemEN": "Potent Spice",
+        "itemJA": "天然香辛料",
+        "itemFR": "Épices naturelles",
+        "itemDE": "Natürliche Gewürze",
+        "icon": 25024,
+        "id": 36214
+      },
+      {
+        "item": "迷途草",
+        "itemEN": "Double-edged Herb",
+        "itemJA": "迷い草",
+        "itemFR": "Feuille d'égarante",
+        "itemDE": "Verlaufdichnicht",
+        "icon": 25201,
+        "id": 36217
+      }
+    ],
+    "stars": 1,
+    "time": [
+      10,
+      22
+    ],
+    "title": "异亚转移阵",
+    "zone": "天外天垓",
+    "coords": [
+      28.05,
+      13.11
+    ],
+    "name": "Legendary",
+    "uptime": 120,
+    "lvl": 90,
+    "id": 858,
+    "condition": "鉴别力 3401以上",
+    "bonus": "额外采集奖励发生率＋40%",
+    "patch": 6.0
   }
 ];

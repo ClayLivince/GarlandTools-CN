@@ -51,22 +51,22 @@ namespace Garland.Data.Modules
                     else if (classJobCategoryKey == 17 || classJobCategoryKey == 18)
                     {
                         // MIN and BTN
-                        var gathering2 = sRetainerTaskParameter.AsInt32("Gathering{DoL}[0]");
-                        var gathering3 = sRetainerTaskParameter.AsInt32("Gathering{DoL}[1]");
-                        //var gathering4 = sRetainerTaskParameter.AsInt32("Perception{DoL}[2]");
-                        //var gathering5 = sRetainerTaskParameter.AsInt32("Perception{DoL}[3]");
-                        //venture.gathering = new JArray(sVenture.RequiredGathering, gathering2, gathering3, gathering4, gathering5);
-                        venture.gathering = new JArray(sVenture.RequiredGathering, gathering2, gathering3);
+                        var gathering2 = sRetainerTaskParameter.AsInt32("Perception{DoL}[0]");
+                        var gathering3 = sRetainerTaskParameter.AsInt32("Perception{DoL}[1]");
+                        var gathering4 = sRetainerTaskParameter.AsInt32("Perception{DoL}[2]");
+                        var gathering5 = sRetainerTaskParameter.AsInt32("Perception{DoL}[3]");
+                        venture.gathering = new JArray(sVenture.RequiredGathering, gathering2, gathering3, gathering4, gathering5);
+                        //venture.gathering = new JArray(sVenture.RequiredGathering, gathering2, gathering3);
                     }
                     else if (classJobCategoryKey == 19)
                     {
                         // FSH
-                        var gathering2 = sRetainerTaskParameter.AsInt32("Gathering{FSH}[0]");
-                        var gathering3 = sRetainerTaskParameter.AsInt32("Gathering{FSH}[1]");
-                        //var gathering4 = sRetainerTaskParameter.AsInt32("Perception{FSH}[2]");
-                        //var gathering5 = sRetainerTaskParameter.AsInt32("Perception{FSH}[3]");
-                        //venture.gathering = new JArray(sVenture.RequiredGathering, gathering2, gathering3, gathering4, gathering5);
-                        venture.gathering = new JArray(sVenture.RequiredGathering, gathering2, gathering3);
+                        var gathering2 = sRetainerTaskParameter.AsInt32("Perception{FSH}[0]");
+                        var gathering3 = sRetainerTaskParameter.AsInt32("Perception{FSH}[1]");
+                        var gathering4 = sRetainerTaskParameter.AsInt32("Perception{FSH}[2]");
+                        var gathering5 = sRetainerTaskParameter.AsInt32("Perception{FSH}[3]");
+                        venture.gathering = new JArray(sVenture.RequiredGathering, gathering2, gathering3, gathering4, gathering5);
+                        //venture.gathering = new JArray(sVenture.RequiredGathering, gathering2, gathering3);
                     }
                     else
                         throw new NotImplementedException($"Invalid ClassJobCategory ${classJobCategoryKey} on venture.");

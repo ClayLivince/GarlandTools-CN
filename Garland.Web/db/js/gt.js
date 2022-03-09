@@ -1926,11 +1926,19 @@ gt.item = {
         //'直击': '直击'
     },
     fishShadowHint:{
-        'S': 'Small',
-        'M': 'Average',
-        'L': 'Large',
-        'Map': 'Treasure Map'
+        'S': '小型鱼',
+        'M': '中型鱼',
+        'L': '大型鱼',
+        'Map': '宝藏地图'
     },
+    fishSpeedHint: {
+        'Slow': '慢',
+        'Average': '中速',
+        'Fast': '快',
+        'Very Fast': '非常快',
+        'V. Fast': '非常快'
+    },
+
     // TODO: materiaJoinRates comes from core data, only here temporarily until old cache is removed.
     materiaJoinRates: {"nq":[[90,48,28,16],[82,44,26,16],[70,38,22,14],[58,32,20,12],[17,10,7,5],[17,0,0,0],[17,10,7,5],[17,0,0,0],[100,100,100,100],[100,100,100,100]],"hq":[[80,40,20,10],[72,36,18,10],[60,30,16,8],[48,24,12,6],[12,6,3,2],[12,0,0,0],[12,6,3,2],[12,0,0,0],[100,100,100,100],[100,100,100,100]]},
     browse: [ { type: 'sort', prop: 'name' } ],
@@ -2391,14 +2399,9 @@ gt.item = {
 
                     // Group fishing spots by bait chain.
                     var group = null;
-                    if (spot.bait || !spot.gig) {
-                        group = _.find(view.fish.groups, function(g) { return _.isEqual(g.baitIds, spot.bait); });
+                    if (spot.baits || !spot.node) {
+                        group = _.find(view.fish.groups, function(g) { return _.isEqual(g.baitIds, spot.baits); });
                         view.fish.predatorType = '捕鱼人之识';
-                    }
-                    else {
-                        group = _.find(view.fish.groups, function(g) { return _.isEqual(g.gig, spot.gig); });
-                        view.fish.predatorType = 'Shadows';
-                    }
 
                         if (!group) {
                             group = {
@@ -2411,20 +2414,28 @@ gt.item = {
                             view.fish.groups.push(group);
                         }
 
-                    // Push common conditions up to the main fish view.
-                    view.fish.during = spot.during;
-                    view.fish.transition = spot.transition;
-                    view.fish.weather = spot.weather;
-                    view.fish.hookset = spot.hookset;
-                    view.fish.gatheringReq = spot.gatheringReq;
-                    view.fish.snagging = spot.snagging;
-                    view.fish.fishEyes = spot.fishEyes;
+                        if (spot.hookset) {
+                            if (spot.hookset == "强力提钩")
+                                view.fish.hooksetIcon = 1115;
+                            else
+                                view.fish.hooksetIcon = 1116;
+                        }
+                    }
+                    else {
+                        group = _.find(view.fish.groups, function(g) { return _.isEqual(g.node, spot.node); });
+                        view.fish.predatorType = '渔鹰之眼';
 
-                    if (spot.hookset) {
-                        if (spot.hookset == "强力提钩")
-                            view.fish.hooksetIcon = 1115;
-                        else
-                            view.fish.hooksetIcon = 1116;
+                        if (!group) {
+                            group = {
+                                speed: gt.item.fishSpeedHint[spot.speed],
+                                shadow: spot.shadow,
+                                shadowHint: gt.item.fishShadowHint[spot.shadow],
+                                buff: gt.model.partialList(gt.status, spot.buff),
+                                spots: []
+                            };
+
+                            view.fish.groups.push(group);
+                        }
                     }
 
                     if (spot.predator)
@@ -2872,7 +2883,7 @@ gt.item = {
             var materiaItems = _.filter(_.values(gt.item.partialIndex), function(i) { return i.materia && i.materia.value; });
             materiaItems = _.map(materiaItems, function(i) {
                 var view = gt.model.partial(gt.item, i.i);
-                view.text = view.name.replace(" Materia", "");
+                view.text = view.name.replace(" 魔晶石", "");
                 return view;
             });
             var materiaGroups = _.groupBy(materiaItems, function(i) { return i.materia.attr; });
@@ -3871,13 +3882,13 @@ gt.node = {
 };
 
 gt.fishing = {
-    pluralName: '鱼池',
+    pluralName: '钓鱼',
     type: 'fishing',
     blockTemplate: null,
     index: {},
     version: 2,
     partialIndex: {},
-    categories: ['海洋垂钓', '淡水垂钓', '沙海垂钓', '浮岛垂钓', '云海垂钓', '熔岩垂钓', '魔泉垂钓', '盐湖垂钓'],
+    categories: ['海洋垂钓', '淡水垂钓', '沙海垂钓', '浮岛垂钓', '云海垂钓', '熔岩垂钓', '魔泉垂钓', '盐湖垂钓', '星海垂钓'],
     browse: [
         { type: 'group', prop: 'region' },
         { type: 'group', prop: 'location' },

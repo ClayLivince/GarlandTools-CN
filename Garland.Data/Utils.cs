@@ -43,12 +43,23 @@ namespace Garland.Data
 
         public static int GetIconId(SaintCoinach.Imaging.ImageFile icon)
         {
-            return int.Parse(System.IO.Path.GetFileNameWithoutExtension(icon.Path));
+            if (icon != null)
+                return int.Parse(System.IO.Path.GetFileNameWithoutExtension(icon.Path));
+            return 0;
         }
 
         public static string SanitizeTags(string str)
         {
             return str
+                .Replace("<Emphasis>", "")
+                .Replace("</Emphasis>", "")
+                .Replace("<SoftHyphen/>", "")
+                .Replace("<Indent/>", "");
+        }
+
+        public static string SanitizeXivTags(XivString str)
+        {
+            return str.ToString()
                 .Replace("<Emphasis>", "")
                 .Replace("</Emphasis>", "")
                 .Replace("<SoftHyphen/>", "")
