@@ -19,7 +19,11 @@ namespace Garland.Data.Modules
 
             Directory.CreateDirectory(baseIconPath);
 
-            Directory.CreateDirectory(baseIconPath);
+            Dictionary<int, Saint.Weather> iWeatherIndex = new Dictionary<int, Saint.Weather>();
+            foreach (var iWeather in _builder.InterSheet<Saint.Weather>())
+            {
+                iWeatherIndex[iWeather.Key] = iWeather;
+            }
 
             // Extract weather names, ensure their icons are written.
             foreach (var sWeather in _builder.Sheet<Saint.Weather>())
@@ -36,6 +40,9 @@ namespace Garland.Data.Modules
                     var image = sWeather.Icon.GetImage();
                     image.Save(iconPath, System.Drawing.Imaging.ImageFormat.Png);
                 }
+
+                var iWeather = iWeatherIndex[sWeather.Key];
+                _builder.Db.WeatherByEnName[iWeather.Name.ToString()] = name;
 
                 _builder.Db.Weather.Add(name);
             }

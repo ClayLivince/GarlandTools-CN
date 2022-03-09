@@ -104,6 +104,7 @@ namespace Garland.Data
         public Dictionary<int, dynamic> LocationsById = new Dictionary<int, dynamic>();
         public Dictionary<string, int> LocationIdsByName = new Dictionary<string, int>();
         public Dictionary<string, int> LocationIdsByEnName = new Dictionary<string, int>();
+        public Dictionary<string, dynamic> WeatherByEnName = new Dictionary<string, dynamic>(); 
         public Dictionary<string, dynamic> ItemsByName = new Dictionary<string, dynamic>();
         public Dictionary<string, dynamic> ItemsByEnName = new Dictionary<string, dynamic>();
         public Dictionary<int, List<dynamic>> ItemsByInstanceId = new Dictionary<int, List<dynamic>>();

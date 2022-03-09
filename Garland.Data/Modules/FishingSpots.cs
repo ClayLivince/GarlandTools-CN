@@ -353,7 +353,7 @@ namespace Garland.Data.Modules
                         switch (tug)
                         {
                             case "!":
-                            case "Light"
+                            case "Light":
                                 spot.tug = "轻杆";
                                 break;
                             case "!!":
@@ -600,7 +600,6 @@ namespace Garland.Data.Modules
                 }
                 
             }
-            clayManager.Stop();
         }
 
         void InheritConditions(dynamic spot, dynamic inheritSpot, string weather, string transition, string start, string end)
