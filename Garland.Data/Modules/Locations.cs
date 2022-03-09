@@ -83,7 +83,7 @@ namespace Garland.Data.Modules
                     CreateInterLocation(iPlaceName.Key, iName);
                 }
                 
-                var loc = CreateLocation(sPlaceName.Key, name);
+                var loc = CreateLocation(sPlaceName.Key, name, sPlaceName, iPlaceName);
 
                 // Combine map data.
                 if (locationIndex.TryGetValue(sPlaceName, out var info))
@@ -208,10 +208,11 @@ namespace Garland.Data.Modules
             return sPlaceName.Name.ToString();
         }
 
-        dynamic CreateLocation(int id, string name)
+        dynamic CreateLocation(int id, string name, Game.PlaceName sPlaceName, Game.PlaceName iPlaceName)
         {
             dynamic loc = new JObject();
             loc.id = id;
+            _builder.Localize.Column((JObject)loc, sPlaceName, iPlaceName, "Name", "name", Utils.SanitizeXivTags);
             loc.name = name;
             _builder.Db.Locations.Add(loc);
             _builder.Db.LocationsById[id] = loc;

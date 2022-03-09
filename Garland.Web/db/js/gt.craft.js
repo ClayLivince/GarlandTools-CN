@@ -6,26 +6,26 @@ gt.craft = {
     crystalTemplate: null,
     currentAmountFocus: null,
     categorySort: {
-        'Crystal': 1,
-        'Unknown': 10,
-        'Marketboard': 20,
-        'Gil Vendor': 30,
-        'Currency Vendor': 40,
-        'Vendor': 50,
-        'Venture': 60,
-        'Gathering': 70,
-        'Fishing': 80,
-        'Mob': 90,
-        'Desynthesis / Reduction': 100,
-        'Leve': 110,
+        '水晶': 1,
+        '未知': 10,
+        '市场交易板': 20,
+        '金币商人': 30,
+        '其他货币商人': 40,
+        '商人': 50,
+        '雇员探险': 60,
+        '采集': 70,
+        '捕鱼': 80,
+        '怪物掉落': 90,
+        '分解 / 精选': 100,
+        '理符': 110,
         'FATE': 120,
-        'Instance': 130,
-        'Voyage': 140,
-        'Treasure Map': 150,
-        'Other': 160,
-        'Gather': 170,
-        'Craft': 180,
-        'Goal': 500
+        '副本': 130,
+        '部队探险': 140,
+        '挖宝': 150,
+        '其他': 160,
+        '收集': 170,
+        '制作': 180,
+        '目标': 500
     },
 
     initialize: function(data) {
@@ -302,7 +302,7 @@ gt.craft.set.prototype.sort = function() {
     var categories = {};
     for (var i = 0; i < this.steps.length; i++) {
         var step = this.steps[i];
-        var categoryName = step.category || 'Unknown';
+        var categoryName = step.category || '未知';
         var category = categories[categoryName];
         if (!category) {
             category = {
@@ -313,9 +313,9 @@ gt.craft.set.prototype.sort = function() {
             };
             categories[categoryName] = category;
 
-            if (categoryName == "Goal" && !this.showGoals)
+            if (categoryName == "目标" && !this.showGoals)
                 category.visible = false;
-            else if (categoryName == 'Crystal')
+            else if (categoryName == '水晶')
                 category.visible = false;
         }
         category.steps.push(step);
@@ -675,7 +675,7 @@ gt.craft.step.prototype.discoverSource = function(itemSettings) {
     // This is a priority list.  Sources above are preferred to sources below.
 
     if (gt.item.isCrystal(this.item)) {
-        this.category = 'Crystal';
+        this.category = '水晶';
         this.type = 'crystal';
         return; // Don't bother with other sources for crystals.
     }

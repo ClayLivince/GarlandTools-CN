@@ -376,7 +376,7 @@
     <script id="tripletriad-source-template" type="text/x-dot-template">
         {{?it.vendors}}
         <div class="vendors subsection collapsible collapsed" data-headername="vendors">
-            <img src="images/Shop.png" class="subsection-icon">
+            <img src="images/marker/Shop.png" class="subsection-icon">
             <h2 class="pointer">商店<span class="right badge">{{=it.vendors.length}}</span></h2>
 
             {{?it.vendors}}
@@ -398,7 +398,7 @@
         {{?it.trades}}
         {{~it.trades :shop:shopIndex}}
         <div class="trades subsection collapsible collapsed" data-headername="trade {{=shop.shop}}">
-            <img src="images/Trader.png" class="subsection-icon">
+            <img src="images/marker/Trader.png" class="subsection-icon">
             <h2 class="pointer">{{=shop.shop}}<span class="right badge">{{=shop.listings.length}}</span></h2>
 
             <div class="subsection-header">
@@ -424,7 +424,7 @@
 
         {{?it.tripletriadReward}}
         <div class="tripletriadreward subsection collapsible" data-headername="tripletriadreward">
-            <img src="images/TripleTriadReward.png" class="subsection-icon">
+            <img src="images/marker/TripleTriadReward.png" class="subsection-icon">
             <h2 class="pointer">九宫幻卡对局奖励</h2>
 
             {{~it.tripletriadReward :npc:npcIndex}}
@@ -481,7 +481,7 @@
 
         {{?it.instances}}
         <div class="instances subsection collapsible collapsed" data-headername="instances">
-            <img src="images/BronzeCoffer.png" class="subsection-icon">
+            <img src="images/marker/BronzeCoffer.png" class="subsection-icon">
             <h2 class="pointer">副本宝箱 <span class="right badge">{{=it.instances.length}}</span></h2>
 
             {{~it.instances :value:index}}
@@ -574,7 +574,7 @@
 
             {{?it.desynthedFrom}}
             <div class="desynthesis subsection collapsible collapsed" data-headername="desynthesis">
-                <img src="images/Desynth.png" class="subsection-icon">
+                <img src="images/item/Desynth.png" class="subsection-icon">
                 <h2 class="pointer">由以下物品分解{{?it.desynth_job}}<span class="right">{{=it.desynth_job}} Lv. {{=it.rlvl}}</span>{{?}}</h2>
 
                 {{?it.desynthedFrom.length}}
@@ -596,7 +596,7 @@
                     {{~reward :option:oindex}}
                     <div class="block-link pointer hover-highlight reward-item" data-id="{{=option.item.id}}" data-type="item">
                         <img class="icon" src="{{=option.item.icon}}" title="{{=option.item.name}}">
-                        {{?option.hq}}<img src="images/HQOverlay.png" class="hq-overlay icon">{{?}}
+                        {{?option.hq}}<img src="images/item/HQOverlay.png" class="hq-overlay icon">{{?}}
                         {{?option.amount > 1}}{{=option.amount}} {{?}}
                     </div>
                     {{~}}
@@ -904,7 +904,7 @@
     <script id="block-group-template" type="text/x-dot-template">
         <div class="midline">
             <div class="menu tab">
-                <div data-page="contents-page" class="button">Contents{{?it.contents.length}} ({{=it.contents.length}})&#x200E;{{?}}</div>
+                <div data-page="contents-page" class="button">内容{{?it.contents.length}} ({{=it.contents.length}})&#x200E;{{?}}</div>
                 {{?it.shops || it.craftShops || it.materiaShops}}<div data-page="shops-page" class="button">商店</div>{{?}}
                 {{?it.craftSet}}<div data-page="crafting-page" class="button">来源</div>{{?}}
             </div>
@@ -3632,7 +3632,7 @@
 
         {{?it.showGoals || it.groups.goal.length > 1}}
             <div class="goal collapsible" data-headername="goal">
-                <h3 class="pointer">Goal<span class="right">{{=gt.craft.completeText(it.groups.goal)}}</span></h3>
+                <h3 class="pointer">目标<span class="right">{{=gt.craft.completeText(it.groups.goal)}}</span></h3>
                 {{~it.groups.goal :step:index}}
                     {{#def.step:step}}
                 {{~}}
@@ -3724,7 +3724,7 @@
             <img id="main-logo" src="images/site/Garland.png" title="The o is silent.">
             <div class="text">
                 <a class="title-link" href="/">Garland 数据</a>
-                <div class="subtitle">非官方FF14数据库，非官方GarlandTools中文站</div>
+                <div class="subtitle">非官方FF14数据库</div>
                 <a class="patch-link highlight block-link" data-type="patch">[patch link]</a>
             </div>
         </div>
@@ -3836,8 +3836,10 @@
                 </div>
             </div>
         </div>
-
         <div id="minimap"></div>
+        <p style="background:none;bottom: 5px;width: 100%;text-align: center;">
+            <a style="color:#FFF;" target="_blank" href="https://beian.miit.gov.cn/">京ICP备2022000296号-1</a>
+        </p>
     </div>
 
     <div id="popover-container"></div>
@@ -3847,7 +3849,7 @@
             <img src="images/site/Garland.png" title="The o is silent.">
             <div class="text">
                 <a class="title-link" href="/">Garland 数据</a>
-                <div class="subtitle">非官方FF14数据库，非官方GarlandTools中文站。</div>
+                <div class="subtitle">非官方FF14数据库</div>
                 <a class="patch-link highlight block-link" data-type="patch">[patch link]</a>
             </div>
         </div>
@@ -3857,7 +3859,11 @@
             <h3 class="button" data-page="database-page">数据</h3>
             <h3 class="button" data-page="tools-page">工具</h3>
             <span class="menu-ext">
-                <img src="images/site/Help.png" class="button" data-page="about-page" title="About"><img src="images/site/Setting.png" class="button" data-page="settings-page" title="Settings"><img src="images/site/Links.png" class="button" data-page="links-page" title="Links"><a href="https://discord.gg/hfzmApj" target="_blank"><img src="images/site/Discord.svg" class="button" title="Discord"></a>
+                <img src="images/site/Help.png" class="button" data-page="about-page" title="About">
+                <img src="images/site/Setting.png" class="button" data-page="settings-page" title="Settings">
+                <img src="images/site/Links.png" class="button" data-page="links-page" title="Links">
+                <a href="https://discord.gg/hfzmApj" target="_blank"><img src="images/site/Discord.svg" class="button" title="Discord"></a>
+                <a href="https://jq.qq.com/?_wv=1027&k=OiDRCdq7" target="_blank"><img src="images/site/QQ.png" class="button" title="QQ"></a>
             </span>
             <h3 class="button" data-page="sync-page">数据同步<span id="dirty-indicator"> 💾</span></h3>
             <h3 class="language-flag en" data-lang="en"><span class="deemphasize">English</span> EN</h3>

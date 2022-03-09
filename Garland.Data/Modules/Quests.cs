@@ -163,7 +163,7 @@ namespace Garland.Data.Modules
                 if (sQuest.Rewards.Reputation > 0)
                     rewards.reputation = sQuest.Rewards.Reputation;
 
-                if (sQuest.Rewards.QuestRewardOther.Name == "Aether Current")
+                if (sQuest.Rewards.QuestRewardOther.Name == "风脉泉")
                     rewards.aetherCurrent = 1;
 
                 foreach (var sQuestRewardItemGroup in sQuest.Rewards.Items)

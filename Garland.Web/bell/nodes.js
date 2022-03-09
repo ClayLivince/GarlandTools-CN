@@ -4,17 +4,29 @@
     "func": "node",
     "items": [
       {
-        "item": "Spruce Log",
+        "item": "云杉原木",
+        "itemEN": "Spruce Log",
+        "itemJA": "スプルース原木",
+        "itemFR": "Rondin d'épicéa",
+        "itemDE": "Fichten-Holzscheit",
         "icon": 22413,
         "id": 5395
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
+        "itemEN": "Unaspected Crystal",
+        "itemJA": "無属性クリスタル",
+        "itemFR": "Cristal terni",
+        "itemDE": "Elementneutraler Kristall",
         "icon": 20019,
         "id": 10099
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
+        "itemEN": "Dark Matter Cluster",
+        "itemJA": "ダークマタークラスター",
+        "itemFR": "Agrégat de matière sombre",
+        "itemDE": "Dunkelmaterie",
         "icon": 20407,
         "id": 10335
       }
@@ -40,17 +52,29 @@
     "func": "node",
     "items": [
       {
-        "item": "Vampire Plant",
+        "item": "吸血枝",
+        "itemEN": "Vampire Plant",
+        "itemJA": "ヴァンパイアプラント",
+        "itemFR": "Baie vampire",
+        "itemDE": "Vampirpflanze",
         "icon": 25001,
         "id": 5547
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
+        "itemEN": "Unaspected Crystal",
+        "itemJA": "無属性クリスタル",
+        "itemFR": "Cristal terni",
+        "itemDE": "Elementneutraler Kristall",
         "icon": 20019,
         "id": 10099
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
+        "itemEN": "Dark Matter Cluster",
+        "itemJA": "ダークマタークラスター",
+        "itemFR": "Agrégat de matière sombre",
+        "itemDE": "Dunkelmaterie",
         "icon": 20407,
         "id": 10335
       }
@@ -76,17 +100,29 @@
     "func": "node",
     "items": [
       {
-        "item": "Thavnairian Mistletoe",
+        "item": "萨维奈槲寄生",
+        "itemEN": "Thavnairian Mistletoe",
+        "itemJA": "サベネアミスルトゥ",
+        "itemFR": "Gui de Thavnair",
+        "itemDE": "Thavnair-Mistelzweig",
         "icon": 25001,
         "id": 5537
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
+        "itemEN": "Unaspected Crystal",
+        "itemJA": "無属性クリスタル",
+        "itemFR": "Cristal terni",
+        "itemDE": "Elementneutraler Kristall",
         "icon": 20019,
         "id": 10099
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
+        "itemEN": "Dark Matter Cluster",
+        "itemJA": "ダークマタークラスター",
+        "itemFR": "Agrégat de matière sombre",
+        "itemDE": "Dunkelmaterie",
         "icon": 20407,
         "id": 10335
       }
@@ -112,22 +148,38 @@
     "func": "node",
     "items": [
       {
-        "item": "Prickly Pineapple",
+        "item": "多刺菠萝",
+        "itemEN": "Prickly Pineapple",
+        "itemJA": "パイナップル",
+        "itemFR": "Ananas épineux",
+        "itemDE": "Ananas",
         "icon": 25303,
         "id": 4816
       },
       {
-        "item": "Prickly Pineapple Seeds",
+        "item": "多刺菠萝种子",
+        "itemEN": "Prickly Pineapple Seeds",
+        "itemJA": "パイナップルの種",
+        "itemFR": "Graines d'ananas épineux",
+        "itemDE": "Ananassamen",
         "icon": 27457,
         "id": 7734
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
+        "itemEN": "Unaspected Crystal",
+        "itemJA": "無属性クリスタル",
+        "itemFR": "Cristal terni",
+        "itemDE": "Elementneutraler Kristall",
         "icon": 20019,
         "id": 10099
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
+        "itemEN": "Dark Matter Cluster",
+        "itemJA": "ダークマタークラスター",
+        "itemFR": "Agrégat de matière sombre",
+        "itemDE": "Dunkelmaterie",
         "icon": 20407,
         "id": 10335
       }
@@ -153,42 +205,74 @@
     "func": "node",
     "items": [
       {
-        "item": "Fire Cluster",
+        "item": "火之晶簇",
+        "itemEN": "Fire Cluster",
+        "itemJA": "ファイアクラスター",
+        "itemFR": "Agrégat de feu",
+        "itemDE": "Feuerpolykristall",
         "icon": 20013,
         "id": 14
       },
       {
-        "item": "Ice Cluster",
+        "item": "冰之晶簇",
+        "itemEN": "Ice Cluster",
+        "itemJA": "アイスクラスター",
+        "itemFR": "Agrégat de glace",
+        "itemDE": "Eispolykristall",
         "icon": 20015,
         "id": 15
       },
       {
-        "item": "Wind Cluster",
+        "item": "风之晶簇",
+        "itemEN": "Wind Cluster",
+        "itemJA": "ウィンドクラスター",
+        "itemFR": "Agrégat de vent",
+        "itemDE": "Windpolykristall",
         "icon": 20016,
         "id": 16
       },
       {
-        "item": "Earth Cluster",
+        "item": "土之晶簇",
+        "itemEN": "Earth Cluster",
+        "itemJA": "アースクラスター",
+        "itemFR": "Agrégat de terre",
+        "itemDE": "Erdpolykristall",
         "icon": 20018,
         "id": 17
       },
       {
-        "item": "Lightning Cluster",
+        "item": "雷之晶簇",
+        "itemEN": "Lightning Cluster",
+        "itemJA": "ライトニングクラスター",
+        "itemFR": "Agrégat de foudre",
+        "itemDE": "Blitzpolykristall",
         "icon": 20017,
         "id": 18
       },
       {
-        "item": "Water Cluster",
+        "item": "水之晶簇",
+        "itemEN": "Water Cluster",
+        "itemJA": "ウォータークラスター",
+        "itemFR": "Agrégat d'eau",
+        "itemDE": "Wasserpolykristall",
         "icon": 20014,
         "id": 19
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
+        "itemEN": "Unaspected Crystal",
+        "itemJA": "無属性クリスタル",
+        "itemFR": "Cristal terni",
+        "itemDE": "Elementneutraler Kristall",
         "icon": 20019,
         "id": 10099
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
+        "itemEN": "Dark Matter Cluster",
+        "itemJA": "ダークマタークラスター",
+        "itemFR": "Agrégat de matière sombre",
+        "itemDE": "Dunkelmaterie",
         "icon": 20407,
         "id": 10335
       }
@@ -215,22 +299,38 @@
     "func": "node",
     "items": [
       {
-        "item": "Silkworm Cocoon",
+        "item": "蚕茧",
+        "itemEN": "Silkworm Cocoon",
+        "itemJA": "生マユ",
+        "itemFR": "Cocon de ver à soie",
+        "itemDE": "Kokon",
         "icon": 21661,
         "id": 5350
       },
       {
-        "item": "Mazlaya Greens",
+        "item": "马兹拉雅草",
+        "itemEN": "Mazlaya Greens",
+        "itemJA": "マズラヤの野草",
+        "itemFR": "Herbes de Mazlaya",
+        "itemDE": "Mazlaya-Sprossen",
         "icon": 25016,
         "id": 10098
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
+        "itemEN": "Unaspected Crystal",
+        "itemJA": "無属性クリスタル",
+        "itemFR": "Cristal terni",
+        "itemDE": "Elementneutraler Kristall",
         "icon": 20019,
         "id": 10099
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
+        "itemEN": "Dark Matter Cluster",
+        "itemJA": "ダークマタークラスター",
+        "itemFR": "Agrégat de matière sombre",
+        "itemDE": "Dunkelmaterie",
         "icon": 20407,
         "id": 10335
       }
@@ -256,22 +356,38 @@
     "func": "node",
     "items": [
       {
-        "item": "Trillium",
+        "item": "延龄花",
+        "itemEN": "Trillium",
+        "itemJA": "トリリウム",
+        "itemFR": "Trille",
+        "itemDE": "Waldlilie",
         "icon": 22627,
         "id": 5545
       },
       {
-        "item": "Mazlaya Greens",
+        "item": "马兹拉雅草",
+        "itemEN": "Mazlaya Greens",
+        "itemJA": "マズラヤの野草",
+        "itemFR": "Herbes de Mazlaya",
+        "itemDE": "Mazlaya-Sprossen",
         "icon": 25016,
         "id": 10098
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
+        "itemEN": "Unaspected Crystal",
+        "itemJA": "無属性クリスタル",
+        "itemFR": "Cristal terni",
+        "itemDE": "Elementneutraler Kristall",
         "icon": 20019,
         "id": 10099
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
+        "itemEN": "Dark Matter Cluster",
+        "itemJA": "ダークマタークラスター",
+        "itemFR": "Agrégat de matière sombre",
+        "itemDE": "Dunkelmaterie",
         "icon": 20407,
         "id": 10335
       }
@@ -297,27 +413,47 @@
     "func": "node",
     "items": [
       {
-        "item": "Trillium Bulb",
+        "item": "延龄草的球根",
+        "itemEN": "Trillium Bulb",
+        "itemJA": "トリリウムの球根",
+        "itemFR": "Bulbe de trille",
+        "itemDE": "Waldlilien-Knolle",
         "icon": 22623,
         "id": 5546
       },
       {
-        "item": "Kidragora",
+        "item": "小小蔓德拉",
+        "itemEN": "Kidragora",
+        "itemJA": "ミニマンドラゴラ",
+        "itemFR": "Mini-mini-mandragore",
+        "itemDE": "Kindragora",
         "icon": 59442,
         "id": 6209
       },
       {
-        "item": "Mazlaya Greens",
+        "item": "马兹拉雅草",
+        "itemEN": "Mazlaya Greens",
+        "itemJA": "マズラヤの野草",
+        "itemFR": "Herbes de Mazlaya",
+        "itemDE": "Mazlaya-Sprossen",
         "icon": 25016,
         "id": 10098
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
+        "itemEN": "Unaspected Crystal",
+        "itemJA": "無属性クリスタル",
+        "itemFR": "Cristal terni",
+        "itemDE": "Elementneutraler Kristall",
         "icon": 20019,
         "id": 10099
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
+        "itemEN": "Dark Matter Cluster",
+        "itemJA": "ダークマタークラスター",
+        "itemFR": "Agrégat de matière sombre",
+        "itemDE": "Dunkelmaterie",
         "icon": 20407,
         "id": 10335
       }
@@ -343,22 +479,38 @@
     "func": "node",
     "items": [
       {
-        "item": "Honey Lemon",
+        "item": "蜜柠檬",
+        "itemEN": "Honey Lemon",
+        "itemJA": "ハニーレモン",
+        "itemFR": "Citron miel",
+        "itemDE": "Honigzitrone",
         "icon": 25305,
         "id": 6147
       },
       {
-        "item": "Honey Lemon Seeds",
+        "item": "蜜柠檬种子",
+        "itemEN": "Honey Lemon Seeds",
+        "itemJA": "ハニーレモンの種",
+        "itemFR": "Graines de citronnier miel",
+        "itemDE": "Honigzitronenkerne",
         "icon": 27457,
         "id": 7733
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
+        "itemEN": "Unaspected Crystal",
+        "itemJA": "無属性クリスタル",
+        "itemFR": "Cristal terni",
+        "itemDE": "Elementneutraler Kristall",
         "icon": 20019,
         "id": 10099
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
+        "itemEN": "Dark Matter Cluster",
+        "itemJA": "ダークマタークラスター",
+        "itemFR": "Agrégat de matière sombre",
+        "itemDE": "Dunkelmaterie",
         "icon": 20407,
         "id": 10335
       }
@@ -384,22 +536,38 @@
     "func": "node",
     "items": [
       {
-        "item": "Dzemael Tomato",
+        "item": "泽梅尔番茄",
+        "itemEN": "Dzemael Tomato",
+        "itemJA": "ゼーメルトマト",
+        "itemFR": "Tomate Dzemael",
+        "itemDE": "Dzemael-Tomate",
         "icon": 25209,
         "id": 6148
       },
       {
-        "item": "Dzemael Tomato Seeds",
+        "item": "泽梅尔番茄种子",
+        "itemEN": "Dzemael Tomato Seeds",
+        "itemJA": "ゼーメルトマトの種",
+        "itemFR": "Graines de tomate Dzemael",
+        "itemDE": "Dzemael-Tomatensamen",
         "icon": 27455,
         "id": 7724
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
+        "itemEN": "Unaspected Crystal",
+        "itemJA": "無属性クリスタル",
+        "itemFR": "Cristal terni",
+        "itemDE": "Elementneutraler Kristall",
         "icon": 20019,
         "id": 10099
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
+        "itemEN": "Dark Matter Cluster",
+        "itemJA": "ダークマタークラスター",
+        "itemFR": "Agrégat de matière sombre",
+        "itemDE": "Dunkelmaterie",
         "icon": 20407,
         "id": 10335
       }
@@ -425,22 +593,38 @@
     "func": "node",
     "items": [
       {
-        "item": "Black Truffle",
+        "item": "黑松露",
+        "itemEN": "Black Truffle",
+        "itemJA": "ブラックトリュフ",
+        "itemFR": "Truffe noire",
+        "itemDE": "Schwarze Trüffel",
         "icon": 25403,
         "id": 4800
       },
       {
-        "item": "Mazlaya Greens",
+        "item": "马兹拉雅草",
+        "itemEN": "Mazlaya Greens",
+        "itemJA": "マズラヤの野草",
+        "itemFR": "Herbes de Mazlaya",
+        "itemDE": "Mazlaya-Sprossen",
         "icon": 25016,
         "id": 10098
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
+        "itemEN": "Unaspected Crystal",
+        "itemJA": "無属性クリスタル",
+        "itemFR": "Cristal terni",
+        "itemDE": "Elementneutraler Kristall",
         "icon": 20019,
         "id": 10099
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
+        "itemEN": "Dark Matter Cluster",
+        "itemJA": "ダークマタークラスター",
+        "itemFR": "Agrégat de matière sombre",
+        "itemDE": "Dunkelmaterie",
         "icon": 20407,
         "id": 10335
       }
@@ -466,22 +650,38 @@
     "func": "node",
     "items": [
       {
-        "item": "Darksteel Ore",
+        "item": "玄铁矿",
+        "itemEN": "Darksteel Ore",
+        "itemJA": "闇鉄鉱",
+        "itemFR": "Minerai de sombracier",
+        "itemDE": "Dunkelstahlerz",
         "icon": 21205,
         "id": 5121
       },
       {
-        "item": "Gregarious Worm",
+        "item": "群居蠕虫",
+        "itemEN": "Gregarious Worm",
+        "itemJA": "グレガリアスワーム",
+        "itemFR": "Ver grégaire",
+        "itemDE": "Herdenwurm",
         "icon": 27019,
         "id": 10095
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
+        "itemEN": "Unaspected Crystal",
+        "itemJA": "無属性クリスタル",
+        "itemFR": "Cristal terni",
+        "itemDE": "Elementneutraler Kristall",
         "icon": 20019,
         "id": 10099
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
+        "itemEN": "Dark Matter Cluster",
+        "itemJA": "ダークマタークラスター",
+        "itemFR": "Agrégat de matière sombre",
+        "itemDE": "Dunkelmaterie",
         "icon": 20407,
         "id": 10335
       }
@@ -507,27 +707,47 @@
     "func": "node",
     "items": [
       {
-        "item": "Gold Ore",
+        "item": "金矿",
+        "itemEN": "Gold Ore",
+        "itemJA": "金鉱",
+        "itemFR": "Minerai d'or",
+        "itemDE": "Golderz",
         "icon": 21212,
         "id": 5118
       },
       {
-        "item": "Coblyn Larva",
+        "item": "矿爬虫虫",
+        "itemEN": "Coblyn Larva",
+        "itemJA": "コブランラーヴァ",
+        "itemFR": "Larve de coblyn",
+        "itemDE": "Kobalos-Larve",
         "icon": 59433,
         "id": 6199
       },
       {
-        "item": "Gregarious Worm",
+        "item": "群居蠕虫",
+        "itemEN": "Gregarious Worm",
+        "itemJA": "グレガリアスワーム",
+        "itemFR": "Ver grégaire",
+        "itemDE": "Herdenwurm",
         "icon": 27019,
         "id": 10095
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
+        "itemEN": "Unaspected Crystal",
+        "itemJA": "無属性クリスタル",
+        "itemFR": "Cristal terni",
+        "itemDE": "Elementneutraler Kristall",
         "icon": 20019,
         "id": 10099
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
+        "itemEN": "Dark Matter Cluster",
+        "itemJA": "ダークマタークラスター",
+        "itemFR": "Agrégat de matière sombre",
+        "itemDE": "Dunkelmaterie",
         "icon": 20407,
         "id": 10335
       }
@@ -553,17 +773,29 @@
     "func": "node",
     "items": [
       {
-        "item": "Volcanic Rock Salt",
+        "item": "拉诺西亚岩盐",
+        "itemEN": "Volcanic Rock Salt",
+        "itemJA": "ラノシア岩塩",
+        "itemFR": "Sel gemme noscéen",
+        "itemDE": "Vulkanisches Steinsalz",
         "icon": 22617,
         "id": 6152
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
+        "itemEN": "Unaspected Crystal",
+        "itemJA": "無属性クリスタル",
+        "itemFR": "Cristal terni",
+        "itemDE": "Elementneutraler Kristall",
         "icon": 20019,
         "id": 10099
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
+        "itemEN": "Dark Matter Cluster",
+        "itemJA": "ダークマタークラスター",
+        "itemFR": "Agrégat de matière sombre",
+        "itemDE": "Dunkelmaterie",
         "icon": 20407,
         "id": 10335
       }
@@ -589,17 +821,29 @@
     "func": "node",
     "items": [
       {
-        "item": "Astral Rock",
+        "item": "星性岩",
+        "itemEN": "Astral Rock",
+        "itemJA": "星性岩",
+        "itemFR": "Roche astrale",
+        "itemDE": "Astralgestein",
         "icon": 21251,
         "id": 5158
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
+        "itemEN": "Unaspected Crystal",
+        "itemJA": "無属性クリスタル",
+        "itemFR": "Cristal terni",
+        "itemDE": "Elementneutraler Kristall",
         "icon": 20019,
         "id": 10099
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
+        "itemEN": "Dark Matter Cluster",
+        "itemJA": "ダークマタークラスター",
+        "itemFR": "Agrégat de matière sombre",
+        "itemDE": "Dunkelmaterie",
         "icon": 20407,
         "id": 10335
       }
@@ -625,17 +869,29 @@
     "func": "node",
     "items": [
       {
-        "item": "Gold Sand",
+        "item": "金沙",
+        "itemEN": "Gold Sand",
+        "itemJA": "金砂",
+        "itemFR": "Sable d'or",
+        "itemDE": "Goldsand",
         "icon": 21214,
         "id": 5273
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
+        "itemEN": "Unaspected Crystal",
+        "itemJA": "無属性クリスタル",
+        "itemFR": "Cristal terni",
+        "itemDE": "Elementneutraler Kristall",
         "icon": 20019,
         "id": 10099
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
+        "itemEN": "Dark Matter Cluster",
+        "itemJA": "ダークマタークラスター",
+        "itemFR": "Agrégat de matière sombre",
+        "itemDE": "Dunkelmaterie",
         "icon": 20407,
         "id": 10335
       }
@@ -661,42 +917,74 @@
     "func": "node",
     "items": [
       {
-        "item": "Fire Cluster",
+        "item": "火之晶簇",
+        "itemEN": "Fire Cluster",
+        "itemJA": "ファイアクラスター",
+        "itemFR": "Agrégat de feu",
+        "itemDE": "Feuerpolykristall",
         "icon": 20013,
         "id": 14
       },
       {
-        "item": "Ice Cluster",
+        "item": "冰之晶簇",
+        "itemEN": "Ice Cluster",
+        "itemJA": "アイスクラスター",
+        "itemFR": "Agrégat de glace",
+        "itemDE": "Eispolykristall",
         "icon": 20015,
         "id": 15
       },
       {
-        "item": "Wind Cluster",
+        "item": "风之晶簇",
+        "itemEN": "Wind Cluster",
+        "itemJA": "ウィンドクラスター",
+        "itemFR": "Agrégat de vent",
+        "itemDE": "Windpolykristall",
         "icon": 20016,
         "id": 16
       },
       {
-        "item": "Earth Cluster",
+        "item": "土之晶簇",
+        "itemEN": "Earth Cluster",
+        "itemJA": "アースクラスター",
+        "itemFR": "Agrégat de terre",
+        "itemDE": "Erdpolykristall",
         "icon": 20018,
         "id": 17
       },
       {
-        "item": "Lightning Cluster",
+        "item": "雷之晶簇",
+        "itemEN": "Lightning Cluster",
+        "itemJA": "ライトニングクラスター",
+        "itemFR": "Agrégat de foudre",
+        "itemDE": "Blitzpolykristall",
         "icon": 20017,
         "id": 18
       },
       {
-        "item": "Water Cluster",
+        "item": "水之晶簇",
+        "itemEN": "Water Cluster",
+        "itemJA": "ウォータークラスター",
+        "itemFR": "Agrégat d'eau",
+        "itemDE": "Wasserpolykristall",
         "icon": 20014,
         "id": 19
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
+        "itemEN": "Unaspected Crystal",
+        "itemJA": "無属性クリスタル",
+        "itemFR": "Cristal terni",
+        "itemDE": "Elementneutraler Kristall",
         "icon": 20019,
         "id": 10099
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
+        "itemEN": "Dark Matter Cluster",
+        "itemJA": "ダークマタークラスター",
+        "itemFR": "Agrégat de matière sombre",
+        "itemDE": "Dunkelmaterie",
         "icon": 20407,
         "id": 10335
       }
@@ -723,17 +1011,29 @@
     "func": "node",
     "items": [
       {
-        "item": "Scarlet Sap",
+        "item": "绯红树汁",
+        "itemEN": "Scarlet Sap",
+        "itemJA": "緋樹液",
+        "itemFR": "Sève écarlate",
+        "itemDE": "Rotharz",
         "icon": 22601,
         "id": 7590
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
+        "itemEN": "Unaspected Crystal",
+        "itemJA": "無属性クリスタル",
+        "itemFR": "Cristal terni",
+        "itemDE": "Elementneutraler Kristall",
         "icon": 20019,
         "id": 10099
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
+        "itemEN": "Dark Matter Cluster",
+        "itemJA": "ダークマタークラスター",
+        "itemFR": "Agrégat de matière sombre",
+        "itemDE": "Dunkelmaterie",
         "icon": 20407,
         "id": 10335
       }
@@ -759,17 +1059,29 @@
     "func": "node",
     "items": [
       {
-        "item": "Apricot",
+        "item": "黄杏",
+        "itemEN": "Apricot",
+        "itemJA": "アプリコット",
+        "itemFR": "Abricot",
+        "itemDE": "Aprikose",
         "icon": 25317,
         "id": 7592
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
+        "itemEN": "Unaspected Crystal",
+        "itemJA": "無属性クリスタル",
+        "itemFR": "Cristal terni",
+        "itemDE": "Elementneutraler Kristall",
         "icon": 20019,
         "id": 10099
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
+        "itemEN": "Dark Matter Cluster",
+        "itemJA": "ダークマタークラスター",
+        "itemFR": "Agrégat de matière sombre",
+        "itemDE": "Dunkelmaterie",
         "icon": 20407,
         "id": 10335
       }
@@ -795,22 +1107,38 @@
     "func": "node",
     "items": [
       {
-        "item": "Blood Orange",
+        "item": "鲜血橙",
+        "itemEN": "Blood Orange",
+        "itemJA": "ブラッドオレンジ",
+        "itemFR": "Orange sanguine",
+        "itemDE": "Blutorange",
         "icon": 25312,
         "id": 7595
       },
       {
-        "item": "Bamboo Stick",
+        "item": "竹材",
+        "itemEN": "Bamboo Stick",
+        "itemJA": "バンブー材",
+        "itemFR": "Tige de bambou",
+        "itemDE": "Bambus-Bauholz",
         "icon": 22451,
         "id": 5365
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
+        "itemEN": "Unaspected Crystal",
+        "itemJA": "無属性クリスタル",
+        "itemFR": "Cristal terni",
+        "itemDE": "Elementneutraler Kristall",
         "icon": 20019,
         "id": 10099
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
+        "itemEN": "Dark Matter Cluster",
+        "itemJA": "ダークマタークラスター",
+        "itemFR": "Agrégat de matière sombre",
+        "itemDE": "Dunkelmaterie",
         "icon": 20407,
         "id": 10335
       }
@@ -836,22 +1164,38 @@
     "func": "node",
     "items": [
       {
-        "item": "Shroud Tea Leaves",
+        "item": "提诺尔卡茶叶",
+        "itemEN": "Shroud Tea Leaves",
+        "itemJA": "ティノルカ茶葉",
+        "itemFR": "Feuilles de thé de Tinolqa",
+        "itemDE": "Gridanische Teeblätter",
         "icon": 25020,
         "id": 7591
       },
       {
-        "item": "Mazlaya Greens",
+        "item": "马兹拉雅草",
+        "itemEN": "Mazlaya Greens",
+        "itemJA": "マズラヤの野草",
+        "itemFR": "Herbes de Mazlaya",
+        "itemDE": "Mazlaya-Sprossen",
         "icon": 25016,
         "id": 10098
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
+        "itemEN": "Unaspected Crystal",
+        "itemJA": "無属性クリスタル",
+        "itemFR": "Cristal terni",
+        "itemDE": "Elementneutraler Kristall",
         "icon": 20019,
         "id": 10099
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
+        "itemEN": "Dark Matter Cluster",
+        "itemJA": "ダークマタークラスター",
+        "itemFR": "Agrégat de matière sombre",
+        "itemDE": "Dunkelmaterie",
         "icon": 20407,
         "id": 10335
       }
@@ -877,27 +1221,47 @@
     "func": "node",
     "items": [
       {
-        "item": "La Noscean Leek",
+        "item": "拉诺西亚韭菜",
+        "itemEN": "La Noscean Leek",
+        "itemJA": "ラノシアリーキ",
+        "itemFR": "Poireau noscéen",
+        "itemDE": "La Noscea-Porree",
         "icon": 25216,
         "id": 7593
       },
       {
-        "item": "Mazlaya Greens",
+        "item": "马兹拉雅草",
+        "itemEN": "Mazlaya Greens",
+        "itemJA": "マズラヤの野草",
+        "itemFR": "Herbes de Mazlaya",
+        "itemDE": "Mazlaya-Sprossen",
         "icon": 25016,
         "id": 10098
       },
       {
-        "item": "Waterfowl Feather",
+        "item": "水鸟之羽",
+        "itemEN": "Waterfowl Feather",
+        "itemJA": "水鳥の羽根",
+        "itemFR": "Plume de sauvagine",
+        "itemDE": "Wasservogelfeder",
         "icon": 21902,
         "id": 8024
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
+        "itemEN": "Unaspected Crystal",
+        "itemJA": "無属性クリスタル",
+        "itemFR": "Cristal terni",
+        "itemDE": "Elementneutraler Kristall",
         "icon": 20019,
         "id": 10099
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
+        "itemEN": "Dark Matter Cluster",
+        "itemJA": "ダークマタークラスター",
+        "itemFR": "Agrégat de matière sombre",
+        "itemDE": "Dunkelmaterie",
         "icon": 20407,
         "id": 10335
       }
@@ -923,22 +1287,38 @@
     "func": "node",
     "items": [
       {
-        "item": "Young Cieldalaes Spinach",
+        "item": "谢尔达莱嫩菠菜",
+        "itemEN": "Young Cieldalaes Spinach",
+        "itemJA": "ソフトスピナッチ",
+        "itemFR": "Jeunes épinards des Cieldalaes",
+        "itemDE": "Junger Cieldaläen-Spinat",
         "icon": 25206,
         "id": 7594
       },
       {
-        "item": "Mazlaya Greens",
+        "item": "马兹拉雅草",
+        "itemEN": "Mazlaya Greens",
+        "itemJA": "マズラヤの野草",
+        "itemFR": "Herbes de Mazlaya",
+        "itemDE": "Mazlaya-Sprossen",
         "icon": 25016,
         "id": 10098
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
+        "itemEN": "Unaspected Crystal",
+        "itemJA": "無属性クリスタル",
+        "itemFR": "Cristal terni",
+        "itemDE": "Elementneutraler Kristall",
         "icon": 20019,
         "id": 10099
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
+        "itemEN": "Dark Matter Cluster",
+        "itemJA": "ダークマタークラスター",
+        "itemFR": "Agrégat de matière sombre",
+        "itemDE": "Dunkelmaterie",
         "icon": 20407,
         "id": 10335
       }
@@ -964,32 +1344,56 @@
     "func": "node",
     "items": [
       {
-        "item": "Ferberite",
+        "item": "钨铁矿",
+        "itemEN": "Ferberite",
+        "itemJA": "鉄重石",
+        "itemFR": "Minerai de ferbérite",
+        "itemDE": "Ferberit",
         "icon": 21203,
         "id": 7588
       },
       {
-        "item": "Raw Iolite",
+        "item": "堇青石原石",
+        "itemEN": "Raw Iolite",
+        "itemJA": "アイオライト原石",
+        "itemFR": "Cordiérite brute",
+        "itemDE": "Roh-Luchssaphir",
         "icon": 21453,
         "id": 5150
       },
       {
-        "item": "Raw Topaz",
+        "item": "黄玉原石",
+        "itemEN": "Raw Topaz",
+        "itemJA": "トパーズ原石",
+        "itemFR": "Topaze brute",
+        "itemDE": "Roh-Topas",
         "icon": 21453,
         "id": 5149
       },
       {
-        "item": "Gregarious Worm",
+        "item": "群居蠕虫",
+        "itemEN": "Gregarious Worm",
+        "itemJA": "グレガリアスワーム",
+        "itemFR": "Ver grégaire",
+        "itemDE": "Herdenwurm",
         "icon": 27019,
         "id": 10095
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
+        "itemEN": "Unaspected Crystal",
+        "itemJA": "無属性クリスタル",
+        "itemFR": "Cristal terni",
+        "itemDE": "Elementneutraler Kristall",
         "icon": 20019,
         "id": 10099
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
+        "itemEN": "Dark Matter Cluster",
+        "itemJA": "ダークマタークラスター",
+        "itemFR": "Agrégat de matière sombre",
+        "itemDE": "Dunkelmaterie",
         "icon": 20407,
         "id": 10335
       }
@@ -1015,32 +1419,56 @@
     "func": "node",
     "items": [
       {
-        "item": "Native Gold",
+        "item": "自然金",
+        "itemEN": "Native Gold",
+        "itemJA": "自然金",
+        "itemFR": "Pépite d'or natif",
+        "itemDE": "Naturgold",
         "icon": 20816,
         "id": 7589
       },
       {
-        "item": "Raw Diamond",
+        "item": "钻石原石",
+        "itemEN": "Raw Diamond",
+        "itemJA": "ダイヤモンド原石",
+        "itemFR": "Diamant brut",
+        "itemDE": "Roh-Diamant",
         "icon": 21453,
         "id": 5147
       },
       {
-        "item": "Raw Emerald",
+        "item": "祖母绿原石",
+        "itemEN": "Raw Emerald",
+        "itemJA": "エメラルド原石",
+        "itemFR": "Émeraude brute",
+        "itemDE": "Roh-Smaragd",
         "icon": 21453,
         "id": 5148
       },
       {
-        "item": "Gregarious Worm",
+        "item": "群居蠕虫",
+        "itemEN": "Gregarious Worm",
+        "itemJA": "グレガリアスワーム",
+        "itemFR": "Ver grégaire",
+        "itemDE": "Herdenwurm",
         "icon": 27019,
         "id": 10095
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
+        "itemEN": "Unaspected Crystal",
+        "itemJA": "無属性クリスタル",
+        "itemFR": "Cristal terni",
+        "itemDE": "Elementneutraler Kristall",
         "icon": 20019,
         "id": 10099
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
+        "itemEN": "Dark Matter Cluster",
+        "itemJA": "ダークマタークラスター",
+        "itemFR": "Agrégat de matière sombre",
+        "itemDE": "Dunkelmaterie",
         "icon": 20407,
         "id": 10335
       }
@@ -1066,27 +1494,47 @@
     "func": "node",
     "items": [
       {
-        "item": "Raw Ruby",
+        "item": "红宝石原石",
+        "itemEN": "Raw Ruby",
+        "itemJA": "ルビー原石",
+        "itemFR": "Rubis brut",
+        "itemDE": "Roh-Rubin",
         "icon": 21453,
         "id": 5146
       },
       {
-        "item": "Raw Sapphire",
+        "item": "蓝宝石原石",
+        "itemEN": "Raw Sapphire",
+        "itemJA": "サファイア原石",
+        "itemFR": "Saphir brut",
+        "itemDE": "Roh-Saphir",
         "icon": 21453,
         "id": 5151
       },
       {
-        "item": "Gregarious Worm",
+        "item": "群居蠕虫",
+        "itemEN": "Gregarious Worm",
+        "itemJA": "グレガリアスワーム",
+        "itemFR": "Ver grégaire",
+        "itemDE": "Herdenwurm",
         "icon": 27019,
         "id": 10095
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
+        "itemEN": "Unaspected Crystal",
+        "itemJA": "無属性クリスタル",
+        "itemFR": "Cristal terni",
+        "itemDE": "Elementneutraler Kristall",
         "icon": 20019,
         "id": 10099
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
+        "itemEN": "Dark Matter Cluster",
+        "itemJA": "ダークマタークラスター",
+        "itemFR": "Agrégat de matière sombre",
+        "itemDE": "Dunkelmaterie",
         "icon": 20407,
         "id": 10335
       }
@@ -1112,22 +1560,38 @@
     "func": "node",
     "items": [
       {
-        "item": "Grade 3 La Noscean Topsoil",
+        "item": "3级拉诺西亚土壤",
+        "itemEN": "Grade 3 La Noscean Topsoil",
+        "itemJA": "ラノシアンソイルG3",
+        "itemFR": "Terreau noscéen III",
+        "itemDE": "La Noscea-Humus III",
         "icon": 27403,
         "id": 7760
       },
       {
-        "item": "Fire Cluster",
+        "item": "火之晶簇",
+        "itemEN": "Fire Cluster",
+        "itemJA": "ファイアクラスター",
+        "itemFR": "Agrégat de feu",
+        "itemDE": "Feuerpolykristall",
         "icon": 20013,
         "id": 14
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
+        "itemEN": "Unaspected Crystal",
+        "itemJA": "無属性クリスタル",
+        "itemFR": "Cristal terni",
+        "itemDE": "Elementneutraler Kristall",
         "icon": 20019,
         "id": 10099
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
+        "itemEN": "Dark Matter Cluster",
+        "itemJA": "ダークマタークラスター",
+        "itemFR": "Agrégat de matière sombre",
+        "itemDE": "Dunkelmaterie",
         "icon": 20407,
         "id": 10335
       }
@@ -1153,22 +1617,38 @@
     "func": "node",
     "items": [
       {
-        "item": "Grade 3 Shroud Topsoil",
+        "item": "3级黑衣森林土壤",
+        "itemEN": "Grade 3 Shroud Topsoil",
+        "itemJA": "シュラウドソイルG3",
+        "itemFR": "Terreau sombrelinçois III",
+        "itemDE": "Finsterwald-Humus III",
         "icon": 27406,
         "id": 7763
       },
       {
-        "item": "Umbral Rock",
+        "item": "灵性岩",
+        "itemEN": "Umbral Rock",
+        "itemJA": "霊性岩",
+        "itemFR": "Roche ombrale",
+        "itemDE": "Schattenfels",
         "icon": 21213,
         "id": 7610
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
+        "itemEN": "Unaspected Crystal",
+        "itemJA": "無属性クリスタル",
+        "itemFR": "Cristal terni",
+        "itemDE": "Elementneutraler Kristall",
         "icon": 20019,
         "id": 10099
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
+        "itemEN": "Dark Matter Cluster",
+        "itemJA": "ダークマタークラスター",
+        "itemFR": "Agrégat de matière sombre",
+        "itemDE": "Dunkelmaterie",
         "icon": 20407,
         "id": 10335
       }
@@ -1194,22 +1674,38 @@
     "func": "node",
     "items": [
       {
-        "item": "Grade 3 Thanalan Topsoil",
+        "item": "3级萨纳兰土壤",
+        "itemEN": "Grade 3 Thanalan Topsoil",
+        "itemJA": "ザナラーンソイルG3",
+        "itemFR": "Terreau thanalanais III",
+        "itemDE": "Thanalan-Humus III",
         "icon": 27409,
         "id": 7766
       },
       {
-        "item": "Water Cluster",
+        "item": "水之晶簇",
+        "itemEN": "Water Cluster",
+        "itemJA": "ウォータークラスター",
+        "itemFR": "Agrégat d'eau",
+        "itemDE": "Wasserpolykristall",
         "icon": 20014,
         "id": 19
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
+        "itemEN": "Unaspected Crystal",
+        "itemJA": "無属性クリスタル",
+        "itemFR": "Cristal terni",
+        "itemDE": "Elementneutraler Kristall",
         "icon": 20019,
         "id": 10099
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
+        "itemEN": "Dark Matter Cluster",
+        "itemJA": "ダークマタークラスター",
+        "itemFR": "Agrégat de matière sombre",
+        "itemDE": "Dunkelmaterie",
         "icon": 20407,
         "id": 10335
       }
@@ -1235,17 +1731,29 @@
     "func": "node",
     "items": [
       {
-        "item": "Fragrant Log",
+        "item": "黑衣香木",
+        "itemEN": "Fragrant Log",
+        "itemJA": "黒衣香木",
+        "itemFR": "Rondin odorant",
+        "itemDE": "Duftholz",
         "icon": 22415,
         "id": 7611
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
+        "itemEN": "Unaspected Crystal",
+        "itemJA": "無属性クリスタル",
+        "itemFR": "Cristal terni",
+        "itemDE": "Elementneutraler Kristall",
         "icon": 20019,
         "id": 10099
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
+        "itemEN": "Dark Matter Cluster",
+        "itemJA": "ダークマタークラスター",
+        "itemFR": "Agrégat de matière sombre",
+        "itemDE": "Dunkelmaterie",
         "icon": 20407,
         "id": 10335
       }
@@ -1271,17 +1779,29 @@
     "func": "node",
     "items": [
       {
-        "item": "Redolent Log",
+        "item": "高级黑衣香木",
+        "itemEN": "Redolent Log",
+        "itemJA": "高級黒衣香木",
+        "itemFR": "Rondin fragrant",
+        "itemDE": "Edelduftholz",
         "icon": 22415,
         "id": 8031
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
+        "itemEN": "Unaspected Crystal",
+        "itemJA": "無属性クリスタル",
+        "itemFR": "Cristal terni",
+        "itemDE": "Elementneutraler Kristall",
         "icon": 20019,
         "id": 10099
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
+        "itemEN": "Dark Matter Cluster",
+        "itemJA": "ダークマタークラスター",
+        "itemFR": "Agrégat de matière sombre",
+        "itemDE": "Dunkelmaterie",
         "icon": 20407,
         "id": 10335
       }
@@ -1307,7 +1827,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Antumbral Rock",
+        "item": "强灵性岩",
+        "itemEN": "Antumbral Rock",
+        "itemJA": "強霊性岩",
+        "itemFR": "Roche antéombrale",
+        "itemDE": "Schlagschattenfels",
         "icon": 21213,
         "id": 8030
       }
@@ -1333,22 +1857,38 @@
     "func": "node",
     "items": [
       {
-        "item": "Platinum Ore",
+        "item": "白金矿",
+        "itemEN": "Platinum Ore",
+        "itemJA": "白金鉱",
+        "itemFR": "Minerai de platine",
+        "itemDE": "Platinerz",
         "icon": 21213,
         "id": 5120
       },
       {
-        "item": "Gregarious Worm",
+        "item": "群居蠕虫",
+        "itemEN": "Gregarious Worm",
+        "itemJA": "グレガリアスワーム",
+        "itemFR": "Ver grégaire",
+        "itemDE": "Herdenwurm",
         "icon": 27019,
         "id": 10095
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
+        "itemEN": "Unaspected Crystal",
+        "itemJA": "無属性クリスタル",
+        "itemFR": "Cristal terni",
+        "itemDE": "Elementneutraler Kristall",
         "icon": 20019,
         "id": 10099
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
+        "itemEN": "Dark Matter Cluster",
+        "itemJA": "ダークマタークラスター",
+        "itemFR": "Agrégat de matière sombre",
+        "itemDE": "Dunkelmaterie",
         "icon": 20407,
         "id": 10335
       }
@@ -1374,17 +1914,29 @@
     "func": "node",
     "items": [
       {
-        "item": "Ebony Log",
+        "item": "黑檀原木",
+        "itemEN": "Ebony Log",
+        "itemJA": "エボニー原木",
+        "itemFR": "Rondin d'ébène",
+        "itemDE": "Ebenholz-Holzscheit",
         "icon": 22402,
         "id": 5394
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
+        "itemEN": "Unaspected Crystal",
+        "itemJA": "無属性クリスタル",
+        "itemFR": "Cristal terni",
+        "itemDE": "Elementneutraler Kristall",
         "icon": 20019,
         "id": 10099
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
+        "itemEN": "Dark Matter Cluster",
+        "itemJA": "ダークマタークラスター",
+        "itemFR": "Agrégat de matière sombre",
+        "itemDE": "Dunkelmaterie",
         "icon": 20407,
         "id": 10335
       }
@@ -1410,17 +1962,29 @@
     "func": "node",
     "items": [
       {
-        "item": "Cypress Log",
+        "item": "丝柏原木",
+        "itemEN": "Cypress Log",
+        "itemJA": "サイプレス原木",
+        "itemFR": "Rondin de cyprès",
+        "itemDE": "Zypressen-Bauholz",
         "icon": 22415,
         "id": 9518
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
+        "itemEN": "Unaspected Crystal",
+        "itemJA": "無属性クリスタル",
+        "itemFR": "Cristal terni",
+        "itemDE": "Elementneutraler Kristall",
         "icon": 20019,
         "id": 10099
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
+        "itemEN": "Dark Matter Cluster",
+        "itemJA": "ダークマタークラスター",
+        "itemFR": "Agrégat de matière sombre",
+        "itemDE": "Dunkelmaterie",
         "icon": 20407,
         "id": 10335
       }
@@ -1446,7 +2010,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Pumice",
+        "item": "浮石",
+        "itemEN": "Pumice",
+        "itemJA": "パミスストーン",
+        "itemFR": "Pierre ponce",
+        "itemDE": "Bimsstein",
         "icon": 21454,
         "id": 9519
       }
@@ -1472,12 +2040,20 @@
     "func": "node",
     "items": [
       {
-        "item": "Rosemary",
+        "item": "迷迭香",
+        "itemEN": "Rosemary",
+        "itemJA": "ローズマリー",
+        "itemFR": "Romarin",
+        "itemDE": "Rosmarin",
         "icon": 25002,
         "id": 10096
       },
       {
-        "item": "Mazlaya Greens",
+        "item": "马兹拉雅草",
+        "itemEN": "Mazlaya Greens",
+        "itemJA": "マズラヤの野草",
+        "itemFR": "Herbes de Mazlaya",
+        "itemDE": "Mazlaya-Sprossen",
         "icon": 25016,
         "id": 10098
       }
@@ -1503,22 +2079,38 @@
     "func": "node",
     "items": [
       {
-        "item": "Virgin Basilisk Egg",
+        "item": "石蜥蜴的初蛋",
+        "itemEN": "Virgin Basilisk Egg",
+        "itemJA": "バジリスクの初卵",
+        "itemFR": "Premier œuf de basilic",
+        "itemDE": "Erstgelegtes Basilisken-Ei",
         "icon": 21215,
         "id": 10093
       },
       {
-        "item": "Gregarious Worm",
+        "item": "群居蠕虫",
+        "itemEN": "Gregarious Worm",
+        "itemJA": "グレガリアスワーム",
+        "itemFR": "Ver grégaire",
+        "itemDE": "Herdenwurm",
         "icon": 27019,
         "id": 10095
       },
       {
-        "item": "Unaspected Crystal",
+        "item": "无属性水晶",
+        "itemEN": "Unaspected Crystal",
+        "itemJA": "無属性クリスタル",
+        "itemFR": "Cristal terni",
+        "itemDE": "Elementneutraler Kristall",
         "icon": 20019,
         "id": 10099
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
+        "itemEN": "Dark Matter Cluster",
+        "itemJA": "ダークマタークラスター",
+        "itemFR": "Agrégat de matière sombre",
+        "itemDE": "Dunkelmaterie",
         "icon": 20407,
         "id": 10335
       }
@@ -1544,7 +2136,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Lightning Moraine",
+        "item": "雷砂砾",
+        "itemEN": "Lightning Moraine",
+        "itemJA": "ライトニンググラベル",
+        "itemFR": "Granulat de foudre",
+        "itemDE": "Blitzkies",
         "icon": 21461,
         "id": 5218,
         "reduce": {
@@ -1553,7 +2149,11 @@
         }
       },
       {
-        "item": "Radiant Astral Moraine",
+        "item": "星光砾",
+        "itemEN": "Radiant Astral Moraine",
+        "itemJA": "レイディアントアストラルグラベル",
+        "itemFR": "Granulat astral rayonnant",
+        "itemDE": "Strahlender Astralkies",
         "icon": 21463,
         "id": 15949,
         "reduce": {
@@ -1562,7 +2162,11 @@
         }
       },
       {
-        "item": "Radiant Lightning Moraine",
+        "item": "雷光砾",
+        "itemEN": "Radiant Lightning Moraine",
+        "itemJA": "レイディアントライトニンググラベル",
+        "itemFR": "Granulat de foudre flamboyant",
+        "itemDE": "Strahlender Blitzkies",
         "icon": 21461,
         "id": 5224,
         "reduce": {
@@ -1571,7 +2175,11 @@
         }
       },
       {
-        "item": "Bright Lightning Rock",
+        "item": "强雷性岩",
+        "itemEN": "Bright Lightning Rock",
+        "itemJA": "強雷性岩",
+        "itemFR": "Pierre de foudre intense",
+        "itemDE": "Leuchtender Blitzgesteinsbrocken",
         "icon": 21475,
         "id": 12967,
         "reduce": {
@@ -1580,12 +2188,20 @@
         }
       },
       {
-        "item": "Lightning Crystal",
+        "item": "雷之水晶",
+        "itemEN": "Lightning Crystal",
+        "itemJA": "ライトニングクリスタル",
+        "itemFR": "Cristal de foudre",
+        "itemDE": "Blitzkristall",
         "icon": 20011,
         "id": 12
       },
       {
-        "item": "Lightning Cluster",
+        "item": "雷之晶簇",
+        "itemEN": "Lightning Cluster",
+        "itemJA": "ライトニングクラスター",
+        "itemFR": "Agrégat de foudre",
+        "itemDE": "Blitzpolykristall",
         "icon": 20017,
         "id": 18
       }
@@ -1611,19 +2227,31 @@
     "func": "node",
     "items": [
       {
-        "item": "Rarefied Pyrite",
+        "item": "收藏用黄铁矿",
+        "itemEN": "Rarefied Pyrite",
+        "itemJA": "収集用の黄鉄鉱",
+        "itemFR": "Minerai de pyrite collectionnable",
+        "itemDE": "Pyrit (Sammlerstück)",
         "icon": 21207,
         "id": 32970,
         "scrip": "大地黄票"
       },
       {
-        "item": "Rarefied Chalcocite",
+        "item": "收藏用辉铜矿",
+        "itemEN": "Rarefied Chalcocite",
+        "itemJA": "収集用の輝銅鉱",
+        "itemFR": "Minerai de chalcocite collectionnable",
+        "itemDE": "Chalkosin (Sammlerstück)",
         "icon": 21209,
         "id": 32971,
         "scrip": "大地黄票"
       },
       {
-        "item": "Rarefied Limonite",
+        "item": "收藏用褐铁矿",
+        "itemEN": "Rarefied Limonite",
+        "itemJA": "収集用の褐鉄鉱",
+        "itemFR": "Minerai de limonite collectionnable",
+        "itemDE": "Braun<SoftHyphen/>ei<SoftHyphen/>sen<SoftHyphen/>stein (Sammlerstück)",
         "icon": 21206,
         "id": 32972,
         "scrip": "大地黄票"
@@ -1650,13 +2278,21 @@
     "func": "node",
     "items": [
       {
-        "item": "Rarefied Abalathian Spring Water",
+        "item": "收藏用阿巴拉提亚天然水",
+        "itemEN": "Rarefied Abalathian Spring Water",
+        "itemJA": "収集用のアバラシア天然水",
+        "itemFR": "Eau de source d'Abalathia collectionnable",
+        "itemDE": "Abalathisches Quellwasser (Sammlerstück)",
         "icon": 22614,
         "id": 32973,
         "scrip": "大地黄票"
       },
       {
-        "item": "Rarefied Aurum Regis Sand",
+        "item": "收藏用皇金沙",
+        "itemEN": "Rarefied Aurum Regis Sand",
+        "itemJA": "収集用の皇金砂",
+        "itemFR": "Sable d'aurum regis collectionnable",
+        "itemDE": "Königsgold-Sandklumpen (Sammlerstück)",
         "icon": 21220,
         "id": 32974,
         "scrip": "大地黄票"
@@ -1683,13 +2319,21 @@
     "func": "node",
     "items": [
       {
-        "item": "Rarefied Raw Triphane",
+        "item": "收藏用锂辉石原石",
+        "itemEN": "Rarefied Raw Triphane",
+        "itemJA": "収集用のトリフェーン原石",
+        "itemFR": "Triphane brute collectionnable",
+        "itemDE": "Roh-Triphan (Sammlerstück)",
         "icon": 21474,
         "id": 32975,
         "scrip": "大地黄票"
       },
       {
-        "item": "Rarefied Raw Kyanite",
+        "item": "收藏用蓝晶石原石",
+        "itemEN": "Rarefied Raw Kyanite",
+        "itemJA": "収集用のカイヤナイト原石",
+        "itemFR": "Disthène brut collectionnable",
+        "itemDE": "Roh-Kyanit (Sammlerstück)",
         "icon": 21472,
         "id": 32977,
         "scrip": "大地黄票"
@@ -1716,7 +2360,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Fire Moraine",
+        "item": "火砂砾",
+        "itemEN": "Fire Moraine",
+        "itemJA": "ファイアグラベル",
+        "itemFR": "Granulat de feu",
+        "itemDE": "Feuerkies",
         "icon": 21456,
         "id": 5214,
         "reduce": {
@@ -1725,7 +2373,11 @@
         }
       },
       {
-        "item": "Radiant Astral Moraine",
+        "item": "星光砾",
+        "itemEN": "Radiant Astral Moraine",
+        "itemJA": "レイディアントアストラルグラベル",
+        "itemFR": "Granulat astral rayonnant",
+        "itemDE": "Strahlender Astralkies",
         "icon": 21463,
         "id": 15949,
         "reduce": {
@@ -1734,7 +2386,11 @@
         }
       },
       {
-        "item": "Radiant Fire Moraine",
+        "item": "火光砾",
+        "itemEN": "Radiant Fire Moraine",
+        "itemJA": "レイディアントファイアグラベル",
+        "itemFR": "Granulat de feu flamboyant",
+        "itemDE": "Strahlender Feuerkies",
         "icon": 21456,
         "id": 5220,
         "reduce": {
@@ -1743,7 +2399,11 @@
         }
       },
       {
-        "item": "Bright Fire Rock",
+        "item": "强火性岩",
+        "itemEN": "Bright Fire Rock",
+        "itemJA": "強火性岩",
+        "itemFR": "Pierre de feu intense",
+        "itemDE": "Leuchtender Feuergesteinsbrocken",
         "icon": 21471,
         "id": 12966,
         "reduce": {
@@ -1752,12 +2412,20 @@
         }
       },
       {
-        "item": "Fire Crystal",
+        "item": "火之水晶",
+        "itemEN": "Fire Crystal",
+        "itemJA": "ファイアクリスタル",
+        "itemFR": "Cristal de feu",
+        "itemDE": "Feuerkristall",
         "icon": 20007,
         "id": 8
       },
       {
-        "item": "Fire Cluster",
+        "item": "火之晶簇",
+        "itemEN": "Fire Cluster",
+        "itemJA": "ファイアクラスター",
+        "itemFR": "Agrégat de feu",
+        "itemDE": "Feuerpolykristall",
         "icon": 20013,
         "id": 14
       }
@@ -1783,7 +2451,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Rarefied Raw Star Spinel",
+        "item": "收藏用星尖石原石",
+        "itemEN": "Rarefied Raw Star Spinel",
+        "itemJA": "収集用のスタースピネル原石",
+        "itemFR": "Spinelle étoilé brut collectionnable",
+        "itemDE": "Roh-Sternspinell (Sammlerstück)",
         "icon": 21475,
         "id": 32976,
         "scrip": "大地黄票"
@@ -1810,13 +2482,21 @@
     "func": "node",
     "items": [
       {
-        "item": "Rarefied Raw Azurite",
+        "item": "收藏用石青原石",
+        "itemEN": "Rarefied Raw Azurite",
+        "itemJA": "収集用のアズライト原石",
+        "itemFR": "Azurite brute collectionnable",
+        "itemDE": "Roh-Azurit (Sammlerstück)",
         "icon": 21472,
         "id": 32978,
         "scrip": "大地黄票"
       },
       {
-        "item": "Rarefied Silvergrace Ore",
+        "item": "收藏用清银矿",
+        "itemEN": "Rarefied Silvergrace Ore",
+        "itemJA": "収集用の清銀鉱",
+        "itemFR": "Minerai de graçargent collectionnable",
+        "itemDE": "Silbergunsterz (Sammlerstück)",
         "icon": 21213,
         "id": 32979,
         "scrip": "大地黄票"
@@ -1843,13 +2523,21 @@
     "func": "node",
     "items": [
       {
-        "item": "Rarefied Titancopper Ore",
+        "item": "收藏用钛铜矿",
+        "itemEN": "Rarefied Titancopper Ore",
+        "itemJA": "収集用の賢銅鉱",
+        "itemFR": "Minerai de bronze titané collectionnable",
+        "itemDE": "Titanbronze-Erzklumpen (Sammlerstück)",
         "icon": 21202,
         "id": 32980,
         "scrip": "大地黄票"
       },
       {
-        "item": "Rarefied Raw Petalite",
+        "item": "收藏用透锂长石原石",
+        "itemEN": "Rarefied Raw Petalite",
+        "itemJA": "収集用のペタライト原石",
+        "itemFR": "Pétalite brute collectionnable",
+        "itemDE": "Roh-Petalit (Sammlerstück)",
         "icon": 21477,
         "id": 32982,
         "scrip": "大地黄票"
@@ -1876,7 +2564,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Fire Moraine",
+        "item": "火砂砾",
+        "itemEN": "Fire Moraine",
+        "itemJA": "ファイアグラベル",
+        "itemFR": "Granulat de feu",
+        "itemDE": "Feuerkies",
         "icon": 21456,
         "id": 5214,
         "reduce": {
@@ -1885,7 +2577,11 @@
         }
       },
       {
-        "item": "Radiant Astral Moraine",
+        "item": "星光砾",
+        "itemEN": "Radiant Astral Moraine",
+        "itemJA": "レイディアントアストラルグラベル",
+        "itemFR": "Granulat astral rayonnant",
+        "itemDE": "Strahlender Astralkies",
         "icon": 21463,
         "id": 15949,
         "reduce": {
@@ -1894,7 +2590,11 @@
         }
       },
       {
-        "item": "Radiant Fire Moraine",
+        "item": "火光砾",
+        "itemEN": "Radiant Fire Moraine",
+        "itemJA": "レイディアントファイアグラベル",
+        "itemFR": "Granulat de feu flamboyant",
+        "itemDE": "Strahlender Feuerkies",
         "icon": 21456,
         "id": 5220,
         "reduce": {
@@ -1903,7 +2603,11 @@
         }
       },
       {
-        "item": "Bright Fire Rock",
+        "item": "强火性岩",
+        "itemEN": "Bright Fire Rock",
+        "itemJA": "強火性岩",
+        "itemFR": "Pierre de feu intense",
+        "itemDE": "Leuchtender Feuergesteinsbrocken",
         "icon": 21471,
         "id": 12966,
         "reduce": {
@@ -1912,12 +2616,20 @@
         }
       },
       {
-        "item": "Fire Crystal",
+        "item": "火之水晶",
+        "itemEN": "Fire Crystal",
+        "itemJA": "ファイアクリスタル",
+        "itemFR": "Cristal de feu",
+        "itemDE": "Feuerkristall",
         "icon": 20007,
         "id": 8
       },
       {
-        "item": "Fire Cluster",
+        "item": "火之晶簇",
+        "itemEN": "Fire Cluster",
+        "itemJA": "ファイアクラスター",
+        "itemFR": "Agrégat de feu",
+        "itemDE": "Feuerpolykristall",
         "icon": 20013,
         "id": 14
       }
@@ -1943,7 +2655,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Rarefied Raw Lazurite",
+        "item": "收藏用青金石原石",
+        "itemEN": "Rarefied Raw Lazurite",
+        "itemJA": "収集用のラズライト原石",
+        "itemFR": "Lazurite brute collectionnable",
+        "itemDE": "Roh-Lasurit (Sammlerstück)",
         "icon": 21472,
         "id": 32981,
         "scrip": "大地黄票"
@@ -1970,13 +2686,21 @@
     "func": "node",
     "items": [
       {
-        "item": "Rarefied Sea Salt",
+        "item": "收藏用海盐",
+        "itemEN": "Rarefied Sea Salt",
+        "itemJA": "収集用の海塩",
+        "itemFR": "Sel de mer collectionnable",
+        "itemDE": "Meersalzklumpen (Sammlerstück)",
         "icon": 22617,
         "id": 32983,
         "scrip": "大地黄票"
       },
       {
-        "item": "Rarefied Raw Onyx",
+        "item": "收藏用黑玛瑙原石",
+        "itemEN": "Rarefied Raw Onyx",
+        "itemJA": "収集用のオニキス原石",
+        "itemFR": "Onyx brut collectionnable",
+        "itemDE": "Roh-Onyx (Sammlerstück)",
         "icon": 21231,
         "id": 32985,
         "scrip": "大地白票"
@@ -2003,7 +2727,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Fire Moraine",
+        "item": "火砂砾",
+        "itemEN": "Fire Moraine",
+        "itemJA": "ファイアグラベル",
+        "itemFR": "Granulat de feu",
+        "itemDE": "Feuerkies",
         "icon": 21456,
         "id": 5214,
         "reduce": {
@@ -2012,7 +2740,11 @@
         }
       },
       {
-        "item": "Radiant Astral Moraine",
+        "item": "星光砾",
+        "itemEN": "Radiant Astral Moraine",
+        "itemJA": "レイディアントアストラルグラベル",
+        "itemFR": "Granulat astral rayonnant",
+        "itemDE": "Strahlender Astralkies",
         "icon": 21463,
         "id": 15949,
         "reduce": {
@@ -2021,7 +2753,11 @@
         }
       },
       {
-        "item": "Radiant Fire Moraine",
+        "item": "火光砾",
+        "itemEN": "Radiant Fire Moraine",
+        "itemJA": "レイディアントファイアグラベル",
+        "itemFR": "Granulat de feu flamboyant",
+        "itemDE": "Strahlender Feuerkies",
         "icon": 21456,
         "id": 5220,
         "reduce": {
@@ -2030,7 +2766,11 @@
         }
       },
       {
-        "item": "Bright Fire Rock",
+        "item": "强火性岩",
+        "itemEN": "Bright Fire Rock",
+        "itemJA": "強火性岩",
+        "itemFR": "Pierre de feu intense",
+        "itemDE": "Leuchtender Feuergesteinsbrocken",
         "icon": 21471,
         "id": 12966,
         "reduce": {
@@ -2039,12 +2779,20 @@
         }
       },
       {
-        "item": "Fire Crystal",
+        "item": "火之水晶",
+        "itemEN": "Fire Crystal",
+        "itemJA": "ファイアクリスタル",
+        "itemFR": "Cristal de feu",
+        "itemDE": "Feuerkristall",
         "icon": 20007,
         "id": 8
       },
       {
-        "item": "Fire Cluster",
+        "item": "火之晶簇",
+        "itemEN": "Fire Cluster",
+        "itemJA": "ファイアクラスター",
+        "itemFR": "Agrégat de feu",
+        "itemDE": "Feuerpolykristall",
         "icon": 20013,
         "id": 14
       }
@@ -2070,7 +2818,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Lightning Moraine",
+        "item": "雷砂砾",
+        "itemEN": "Lightning Moraine",
+        "itemJA": "ライトニンググラベル",
+        "itemFR": "Granulat de foudre",
+        "itemDE": "Blitzkies",
         "icon": 21461,
         "id": 5218,
         "reduce": {
@@ -2079,7 +2831,11 @@
         }
       },
       {
-        "item": "Radiant Astral Moraine",
+        "item": "星光砾",
+        "itemEN": "Radiant Astral Moraine",
+        "itemJA": "レイディアントアストラルグラベル",
+        "itemFR": "Granulat astral rayonnant",
+        "itemDE": "Strahlender Astralkies",
         "icon": 21463,
         "id": 15949,
         "reduce": {
@@ -2088,7 +2844,11 @@
         }
       },
       {
-        "item": "Radiant Lightning Moraine",
+        "item": "雷光砾",
+        "itemEN": "Radiant Lightning Moraine",
+        "itemJA": "レイディアントライトニンググラベル",
+        "itemFR": "Granulat de foudre flamboyant",
+        "itemDE": "Strahlender Blitzkies",
         "icon": 21461,
         "id": 5224,
         "reduce": {
@@ -2097,7 +2857,11 @@
         }
       },
       {
-        "item": "Bright Lightning Rock",
+        "item": "强雷性岩",
+        "itemEN": "Bright Lightning Rock",
+        "itemJA": "強雷性岩",
+        "itemFR": "Pierre de foudre intense",
+        "itemDE": "Leuchtender Blitzgesteinsbrocken",
         "icon": 21475,
         "id": 12967,
         "reduce": {
@@ -2106,12 +2870,20 @@
         }
       },
       {
-        "item": "Lightning Crystal",
+        "item": "雷之水晶",
+        "itemEN": "Lightning Crystal",
+        "itemJA": "ライトニングクリスタル",
+        "itemFR": "Cristal de foudre",
+        "itemDE": "Blitzkristall",
         "icon": 20011,
         "id": 12
       },
       {
-        "item": "Lightning Cluster",
+        "item": "雷之晶簇",
+        "itemEN": "Lightning Cluster",
+        "itemJA": "ライトニングクラスター",
+        "itemFR": "Agrégat de foudre",
+        "itemDE": "Blitzpolykristall",
         "icon": 20017,
         "id": 18
       }
@@ -2137,12 +2909,20 @@
     "func": "node",
     "items": [
       {
-        "item": "Yellow Copper Ore",
+        "item": "黄铜矿",
+        "itemEN": "Yellow Copper Ore",
+        "itemJA": "黄銅鉱",
+        "itemFR": "Minerai de cuivre jaune",
+        "itemDE": "Kupferkies",
         "icon": 21207,
         "id": 5108
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
+        "itemEN": "Dark Matter Cluster",
+        "itemJA": "ダークマタークラスター",
+        "itemFR": "Agrégat de matière sombre",
+        "itemDE": "Dunkelmaterie",
         "icon": 20407,
         "id": 10335
       }
@@ -2169,17 +2949,29 @@
     "func": "node",
     "items": [
       {
-        "item": "Pyrite",
+        "item": "黄铁矿",
+        "itemEN": "Pyrite",
+        "itemJA": "黄鉄鉱",
+        "itemFR": "Minerai de pyrite",
+        "itemDE": "Schwefelkies",
         "icon": 21207,
         "id": 5109
       },
       {
-        "item": "Limonite",
+        "item": "褐铁矿",
+        "itemEN": "Limonite",
+        "itemJA": "褐鉄鉱",
+        "itemFR": "Minerai de limonite",
+        "itemDE": "Braun<SoftHyphen/>ei<SoftHyphen/>sen<SoftHyphen/>stein",
         "icon": 21206,
         "id": 5112
       },
       {
-        "item": "Chalcocite",
+        "item": "辉铜矿",
+        "itemEN": "Chalcocite",
+        "itemJA": "輝銅鉱",
+        "itemFR": "Minerai de chalcocite",
+        "itemDE": "Chalkosin",
         "icon": 21209,
         "id": 12941
       }
@@ -2205,12 +2997,20 @@
     "func": "node",
     "items": [
       {
-        "item": "Green Quartz",
+        "item": "翠绿石英",
+        "itemEN": "Green Quartz",
+        "itemJA": "グリーンクォーツ",
+        "itemFR": "Quartz vert",
+        "itemDE": "Grüner Quarz",
         "icon": 21459,
         "id": 5161
       },
       {
-        "item": "Yellow Quartz",
+        "item": "土黄石英",
+        "itemEN": "Yellow Quartz",
+        "itemJA": "イエロークォーツ",
+        "itemFR": "Quartz jaune",
+        "itemDE": "Gelber Quarz",
         "icon": 21458,
         "id": 5162
       }
@@ -2236,12 +3036,20 @@
     "func": "node",
     "items": [
       {
-        "item": "Abalathian Rock Salt",
+        "item": "阿巴拉提亚岩盐",
+        "itemEN": "Abalathian Rock Salt",
+        "itemJA": "アバラシア岩塩",
+        "itemFR": "Sel gemme d'Abalathia",
+        "itemDE": "Abalathisches Steinsalz",
         "icon": 22617,
         "id": 12901
       },
       {
-        "item": "Red Quartz",
+        "item": "深绯石英",
+        "itemEN": "Red Quartz",
+        "itemJA": "レッドクォーツ",
+        "itemFR": "Quartz rouge",
+        "itemDE": "Roter Quarz",
         "icon": 21456,
         "id": 5159
       }
@@ -2267,12 +3075,20 @@
     "func": "node",
     "items": [
       {
-        "item": "Light Kidney Ore",
+        "item": "赤铁矿",
+        "itemEN": "Light Kidney Ore",
+        "itemJA": "赤鉄鉱",
+        "itemFR": "Minerai d'hématite",
+        "itemDE": "Hämatit",
         "icon": 21206,
         "id": 5117
       },
       {
-        "item": "Cuprite",
+        "item": "赤铜矿",
+        "itemEN": "Cuprite",
+        "itemJA": "赤銅鉱",
+        "itemFR": "Minerai de cuprite",
+        "itemDE": "Cuprit",
         "icon": 21206,
         "id": 12942
       }
@@ -2298,7 +3114,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Adamantite Ore",
+        "item": "精金矿",
+        "itemEN": "Adamantite Ore",
+        "itemJA": "アダマン鉱",
+        "itemFR": "Minerai d'adamant",
+        "itemDE": "Adamantit-Erz",
         "icon": 21224,
         "id": 12538
       }
@@ -2324,12 +3144,20 @@
     "func": "node",
     "items": [
       {
-        "item": "Astral Moraine",
+        "item": "星砂砾",
+        "itemEN": "Astral Moraine",
+        "itemJA": "アストラルグラベル",
+        "itemFR": "Granulat astral",
+        "itemDE": "Lichtkies",
         "icon": 21463,
         "id": 5226
       },
       {
-        "item": "Violet Quartz",
+        "item": "青紫石英",
+        "itemEN": "Violet Quartz",
+        "itemJA": "バイオレットクォーツ",
+        "itemFR": "Quartz violet",
+        "itemDE": "Violetter Quarz",
         "icon": 21461,
         "id": 5163
       }
@@ -2356,12 +3184,20 @@
     "func": "node",
     "items": [
       {
-        "item": "Aurum Regis Ore",
+        "item": "皇金矿",
+        "itemEN": "Aurum Regis Ore",
+        "itemJA": "皇金鉱",
+        "itemFR": "Minerai d'aurum regis",
+        "itemDE": "Königsgold-Erz",
         "icon": 21225,
         "id": 12536
       },
       {
-        "item": "Lumythrite Ore",
+        "item": "光银矿",
+        "itemEN": "Lumythrite Ore",
+        "itemJA": "光霊銀鉱",
+        "itemFR": "Minerai de lumithrite",
+        "itemDE": "Lumythriterz",
         "icon": 21221,
         "id": 14148
       }
@@ -2388,7 +3224,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Sun Mica",
+        "item": "金云母",
+        "itemEN": "Sun Mica",
+        "itemJA": "金雲母",
+        "itemFR": "Mica doré",
+        "itemDE": "Sonnenglimmer",
         "icon": 21227,
         "id": 12540
       }
@@ -2415,7 +3255,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Blue Quartz",
+        "item": "绀碧石英",
+        "itemEN": "Blue Quartz",
+        "itemJA": "ブルークォーツ",
+        "itemFR": "Quartz bleu",
+        "itemDE": "Blauer Quarz",
         "icon": 21457,
         "id": 5160
       }
@@ -2442,7 +3286,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Red Alumen",
+        "item": "红明矾",
+        "itemEN": "Red Alumen",
+        "itemJA": "レッドアルメン",
+        "itemFR": "Alun rouge",
+        "itemDE": "Rotalaun",
         "icon": 22656,
         "id": 12945
       }
@@ -2469,12 +3317,20 @@
     "func": "node",
     "items": [
       {
-        "item": "Highland Oregano",
+        "item": "牛至",
+        "itemEN": "Highland Oregano",
+        "itemJA": "オレガノ",
+        "itemFR": "Origan",
+        "itemDE": "Hochland-Oregano",
         "icon": 25015,
         "id": 12971
       },
       {
-        "item": "Pot Marjoram",
+        "item": "盆栽墨角兰",
+        "itemEN": "Pot Marjoram",
+        "itemJA": "ポットマジョラム",
+        "itemFR": "Marjolaine potagère",
+        "itemDE": "Östlicher Oregano",
         "icon": 25010,
         "id": 33148,
         "reduce": {
@@ -2483,12 +3339,20 @@
         }
       },
       {
-        "item": "Furymint",
+        "item": "留兰",
+        "itemEN": "Furymint",
+        "itemJA": "スペアミント",
+        "itemFR": "Menthe douce",
+        "itemDE": "Furienminze",
         "icon": 25016,
         "id": 12972
       },
       {
-        "item": "Water Mint",
+        "item": "水薄荷",
+        "itemEN": "Water Mint",
+        "itemJA": "ウォーターミント",
+        "itemFR": "Menthe aquatique",
+        "itemDE": "Wasserminze",
         "icon": 25036,
         "id": 33149,
         "reduce": {
@@ -2497,12 +3361,20 @@
         }
       },
       {
-        "item": "Clary Sage",
+        "item": "鼠尾草",
+        "itemEN": "Clary Sage",
+        "itemJA": "クラリーセージ",
+        "itemFR": "Sauge sclarée",
+        "itemDE": "Muskatellersalbei",
         "icon": 25009,
         "id": 12973
       },
       {
-        "item": "Wild Sage",
+        "item": "野生鼠尾草",
+        "itemEN": "Wild Sage",
+        "itemJA": "ワイルドセージ",
+        "itemFR": "Sauge verveine",
+        "itemDE": "Wilder Salbei",
         "icon": 25034,
         "id": 33150,
         "reduce": {
@@ -2511,7 +3383,11 @@
         }
       },
       {
-        "item": "Lover's Laurel",
+        "item": "梅茵菲娜月桂",
+        "itemEN": "Lover's Laurel",
+        "itemJA": "メネフィナローレル",
+        "itemFR": "Feuille de laurier de Menphina",
+        "itemDE": "Menphina-Lorbeerblätter",
         "icon": 25009,
         "id": 15948,
         "reduce": {
@@ -2520,12 +3396,20 @@
         }
       },
       {
-        "item": "Wind Crystal",
+        "item": "风之水晶",
+        "itemEN": "Wind Crystal",
+        "itemJA": "ウィンドクリスタル",
+        "itemFR": "Cristal de vent",
+        "itemDE": "Windkristall",
         "icon": 20010,
         "id": 10
       },
       {
-        "item": "Wind Cluster",
+        "item": "风之晶簇",
+        "itemEN": "Wind Cluster",
+        "itemJA": "ウィンドクラスター",
+        "itemFR": "Agrégat de vent",
+        "itemDE": "Windpolykristall",
         "icon": 20016,
         "id": 16
       }
@@ -2551,12 +3435,20 @@
     "func": "node",
     "items": [
       {
-        "item": "Highland Oregano",
+        "item": "牛至",
+        "itemEN": "Highland Oregano",
+        "itemJA": "オレガノ",
+        "itemFR": "Origan",
+        "itemDE": "Hochland-Oregano",
         "icon": 25015,
         "id": 12971
       },
       {
-        "item": "Pot Marjoram",
+        "item": "盆栽墨角兰",
+        "itemEN": "Pot Marjoram",
+        "itemJA": "ポットマジョラム",
+        "itemFR": "Marjolaine potagère",
+        "itemDE": "Östlicher Oregano",
         "icon": 25010,
         "id": 33148,
         "reduce": {
@@ -2565,12 +3457,20 @@
         }
       },
       {
-        "item": "Furymint",
+        "item": "留兰",
+        "itemEN": "Furymint",
+        "itemJA": "スペアミント",
+        "itemFR": "Menthe douce",
+        "itemDE": "Furienminze",
         "icon": 25016,
         "id": 12972
       },
       {
-        "item": "Water Mint",
+        "item": "水薄荷",
+        "itemEN": "Water Mint",
+        "itemJA": "ウォーターミント",
+        "itemFR": "Menthe aquatique",
+        "itemDE": "Wasserminze",
         "icon": 25036,
         "id": 33149,
         "reduce": {
@@ -2579,12 +3479,20 @@
         }
       },
       {
-        "item": "Clary Sage",
+        "item": "鼠尾草",
+        "itemEN": "Clary Sage",
+        "itemJA": "クラリーセージ",
+        "itemFR": "Sauge sclarée",
+        "itemDE": "Muskatellersalbei",
         "icon": 25009,
         "id": 12973
       },
       {
-        "item": "Wild Sage",
+        "item": "野生鼠尾草",
+        "itemEN": "Wild Sage",
+        "itemJA": "ワイルドセージ",
+        "itemFR": "Sauge verveine",
+        "itemDE": "Wilder Salbei",
         "icon": 25034,
         "id": 33150,
         "reduce": {
@@ -2593,7 +3501,11 @@
         }
       },
       {
-        "item": "Lover's Laurel",
+        "item": "梅茵菲娜月桂",
+        "itemEN": "Lover's Laurel",
+        "itemJA": "メネフィナローレル",
+        "itemFR": "Feuille de laurier de Menphina",
+        "itemDE": "Menphina-Lorbeerblätter",
         "icon": 25009,
         "id": 15948,
         "reduce": {
@@ -2602,12 +3514,20 @@
         }
       },
       {
-        "item": "Wind Crystal",
+        "item": "风之水晶",
+        "itemEN": "Wind Crystal",
+        "itemJA": "ウィンドクリスタル",
+        "itemFR": "Cristal de vent",
+        "itemDE": "Windkristall",
         "icon": 20010,
         "id": 10
       },
       {
-        "item": "Wind Cluster",
+        "item": "风之晶簇",
+        "itemEN": "Wind Cluster",
+        "itemJA": "ウィンドクラスター",
+        "itemFR": "Agrégat de vent",
+        "itemDE": "Windpolykristall",
         "icon": 20016,
         "id": 16
       }
@@ -2633,12 +3553,20 @@
     "func": "node",
     "items": [
       {
-        "item": "Black Soil",
+        "item": "黑土",
+        "itemEN": "Black Soil",
+        "itemJA": "黒土",
+        "itemFR": "Terreau noir",
+        "itemDE": "Schwarze Erde",
         "icon": 27404,
         "id": 12970
       },
       {
-        "item": "Humic Soil",
+        "item": "腐殖土",
+        "itemEN": "Humic Soil",
+        "itemJA": "腐植土",
+        "itemFR": "Humus",
+        "itemDE": "Humus-Erde",
         "icon": 22628,
         "id": 33147,
         "reduce": {
@@ -2647,7 +3575,11 @@
         }
       },
       {
-        "item": "Granular Clay",
+        "item": "赤玉土",
+        "itemEN": "Granular Clay",
+        "itemJA": "赤玉土",
+        "itemFR": "Argile granuleuse",
+        "itemDE": "Körniger Lehm",
         "icon": 27407,
         "id": 12968,
         "reduce": {
@@ -2656,7 +3588,11 @@
         }
       },
       {
-        "item": "Peat Moss",
+        "item": "灰玉土",
+        "itemEN": "Peat Moss",
+        "itemJA": "ピートモス",
+        "itemFR": "Tourbe",
+        "itemDE": "Torfmoos",
         "icon": 27401,
         "id": 12969,
         "reduce": {
@@ -2665,7 +3601,11 @@
         }
       },
       {
-        "item": "Lover's Laurel",
+        "item": "梅茵菲娜月桂",
+        "itemEN": "Lover's Laurel",
+        "itemJA": "メネフィナローレル",
+        "itemFR": "Feuille de laurier de Menphina",
+        "itemDE": "Menphina-Lorbeerblätter",
         "icon": 25009,
         "id": 15948,
         "reduce": {
@@ -2674,12 +3614,20 @@
         }
       },
       {
-        "item": "Earth Crystal",
+        "item": "土之水晶",
+        "itemEN": "Earth Crystal",
+        "itemJA": "アースクリスタル",
+        "itemFR": "Cristal de terre",
+        "itemDE": "Erdkristall",
         "icon": 20012,
         "id": 11
       },
       {
-        "item": "Earth Cluster",
+        "item": "土之晶簇",
+        "itemEN": "Earth Cluster",
+        "itemJA": "アースクラスター",
+        "itemFR": "Agrégat de terre",
+        "itemDE": "Erdpolykristall",
         "icon": 20018,
         "id": 17
       }
@@ -2705,12 +3653,20 @@
     "func": "node",
     "items": [
       {
-        "item": "Black Soil",
+        "item": "黑土",
+        "itemEN": "Black Soil",
+        "itemJA": "黒土",
+        "itemFR": "Terreau noir",
+        "itemDE": "Schwarze Erde",
         "icon": 27404,
         "id": 12970
       },
       {
-        "item": "Humic Soil",
+        "item": "腐殖土",
+        "itemEN": "Humic Soil",
+        "itemJA": "腐植土",
+        "itemFR": "Humus",
+        "itemDE": "Humus-Erde",
         "icon": 22628,
         "id": 33147,
         "reduce": {
@@ -2719,7 +3675,11 @@
         }
       },
       {
-        "item": "Granular Clay",
+        "item": "赤玉土",
+        "itemEN": "Granular Clay",
+        "itemJA": "赤玉土",
+        "itemFR": "Argile granuleuse",
+        "itemDE": "Körniger Lehm",
         "icon": 27407,
         "id": 12968,
         "reduce": {
@@ -2728,7 +3688,11 @@
         }
       },
       {
-        "item": "Peat Moss",
+        "item": "灰玉土",
+        "itemEN": "Peat Moss",
+        "itemJA": "ピートモス",
+        "itemFR": "Tourbe",
+        "itemDE": "Torfmoos",
         "icon": 27401,
         "id": 12969,
         "reduce": {
@@ -2737,7 +3701,11 @@
         }
       },
       {
-        "item": "Lover's Laurel",
+        "item": "梅茵菲娜月桂",
+        "itemEN": "Lover's Laurel",
+        "itemJA": "メネフィナローレル",
+        "itemFR": "Feuille de laurier de Menphina",
+        "itemDE": "Menphina-Lorbeerblätter",
         "icon": 25009,
         "id": 15948,
         "reduce": {
@@ -2746,12 +3714,20 @@
         }
       },
       {
-        "item": "Earth Crystal",
+        "item": "土之水晶",
+        "itemEN": "Earth Crystal",
+        "itemJA": "アースクリスタル",
+        "itemFR": "Cristal de terre",
+        "itemDE": "Erdkristall",
         "icon": 20012,
         "id": 11
       },
       {
-        "item": "Earth Cluster",
+        "item": "土之晶簇",
+        "itemEN": "Earth Cluster",
+        "itemJA": "アースクラスター",
+        "itemFR": "Agrégat de terre",
+        "itemDE": "Erdpolykristall",
         "icon": 20018,
         "id": 17
       }
@@ -2777,12 +3753,20 @@
     "func": "node",
     "items": [
       {
-        "item": "Black Soil",
+        "item": "黑土",
+        "itemEN": "Black Soil",
+        "itemJA": "黒土",
+        "itemFR": "Terreau noir",
+        "itemDE": "Schwarze Erde",
         "icon": 27404,
         "id": 12970
       },
       {
-        "item": "Humic Soil",
+        "item": "腐殖土",
+        "itemEN": "Humic Soil",
+        "itemJA": "腐植土",
+        "itemFR": "Humus",
+        "itemDE": "Humus-Erde",
         "icon": 22628,
         "id": 33147,
         "reduce": {
@@ -2791,7 +3775,11 @@
         }
       },
       {
-        "item": "Granular Clay",
+        "item": "赤玉土",
+        "itemEN": "Granular Clay",
+        "itemJA": "赤玉土",
+        "itemFR": "Argile granuleuse",
+        "itemDE": "Körniger Lehm",
         "icon": 27407,
         "id": 12968,
         "reduce": {
@@ -2800,7 +3788,11 @@
         }
       },
       {
-        "item": "Peat Moss",
+        "item": "灰玉土",
+        "itemEN": "Peat Moss",
+        "itemJA": "ピートモス",
+        "itemFR": "Tourbe",
+        "itemDE": "Torfmoos",
         "icon": 27401,
         "id": 12969,
         "reduce": {
@@ -2809,7 +3801,11 @@
         }
       },
       {
-        "item": "Lover's Laurel",
+        "item": "梅茵菲娜月桂",
+        "itemEN": "Lover's Laurel",
+        "itemJA": "メネフィナローレル",
+        "itemFR": "Feuille de laurier de Menphina",
+        "itemDE": "Menphina-Lorbeerblätter",
         "icon": 25009,
         "id": 15948,
         "reduce": {
@@ -2818,12 +3814,20 @@
         }
       },
       {
-        "item": "Earth Crystal",
+        "item": "土之水晶",
+        "itemEN": "Earth Crystal",
+        "itemJA": "アースクリスタル",
+        "itemFR": "Cristal de terre",
+        "itemDE": "Erdkristall",
         "icon": 20012,
         "id": 11
       },
       {
-        "item": "Earth Cluster",
+        "item": "土之晶簇",
+        "itemEN": "Earth Cluster",
+        "itemJA": "アースクラスター",
+        "itemFR": "Agrégat de terre",
+        "itemDE": "Erdpolykristall",
         "icon": 20018,
         "id": 17
       }
@@ -2849,12 +3853,20 @@
     "func": "node",
     "items": [
       {
-        "item": "Perlite",
+        "item": "珍珠岩",
+        "itemEN": "Perlite",
+        "itemJA": "パーライト",
+        "itemFR": "Perlite",
+        "itemDE": "Perlit",
         "icon": 21463,
         "id": 20010
       },
       {
-        "item": "Dacite",
+        "item": "英安岩",
+        "itemEN": "Dacite",
+        "itemJA": "デイサイト",
+        "itemFR": "Dacite",
+        "itemDE": "Dazit",
         "icon": 21458,
         "id": 33152,
         "reduce": {
@@ -2863,7 +3875,11 @@
         }
       },
       {
-        "item": "Yanxian Soil",
+        "item": "延夏沃土",
+        "itemEN": "Yanxian Soil",
+        "itemJA": "ヤンサ沃土",
+        "itemFR": "Terreau de Yanxia",
+        "itemDE": "Yanxia-Erde",
         "icon": 21466,
         "id": 23220,
         "reduce": {
@@ -2872,12 +3888,20 @@
         }
       },
       {
-        "item": "Fire Crystal",
+        "item": "火之水晶",
+        "itemEN": "Fire Crystal",
+        "itemJA": "ファイアクリスタル",
+        "itemFR": "Cristal de feu",
+        "itemDE": "Feuerkristall",
         "icon": 20007,
         "id": 8
       },
       {
-        "item": "Fire Cluster",
+        "item": "火之晶簇",
+        "itemEN": "Fire Cluster",
+        "itemJA": "ファイアクラスター",
+        "itemFR": "Agrégat de feu",
+        "itemDE": "Feuerpolykristall",
         "icon": 20013,
         "id": 14
       }
@@ -2903,27 +3927,47 @@
     "func": "node",
     "items": [
       {
-        "item": "Pearl Sprouts",
+        "item": "小包心菜",
+        "itemEN": "Pearl Sprouts",
+        "itemJA": "プチキャベツ",
+        "itemFR": "Chou-bourgeon",
+        "itemDE": "Kohlsprösschen",
         "icon": 25208,
         "id": 12877
       },
       {
-        "item": "Coerthan Tea Leaves",
+        "item": "库尔札斯茶叶",
+        "itemEN": "Coerthan Tea Leaves",
+        "itemJA": "クルザス茶葉",
+        "itemFR": "Feuilles de thé du Coerthas",
+        "itemDE": "Coerthische Teeblätter",
         "icon": 25020,
         "id": 12882
       },
       {
-        "item": "Chives",
+        "item": "库尔札斯青葱",
+        "itemEN": "Chives",
+        "itemJA": "チャイブ",
+        "itemFR": "Ciboulette",
+        "itemDE": "Schnittlauch",
         "icon": 25035,
         "id": 12884
       },
       {
-        "item": "Pearl Sprout Seeds",
+        "item": "小包心菜种子",
+        "itemEN": "Pearl Sprout Seeds",
+        "itemJA": "プチキャベツの種",
+        "itemFR": "Graines de chou-bourgeon",
+        "itemDE": "Kohlsprösschen-Samen",
         "icon": 27455,
         "id": 13767
       },
       {
-        "item": "Coerthan Tea Seeds",
+        "item": "库尔札斯茶树种子",
+        "itemEN": "Coerthan Tea Seeds",
+        "itemJA": "クルザス茶樹の種",
+        "itemFR": "Graines de théier du Coerthas",
+        "itemDE": "Coerthische Teesamen",
         "icon": 27451,
         "id": 13768
       }
@@ -2949,17 +3993,29 @@
     "func": "node",
     "items": [
       {
-        "item": "Old World Fig",
+        "item": "旧世界无花果",
+        "itemEN": "Old World Fig",
+        "itemJA": "オールドワールドフィグ",
+        "itemFR": "Figue du vieux continent",
+        "itemDE": "Sharlayanische Feige",
         "icon": 25318,
         "id": 12896
       },
       {
-        "item": "Old World Fig Seeds",
+        "item": "旧世界无花果种子",
+        "itemEN": "Old World Fig Seeds",
+        "itemJA": "オールドワールドフィグの種",
+        "itemFR": "Graines de figuier du vieux continent",
+        "itemDE": "Sharlayanische Feigensamen",
         "icon": 27457,
         "id": 13765
       },
       {
-        "item": "Dark Matter Cluster",
+        "item": "暗物质晶簇",
+        "itemEN": "Dark Matter Cluster",
+        "itemJA": "ダークマタークラスター",
+        "itemFR": "Agrégat de matière sombre",
+        "itemDE": "Dunkelmaterie",
         "icon": 20407,
         "id": 10335
       }
@@ -2986,12 +4042,20 @@
     "func": "node",
     "items": [
       {
-        "item": "Porcini",
+        "item": "牛肝菌",
+        "itemEN": "Porcini",
+        "itemJA": "ポルチーニ",
+        "itemFR": "Bolet",
+        "itemDE": "Porcini-Pilz",
         "icon": 25401,
         "id": 12899
       },
       {
-        "item": "Dravanian Mistletoe",
+        "item": "龙堡槲寄生",
+        "itemEN": "Dravanian Mistletoe",
+        "itemJA": "ドラヴァニアミスルトゥ",
+        "itemFR": "Gui de Dravania",
+        "itemDE": "Dravanischer Mistelzweig",
         "icon": 25001,
         "id": 12943
       }
@@ -3017,12 +4081,20 @@
     "func": "node",
     "items": [
       {
-        "item": "Heavens Lemon",
+        "item": "伊修加德柠檬",
+        "itemEN": "Heavens Lemon",
+        "itemJA": "ヘヴンズドレモン",
+        "itemFR": "Citron céleste",
+        "itemDE": "Himmelszitrone",
         "icon": 25305,
         "id": 12889
       },
       {
-        "item": "Abalathian Mistletoe",
+        "item": "阿巴拉提亚槲寄生",
+        "itemEN": "Abalathian Mistletoe",
+        "itemJA": "アバラシアミスルトゥ",
+        "itemFR": "Gui d'Abalathia",
+        "itemDE": "Abalathischer Mistelzweig",
         "icon": 25001,
         "id": 12944
       }
@@ -3048,12 +4120,20 @@
     "func": "node",
     "items": [
       {
-        "item": "Cloud Banana",
+        "item": "云海香蕉",
+        "itemEN": "Cloud Banana",
+        "itemJA": "クラウドバナナ",
+        "itemFR": "Banane céleste",
+        "itemDE": "Wolkenbanane",
         "icon": 25319,
         "id": 12897
       },
       {
-        "item": "Morel",
+        "item": "伞蘑",
+        "itemEN": "Morel",
+        "itemJA": "モリーユ",
+        "itemFR": "Morille",
+        "itemDE": "Mörchel",
         "icon": 25408,
         "id": 12898
       }
@@ -3079,7 +4159,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Chysahl Greens",
+        "item": "卡贝基野菜",
+        "itemEN": "Chysahl Greens",
+        "itemJA": "カベイジの野菜",
+        "itemFR": "Légumes cabus",
+        "itemDE": "Kohlkraut",
         "icon": 25222,
         "id": 12900
       }
@@ -3105,17 +4189,29 @@
     "func": "node",
     "items": [
       {
-        "item": "Vanilla Beans",
+        "item": "香草豆",
+        "itemEN": "Vanilla Beans",
+        "itemJA": "バニラビーンズ",
+        "itemFR": "Gousse de vanille",
+        "itemDE": "Vanille",
         "icon": 25014,
         "id": 4833
       },
       {
-        "item": "Dravanian Paprika",
+        "item": "龙堡红辣椒",
+        "itemEN": "Dravanian Paprika",
+        "itemJA": "ドラヴァニアパプリカ",
+        "itemFR": "Paprika dravanien",
+        "itemDE": "Dravanische Paprikaschote",
         "icon": 25018,
         "id": 12903
       },
       {
-        "item": "Frost Cotton Boll",
+        "item": "雪棉",
+        "itemEN": "Frost Cotton Boll",
+        "itemJA": "雪綿",
+        "itemFR": "Fleur de coton des neiges",
+        "itemDE": "Frost-Baumwoll-Samenkapsel",
         "icon": 25032,
         "id": 14154
       }
@@ -3142,12 +4238,20 @@
     "func": "node",
     "items": [
       {
-        "item": "Almandine",
+        "item": "贵榴石",
+        "itemEN": "Almandine",
+        "itemJA": "アルマンディン",
+        "itemFR": "Almandin",
+        "itemDE": "Almandin",
         "icon": 21471,
         "id": 20011
       },
       {
-        "item": "Rhodolite",
+        "item": "玫瑰榴石",
+        "itemEN": "Rhodolite",
+        "itemJA": "ロードライト",
+        "itemFR": "Rhodolite",
+        "itemDE": "Rhodolith",
         "icon": 21474,
         "id": 33153,
         "reduce": {
@@ -3156,7 +4260,11 @@
         }
       },
       {
-        "item": "Yanxian Soil",
+        "item": "延夏沃土",
+        "itemEN": "Yanxian Soil",
+        "itemJA": "ヤンサ沃土",
+        "itemFR": "Terreau de Yanxia",
+        "itemDE": "Yanxia-Erde",
         "icon": 21466,
         "id": 23220,
         "reduce": {
@@ -3165,12 +4273,20 @@
         }
       },
       {
-        "item": "Ice Crystal",
+        "item": "冰之水晶",
+        "itemEN": "Ice Crystal",
+        "itemJA": "アイスクリスタル",
+        "itemFR": "Cristal de glace",
+        "itemDE": "Eiskristall",
         "icon": 20009,
         "id": 9
       },
       {
-        "item": "Ice Cluster",
+        "item": "冰之晶簇",
+        "itemEN": "Ice Cluster",
+        "itemJA": "アイスクラスター",
+        "itemFR": "Agrégat de glace",
+        "itemDE": "Eispolykristall",
         "icon": 20015,
         "id": 15
       }
@@ -3196,7 +4312,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Seventh Heaven",
+        "item": "星极花",
+        "itemEN": "Seventh Heaven",
+        "itemJA": "アストラルフラワー",
+        "itemFR": "Fleur astrale",
+        "itemDE": "Siebter Himmel-Blume",
         "icon": 22627,
         "id": 12634
       }
@@ -3223,7 +4343,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Honeydew Almonds",
+        "item": "甜扁桃",
+        "itemEN": "Honeydew Almonds",
+        "itemJA": "スイートアーモンド",
+        "itemFR": "Amandes mielleuses",
+        "itemDE": "Honigmandeln",
         "icon": 25017,
         "id": 12902
       }
@@ -3250,7 +4374,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Snurbleberry",
+        "item": "鲜红罗兰莓",
+        "itemEN": "Snurbleberry",
+        "itemJA": "スナーブルベリー",
+        "itemFR": "Lainuchairelle",
+        "itemDE": "Flockenbeere",
         "icon": 25306,
         "id": 12904
       }
@@ -3277,7 +4405,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Wattle Bark",
+        "item": "金合欢树皮",
+        "itemEN": "Wattle Bark",
+        "itemJA": "ワットル樹皮",
+        "itemFR": "Écorce d'acacia",
+        "itemDE": "Akazienrinde",
         "icon": 23001,
         "id": 12587
       }
@@ -3304,12 +4436,20 @@
     "func": "node",
     "items": [
       {
-        "item": "Old-growth Camphorwood Log",
+        "item": "樟木古树",
+        "itemEN": "Old-growth Camphorwood Log",
+        "itemJA": "カンファー古木",
+        "itemFR": "Vieux camphrier",
+        "itemDE": "Altes Kampferholzscheit",
         "icon": 22414,
         "id": 14957
       },
       {
-        "item": "Crystallized Sap",
+        "item": "树汁结晶",
+        "itemEN": "Crystallized Sap",
+        "itemJA": "樹液結晶",
+        "itemFR": "Sève cristallisée",
+        "itemDE": "Harzkristall",
         "icon": 20018,
         "id": 15647
       }
@@ -3336,7 +4476,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Schorl",
+        "item": "黑碧玺",
+        "itemEN": "Schorl",
+        "itemJA": "ショール",
+        "itemFR": "Schörl",
+        "itemDE": "Schörl",
         "icon": 21476,
         "id": 20009,
         "reduce": {
@@ -3345,7 +4489,11 @@
         }
       },
       {
-        "item": "Yanxian Soil",
+        "item": "延夏沃土",
+        "itemEN": "Yanxian Soil",
+        "itemJA": "ヤンサ沃土",
+        "itemFR": "Terreau de Yanxia",
+        "itemDE": "Yanxia-Erde",
         "icon": 21466,
         "id": 23220,
         "reduce": {
@@ -3354,12 +4502,20 @@
         }
       },
       {
-        "item": "Lightning Crystal",
+        "item": "雷之水晶",
+        "itemEN": "Lightning Crystal",
+        "itemJA": "ライトニングクリスタル",
+        "itemFR": "Cristal de foudre",
+        "itemDE": "Blitzkristall",
         "icon": 20011,
         "id": 12
       },
       {
-        "item": "Lightning Cluster",
+        "item": "雷之晶簇",
+        "itemEN": "Lightning Cluster",
+        "itemJA": "ライトニングクラスター",
+        "itemFR": "Agrégat de foudre",
+        "itemDE": "Blitzpolykristall",
         "icon": 20017,
         "id": 18
       }
@@ -3385,12 +4541,20 @@
     "func": "node",
     "items": [
       {
-        "item": "Smithsonite Ore",
+        "item": "菱锌矿",
+        "itemEN": "Smithsonite Ore",
+        "itemJA": "菱亜鉛鉱",
+        "itemFR": "Minerai de smithsonite",
+        "itemDE": "Smithsoniterz",
         "icon": 21473,
         "id": 14151
       },
       {
-        "item": "Meteorite",
+        "item": "陨石",
+        "itemEN": "Meteorite",
+        "itemJA": "メテオライト",
+        "itemFR": "Météorite",
+        "itemDE": "Meteorit",
         "icon": 21203,
         "id": 15646
       }
@@ -3417,13 +4581,21 @@
     "func": "node",
     "items": [
       {
-        "item": "Rarefied Reef Rock",
+        "item": "收藏用海底岩",
+        "itemEN": "Rarefied Reef Rock",
+        "itemJA": "収集用の海底岩",
+        "itemFR": "Pierre des grands fonds collectionnable",
+        "itemDE": "Tiefenfels (Sammlerstück)",
         "icon": 21203,
         "id": 32984,
         "scrip": "大地黄票"
       },
       {
-        "item": "Rarefied Tungsten Ore",
+        "item": "收藏用重钨矿",
+        "itemEN": "Rarefied Tungsten Ore",
+        "itemJA": "収集用のタングステン鉱",
+        "itemFR": "Minerai de tungstène collectionnable",
+        "itemDE": "Wolframerzklumpen (Sammlerstück)",
         "icon": 21203,
         "id": 32986,
         "scrip": "大地白票"
@@ -3451,7 +4623,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Rarefied Gyr Abanian Alumen",
+        "item": "收藏用基拉巴尼亚明矾",
+        "itemEN": "Rarefied Gyr Abanian Alumen",
+        "itemJA": "収集用のギラバニアアルメン",
+        "itemFR": "Alun gyrabanien collectionnable",
+        "itemDE": "Abanischer Alaun (Sammlerstück)",
         "icon": 22644,
         "id": 32987,
         "scrip": "大地白票"
@@ -3479,19 +4655,31 @@
     "func": "node",
     "items": [
       {
-        "item": "Rarefied Dark Chestnut Sap",
+        "item": "收藏用暗栗木树液",
+        "itemEN": "Rarefied Dark Chestnut Sap",
+        "itemJA": "収集用のダークチェスナット樹液",
+        "itemFR": "Sève de châtaignier sombre collectionnable",
+        "itemDE": "Dunkler Kastaniensaft (Sammlerstück)",
         "icon": 22654,
         "id": 32992,
         "scrip": "大地黄票"
       },
       {
-        "item": "Rarefied Dark Chestnut Log",
+        "item": "收藏用暗栗木原木",
+        "itemEN": "Rarefied Dark Chestnut Log",
+        "itemJA": "収集用のダークチェスナット原木",
+        "itemFR": "Rondin de châtaignier sombre collectionnable",
+        "itemDE": "Dunkles Kastanienholz (Sammlerstück)",
         "icon": 22420,
         "id": 32993,
         "scrip": "大地黄票"
       },
       {
-        "item": "Rarefied Dark Chestnut Branch",
+        "item": "收藏用暗栗树枝",
+        "itemEN": "Rarefied Dark Chestnut Branch",
+        "itemJA": "収集用のダークチェスナットの枝",
+        "itemFR": "Branche de châtaignier sombre collectionnable",
+        "itemDE": "Dunkler Kastanienast (Sammlerstück)",
         "icon": 22416,
         "id": 32994,
         "scrip": "大地黄票"
@@ -3518,13 +4706,21 @@
     "func": "node",
     "items": [
       {
-        "item": "Rarefied Dark Chestnut",
+        "item": "收藏用毛栗子",
+        "itemEN": "Rarefied Dark Chestnut",
+        "itemJA": "収集用のダークマロン",
+        "itemFR": "Marron sombre collectionnable",
+        "itemDE": "Dunkle Kastanie (Sammlerstück)",
         "icon": 25302,
         "id": 32995,
         "scrip": "大地黄票"
       },
       {
-        "item": "Rarefied Dark Chestnut Resin",
+        "item": "收藏用暗栗木树脂",
+        "itemEN": "Rarefied Dark Chestnut Resin",
+        "itemJA": "収集用のダークチェスナット樹脂",
+        "itemFR": "Résine de châtaignier sombre collectionnable",
+        "itemDE": "Dunkles Kastanienharz (Sammlerstück)",
         "icon": 22674,
         "id": 32996,
         "scrip": "大地黄票"
@@ -3551,7 +4747,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Torreya Branch",
+        "item": "榧树枝",
+        "itemEN": "Torreya Branch",
+        "itemJA": "トレヤの枝",
+        "itemFR": "Branche de kaya",
+        "itemDE": "Nusseibenast",
         "icon": 22416,
         "id": 19937,
         "reduce": {
@@ -3560,7 +4760,11 @@
         }
       },
       {
-        "item": "Yanxian Verbena",
+        "item": "延夏马鞭草",
+        "itemEN": "Yanxian Verbena",
+        "itemJA": "ヤンサバーベナ",
+        "itemFR": "Verveine de Yanxia",
+        "itemDE": "Yanxia-Eisenkraut",
         "icon": 25009,
         "id": 23221,
         "reduce": {
@@ -3569,12 +4773,20 @@
         }
       },
       {
-        "item": "Ice Crystal",
+        "item": "冰之水晶",
+        "itemEN": "Ice Crystal",
+        "itemJA": "アイスクリスタル",
+        "itemFR": "Cristal de glace",
+        "itemDE": "Eiskristall",
         "icon": 20009,
         "id": 9
       },
       {
-        "item": "Ice Cluster",
+        "item": "冰之晶簇",
+        "itemEN": "Ice Cluster",
+        "itemJA": "アイスクラスター",
+        "itemFR": "Agrégat de glace",
+        "itemDE": "Eispolykristall",
         "icon": 20015,
         "id": 15
       }
@@ -3600,7 +4812,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Tungstite",
+        "item": "钨华",
+        "itemEN": "Tungstite",
+        "itemJA": "重石華",
+        "itemFR": "Minerai de tungstite",
+        "itemDE": "Tungstit",
         "icon": 21209,
         "id": 16724
       }
@@ -3627,7 +4843,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Zeolite Ore",
+        "item": "沸石",
+        "itemEN": "Zeolite Ore",
+        "itemJA": "沸石",
+        "itemFR": "Minerai de zéolite",
+        "itemDE": "Zeolith",
         "icon": 21210,
         "id": 16726
       }
@@ -3654,7 +4874,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Luminium Ore",
+        "item": "辉金矿",
+        "itemEN": "Luminium Ore",
+        "itemJA": "輝金鉱",
+        "itemFR": "Minerai de luminium",
+        "itemDE": "Luminium",
         "icon": 21227,
         "id": 16725
       }
@@ -3681,7 +4905,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Teak Log",
+        "item": "柚木原木",
+        "itemEN": "Teak Log",
+        "itemJA": "チーク原木",
+        "itemFR": "Rondin de teck",
+        "itemDE": "Teakbaum-Holzscheit",
         "icon": 22403,
         "id": 5392
       }
@@ -3708,7 +4936,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Star Cotton Boll",
+        "item": "星棉",
+        "itemEN": "Star Cotton Boll",
+        "itemJA": "星綿",
+        "itemFR": "Fleur de coton des étoiles",
+        "itemDE": "Sternenbaumwolle",
         "icon": 25032,
         "id": 16721
       }
@@ -3735,7 +4967,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Brown Mushroom",
+        "item": "棕菇",
+        "itemEN": "Brown Mushroom",
+        "itemJA": "ブラウンマッシュルーム",
+        "itemFR": "Champignon brun",
+        "itemDE": "Brauner Champignon",
         "icon": 25405,
         "id": 16722
       }
@@ -3762,7 +4998,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Noble Sage",
+        "item": "显贵鼠尾草",
+        "itemEN": "Noble Sage",
+        "itemJA": "ノーブルセージ",
+        "itemFR": "Sauge noble",
+        "itemDE": "Edel-Salbei",
         "icon": 25002,
         "id": 16723
       }
@@ -3789,7 +5029,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Raw Triphane",
+        "item": "锂辉石原石",
+        "itemEN": "Raw Triphane",
+        "itemJA": "トリフェーン原石",
+        "itemFR": "Triphane brute",
+        "itemDE": "Roh-Triphan",
         "icon": 21474,
         "id": 19968
       }
@@ -3818,7 +5062,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Raw Star Spinel",
+        "item": "星尖石原石",
+        "itemEN": "Raw Star Spinel",
+        "itemJA": "スタースピネル原石",
+        "itemFR": "Spinelle étoilé brut",
+        "itemDE": "Roh-Sternspinell",
         "icon": 21475,
         "id": 19970
       }
@@ -3846,12 +5094,20 @@
     "func": "node",
     "items": [
       {
-        "item": "Raw Rhodonite",
+        "item": "蔷薇辉石原石",
+        "itemEN": "Raw Rhodonite",
+        "itemJA": "ロードナイト原石",
+        "itemFR": "Rhodonite brute",
+        "itemDE": "Roh-Rhodonit",
         "icon": 21471,
         "id": 19973
       },
       {
-        "item": "Pummelite",
+        "item": "硬拳石",
+        "itemEN": "Pummelite",
+        "itemJA": "硬拳石",
+        "itemFR": "Éclat de pulvérite",
+        "itemDE": "Rhalgit",
         "icon": 21209,
         "id": 17944
       }
@@ -3879,7 +5135,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Raw Imperial Jade",
+        "item": "琅玕原石",
+        "itemEN": "Raw Imperial Jade",
+        "itemJA": "インペリアルジェード原石",
+        "itemFR": "Jade impérial brut",
+        "itemDE": "Roh-Kaiserjade",
         "icon": 21252,
         "id": 19972
       }
@@ -3907,7 +5167,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Raw Azurite",
+        "item": "石青原石",
+        "itemEN": "Raw Azurite",
+        "itemJA": "アズライト原石",
+        "itemFR": "Azurite brute",
+        "itemDE": "Roh-Azurit",
         "icon": 21472,
         "id": 19971
       }
@@ -3935,7 +5199,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Ala Mhigan Salt Crystal",
+        "item": "阿拉米格盐",
+        "itemEN": "Ala Mhigan Salt Crystal",
+        "itemJA": "アラミゴ塩",
+        "itemFR": "Sel d'Ala Mhigo",
+        "itemDE": "Mhigischer Salzkristall",
         "icon": 22617,
         "id": 19907
       }
@@ -3963,12 +5231,20 @@
     "func": "node",
     "items": [
       {
-        "item": "Chromite Ore",
+        "item": "铬铁矿",
+        "itemEN": "Chromite Ore",
+        "itemJA": "クロマイト",
+        "itemFR": "Minerai de chromite",
+        "itemDE": "Chromeisen-Erz",
         "icon": 21205,
         "id": 19959
       },
       {
-        "item": "Gyr Abanian Spring Water",
+        "item": "基拉巴尼亚清水",
+        "itemEN": "Gyr Abanian Spring Water",
+        "itemJA": "ギラバニア清水",
+        "itemFR": "Eau de source de Gyr Abania",
+        "itemDE": "Gyr-Abania-Quellwasser",
         "icon": 22614,
         "id": 21085
       }
@@ -3997,7 +5273,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Palladium Ore",
+        "item": "钯金矿",
+        "itemEN": "Palladium Ore",
+        "itemJA": "清金鉱",
+        "itemFR": "Minerai de palladium",
+        "itemDE": "Palladium-Erz",
         "icon": 21217,
         "id": 19958
       }
@@ -4026,12 +5306,20 @@
     "func": "node",
     "items": [
       {
-        "item": "Windtea Leaves",
+        "item": "风茶叶",
+        "itemEN": "Windtea Leaves",
+        "itemJA": "風茶葉",
+        "itemFR": "Mauve des vents",
+        "itemDE": "Windteeblätter",
         "icon": 25022,
         "id": 19916
       },
       {
-        "item": "Countess Tea Leaves",
+        "item": "公主茶叶",
+        "itemEN": "Countess Tea Leaves",
+        "itemJA": "姫茶葉",
+        "itemFR": "Princesse-du-thé",
+        "itemDE": "Prinzessinnenteeblätter",
         "icon": 25015,
         "id": 33151,
         "reduce": {
@@ -4040,7 +5328,11 @@
         }
       },
       {
-        "item": "Yanxian Verbena",
+        "item": "延夏马鞭草",
+        "itemEN": "Yanxian Verbena",
+        "itemJA": "ヤンサバーベナ",
+        "itemFR": "Verveine de Yanxia",
+        "itemDE": "Yanxia-Eisenkraut",
         "icon": 25009,
         "id": 23221,
         "reduce": {
@@ -4049,12 +5341,20 @@
         }
       },
       {
-        "item": "Wind Crystal",
+        "item": "风之水晶",
+        "itemEN": "Wind Crystal",
+        "itemJA": "ウィンドクリスタル",
+        "itemFR": "Cristal de vent",
+        "itemDE": "Windkristall",
         "icon": 20010,
         "id": 10
       },
       {
-        "item": "Wind Cluster",
+        "item": "风之晶簇",
+        "itemEN": "Wind Cluster",
+        "itemJA": "ウィンドクラスター",
+        "itemFR": "Agrégat de vent",
+        "itemDE": "Windpolykristall",
         "icon": 20016,
         "id": 16
       }
@@ -4080,7 +5380,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Doman Yellow",
+        "item": "黄土",
+        "itemEN": "Doman Yellow",
+        "itemJA": "黄土",
+        "itemFR": "Lœss",
+        "itemDE": "Domagelb",
         "icon": 27407,
         "id": 20012,
         "reduce": {
@@ -4089,7 +5393,11 @@
         }
       },
       {
-        "item": "Yanxian Verbena",
+        "item": "延夏马鞭草",
+        "itemEN": "Yanxian Verbena",
+        "itemJA": "ヤンサバーベナ",
+        "itemFR": "Verveine de Yanxia",
+        "itemDE": "Yanxia-Eisenkraut",
         "icon": 25009,
         "id": 23221,
         "reduce": {
@@ -4098,12 +5406,20 @@
         }
       },
       {
-        "item": "Earth Crystal",
+        "item": "土之水晶",
+        "itemEN": "Earth Crystal",
+        "itemJA": "アースクリスタル",
+        "itemFR": "Cristal de terre",
+        "itemDE": "Erdkristall",
         "icon": 20012,
         "id": 11
       },
       {
-        "item": "Earth Cluster",
+        "item": "土之晶簇",
+        "itemEN": "Earth Cluster",
+        "itemJA": "アースクラスター",
+        "itemFR": "Agrégat de terre",
+        "itemDE": "Erdpolykristall",
         "icon": 20018,
         "id": 17
       }
@@ -4129,7 +5445,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Beech Branch",
+        "item": "山毛榉树枝",
+        "itemEN": "Beech Branch",
+        "itemJA": "ビーチの枝",
+        "itemFR": "Branche de hêtre",
+        "itemDE": "Buchenast",
         "icon": 22417,
         "id": 19936
       }
@@ -4158,7 +5478,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Bamboo Shoot",
+        "item": "竹笋",
+        "itemEN": "Bamboo Shoot",
+        "itemJA": "タケノコ",
+        "itemFR": "Pousse de bambou",
+        "itemDE": "Bambussprosse",
         "icon": 25229,
         "id": 19860
       }
@@ -4186,7 +5510,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Othardian Plum",
+        "item": "奥萨德梅",
+        "itemEN": "Othardian Plum",
+        "itemJA": "オサードプラム",
+        "itemFR": "Prune d'Othard",
+        "itemDE": "Othard-Pflaume",
         "icon": 25311,
         "id": 19852
       }
@@ -4214,7 +5542,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Hallowed Basil",
+        "item": "祝圣罗勒草",
+        "itemEN": "Hallowed Basil",
+        "itemJA": "ハロードバジル",
+        "itemFR": "Basilic béni",
+        "itemDE": "Geheiligtes Basilikum",
         "icon": 25010,
         "id": 19918
       }
@@ -4243,7 +5575,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Lotus Root",
+        "item": "莲藕",
+        "itemEN": "Lotus Root",
+        "itemJA": "蓮根",
+        "itemFR": "Rhizome de lotus",
+        "itemDE": "Lotoswurzel",
         "icon": 25226,
         "id": 19865
       }
@@ -4271,12 +5607,20 @@
     "func": "node",
     "items": [
       {
-        "item": "Jhammel Ginger",
+        "item": "长颈骆姜",
+        "itemEN": "Jhammel Ginger",
+        "itemJA": "ジャムメルジンジャー",
+        "itemFR": "Gingembre jhammel",
+        "itemDE": "Jhammel-Ingwer",
         "icon": 25012,
         "id": 19857
       },
       {
-        "item": "Rhalgr's Streak",
+        "item": "破坏神之杖",
+        "itemEN": "Rhalgr's Streak",
+        "itemJA": "ラールガースタッフ",
+        "itemFR": "Bâtons de Rhalgr",
+        "itemDE": "Strauß Rhalgrs Stäbe",
         "icon": 25507,
         "id": 17948
       }
@@ -4304,7 +5648,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Torreya Log",
+        "item": "榧木原木",
+        "itemEN": "Torreya Log",
+        "itemJA": "トレヤ原木",
+        "itemFR": "Rondin de kaya",
+        "itemDE": "Nusseiben-Holzscheit",
         "icon": 22405,
         "id": 19934
       }
@@ -4333,12 +5681,20 @@
     "func": "node",
     "items": [
       {
-        "item": "Rhea",
+        "item": "苎麻",
+        "itemEN": "Rhea",
+        "itemJA": "藍麻",
+        "itemFR": "Orties indigo",
+        "itemDE": "Rhea",
         "icon": 21651,
         "id": 19991
       },
       {
-        "item": "Azim Cotton Boll",
+        "item": "太阳棉",
+        "itemEN": "Azim Cotton Boll",
+        "itemJA": "アジム綿花",
+        "itemFR": "Fleur de coton d'Azim",
+        "itemDE": "Azim-Baumwoll-Samenkapsel",
         "icon": 25037,
         "id": 21086
       }
@@ -4367,12 +5723,20 @@
     "func": "node",
     "items": [
       {
-        "item": "Nightsteel Ore",
+        "item": "夜铁矿",
+        "itemEN": "Nightsteel Ore",
+        "itemJA": "夜鉄鉱",
+        "itemFR": "Minerai de noctacier",
+        "itemDE": "Nachtstahlerz",
         "icon": 21203,
         "id": 22417
       },
       {
-        "item": "Hawk's Eye",
+        "item": "鹰眼石",
+        "itemEN": "Hawk's Eye",
+        "itemJA": "鷹目石",
+        "itemFR": "Œil-de-faucon",
+        "itemDE": "Falkenauge",
         "icon": 21228,
         "id": 23179
       }
@@ -4401,12 +5765,20 @@
     "func": "node",
     "items": [
       {
-        "item": "Silvergrace Ore",
+        "item": "清银矿",
+        "itemEN": "Silvergrace Ore",
+        "itemJA": "清銀鉱",
+        "itemFR": "Minerai de graçargent",
+        "itemDE": "Silbergunsterz",
         "icon": 21213,
         "id": 22418
       },
       {
-        "item": "Azim Spring Water",
+        "item": "太阳神泉水",
+        "itemEN": "Azim Spring Water",
+        "itemJA": "アジム湧水",
+        "itemFR": "Eau de source de la Steppe d'Azim",
+        "itemDE": "Azim-Quellwasser",
         "icon": 22678,
         "id": 24255
       }
@@ -4435,12 +5807,20 @@
     "func": "node",
     "items": [
       {
-        "item": "Black Willow Log",
+        "item": "黑柳原木",
+        "itemEN": "Black Willow Log",
+        "itemJA": "ブラックウィロー原木",
+        "itemFR": "Rondin de saule noir",
+        "itemDE": "Schwarzweiden-Holzscheit",
         "icon": 22402,
         "id": 22419
       },
       {
-        "item": "Hardened Veteran Tree Sap",
+        "item": "古木树液块",
+        "itemEN": "Hardened Veteran Tree Sap",
+        "itemJA": "老木樹液塊",
+        "itemFR": "Sève durcie de vieil arbre",
+        "itemDE": "Gehärteter alter Baumsaft",
         "icon": 22638,
         "id": 23180
       }
@@ -4469,7 +5849,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Hingan Flax",
+        "item": "真麻",
+        "itemEN": "Hingan Flax",
+        "itemJA": "真麻",
+        "itemFR": "Fibres de lin hingashien",
+        "itemDE": "Hingashi-Flachs",
         "icon": 21673,
         "id": 22420
       }
@@ -4498,7 +5882,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Gyr Abanian Ore",
+        "item": "岩铁",
+        "itemEN": "Gyr Abanian Ore",
+        "itemJA": "岩鉄",
+        "itemFR": "Minerai gyrabanien",
+        "itemDE": "Abanisches Erz",
         "icon": 21216,
         "id": 24240
       }
@@ -4527,7 +5915,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Evergleam Ore",
+        "item": "常辉矿",
+        "itemEN": "Evergleam Ore",
+        "itemJA": "常輝鉱",
+        "itemFR": "Minerai de pérennéclat",
+        "itemDE": "Immerschimmer-Erz",
         "icon": 21223,
         "id": 24241
       }
@@ -4556,7 +5948,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Urunday Log",
+        "item": "乌仑代硬木原木",
+        "itemEN": "Urunday Log",
+        "itemJA": "ウルンダイ原木",
+        "itemFR": "Rondin d'urunday",
+        "itemDE": "Urunday-Holzscheit",
         "icon": 22420,
         "id": 24242
       }
@@ -4585,7 +5981,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Yanxian Cotton Boll",
+        "item": "延夏棉",
+        "itemEN": "Yanxian Cotton Boll",
+        "itemJA": "延夏綿",
+        "itemFR": "Fleur de coton de Yanxia",
+        "itemDE": "Yanxia-Baumwoll-Samenkapsel",
         "icon": 21652,
         "id": 24243
       }
@@ -4614,7 +6014,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Gale Rock",
+        "item": "暴风岩",
+        "itemEN": "Gale Rock",
+        "itemJA": "嵐性岩",
+        "itemFR": "Pierre de rafale",
+        "itemDE": "Orkangestein",
         "icon": 21473,
         "id": 27805,
         "reduce": {
@@ -4623,7 +6027,11 @@
         }
       },
       {
-        "item": "Thunder Rock",
+        "item": "轰雷性岩",
+        "itemEN": "Thunder Rock",
+        "itemJA": "轟雷性岩",
+        "itemFR": "Pierre de foudre grondante",
+        "itemDE": "Donnergestein",
         "icon": 21482,
         "id": 30591,
         "reduce": {
@@ -4632,12 +6040,20 @@
         }
       },
       {
-        "item": "Water Crystal",
+        "item": "水之水晶",
+        "itemEN": "Water Crystal",
+        "itemJA": "ウォータークリスタル",
+        "itemFR": "Cristal d'eau",
+        "itemDE": "Wasserkristall",
         "icon": 20008,
         "id": 13
       },
       {
-        "item": "Water Cluster",
+        "item": "水之晶簇",
+        "itemEN": "Water Cluster",
+        "itemJA": "ウォータークラスター",
+        "itemFR": "Agrégat d'eau",
+        "itemDE": "Wasserpolykristall",
         "icon": 20014,
         "id": 19
       }
@@ -4663,7 +6079,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Solarite",
+        "item": "光耀石",
+        "itemEN": "Solarite",
+        "itemJA": "光曜石",
+        "itemFR": "Pierre irradiante",
+        "itemDE": "Glimmergestein",
         "icon": 21467,
         "id": 27806,
         "reduce": {
@@ -4672,7 +6092,11 @@
         }
       },
       {
-        "item": "Thunder Rock",
+        "item": "轰雷性岩",
+        "itemEN": "Thunder Rock",
+        "itemJA": "轟雷性岩",
+        "itemFR": "Pierre de foudre grondante",
+        "itemDE": "Donnergestein",
         "icon": 21482,
         "id": 30591,
         "reduce": {
@@ -4681,12 +6105,20 @@
         }
       },
       {
-        "item": "Lightning Crystal",
+        "item": "雷之水晶",
+        "itemEN": "Lightning Crystal",
+        "itemJA": "ライトニングクリスタル",
+        "itemFR": "Cristal de foudre",
+        "itemDE": "Blitzkristall",
         "icon": 20011,
         "id": 12
       },
       {
-        "item": "Lightning Cluster",
+        "item": "雷之晶簇",
+        "itemEN": "Lightning Cluster",
+        "itemJA": "ライトニングクラスター",
+        "itemFR": "Agrégat de foudre",
+        "itemDE": "Blitzpolykristall",
         "icon": 20017,
         "id": 18
       }
@@ -4712,7 +6144,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Thunder Rock",
+        "item": "轰雷性岩",
+        "itemEN": "Thunder Rock",
+        "itemJA": "轟雷性岩",
+        "itemFR": "Pierre de foudre grondante",
+        "itemDE": "Donnergestein",
         "icon": 21482,
         "id": 30591,
         "reduce": {
@@ -4721,7 +6157,11 @@
         }
       },
       {
-        "item": "Shade Quartz",
+        "item": "暗影石英",
+        "itemEN": "Shade Quartz",
+        "itemJA": "シャドウクォーツ",
+        "itemFR": "Quartz de l'ombre",
+        "itemDE": "Schattenquarz",
         "icon": 21462,
         "id": 27807,
         "reduce": {
@@ -4730,12 +6170,20 @@
         }
       },
       {
-        "item": "Fire Crystal",
+        "item": "火之水晶",
+        "itemEN": "Fire Crystal",
+        "itemJA": "ファイアクリスタル",
+        "itemFR": "Cristal de feu",
+        "itemDE": "Feuerkristall",
         "icon": 20007,
         "id": 8
       },
       {
-        "item": "Fire Cluster",
+        "item": "火之晶簇",
+        "itemEN": "Fire Cluster",
+        "itemJA": "ファイアクラスター",
+        "itemFR": "Agrégat de feu",
+        "itemDE": "Feuerpolykristall",
         "icon": 20013,
         "id": 14
       }
@@ -4761,7 +6209,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Raw Hematite",
+        "item": "乌钢石原石",
+        "itemEN": "Raw Hematite",
+        "itemJA": "ヘマタイト原石",
+        "itemFR": "Hématite brute",
+        "itemDE": "Roh-Rauchquarz",
         "icon": 21476,
         "id": 27726
       }
@@ -4790,7 +6242,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Raw Diaspore",
+        "item": "硬水铝石原石",
+        "itemEN": "Raw Diaspore",
+        "itemJA": "ダイアスポア原石",
+        "itemFR": "Diaspore brute",
+        "itemDE": "Roh-Diaspor",
         "icon": 21473,
         "id": 27727
       }
@@ -4818,7 +6274,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Raw Lazurite",
+        "item": "青金石原石",
+        "itemEN": "Raw Lazurite",
+        "itemJA": "ラズライト原石",
+        "itemFR": "Lazurite brute",
+        "itemDE": "Roh-Lasurit",
         "icon": 21472,
         "id": 27728
       }
@@ -4846,7 +6306,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Raw Triplite",
+        "item": "三重石原石",
+        "itemEN": "Raw Triplite",
+        "itemJA": "トリプライト原石",
+        "itemFR": "Triphylite brute",
+        "itemDE": "Roh-Triphylin",
         "icon": 21471,
         "id": 27729
       }
@@ -4874,7 +6338,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Raw Petalite",
+        "item": "透锂长石原石",
+        "itemEN": "Raw Petalite",
+        "itemJA": "ペタライト原石",
+        "itemFR": "Pétalite brute",
+        "itemDE": "Roh-Petalit",
         "icon": 21477,
         "id": 27730
       }
@@ -4902,7 +6370,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Raw Onyx",
+        "item": "黑玛瑙原石",
+        "itemEN": "Raw Onyx",
+        "itemJA": "オニキス原石",
+        "itemFR": "Onyx brut",
+        "itemDE": "Roh-Onyx",
         "icon": 21231,
         "id": 27731
       }
@@ -4930,12 +6402,20 @@
     "func": "node",
     "items": [
       {
-        "item": "Prismstone",
+        "item": "彩虹晶",
+        "itemEN": "Prismstone",
+        "itemJA": "虹結晶",
+        "itemFR": "Cristal iridescent",
+        "itemDE": "Spektralkristall",
         "icon": 21232,
         "id": 27705
       },
       {
-        "item": "Beryllium Ore",
+        "item": "轻铍矿",
+        "itemEN": "Beryllium Ore",
+        "itemJA": "ベリリウム鉱",
+        "itemFR": "Minerai de béryllium",
+        "itemDE": "Beryllium-Klumpen",
         "icon": 21455,
         "id": 28717
       }
@@ -4964,7 +6444,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Tungsten Ore",
+        "item": "重钨矿",
+        "itemEN": "Tungsten Ore",
+        "itemJA": "タングステン鉱",
+        "itemFR": "Minerai de tungstène",
+        "itemDE": "Wolframerzklumpen",
         "icon": 21203,
         "id": 27704
       }
@@ -4993,7 +6477,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Bog Sage",
+        "item": "沼泽鼠尾草",
+        "itemEN": "Bog Sage",
+        "itemJA": "ボッグセージ",
+        "itemFR": "Sauge officinale",
+        "itemDE": "Sumpfsalbei",
         "icon": 25009,
         "id": 27810,
         "reduce": {
@@ -5002,7 +6490,11 @@
         }
       },
       {
-        "item": "Levin Mint",
+        "item": "雷霆薄荷",
+        "itemEN": "Levin Mint",
+        "itemJA": "ライトニングミント",
+        "itemFR": "Menthe éclair",
+        "itemDE": "Blitzminze",
         "icon": 25039,
         "id": 30592,
         "reduce": {
@@ -5011,12 +6503,20 @@
         }
       },
       {
-        "item": "Earth Crystal",
+        "item": "土之水晶",
+        "itemEN": "Earth Crystal",
+        "itemJA": "アースクリスタル",
+        "itemFR": "Cristal de terre",
+        "itemDE": "Erdkristall",
         "icon": 20012,
         "id": 11
       },
       {
-        "item": "Earth Cluster",
+        "item": "土之晶簇",
+        "itemEN": "Earth Cluster",
+        "itemJA": "アースクラスター",
+        "itemFR": "Agrégat de terre",
+        "itemDE": "Erdpolykristall",
         "icon": 20018,
         "id": 17
       }
@@ -5042,7 +6542,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Sweet Marjoram",
+        "item": "甜墨角兰",
+        "itemEN": "Sweet Marjoram",
+        "itemJA": "スイートマジョラム",
+        "itemFR": "Marjolaine douceâtre",
+        "itemDE": "Süßer Majoran",
         "icon": 25015,
         "id": 27809,
         "reduce": {
@@ -5051,7 +6555,11 @@
         }
       },
       {
-        "item": "Levin Mint",
+        "item": "雷霆薄荷",
+        "itemEN": "Levin Mint",
+        "itemJA": "ライトニングミント",
+        "itemFR": "Menthe éclair",
+        "itemDE": "Blitzminze",
         "icon": 25039,
         "id": 30592,
         "reduce": {
@@ -5060,12 +6568,20 @@
         }
       },
       {
-        "item": "Wind Crystal",
+        "item": "风之水晶",
+        "itemEN": "Wind Crystal",
+        "itemJA": "ウィンドクリスタル",
+        "itemFR": "Cristal de vent",
+        "itemDE": "Windkristall",
         "icon": 20010,
         "id": 10
       },
       {
-        "item": "Wind Cluster",
+        "item": "风之晶簇",
+        "itemEN": "Wind Cluster",
+        "itemJA": "ウィンドクラスター",
+        "itemFR": "Agrégat de vent",
+        "itemDE": "Windpolykristall",
         "icon": 20016,
         "id": 16
       }
@@ -5091,7 +6607,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Levin Mint",
+        "item": "雷霆薄荷",
+        "itemEN": "Levin Mint",
+        "itemJA": "ライトニングミント",
+        "itemFR": "Menthe éclair",
+        "itemDE": "Blitzminze",
         "icon": 25039,
         "id": 30592,
         "reduce": {
@@ -5100,7 +6620,11 @@
         }
       },
       {
-        "item": "White Clay",
+        "item": "白玉土",
+        "itemEN": "White Clay",
+        "itemJA": "白玉土",
+        "itemFR": "Terre perlée",
+        "itemDE": "Weißer Lehm",
         "icon": 22610,
         "id": 27808,
         "reduce": {
@@ -5109,12 +6633,20 @@
         }
       },
       {
-        "item": "Ice Crystal",
+        "item": "冰之水晶",
+        "itemEN": "Ice Crystal",
+        "itemJA": "アイスクリスタル",
+        "itemFR": "Cristal de glace",
+        "itemDE": "Eiskristall",
         "icon": 20009,
         "id": 9
       },
       {
-        "item": "Ice Cluster",
+        "item": "冰之晶簇",
+        "itemEN": "Ice Cluster",
+        "itemJA": "アイスクラスター",
+        "itemFR": "Agrégat de glace",
+        "itemDE": "Eispolykristall",
         "icon": 20015,
         "id": 15
       }
@@ -5140,7 +6672,11 @@
     "func": "node",
     "items": [
       {
-        "item": "White Oak Branch",
+        "item": "白橡木枝",
+        "itemEN": "White Oak Branch",
+        "itemJA": "ホワイトオークの枝",
+        "itemFR": "Branche de chêne blanc",
+        "itemDE": "Weißeichen-Ast",
         "icon": 22416,
         "id": 27816
       }
@@ -5169,7 +6705,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Broad Beans",
+        "item": "蚕豆",
+        "itemEN": "Broad Beans",
+        "itemJA": "ブロードビーン",
+        "itemFR": "Féverole",
+        "itemDE": "Favabohne",
         "icon": 25353,
         "id": 27833
       }
@@ -5197,7 +6737,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Peppermint",
+        "item": "欧薄荷",
+        "itemEN": "Peppermint",
+        "itemJA": "ペパーミント",
+        "itemFR": "Menthe poivrée",
+        "itemDE": "Pfefferminze",
         "icon": 25016,
         "id": 27836
       }
@@ -5225,7 +6769,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Russet Popoto",
+        "item": "黄新薯",
+        "itemEN": "Russet Popoto",
+        "itemJA": "ラセットポポト",
+        "itemFR": "Popoto brune",
+        "itemDE": "Ockertoffel",
         "icon": 25204,
         "id": 27822
       }
@@ -5253,7 +6801,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Mist Spinach",
+        "item": "迷雾菠菜",
+        "itemEN": "Mist Spinach",
+        "itemJA": "ミストスピナッチ",
+        "itemFR": "Jeunes épinards brume",
+        "itemDE": "Dunstspinat",
         "icon": 25206,
         "id": 27828
       }
@@ -5281,7 +6833,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Lemonette",
+        "item": "小柠檬",
+        "itemEN": "Lemonette",
+        "itemJA": "リトルレモン",
+        "itemFR": "Petit citron",
+        "itemDE": "Zwergzitrone",
         "icon": 25305,
         "id": 27835
       }
@@ -5309,12 +6865,20 @@
     "func": "node",
     "items": [
       {
-        "item": "Sandalwood Log",
+        "item": "檀香木原木",
+        "itemEN": "Sandalwood Log",
+        "itemJA": "サンダルウッド原木",
+        "itemFR": "Rondin de santal blanc",
+        "itemDE": "Sandelholzscheit",
         "icon": 22401,
         "id": 27688
       },
       {
-        "item": "Sandalwood Sap",
+        "item": "檀香木树液",
+        "itemEN": "Sandalwood Sap",
+        "itemJA": "サンダルウッド樹液",
+        "itemFR": "Sève de bois de santal",
+        "itemDE": "Sandelharz",
         "icon": 22638,
         "id": 28716
       }
@@ -5343,7 +6907,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Ethereal Cocoon",
+        "item": "泡茧",
+        "itemEN": "Ethereal Cocoon",
+        "itemJA": "泡マユ",
+        "itemFR": "Cocon mousseux",
+        "itemDE": "Schaumkokon",
         "icon": 21661,
         "id": 27761
       }
@@ -5372,12 +6940,20 @@
     "func": "node",
     "items": [
       {
-        "item": "Brashgold Ore",
+        "item": "金锡矿",
+        "itemEN": "Brashgold Ore",
+        "itemJA": "金錫鉱",
+        "itemFR": "Minerai d'étain argenté",
+        "itemDE": "Goldzinn",
         "icon": 21227,
         "id": 30486
       },
       {
-        "item": "Fireheart Cobalt",
+        "item": "辉钴铁矿",
+        "itemEN": "Fireheart Cobalt",
+        "itemJA": "輝コバルト鉱",
+        "itemFR": "Minerai de cobaltite",
+        "itemDE": "Kobaltsulfiderz",
         "icon": 21227,
         "id": 29968
       }
@@ -5406,7 +6982,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Purpure Shell Chip",
+        "item": "尊紫碎块",
+        "itemEN": "Purpure Shell Chip",
+        "itemJA": "プルプラシェルチップ",
+        "itemFR": "Éclat de perle purpurine",
+        "itemDE": "Purpur-Muschelsplitter",
         "icon": 21469,
         "id": 29970
       }
@@ -5435,7 +7015,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Merbau Log",
+        "item": "印茄原木",
+        "itemEN": "Merbau Log",
+        "itemJA": "メルバウ原木",
+        "itemFR": "Rondin d'intsia bijuga",
+        "itemDE": "Merbauholzscheit",
         "icon": 22423,
         "id": 29972
       }
@@ -5464,12 +7048,20 @@
     "func": "node",
     "items": [
       {
-        "item": "Tender Dill",
+        "item": "柔嫩茴香",
+        "itemEN": "Tender Dill",
+        "itemJA": "テンダーイノンド",
+        "itemFR": "Aneth souple",
+        "itemDE": "Milder Nebeldill",
         "icon": 25036,
         "id": 30485
       },
       {
-        "item": "Imperial Fern",
+        "item": "帝王蕨菜",
+        "itemEN": "Imperial Fern",
+        "itemJA": "レガリスゼンマイ",
+        "itemFR": "Osmonde royale",
+        "itemDE": "Kaiserfarn",
         "icon": 25038,
         "id": 29978
       }
@@ -5498,13 +7090,21 @@
     "func": "node",
     "items": [
       {
-        "item": "Rarefied Larch Log",
+        "item": "收藏用落叶松原木",
+        "itemEN": "Rarefied Larch Log",
+        "itemJA": "収集用のラーチ原木",
+        "itemFR": "Rondin de mélèze collectionnable",
+        "itemDE": "Lärchen-Holzscheit (Sammlerstück)",
         "icon": 22403,
         "id": 32997,
         "scrip": "大地黄票"
       },
       {
-        "item": "Rarefied Larch Sap",
+        "item": "收藏用落叶松树液",
+        "itemEN": "Rarefied Larch Sap",
+        "itemJA": "収集用のラーチ樹液",
+        "itemFR": "Sève de mélèze collectionnable",
+        "itemDE": "Lärchensaft (Sammlerstück)",
         "icon": 22642,
         "id": 32999,
         "scrip": "大地黄票"
@@ -5531,7 +7131,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Rarefied Shiitake Mushroom",
+        "item": "收藏用香菇",
+        "itemEN": "Rarefied Shiitake Mushroom",
+        "itemJA": "収集用の椎茸",
+        "itemFR": "Shiitake collectionnable",
+        "itemDE": "Shiitake-Pilz (Sammlerstück)",
         "icon": 25401,
         "id": 32998,
         "scrip": "大地黄票"
@@ -5558,13 +7162,21 @@
     "func": "node",
     "items": [
       {
-        "item": "Rarefied Pine Resin",
+        "item": "收藏用松脂",
+        "itemEN": "Rarefied Pine Resin",
+        "itemJA": "収集用の松脂",
+        "itemFR": "Résine de pin collectionnable",
+        "itemDE": "Kieferharz (Sammlerstück)",
         "icon": 22638,
         "id": 33000,
         "scrip": "大地黄票"
       },
       {
-        "item": "Rarefied Pine Log",
+        "item": "收藏用松木原木",
+        "itemEN": "Rarefied Pine Log",
+        "itemJA": "収集用のパイン原木",
+        "itemFR": "Rondin de pin collectionnable",
+        "itemDE": "Kiefern-Holzscheit (Sammlerstück)",
         "icon": 22414,
         "id": 33001,
         "scrip": "大地黄票"
@@ -5591,13 +7203,21 @@
     "func": "node",
     "items": [
       {
-        "item": "Rarefied Pixie Apple",
+        "item": "收藏用仙子苹果",
+        "itemEN": "Rarefied Pixie Apple",
+        "itemJA": "収集用のピクシーアップル",
+        "itemFR": "Pomme pixie collectionnable",
+        "itemDE": "Pixie-Apfel (Sammlerstück)",
         "icon": 25308,
         "id": 33002,
         "scrip": "大地黄票"
       },
       {
-        "item": "Rarefied Miracle Apple Log",
+        "item": "收藏用仙果木原木",
+        "itemEN": "Rarefied Miracle Apple Log",
+        "itemJA": "収集用のミラクルアップル原木",
+        "itemFR": "Rondin de pommier miracle collectionnable",
+        "itemDE": "Wunderapfelholzscheit (Sammlerstück)",
         "icon": 22404,
         "id": 33004,
         "scrip": "大地黄票"
@@ -5624,7 +7244,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Rarefied White Oak Log",
+        "item": "收藏用白橡木原木",
+        "itemEN": "Rarefied White Oak Log",
+        "itemJA": "収集用のホワイトオーク原木",
+        "itemFR": "Rondin de chêne blanc collectionnable",
+        "itemDE": "Weißeichenholzscheit (Sammlerstück)",
         "icon": 22407,
         "id": 33003,
         "scrip": "大地黄票"
@@ -5651,13 +7275,21 @@
     "func": "node",
     "items": [
       {
-        "item": "Rarefied Sandteak Log",
+        "item": "收藏用沙柚木原木",
+        "itemEN": "Rarefied Sandteak Log",
+        "itemJA": "収集用のサンドチーク原木",
+        "itemFR": "Rondin de teck des sables collectionnable",
+        "itemDE": "Sandteakholzscheit (Sammlerstück)",
         "icon": 22403,
         "id": 33005,
         "scrip": "大地黄票"
       },
       {
-        "item": "Rarefied Amber Cloves",
+        "item": "收藏用琥珀丁香",
+        "itemEN": "Rarefied Amber Cloves",
+        "itemJA": "収集用のアンバークローヴ",
+        "itemFR": "Antofle ambré collectionnable",
+        "itemDE": "Bernsteinnelke (Sammlerstück)",
         "icon": 25023,
         "id": 33007,
         "scrip": "大地白票"
@@ -5684,13 +7316,21 @@
     "func": "node",
     "items": [
       {
-        "item": "Rarefied Kelp",
+        "item": "收藏用海藻",
+        "itemEN": "Rarefied Kelp",
+        "itemJA": "収集用の海藻",
+        "itemFR": "Algues collectionnables",
+        "itemDE": "Seegras (Sammlerstück)",
         "icon": 25225,
         "id": 33006,
         "scrip": "大地黄票"
       },
       {
-        "item": "Rarefied Coral",
+        "item": "收藏用珊瑚",
+        "itemEN": "Rarefied Coral",
+        "itemJA": "収集用の珊瑚",
+        "itemFR": "Corail collectionnable",
+        "itemDE": "Koralle (Sammlerstück)",
         "icon": 29062,
         "id": 33008,
         "scrip": "大地白票"
@@ -5718,7 +7358,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Rarefied Urunday Log",
+        "item": "收藏用乌仑代硬木原木",
+        "itemEN": "Rarefied Urunday Log",
+        "itemJA": "収集用のウルンダイ原木",
+        "itemFR": "Rondin d'urunday collectionnable",
+        "itemDE": "Urunday-Holzscheit (Sammlerstück)",
         "icon": 22420,
         "id": 33009,
         "scrip": "大地白票"
@@ -5746,7 +7390,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Ashen Alumen",
+        "item": "灰明矾",
+        "itemEN": "Ashen Alumen",
+        "itemJA": "アッシュアルメン",
+        "itemFR": "Alun cendré",
+        "itemDE": "Asch-Alaun",
         "icon": 22604,
         "id": 29976
       }
@@ -5775,7 +7423,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Duskblooms",
+        "item": "紫草",
+        "itemEN": "Duskblooms",
+        "itemJA": "紫根",
+        "itemFR": "Grémil",
+        "itemDE": "Steinsamenwurzel",
         "icon": 25022,
         "id": 29974
       }
@@ -5804,7 +7456,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Hard Water",
+        "item": "超硬水",
+        "itemEN": "Hard Water",
+        "itemJA": "超硬水",
+        "itemFR": "Eau dure",
+        "itemDE": "Extrahartes Wasser",
         "icon": 22689,
         "id": 32955
       }
@@ -5833,7 +7489,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Solstice Stone",
+        "item": "白夜结晶",
+        "itemEN": "Solstice Stone",
+        "itemJA": "白夜結晶",
+        "itemFR": "Cristal solsticial",
+        "itemDE": "Nachtsonnenkristall",
         "icon": 21232,
         "id": 32952
       }
@@ -5862,7 +7522,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Dolomite",
+        "item": "苦灰石",
+        "itemEN": "Dolomite",
+        "itemJA": "苦灰石",
+        "itemFR": "Minerai de dolomite",
+        "itemDE": "Dolomitklumpen",
         "icon": 21225,
         "id": 32951
       }
@@ -5891,7 +7555,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Wattle Petribark",
+        "item": "硬质金合欢树皮",
+        "itemEN": "Wattle Petribark",
+        "itemJA": "ハードワットル樹皮",
+        "itemFR": "Écorce d'acacia durcie",
+        "itemDE": "Hartakazienrinde",
         "icon": 22418,
         "id": 32954
       }
@@ -5920,7 +7588,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Silver Beech Log",
+        "item": "银山毛榉原木",
+        "itemEN": "Silver Beech Log",
+        "itemJA": "シルバービーチ原木",
+        "itemFR": "Rondin de hêtre argenté",
+        "itemDE": "Silberbuchen-Holzscheit",
         "icon": 22412,
         "id": 32950
       }
@@ -5949,7 +7621,11 @@
     "func": "node",
     "items": [
       {
-        "item": "Raindrop Cotton Boll",
+        "item": "苍棉花",
+        "itemEN": "Raindrop Cotton Boll",
+        "itemJA": "蒼綿花",
+        "itemFR": "Fleur de coton de l'Azur",
+        "itemDE": "Blaubaumwollkapsel",
         "icon": 25040,
         "id": 32953
       }

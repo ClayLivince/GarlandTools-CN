@@ -594,7 +594,16 @@ namespace Garland.Data.Modules
                 {
                     dynamic item = _builder.Db.ItemsById[(int)nodeItem.id];
                     dynamic itemView = new JObject();
-                    itemView.item = item.en.name;
+                    if (item.chs?.name != null)
+                        itemView.item = item.chs.name;
+                    if (item.en?.name != null)
+                        itemView.itemEN = item.en.name;
+                    if (item.ja?.name != null)
+                        itemView.itemJA = item.ja.name;
+                    if (item.fr?.name != null)
+                        itemView.itemFR = item.fr.name;
+                    if (item.de?.name != null)
+                        itemView.itemDE = item.de.name;
                     itemView.icon = item.icon;
                     itemView.id = item.id;
 
