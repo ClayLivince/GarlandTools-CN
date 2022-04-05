@@ -371,7 +371,7 @@ gt.list = {
             if (error)
                 gt.display.alertp("分享出错……: " + error);
             else
-                gt.display.alertp("复制分享链接:<br>" + "https://ffxiv.cyanclay.xyz/db/#list/" + result.id);
+                gt.display.alertp("复制分享链接:<br>" + "https://garlandtools.cn/db/#list/" + result.id);
         });
     },
 

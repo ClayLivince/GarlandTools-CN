@@ -328,6 +328,9 @@ namespace Garland.Data.Output
                 if (node.time != null)
                     partial.ti = node.time;
 
+                if (node.coords != null)
+                    partial.c = node.coords;
+
                 nodes[(string)node.id] = partial;
             }
 
