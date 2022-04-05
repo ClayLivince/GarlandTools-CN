@@ -968,7 +968,7 @@ gt.core = {
         if (!data.normalizeUrl || !gt.core.isLive)
             return false;
 
-        var baseUrl = "https://ffxiv.cyanclay.xyz";
+        var baseUrl = "https://garlandtools.cn";
         if (window.location.origin.indexOf(baseUrl) == 0)
             return false;
 
@@ -4807,6 +4807,39 @@ gt.settings = {
         return data;
     },
 
+    export: function(e) {
+        let exported = JSON.stringify(gt.settings.data);
+        let promise = navigator.clipboard.writeText(exported);
+        if (promise) {
+            promise.catch(function(err) {
+                alert("导出失败！");
+            });
+            promise.then(function (){
+                alert("已导出至剪贴板。");
+            })
+        }
+    },
+
+    import: function() {
+        let data = null;
+        let settingStr = $("#import-setting-area").val();
+        let c = window.confirm("确定导入吗？将覆盖之前的设置。");
+        if (c == true){
+            try {
+                data = JSON.parse(settingStr);
+            } catch (e) {
+                window.alert("导入的设置无效。请检查json格式。")
+                return;
+            }
+            gt.settings.data = Object.assign(gt.settings.data, data);
+            gt.settings.saveDirty();
+            window.alert("已导入数据，即将刷新页面。");
+            setTimeout(function () {
+                window.location.reload();
+            }, 3000);
+        }
+    },
+
     // Events
 
     bindEvents: function(data) {
@@ -4915,6 +4948,8 @@ gt.settings = {
         $('#upload-sync').click(gt.settings.uploadSyncClicked);
         $('#download-sync').click(gt.settings.downloadSyncClicked);
         $('#stop-sync').click(gt.settings.stopSyncClicked);
+        $("#export-setting").click(gt.settings.export);
+        $("#import-setting").click(gt.settings.import);
     },
 
     unlockHeightsChanged: function(e) {
@@ -6392,7 +6427,7 @@ gt.list = {
             if (error)
                 gt.display.alertp("分享出错……: " + error);
             else
-                gt.display.alertp("复制分享链接:<br>" + "https://ffxiv.cyanclay.xyz/db/#list/" + result.id);
+                gt.display.alertp("复制分享链接:<br>" + "https://garlandtools.cn/db/#list/" + result.id);
         });
     },
 
@@ -6750,6 +6785,27 @@ gt.quest = {
                     view.dialogue.push({ type: 'speaker', text: line.name });
                 view.dialogue.push({ type: 'dialogue-line', text: line.text });
                 lastName = line.name;
+            }
+
+            lastName = null;
+            if (quest.cutscenes) {
+                view.cutscenes = [];
+                for (var i = 0; i < quest.cutscenes.length; i++) {
+                    var cutscene = quest.cutscenes[i];
+                    var viewCut = [];
+                    for (var j = 0; j < cutscene.length; j++) {
+                        var line = cutscene[j];
+                        if (lastName != line.name)
+                            viewCut.push({ type: 'speaker', text: line.name });
+                        var dialogue = { type: 'dialogue-line', text: line.text };
+                        if (line.voice){
+                            dialogue.voice = "../files/voices/" + line.voice;
+                        }
+                        viewCut.push(dialogue);
+                        lastName = line.name;
+                    }
+                    view.cutscenes.push(viewCut);
+                }
             }
 
             if (quest.talk) {

@@ -15,7 +15,9 @@ namespace Garland.Data
         //private bool _wasHqIconEncountered = false;
         //private Regex _number = new Regex(".*?(\\d+).*?");
 
-        private HtmlStringFormatter() { }
+        private List<(string, int)> _indexedSheetRows = new List<(string, int)>();
+
+        public HtmlStringFormatter() { }
 
         public static string Convert(XivString str)
         {
@@ -26,6 +28,11 @@ namespace Garland.Data
         public string Visit(CloseTag closeTag)
         {
             return "</span>";
+        }
+
+        public List<(string, int)> IndexedSheetRows()
+        {
+            return _indexedSheetRows;
         }
 
         public string Visit(GenericElement genericElement)
@@ -49,19 +56,19 @@ namespace Garland.Data
                     if (genericText == "<Sheet(Addon,9,0)/>")
                         return "<img class=\"hq-icon small\" src=\"images/item/hq.png\">";
                     else if (genericText.Contains("GCRank"))
-                        return "[GC Rank]";
+                        return "[军衔]";
                     else if (genericText == "<Sheet(Race,PlayerParameter(71),0)/>")
-                        return "[Race]";
+                        return "[种族]";
                     else if (genericText == "<Sheet(ClassJob,PlayerParameter(68),0)/>")
-                        return "[Job]";
+                        return "[职业]";
                     else if (genericText == "<Sheet(Town,PlayerParameter(70),0)/>")
-                        return "[Starting City]";
+                        return "[起始城市]";
                     else if (genericText == "<Sheet(ContentFinderCondition,IntegerParameter(1),18)/>")
-                        return "[Item Level]";
+                        return "[物品等级]";
                     else if (genericText == "<Sheet(ContentFinderCondition,IntegerParameter(2),32)/>")
-                        return "[Instance]";
+                        return "[副本]";
                     else if (genericText == "<Sheet(ContentFinderCondition,IntegerParameter(2),34)/>")
-                        return "[Instance]";
+                        return "[副本]";
                     else if (genericText.StartsWith("<Sheet(") && !genericText.Contains("PlayerParameter("))
                     {
                         var genericElementArgs = genericElement.Arguments.ToArray();
@@ -86,6 +93,7 @@ namespace Garland.Data
                             }
                             catch (KeyNotFoundException)
                             {
+                                DatabaseBuilder.PrintLine($"Unknown Sheet Named '{sheetName}'.");
                                 if (System.Diagnostics.Debugger.IsAttached)
                                     System.Diagnostics.Debugger.Break();
                             }
@@ -93,46 +101,48 @@ namespace Garland.Data
                             try
                             {
                                 var row = sheet[sheetKey];
+                                _indexedSheetRows.Add((sheetName, row.Key));
                                 try
                                 {
+                                    // If length < 3 then it do not have enough arguments
                                     if (genericElementArgs.Length < 3)
                                     {
                                         if (sheetName.Contains("Item") || sheetName.Contains("EObjName") || sheetName.Contains("BNpcName"))
                                         {
+                                            
                                             return row[0].ToString();
                                         }
                                         else
                                         {
-                                            Console.WriteLine("0");
+                                            Console.WriteLine("{???}");
                                         }
                                     }
-
                                     var rowIndex = int.Parse(genericElementArgs[2].Accept(this).Trim());
 
                                     return row[rowIndex].ToString();
                                 }
                                 catch (IndexOutOfRangeException)
                                 {
-                                    if (sheetName.Contains("Item") || sheetName.Contains("EObjName") || sheetName.Contains("BNpcName"))
-                                    {
-                                        return row[0].ToString();
-                                    }
-                                    else {
-                                        Console.WriteLine("0");
-                                    }
-                                    
+                                    // if it runs to here better recheck the tag.
+
+                                    return "[???]";
                                 }
                                 catch (KeyNotFoundException)
                                 {
+                                    // usualy caused by some dumb actions
+
                                     //Console.WriteLine(genericText);
-                                    Console.WriteLine("0");
+                                    Console.WriteLine("{???}");
                                 }
                                 catch (Exception) {
                                     //And What?
-                                    Console.WriteLine("0");
+                                    Console.WriteLine("{???}");
                                 }
                             } catch (KeyNotFoundException) {
-                                Console.WriteLine("0");
+                                // Check the sheet name! They must made some dumb new things!
+
+                                Console.WriteLine("{???}");
+
                                 //return String.Format("[{0}]", sheetName);
                             }
                             

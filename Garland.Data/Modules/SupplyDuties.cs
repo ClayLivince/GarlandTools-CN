@@ -20,12 +20,12 @@ namespace Garland.Data.Modules
         private static int[] Currencies = new int[]
         {
             10309,
-            17833,
-            10311,
-            17834,
-            10307,
             25199,
+            10311,
             25200,
+            10307,
+            33913,
+            33914,
             21072,
             21073,
             21074,
@@ -173,7 +173,10 @@ namespace Garland.Data.Modules
                 foreach (var fishView in _builder.Db.Fish)
                 {
                     if ((int)fishView.id == requiredItemKey)
+                    {
                         fishView.scrip = rewardScrip.chs.name.ToString();
+                        fishView.masterpiece = item.masterpiece;
+                    }
                 }
 
                 // Add supply data to reward.
