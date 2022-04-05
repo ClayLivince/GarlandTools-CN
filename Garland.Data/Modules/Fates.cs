@@ -36,45 +36,53 @@ namespace Garland.Data.Modules
             var lines = Utils.Tsv(Path.Combine(Config.SupplementalPath, "FFXIV Data - Fates.tsv"));
             foreach (var line in lines.Skip(1))
             {
-                var name = line[0];
-                var id = int.Parse(line[1]);
-                var zone = line[2];
-                var coords = line[3];
-                var patch = line[4]; // Unused
-                var rewardItemNameStr = line[5];
-
-                dynamic fate = new JObject();
-                fate.name = name;
-                fate.id = id;
-
-                if (zone != "")
+                try
                 {
-                    fate.zoneid = _builder.Db.LocationIdsByEnName[zone];
-                }
-                    
+                    var name = line[0];
+                    var id = int.Parse(line[1]);
+                    var zone = line[2];
+                    var coords = line[3];
+                    var patch = line[4]; // Unused
+                    var rewardItemNameStr = line[5];
 
-                if (coords != "")
-                    fate.coords = new JArray(Utils.FloatComma(coords));
+                    dynamic fate = new JObject();
+                    fate.name = name;
+                    fate.id = id;
 
-                if (rewardItemNameStr != "")
-                {
-                    var rewardItemNames = rewardItemNameStr.Split(_separator, StringSplitOptions.RemoveEmptyEntries);
-                    foreach (var rewardItemName in rewardItemNames)
+                    if (zone != "")
                     {
-                        var item = _builder.Db.ItemsByEnName[rewardItemName];
-                        //var item = _builder.Db.ItemsById[clayManager.getItemID(rewardItemName)];
-                        if (item.fates == null)
-                            item.fates = new JArray();
-                        item.fates.Add(id);
-
-                        if (fate.items == null)
-                            fate.items = new JArray();
-                        fate.items.Add((int)item.id);
-                        _builder.Db.AddReference(item, "fate", id, false);
+                        fate.zoneid = _builder.Db.LocationIdsByEnName[zone];
                     }
-                }
 
-                _fateDataById[(int)fate.id] = fate;
+                    if (coords != "")
+                        fate.coords = new JArray(Utils.FloatComma(coords));
+
+                    if (rewardItemNameStr != "")
+                    {
+                        var rewardItemNames = rewardItemNameStr.Split(_separator, StringSplitOptions.RemoveEmptyEntries);
+                        foreach (var rewardItemName in rewardItemNames)
+                        {
+                            var item = _builder.Db.ItemsByEnName[rewardItemName];
+                            //var item = _builder.Db.ItemsById[clayManager.getItemID(rewardItemName)];
+                            if (item.fates == null)
+                                item.fates = new JArray();
+                            item.fates.Add(id);
+
+                            if (fate.items == null)
+                                fate.items = new JArray();
+                            fate.items.Add((int)item.id);
+                            _builder.Db.AddReference(item, "fate", id, false);
+                        }
+                    }
+
+                    _fateDataById[(int)fate.id] = fate;
+                }
+                catch (Exception e)
+                {
+                    DatabaseBuilder.PrintLine($"Fate Line Error: {line}");
+                    if (System.Diagnostics.Debugger.IsAttached)
+                        System.Diagnostics.Debugger.Break();
+                }
             }
         }
 
