@@ -968,7 +968,7 @@ gt.core = {
         if (!data.normalizeUrl || !gt.core.isLive)
             return false;
 
-        var baseUrl = "https://ffxiv.cyanclay.xyz";
+        var baseUrl = "https://garlandtools.cn";
         if (window.location.origin.indexOf(baseUrl) == 0)
             return false;
 
