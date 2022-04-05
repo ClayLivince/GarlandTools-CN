@@ -11,9 +11,11 @@ namespace Garland.Data.Modules
     public class Ventures : Module
     {
         public override string Name => "Ventures";
+        private Dictionary<int, Saint.RetainerTask> iVentureById = new Dictionary<int, Saint.RetainerTask>();
 
         public override void Start()
         {
+            iVentureById = _builder.InterSheet<Saint.RetainerTask>().ToDictionary(v => (int)v.Key);
             foreach (var sVenture in _builder.Sheet<Saint.RetainerTask>())
             {
                 if (sVenture.Key == 0 || sVenture.ClassJobCategory.Key == 0 || sVenture.Task.Key == 0)
@@ -73,7 +75,13 @@ namespace Garland.Data.Modules
                 }
 
                 if (sVenture.Task is Saint.RetainerTaskRandom sRandomTask)
+                {
+                    var iVenture = iVentureById[sVenture.Key];
                     venture.name = (string)sRandomTask.Name;
+                    venture.nameEN = iVenture.Task is Saint.RetainerTaskRandom iRandomTask ?
+                        (string)iRandomTask.Name : "";
+                }
+                    
 
                 if (sVenture.Task is Saint.RetainerTaskNormal sNormalTask)
                 {

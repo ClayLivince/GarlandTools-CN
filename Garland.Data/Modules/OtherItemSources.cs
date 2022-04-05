@@ -17,10 +17,9 @@ namespace Garland.Data.Modules
 
         public override void Start()
         {
-            _venturesByName = _builder.Db.Ventures.Where(v => v.name != null).ToDictionary(v => (string)v.name);
+            _venturesByName = _builder.Db.Ventures.Where(v => v.nameEN != null).ToDictionary(v => (string)v.nameEN);
 
             var lines = Utils.Tsv(Path.Combine(Config.SupplementalPath, "FFXIV Data - Items.tsv"));
-            Clay.ClayMySQL clayManager = new Clay.ClayMySQL();
             foreach (var line in lines.Skip(1))
             {
                 var type = line[1];
@@ -50,7 +49,7 @@ namespace Garland.Data.Modules
                             break;
 
                         case "Venture":
-                            BuildVentures(clayManager, item,  args);
+                            BuildVentures(item,  args);
                             break;
 
                         case "Node":
@@ -62,7 +61,7 @@ namespace Garland.Data.Modules
                             break;
 
                         case "Instance":
-                            BuildInstances(clayManager, item, args);
+                            BuildInstances(item, args);
                             break;
 
                         case "Voyage":
@@ -93,7 +92,6 @@ namespace Garland.Data.Modules
                         //System.Diagnostics.Debugger.Break();
                 }
             }
-            clayManager.Stop();
         }
 
         void BuildOther(dynamic item, string[] sources)
@@ -215,11 +213,11 @@ namespace Garland.Data.Modules
             }
         }
 
-        void BuildVentures(Clay.ClayMySQL clayManager, dynamic item,string[] sources)
+        void BuildVentures(dynamic item,string[] sources)
         {
             if (item.ventures != null)
                 throw new InvalidOperationException("item.ventures already exists.");
-            var ventureIds = sources.Select(j => (int)_venturesByName[clayManager.getRetainerTaskChs(j)].id);
+            var ventureIds = sources.Select(j => (int)_venturesByName[j].id);
             item.ventures = new JArray(ventureIds);
         }
 
@@ -271,7 +269,7 @@ namespace Garland.Data.Modules
             }
         }
 
-        void BuildInstances(Clay.ClayMySQL clayManager, dynamic item,  string[] sources)
+        void BuildInstances(dynamic item,  string[] sources)
         {
             if (item.instances == null)
                 item.instances = new JArray();
