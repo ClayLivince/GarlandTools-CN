@@ -20511,7 +20511,7 @@
                 ],
                 "drops": [
                     {
-                        "name": "???"
+                        "name": "Magus Sisters Card"
                     }
                 ],
                 "treasures": [
@@ -20788,7 +20788,7 @@
                 ],
                 "drops": [
                     {
-                        "name": "???"
+                        "name": "Anima Card"
                     }
                 ],
                 "treasures": [
@@ -21337,7 +21337,7 @@
                 ],
                 "drops": [
                     {
-                        "name": "???"
+                        "name": "Hermes Card"
                     }
                 ],
                 "treasures": [
@@ -21549,7 +21549,7 @@
                 ],
                 "drops": [
                     {
-                        "name": "???"
+                        "name": "Amon the Undying Card"
                     }
                 ],
                 "treasures": [
@@ -21768,7 +21768,7 @@
                             "The Last Necklace of Aiming",
                             "The Last Necklace of Casting",
                             "The Last Necklace of Healing",
-                            "???",
+                            "Starbird",
                             "Of Countless Stars Orchestrion Roll"
                         ]
                     }
@@ -25621,7 +25621,7 @@
                 ],
                 "drops": [
                     {
-                        "name": "???"
+                        "name": "Zodiark Card"
                     }
                 ]
             }
@@ -25645,7 +25645,7 @@
                 ],
                 "drops": [
                     {
-                        "name": "???"
+                        "name": "Hydaelyn Card"
                     }
                 ]
             }
@@ -25669,7 +25669,7 @@
                 ],
                 "drops": [
                     {
-                        "name": "???"
+                        "name": "Meteion Card"
                     }
                 ],
                 "token": [
@@ -25703,10 +25703,10 @@
                 ],
                 "drops": [
                     {
-                        "name": "???"
+                        "name": "Astral Totem"
                     },
                     {
-                        "name": "???"
+                        "name": "Zodiark Card"
                     }
                 ],
                 "treasures": [
@@ -25734,8 +25734,8 @@
                             "???",
                             "???",
                             "???",
-                            "???",
-                            "???"
+                            "Lynx of Eternal Darkness Flute",
+                            "Crystal of Eternal Darkness"
                         ]
                     }
                 ],
@@ -25770,10 +25770,10 @@
                 ],
                 "drops": [
                     {
-                        "name": "???"
+                        "name": "Hydaelyn Card"
                     },
                     {
-                        "name": "???"
+                        "name": "Umbral Totem"
                     }
                 ],
                 "treasures": [
@@ -25802,8 +25802,8 @@
                             "???",
                             "???",
                             "???",
-                            "???",
-                            "???"
+                            "Lynx of Divine Light Flute",
+                            "Crystal of Divine Light"
                         ]
                     }
                 ],
