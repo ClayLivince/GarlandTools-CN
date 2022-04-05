@@ -11,9 +11,13 @@ gt = {
     tw: function(str) {
         // So nasty
         var regex = /[a-zA-Z'\s]+[a-zA-Z'$]+/;
-        var word = regex.exec(str)[0];
-        var value = str.split(regex)[1];
-        return gt.locale.translate(word) + value;
+        try{
+            var word = regex.exec(str)[0];
+            var value = str.split(regex)[1];
+            return gt.locale.translate(word) + value;
+        } catch (e){
+            return str;
+        }
     }
 };
 
@@ -296,7 +300,7 @@ gt.bell = {
             // Tasks (inverted)
             reducibleOnly: _.contains(filters, '.reducible'),
             whitescripsOnly: _.contains(filters, '.whitescrips'),
-            yellowscripsOnly: _.contains(filters, '.yellowscrips'),
+            purplescripsOnly: _.contains(filters, '.purplescrips'),
             hiddenOnly: _.contains(filters, '.hidden'),
 
             // Other
@@ -371,7 +375,7 @@ gt.bell = {
                 return true;
             if (filters.whitescripsOnly && !_.any(def.items, function(i) { return i.scrip == "大地白票"; }))
                 return true;
-            if (filters.yellowscripsOnly && !_.any(def.items, function(i) { return i.scrip == "大地黄票"; }))
+            if (filters.purplescripsOnly && !_.any(def.items, function(i) { return i.scrip == "大地紫票"; }))
                 return true;
         } else if (def.func == 'fish') {
             if (!filters.fish)
@@ -380,7 +384,7 @@ gt.bell = {
                 return true;
             if (filters.whitescripsOnly && def.scrip != "大地白票")
                 return true;
-            if (filters.yellowscripsOnly && def.scrip != "大地黄票")
+            if (filters.purplescripsOnly && def.scrip != "大地紫票")
                 return true;
         } else if (def.func == 'hunt') {
             if (!filters.hunt)
@@ -2823,7 +2827,7 @@ gt.util = {
 
 // gt.data.core.js
 
-gt.scrips = { "大地红票": 65029, "大地黄票": 65043, "大地白票": 65069, "大地紫票": "65087" };
+gt.scrips = { "大地红票": 65029, "大地黄票": 65043, "大地白票": 65069, "大地紫票": 65087 };
 gt.location = { };
 // Stupid, but at least usable. maybe marked inside node.js later.
 gt.location.toPatch = {
