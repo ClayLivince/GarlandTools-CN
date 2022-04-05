@@ -41,7 +41,7 @@
       29.17,
       12.79
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 180,
     "lvl": 50,
     "id": 211,
@@ -91,7 +91,7 @@
       26.58,
       24.44
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 180,
     "lvl": 50,
     "id": 212,
@@ -141,7 +141,7 @@
       8.47,
       13.35
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 180,
     "lvl": 50,
     "id": 213,
@@ -200,7 +200,7 @@
       30.71,
       27.01
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 180,
     "lvl": 50,
     "id": 214,
@@ -296,7 +296,7 @@
       32.11,
       13.55
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 180,
     "lvl": 50,
     "id": 215,
@@ -355,7 +355,7 @@
       22.0,
       26.46
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 180,
     "lvl": 50,
     "id": 216,
@@ -414,7 +414,7 @@
       17.68,
       19.32
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 180,
     "lvl": 50,
     "id": 217,
@@ -482,7 +482,7 @@
       13.81,
       23.84
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 180,
     "lvl": 50,
     "id": 218,
@@ -541,7 +541,7 @@
       27.49,
       32.79
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 180,
     "lvl": 50,
     "id": 219,
@@ -600,7 +600,7 @@
       17.56,
       27.61
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 180,
     "lvl": 50,
     "id": 220,
@@ -659,7 +659,7 @@
       12.35,
       15.89
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 180,
     "lvl": 50,
     "id": 221,
@@ -718,7 +718,7 @@
       27.61,
       19.96
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 180,
     "lvl": 50,
     "id": 222,
@@ -786,7 +786,7 @@
       28.09,
       21.74
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 180,
     "lvl": 50,
     "id": 223,
@@ -836,7 +836,7 @@
       19.36,
       33.09
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 180,
     "lvl": 50,
     "id": 224,
@@ -886,7 +886,7 @@
       23.4,
       24.68
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 180,
     "lvl": 50,
     "id": 225,
@@ -936,7 +936,7 @@
       25.58,
       23.24
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 180,
     "lvl": 50,
     "id": 226,
@@ -1032,7 +1032,7 @@
       27.83,
       10.93
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 180,
     "lvl": 50,
     "id": 227,
@@ -1082,7 +1082,7 @@
       16.62,
       27.61
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 180,
     "lvl": 50,
     "id": 230,
@@ -1132,7 +1132,7 @@
       18.66,
       16.48
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 180,
     "lvl": 50,
     "id": 231,
@@ -1191,7 +1191,7 @@
       29.13,
       25.48
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 180,
     "lvl": 50,
     "id": 232,
@@ -1250,7 +1250,7 @@
       15.91,
       20.5
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 180,
     "lvl": 50,
     "id": 233,
@@ -1318,7 +1318,7 @@
       34.29,
       28.33
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 180,
     "lvl": 50,
     "id": 234,
@@ -1377,7 +1377,7 @@
       32.55,
       12.99
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 180,
     "lvl": 50,
     "id": 235,
@@ -1454,7 +1454,7 @@
       17.34,
       20.18
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 180,
     "lvl": 50,
     "id": 236,
@@ -1531,7 +1531,7 @@
       25.24,
       15.89
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 180,
     "lvl": 50,
     "id": 237,
@@ -1599,7 +1599,7 @@
       23.76,
       21.64
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 180,
     "lvl": 50,
     "id": 238,
@@ -1658,7 +1658,7 @@
       24.34,
       27.03
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 180,
     "lvl": 50,
     "id": 239,
@@ -1717,7 +1717,7 @@
       16.8,
       30.67
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 180,
     "lvl": 50,
     "id": 240,
@@ -1776,7 +1776,7 @@
       18.92,
       28.39
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 180,
     "lvl": 50,
     "id": 241,
@@ -1826,7 +1826,7 @@
       17.5,
       23.08
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 180,
     "lvl": 50,
     "id": 242,
@@ -1876,7 +1876,7 @@
       30.59,
       20.18
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 180,
     "lvl": 50,
     "id": 245,
@@ -1908,7 +1908,7 @@
       26.87,
       18.56
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 180,
     "lvl": 50,
     "id": 246,
@@ -1967,7 +1967,7 @@
       17.18,
       10.59
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 180,
     "lvl": 50,
     "id": 247,
@@ -2017,7 +2017,7 @@
       24.38,
       26.42
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 180,
     "lvl": 50,
     "id": 248,
@@ -2067,7 +2067,7 @@
       24.8,
       29.63
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 180,
     "lvl": 50,
     "id": 249,
@@ -2099,7 +2099,7 @@
       17.56,
       27.53
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 180,
     "lvl": 50,
     "id": 250,
@@ -2140,7 +2140,7 @@
       22.72,
       30.59
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 180,
     "lvl": 50,
     "id": 251,
@@ -2199,7 +2199,7 @@
       23.08,
       24.3
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 180,
     "lvl": 50,
     "id": 252,
@@ -2292,7 +2292,7 @@
       22.51,
       19.94
     ],
-    "name": "Ephemeral",
+    "name": "限时的",
     "uptime": 240,
     "lvl": 60,
     "id": 305,
@@ -2310,7 +2310,7 @@
         "itemDE": "Pyrit (Sammlerstück)",
         "icon": 21207,
         "id": 32970,
-        "scrip": "大地黄票"
+        "scrip": "大地白票"
       },
       {
         "item": "收藏用辉铜矿",
@@ -2320,7 +2320,7 @@
         "itemDE": "Chalkosin (Sammlerstück)",
         "icon": 21209,
         "id": 32971,
-        "scrip": "大地黄票"
+        "scrip": "大地白票"
       },
       {
         "item": "收藏用褐铁矿",
@@ -2330,7 +2330,7 @@
         "itemDE": "Braun<SoftHyphen/>ei<SoftHyphen/>sen<SoftHyphen/>stein (Sammlerstück)",
         "icon": 21206,
         "id": 32972,
-        "scrip": "大地黄票"
+        "scrip": "大地白票"
       }
     ],
     "time": [
@@ -2343,7 +2343,7 @@
       30.06,
       31.62
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 55,
     "id": 306,
@@ -2361,7 +2361,7 @@
         "itemDE": "Abalathisches Quellwasser (Sammlerstück)",
         "icon": 22614,
         "id": 32973,
-        "scrip": "大地黄票"
+        "scrip": "大地白票"
       },
       {
         "item": "收藏用皇金沙",
@@ -2371,7 +2371,7 @@
         "itemDE": "Königsgold-Sandklumpen (Sammlerstück)",
         "icon": 21220,
         "id": 32974,
-        "scrip": "大地黄票"
+        "scrip": "大地白票"
       }
     ],
     "time": [
@@ -2384,7 +2384,7 @@
       19.46,
       9.93
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 60,
     "id": 308,
@@ -2402,7 +2402,7 @@
         "itemDE": "Roh-Triphan (Sammlerstück)",
         "icon": 21474,
         "id": 32975,
-        "scrip": "大地黄票"
+        "scrip": "大地白票"
       },
       {
         "item": "收藏用蓝晶石原石",
@@ -2412,7 +2412,7 @@
         "itemDE": "Roh-Kyanit (Sammlerstück)",
         "icon": 21472,
         "id": 32977,
-        "scrip": "大地黄票"
+        "scrip": "大地白票"
       }
     ],
     "time": [
@@ -2425,7 +2425,7 @@
       29.63,
       12.93
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 65,
     "id": 310,
@@ -2516,7 +2516,7 @@
       24.75,
       20.45
     ],
-    "name": "Ephemeral",
+    "name": "限时的",
     "uptime": 240,
     "lvl": 60,
     "id": 307,
@@ -2534,7 +2534,7 @@
         "itemDE": "Roh-Sternspinell (Sammlerstück)",
         "icon": 21475,
         "id": 32976,
-        "scrip": "大地黄票"
+        "scrip": "大地白票"
       }
     ],
     "time": [
@@ -2547,7 +2547,7 @@
       21.2,
       34.35
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 65,
     "id": 312,
@@ -2565,7 +2565,7 @@
         "itemDE": "Roh-Azurit (Sammlerstück)",
         "icon": 21472,
         "id": 32978,
-        "scrip": "大地黄票"
+        "scrip": "大地白票"
       },
       {
         "item": "收藏用清银矿",
@@ -2575,7 +2575,7 @@
         "itemDE": "Silbergunsterz (Sammlerstück)",
         "icon": 21213,
         "id": 32979,
-        "scrip": "大地黄票"
+        "scrip": "大地白票"
       }
     ],
     "time": [
@@ -2588,7 +2588,7 @@
       36.01,
       26.42
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 70,
     "id": 328,
@@ -2606,7 +2606,7 @@
         "itemDE": "Titanbronze-Erzklumpen (Sammlerstück)",
         "icon": 21202,
         "id": 32980,
-        "scrip": "大地黄票"
+        "scrip": "大地白票"
       },
       {
         "item": "收藏用透锂长石原石",
@@ -2616,7 +2616,7 @@
         "itemDE": "Roh-Petalit (Sammlerstück)",
         "icon": 21477,
         "id": 32982,
-        "scrip": "大地黄票"
+        "scrip": "大地白票"
       }
     ],
     "time": [
@@ -2629,7 +2629,7 @@
       31.25,
       24.14
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 75,
     "id": 330,
@@ -2720,7 +2720,7 @@
       28.45,
       16.63
     ],
-    "name": "Ephemeral",
+    "name": "限时的",
     "uptime": 240,
     "lvl": 60,
     "id": 309,
@@ -2738,7 +2738,7 @@
         "itemDE": "Roh-Lasurit (Sammlerstück)",
         "icon": 21472,
         "id": 32981,
-        "scrip": "大地黄票"
+        "scrip": "大地白票"
       }
     ],
     "time": [
@@ -2751,7 +2751,7 @@
       16.5,
       18.18
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 75,
     "id": 332,
@@ -2769,7 +2769,7 @@
         "itemDE": "Meersalzklumpen (Sammlerstück)",
         "icon": 22617,
         "id": 32983,
-        "scrip": "大地黄票"
+        "scrip": "大地白票"
       },
       {
         "item": "收藏用黑玛瑙原石",
@@ -2779,7 +2779,7 @@
         "itemDE": "Roh-Onyx (Sammlerstück)",
         "icon": 21231,
         "id": 32985,
-        "scrip": "大地黄票"
+        "scrip": "大地白票"
       }
     ],
     "time": [
@@ -2792,7 +2792,7 @@
       25.12,
       4.48
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 80,
     "id": 334,
@@ -2883,7 +2883,7 @@
       18.3,
       36.63
     ],
-    "name": "Ephemeral",
+    "name": "限时的",
     "uptime": 240,
     "lvl": 60,
     "id": 311,
@@ -2974,7 +2974,7 @@
       24.22,
       30.69
     ],
-    "name": "Ephemeral",
+    "name": "限时的",
     "uptime": 240,
     "lvl": 60,
     "id": 313,
@@ -3013,7 +3013,7 @@
       5.91,
       5.74
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 60,
     "id": 318,
@@ -3045,7 +3045,7 @@
       22.74,
       3.99
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 60,
     "id": 320,
@@ -3087,7 +3087,7 @@
       37.05,
       16.29
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 60,
     "id": 321,
@@ -3129,7 +3129,7 @@
       7.87,
       36.61
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 60,
     "id": 323,
@@ -3162,7 +3162,7 @@
       36.04,
       37.43
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 60,
     "id": 324,
@@ -3195,7 +3195,7 @@
       9.95,
       14.57
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 60,
     "id": 325,
@@ -3228,7 +3228,7 @@
       35.7,
       13.96
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 60,
     "id": 326,
@@ -3348,7 +3348,7 @@
       12.31,
       19.56
     ],
-    "name": "Ephemeral",
+    "name": "限时的",
     "uptime": 240,
     "lvl": 60,
     "id": 327,
@@ -3466,7 +3466,7 @@
       24.75,
       28.64
     ],
-    "name": "Ephemeral",
+    "name": "限时的",
     "uptime": 240,
     "lvl": 60,
     "id": 329,
@@ -3566,7 +3566,7 @@
       16.19,
       31.36
     ],
-    "name": "Ephemeral",
+    "name": "限时的",
     "uptime": 240,
     "lvl": 60,
     "id": 331,
@@ -3666,7 +3666,7 @@
       8.6,
       36.65
     ],
-    "name": "Ephemeral",
+    "name": "限时的",
     "uptime": 240,
     "lvl": 60,
     "id": 333,
@@ -3766,7 +3766,7 @@
       4.98,
       26.98
     ],
-    "name": "Ephemeral",
+    "name": "限时的",
     "uptime": 240,
     "lvl": 60,
     "id": 337,
@@ -3840,7 +3840,7 @@
       28.97,
       6.71
     ],
-    "name": "Ephemeral",
+    "name": "限时的",
     "uptime": 240,
     "lvl": 70,
     "id": 492,
@@ -3906,7 +3906,7 @@
       30.52,
       17.69
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 55,
     "id": 339,
@@ -3957,7 +3957,7 @@
       25.76,
       11.76
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 50,
     "id": 340,
@@ -3998,7 +3998,7 @@
       25.04,
       7.02
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 55,
     "id": 341,
@@ -4039,7 +4039,7 @@
       35.49,
       20.28
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 60,
     "id": 342,
@@ -4080,7 +4080,7 @@
       14.65,
       36.86
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 60,
     "id": 343,
@@ -4112,7 +4112,7 @@
       6.96,
       8.73
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 60,
     "id": 344,
@@ -4163,7 +4163,7 @@
       21.33,
       20.36
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 60,
     "id": 345,
@@ -4239,7 +4239,7 @@
       13.25,
       27.39
     ],
-    "name": "Ephemeral",
+    "name": "限时的",
     "uptime": 240,
     "lvl": 70,
     "id": 494,
@@ -4270,7 +4270,7 @@
       16.29,
       36.67
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 60,
     "id": 347,
@@ -4303,7 +4303,7 @@
       21.16,
       4.45
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 60,
     "id": 348,
@@ -4336,7 +4336,7 @@
       38.72,
       22.79
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 60,
     "id": 349,
@@ -4369,7 +4369,7 @@
       21.98,
       7.38
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 60,
     "id": 350,
@@ -4411,7 +4411,7 @@
       8.29,
       7.99
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 60,
     "id": 395,
@@ -4478,7 +4478,7 @@
       34.77,
       24.5
     ],
-    "name": "Ephemeral",
+    "name": "限时的",
     "uptime": 240,
     "lvl": 70,
     "id": 496,
@@ -4518,7 +4518,7 @@
       37.26,
       13.09
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 60,
     "id": 397,
@@ -4538,7 +4538,7 @@
         "itemDE": "Tiefenfels (Sammlerstück)",
         "icon": 21203,
         "id": 32984,
-        "scrip": "大地黄票"
+        "scrip": "大地白票"
       },
       {
         "item": "收藏用重钨矿",
@@ -4548,7 +4548,7 @@
         "itemDE": "Wolframerzklumpen (Sammlerstück)",
         "icon": 21203,
         "id": 32986,
-        "scrip": "大地黄票"
+        "scrip": "大地白票"
       }
     ],
     "stars": 1,
@@ -4562,7 +4562,7 @@
       32.73,
       20.58
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 80,
     "id": 766,
@@ -4580,7 +4580,7 @@
         "itemDE": "Abanischer Alaun (Sammlerstück)",
         "icon": 22644,
         "id": 32987,
-        "scrip": "大地黄票"
+        "scrip": "大地白票"
       }
     ],
     "stars": 1,
@@ -4594,7 +4594,7 @@
       31.59,
       31.41
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 80,
     "id": 767,
@@ -4612,7 +4612,7 @@
         "itemDE": "Dunkler Kastaniensaft (Sammlerstück)",
         "icon": 22654,
         "id": 32992,
-        "scrip": "大地黄票"
+        "scrip": "大地白票"
       },
       {
         "item": "收藏用暗栗木原木",
@@ -4622,7 +4622,7 @@
         "itemDE": "Dunkles Kastanienholz (Sammlerstück)",
         "icon": 22420,
         "id": 32993,
-        "scrip": "大地黄票"
+        "scrip": "大地白票"
       },
       {
         "item": "收藏用暗栗树枝",
@@ -4632,7 +4632,7 @@
         "itemDE": "Dunkler Kastanienast (Sammlerstück)",
         "icon": 22416,
         "id": 32994,
-        "scrip": "大地黄票"
+        "scrip": "大地白票"
       }
     ],
     "time": [
@@ -4645,7 +4645,7 @@
       28.48,
       29.4
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 55,
     "id": 768,
@@ -4663,7 +4663,7 @@
         "itemDE": "Dunkle Kastanie (Sammlerstück)",
         "icon": 25302,
         "id": 32995,
-        "scrip": "大地黄票"
+        "scrip": "大地白票"
       },
       {
         "item": "收藏用暗栗木树脂",
@@ -4673,7 +4673,7 @@
         "itemDE": "Dunkles Kastanienharz (Sammlerstück)",
         "icon": 22674,
         "id": 32996,
-        "scrip": "大地黄票"
+        "scrip": "大地白票"
       }
     ],
     "time": [
@@ -4686,7 +4686,7 @@
       14.74,
       36.15
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 60,
     "id": 769,
@@ -4751,7 +4751,7 @@
       31.07,
       26.97
     ],
-    "name": "Ephemeral",
+    "name": "限时的",
     "uptime": 240,
     "lvl": 70,
     "id": 515,
@@ -4782,7 +4782,7 @@
       8.54,
       7.72
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 60,
     "id": 289,
@@ -4815,7 +4815,7 @@
       15.18,
       29.61
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 60,
     "id": 290,
@@ -4848,7 +4848,7 @@
       3.5,
       14.95
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 60,
     "id": 291,
@@ -4881,7 +4881,7 @@
       5.84,
       27.32
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 60,
     "id": 292,
@@ -4914,7 +4914,7 @@
       6.16,
       29.55
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 60,
     "id": 293,
@@ -4947,7 +4947,7 @@
       8.67,
       37.89
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 60,
     "id": 299,
@@ -4980,7 +4980,7 @@
       34.31,
       28.22
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 60,
     "id": 301,
@@ -5013,7 +5013,7 @@
       25.26,
       8.29
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 60,
     "id": 497,
@@ -5045,7 +5045,7 @@
       14.91,
       5.04
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 65,
     "id": 498,
@@ -5086,7 +5086,7 @@
       27.01,
       12.61
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 70,
     "id": 499,
@@ -5118,7 +5118,7 @@
       29.87,
       9.35
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 70,
     "id": 500,
@@ -5150,7 +5150,7 @@
       4.94,
       29.55
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 70,
     "id": 501,
@@ -5182,7 +5182,7 @@
       21.2,
       28.95
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 70,
     "id": 502,
@@ -5224,7 +5224,7 @@
       15.93,
       33.95
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 70,
     "id": 503,
@@ -5257,7 +5257,7 @@
       20.46,
       9.71
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 70,
     "id": 504,
@@ -5333,7 +5333,7 @@
       32.09,
       26.69
     ],
-    "name": "Ephemeral",
+    "name": "限时的",
     "uptime": 240,
     "lvl": 70,
     "id": 518,
@@ -5398,7 +5398,7 @@
       25.74,
       29.85
     ],
-    "name": "Ephemeral",
+    "name": "限时的",
     "uptime": 240,
     "lvl": 70,
     "id": 520,
@@ -5428,7 +5428,7 @@
       28.83,
       25.58
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 65,
     "id": 522,
@@ -5460,7 +5460,7 @@
       27.19,
       16.29
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 70,
     "id": 523,
@@ -5493,7 +5493,7 @@
       24.08,
       16.56
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 70,
     "id": 524,
@@ -5525,7 +5525,7 @@
       28.09,
       7.79
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 70,
     "id": 525,
@@ -5566,7 +5566,7 @@
       6.87,
       8.99
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 70,
     "id": 526,
@@ -5599,7 +5599,7 @@
       11.89,
       12.73
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 70,
     "id": 527,
@@ -5641,7 +5641,7 @@
       19.72,
       9.79
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 70,
     "id": 528,
@@ -5683,7 +5683,7 @@
       10.93,
       22.56
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 70,
     "id": 535,
@@ -5725,7 +5725,7 @@
       24.14,
       37.22
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 70,
     "id": 536,
@@ -5767,7 +5767,7 @@
       14.89,
       21.24
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 70,
     "id": 537,
@@ -5800,7 +5800,7 @@
       24.74,
       36.11
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 70,
     "id": 538,
@@ -5833,7 +5833,7 @@
       27.37,
       30.25
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 70,
     "id": 555,
@@ -5866,7 +5866,7 @@
       21.76,
       13.53
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 70,
     "id": 556,
@@ -5899,7 +5899,7 @@
       33.37,
       10.63
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 70,
     "id": 557,
@@ -5932,7 +5932,7 @@
       28.35,
       35.37
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 70,
     "id": 558,
@@ -5999,7 +5999,7 @@
       22.48,
       11.87
     ],
-    "name": "Ephemeral",
+    "name": "限时的",
     "uptime": 240,
     "lvl": 80,
     "id": 597,
@@ -6064,7 +6064,7 @@
       35.47,
       30.57
     ],
-    "name": "Ephemeral",
+    "name": "限时的",
     "uptime": 240,
     "lvl": 80,
     "id": 599,
@@ -6129,7 +6129,7 @@
       33.01,
       18.54
     ],
-    "name": "Ephemeral",
+    "name": "限时的",
     "uptime": 240,
     "lvl": 80,
     "id": 601,
@@ -6160,7 +6160,7 @@
       33.97,
       23.22
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 70,
     "id": 603,
@@ -6192,7 +6192,7 @@
       26.48,
       13.29
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 75,
     "id": 604,
@@ -6224,7 +6224,7 @@
       19.76,
       20.54
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 75,
     "id": 605,
@@ -6256,7 +6256,7 @@
       20.0,
       28.99
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 80,
     "id": 606,
@@ -6288,7 +6288,7 @@
       28.17,
       33.21
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 80,
     "id": 607,
@@ -6320,7 +6320,7 @@
       15.99,
       21.64
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 80,
     "id": 608,
@@ -6362,7 +6362,7 @@
       30.59,
       20.62
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 80,
     "id": 609,
@@ -6395,7 +6395,7 @@
       32.85,
       7.69
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 80,
     "id": 610,
@@ -6462,7 +6462,7 @@
       31.65,
       36.55
     ],
-    "name": "Ephemeral",
+    "name": "限时的",
     "uptime": 240,
     "lvl": 80,
     "id": 622,
@@ -6527,7 +6527,7 @@
       22.52,
       13.11
     ],
-    "name": "Ephemeral",
+    "name": "限时的",
     "uptime": 240,
     "lvl": 80,
     "id": 624,
@@ -6592,7 +6592,7 @@
       18.66,
       7.77
     ],
-    "name": "Ephemeral",
+    "name": "限时的",
     "uptime": 240,
     "lvl": 80,
     "id": 626,
@@ -6622,7 +6622,7 @@
       24.88,
       36.83
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 75,
     "id": 628,
@@ -6654,7 +6654,7 @@
       26.28,
       20.68
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 75,
     "id": 629,
@@ -6686,7 +6686,7 @@
       19.34,
       16.92
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 80,
     "id": 630,
@@ -6718,7 +6718,7 @@
       34.73,
       21.56
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 80,
     "id": 631,
@@ -6750,7 +6750,7 @@
       20.12,
       27.35
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 80,
     "id": 632,
@@ -6792,7 +6792,7 @@
       24.74,
       36.94
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 80,
     "id": 633,
@@ -6825,7 +6825,7 @@
       26.48,
       10.11
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 80,
     "id": 634,
@@ -6867,7 +6867,7 @@
       4.74,
       34.01
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 80,
     "id": 681,
@@ -6900,7 +6900,7 @@
       34.45,
       31.43
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 80,
     "id": 682,
@@ -6933,7 +6933,7 @@
       36.53,
       27.43
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 80,
     "id": 683,
@@ -6975,7 +6975,7 @@
       28.45,
       21.18
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 80,
     "id": 684,
@@ -6995,7 +6995,7 @@
         "itemDE": "Lärchen-Holzscheit (Sammlerstück)",
         "icon": 22403,
         "id": 32997,
-        "scrip": "大地黄票"
+        "scrip": "大地白票"
       },
       {
         "item": "收藏用落叶松树液",
@@ -7005,7 +7005,7 @@
         "itemDE": "Lärchensaft (Sammlerstück)",
         "icon": 22642,
         "id": 32999,
-        "scrip": "大地黄票"
+        "scrip": "大地白票"
       }
     ],
     "time": [
@@ -7018,7 +7018,7 @@
       5.96,
       15.77
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 65,
     "id": 770,
@@ -7036,7 +7036,7 @@
         "itemDE": "Shiitake-Pilz (Sammlerstück)",
         "icon": 25401,
         "id": 32998,
-        "scrip": "大地黄票"
+        "scrip": "大地白票"
       }
     ],
     "time": [
@@ -7049,7 +7049,7 @@
       33.11,
       9.23
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 65,
     "id": 771,
@@ -7067,7 +7067,7 @@
         "itemDE": "Kieferharz (Sammlerstück)",
         "icon": 22638,
         "id": 33000,
-        "scrip": "大地黄票"
+        "scrip": "大地白票"
       },
       {
         "item": "收藏用松木原木",
@@ -7077,7 +7077,7 @@
         "itemDE": "Kiefern-Holzscheit (Sammlerstück)",
         "icon": 22414,
         "id": 33001,
-        "scrip": "大地黄票"
+        "scrip": "大地白票"
       }
     ],
     "time": [
@@ -7090,7 +7090,7 @@
       18.7,
       14.37
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 70,
     "id": 772,
@@ -7108,7 +7108,7 @@
         "itemDE": "Pixie-Apfel (Sammlerstück)",
         "icon": 25308,
         "id": 33002,
-        "scrip": "大地黄票"
+        "scrip": "大地白票"
       },
       {
         "item": "收藏用仙果木原木",
@@ -7118,7 +7118,7 @@
         "itemDE": "Wunderapfelholzscheit (Sammlerstück)",
         "icon": 22404,
         "id": 33004,
-        "scrip": "大地黄票"
+        "scrip": "大地白票"
       }
     ],
     "time": [
@@ -7131,7 +7131,7 @@
       4.04,
       23.12
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 75,
     "id": 773,
@@ -7149,7 +7149,7 @@
         "itemDE": "Weißeichenholzscheit (Sammlerstück)",
         "icon": 22407,
         "id": 33003,
-        "scrip": "大地黄票"
+        "scrip": "大地白票"
       }
     ],
     "time": [
@@ -7162,7 +7162,7 @@
       27.95,
       32.79
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 75,
     "id": 774,
@@ -7180,7 +7180,7 @@
         "itemDE": "Sandteakholzscheit (Sammlerstück)",
         "icon": 22403,
         "id": 33005,
-        "scrip": "大地黄票"
+        "scrip": "大地白票"
       },
       {
         "item": "收藏用琥珀丁香",
@@ -7190,7 +7190,7 @@
         "itemDE": "Bernsteinnelke (Sammlerstück)",
         "icon": 25023,
         "id": 33007,
-        "scrip": "大地黄票"
+        "scrip": "大地白票"
       }
     ],
     "time": [
@@ -7203,7 +7203,7 @@
       18.6,
       20.52
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 80,
     "id": 775,
@@ -7221,7 +7221,7 @@
         "itemDE": "Seegras (Sammlerstück)",
         "icon": 25225,
         "id": 33006,
-        "scrip": "大地黄票"
+        "scrip": "大地白票"
       },
       {
         "item": "收藏用珊瑚",
@@ -7231,7 +7231,7 @@
         "itemDE": "Koralle (Sammlerstück)",
         "icon": 29062,
         "id": 33008,
-        "scrip": "大地黄票"
+        "scrip": "大地白票"
       }
     ],
     "stars": 1,
@@ -7245,7 +7245,7 @@
       37.5,
       11.63
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 80,
     "id": 776,
@@ -7263,7 +7263,7 @@
         "itemDE": "Urunday-Holzscheit (Sammlerstück)",
         "icon": 22420,
         "id": 33009,
-        "scrip": "大地黄票"
+        "scrip": "大地白票"
       }
     ],
     "stars": 1,
@@ -7277,7 +7277,7 @@
       30.61,
       6.85
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 80,
     "id": 777,
@@ -7308,7 +7308,7 @@
       20.18,
       8.61
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 80,
     "id": 713,
@@ -7341,7 +7341,7 @@
       32.25,
       33.55
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 80,
     "id": 714,
@@ -7374,7 +7374,7 @@
       36.19,
       12.29
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 80,
     "id": 758,
@@ -7407,7 +7407,7 @@
       35.71,
       8.71
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 80,
     "id": 759,
@@ -7440,7 +7440,7 @@
       7.59,
       30.23
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 80,
     "id": 760,
@@ -7473,7 +7473,7 @@
       5.24,
       26.56
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 80,
     "id": 761,
@@ -7506,7 +7506,7 @@
       16.13,
       10.99
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 80,
     "id": 762,
@@ -7539,7 +7539,7 @@
       33.75,
       13.31
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 80,
     "id": 763,
@@ -7592,7 +7592,7 @@
       21.68,
       34.73
     ],
-    "name": "Ephemeral",
+    "name": "限时的",
     "uptime": 240,
     "lvl": 90,
     "id": 827,
@@ -7643,7 +7643,7 @@
       10.11,
       15.31
     ],
-    "name": "Ephemeral",
+    "name": "限时的",
     "uptime": 240,
     "lvl": 90,
     "id": 828,
@@ -7661,7 +7661,7 @@
         "itemDE": "Roh-Ametrin (Sammlerstück)",
         "icon": 21475,
         "id": 36293,
-        "scrip": "大地黄票"
+        "scrip": "大地白票"
       },
       {
         "item": "收藏用北洋岩盐",
@@ -7671,7 +7671,7 @@
         "itemDE": "Nordsteinsalz (Sammlerstück)",
         "icon": 22688,
         "id": 36295,
-        "scrip": "大地黄票"
+        "scrip": "大地白票"
       }
     ],
     "time": [
@@ -7684,7 +7684,7 @@
       32.51,
       21.26
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 85,
     "id": 829,
@@ -7702,7 +7702,7 @@
         "itemDE": "Bismuterz (Sammlerstück)",
         "icon": 21217,
         "id": 36294,
-        "scrip": "大地黄票"
+        "scrip": "大地白票"
       }
     ],
     "time": [
@@ -7715,7 +7715,7 @@
       16.38,
       32.65
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 85,
     "id": 830,
@@ -7733,7 +7733,7 @@
         "itemDE": "Phrygien-Gold (Sammlerstück)",
         "icon": 21206,
         "id": 36296,
-        "scrip": "大地黄票"
+        "scrip": "大地白票"
       },
       {
         "item": "收藏用艾布拉纳明矾",
@@ -7743,7 +7743,7 @@
         "itemDE": "Eblan-Alaun (Sammlerstück)",
         "icon": 22616,
         "id": 36298,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       }
     ],
     "time": [
@@ -7756,7 +7756,7 @@
       12.79,
       21.9
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 90,
     "id": 831,
@@ -7774,7 +7774,7 @@
         "itemDE": "Roh-Blauzirkon (Sammlerstück)",
         "icon": 21472,
         "id": 36297,
-        "scrip": "大地黄票"
+        "scrip": "大地白票"
       },
       {
         "item": "收藏用铁云母",
@@ -7784,7 +7784,7 @@
         "itemDE": "Glimmereisen (Sammlerstück)",
         "icon": 21226,
         "id": 36299,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       }
     ],
     "stars": 1,
@@ -7798,7 +7798,7 @@
       8.25,
       36.59
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 90,
     "id": 832,
@@ -7816,7 +7816,7 @@
         "itemDE": "Hartzinnklumpen (Sammlerstück)",
         "icon": 21211,
         "id": 36300,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       }
     ],
     "stars": 1,
@@ -7830,7 +7830,7 @@
       32.55,
       24.96
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 90,
     "id": 833,
@@ -7870,7 +7870,7 @@
       32.17,
       34.89
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 90,
     "id": 834,
@@ -7912,7 +7912,7 @@
       9.53,
       23.34
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 90,
     "id": 835,
@@ -7954,7 +7954,7 @@
       13.57,
       7.19
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 90,
     "id": 836,
@@ -8007,7 +8007,7 @@
       9.97,
       34.91
     ],
-    "name": "Ephemeral",
+    "name": "限时的",
     "uptime": 240,
     "lvl": 90,
     "id": 849,
@@ -8058,7 +8058,7 @@
       25.22,
       14.35
     ],
-    "name": "Ephemeral",
+    "name": "限时的",
     "uptime": 240,
     "lvl": 90,
     "id": 850,
@@ -8076,7 +8076,7 @@
         "itemDE": "Palmenholzscheit (Sammlerstück)",
         "icon": 22410,
         "id": 36303,
-        "scrip": "大地黄票"
+        "scrip": "大地白票"
       },
       {
         "item": "收藏用椰子",
@@ -8086,7 +8086,7 @@
         "itemDE": "Kokosnuss (Sammlerstück)",
         "icon": 25323,
         "id": 36305,
-        "scrip": "大地黄票"
+        "scrip": "大地白票"
       }
     ],
     "time": [
@@ -8099,7 +8099,7 @@
       14.39,
       14.53
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 85,
     "id": 851,
@@ -8117,7 +8117,7 @@
         "itemDE": "Rotkiefer-Holzscheit (Sammlerstück)",
         "icon": 22403,
         "id": 36304,
-        "scrip": "大地黄票"
+        "scrip": "大地白票"
       }
     ],
     "time": [
@@ -8130,7 +8130,7 @@
       35.07,
       5.82
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 85,
     "id": 852,
@@ -8148,7 +8148,7 @@
         "itemDE": "Lykon-Frucht (Sammlerstück)",
         "icon": 25318,
         "id": 36306,
-        "scrip": "大地黄票"
+        "scrip": "大地白票"
       },
       {
         "item": "收藏用古代肉豆蔻",
@@ -8158,7 +8158,7 @@
         "itemDE": "Großmuskatnuss (Sammlerstück)",
         "icon": 25021,
         "id": 36308,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       }
     ],
     "time": [
@@ -8171,7 +8171,7 @@
       24.98,
       5.64
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 90,
     "id": 853,
@@ -8189,7 +8189,7 @@
         "itemDE": "Schwarzkorn (Sammlerstück)",
         "icon": 25359,
         "id": 36307,
-        "scrip": "大地黄票"
+        "scrip": "大地白票"
       },
       {
         "item": "收藏用冰山莴苣",
@@ -8199,7 +8199,7 @@
         "itemDE": "Eisbergsalat (Sammlerstück)",
         "icon": 25219,
         "id": 36309,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       }
     ],
     "stars": 1,
@@ -8213,7 +8213,7 @@
       9.81,
       22.08
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 90,
     "id": 854,
@@ -8231,7 +8231,7 @@
         "itemDE": "Caean-Samenkapsel (Sammlerstück)",
         "icon": 25032,
         "id": 36310,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       }
     ],
     "stars": 1,
@@ -8245,7 +8245,7 @@
       9.47,
       33.23
     ],
-    "name": "Unspoiled",
+    "name": "未知的",
     "uptime": 120,
     "lvl": 90,
     "id": 855,
@@ -8285,7 +8285,7 @@
       33.17,
       14.77
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 90,
     "id": 856,
@@ -8327,7 +8327,7 @@
       25.3,
       21.7
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 90,
     "id": 857,
@@ -8369,7 +8369,7 @@
       28.05,
       13.11
     ],
-    "name": "Legendary",
+    "name": "传说的",
     "uptime": 120,
     "lvl": 90,
     "id": 858,

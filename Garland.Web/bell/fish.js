@@ -24591,7 +24591,31 @@ gt.bell.fish = [
     ],
     "radius": 300,
     "zone": "库尔札斯西部高地",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        141,
+        236,
+        332
+      ],
+      "amount": 1,
+      "stars": 0,
+      "lvl": [
+        50,
+        51
+      ],
+      "xp": [
+        65000,
+        71500,
+        78000
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        13,
+        16,
+        26
+      ]
+    }
   },
   {
     "name": "高风水母",
@@ -24710,7 +24734,31 @@ gt.bell.fish = [
     ],
     "radius": 600,
     "zone": "库尔札斯西部高地",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        49,
+        81,
+        114
+      ],
+      "amount": 1,
+      "stars": 0,
+      "lvl": [
+        50,
+        51
+      ],
+      "xp": [
+        33000,
+        36000,
+        39500
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        6,
+        7,
+        11
+      ]
+    }
   },
   {
     "name": "碎冰鱼",
@@ -24736,7 +24784,31 @@ gt.bell.fish = [
     ],
     "radius": 300,
     "zone": "库尔札斯西部高地",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        49,
+        81,
+        114
+      ],
+      "amount": 1,
+      "stars": 0,
+      "lvl": [
+        50,
+        51
+      ],
+      "xp": [
+        33000,
+        36000,
+        39500
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        6,
+        7,
+        11
+      ]
+    }
   },
   {
     "name": "冰战神",
@@ -24892,7 +24964,31 @@ gt.bell.fish = [
     ],
     "radius": 600,
     "zone": "库尔札斯西部高地",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        294,
+        492,
+        691
+      ],
+      "amount": 1,
+      "stars": 0,
+      "lvl": [
+        52,
+        53
+      ],
+      "xp": [
+        80223,
+        88179,
+        96798
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        12,
+        15,
+        24
+      ]
+    }
   },
   {
     "name": "白章鱼",
@@ -25019,7 +25115,31 @@ gt.bell.fish = [
     ],
     "radius": 300,
     "zone": "库尔札斯西部高地",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        19,
+        54,
+        90
+      ],
+      "amount": 1,
+      "stars": 1,
+      "lvl": [
+        60,
+        60
+      ],
+      "xp": [
+        274626,
+        302366,
+        330106
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        19,
+        24,
+        39
+      ]
+    }
   },
   {
     "name": "热破",
@@ -26729,7 +26849,31 @@ gt.bell.fish = [
     ],
     "radius": 1000,
     "zone": "阿巴拉提亚云海",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        74,
+        123,
+        173
+      ],
+      "amount": 1,
+      "stars": 0,
+      "lvl": [
+        54,
+        54
+      ],
+      "xp": [
+        68908,
+        75649,
+        82390
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        9,
+        11,
+        18
+      ]
+    }
   },
   {
     "name": "凯门鳄",
@@ -27935,7 +28079,31 @@ gt.bell.fish = [
     ],
     "radius": 800,
     "zone": "阿巴拉提亚云海",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        508,
+        850,
+        1194
+      ],
+      "amount": 1,
+      "stars": 0,
+      "lvl": [
+        60,
+        60
+      ],
+      "xp": [
+        208050,
+        228855,
+        249660
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        16,
+        20,
+        31
+      ]
+    }
   },
   {
     "name": "飞灵",
@@ -27959,7 +28127,31 @@ gt.bell.fish = [
     ],
     "radius": 300,
     "zone": "云冠群岛",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        508,
+        850,
+        1194
+      ],
+      "amount": 1,
+      "stars": 0,
+      "lvl": [
+        60,
+        60
+      ],
+      "xp": [
+        208050,
+        228855,
+        249660
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        16,
+        20,
+        31
+      ]
+    }
   },
   {
     "name": "吸血魔毯",
@@ -27985,7 +28177,31 @@ gt.bell.fish = [
     ],
     "radius": 800,
     "zone": "阿巴拉提亚云海",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        557,
+        932,
+        1309
+      ],
+      "amount": 1,
+      "stars": 0,
+      "lvl": [
+        60,
+        60
+      ],
+      "xp": [
+        65189,
+        72124,
+        79059
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        5,
+        6,
+        10
+      ]
+    }
   },
   {
     "name": "吸血魔毯",
@@ -28009,7 +28225,31 @@ gt.bell.fish = [
     ],
     "radius": 300,
     "zone": "云冠群岛",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        557,
+        932,
+        1309
+      ],
+      "amount": 1,
+      "stars": 0,
+      "lvl": [
+        60,
+        60
+      ],
+      "xp": [
+        65189,
+        72124,
+        79059
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        5,
+        6,
+        10
+      ]
+    }
   },
   {
     "name": "天空珊瑚",
@@ -28878,7 +29118,31 @@ gt.bell.fish = [
     ],
     "radius": 1000,
     "zone": "魔大陆阿济兹拉",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        62,
+        147,
+        152
+      ],
+      "amount": 1,
+      "stars": 3,
+      "lvl": [
+        80,
+        80
+      ],
+      "xp": [
+        677096,
+        743008,
+        808920
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        15,
+        18,
+        30
+      ]
+    }
   },
   {
     "name": "无光层巨骨舌鱼",
@@ -28995,7 +29259,31 @@ gt.bell.fish = [
     ],
     "radius": 300,
     "zone": "魔大陆阿济兹拉",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        137,
+        228,
+        321
+      ],
+      "amount": 1,
+      "stars": 0,
+      "lvl": [
+        60,
+        60
+      ],
+      "xp": [
+        244112,
+        269078,
+        294044
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        17,
+        22,
+        34
+      ]
+    }
   },
   {
     "name": "点火鱼",
@@ -29021,7 +29309,31 @@ gt.bell.fish = [
     ],
     "radius": 300,
     "zone": "魔大陆阿济兹拉",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        126,
+        296,
+        305
+      ],
+      "amount": 1,
+      "stars": 3,
+      "lvl": [
+        80,
+        80
+      ],
+      "xp": [
+        1132488,
+        1246336,
+        1360184
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        23,
+        29,
+        46
+      ]
+    }
   },
   {
     "name": "百目螈",
@@ -29233,7 +29545,31 @@ gt.bell.fish = [
     ],
     "radius": 300,
     "zone": "魔大陆阿济兹拉",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        650,
+        1088,
+        1527
+      ],
+      "amount": 1,
+      "stars": 1,
+      "lvl": [
+        60,
+        60
+      ],
+      "xp": [
+        364781,
+        400843,
+        438292
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        26,
+        33,
+        53
+      ]
+    }
   },
   {
     "name": "眼镜蛇鱼",
@@ -29379,7 +29715,31 @@ gt.bell.fish = [
     ],
     "radius": 300,
     "zone": "魔大陆阿济兹拉",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        393,
+        658,
+        924
+      ],
+      "amount": 1,
+      "stars": 1,
+      "lvl": [
+        60,
+        60
+      ],
+      "xp": [
+        499320,
+        549252,
+        599184
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        350,
+        438,
+        700
+      ]
+    }
   },
   {
     "name": "欧洛浦肯",
@@ -29513,7 +29873,31 @@ gt.bell.fish = [
     ],
     "radius": 400,
     "zone": "龙堡参天高地",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        209,
+        349,
+        491
+      ],
+      "amount": 1,
+      "stars": 0,
+      "lvl": [
+        52,
+        52
+      ],
+      "xp": [
+        208800,
+        229680,
+        250560
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        31,
+        39,
+        63
+      ]
+    }
   },
   {
     "name": "赤刺",
@@ -29544,7 +29928,31 @@ gt.bell.fish = [
     ],
     "radius": 600,
     "zone": "龙堡参天高地",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        209,
+        349,
+        491
+      ],
+      "amount": 1,
+      "stars": 0,
+      "lvl": [
+        52,
+        52
+      ],
+      "xp": [
+        208800,
+        229680,
+        250560
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        31,
+        39,
+        63
+      ]
+    }
   },
   {
     "name": "赤刺",
@@ -29575,7 +29983,31 @@ gt.bell.fish = [
     ],
     "radius": 600,
     "zone": "龙堡参天高地",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        209,
+        349,
+        491
+      ],
+      "amount": 1,
+      "stars": 0,
+      "lvl": [
+        52,
+        52
+      ],
+      "xp": [
+        208800,
+        229680,
+        250560
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        31,
+        39,
+        63
+      ]
+    }
   },
   {
     "name": "皮皮拉皮拉鱼",
@@ -29871,7 +30303,31 @@ gt.bell.fish = [
     ],
     "radius": 400,
     "zone": "龙堡参天高地",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        19,
+        54,
+        90
+      ],
+      "amount": 1,
+      "stars": 0,
+      "lvl": [
+        60,
+        60
+      ],
+      "xp": [
+        416100,
+        457710,
+        499320
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        33,
+        41,
+        66
+      ]
+    }
   },
   {
     "name": "河虾",
@@ -30131,7 +30587,31 @@ gt.bell.fish = [
     ],
     "radius": 600,
     "zone": "龙堡参天高地",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        311,
+        520,
+        731
+      ],
+      "amount": 1,
+      "stars": 0,
+      "lvl": [
+        56,
+        56
+      ],
+      "xp": [
+        151101,
+        165933,
+        180765
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        16,
+        20,
+        32
+      ]
+    }
   },
   {
     "name": "图丽鱼",
@@ -30247,7 +30727,31 @@ gt.bell.fish = [
     ],
     "radius": 900,
     "zone": "龙堡参天高地",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        346,
+        579,
+        814
+      ],
+      "amount": 1,
+      "stars": 0,
+      "lvl": [
+        60,
+        60
+      ],
+      "xp": [
+        478515,
+        527060,
+        574218
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        55,
+        68,
+        109
+      ]
+    }
   },
   {
     "name": "落雷鳗",
@@ -30276,7 +30780,31 @@ gt.bell.fish = [
     ],
     "radius": 300,
     "zone": "云冠群岛",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        346,
+        579,
+        814
+      ],
+      "amount": 1,
+      "stars": 0,
+      "lvl": [
+        60,
+        60
+      ],
+      "xp": [
+        478515,
+        527060,
+        574218
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        55,
+        68,
+        109
+      ]
+    }
   },
   {
     "name": "琥珀蝾螈",
@@ -30307,7 +30835,31 @@ gt.bell.fish = [
     ],
     "radius": 900,
     "zone": "龙堡参天高地",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        622,
+        761,
+        901
+      ],
+      "amount": 1,
+      "stars": 1,
+      "lvl": [
+        60,
+        60
+      ],
+      "xp": [
+        478515,
+        527060,
+        574218
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        38,
+        47,
+        75
+      ]
+    }
   },
   {
     "name": "雷鳞蝾螈",
@@ -31368,7 +31920,31 @@ gt.bell.fish = [
     ],
     "radius": 400,
     "zone": "龙堡内陆低地",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        376,
+        629,
+        883
+      ],
+      "amount": 1,
+      "stars": 0,
+      "lvl": [
+        59,
+        59
+      ],
+      "xp": [
+        156219,
+        171962,
+        187705
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        13,
+        16,
+        26
+      ]
+    }
   },
   {
     "name": "内陆刺鱼",
@@ -31661,7 +32237,31 @@ gt.bell.fish = [
     ],
     "radius": 800,
     "zone": "龙堡内陆低地",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        1039,
+        1740,
+        2442
+      ],
+      "amount": 1,
+      "stars": 1,
+      "lvl": [
+        60,
+        60
+      ],
+      "xp": [
+        478515,
+        527060,
+        574218
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        35,
+        43,
+        69
+      ]
+    }
   },
   {
     "name": "鳞鲶",
@@ -32006,7 +32606,31 @@ gt.bell.fish = [
     ],
     "radius": 300,
     "zone": "翻云雾海",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        118,
+        197,
+        277
+      ],
+      "amount": 1,
+      "stars": 0,
+      "lvl": [
+        56,
+        57
+      ],
+      "xp": [
+        184439,
+        202781,
+        221123
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        15,
+        19,
+        30
+      ]
+    }
   },
   {
     "name": "白丽鱼",
@@ -32030,7 +32654,31 @@ gt.bell.fish = [
     ],
     "radius": 300,
     "zone": "云冠群岛",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        118,
+        197,
+        277
+      ],
+      "amount": 1,
+      "stars": 0,
+      "lvl": [
+        56,
+        57
+      ],
+      "xp": [
+        184439,
+        202781,
+        221123
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        15,
+        19,
+        30
+      ]
+    }
   },
   {
     "name": "维德弗尼尔",
@@ -32151,7 +32799,31 @@ gt.bell.fish = [
     ],
     "radius": 500,
     "zone": "翻云雾海",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        72,
+        120,
+        170
+      ],
+      "amount": 1,
+      "stars": 0,
+      "lvl": [
+        54,
+        55
+      ],
+      "xp": [
+        142290,
+        156519,
+        170748
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        17,
+        21,
+        33
+      ]
+    }
   },
   {
     "name": "西水弓鳍鱼",
@@ -32181,7 +32853,31 @@ gt.bell.fish = [
     ],
     "radius": 500,
     "zone": "翻云雾海",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        171,
+        286,
+        403
+      ],
+      "amount": 1,
+      "stars": 0,
+      "lvl": [
+        58,
+        58
+      ],
+      "xp": [
+        189380,
+        208318,
+        227256
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        17,
+        21,
+        33
+      ]
+    }
   },
   {
     "name": "百鳍",
@@ -34268,7 +34964,31 @@ gt.bell.fish = [
     ],
     "radius": 1100,
     "zone": "基拉巴尼亚边区",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        99,
+        165,
+        233
+      ],
+      "amount": 1,
+      "stars": 1,
+      "lvl": [
+        70,
+        70
+      ],
+      "xp": [
+        868131,
+        952898,
+        1040588
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        45,
+        56,
+        90
+      ]
+    }
   },
   {
     "name": "脉轮鲶",
@@ -34524,7 +35244,31 @@ gt.bell.fish = [
     ],
     "radius": 600,
     "zone": "基拉巴尼亚边区",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        314,
+        526,
+        739
+      ],
+      "amount": 1,
+      "stars": 0,
+      "lvl": [
+        60,
+        61
+      ],
+      "xp": [
+        336336,
+        369824,
+        403312
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        23,
+        29,
+        46
+      ]
+    }
   },
   {
     "name": "谷爬鱼",
@@ -35417,7 +36161,31 @@ gt.bell.fish = [
     ],
     "radius": 400,
     "zone": "基拉巴尼亚山区",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        377,
+        631,
+        887
+      ],
+      "amount": 1,
+      "stars": 1,
+      "lvl": [
+        70,
+        70
+      ],
+      "xp": [
+        643060,
+        707366,
+        771672
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        34,
+        42,
+        68
+      ]
+    }
   },
   {
     "name": "解脱鱼",
@@ -35678,7 +36446,31 @@ gt.bell.fish = [
     ],
     "radius": 500,
     "zone": "基拉巴尼亚山区",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        19,
+        32,
+        46
+      ],
+      "amount": 1,
+      "stars": 0,
+      "lvl": [
+        70,
+        70
+      ],
+      "xp": [
+        374144,
+        412143,
+        450142
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        20,
+        25,
+        40
+      ]
+    }
   },
   {
     "name": "岩石鱼",
@@ -35882,7 +36674,31 @@ gt.bell.fish = [
     ],
     "radius": 3000,
     "zone": "基拉巴尼亚湖区",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        785,
+        1315,
+        1846
+      ],
+      "amount": 1,
+      "stars": 1,
+      "lvl": [
+        70,
+        70
+      ],
+      "xp": [
+        891515,
+        982128,
+        1069818
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        350,
+        438,
+        700
+      ]
+    }
   },
   {
     "name": "盐磨鲨",
@@ -37013,7 +37829,31 @@ gt.bell.fish = [
     ],
     "radius": 1000,
     "zone": "红玉海",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        53,
+        88,
+        125
+      ],
+      "amount": 1,
+      "stars": 0,
+      "lvl": [
+        62,
+        63
+      ],
+      "xp": [
+        329063,
+        361483,
+        393903
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        20,
+        25,
+        41
+      ]
+    }
   },
   {
     "name": "迎春鱼",
@@ -37229,7 +38069,31 @@ gt.bell.fish = [
     ],
     "radius": 1000,
     "zone": "红玉海",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        456,
+        763,
+        1072
+      ],
+      "amount": 1,
+      "stars": 1,
+      "lvl": [
+        70,
+        70
+      ],
+      "xp": [
+        426758,
+        470603,
+        511525
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        22,
+        28,
+        45
+      ]
+    }
   },
   {
     "name": "大鳍龙",
@@ -37528,7 +38392,31 @@ gt.bell.fish = [
     ],
     "radius": 1000,
     "zone": "红玉海",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        470,
+        787,
+        1106
+      ],
+      "amount": 1,
+      "stars": 0,
+      "lvl": [
+        68,
+        68
+      ],
+      "xp": [
+        261821,
+        287308,
+        312795
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        15,
+        18,
+        30
+      ]
+    }
   },
   {
     "name": "毯子章鱼",
@@ -38154,7 +39042,31 @@ gt.bell.fish = [
     ],
     "radius": 1000,
     "zone": "延夏",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        206,
+        344,
+        484
+      ],
+      "amount": 1,
+      "stars": 0,
+      "lvl": [
+        64,
+        64
+      ],
+      "xp": [
+        331960,
+        364640,
+        397320
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        20,
+        25,
+        41
+      ]
+    }
   },
   {
     "name": "长须鲶鱼",
@@ -38420,7 +39332,31 @@ gt.bell.fish = [
     ],
     "radius": 600,
     "zone": "延夏",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        23,
+        38,
+        55
+      ],
+      "amount": 1,
+      "stars": 0,
+      "lvl": [
+        70,
+        70
+      ],
+      "xp": [
+        339068,
+        371221,
+        406297
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        18,
+        23,
+        37
+      ]
+    }
   },
   {
     "name": "羽衣美人",
@@ -38512,7 +39448,31 @@ gt.bell.fish = [
     ],
     "radius": 400,
     "zone": "延夏",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        314,
+        526,
+        739
+      ],
+      "amount": 1,
+      "stars": 1,
+      "lvl": [
+        70,
+        70
+      ],
+      "xp": [
+        812594,
+        891515,
+        973359
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        45,
+        56,
+        89
+      ]
+    }
   },
   {
     "name": "赏梅鱼",
@@ -39102,7 +40062,31 @@ gt.bell.fish = [
     ],
     "radius": 500,
     "zone": "延夏",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        7,
+        11,
+        17
+      ],
+      "amount": 1,
+      "stars": 0,
+      "lvl": [
+        66,
+        67
+      ],
+      "xp": [
+        401814,
+        442208,
+        482602
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        23,
+        29,
+        46
+      ]
+    }
   },
   {
     "name": "白纸鱼",
@@ -39240,7 +40224,31 @@ gt.bell.fish = [
     ],
     "radius": 200,
     "zone": "太阳神草原",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        5,
+        8,
+        12
+      ],
+      "amount": 1,
+      "stars": 0,
+      "lvl": [
+        64,
+        65
+      ],
+      "xp": [
+        597884,
+        656572,
+        717094
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        34,
+        43,
+        68
+      ]
+    }
   },
   {
     "name": "青鳉",
@@ -39269,7 +40277,31 @@ gt.bell.fish = [
     ],
     "radius": 500,
     "zone": "白银乡",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        5,
+        8,
+        12
+      ],
+      "amount": 1,
+      "stars": 0,
+      "lvl": [
+        64,
+        65
+      ],
+      "xp": [
+        597884,
+        656572,
+        717094
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        34,
+        43,
+        68
+      ]
+    }
   },
   {
     "name": "东洲鳟",
@@ -39818,7 +40850,31 @@ gt.bell.fish = [
     ],
     "radius": 300,
     "zone": "太阳神草原",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        17,
+        28,
+        40
+      ],
+      "amount": 1,
+      "stars": 1,
+      "lvl": [
+        70,
+        70
+      ],
+      "xp": [
+        637214,
+        701520,
+        765826
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        33,
+        41,
+        66
+      ]
+    }
   },
   {
     "name": "晨曦旗鱼",
@@ -40322,7 +41378,31 @@ gt.bell.fish = [
     ],
     "radius": 300,
     "zone": "太阳神草原",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        23,
+        38,
+        55
+      ],
+      "amount": 1,
+      "stars": 0,
+      "lvl": [
+        66,
+        67
+      ],
+      "xp": [
+        391184,
+        429452,
+        469846
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        22,
+        28,
+        44
+      ]
+    }
   },
   {
     "name": "河中长老",
@@ -42012,7 +43092,31 @@ gt.bell.fish = [
     ],
     "radius": 1200,
     "zone": "雷克兰德",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        346,
+        579,
+        814
+      ],
+      "amount": 1,
+      "stars": 0,
+      "lvl": [
+        70,
+        71
+      ],
+      "xp": [
+        202206,
+        223332,
+        241440
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        10,
+        12,
+        20
+      ]
+    }
   },
   {
     "name": "食人鳄",
@@ -42100,7 +43204,31 @@ gt.bell.fish = [
     ],
     "radius": 300,
     "zone": "雷克兰德",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        9,
+        14,
+        21
+      ],
+      "amount": 1,
+      "stars": 1,
+      "lvl": [
+        80,
+        80
+      ],
+      "xp": [
+        760984,
+        832888,
+        910784
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        51,
+        63,
+        101
+      ]
+    }
   },
   {
     "name": "月光虹鳉",
@@ -42849,7 +43977,31 @@ gt.bell.fish = [
     ],
     "radius": 1200,
     "zone": "珂露西亚岛",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        6,
+        9,
+        14
+      ],
+      "amount": 1,
+      "stars": 0,
+      "lvl": [
+        78,
+        78
+      ],
+      "xp": [
+        334390,
+        367829,
+        401268
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        21,
+        26,
+        41
+      ]
+    }
   },
   {
     "name": "哲罗鲑",
@@ -43668,7 +44820,31 @@ gt.bell.fish = [
     ],
     "radius": 1800,
     "zone": "珂露西亚岛",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        62,
+        104,
+        147
+      ],
+      "amount": 1,
+      "stars": 0,
+      "lvl": [
+        72,
+        72
+      ],
+      "xp": [
+        252240,
+        277464,
+        302688
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        13,
+        16,
+        26
+      ]
+    }
   },
   {
     "name": "剑齿龙鳖",
@@ -43704,7 +44880,31 @@ gt.bell.fish = [
     ],
     "radius": 1800,
     "zone": "珂露西亚岛",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        157,
+        262,
+        369
+      ],
+      "amount": 1,
+      "stars": 1,
+      "lvl": [
+        80,
+        80
+      ],
+      "xp": [
+        874832,
+        958720,
+        1048600
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        183,
+        229,
+        367
+      ]
+    }
   },
   {
     "name": "战盾剑齿龙鳖",
@@ -44296,7 +45496,31 @@ gt.bell.fish = [
     ],
     "radius": 1200,
     "zone": "安穆·艾兰",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        944,
+        1581,
+        2220
+      ],
+      "amount": 1,
+      "stars": 1,
+      "lvl": [
+        80,
+        80
+      ],
+      "xp": [
+        725032,
+        796936,
+        874832
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        233,
+        292,
+        467
+      ]
+    }
   },
   {
     "name": "刺钉蜥蜴",
@@ -45329,7 +46553,31 @@ gt.bell.fish = [
     ],
     "radius": 900,
     "zone": "伊尔美格",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        96,
+        160,
+        225
+      ],
+      "amount": 1,
+      "stars": 0,
+      "lvl": [
+        74,
+        74
+      ],
+      "xp": [
+        296688,
+        324944,
+        356732
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        14,
+        17,
+        27
+      ]
+    }
   },
   {
     "name": "黄金雕金匠",
@@ -45392,7 +46640,31 @@ gt.bell.fish = [
     ],
     "radius": 300,
     "zone": "伊尔美格",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        26,
+        43,
+        62
+      ],
+      "amount": 1,
+      "stars": 1,
+      "lvl": [
+        80,
+        80
+      ],
+      "xp": [
+        719040,
+        790944,
+        856856
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        48,
+        60,
+        95
+      ]
+    }
   },
   {
     "name": "顶天眼",
@@ -45805,7 +47077,31 @@ gt.bell.fish = [
     ],
     "radius": 1800,
     "zone": "拉凯提卡大森林",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        314,
+        526,
+        739
+      ],
+      "amount": 1,
+      "stars": 0,
+      "lvl": [
+        76,
+        76
+      ],
+      "xp": [
+        557042,
+        613966,
+        666824
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        130,
+        163,
+        260
+      ]
+    }
   },
   {
     "name": "洛克瓦卫兵",
@@ -46000,7 +47296,31 @@ gt.bell.fish = [
     ],
     "radius": 600,
     "zone": "拉凯提卡大森林",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        201,
+        336,
+        472
+      ],
+      "amount": 1,
+      "stars": 0,
+      "lvl": [
+        76,
+        76
+      ],
+      "xp": [
+        333412,
+        365940,
+        402534
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        21,
+        26,
+        41
+      ]
+    }
   },
   {
     "name": "珍珠皮皮拉鱼",
@@ -46292,7 +47612,31 @@ gt.bell.fish = [
     ],
     "radius": 300,
     "zone": "拉凯提卡大森林",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        14,
+        22,
+        32
+      ],
+      "amount": 1,
+      "stars": 1,
+      "lvl": [
+        80,
+        80
+      ],
+      "xp": [
+        461384,
+        509320,
+        557256
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        30,
+        38,
+        60
+      ]
+    }
   },
   {
     "name": "底暗鱼",
@@ -46711,7 +48055,31 @@ gt.bell.fish = [
     ],
     "radius": 900,
     "zone": "黑风海",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        236,
+        394,
+        554
+      ],
+      "amount": 1,
+      "stars": 0,
+      "lvl": [
+        80,
+        80
+      ],
+      "xp": [
+        377496,
+        413448,
+        449400
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        25,
+        31,
+        49
+      ]
+    }
   },
   {
     "name": "鳍人叹息",
@@ -47235,7 +48603,31 @@ gt.bell.fish = [
     ],
     "radius": 600,
     "zone": "黑风海",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        314,
+        526,
+        739
+      ],
+      "amount": 1,
+      "stars": 1,
+      "lvl": [
+        80,
+        80
+      ],
+      "xp": [
+        898800,
+        988680,
+        1078560
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        525,
+        656,
+        1050
+      ]
+    }
   },
   {
     "name": "绒毛海神虾",
@@ -47320,7 +48712,31 @@ gt.bell.fish = [
     ],
     "radius": 300,
     "zone": "黑风海",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        31,
+        51,
+        73
+      ],
+      "amount": 1,
+      "stars": 0,
+      "lvl": [
+        80,
+        80
+      ],
+      "xp": [
+        299600,
+        329560,
+        359520
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        20,
+        25,
+        40
+      ]
+    }
   },
   {
     "name": "头领薄饼章鱼",
@@ -47627,7 +49043,7 @@ gt.bell.fish = [
     "zone": "黑风海"
   },
   {
-    "name": "梳栉贝",
+    "name": "海扇蛤",
     "patch": 6.0,
     "snagging": 1,
     "baits": [
@@ -47659,7 +49075,7 @@ gt.bell.fish = [
     "zone": "旧萨雷安"
   },
   {
-    "name": "北海鲱",
+    "name": "北洋鲱",
     "patch": 6.0,
     "baits": [
       [
@@ -47721,7 +49137,7 @@ gt.bell.fish = [
     "zone": "旧萨雷安"
   },
   {
-    "name": "钴铁光腮雀鲷",
+    "name": "钴铁光腮鱼",
     "patch": 6.0,
     "baits": [
       [
@@ -47894,7 +49310,7 @@ gt.bell.fish = [
     "zone": "旧萨雷安"
   },
   {
-    "name": "大学究隆头鱼",
+    "name": "大学究",
     "patch": 6.0,
     "baits": [
       [
@@ -48042,7 +49458,7 @@ gt.bell.fish = [
     "zone": "旧萨雷安"
   },
   {
-    "name": "第二代蝴蝶鱼",
+    "name": "子代蝴蝶鱼",
     "patch": 6.0,
     "baits": [
       [
@@ -48079,7 +49495,7 @@ gt.bell.fish = [
     "zone": "迷津"
   },
   {
-    "name": "第二代蝴蝶鱼",
+    "name": "子代蝴蝶鱼",
     "patch": 6.0,
     "baits": [
       [
@@ -48116,7 +49532,7 @@ gt.bell.fish = [
     "zone": "迷津"
   },
   {
-    "name": "第二代蝴蝶鱼",
+    "name": "子代蝴蝶鱼",
     "patch": 6.0,
     "baits": [
       [
@@ -48153,7 +49569,7 @@ gt.bell.fish = [
     "zone": "迷津"
   },
   {
-    "name": "第二代蝴蝶鱼",
+    "name": "子代蝴蝶鱼",
     "patch": 6.0,
     "baits": [
       [
@@ -48190,7 +49606,7 @@ gt.bell.fish = [
     "zone": "迷津"
   },
   {
-    "name": "第二代蝴蝶鱼",
+    "name": "子代蝴蝶鱼",
     "patch": 6.0,
     "baits": [
       [
@@ -48227,7 +49643,7 @@ gt.bell.fish = [
     "zone": "迷津"
   },
   {
-    "name": "浅面诱饵鱼",
+    "name": "水面鳉",
     "patch": 6.0,
     "baits": [
       [
@@ -48262,7 +49678,31 @@ gt.bell.fish = [
     ],
     "radius": 450,
     "zone": "迷津",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        18,
+        30,
+        44
+      ],
+      "amount": 1,
+      "stars": 0,
+      "lvl": [
+        80,
+        81
+      ],
+      "xp": [
+        586245,
+        647955,
+        703494
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        33,
+        41,
+        66
+      ]
+    }
   },
   {
     "name": "小方砖丽鱼",
@@ -48413,7 +49853,7 @@ gt.bell.fish = [
     "zone": "迷津"
   },
   {
-    "name": "迷津鲴",
+    "name": "鲴鱼",
     "patch": 6.0,
     "baits": [
       [
@@ -48450,7 +49890,7 @@ gt.bell.fish = [
     "zone": "迷津"
   },
   {
-    "name": "迷津鲴",
+    "name": "鲴鱼",
     "patch": 6.0,
     "baits": [
       [
@@ -48487,7 +49927,7 @@ gt.bell.fish = [
     "zone": "迷津"
   },
   {
-    "name": "迷津鲴",
+    "name": "鲴鱼",
     "patch": 6.0,
     "baits": [
       [
@@ -48524,7 +49964,7 @@ gt.bell.fish = [
     "zone": "迷津"
   },
   {
-    "name": "迷津鲴",
+    "name": "鲴鱼",
     "patch": 6.0,
     "baits": [
       [
@@ -48602,7 +50042,7 @@ gt.bell.fish = [
     "zone": "迷津"
   },
   {
-    "name": "绿鲑鱼",
+    "name": "绿腮鲑",
     "patch": 6.0,
     "baits": [
       [
@@ -48888,7 +50328,31 @@ gt.bell.fish = [
     ],
     "radius": 600,
     "zone": "迷津",
-    "scrip": "大地白票"
+    "scrip": "大地紫票",
+    "masterpiece": {
+      "rating": [
+        398,
+        666,
+        936
+      ],
+      "amount": 1,
+      "stars": 1,
+      "lvl": [
+        90,
+        90
+      ],
+      "xp": [
+        929460,
+        1022406,
+        1115352
+      ],
+      "reward": 33914,
+      "rewardAmount": [
+        47,
+        59,
+        94
+      ]
+    }
   },
   {
     "name": "象魔鼻鱼",
@@ -48963,7 +50427,31 @@ gt.bell.fish = [
     ],
     "radius": 1350,
     "zone": "拉札罕",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        188,
+        315,
+        443
+      ],
+      "amount": 1,
+      "stars": 0,
+      "lvl": [
+        82,
+        82
+      ],
+      "xp": [
+        590070,
+        652548,
+        708084
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        34,
+        42,
+        68
+      ]
+    }
   },
   {
     "name": "长耳太阳鱼",
@@ -49133,7 +50621,7 @@ gt.bell.fish = [
     "zone": "萨维奈岛"
   },
   {
-    "name": "船底鳎",
+    "name": "船鳎",
     "patch": 6.0,
     "baits": [
       [
@@ -49164,7 +50652,7 @@ gt.bell.fish = [
     "zone": "萨维奈岛"
   },
   {
-    "name": "船底鳎",
+    "name": "船鳎",
     "patch": 6.0,
     "baits": [
       [
@@ -49195,7 +50683,7 @@ gt.bell.fish = [
     "zone": "萨维奈岛"
   },
   {
-    "name": "船底鳎",
+    "name": "船鳎",
     "patch": 6.0,
     "baits": [
       [
@@ -49286,7 +50774,31 @@ gt.bell.fish = [
     ],
     "radius": 600,
     "zone": "萨维奈岛",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        217,
+        363,
+        510
+      ],
+      "amount": 1,
+      "stars": 0,
+      "lvl": [
+        84,
+        84
+      ],
+      "xp": [
+        596100,
+        659684,
+        715320
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        32,
+        39,
+        63
+      ]
+    }
   },
   {
     "name": "暗影沙丁鱼",
@@ -49456,7 +50968,7 @@ gt.bell.fish = [
     "zone": "萨维奈岛"
   },
   {
-    "name": "卡嘉雅落伍者",
+    "name": "卡嘉雅落选者",
     "patch": 6.0,
     "baits": [
       [
@@ -49882,7 +51394,31 @@ gt.bell.fish = [
     ],
     "radius": 1350,
     "zone": "萨维奈岛",
-    "scrip": "大地白票"
+    "scrip": "大地紫票",
+    "masterpiece": {
+      "rating": [
+        417,
+        698,
+        980
+      ],
+      "amount": 1,
+      "stars": 1,
+      "lvl": [
+        90,
+        90
+      ],
+      "xp": [
+        796680,
+        876348,
+        956016
+      ],
+      "reward": 33914,
+      "rewardAmount": [
+        34,
+        43,
+        68
+      ]
+    }
   },
   {
     "name": "矿炉飞鱼",
@@ -49917,10 +51453,34 @@ gt.bell.fish = [
     ],
     "radius": 1200,
     "zone": "萨维奈岛",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        211,
+        352,
+        495
+      ],
+      "amount": 1,
+      "stars": 0,
+      "lvl": [
+        86,
+        86
+      ],
+      "xp": [
+        720018,
+        784635,
+        858483
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        41,
+        52,
+        83
+      ]
+    }
   },
   {
-    "name": "长吻火箭脂鲤",
+    "name": "长吻脂鲤",
     "patch": 6.0,
     "baits": [
       [
@@ -49982,7 +51542,7 @@ gt.bell.fish = [
     "zone": "萨维奈岛"
   },
   {
-    "name": "拉札罕鱼",
+    "name": "拉札巴里克鱼",
     "patch": 6.0,
     "baits": [
       [
@@ -50016,7 +51576,7 @@ gt.bell.fish = [
     "zone": "萨维奈岛"
   },
   {
-    "name": "拉札罕鱼",
+    "name": "拉札巴里克鱼",
     "patch": 6.0,
     "baits": [
       [
@@ -50116,7 +51676,31 @@ gt.bell.fish = [
     ],
     "radius": 450,
     "zone": "萨维奈岛",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        385,
+        645,
+        906
+      ],
+      "amount": 1,
+      "stars": 0,
+      "lvl": [
+        88,
+        88
+      ],
+      "xp": [
+        742589,
+        815802,
+        889015
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        40,
+        50,
+        80
+      ]
+    }
   },
   {
     "name": "小桓娑鱼",
@@ -50375,7 +51959,31 @@ gt.bell.fish = [
     ],
     "radius": 900,
     "zone": "萨维奈岛",
-    "scrip": "大地白票"
+    "scrip": "大地紫票",
+    "masterpiece": {
+      "rating": [
+        1055,
+        1766,
+        2478
+      ],
+      "amount": 1,
+      "stars": 1,
+      "lvl": [
+        90,
+        90
+      ],
+      "xp": [
+        1354356,
+        1487136,
+        1619916
+      ],
+      "reward": 33914,
+      "rewardAmount": [
+        105,
+        131,
+        209
+      ]
+    }
   },
   {
     "name": "加雷马蛤蜊",
@@ -51087,7 +52695,31 @@ gt.bell.fish = [
     ],
     "radius": 300,
     "zone": "叹息海",
-    "scrip": "大地白票"
+    "scrip": "大地紫票",
+    "masterpiece": {
+      "rating": [
+        1181,
+        1977,
+        2774
+      ],
+      "amount": 1,
+      "stars": 1,
+      "lvl": [
+        90,
+        90
+      ],
+      "xp": [
+        1248132,
+        1367634,
+        1487136
+      ],
+      "reward": 33914,
+      "rewardAmount": [
+        145,
+        182,
+        291
+      ]
+    }
   },
   {
     "name": "灵岩之剑",
@@ -51123,7 +52755,31 @@ gt.bell.fish = [
     ],
     "radius": 600,
     "zone": "叹息海",
-    "scrip": "大地黄票"
+    "scrip": "大地白票",
+    "masterpiece": {
+      "rating": [
+        244,
+        408,
+        573
+      ],
+      "amount": 1,
+      "stars": 0,
+      "lvl": [
+        86,
+        86
+      ],
+      "xp": [
+        784635,
+        867714,
+        941562
+      ],
+      "reward": 25200,
+      "rewardAmount": [
+        54,
+        67,
+        108
+      ]
+    }
   },
   {
     "name": "月壤龟",
@@ -51157,7 +52813,7 @@ gt.bell.fish = [
     "zone": "叹息海"
   },
   {
-    "name": "幸存挽歌鲎",
+    "name": "挽歌幸存者",
     "patch": 6.0,
     "baits": [
       [
@@ -51444,7 +53100,7 @@ gt.bell.fish = [
     "zone": "厄尔庇斯"
   },
   {
-    "name": "闪耀金鲤",
+    "name": "金光闪闪",
     "patch": 6.0,
     "baits": [
       [
@@ -51513,7 +53169,31 @@ gt.bell.fish = [
     ],
     "radius": 1800,
     "zone": "厄尔庇斯",
-    "scrip": "大地白票"
+    "scrip": "大地紫票",
+    "masterpiece": {
+      "rating": [
+        501,
+        838,
+        1177
+      ],
+      "amount": 1,
+      "stars": 1,
+      "lvl": [
+        90,
+        90
+      ],
+      "xp": [
+        1447302,
+        1593360,
+        1739418
+      ],
+      "reward": 33914,
+      "rewardAmount": [
+        73,
+        91,
+        146
+      ]
+    }
   },
   {
     "name": "皮颏鱵",
@@ -51553,7 +53233,7 @@ gt.bell.fish = [
     "zone": "厄尔庇斯"
   },
   {
-    "name": "巨像脂鲤",
+    "name": "巨脂鲤",
     "patch": 6.0,
     "baits": [
       [
@@ -51788,7 +53468,7 @@ gt.bell.fish = [
     "zone": "天外天垓"
   },
   {
-    "name": "星衫鱼",
+    "name": "吞星鱼",
     "patch": 6.0,
     "baits": [
       [
@@ -51819,7 +53499,7 @@ gt.bell.fish = [
     "zone": "天外天垓"
   },
   {
-    "name": "星衫鱼",
+    "name": "吞星鱼",
     "patch": 6.0,
     "baits": [
       [
@@ -51850,7 +53530,7 @@ gt.bell.fish = [
     "zone": "天外天垓"
   },
   {
-    "name": "星衫鱼",
+    "name": "吞星鱼",
     "patch": 6.0,
     "baits": [
       [
@@ -52003,7 +53683,31 @@ gt.bell.fish = [
     ],
     "radius": 300,
     "zone": "天外天垓",
-    "scrip": "大地白票"
+    "scrip": "大地紫票",
+    "masterpiece": {
+      "rating": [
+        433,
+        724,
+        1017
+      ],
+      "amount": 1,
+      "stars": 0,
+      "lvl": [
+        90,
+        90
+      ],
+      "xp": [
+        889626,
+        982572,
+        1062240
+      ],
+      "reward": 33914,
+      "rewardAmount": [
+        40,
+        50,
+        79
+      ]
+    }
   },
   {
     "name": "真空虾",
@@ -52535,7 +54239,7 @@ gt.bell.fish = [
     "zone": "天外天垓"
   },
   {
-    "name": "二十四脚文明人",
+    "name": "二十四足文明人",
     "patch": 6.0,
     "baits": [
       [
@@ -52745,7 +54449,7 @@ gt.bell.fish = [
     "zone": "天外天垓"
   },
   {
-    "name": "阿尔戈航员",
+    "name": "阿耳戈航员",
     "patch": 6.0,
     "baits": [
       [
@@ -52776,7 +54480,7 @@ gt.bell.fish = [
     "zone": "天外天垓"
   },
   {
-    "name": "碧莲鱼",
+    "name": "碧鱼莲",
     "patch": 6.0,
     "baits": [
       [
@@ -52805,7 +54509,31 @@ gt.bell.fish = [
     ],
     "radius": 900,
     "zone": "天外天垓",
-    "scrip": "大地白票"
+    "scrip": "大地紫票",
+    "masterpiece": {
+      "rating": [
+        330,
+        552,
+        776
+      ],
+      "amount": 1,
+      "stars": 0,
+      "lvl": [
+        90,
+        90
+      ],
+      "xp": [
+        836514,
+        929460,
+        1009128
+      ],
+      "reward": 33914,
+      "rewardAmount": [
+        38,
+        47,
+        75
+      ]
+    }
   },
   {
     "name": "宇宙象",
@@ -52895,7 +54623,7 @@ gt.bell.fish = [
     "zone": "天外天垓"
   },
   {
-    "name": "外星生物实体-9318",
+    "name": "额外维度实体-9318",
     "patch": 6.0,
     "baits": [
       [

@@ -96,7 +96,7 @@ namespace Garland.Data.Modules
             var sTimeTable = sGatheringPointTransient["GatheringRarePopTimeTable"];
             if (sStartTime != 65535 && !(sEndTime == 0 && sStartTime == 0))
             {
-                node.limitType = "Ephemeral";
+                node.limitType = "限时的";
                 if (sEndTime == 0)
                 {
                     sEndTime = 2400;
@@ -106,7 +106,7 @@ namespace Garland.Data.Modules
             }
             else if (sTimeTable != null && ((Saint.XivRow) sTimeTable).Key != 0)
             {
-                node.limitType = "Unspoiled";
+                node.limitType = "未知的";
                 var sTimeTableRow = sTimeTable as Saint.XivRow;
                 var times = new JArray();
                 for (int i = 0; i < 3; i++)
@@ -535,7 +535,7 @@ namespace Garland.Data.Modules
                         // Folklore things are legendary one
                         if (node.unlockId != null)
                         {
-                            node.limitType = "Legendary";
+                            node.limitType = "传说的";
                         }
                         BuildNodeView(node);
                     }
