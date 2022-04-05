@@ -163,6 +163,39 @@ gt.settings = {
         return data;
     },
 
+    export: function(e) {
+        let exported = JSON.stringify(gt.settings.data);
+        let promise = navigator.clipboard.writeText(exported);
+        if (promise) {
+            promise.catch(function(err) {
+                alert("导出失败！");
+            });
+            promise.then(function (){
+                alert("已导出至剪贴板。");
+            })
+        }
+    },
+
+    import: function() {
+        let data = null;
+        let settingStr = $("#import-setting-area").val();
+        let c = window.confirm("确定导入吗？将覆盖之前的设置。");
+        if (c == true){
+            try {
+                data = JSON.parse(settingStr);
+            } catch (e) {
+                window.alert("导入的设置无效。请检查json格式。")
+                return;
+            }
+            gt.settings.data = Object.assign(gt.settings.data, data);
+            gt.settings.saveDirty();
+            window.alert("已导入数据，即将刷新页面。");
+            setTimeout(function () {
+                window.location.reload();
+            }, 3000);
+        }
+    },
+
     // Events
 
     bindEvents: function(data) {
@@ -271,6 +304,8 @@ gt.settings = {
         $('#upload-sync').click(gt.settings.uploadSyncClicked);
         $('#download-sync').click(gt.settings.downloadSyncClicked);
         $('#stop-sync').click(gt.settings.stopSyncClicked);
+        $("#export-setting").click(gt.settings.export);
+        $("#import-setting").click(gt.settings.import);
     },
 
     unlockHeightsChanged: function(e) {

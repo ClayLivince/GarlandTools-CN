@@ -153,6 +153,27 @@ gt.quest = {
                 lastName = line.name;
             }
 
+            lastName = null;
+            if (quest.cutscenes) {
+                view.cutscenes = [];
+                for (var i = 0; i < quest.cutscenes.length; i++) {
+                    var cutscene = quest.cutscenes[i];
+                    var viewCut = [];
+                    for (var j = 0; j < cutscene.length; j++) {
+                        var line = cutscene[j];
+                        if (lastName != line.name)
+                            viewCut.push({ type: 'speaker', text: line.name });
+                        var dialogue = { type: 'dialogue-line', text: line.text };
+                        if (line.voice){
+                            dialogue.voice = "../files/voices/" + line.voice;
+                        }
+                        viewCut.push(dialogue);
+                        lastName = line.name;
+                    }
+                    view.cutscenes.push(viewCut);
+                }
+            }
+
             if (quest.talk) {
                 view.talk = [];
                 for (var i = 0; i < quest.talk.length; i++) {

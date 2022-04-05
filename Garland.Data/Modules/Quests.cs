@@ -7,12 +7,16 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Saint = SaintCoinach.Xiv;
 using Garland.Data.Models;
+using System.IO;
+using System.Text.RegularExpressions;
+using System.Diagnostics;
 
 namespace Garland.Data.Modules
 {
     public class Quests : Module
     {
         Dictionary<int, List<int>> _npcsByQuestKey = new Dictionary<int, List<int>>();
+        Dictionary<string, Dictionary<string, string>> _cutTextByExCode = new Dictionary<string, Dictionary<string, string>>();
 
         public override string Name => "Quests";
 
@@ -41,7 +45,7 @@ namespace Garland.Data.Modules
             Dictionary<int, Saint.Quest> iQuestById = new Dictionary<int, Saint.Quest>();
             foreach (var iQuest in _builder.InterSheet<Saint.Quest>())
                 iQuestById[iQuest.Key] = iQuest;
-            
+
             foreach (var sQuest in _builder.Sheet<Saint.Quest>())
             {
                 if (sQuest.Key == 65536 || sQuest.Name == "")
@@ -258,24 +262,7 @@ namespace Garland.Data.Modules
                         continue;
 
                     var key = (int)instruction.Argument;
-                    if (_builder.Db.ItemsById.TryGetValue(key, out var item))
-                    {
-                        if (item.usedInQuest == null)
-                            item.usedInQuest = new JArray();
-
-                        JArray usedInQuest = item.usedInQuest;
-                        if (usedInQuest.Any(i => (int)i == sQuest.Key))
-                            continue;
-
-                        item.usedInQuest.Add(sQuest.Key);
-
-                        if (quest.usedItems == null)
-                            quest.usedItems = new JArray();
-                        quest.usedItems.Add(key);
-
-                        _builder.Db.AddReference(item, "quest", sQuest.Key, false);
-                        _builder.Db.AddReference(quest, "item", key, false);
-                    }
+                    ImportQuestUsedItems(quest, sQuest, key);
                 }
 
                 ImportQuestLore(quest, sQuest, instructions);
@@ -287,6 +274,28 @@ namespace Garland.Data.Modules
 
                 _builder.Db.Quests.Add(quest);
                 _builder.Db.QuestsById[sQuest.Key] = quest;
+            }
+        }
+
+        void ImportQuestUsedItems(dynamic quest, Saint.Quest sQuest, int key)
+        {
+            if (_builder.Db.ItemsById.TryGetValue(key, out var item))
+            {
+                if (item.usedInQuest == null)
+                    item.usedInQuest = new JArray();
+
+                JArray usedInQuest = item.usedInQuest;
+                if (usedInQuest.Any(i => (int)i == sQuest.Key))
+                    return;
+
+                item.usedInQuest.Add(sQuest.Key);
+
+                if (quest.usedItems == null)
+                    quest.usedItems = new JArray();
+                quest.usedItems.Add(key);
+
+                _builder.Db.AddReference(item, "quest", sQuest.Key, false);
+                _builder.Db.AddReference(quest, "item", key, false);
             }
         }
 
@@ -324,7 +333,7 @@ namespace Garland.Data.Modules
                     genre.icon = IconDatabase.EnsureEntry("journal", sJournalGenre.Icon);
 
                 genre.category = sJournalGenre.JournalCategory.Name.ToString();
-                genre.section = sJournalGenre.JournalCategory?.JournalSection?.Name?.ToString() ?? "Other Quests";
+                genre.section = sJournalGenre.JournalCategory?.JournalSection?.Name?.ToString() ?? "其他任务";
                 _builder.Db.QuestJournalGenres.Add(genre);
             }
         }
@@ -364,7 +373,7 @@ namespace Garland.Data.Modules
                 }
                 else
                     throw new NotImplementedException();
-            } 
+            }
             var baseIconIndex = (int)(UInt32)sEventIconType.GetRaw(0);
 
             // Mark function quests
@@ -480,10 +489,33 @@ namespace Garland.Data.Modules
                 if (rawString == "dummy" || rawString == "Dummy"
                     || rawString == "deleted" || rawString == "placeholder"
                     || rawString == "Marked for deletion"
+                    || rawString == "空" || rawString == "无"
+                    || rawString == "（★未使用／削除予定★）" || rawString == "空label"
+                    || rawString == "（未使用/预计删除）"
                     || string.IsNullOrWhiteSpace(rawString))
                     continue;
+                
+                // We need to get indexed other sheets, so we can get
+                //  some related Item which not listed in instructions.
+                HtmlStringFormatter fmter = new HtmlStringFormatter();
+                var str = row.XivString.Accept(fmter);
+                foreach (var pair in fmter.IndexedSheetRows())
+                {
+                    if (pair.Item1.Equals("Item"))
+                        ImportQuestUsedItems(quest, sQuest, pair.Item2);
+                    else
+                    {
+                        if (quest.otherIndexes == null)
+                        {
+                            quest.otherIndexes = new JArray();
+                        }
+                        dynamic obj = new JObject();
+                        obj.sheet = pair.Item1;
+                        obj.row = pair.Item2;
+                        quest.otherIndexes.Add(obj);
+                    }
+                }
 
-                var str = HtmlStringFormatter.Convert(row.XivString);
                 //if (str.Contains("Aye, an anima weapon")) // Has IntegerParameter(1) [Error] - need to pass proper eval parameters in.
                 //    System.Diagnostics.Debugger.Break();
 
@@ -514,6 +546,90 @@ namespace Garland.Data.Modules
                 lastLine = str;
             }
 
+            Regex textRegex = new Regex("TEXT_VOICEMAN_(\\d{5})_(\\d{6})_(.*?)\u0000");
+            Dictionary<int, Saint.XivRow> cutsceneById = new Dictionary<int, Saint.XivRow>();
+            foreach (var row in _builder.Sheet("Cutscene"))
+            {
+                cutsceneById[row.Key] = row;
+            }
+
+            if (quest.genre?.Value <= 11 && quest.genre?.Value != 0)
+            {
+                var cutscenes = new JArray();
+                foreach (var instruction in instructions)
+                {
+                    if (instruction.Label.StartsWith("NCUT") || instruction.Label.StartsWith("CUTSCENE") || instruction.Label.StartsWith("CUT_SCENE"))
+                    {
+                        var cutscene = new JArray();
+                        try
+                        {
+                            string label = instruction.Label;
+                            int cutsceneId = (int)instruction.Argument;
+                            string path;
+                            if (cutsceneById.TryGetValue(cutsceneId, out var cutsceneRow))
+                            {
+                                path = "cut/" + cutsceneRow["Path"] + ".cutb";
+                            }
+                            else
+                            {
+                                string code = label.Substring(11);
+                                string questCode = sQuest.Id.ToString().Substring(0, 6).ToLower();
+                                path = "cut/" + sQuest.ExpansionCode + "/" + questCode + "/" + questCode + code + "/" + questCode + code + ".cutb";
+                            }
+                            if (!_builder.Realm.Packs.TryGetFile(path, out var cutb))
+                            {
+                                DatabaseBuilder.PrintLine($"cutb file {path} not found.");
+                                continue;
+                            }
+
+                            StreamReader reader = new StreamReader(cutb.GetStream());
+                            string cutbFileText = reader.ReadToEnd();
+
+                            MatchCollection matchCol = textRegex.Matches(cutbFileText);
+                            foreach (Match match in matchCol)
+                            {
+                                dynamic obj = new JObject();
+                                string textIndex = match.Value.Substring(0, match.Value.Length - 1);
+                                string exCode = match.Groups[1].Value.Trim();
+                                string voiceIndex = match.Groups[2].Value.Trim();
+                                string speaker = match.Groups[3].Value.Trim();
+                                string text = GetCutsceneText(exCode, textIndex);
+
+                                obj.name = speaker;
+                                obj.text = text;
+
+                                try
+                                {
+                                    string voicePath = EnsureVoiceLine(sQuest.ExpansionCode, exCode, voiceIndex);
+                                    if (voicePath != "notfound")
+                                        obj.voice = voicePath;
+                                } catch (Exception e)
+                                {
+                                    if (System.Diagnostics.Debugger.IsAttached)
+                                        System.Diagnostics.Debugger.Break();
+                                }
+
+                                cutscene.Add(obj);
+                            }
+                            if (cutscene.Count > 0)
+                            {
+                                cutscenes.Add(cutscene);
+                            }
+                        }
+                        catch (Exception e)
+                        {
+                            if (System.Diagnostics.Debugger.IsAttached)
+                                System.Diagnostics.Debugger.Break();
+                        }
+                    }
+                }
+                if (cutscenes.Count > 0)
+                {
+                    quest.cutscenes = cutscenes;
+                }
+            }
+
+
             // Script instructions
             //if (instructions.Length > 0)
             //{
@@ -526,6 +642,69 @@ namespace Garland.Data.Modules
             //        quest.script.Add(ImportInstruction(_builder, instruction));
             //    }
             //}
+        }
+
+        string GetCutsceneText(string ex, string code)
+        {
+            if (_cutTextByExCode.TryGetValue(ex, out var textByCode))
+            {
+                return textByCode[code];
+            }
+            else
+            {
+                var textSheetId = string.Format("cut_scene/{0}/VoiceMan_{1}", ex.Substring(0, 3), ex);
+                var textSheet = _builder.Sheet(textSheetId);
+
+                Dictionary<string, string> textByCodeN = new Dictionary<string, string>();
+                foreach (var row in textSheet)
+                {
+                    textByCodeN[row[0].ToString()] = row[1].ToString();
+                }
+
+                _cutTextByExCode[ex] = textByCodeN;
+                return textByCodeN[code];
+            }
+        }
+
+        string EnsureVoiceLine(string expansionCode, string ex, string voiceIndex)
+        {
+            // cut/ex3/sound/VOICEM/VOICEMAN_05300/vo_VOICEMAN_05300_002300_m_ja.scd
+            var voiceDirectory = Path.Combine(Config.VoicePath, ex);
+            var voicePath = ex + "/" + voiceIndex + ".ogg";
+            var fullPath = Path.Combine(voiceDirectory, voiceIndex + ".ogg");
+            if (File.Exists(fullPath))
+                return voicePath;
+
+            // Write voices that don't yet exist.
+            Directory.CreateDirectory(voiceDirectory);
+
+            string path = string.Format("cut/{0}/sound/VOICEM/VOICEMAN_{1}/vo_VOICEMAN_{1}_{2}_m_chs.scd", expansionCode, ex, voiceIndex);
+            _builder.Realm.Packs.TryGetFile(path, out var scdRaw);
+            if (scdRaw == null)
+            {
+                DatabaseBuilder.PrintLine($"Failed to get voice file of {path}.");
+                return "notfound";
+            }
+            var sScdFile = new SaintCoinach.Sound.ScdFile(scdRaw);
+            var sEntry = sScdFile.Entries[0];
+            if (sEntry == null)
+                return "notfound";
+
+            // File.WriteAllBytes(fullPath, sEntry.GetDecoded());
+
+            var baseFileName = Path.Combine("output\\input.ogg");
+            File.WriteAllBytes(baseFileName, sEntry.GetDecoded());
+
+            
+            var ffmpeg = new Process();
+            ffmpeg.StartInfo = new ProcessStartInfo(Config.FfmpegPath, "-i output\\input.ogg -acodec libvorbis -b:a 128k output\\output.ogg");
+            ffmpeg.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+            ffmpeg.Start();
+            ffmpeg.WaitForExit();
+
+            File.Move("output\\output.ogg", fullPath);
+
+            return voicePath;
         }
     }
 }

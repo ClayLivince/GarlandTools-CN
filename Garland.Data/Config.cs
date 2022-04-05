@@ -17,6 +17,7 @@ namespace Garland.Data
         public const string PatchesPath = SupplementalPath + "patches.json";
 
         public static string IconPath => Path.Combine(FilesPath, "icons");
+        public static string VoicePath => Path.Combine(FilesPath, "voices");
 
         // These values are configured in Config.json.
         public static string ConnectionString { get; private set; }

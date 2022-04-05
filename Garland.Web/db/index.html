@@ -620,7 +620,7 @@
                     <div class="page-selector subsection">
                         {{=gt.tripletriad.generatePageList(it.currentPage)}}
                     </div>
-                    <div class="tripletriad-list subsection">
+                    <div class="tripletriad-list-div subsection">
                         <div class="tripletriad-list">
                             <div class="tripletriad-list-container">
                                 {{=gt.tripletriad.generateList(it.currentPage, 1, null)}}
@@ -2892,6 +2892,27 @@
                     {{~}}
                 </div>
 
+                {{?it.cutscenes}}
+                    {{~it.cutscenes :cut:cindex}}
+                    <div class="cutscene dialogue subsection collapsible collapsed" data-headername="cutscene">
+                        <h3 class="pointer">动画# {{=cindex + 1}}</h3>
+
+                        {{~cut :value:vindex}}
+                        <div class="dialogue-entry collapse-toggle {{=value.type}}">
+                            {{=value.text}}
+                        </div>
+                        {{?value.voice}}
+                        <div class="dialogue-entry collapse-toggle {{=value.type}}">
+                            <audio controls controlsList="nodownload">
+                                <source src="{{=value.voice}}" type="audio/ogg">
+                            </audio>
+                        </div>
+                        {{?}}
+                        {{~}}
+                    </div>
+                    {{~}}
+                {{?}}
+
                 {{?it.talk}}
                     <div class="talk subsection collapsible collapsed" data-headername="talk">
                         <h3 class="pointer">文字对话</h3>
@@ -4281,6 +4302,13 @@
                     <input type="button" id="upload-sync" value="💻 上传并同步">
                     <input type="button" id="download-sync" value="☁️ 下载并同步">
                     <input type="button" id="stop-sync" value="🚫 停止同步">
+                    <input type="button" id="export-setting" value="导出设置">
+                </div>
+
+                <div>
+                    <label for="import-setting-area">导入设置</label>
+                    <textarea id="import-setting-area"></textarea>
+                    <input type="button" id="import-setting" value="导入！">
                 </div>
             </div>
         </div>
