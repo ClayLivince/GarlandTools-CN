@@ -31,13 +31,13 @@ namespace Garland.Data.Output
 
         public void Write()
         {
-            foreach (var lang in _searchLangCodes) 
+            foreach (var lang in _searchLangCodes)
             {
                 CreatePartials(lang);
             }
             foreach (var lang in _languagesCodes)
             {
-                
+
                 WriteCore(lang);
 
                 WriteEquipmentCalculators(lang);
@@ -60,6 +60,7 @@ namespace Garland.Data.Output
 
             // Supplemental writes for tools
             WriteTripleTriads();
+            WriteFishCake();
 
             PatchDatabase.WriteMasterPatchList();
         }
@@ -579,7 +580,7 @@ namespace Garland.Data.Output
                 if (baitData[(string)bait.name] == null)
                     baitData.Add((string)bait.name, bait);
             }
-                
+
             parts.Add("gt.bell.bait = " + Json(baitData, Formatting.Indented));
 
             // Fish
@@ -635,7 +636,7 @@ namespace Garland.Data.Output
         void WriteTripleTriads()
         {
             Dictionary<int, dynamic> wrappers = new Dictionary<int, dynamic>();
-            Dictionary<int, dynamic> wrappersExtraCards = new Dictionary<int,  dynamic>();
+            Dictionary<int, dynamic> wrappersExtraCards = new Dictionary<int, dynamic>();
             foreach (int id in _db.CardItemByCardId.Keys)
             {
                 // do card extraction here. we only want to keep what we need.
@@ -662,13 +663,13 @@ namespace Garland.Data.Output
                 dynamic card = new JObject(tmpCard);
                 card.itemId = card.id;
                 card.id = id;
-                card.name = ((string) chs.name).Replace("九宫幻卡：", "");
+                card.name = ((string)chs.name).Replace("九宫幻卡：", "");
                 card.description = strings["chs"]["description"];
 
                 var wrapper = new JsWrapper("chs", "tripletriad", card);
                 AddPartials(wrapper, _db.ItemsById[card.itemId.Value]);
                 //_update.IncludeDocument(id.ToString(), "tripletriad", "chs", 1, Wrapper(wrapper));
-                
+
                 if (card.extra.Value)
                 {
                     wrappersExtraCards.Add(card.displayId.Value, wrapper);
@@ -685,6 +686,25 @@ namespace Garland.Data.Output
                 "gt.tripletriad.npcs = " + Json(DatabaseBuilder.Instance.Db.CardNpcs);
 
             FileDatabase.WriteFile("Garland.Web\\db\\js\\tripletriad.js", contents);
+        }
+
+        void WriteFishCake()
+        {
+            Dictionary<int, dynamic> wrappers = new Dictionary<int, dynamic>();
+            foreach (dynamic item in _db.Items)
+            {
+                if (item.fish != null)
+                {
+                    var wrapper = new JsWrapper("chs", "fish", item);
+                    AddPartials(wrapper, _db.ItemsById[item.id.Value]);
+                    wrappers.Add(item.id.Value, wrapper);
+                }
+            }
+            var contents = "gt.commit.fishcake.fish = " + Wrapper(wrappers) + ";\r\n";
+            //"gt.commit.fishcake.bait = " + Wrapper(wrappersExtraCards) + ";\r\n" +
+
+            FileDatabase.WriteFile("Garland.Web\\db\\js\\commit\\fishcake.js", contents);
+
         }
 
         #region Utility
@@ -913,7 +933,8 @@ namespace Garland.Data.Output
 
                     var partial = new JsPartial(dataRef.Type, dataRef.Id, obj);
                     partials.Add(partial);
-                } catch (KeyNotFoundException ignored)
+                }
+                catch (KeyNotFoundException ignored)
                 {
                     DatabaseBuilder.PrintLine($"Couldn't find Partial of type '{dataRef.Type}' with ID '{dataRef.Id}'.");
                 }

@@ -13,8 +13,8 @@ namespace Garland.Data
     public class GarlandDatabase
     {
         // NOTE: This section must be updated with every patch!
-        public const decimal NextPatch = 6.01m;
-        public const decimal GlobalPatch = 6.08m;
+        public const decimal NextPatch = 6.11m;
+        public const decimal GlobalPatch = 6.2m;
         public static Patch[] MajorPatches = new[] {
             new Patch(1m, "遗产", "遗产"),
 
@@ -47,6 +47,7 @@ namespace Garland.Data
             new Patch(5.5m, "死斗至黎明", "暗影之逆焰"),
 
             new Patch(6m, "晓月之终途", "晓月之终途"),
+            new Patch(6.1m, "崭新的冒险", "晓月之终途"),
         };
 
         public static int LevelCap = -1; // Filled in from Miscellaneous.
@@ -104,7 +105,7 @@ namespace Garland.Data
         public Dictionary<int, dynamic> LocationsById = new Dictionary<int, dynamic>();
         public Dictionary<string, int> LocationIdsByName = new Dictionary<string, int>();
         public Dictionary<string, int> LocationIdsByEnName = new Dictionary<string, int>();
-        public Dictionary<string, dynamic> WeatherByEnName = new Dictionary<string, dynamic>(); 
+        public Dictionary<string, dynamic> WeatherByEnName = new Dictionary<string, dynamic>();
         public Dictionary<string, dynamic> ItemsByName = new Dictionary<string, dynamic>();
         public Dictionary<string, dynamic> ItemsByEnName = new Dictionary<string, dynamic>();
         public Dictionary<int, List<dynamic>> ItemsByInstanceId = new Dictionary<int, List<dynamic>>();

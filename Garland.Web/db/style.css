@@ -348,8 +348,23 @@ a:hover {
     -webkit-filter: invert(40%);
 }
 
+.block .copy-button {
+    width: 22px;
+    height: 22px;
+    padding: 4px;
+    border-radius: 0;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    cursor: pointer;
+    position: absolute;
+    right: 45px;
+    top: 2px;
+    transition: all 0.3s;
+}
+
+
 .block .notifications-button.active,
-.block .notifications-button:hover {
+.block .notifications-button:hover{
     filter: none;
     -webkit-filter: none;
 }
@@ -363,8 +378,13 @@ a:hover {
     background-color: #A83521;
 }
 
+.copy-button:hover {
+    border-radius: 50%;
+}
+
 .block .settings-button:hover,
-.block .notifications-button:hover {
+.block .notifications-button:hover,
+.block .copy-button:hover {
     border: 1px solid #1c1c1c;
     background-color: #437487;
 }

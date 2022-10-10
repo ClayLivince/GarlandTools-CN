@@ -38,7 +38,7 @@
                 </div>
             {{??it.groupTradeSource && it.groupTradeSource.item}}
                 <div class="right">
-                    {{?it.groupTradeSource.item[0].amount > 1}}<span>x{{=it.groupTradeSource.item[0].amount}} for</span>{{?}}
+                    {{?it.groupTradeSource.item[0].amount > 1}}<span>x{{=it.groupTradeSource.item[0].amount}} 兑换需要</span>{{?}}
                     {{~it.groupTradeSource.currency :currency:currencyIndex}}<div class="inline-block block-link trade hover-highlight pointer" data-id="{{=currency.id}}" data-type="item"><img class="icon small" src="{{=currency.obj.icon}}" title="{{=currency.obj.name}}">{{=currency.amount.toLocaleString()}}{{?currency.hq}} <img class="hq-icon" src="images/item/hq.png">{{?}}{{?currency.collectability}} <img class="icon small" src="images/item/Collectable.png" title="Collectability Rating">{{=currency.collectability}}{{?}}</span></div>{{~}}
                 </div>
             {{??}}
@@ -310,6 +310,9 @@
     <script id="block-template" type="text/x-dot-template">
         <div class="block {{=it.type}} {{?it.blockClass}}{{=it.blockClass}}{{?}}" data-id="{{=it.id}}" data-type="{{=it.type}}">
             <div class="block-title handle">
+                {{?(it.displayName || it.name)}}
+                    <img src="images/site/Copy.svg" title="Copy block name" class="copy-button button">
+                {{?}}
                 {{?it.audio}}
                     <img src="images/site/Speaker.svg" title="Play audio and desktop notifications" class="notifications-button button">
                 {{?}}
@@ -1278,7 +1281,7 @@
                         <hr class="clear">
 
                         {{?it.mount.guideIcon}}
-                            <img src="../files/icons/mount/{{=it.mount.guideIcon}}.png" class="right mount-guide-icon">
+                     I       <img src="../files/icons/mount/{{=it.mount.guideIcon}}.png" class="right mount-guide-icon">
                             <div class="block-description">{{=it.mount.description}}</div>
                             <hr>
                         {{?}}
@@ -3912,6 +3915,16 @@
         <p style="background:none;bottom: 5px;width: 100%;text-align: center;">
             <a style="color:#FFF;" target="_blank" href="https://beian.miit.gov.cn/">京ICP备2022000296号-1</a>
         </p>
+        <p style="background:none;bottom: 15px; width: 100%; text-align: center;">
+            <div style="width:300px;margin:0 auto; padding:20px 0; text-align: center;">
+                <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802038646" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+                    <img src="images/beian.png" style="float:left;"/>
+                    <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">
+                        京公网安备 11010802038646号
+                    </p>
+                </a>
+            </div>
+        </p>
     </div>
 
     <div id="popover-container"></div>
@@ -4159,12 +4172,12 @@
 
                     <tr>
                         <td class="value"><input type="checkbox" id="prefer-gathering"></td><td><label for="prefer-gathering">Gathering</label></td>
-                        <td colspan="2" class="deemphasize">Prefers manual gathering than npc shops.</td>
+                        <td colspan="2" class="deemphasize">我喜欢自己挖！不喜欢从npc商店买！（将手动采集置于NPC商店之前）</td>
                     </tr>
 
                     <tr>
                         <td class="value"><input type="checkbox" id="prefer-crafting"></td><td><label for="prefer-crafting">Crafting</label></td>
-                        <td colspan="2" class="deemphasize">Prefers manual crafting than npc shops.</td>
+                        <td colspan="2" class="deemphasize">我喜欢自己搓！不喜欢从npc商店买！（将手动制造置于NPC商店之前）</td>
                     </tr>
 
                     <!-- Crafting Categories -->

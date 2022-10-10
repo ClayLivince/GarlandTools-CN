@@ -7827,7 +7827,7 @@
     "title": "神我寺",
     "zone": "萨维奈岛",
     "coords": [
-      32.55,
+      32.43,
       24.96
     ],
     "name": "未知的",
@@ -7857,6 +7857,15 @@
         "itemDE": "Nordilsabarder Dolomitklumpen",
         "icon": 21225,
         "id": 36216
+      },
+      {
+        "item": "艾布拉纳赛黄晶原石",
+        "itemEN": "Raw Eblan Danburite",
+        "itemJA": "エブラーナダンビュライト原石",
+        "itemFR": "Danburite brute d'Éblana",
+        "itemDE": "Roh-Eblan-Danburit",
+        "icon": 21477,
+        "id": 37279
       }
     ],
     "stars": 1,
@@ -8004,8 +8013,8 @@
     "title": "理性其三",
     "zone": "迷津",
     "coords": [
-      9.97,
-      34.91
+      10.57,
+      34.81
     ],
     "name": "限时的",
     "uptime": 240,
@@ -8055,8 +8064,8 @@
     "title": "帕瓦纳的悔悟",
     "zone": "萨维奈岛",
     "coords": [
-      25.22,
-      14.35
+      26.77,
+      15.67
     ],
     "name": "限时的",
     "uptime": 240,
@@ -8210,8 +8219,8 @@
     "title": "理性其二",
     "zone": "迷津",
     "coords": [
-      9.81,
-      22.08
+      9.99,
+      22.36
     ],
     "name": "未知的",
     "uptime": 120,
@@ -8314,6 +8323,15 @@
         "itemDE": "Goldkokon",
         "icon": 21682,
         "id": 36207
+      },
+      {
+        "item": "萨维奈玉米",
+        "itemEN": "Thavnairian Corn",
+        "itemJA": "サベネアンコーン",
+        "itemFR": "Épi de maïs thavnairois",
+        "itemDE": "Thavnair-Maiskolben",
+        "icon": 25352,
+        "id": 37278
       }
     ],
     "stars": 1,
@@ -8366,8 +8384,8 @@
     "title": "异亚转移阵",
     "zone": "天外天垓",
     "coords": [
-      28.05,
-      13.11
+      28.11,
+      13.23
     ],
     "name": "传说的",
     "uptime": 120,

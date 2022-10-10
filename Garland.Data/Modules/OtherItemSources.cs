@@ -37,19 +37,19 @@ namespace Garland.Data.Modules
                     switch (type)
                     {
                         case "Desynth":
-                            BuildDesynth(item,  args);
+                            BuildDesynth(item, args);
                             break;
 
                         case "Reduce":
-                            BuildReduce(item,  args);
+                            BuildReduce(item, args);
                             break;
 
                         case "Loot":
-                            BuildLoot(item,  args);
+                            BuildLoot(item, args);
                             break;
 
                         case "Venture":
-                            BuildVentures(item,  args);
+                            BuildVentures(item, args);
                             break;
 
                         case "Node":
@@ -69,7 +69,7 @@ namespace Garland.Data.Modules
                             break;
 
                         case "Gardening":
-                            BuildGardening(item,  args);
+                            BuildGardening(item, args);
                             break;
 
                         case "Other":
@@ -89,7 +89,7 @@ namespace Garland.Data.Modules
                     var joinedArgs = string.Join(", ", args);
                     DatabaseBuilder.PrintLine($"Error importing supplemental source '{itemName}' with args '{joinedArgs}': {ex.Message}");
                     //if (System.Diagnostics.Debugger.IsAttached)
-                        //System.Diagnostics.Debugger.Break();
+                    //System.Diagnostics.Debugger.Break();
                 }
             }
         }
@@ -100,10 +100,11 @@ namespace Garland.Data.Modules
             if (item.other != null)
                 throw new InvalidOperationException("item.other already exists.");
 
-            item.other = new JArray(sources);
+            if (sources.Length > 0)
+                item.other = new JArray(sources);
         }
 
-        void BuildGardening(dynamic item,  string[] sources)
+        void BuildGardening(dynamic item, string[] sources)
         {
             foreach (string seedItemName in sources)
             {
@@ -182,7 +183,7 @@ namespace Garland.Data.Modules
             }
         }
 
-        void BuildLoot(dynamic item,  string[] sources)
+        void BuildLoot(dynamic item, string[] sources)
         {
             if (item.treasure == null)
                 item.treasure = new JArray();
@@ -195,11 +196,12 @@ namespace Garland.Data.Modules
                 {
                     generators.Add(sourceItem);
                 }
-                else {
+                else
+                {
                     DatabaseBuilder.PrintLine($"Item name '{source}' not found in database. Maybe there is a typo? Or not release in Chinese?");
                 }
             }
-            
+
             foreach (var generator in generators)
             {
                 if (generator.loot == null)
@@ -213,7 +215,7 @@ namespace Garland.Data.Modules
             }
         }
 
-        void BuildVentures(dynamic item,string[] sources)
+        void BuildVentures(dynamic item, string[] sources)
         {
             if (item.ventures != null)
                 throw new InvalidOperationException("item.ventures already exists.");
@@ -269,17 +271,17 @@ namespace Garland.Data.Modules
             }
         }
 
-        void BuildInstances(dynamic item,  string[] sources)
+        void BuildInstances(dynamic item, string[] sources)
         {
             if (item.instances == null)
                 item.instances = new JArray();
 
             int itemId = item.id;
-            
+
 
             foreach (var name in sources)
             {
-                var instance = _builder.Db.Instances.First(i => i.en.name.ToString().ToUpper() == name.ToUpper());
+                var instance = _builder.Db.Instances.First(i => i.en?.name?.ToString().ToUpper() == name.ToUpper());
                 int instanceId = instance.id;
                 if (instance.rewards == null)
                     instance.rewards = new JArray();

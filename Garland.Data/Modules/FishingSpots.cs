@@ -84,11 +84,12 @@ namespace Garland.Data.Modules
             try
             {
                 item = GarlandDatabase.Instance.ItemsByName[baitName];
-            } catch (KeyNotFoundException)
+            }
+            catch (KeyNotFoundException)
             {
                 item = GarlandDatabase.Instance.ItemsByEnName[baitName];
             }
-            
+
 
             bait = new JObject();
             bait.name = item.chs.name;
@@ -120,8 +121,12 @@ namespace Garland.Data.Modules
 
             foreach (var sFishParameter in _builder.Sheet<Saint.FishParameter>())
             {
-                var iFishParameter = iFishParameterIndex[sFishParameter.Key];
-                
+                if (!iFishParameterIndex.TryGetValue(sFishParameter.Key, out var iFishParameter))
+                {
+                    DatabaseBuilder.PrintLine($"iFishParameter {sFishParameter.Key}, {sFishParameter.Text} not found.");
+                    continue;
+                }
+
                 var guideText = sFishParameter.Text.ToString();
                 if (string.IsNullOrEmpty(guideText))
                     continue;
@@ -224,7 +229,8 @@ namespace Garland.Data.Modules
                 var tug = rLine[7].Trim();
                 var hookset = rLine[8].Trim();
 
-                switch (hookset) {
+                switch (hookset)
+                {
                     case "Precision":
                         {
                             hookset = "精准提钩";
@@ -310,7 +316,8 @@ namespace Garland.Data.Modules
                     if (transition != "")
                     {
                         var transitionList = transition.Split(_comma, StringSplitOptions.None);
-                        for (int i = 0; i < transitionList.Length; i++) {
+                        for (int i = 0; i < transitionList.Length; i++)
+                        {
                             transitionList[i] = _builder.Db.WeatherByEnName[transitionList[i]];
                         }
                         CheckWeather(transitionList);
@@ -456,27 +463,27 @@ namespace Garland.Data.Modules
             var lines = Utils.Tsv(Path.Combine(Config.SupplementalPath, "FFXIV Data - Spearfishing.tsv"));
             foreach (var rLine in lines.Skip(1))
             {
-                
-                    // Line data
-                    var name = rLine[0].Trim();
 
-                    if (string.IsNullOrEmpty(name))
-                        continue;
+                // Line data
+                var name = rLine[0].Trim();
 
-                    if (name.StartsWith("#"))
-                        continue;
+                if (string.IsNullOrEmpty(name))
+                    continue;
 
-                    var buff = rLine[7].Trim();
-                    var unlock = rLine[8].Trim();
+                if (name.StartsWith("#"))
+                    continue;
 
-                    // Name may reference either fishing spot, spearfishing node, or fish - check here.
-                    if (_builder.Db.SpearfishingNodesByEnName.TryGetValue(name, out var node))
-                    {
-                        currentNode = node;
-                        currentNodeItems = node.items;
-                        BuildBuffAndUnlockRequirements(node, "node", node.id.ToString(), unlock, buff);
-                        continue;
-                    }
+                var buff = rLine[7].Trim();
+                var unlock = rLine[8].Trim();
+
+                // Name may reference either fishing spot, spearfishing node, or fish - check here.
+                if (_builder.Db.SpearfishingNodesByEnName.TryGetValue(name, out var node))
+                {
+                    currentNode = node;
+                    currentNodeItems = node.items;
+                    BuildBuffAndUnlockRequirements(node, "node", node.id.ToString(), unlock, buff);
+                    continue;
+                }
                 try
                 {
                     // Fish info
@@ -554,7 +561,8 @@ namespace Garland.Data.Modules
                     }
 
                     item.fish.spots.Add(spot);
-                } catch (KeyNotFoundException e)
+                }
+                catch (KeyNotFoundException e)
                 {
                     DatabaseBuilder.PrintLine($"No item found with name {name}.");
                 }
@@ -610,11 +618,12 @@ namespace Garland.Data.Modules
                         sealedObject.buff = status.id;
                         _builder.Db.AddReference(sealedObject, "status", status.id.ToString(), true);
                     }
-                } catch (Exception buffEx)
+                }
+                catch (Exception buffEx)
                 {
                     DatabaseBuilder.PrintLine($"Error occurred when building required buff of {sealedObject}.");
                 }
-                
+
             }
         }
 
@@ -887,7 +896,7 @@ namespace Garland.Data.Modules
             Dictionary<int, Saint.FishingSpot> iFishingSpotById = new Dictionary<int, Saint.FishingSpot>();
             foreach (var iFishingSpot in _builder.InterSheet<Saint.FishingSpot>())
                 iFishingSpotById[iFishingSpot.Key] = iFishingSpot;
-            
+
             foreach (var sFishingSpot in _builder.Sheet<Saint.FishingSpot>())
             {
                 if (sFishingSpot.Key <= 1 || sFishingSpot.GatheringLevel == 0 || sFishingSpot.PlaceName == null)

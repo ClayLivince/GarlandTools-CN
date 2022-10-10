@@ -101,10 +101,10 @@ namespace Garland.Data.Modules
                 {
                     sEndTime = 2400;
                 }
-                point.times = new JArray() {sStartTime / 100};
+                point.times = new JArray() { sStartTime / 100 };
                 point.uptime = ((sEndTime / 100) - (sStartTime / 100)) * 60;
             }
-            else if (sTimeTable != null && ((Saint.XivRow) sTimeTable).Key != 0)
+            else if (sTimeTable != null && ((Saint.XivRow)sTimeTable).Key != 0)
             {
                 node.limitType = "未知的";
                 var sTimeTableRow = sTimeTable as Saint.XivRow;
@@ -118,7 +118,7 @@ namespace Garland.Data.Modules
                     else
                         break;
                 }
-                
+
                 // All three duration is same, we just take first one.
                 var sUptime = sTimeTableRow.As<UInt16>("Duration(m)[0]");
                 // This is confusing
@@ -493,14 +493,22 @@ namespace Garland.Data.Modules
                     // Add Reference of items
                     foreach (var gi in node.items)
                     {
-                        int itemId = gi.id;
-                        var item = _builder.Db.ItemsById[itemId];
-                        if (item.nodes == null)
-                            item.nodes = new JArray();
-                        item.nodes.Add(node.id);
-                        _builder.Db.AddReference(node, "item", itemId, false);
-                        _builder.Db.AddReference(item, "node", (int)node.id, true);
+                        try
+                        {
+                            int itemId = gi.id;
+                            var item = _builder.Db.ItemsById[itemId];
+                            if (item.nodes == null)
+                                item.nodes = new JArray();
+                            item.nodes.Add(node.id);
+                            _builder.Db.AddReference(node, "item", itemId, false);
+                            _builder.Db.AddReference(item, "node", (int)node.id, true);
+                        }
+                        catch (KeyNotFoundException notFound)
+                        {
+                            DatabaseBuilder.PrintLine($"Item {gi.id} not found.");
+                        }
                     }
+
                 }
                 else
                 {
@@ -560,18 +568,18 @@ namespace Garland.Data.Modules
                     _viewsByNodeId[nodeId] = view;
                     _builder.Db.NodeViews.Add(view);
 
-                        view.type = TypeToName((int)node.type);
-                        view.func = "node";
-                        view.items = new JArray();
+                    view.type = TypeToName((int)node.type);
+                    view.func = "node";
+                    view.items = new JArray();
 
-                        if (node.stars != null)
-                            view.stars = node.stars;
+                    if (node.stars != null)
+                        view.stars = node.stars;
 
-                        view.time = node.time;
-                        view.title = node.name;
+                    view.time = node.time;
+                    view.title = node.name;
 
-                        var zone = _builder.Db.LocationsById[(int)node.zoneid];
-                        view.zone = zone.name;
+                    var zone = _builder.Db.LocationsById[(int)node.zoneid];
+                    view.zone = zone.name;
 
                     view.coords = node.coords;
                     view.name = node.limitType;
@@ -579,12 +587,12 @@ namespace Garland.Data.Modules
                     view.lvl = node.lvl;
                     view.id = nodeId;
 
-                        if (node.bonus != null)
-                        {
-                            var bonus = _bonusesByKey[(int)node.bonus[0]];
-                            view.condition = bonus.condition;
-                            view.bonus = bonus.bonus;
-                        }
+                    if (node.bonus != null)
+                    {
+                        var bonus = _bonusesByKey[(int)node.bonus[0]];
+                        view.condition = bonus.condition;
+                        view.bonus = bonus.bonus;
+                    }
 
                     view.patch = node.patch;
                 }
@@ -609,12 +617,13 @@ namespace Garland.Data.Modules
 
                     view.items.Add(itemView);
                 }
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
                 System.Diagnostics.Debugger.Break();
             }
-            
-            
+
+
         }
 
         static string TypeToName(int gatheringType)

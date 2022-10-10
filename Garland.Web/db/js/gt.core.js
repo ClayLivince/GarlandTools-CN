@@ -646,6 +646,7 @@ gt.core = {
 
         $('.block-title .close-button', $block).click(gt.core.closeButtonClicked);
         $('.block-title .settings-button', $block).click(gt.core.settingsButtonClicked);
+        $('.block-title .copy-button', $block).click(gt.core.copyButtonClicked);
         $('.settings .unlock-height-link', $block).click(gt.core.unlockHeightLinkClicked);
         $('.block-link', $block).click(gt.core.blockLinkClicked);
 
@@ -693,6 +694,22 @@ gt.core = {
         $block.toggleClass('settings-open');
 
         return false;
+    },
+
+    copyButtonClicked: function(e) {
+        e.stopPropagation();
+
+        var $block = $(this).closest(".block");
+
+        var blockName = $(".name-handle", $block).text()
+        if (blockName){
+            var promise = navigator.clipboard.writeText(blockName);
+            if (promise) {
+                promise.catch(function(err) {
+                    console.error('Clipboard write error', err);
+                });
+            }
+        }
     },
 
     unlockHeightLinkClicked: function(e) {

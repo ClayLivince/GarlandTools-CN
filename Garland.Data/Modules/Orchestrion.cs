@@ -78,12 +78,13 @@ namespace Garland.Data.Modules
 
                 var baseFileName = Path.Combine("output\\input.ogg");
                 File.WriteAllBytes(baseFileName, sEntry.GetDecoded());
-
-                var ffmpeg = new Process();
-                ffmpeg.StartInfo = new ProcessStartInfo(Config.FfmpegPath, "-i output\\input.ogg -acodec libvorbis -b:a 128k output\\output.ogg");
-                ffmpeg.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-                ffmpeg.Start();
-                ffmpeg.WaitForExit();
+                /*
+                                var ffmpeg = new Process();
+                                ffmpeg.StartInfo = new ProcessStartInfo(Config.FfmpegPath, "-i output\\input.ogg -acodec libvorbis -b:a 128k output\\output.ogg");
+                                ffmpeg.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                                ffmpeg.Start();
+                                ffmpeg.WaitForExit();
+                */
 
                 File.Move("output\\input.ogg", targetFileName);
 

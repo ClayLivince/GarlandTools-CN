@@ -15,7 +15,7 @@ namespace Garland.UI.Views
     public partial class IconCalibrationWindow : Window
     {
         string _itemCsvPath = Config.SupplementalPath + "Item.icon.csv";
-        
+
         public IconCalibrationWindow()
         {
             InitializeComponent();
@@ -25,7 +25,7 @@ namespace Garland.UI.Views
         private void StartCalibration(CalibrationConfig config)
         {
             var libraPath = System.IO.Path.Combine(Config.SupplementalPath, "app_data.sqlite");
-            var realm = new SaintCoinach.ARealmReversed(Config.GamePath, "SaintCoinach.History.zip", SaintCoinach.Ex.Language.English, libraPath);
+            var realm = new SaintCoinach.ARealmReversed(Config.GamePath, "SaintCoinachcn.History.zip", SaintCoinach.Ex.Language.ChineseSimplified, libraPath, "cn");
             DatabaseBuilder.PrintLine($"Game version: {realm.GameVersion}");
             DatabaseBuilder.PrintLine($"Definition version: {realm.DefinitionVersion}");
             var processing = Stopwatch.StartNew();
@@ -37,8 +37,8 @@ namespace Garland.UI.Views
             DatabaseBuilder.PrintLine($"Processing elapsed: {processing.Elapsed}");
         }
 
-        
-        
+
+
         private void StartCalibration_Click(object sender, RoutedEventArgs e)
         {
             CalibrationConfig config = GatherConfig();
@@ -62,7 +62,8 @@ namespace Garland.UI.Views
             if (CalibrationSourceIconDefinition.IsChecked == true)
             {
                 source = CalibrationConfig.Source.Definition;
-            } else if (CalibrationSourceItemCsv.IsChecked == true)
+            }
+            else if (CalibrationSourceItemCsv.IsChecked == true)
             {
                 source = CalibrationConfig.Source.ItemCsv;
             }
@@ -73,7 +74,7 @@ namespace Garland.UI.Views
             }
             */
 
-            return new CalibrationConfig(Reextract.IsChecked == true, 
+            return new CalibrationConfig(Reextract.IsChecked == true,
                 Icon40.IsChecked == true,
                 Icon80.IsChecked == true, _itemCsvPath, source);
         }

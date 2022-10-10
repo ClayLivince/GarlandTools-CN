@@ -28,7 +28,7 @@ namespace Garland.Data.Modules
             {
                 iFateByID.TryGetValue(sFate.Key, out var iFate);
                 BuildFate(sFate, iFate);
-            }    
+            }
         }
 
         void ImportSupplementalData()
@@ -81,7 +81,9 @@ namespace Garland.Data.Modules
                 {
                     DatabaseBuilder.PrintLine($"Fate Line Error: {line}");
                     if (System.Diagnostics.Debugger.IsAttached)
-                        System.Diagnostics.Debugger.Break();
+                    {
+                        //System.Diagnostics.Debugger.Break();
+                    }
                 }
             }
         }
@@ -139,7 +141,7 @@ namespace Garland.Data.Modules
                 case 60506: return "Path";
                 case 60958: return "EurekaNM";
 
-                case 60508: return "Festival"; 
+                case 60508: return "Festival";
                 case 60994: return "Rebuild";
                 case 63926: return "Carnival";
 

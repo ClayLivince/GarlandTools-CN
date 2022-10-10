@@ -142,7 +142,8 @@ namespace Garland.Data
                 new StatisticsModule(itemSourceComplexityModule),
                 });
             }
-            else {
+            else
+            {
                 // Test for build.
                 modules = new Queue<Module>(new Module[]
                 {
@@ -192,7 +193,7 @@ namespace Garland.Data
                 new StatisticsModule(itemSourceComplexityModule),
                 });
             }
-            
+
 
             itemSourceComplexityModule = null;
 
@@ -236,7 +237,7 @@ namespace Garland.Data
                 Db.AddReference(npc, "item", sItem.Key, false);
             }
         }
-        
+
         public dynamic CreateShop(string name, dynamic npc, bool isTrade)
         {
             // Check this isn't a duplicate shop on the npc.
@@ -342,7 +343,7 @@ namespace Garland.Data
             return item;
         }
 
-        public void UpgradeItem( dynamic downgrade, dynamic upgrade)
+        public void UpgradeItem(dynamic downgrade, dynamic upgrade)
         {
             if (downgrade == null || upgrade == null || downgrade == upgrade)
                 return;

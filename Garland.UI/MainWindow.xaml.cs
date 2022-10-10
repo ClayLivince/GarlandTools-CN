@@ -61,7 +61,7 @@ namespace Garland.UI
 
         void ConvertFiles_Click(object sender, RoutedEventArgs e)
         {
-            RunAction(() => 
+            RunAction(() =>
             {
                 BuildDatabase(false, false);
                 WriteFiles();
@@ -139,6 +139,7 @@ namespace Garland.UI
             DatabaseBuilder.PrintLine($"Game version: {realm.GameVersion}");
             DatabaseBuilder.PrintLine($"Global game version: {interRealm.GameVersion}");
             DatabaseBuilder.PrintLine($"Definition version: {realm.DefinitionVersion}");
+            DatabaseBuilder.PrintLine($"Global Definition version: {interRealm.DefinitionVersion}");
 
             var processing = Stopwatch.StartNew();
             builder.Build(fetchIconsOnly, buildNpcOnly);
