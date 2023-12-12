@@ -29,7 +29,7 @@ namespace Garland.Data.Modules
             _tomestoneIdByName[sTomestonesItems[0].Item.Name] = sTomestonesItems[0].Item.Key;
             _tomestoneIdByName[sTomestonesItems[1].Item.Name] = sTomestonesItems[1].Item.Key;
             _tomestoneIdByName[sTomestonesItems[2].Item.Name] = sTomestonesItems[2].Item.Key;
-            
+
             BuildDutyRoulette();
 
             BuildInstances();
@@ -372,19 +372,24 @@ namespace Garland.Data.Modules
             if (jFight.token != null)
             {
                 var currencyArray = new JArray();
-                fight.currency = currencyArray;
+
                 foreach (dynamic jToken in jFight.token as JArray)
                 {
                     try
                     {
                         dynamic currency = new JObject();
-                        currencyArray.Add(currency);
                         currency.id = _tomestoneIdByName[jToken.name.Value];
                         currency.amount = jToken.amount;
-                    } catch(KeyNotFoundException e)
+                        currencyArray.Add(currency);
+                    }
+                    catch (KeyNotFoundException e)
                     {
                         DatabaseBuilder.PrintLine($"Tomestone named {jToken.name.Value} not found.");
                     }
+                }
+                if (currencyArray.Count > 0)
+                {
+                    fight.currency = currencyArray;
                 }
             }
 

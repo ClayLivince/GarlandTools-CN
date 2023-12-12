@@ -92,7 +92,7 @@ namespace Garland.Data.Modules
 
                 if (!_builder.Db.ItemsById.TryGetValue(requiredItemKey, out var item))
                 {
-                    DatabaseBuilder.PrintLine($"Required item {requiredItemKey} not found when building shop.");
+                    DatabaseBuilder.PrintLine($"Required item {requiredItemKey} {sItem.Name} not found when building shop.");
                     continue;
                 }
 

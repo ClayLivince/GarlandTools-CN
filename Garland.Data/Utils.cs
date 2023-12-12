@@ -43,7 +43,7 @@ namespace Garland.Data
 
         public static int GetIconId(SaintCoinach.Imaging.ImageFile icon)
         {
-            return int.Parse(System.IO.Path.GetFileNameWithoutExtension(icon.Path));
+            return int.Parse(System.IO.Path.GetFileNameWithoutExtension(icon.Path.Replace("_hr1", "")));
         }
 
         public static string SanitizeTags(string str)
@@ -55,7 +55,7 @@ namespace Garland.Data
                 .Replace("<Indent/>", "");
         }
 
-        public static string RemoveLineBreaks (string str)
+        public static string RemoveLineBreaks(string str)
         {
             return str
                 .Replace("\r", "")

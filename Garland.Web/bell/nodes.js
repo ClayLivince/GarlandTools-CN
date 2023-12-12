@@ -6736,7 +6736,7 @@
       },
       {
         "item": "Sublime Chloroschist",
-        "icon": "t/21337",
+        "icon": 21337,
         "id": 39910
       }
     ],
@@ -6814,7 +6814,7 @@
       },
       {
         "item": "Sublime Haritaki",
-        "icon": "t/25043",
+        "icon": 25043,
         "id": 39907
       }
     ],
@@ -6916,7 +6916,7 @@
       },
       {
         "item": "Sublime Fossilized Dragon's Scale",
-        "icon": "t/22266",
+        "icon": 22266,
         "id": 41417
       }
     ],
@@ -6974,7 +6974,7 @@
     "items": [
       {
         "item": "Field Mustard",
-        "icon": "t/22696",
+        "icon": 22696,
         "id": 39709
       }
     ],
@@ -7003,7 +7003,7 @@
     "items": [
       {
         "item": "Lovingbloom",
-        "icon": "t/25413",
+        "icon": 25413,
         "id": 39710
       }
     ],
@@ -7042,7 +7042,7 @@
       },
       {
         "item": "Sublime Kukuru Beans",
-        "icon": "t/25329",
+        "icon": 25329,
         "id": 41414
       }
     ],

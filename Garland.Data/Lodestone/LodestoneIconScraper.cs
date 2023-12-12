@@ -31,6 +31,8 @@ namespace Garland.Data.Lodestone
 
         public void FetchIcons()
         {
+            var badNameStarts = new List<string> { "Augmented ", "Lost ", "Weathered " };
+
             // Start at a random place in the set.
             var start = (new Random()).Next(_itemIconDatabase.ItemsNeedingIcons.Count);
             var itemsToFetch = new List<Saint.Item>(_itemIconDatabase.ItemsNeedingIcons.Skip(start));
@@ -40,29 +42,46 @@ namespace Garland.Data.Lodestone
             var options = new ParallelOptions() { MaxDegreeOfParallelism = 2 };
             Parallel.ForEach(itemsToFetch, options, sItem =>
             {
-                var num = Interlocked.Increment(ref count);
-
-                // A prior item may share this icon, so always check if it was written.
-                var iconId = (UInt16)sItem.GetRaw("Icon");
-                if (_itemIconDatabase.HasIcon(iconId))
-                    return;
-
-                var progress = $"{num}/{itemsToFetch.Count}, {100*num/itemsToFetch.Count}%";
-
-                // Scrape search data from Lodestone.
-                var itemUrl = SearchItem(iconId, sItem.Name, progress);
-                string hash = null;
-                if (itemUrl != null)
-                    hash = FetchItem(iconId, sItem.Name, itemUrl, progress);
-
-                if (hash == null)
+                try
                 {
-                    // Can't find this entry.  Move on.
+                    var num = Interlocked.Increment(ref count);
+
+                    foreach (var bns in badNameStarts)
+                    {
+                        if (sItem.Name.ToString().StartsWith(bns))
+                        {
+                            return;
+                        }
+                    }
+
+
+                    // A prior item may share this icon, so always check if it was written.
+                    var iconId = (UInt16)sItem.GetRaw("Icon");
+                    if (_itemIconDatabase.HasIcon(iconId))
+                        return;
+
+                    var progress = $"{num}/{itemsToFetch.Count}, {100 * num / itemsToFetch.Count}%";
+
+                    // Scrape search data from Lodestone.
+                    var itemUrl = SearchItem(iconId, sItem.Name, progress);
+                    string hash = null;
+                    if (itemUrl != null)
+                        hash = FetchItem(iconId, sItem.Name, itemUrl, progress);
+
+                    if (hash == null)
+                    {
+                        // Can't find this entry.  Move on.
+                        return;
+                    }
+
+                    // Fetch the icon and write entries.
+                    WriteIcon(iconId, hash);
+                }
+                catch
+                {
                     return;
                 }
 
-                // Fetch the icon and write entries.
-                WriteIcon(iconId, hash);
             });
         }
 

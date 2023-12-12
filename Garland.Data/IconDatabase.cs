@@ -48,7 +48,7 @@ namespace Garland.Data
 
         public static int EnsureEntry(string type, ImageFile icon)
         {
-            if(icon == null)
+            if (icon == null)
             {
                 return 0;
             }
@@ -106,7 +106,7 @@ namespace Garland.Data
 
         public static int EnsureEntryHQ(string type, ImageFile icon, SaintCoinach.ARealmReversed realm)
         {
-            return EnsureEntryHQ(type, icon, Utils.GetIconId(icon), realm);
+            return EnsureEntry(type, icon, Utils.GetIconId(icon));
         }
     }
 }
