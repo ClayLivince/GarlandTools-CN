@@ -142,17 +142,17 @@ namespace Garland.Data.Output
                     while (!reader.EndOfStream)
                     {
                         var row = Row.ReadFromBatchFile(reader);
-                        if(row != null)
+                        if (row != null)
                         {
                             package._rows.Add(row);
-                        }                        
+                        }
                     }
                 }
             }
             return package;
         }
 
-        public void Run (IPrinter output, MySqlConnection conn)
+        public void Run(IPrinter output, MySqlConnection conn)
         {
             if (LastRun != null)
             {
@@ -175,6 +175,19 @@ namespace Garland.Data.Output
             LastRun = DateTime.Now;
         }
 
+        void WriteUpdatePackageSQL(string sql)
+        {
+            var fileName = Config.UpdatesPath + _name + ".sql";
+            sql = sql.Remove(sql.Length - 1, 1);
+            sql = sql + ";";
+            sql = sql.Replace("REPLACE INTO DataJsonTest", "REPLACE INTO DataJson");
+
+            using (var writer = File.AppendText(fileName))
+            {
+                writer.WriteLine(sql);
+            }
+        }
+
         void RunCore(IPrinter output, MySqlCommand cmd)
         {
             var currentHeader = _rows.First().TableHeader;
@@ -188,6 +201,7 @@ namespace Garland.Data.Output
                 count++;
                 if (row.TableHeader != currentHeader || sql.Length > BatchSizeLimit)
                 {
+                    WriteUpdatePackageSQL(sql.ToString());
                     RunBatch(sql, cmd);
                     output.PrintLine($"Wrote {count} / {_rows.Count}");
 
@@ -201,6 +215,7 @@ namespace Garland.Data.Output
             // Send any pending statements.
             if (sql.Length > 0)
             {
+                WriteUpdatePackageSQL(sql.ToString());
                 RunBatch(sql, cmd);
                 output.PrintLine($"Wrote {_rows.Count}");
             }
