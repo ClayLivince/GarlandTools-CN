@@ -122,7 +122,13 @@ namespace Garland.Data.Modules
                 if (requiredItemKey == 0)
                     continue;
 
-                var item = _builder.Db.ItemsById[requiredItemKey];
+                if (!_builder.Db.ItemsById.TryGetValue(requiredItemKey, out var item))
+                {
+                    DatabaseBuilder.PrintLine($"Failed to get Shop Required Item {requiredItemKey}.");
+                    //if (System.Diagnostics.Debugger.IsAttached)
+                    //    System.Diagnostics.Debugger.Break();
+                    continue;
+                }
 
                 var sReward = (Saint.XivRow)sCollectablesShopItem["CollectablesShopRewardScrip"];
                 int sRewardId = Convert.ToInt32(sReward["Currency"]);
@@ -132,6 +138,11 @@ namespace Garland.Data.Modules
                     rewardScrip = _builder.Db.ItemsById[Currencies[sRewardId - 1]];
                 }
                 catch (ArgumentOutOfRangeException)
+                {
+                    DatabaseBuilder.PrintLine($"Currency {sRewardId} not found for {sItem.Name}.");
+                    continue;
+                }
+                catch (IndexOutOfRangeException)
                 {
                     DatabaseBuilder.PrintLine($"Currency {sRewardId} not found for {sItem.Name}.");
                     continue;

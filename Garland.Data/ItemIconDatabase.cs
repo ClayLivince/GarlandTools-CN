@@ -14,15 +14,16 @@ namespace Garland.Data
     {
         string _itemIconPath;
         DatabaseBuilder _builder;
-        
+
         bool _overwriteIcon = false;
         Dictionary<UInt16, object> _iconPathsByIconId = new Dictionary<UInt16, object>();
         public List<Saint.Item> ItemsNeedingIcons = new List<Saint.Item>();
 
-        public ItemIconDatabase(DatabaseBuilder builder) {
+        public ItemIconDatabase(DatabaseBuilder builder)
+        {
             _builder = builder;
         }
-        
+
         public void Initialize(IEnumerable<Saint.Item> sItems)
         {
             _itemIconPath = Path.Combine(Config.IconPath, "item");
@@ -33,7 +34,15 @@ namespace Garland.Data
             {
                 if (iconFileName.Contains("json"))
                     continue;
-                var iconId = UInt16.Parse(Path.GetFileNameWithoutExtension(iconFileName));
+                UInt16 iconId;
+                try
+                {
+                    iconId = UInt16.Parse(Path.GetFileNameWithoutExtension(iconFileName));
+                }
+                catch
+                {
+                    continue;
+                }
                 _iconPathsByIconId[iconId] = iconId;
             }
 
@@ -75,7 +84,9 @@ namespace Garland.Data
             {
                 image = sItem.Icon.GetImage();
             }
+
             image.Save(path, System.Drawing.Imaging.ImageFormat.Png);
+            
 
             return temporaryId;
         }

@@ -48,7 +48,7 @@ namespace Garland.Data.Modules
 
             foreach (var row in _builder.Sheet("Cabinet"))
             {
-                var id = (int)row.GetRaw("Item");
+                var id = Convert.ToInt32(row.GetRaw(0));
                 if (id > 0)
                     _armoireIndex.Add(id);
             }

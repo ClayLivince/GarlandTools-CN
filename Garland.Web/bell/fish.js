@@ -700,8 +700,8 @@
     "id": 36591,
     "icon": 27046
   },
-  "以太鳌虾": {
-    "name": "以太鳌虾",
+  "以太螯虾": {
+    "name": "以太螯虾",
     "id": 36412,
     "icon": 28417,
     "mooch": 1
@@ -2579,10 +2579,6 @@ gt.bell.fish = [
         "潮虫"
       ]
     ],
-    "during": {
-      "start": 9,
-      "end": 14
-    },
     "hookset": "精准提钩",
     "tug": "重杆",
     "id": 7685,
@@ -2609,10 +2605,6 @@ gt.bell.fish = [
         "海港鲱"
       ]
     ],
-    "during": {
-      "start": 9,
-      "end": 17
-    },
     "hookset": "强力提钩",
     "tug": "重杆",
     "id": 7707,
@@ -2788,10 +2780,6 @@ gt.bell.fish = [
         "沟鼠尾巴"
       ]
     ],
-    "during": {
-      "start": 9,
-      "end": 14
-    },
     "hookset": "精准提钩",
     "tug": "重杆",
     "id": 7678,
@@ -3467,10 +3455,6 @@ gt.bell.fish = [
         "蛾蛹"
       ]
     ],
-    "during": {
-      "start": 9,
-      "end": 14
-    },
     "hookset": "精准提钩",
     "tug": "重杆",
     "id": 7679,
@@ -4910,10 +4894,6 @@ gt.bell.fish = [
         "下沉诱饵鱼"
       ]
     ],
-    "during": {
-      "start": 5,
-      "end": 8
-    },
     "hookset": "强力提钩",
     "tug": "重杆",
     "id": 7709,
@@ -7012,10 +6992,6 @@ gt.bell.fish = [
         "虾虎丸子"
       ]
     ],
-    "during": {
-      "start": 16,
-      "end": 22
-    },
     "hookset": "强力提钩",
     "tug": "重杆",
     "id": 7691,
@@ -7091,10 +7067,6 @@ gt.bell.fish = [
         "虾虎丸子"
       ]
     ],
-    "during": {
-      "start": 21,
-      "end": 3
-    },
     "hookset": "精准提钩",
     "tug": "重杆",
     "id": 7712,
@@ -8450,10 +8422,6 @@ gt.bell.fish = [
         "沟鼠尾巴"
       ]
     ],
-    "during": {
-      "start": 3,
-      "end": 5
-    },
     "weather": [
       "阴云",
       "薄雾",
@@ -9084,10 +9052,6 @@ gt.bell.fish = [
         "花蝇"
       ]
     ],
-    "during": {
-      "start": 17,
-      "end": 19
-    },
     "hookset": "精准提钩",
     "tug": "重杆",
     "id": 7902,
@@ -9441,10 +9405,6 @@ gt.bell.fish = [
         "小虾肉笼"
       ]
     ],
-    "during": {
-      "start": 20,
-      "end": 23
-    },
     "hookset": "强力提钩",
     "tug": "重杆",
     "id": 7909,
@@ -9809,8 +9769,8 @@ gt.bell.fish = [
       ]
     ],
     "during": {
-      "start": 19,
-      "end": 21
+      "start": 18,
+      "end": 6
     },
     "weather": [
       "碧空",
@@ -10295,10 +10255,6 @@ gt.bell.fish = [
         "鲱鱼丸子"
       ]
     ],
-    "during": {
-      "start": 9,
-      "end": 15
-    },
     "weather": [
       "碧空"
     ],
@@ -11668,10 +11624,6 @@ gt.bell.fish = [
         "蜜虫"
       ]
     ],
-    "during": {
-      "start": 17,
-      "end": 20
-    },
     "hookset": "精准提钩",
     "tug": "轻杆",
     "id": 7925,
@@ -13939,10 +13891,6 @@ gt.bell.fish = [
         "铜鱼"
       ]
     ],
-    "during": {
-      "start": 9,
-      "end": 16
-    },
     "weather": [
       "碧空",
       "晴朗"
@@ -14557,10 +14505,6 @@ gt.bell.fish = [
         "极地磷虾"
       ]
     ],
-    "during": {
-      "start": 19,
-      "end": 3
-    },
     "hookset": "精准提钩",
     "tug": "重杆",
     "id": 7687,
@@ -14615,10 +14559,6 @@ gt.bell.fish = [
         "梭子鰆"
       ]
     ],
-    "during": {
-      "start": 16,
-      "end": 2
-    },
     "hookset": "强力提钩",
     "tug": "重杆",
     "id": 7684,
@@ -14644,10 +14584,6 @@ gt.bell.fish = [
         "弓角"
       ]
     ],
-    "during": {
-      "start": 9,
-      "end": 14
-    },
     "weather": [
       "碧空",
       "晴朗"
@@ -14882,10 +14818,6 @@ gt.bell.fish = [
         "海云水母"
       ]
     ],
-    "during": {
-      "start": 9,
-      "end": 15
-    },
     "weather": [
       "阴云",
       "薄雾",
@@ -15169,10 +15101,6 @@ gt.bell.fish = [
         "巨型乌贼"
       ]
     ],
-    "during": {
-      "start": 17,
-      "end": 3
-    },
     "weather": [
       "阴云",
       "薄雾",
@@ -15370,8 +15298,8 @@ gt.bell.fish = [
       ]
     ],
     "during": {
-      "start": 23,
-      "end": 2
+      "start": 18,
+      "end": 6
     },
     "hookset": "强力提钩",
     "tug": "重杆",
@@ -15430,8 +15358,8 @@ gt.bell.fish = [
       ]
     ],
     "during": {
-      "start": 22,
-      "end": 3
+      "start": 18,
+      "end": 6
     },
     "weather": [
       "阴云",
@@ -15465,8 +15393,8 @@ gt.bell.fish = [
       ]
     ],
     "during": {
-      "start": 20,
-      "end": 4
+      "start": 18,
+      "end": 6
     },
     "weather": [
       "阴云",
@@ -15531,10 +15459,6 @@ gt.bell.fish = [
         "梭子鰆"
       ]
     ],
-    "during": {
-      "start": 19,
-      "end": 2
-    },
     "weather": [
       "碧空",
       "晴朗"
@@ -16565,10 +16489,6 @@ gt.bell.fish = [
         "杜父鱼"
       ]
     ],
-    "during": {
-      "start": 17,
-      "end": 20
-    },
     "weather": [
       "阴云",
       "薄雾"
@@ -16725,10 +16645,6 @@ gt.bell.fish = [
         "乌鸦拟饵"
       ]
     ],
-    "during": {
-      "start": 4,
-      "end": 6
-    },
     "hookset": "强力提钩",
     "tug": "重杆",
     "id": 7904,
@@ -16754,10 +16670,6 @@ gt.bell.fish = [
         "黄油虫"
       ]
     ],
-    "during": {
-      "start": 19,
-      "end": 22
-    },
     "hookset": "强力提钩",
     "tug": "重杆",
     "id": 7916,
@@ -17160,10 +17072,6 @@ gt.bell.fish = [
         "复合亮片"
       ]
     ],
-    "during": {
-      "start": 16,
-      "end": 19
-    },
     "hookset": "强力提钩",
     "tug": "重杆",
     "id": 7927,
@@ -17189,10 +17097,6 @@ gt.bell.fish = [
         "复合亮片"
       ]
     ],
-    "during": {
-      "start": 16,
-      "end": 19
-    },
     "hookset": "强力提钩",
     "tug": "重杆",
     "id": 7927,
@@ -17497,10 +17401,6 @@ gt.bell.fish = [
         "蛀虫"
       ]
     ],
-    "during": {
-      "start": 19,
-      "end": 3
-    },
     "weather": [
       "小雨"
     ],
@@ -17531,7 +17431,7 @@ gt.bell.fish = [
       ]
     ],
     "during": {
-      "start": 4,
+      "start": 18,
       "end": 6
     },
     "weather": [
@@ -17821,10 +17721,6 @@ gt.bell.fish = [
         "蛀虫"
       ]
     ],
-    "during": {
-      "start": 17,
-      "end": 2
-    },
     "weather": [
       "小雨",
       "小雪"
@@ -17879,10 +17775,6 @@ gt.bell.fish = [
         "血蚯蚓"
       ]
     ],
-    "during": {
-      "start": 15,
-      "end": 21
-    },
     "hookset": "强力提钩",
     "tug": "重杆",
     "id": 7708,
@@ -17908,10 +17800,6 @@ gt.bell.fish = [
         "乌鸦拟饵"
       ]
     ],
-    "during": {
-      "start": 9,
-      "end": 14
-    },
     "weather": [
       "阴云",
       "薄雾"
@@ -18392,10 +18280,6 @@ gt.bell.fish = [
         "黄油虫"
       ]
     ],
-    "during": {
-      "start": 21,
-      "end": 3
-    },
     "weather": [
       "小雨"
     ],
@@ -18702,10 +18586,6 @@ gt.bell.fish = [
         "花蝇"
       ]
     ],
-    "during": {
-      "start": 18,
-      "end": 23
-    },
     "hookset": "精准提钩",
     "tug": "重杆",
     "id": 7920,
@@ -19083,10 +18963,6 @@ gt.bell.fish = [
         "蜜虫"
       ]
     ],
-    "during": {
-      "start": 18,
-      "end": 21
-    },
     "hookset": "强力提钩",
     "tug": "重杆",
     "id": 7934,
@@ -19142,10 +19018,6 @@ gt.bell.fish = [
         "斑纹虾虎"
       ]
     ],
-    "during": {
-      "start": 21,
-      "end": 3
-    },
     "hookset": "精准提钩",
     "tug": "重杆",
     "id": 7694,
@@ -19447,10 +19319,6 @@ gt.bell.fish = [
         "斗鱼"
       ]
     ],
-    "during": {
-      "start": 18,
-      "end": 2
-    },
     "hookset": "强力提钩",
     "tug": "重杆",
     "id": 7683,
@@ -19476,10 +19344,6 @@ gt.bell.fish = [
         "黄油虫"
       ]
     ],
-    "during": {
-      "start": 21,
-      "end": 23
-    },
     "hookset": "强力提钩",
     "tug": "重杆",
     "id": 7907,
@@ -20131,10 +19995,6 @@ gt.bell.fish = [
         "黄油虫"
       ]
     ],
-    "during": {
-      "start": 18,
-      "end": 19
-    },
     "hookset": "强力提钩",
     "tug": "重杆",
     "id": 7908,
@@ -20160,10 +20020,6 @@ gt.bell.fish = [
         "鲈鱼丸子"
       ]
     ],
-    "during": {
-      "start": 0,
-      "end": 8
-    },
     "weather": [
       "阴云",
       "薄雾"
@@ -20318,10 +20174,6 @@ gt.bell.fish = [
         "下沉诱饵鱼"
       ]
     ],
-    "during": {
-      "start": 21,
-      "end": 3
-    },
     "weather": [
       "碧空",
       "晴朗"
@@ -20658,10 +20510,6 @@ gt.bell.fish = [
         "漂浮诱饵鱼"
       ]
     ],
-    "during": {
-      "start": 9,
-      "end": 14
-    },
     "hookset": "强力提钩",
     "tug": "重杆",
     "id": 7699,
@@ -20739,10 +20587,6 @@ gt.bell.fish = [
         "雉鸡拟饵"
       ]
     ],
-    "during": {
-      "start": 17,
-      "end": 21
-    },
     "hookset": "强力提钩",
     "tug": "重杆",
     "id": 7695,
@@ -20893,10 +20737,6 @@ gt.bell.fish = [
         "漂浮诱饵蛙"
       ]
     ],
-    "during": {
-      "start": 4,
-      "end": 10
-    },
     "weather": [
       "薄雾"
     ],
@@ -21145,10 +20985,6 @@ gt.bell.fish = [
         "斗鱼"
       ]
     ],
-    "during": {
-      "start": 23,
-      "end": 4
-    },
     "weather": [
       "薄雾"
     ],
@@ -21206,10 +21042,6 @@ gt.bell.fish = [
         "黄油虫"
       ]
     ],
-    "during": {
-      "start": 21,
-      "end": 3
-    },
     "hookset": "强力提钩",
     "tug": "重杆",
     "id": 7706,
@@ -21285,10 +21117,6 @@ gt.bell.fish = [
         "极地磷虾"
       ]
     ],
-    "during": {
-      "start": 17,
-      "end": 18
-    },
     "hookset": "强力提钩",
     "tug": "重杆",
     "id": 7906,
@@ -21364,10 +21192,6 @@ gt.bell.fish = [
         "极地磷虾"
       ]
     ],
-    "during": {
-      "start": 20,
-      "end": 22
-    },
     "hookset": "强力提钩",
     "tug": "重杆",
     "id": 7910,
@@ -21547,10 +21371,6 @@ gt.bell.fish = [
         "暗斗鱼"
       ]
     ],
-    "during": {
-      "start": 18,
-      "end": 5
-    },
     "weather": [
       "薄雾"
     ],
@@ -21867,10 +21687,6 @@ gt.bell.fish = [
         "蝲蛄丸子"
       ]
     ],
-    "during": {
-      "start": 17,
-      "end": 3
-    },
     "hookset": "精准提钩",
     "tug": "重杆",
     "id": 7692,
@@ -21946,10 +21762,6 @@ gt.bell.fish = [
         "蝲蛄丸子"
       ]
     ],
-    "during": {
-      "start": 19,
-      "end": 24
-    },
     "hookset": "精准提钩",
     "tug": "重杆",
     "id": 7698,
@@ -21975,10 +21787,6 @@ gt.bell.fish = [
         "血蚯蚓"
       ]
     ],
-    "during": {
-      "start": 17,
-      "end": 21
-    },
     "hookset": "精准提钩",
     "tug": "重杆",
     "id": 7703,
@@ -22084,10 +21892,6 @@ gt.bell.fish = [
         "花蝇"
       ]
     ],
-    "during": {
-      "start": 20,
-      "end": 3
-    },
     "weather": [
       "小雨",
       "暴雨"
@@ -22117,10 +21921,6 @@ gt.bell.fish = [
         "摇蚊"
       ]
     ],
-    "during": {
-      "start": 17,
-      "end": 7
-    },
     "weather": [
       "小雨",
       "暴雨"
@@ -22179,10 +21979,6 @@ gt.bell.fish = [
         "蜜虫"
       ]
     ],
-    "during": {
-      "start": 17,
-      "end": 20
-    },
     "weather": [
       "碧空"
     ],
@@ -22431,10 +22227,6 @@ gt.bell.fish = [
         "火萤"
       ]
     ],
-    "during": {
-      "start": 12,
-      "end": 18
-    },
     "weather": [
       "热浪"
     ],
@@ -22820,10 +22612,6 @@ gt.bell.fish = [
         "飞沙鱼"
       ]
     ],
-    "during": {
-      "start": 9,
-      "end": 16
-    },
     "weather": [
       "热浪"
     ],
@@ -22853,10 +22641,6 @@ gt.bell.fish = [
         "飞沙鱼"
       ]
     ],
-    "during": {
-      "start": 8,
-      "end": 20
-    },
     "weather": [
       "热浪"
     ],
@@ -22996,10 +22780,6 @@ gt.bell.fish = [
         "杜父鱼"
       ]
     ],
-    "during": {
-      "start": 22,
-      "end": 4
-    },
     "weather": [
       "薄雾"
     ],
@@ -23056,10 +22836,6 @@ gt.bell.fish = [
         "银鱼"
       ]
     ],
-    "during": {
-      "start": 1,
-      "end": 4
-    },
     "weather": [
       "薄雾"
     ],
@@ -23092,10 +22868,6 @@ gt.bell.fish = [
         "石蚕"
       ]
     ],
-    "during": {
-      "start": 21,
-      "end": 24
-    },
     "weather": [
       "阴云",
       "薄雾"
@@ -23658,10 +23430,6 @@ gt.bell.fish = [
         "火萤"
       ]
     ],
-    "during": {
-      "start": 22,
-      "end": 4
-    },
     "hookset": "精准提钩",
     "tug": "重杆",
     "id": 7933,
@@ -23789,10 +23557,6 @@ gt.bell.fish = [
         "阿巴拉提亚公鱼"
       ]
     ],
-    "during": {
-      "start": 21,
-      "end": 4
-    },
     "weather": [
       "碧空",
       "晴朗"
@@ -23822,10 +23586,6 @@ gt.bell.fish = [
         "雉鸡拟饵"
       ]
     ],
-    "during": {
-      "start": 5,
-      "end": 7
-    },
     "weather": [
       "碧空",
       "晴朗"
@@ -23908,10 +23668,6 @@ gt.bell.fish = [
         "阿巴拉提亚公鱼"
       ]
     ],
-    "during": {
-      "start": 19,
-      "end": 4
-    },
     "predator": [
       {
         "name": "绿灯球藻",
@@ -24263,10 +24019,6 @@ gt.bell.fish = [
         "破云飞鱼"
       ]
     ],
-    "during": {
-      "start": 10,
-      "end": 15
-    },
     "weather": [
       "碧空",
       "晴朗"
@@ -25062,10 +24814,6 @@ gt.bell.fish = [
         "冰战神"
       ]
     ],
-    "during": {
-      "start": 10,
-      "end": 16
-    },
     "weather": [
       "暴雪"
     ],
@@ -25231,10 +24979,6 @@ gt.bell.fish = [
         "残暴水蛭"
       ]
     ],
-    "during": {
-      "start": 10,
-      "end": 14
-    },
     "weather": [
       "碧空"
     ],
@@ -25265,10 +25009,6 @@ gt.bell.fish = [
         "冰战神"
       ]
     ],
-    "during": {
-      "start": 0,
-      "end": 3
-    },
     "predator": [
       {
         "name": "冰战神",
@@ -26024,10 +25764,6 @@ gt.bell.fish = [
         "火萤"
       ]
     ],
-    "during": {
-      "start": 3,
-      "end": 13
-    },
     "weather": [
       "妖雾"
     ],
@@ -26089,10 +25825,6 @@ gt.bell.fish = [
         "银鱼"
       ]
     ],
-    "during": {
-      "start": 4,
-      "end": 12
-    },
     "weather": [
       "薄雾"
     ],
@@ -26214,10 +25946,6 @@ gt.bell.fish = [
         "暗斗鱼"
       ]
     ],
-    "during": {
-      "start": 18,
-      "end": 9
-    },
     "weather": [
       "妖雾"
     ],
@@ -26275,10 +26003,6 @@ gt.bell.fish = [
         "金鱼"
       ]
     ],
-    "during": {
-      "start": 8,
-      "end": 18
-    },
     "weather": [
       "妖雾"
     ],
@@ -26309,10 +26033,6 @@ gt.bell.fish = [
         "暗斗鱼"
       ]
     ],
-    "during": {
-      "start": 8,
-      "end": 18
-    },
     "predator": [
       {
         "name": "加诺",
@@ -26969,10 +26689,6 @@ gt.bell.fish = [
         "残暴水蛭"
       ]
     ],
-    "during": {
-      "start": 14,
-      "end": 16
-    },
     "hookset": "强力提钩",
     "tug": "重杆",
     "id": 15635,
@@ -27208,10 +26924,6 @@ gt.bell.fish = [
         "牛蛙"
       ]
     ],
-    "during": {
-      "start": 8,
-      "end": 12
-    },
     "weather": [
       "碧空"
     ],
@@ -27621,10 +27333,6 @@ gt.bell.fish = [
         "巨型大蚊"
       ]
     ],
-    "during": {
-      "start": 10,
-      "end": 13
-    },
     "weather": [
       "碧空",
       "晴朗"
@@ -28328,10 +28036,6 @@ gt.bell.fish = [
         "巨型大蚊"
       ]
     ],
-    "during": {
-      "start": 5,
-      "end": 7
-    },
     "predator": [
       {
         "name": "蛉蝎",
@@ -28910,10 +28614,6 @@ gt.bell.fish = [
         "恶魔蠕虫"
       ]
     ],
-    "during": {
-      "start": 18,
-      "end": 22
-    },
     "weather": [
       "打雷"
     ],
@@ -29154,10 +28854,6 @@ gt.bell.fish = [
         "以太之眼"
       ]
     ],
-    "during": {
-      "start": 22,
-      "end": 2
-    },
     "weather": [
       "阴云"
     ],
@@ -29345,10 +29041,6 @@ gt.bell.fish = [
         "以太之眼"
       ]
     ],
-    "during": {
-      "start": 6,
-      "end": 10
-    },
     "hookset": "精准提钩",
     "tug": "重杆",
     "id": 16753,
@@ -30531,10 +30223,6 @@ gt.bell.fish = [
         "残暴水蛭"
       ]
     ],
-    "during": {
-      "start": 12,
-      "end": 16
-    },
     "weather": [
       "碧空"
     ],
@@ -30647,10 +30335,6 @@ gt.bell.fish = [
         "残暴水蛭"
       ]
     ],
-    "during": {
-      "start": 22,
-      "end": 2
-    },
     "weather": [
       "阴云",
       "扬沙",
@@ -30871,10 +30555,6 @@ gt.bell.fish = [
         "蓝螯虾"
       ]
     ],
-    "during": {
-      "start": 6,
-      "end": 8
-    },
     "weather": [
       "打雷"
     ],
@@ -31396,10 +31076,6 @@ gt.bell.fish = [
         "熔岩蠕虫"
       ]
     ],
-    "during": {
-      "start": 2,
-      "end": 6
-    },
     "hookset": "精准提钩",
     "tug": "重杆",
     "id": 16751,
@@ -31482,10 +31158,6 @@ gt.bell.fish = [
         "花岗蟹"
       ]
     ],
-    "during": {
-      "start": 8,
-      "end": 16
-    },
     "weather": [
       "碧空"
     ],
@@ -31610,10 +31282,6 @@ gt.bell.fish = [
         "花岗蟹"
       ]
     ],
-    "during": {
-      "start": 8,
-      "end": 16
-    },
     "weather": [
       "碧空",
       "晴朗"
@@ -31650,10 +31318,6 @@ gt.bell.fish = [
         "花岗蟹"
       ]
     ],
-    "during": {
-      "start": 10,
-      "end": 15
-    },
     "predator": [
       {
         "name": "化石骨舌鱼",
@@ -32134,10 +31798,6 @@ gt.bell.fish = [
         "蝼蛄"
       ]
     ],
-    "during": {
-      "start": 21,
-      "end": 2
-    },
     "weather": [
       "碧空"
     ],
@@ -32362,10 +32022,6 @@ gt.bell.fish = [
         "蝼蛄"
       ]
     ],
-    "during": {
-      "start": 1,
-      "end": 4
-    },
     "predator": [
       {
         "name": "蝼蛄",
@@ -32526,10 +32182,6 @@ gt.bell.fish = [
         "香鱼"
       ]
     ],
-    "during": {
-      "start": 2,
-      "end": 6
-    },
     "weather": [
       "暴雨"
     ],
@@ -32689,10 +32341,6 @@ gt.bell.fish = [
         "残暴水蛭"
       ]
     ],
-    "during": {
-      "start": 8,
-      "end": 10
-    },
     "hookset": "强力提钩",
     "tug": "重杆",
     "id": 15633,
@@ -32744,10 +32392,6 @@ gt.bell.fish = [
         "残暴水蛭"
       ]
     ],
-    "during": {
-      "start": 10,
-      "end": 13
-    },
     "weather": [
       "碧空"
     ],
@@ -33232,10 +32876,6 @@ gt.bell.fish = [
         "巨型大蚊"
       ]
     ],
-    "during": {
-      "start": 4,
-      "end": 6
-    },
     "weather": [
       "碧空",
       "晴朗"
@@ -33525,10 +33165,6 @@ gt.bell.fish = [
         "高天鱼"
       ]
     ],
-    "during": {
-      "start": 5,
-      "end": 8
-    },
     "predator": [
       {
         "name": "高天鱼",
@@ -34547,10 +34183,6 @@ gt.bell.fish = [
         "气球蛙"
       ]
     ],
-    "during": {
-      "start": 8,
-      "end": 12
-    },
     "weather": [
       "阴云"
     ],
@@ -34755,10 +34387,6 @@ gt.bell.fish = [
         "嗡嗡石蝇"
       ]
     ],
-    "during": {
-      "start": 16,
-      "end": 20
-    },
     "hookset": "强力提钩",
     "tug": "重杆",
     "id": 24207,
@@ -34786,10 +34414,6 @@ gt.bell.fish = [
         "硬头鳟"
       ]
     ],
-    "during": {
-      "start": 16,
-      "end": 20
-    },
     "hookset": "强力提钩",
     "tug": "重杆",
     "id": 24990,
@@ -35199,10 +34823,6 @@ gt.bell.fish = [
         "悬浮诱饵鱼"
       ]
     ],
-    "during": {
-      "start": 12,
-      "end": 16
-    },
     "hookset": "强力提钩",
     "tug": "重杆",
     "id": 23059,
@@ -35563,10 +35183,6 @@ gt.bell.fish = [
         "悬浮诱饵鱼"
       ]
     ],
-    "during": {
-      "start": 20,
-      "end": 24
-    },
     "weather": [
       "碧空"
     ],
@@ -35891,10 +35507,6 @@ gt.bell.fish = [
         "基拉巴尼亚鳟"
       ]
     ],
-    "during": {
-      "start": 8,
-      "end": 12
-    },
     "hookset": "强力提钩",
     "tug": "重杆",
     "id": 23061,
@@ -36317,10 +35929,6 @@ gt.bell.fish = [
         "悬浮诱饵鱼"
       ]
     ],
-    "during": {
-      "start": 16,
-      "end": 20
-    },
     "weather": [
       "阴云"
     ],
@@ -36772,7 +36380,7 @@ gt.bell.fish = [
       ]
     ],
     "during": {
-      "start": 16,
+      "start": 12,
       "end": 18
     },
     "predator": [
@@ -37066,10 +36674,6 @@ gt.bell.fish = [
         "蓝矶沙蚕"
       ]
     ],
-    "during": {
-      "start": 0,
-      "end": 8
-    },
     "weather": [
       "阴云"
     ],
@@ -37103,10 +36707,6 @@ gt.bell.fish = [
         "苦尔鳗"
       ]
     ],
-    "during": {
-      "start": 4,
-      "end": 8
-    },
     "weather": [
       "阴云"
     ],
@@ -37481,10 +37081,6 @@ gt.bell.fish = [
         "红玉虾"
       ]
     ],
-    "during": {
-      "start": 20,
-      "end": 24
-    },
     "weather": [
       "打雷"
     ],
@@ -37700,10 +37296,6 @@ gt.bell.fish = [
         "蓝矶沙蚕"
       ]
     ],
-    "during": {
-      "start": 10,
-      "end": 18
-    },
     "weather": [
       "晴朗"
     ],
@@ -37940,10 +37532,6 @@ gt.bell.fish = [
         "蓝矶沙蚕"
       ]
     ],
-    "during": {
-      "start": 16,
-      "end": 20
-    },
     "hookset": "强力提钩",
     "tug": "重杆",
     "id": 23065,
@@ -38340,10 +37928,6 @@ gt.bell.fish = [
         "活虾"
       ]
     ],
-    "during": {
-      "start": 16,
-      "end": 24
-    },
     "weather": [
       "打雷"
     ],
@@ -38994,10 +38578,6 @@ gt.bell.fish = [
         "嗡嗡石蝇"
       ]
     ],
-    "during": {
-      "start": 20,
-      "end": 24
-    },
     "weather": [
       "碧空"
     ],
@@ -39277,10 +38857,6 @@ gt.bell.fish = [
         "嗡嗡石蝇"
       ]
     ],
-    "during": {
-      "start": 0,
-      "end": 8
-    },
     "weather": [
       "晴朗"
     ],
@@ -39591,10 +39167,6 @@ gt.bell.fish = [
         "悬浮诱饵鱼"
       ]
     ],
-    "during": {
-      "start": 12,
-      "end": 16
-    },
     "weather": [
       "薄雾"
     ],
@@ -40011,10 +39583,6 @@ gt.bell.fish = [
         "嗡嗡石蝇"
       ]
     ],
-    "during": {
-      "start": 16,
-      "end": 24
-    },
     "weather": [
       "暴雨"
     ],
@@ -40176,10 +39744,6 @@ gt.bell.fish = [
         "嗡嗡石蝇"
       ]
     ],
-    "during": {
-      "start": 12,
-      "end": 14
-    },
     "hookset": "精准提钩",
     "tug": "重杆",
     "id": 23067,
@@ -40614,10 +40178,6 @@ gt.bell.fish = [
         "赤虫"
       ]
     ],
-    "during": {
-      "start": 8,
-      "end": 12
-    },
     "weather": [
       "碧空"
     ],
@@ -40886,10 +40446,6 @@ gt.bell.fish = [
         "嘎牙子"
       ]
     ],
-    "during": {
-      "start": 0,
-      "end": 8
-    },
     "weather": [
       "薄雾"
     ],
@@ -40973,10 +40529,6 @@ gt.bell.fish = [
         "悬浮诱饵鱼"
       ]
     ],
-    "during": {
-      "start": 4,
-      "end": 8
-    },
     "weather": [
       "薄雾"
     ],
@@ -41209,10 +40761,6 @@ gt.bell.fish = [
         "嘎牙子"
       ]
     ],
-    "during": {
-      "start": 8,
-      "end": 16
-    },
     "weather": [
       "阴云"
     ],
@@ -41444,10 +40992,6 @@ gt.bell.fish = [
         "嗡嗡石蝇"
       ]
     ],
-    "during": {
-      "start": 20,
-      "end": 24
-    },
     "hookset": "精准提钩",
     "tug": "重杆",
     "id": 23069,
@@ -41837,10 +41381,6 @@ gt.bell.fish = [
         "悬浮诱饵鱼"
       ]
     ],
-    "during": {
-      "start": 4,
-      "end": 8
-    },
     "weather": [
       "碧空",
       "晴朗"
@@ -41874,10 +41414,6 @@ gt.bell.fish = [
         "嗡嗡石蝇"
       ]
     ],
-    "during": {
-      "start": 5,
-      "end": 7
-    },
     "weather": [
       "碧空"
     ],
@@ -42187,10 +41723,6 @@ gt.bell.fish = [
         "肥蚯蚓"
       ]
     ],
-    "during": {
-      "start": 4,
-      "end": 6
-    },
     "hookset": "精准提钩",
     "tug": "重杆",
     "id": 24213,
@@ -42442,10 +41974,6 @@ gt.bell.fish = [
         "大理石幼虫"
       ]
     ],
-    "during": {
-      "start": 22,
-      "end": 24
-    },
     "weather": [
       "碧空"
     ],
@@ -42528,10 +42056,6 @@ gt.bell.fish = [
         "水果蠕虫"
       ]
     ],
-    "during": {
-      "start": 22,
-      "end": 24
-    },
     "weather": [
       "碧空",
       "晴朗"
@@ -42612,10 +42136,6 @@ gt.bell.fish = [
         "虫箱"
       ]
     ],
-    "during": {
-      "start": 18,
-      "end": 22
-    },
     "hookset": "精准提钩",
     "tug": "重杆",
     "id": 28065,
@@ -42794,10 +42314,6 @@ gt.bell.fish = [
         "乌贼丝"
       ]
     ],
-    "during": {
-      "start": 12,
-      "end": 19
-    },
     "weather": [
       "碧空"
     ],
@@ -43239,10 +42755,6 @@ gt.bell.fish = [
         "虫箱"
       ]
     ],
-    "during": {
-      "start": 6,
-      "end": 8
-    },
     "weather": [
       "晴朗"
     ],
@@ -43611,10 +43123,6 @@ gt.bell.fish = [
         "虫箱"
       ]
     ],
-    "during": {
-      "start": 16,
-      "end": 24
-    },
     "weather": [
       "阴云",
       "薄雾"
@@ -43650,10 +43158,6 @@ gt.bell.fish = [
         "不朽巨鱼"
       ]
     ],
-    "during": {
-      "start": 16,
-      "end": 24
-    },
     "weather": [
       "薄雾"
     ],
@@ -44145,10 +43649,6 @@ gt.bell.fish = [
         "虫箱"
       ]
     ],
-    "during": {
-      "start": 0,
-      "end": 2
-    },
     "hookset": "精准提钩",
     "tug": "重杆",
     "id": 28926,
@@ -44530,10 +44030,6 @@ gt.bell.fish = [
         "藻虾"
       ]
     ],
-    "during": {
-      "start": 6,
-      "end": 8
-    },
     "hookset": "精准提钩",
     "tug": "重杆",
     "id": 33318,
@@ -44660,10 +44156,6 @@ gt.bell.fish = [
         "乌贼丝"
       ]
     ],
-    "during": {
-      "start": 10,
-      "end": 14
-    },
     "weather": [
       "暴风"
     ],
@@ -44697,10 +44189,6 @@ gt.bell.fish = [
         "短嘴诱饵鱼"
       ]
     ],
-    "during": {
-      "start": 10,
-      "end": 16
-    },
     "predator": [
       {
         "name": "变影鱼",
@@ -44916,10 +44404,6 @@ gt.bell.fish = [
         "尖枪乌贼"
       ]
     ],
-    "during": {
-      "start": 22,
-      "end": 0
-    },
     "weather": [
       "阴云"
     ],
@@ -45200,10 +44684,6 @@ gt.bell.fish = [
         "角骨鱼"
       ]
     ],
-    "during": {
-      "start": 0,
-      "end": 6
-    },
     "weather": [
       "扬沙"
     ],
@@ -45233,10 +44713,6 @@ gt.bell.fish = [
         "沙漠蛙"
       ]
     ],
-    "during": {
-      "start": 0,
-      "end": 2
-    },
     "predator": [
       {
         "name": "沙卵",
@@ -45356,10 +44832,6 @@ gt.bell.fish = [
         "沙漠锯"
       ]
     ],
-    "during": {
-      "start": 6,
-      "end": 10
-    },
     "weather": [
       "热浪"
     ],
@@ -45532,10 +45004,6 @@ gt.bell.fish = [
         "沙蹼壁虎"
       ]
     ],
-    "during": {
-      "start": 12,
-      "end": 16
-    },
     "weather": [
       "碧空"
     ],
@@ -45865,10 +45333,6 @@ gt.bell.fish = [
         "大理石幼虫"
       ]
     ],
-    "during": {
-      "start": 6,
-      "end": 8
-    },
     "weather": [
       "小雨"
     ],
@@ -46198,10 +45662,6 @@ gt.bell.fish = [
         "虫箱"
       ]
     ],
-    "during": {
-      "start": 20,
-      "end": 0
-    },
     "weather": [
       "碧空",
       "晴朗"
@@ -46232,10 +45692,6 @@ gt.bell.fish = [
         "虫箱"
       ]
     ],
-    "during": {
-      "start": 23,
-      "end": 24
-    },
     "weather": [
       "碧空"
     ],
@@ -46368,10 +45824,6 @@ gt.bell.fish = [
         "大理石幼虫"
       ]
     ],
-    "during": {
-      "start": 12,
-      "end": 16
-    },
     "weather": [
       "雷雨"
     ],
@@ -46675,10 +46127,6 @@ gt.bell.fish = [
         "虫箱"
       ]
     ],
-    "during": {
-      "start": 7,
-      "end": 17
-    },
     "weather": [
       "碧空"
     ],
@@ -47114,10 +46562,6 @@ gt.bell.fish = [
         "引螈"
       ]
     ],
-    "during": {
-      "start": 10,
-      "end": 12
-    },
     "hookset": "强力提钩",
     "tug": "重杆",
     "id": 28071,
@@ -47147,10 +46591,6 @@ gt.bell.fish = [
         "洛克瓦卫兵"
       ]
     ],
-    "during": {
-      "start": 10,
-      "end": 12
-    },
     "hookset": "强力提钩",
     "tug": "重杆",
     "id": 33243,
@@ -47333,7 +46773,7 @@ gt.bell.fish = [
       ]
     ],
     "during": {
-      "start": 17,
+      "start": 12,
       "end": 20
     },
     "weather": [
@@ -47490,10 +46930,6 @@ gt.bell.fish = [
         "盗蟹丸"
       ]
     ],
-    "during": {
-      "start": 2,
-      "end": 12
-    },
     "weather": [
       "晴朗"
     ],
@@ -47552,10 +46988,6 @@ gt.bell.fish = [
         "虫箱"
       ]
     ],
-    "during": {
-      "start": 18,
-      "end": 24
-    },
     "weather": [
       "薄雾"
     ],
@@ -47647,10 +47079,6 @@ gt.bell.fish = [
         "虫箱"
       ]
     ],
-    "during": {
-      "start": 2,
-      "end": 6
-    },
     "weather": [
       "薄雾"
     ],
@@ -47683,10 +47111,6 @@ gt.bell.fish = [
         "盗蟹丸"
       ]
     ],
-    "during": {
-      "start": 6,
-      "end": 7
-    },
     "hookset": "强力提钩",
     "tug": "重杆",
     "id": 33324,
@@ -48090,10 +47514,6 @@ gt.bell.fish = [
         "乌贼丝"
       ]
     ],
-    "during": {
-      "start": 12,
-      "end": 14
-    },
     "weather": [
       "碧空",
       "晴朗"
@@ -48174,10 +47594,6 @@ gt.bell.fish = [
         "乌贼丝"
       ]
     ],
-    "during": {
-      "start": 8,
-      "end": 10
-    },
     "weather": [
       "阴云"
     ],
@@ -48448,10 +47864,6 @@ gt.bell.fish = [
         "短嘴诱饵鱼"
       ]
     ],
-    "during": {
-      "start": 22,
-      "end": 24
-    },
     "weather": [
       "晴朗"
     ],
@@ -48481,10 +47893,6 @@ gt.bell.fish = [
         "乌贼丝"
       ]
     ],
-    "during": {
-      "start": 0,
-      "end": 2
-    },
     "predator": [
       {
         "name": "奸隐鱼",
@@ -48639,10 +48047,6 @@ gt.bell.fish = [
         "古代虾"
       ]
     ],
-    "during": {
-      "start": 16,
-      "end": 20
-    },
     "weather": [
       "阴云"
     ],
@@ -48747,10 +48151,6 @@ gt.bell.fish = [
         "乌贼丝"
       ]
     ],
-    "during": {
-      "start": 0,
-      "end": 3
-    },
     "weather": [
       "碧空"
     ],
@@ -48884,10 +48284,6 @@ gt.bell.fish = [
         "乌贼丝"
       ]
     ],
-    "during": {
-      "start": 6,
-      "end": 10
-    },
     "weather": [
       "阴云"
     ],
@@ -49018,10 +48414,6 @@ gt.bell.fish = [
         "乌贼丝"
       ]
     ],
-    "during": {
-      "start": 18,
-      "end": 20
-    },
     "weather": [
       "碧空"
     ],
@@ -49199,7 +48591,7 @@ gt.bell.fish = [
     "zone": "旧萨雷安"
   },
   {
-    "name": "鳌虾",
+    "name": "螯虾",
     "patch": 6.0,
     "baits": [
       [
@@ -49236,7 +48628,7 @@ gt.bell.fish = [
     "zone": "旧萨雷安"
   },
   {
-    "name": "鳌虾",
+    "name": "螯虾",
     "patch": 6.0,
     "baits": [
       [
@@ -49984,7 +49376,7 @@ gt.bell.fish = [
       ],
       [
         "医蛭",
-        "以太鳌虾"
+        "以太螯虾"
       ]
     ],
     "hookset": "强力提钩",
@@ -50258,7 +49650,7 @@ gt.bell.fish = [
     "zone": "迷津"
   },
   {
-    "name": "以太鳌虾",
+    "name": "以太螯虾",
     "patch": 6.0,
     "baits": [
       [
@@ -50275,7 +49667,7 @@ gt.bell.fish = [
       ],
       [
         "医蛭",
-        "以太鳌虾"
+        "以太螯虾"
       ]
     ],
     "hookset": "强力提钩",
@@ -50302,7 +49694,7 @@ gt.bell.fish = [
     "baits": [
       [
         "医蛭",
-        "以太鳌虾"
+        "以太螯虾"
       ]
     ],
     "during": {
@@ -53800,7 +53192,7 @@ gt.bell.fish = [
     "title": "逡巡泉",
     "category": "淡水垂钓",
     "spot": 281,
-    "lvl": 90,
+    "lvl": 84,
     "coords": [
       14.97,
       11.57
@@ -53834,47 +53226,10 @@ gt.bell.fish = [
     "icon": 28530,
     "func": "fish",
     "rarity": 1,
-    "title": "辞世绝句碑",
-    "category": "淡水垂钓",
-    "spot": 282,
-    "lvl": 90,
-    "coords": [
-      22.6,
-      8.79
-    ],
-    "radius": 750,
-    "zone": "天外天垓"
-  },
-  {
-    "name": "镜鱼",
-    "patch": 6.0,
-    "baits": [
-      [
-        "黄金鱼子"
-      ],
-      [
-        "医蛭"
-      ],
-      [
-        "天空勺形鱼饵"
-      ],
-      [
-        "蜉蝣"
-      ],
-      [
-        "万能拟饵"
-      ]
-    ],
-    "hookset": "强力提钩",
-    "tug": "中杆",
-    "id": 36499,
-    "icon": 29254,
-    "func": "fish",
-    "rarity": 1,
     "title": "逡巡泉",
     "category": "淡水垂钓",
     "spot": 281,
-    "lvl": 90,
+    "lvl": 84,
     "coords": [
       14.97,
       11.57
@@ -53908,15 +53263,52 @@ gt.bell.fish = [
     "icon": 29254,
     "func": "fish",
     "rarity": 1,
-    "title": "辞世绝句碑",
+    "title": "逡巡泉",
     "category": "淡水垂钓",
-    "spot": 282,
-    "lvl": 90,
+    "spot": 281,
+    "lvl": 84,
     "coords": [
-      22.6,
-      8.79
+      14.97,
+      11.57
     ],
-    "radius": 750,
+    "radius": 600,
+    "zone": "天外天垓"
+  },
+  {
+    "name": "镜鱼",
+    "patch": 6.0,
+    "baits": [
+      [
+        "黄金鱼子"
+      ],
+      [
+        "医蛭"
+      ],
+      [
+        "天空勺形鱼饵"
+      ],
+      [
+        "蜉蝣"
+      ],
+      [
+        "万能拟饵"
+      ]
+    ],
+    "hookset": "强力提钩",
+    "tug": "中杆",
+    "id": 36499,
+    "icon": 29254,
+    "func": "fish",
+    "rarity": 1,
+    "title": "逡巡泉",
+    "category": "淡水垂钓",
+    "spot": 281,
+    "lvl": 84,
+    "coords": [
+      14.97,
+      11.57
+    ],
+    "radius": 600,
     "zone": "天外天垓"
   },
   {
@@ -53945,7 +53337,7 @@ gt.bell.fish = [
     "title": "逡巡泉",
     "category": "淡水垂钓",
     "spot": 281,
-    "lvl": 90,
+    "lvl": 84,
     "coords": [
       14.97,
       11.57
@@ -53979,7 +53371,7 @@ gt.bell.fish = [
     "title": "逡巡泉",
     "category": "淡水垂钓",
     "spot": 281,
-    "lvl": 90,
+    "lvl": 84,
     "coords": [
       14.97,
       11.57
@@ -54010,15 +53402,15 @@ gt.bell.fish = [
     "icon": 28531,
     "func": "fish",
     "rarity": 1,
-    "title": "辞世绝句碑",
+    "title": "逡巡泉",
     "category": "淡水垂钓",
-    "spot": 282,
-    "lvl": 90,
+    "spot": 281,
+    "lvl": 84,
     "coords": [
-      22.6,
-      8.79
+      14.97,
+      11.57
     ],
-    "radius": 750,
+    "radius": 600,
     "zone": "天外天垓"
   },
   {

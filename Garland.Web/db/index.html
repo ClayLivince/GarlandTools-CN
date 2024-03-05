@@ -1929,7 +1929,7 @@
                         </div>
                     {{?}}
 
-                    {{?it.other}}
+                    {{?(it.other && !($.isEmptyObject(it.other)))}}
                         <div class="other subsection collapsible collapsed" data-headername="other">
                             <img src="{{=it.other[0].icon}}" class="subsection-icon">
                             <h2 class="pointer">其他 <span class="right badge">{{=it.other.length}}</span></h2>
@@ -2902,15 +2902,26 @@
 
                         {{~cut :value:vindex}}
                         <div class="dialogue-entry collapse-toggle {{=value.type}}">
-                            {{=value.text}}
+                            <p style="margin: 0">{{=value.text}}</p>
+                            {{?value.voice}}
+                            <div class="dialogue-voice-container dialogue-voice-chs">
+                                <audio controls controlsList="nodownload">
+                                    <source src="{{=value.voice}}.chs.ogg" type="audio/ogg">
+                                </audio>
+                                <div style="margin: auto">
+                                    <img src="images/chs.png" style="width: 24px">
+                                </div>
+                            </div>
+                            <div class="dialogue-voice-container dialogue-voice-ja">
+                                <audio controls controlsList="nodownload">
+                                    <source src="{{=value.voice}}.ja.ogg" type="audio/ogg">
+                                </audio>
+                                <div style="margin: auto">
+                                    <img src="images/jp.png" style="width: 24px">
+                                </div>
+                            </div>
+                            {{?}}
                         </div>
-                        {{?value.voice}}
-                        <div class="dialogue-entry collapse-toggle {{=value.type}}">
-                            <audio controls controlsList="nodownload">
-                                <source src="{{=value.voice}}" type="audio/ogg">
-                            </audio>
-                        </div>
-                        {{?}}
                         {{~}}
                     </div>
                     {{~}}

@@ -930,7 +930,7 @@
     "time": [
       5
     ],
-    "title": "新植林",
+    "title": "宇格拉姆河",
     "zone": "东萨纳兰",
     "coords": [
       25.58,
@@ -1263,7 +1263,7 @@
     "func": "node",
     "items": [
       {
-        "item": "拉诺西亚韭菜",
+        "item": "拉诺西亚韭葱",
         "itemEN": "La Noscean Leek",
         "itemJA": "ラノシアリーキ",
         "itemFR": "Poireau noscéen",
@@ -1896,6 +1896,24 @@
         "itemDE": "Schlagschattenfels",
         "icon": 21213,
         "id": 8030
+      },
+      {
+        "item": "无属性水晶",
+        "itemEN": "Unaspected Crystal",
+        "itemJA": "無属性クリスタル",
+        "itemFR": "Cristal terni",
+        "itemDE": "Elementneutraler Kristall",
+        "icon": 20019,
+        "id": 10099
+      },
+      {
+        "item": "暗物质晶簇",
+        "itemEN": "Dark Matter Cluster",
+        "itemJA": "ダークマタークラスター",
+        "itemFR": "Agrégat de matière sombre",
+        "itemDE": "Dunkelmaterie",
+        "icon": 20407,
+        "id": 10335
       }
     ],
     "stars": 2,
@@ -2087,13 +2105,31 @@
         "itemDE": "Bimsstein",
         "icon": 21454,
         "id": 9519
+      },
+      {
+        "item": "无属性水晶",
+        "itemEN": "Unaspected Crystal",
+        "itemJA": "無属性クリスタル",
+        "itemFR": "Cristal terni",
+        "itemDE": "Elementneutraler Kristall",
+        "icon": 20019,
+        "id": 10099
+      },
+      {
+        "item": "暗物质晶簇",
+        "itemEN": "Dark Matter Cluster",
+        "itemJA": "ダークマタークラスター",
+        "itemFR": "Agrégat de matière sombre",
+        "itemDE": "Dunkelmaterie",
+        "icon": 20407,
+        "id": 10335
       }
     ],
     "stars": 3,
     "time": [
       1
     ],
-    "title": "接雨草树林",
+    "title": "红螳螂瀑布",
     "zone": "东拉诺西亚",
     "coords": [
       17.56,
@@ -3345,7 +3381,7 @@
     "title": "莫克温杜集落",
     "zone": "阿巴拉提亚云海",
     "coords": [
-      12.31,
+      12.33,
       19.56
     ],
     "name": "限时的",
@@ -7565,6 +7601,15 @@
         }
       },
       {
+        "item": "土之石英",
+        "itemEN": "Earthen Quartz",
+        "itemJA": "アースクォーツ",
+        "itemFR": "Quartz terrestre",
+        "itemDE": "Erdquarz",
+        "icon": 21458,
+        "id": 38937
+      },
+      {
         "item": "土之水晶",
         "itemEN": "Earth Crystal",
         "itemJA": "アースクリスタル",
@@ -7583,6 +7628,7 @@
         "id": 17
       }
     ],
+    "stars": 2,
     "time": [
       0
     ],
@@ -7866,9 +7912,27 @@
         "itemDE": "Roh-Eblan-Danburit",
         "icon": 21477,
         "id": 37279
+      },
+      {
+        "item": "不定性铁陨石",
+        "itemEN": "Prime Siderite",
+        "itemJA": "不定性鉄隕石",
+        "itemFR": "Sidérite volatile",
+        "itemDE": "Flüchtiger Eisenmeteorbrocken",
+        "icon": 21472,
+        "id": 37694
+      },
+      {
+        "item": "升华铁陨石",
+        "itemEN": "Sublime Siderite",
+        "itemJA": "昇華鉄隕石",
+        "itemFR": "Sidérite sublimée",
+        "itemDE": "Erhabener Eisenmeteorbrocken",
+        "icon": "t/21486",
+        "id": 37695
       }
     ],
-    "stars": 1,
+    "stars": 2,
     "time": [
       0,
       12
@@ -7989,6 +8053,15 @@
         }
       },
       {
+        "item": "苦参",
+        "itemEN": "Sophora Roots",
+        "itemJA": "苦参",
+        "itemFR": "Sophora",
+        "itemDE": "Sophora-Wurzel",
+        "icon": "t/25025",
+        "id": 38938
+      },
+      {
         "item": "风之水晶",
         "itemEN": "Wind Crystal",
         "itemJA": "ウィンドクリスタル",
@@ -8007,6 +8080,7 @@
         "id": 16
       }
     ],
+    "stars": 2,
     "time": [
       8
     ],
@@ -8374,9 +8448,27 @@
         "itemDE": "Verlaufdichnicht",
         "icon": 25201,
         "id": 36217
+      },
+      {
+        "item": "不定性结晶花",
+        "itemEN": "Prime Crystalbloom",
+        "itemJA": "不定性結晶花",
+        "itemFR": "Cristofleur volatile",
+        "itemDE": "Flüchtige Kristallblume",
+        "icon": 25039,
+        "id": 37691
+      },
+      {
+        "item": "升华结晶花",
+        "itemEN": "Sublime Crystalbloom",
+        "itemJA": "昇華結晶花",
+        "itemFR": "Cristofleur sublimée",
+        "itemDE": "Erhabene Kristallblume",
+        "icon": "t/25042",
+        "id": 37692
       }
     ],
-    "stars": 1,
+    "stars": 2,
     "time": [
       10,
       22
@@ -8394,5 +8486,527 @@
     "condition": "鉴别力 3401以上",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 6.0
+  },
+  {
+    "type": "石场",
+    "func": "node",
+    "items": [
+      {
+        "item": "发晶原石",
+        "itemEN": "Raw Rutilated Quartz",
+        "itemJA": "ルチルクォーツ原石",
+        "itemFR": "Quartz rutile brut",
+        "itemDE": "Roh-Rutilquarz",
+        "icon": 21474,
+        "id": 37817
+      },
+      {
+        "item": "黝帘石原石",
+        "itemEN": "Raw Zoisite",
+        "itemJA": "ゾイサイト原石",
+        "itemFR": "Zoïsite brute",
+        "itemDE": "Roh-Zoisit",
+        "icon": 21472,
+        "id": 38934
+      }
+    ],
+    "stars": 2,
+    "time": [
+      6,
+      18
+    ],
+    "title": "第三站",
+    "zone": "加雷马",
+    "coords": [
+      31.95,
+      17.36
+    ],
+    "name": "传说的",
+    "uptime": 120,
+    "lvl": 90,
+    "id": 338,
+    "condition": "鉴别力 3800以上",
+    "bonus": "额外采集奖励发生率＋30%",
+    "patch": 0.0
+  },
+  {
+    "type": "矿脉",
+    "func": "node",
+    "items": [
+      {
+        "item": "钛铁矿",
+        "itemEN": "Ilmenite",
+        "itemJA": "イルメナイト",
+        "itemFR": "Ilménite",
+        "itemDE": "Ilmenit",
+        "icon": 21205,
+        "id": 37820
+      },
+      {
+        "item": "不定性无粒陨石",
+        "itemEN": "Prime Achondrite",
+        "itemJA": "不定性エイコンドライト",
+        "itemFR": "Achondrite volatile",
+        "itemDE": "Flüchtiger Achondrit",
+        "icon": 21210,
+        "id": 39237
+      },
+      {
+        "item": "升华无粒陨石",
+        "itemEN": "Sublime Achondrite",
+        "itemJA": "昇華エイコンドライト",
+        "itemFR": "Achondrite sublimée",
+        "itemDE": "Erhabener Achondrit",
+        "icon": "t/21247",
+        "id": 39238
+      }
+    ],
+    "stars": 3,
+    "time": [
+      8,
+      20
+    ],
+    "title": "苦湾",
+    "zone": "叹息海",
+    "coords": [
+      29.63,
+      22.4
+    ],
+    "name": "传说的",
+    "uptime": 120,
+    "lvl": 90,
+    "id": 346,
+    "condition": "鉴别力 3800以上",
+    "bonus": "额外采集奖励发生率＋30%",
+    "patch": 0.0
+  },
+  {
+    "type": "石场",
+    "func": "node",
+    "items": [
+      {
+        "item": "灰绿硅藻土",
+        "itemEN": "Ash Diatomite",
+        "itemJA": "灰緑珪藻土",
+        "itemFR": "Poudre de diatomite",
+        "itemDE": "Asch-Diatomit",
+        "icon": 22634,
+        "id": 37822
+      },
+      {
+        "item": "不定性绿片岩",
+        "itemEN": "Prime Chloroschist",
+        "itemJA": "不定性緑色片岩",
+        "itemFR": "Schiste vert volatil",
+        "itemDE": "Flüchtiger Grünschieferklumpen",
+        "icon": 21252,
+        "id": 39909
+      },
+      {
+        "item": "升华绿片岩",
+        "itemEN": "Sublime Chloroschist",
+        "itemJA": "昇華緑色片岩",
+        "itemFR": "Schiste vert sublimé",
+        "itemDE": "Erhabener Grünschieferklumpen",
+        "icon": "t/21337",
+        "id": 39910
+      }
+    ],
+    "stars": 3,
+    "time": [
+      10,
+      22
+    ],
+    "title": "内环",
+    "zone": "迷津",
+    "coords": [
+      11.15,
+      21.42
+    ],
+    "name": "传说的",
+    "uptime": 120,
+    "lvl": 90,
+    "id": 400,
+    "condition": "鉴别力 3800以上",
+    "bonus": "额外采集奖励发生率＋30%",
+    "patch": 6.2
+  },
+  {
+    "type": "良材",
+    "func": "node",
+    "items": [
+      {
+        "item": "仁面木原木",
+        "itemEN": "Paldao Log",
+        "itemJA": "パルダオ原木",
+        "itemFR": "Rondin de paldao",
+        "itemDE": "Paldao-Holzscheit",
+        "icon": 22414,
+        "id": 37818
+      },
+      {
+        "item": "不定性海绵菇",
+        "itemEN": "Prime Sphongos",
+        "itemJA": "不定性スポンゴス茸",
+        "itemFR": "Morille conique volatile",
+        "itemDE": "Flüchtiger Sphongos",
+        "icon": 25408,
+        "id": 39234
+      },
+      {
+        "item": "升华海绵菇",
+        "itemEN": "Sublime Sphongos",
+        "itemJA": "昇華スポンゴス茸",
+        "itemFR": "Morille conique sublimée",
+        "itemDE": "Erhabener Sphongos",
+        "icon": "t/25411",
+        "id": 39235
+      }
+    ],
+    "stars": 3,
+    "time": [
+      2,
+      14
+    ],
+    "title": "十二奇园",
+    "zone": "厄尔庇斯",
+    "coords": [
+      9.83,
+      29.85
+    ],
+    "name": "传说的",
+    "uptime": 120,
+    "lvl": 90,
+    "id": 463,
+    "condition": "鉴别力 3800以上",
+    "bonus": "额外采集奖励发生率＋30%",
+    "patch": 6.2
+  },
+  {
+    "type": "良材",
+    "func": "node",
+    "items": [
+      {
+        "item": "诃子",
+        "itemEN": "Haritaki",
+        "itemJA": "ミロバラン",
+        "itemFR": "Haritaki",
+        "itemDE": "Haritaki",
+        "icon": 25017,
+        "id": 37819
+      },
+      {
+        "item": "不定性诃子叶",
+        "itemEN": "Prime Haritaki",
+        "itemJA": "不定性ミロバランリーフ",
+        "itemFR": "Feuille de myrobolan volatile",
+        "itemDE": "Flüchtige Haritaki-Blätter",
+        "icon": 25015,
+        "id": 39906
+      },
+      {
+        "item": "升华诃子叶",
+        "itemEN": "Sublime Haritaki",
+        "itemJA": "昇華ミロバランリーフ",
+        "itemFR": "Feuille de myrobolan sublimée",
+        "itemDE": "Erhabene Haritaki-Blätter",
+        "icon": "t/25043",
+        "id": 39907
+      }
+    ],
+    "stars": 3,
+    "time": [
+      0,
+      12
+    ],
+    "title": "众僧林园",
+    "zone": "萨维奈岛",
+    "coords": [
+      29.13,
+      26.87
+    ],
+    "name": "传说的",
+    "uptime": 120,
+    "lvl": 90,
+    "id": 627,
+    "condition": "鉴别力 3800以上",
+    "bonus": "额外采集奖励发生率＋30%",
+    "patch": 5.0
+  },
+  {
+    "type": "良材",
+    "func": "node",
+    "items": [
+      {
+        "item": "杨梅",
+        "itemEN": "Bayberry",
+        "itemJA": "渋木",
+        "itemFR": "Myrica",
+        "itemDE": "Myrica-Zweig",
+        "icon": 25015,
+        "id": 37821
+      },
+      {
+        "item": "晨雾树皮",
+        "itemEN": "Mornveil Tree Bark",
+        "itemJA": "朝霧の樹皮",
+        "itemFR": "Écorce de brume matinale",
+        "itemDE": "Morgennebel-Rinde",
+        "icon": 22418,
+        "id": 38933
+      }
+    ],
+    "stars": 2,
+    "time": [
+      4,
+      16
+    ],
+    "title": "朝露林",
+    "zone": "迷津",
+    "coords": [
+      28.15,
+      11.41
+    ],
+    "name": "传说的",
+    "uptime": 120,
+    "lvl": 90,
+    "id": 695,
+    "condition": "鉴别力 3800以上",
+    "bonus": "额外采集奖励发生率＋30%",
+    "patch": 6.2
+  },
+  {
+    "type": "石场",
+    "func": "node",
+    "items": [
+      {
+        "item": "磁赤铁矿",
+        "itemEN": "Maghemite",
+        "itemJA": "マグヘマイト",
+        "itemFR": "Maghémite",
+        "itemDE": "Maghemit-Erzklumpen",
+        "icon": 22656,
+        "id": 39708
+      }
+    ],
+    "stars": 3,
+    "time": [
+      6,
+      18
+    ],
+    "title": "帕瓦纳的悔悟",
+    "zone": "萨维奈岛",
+    "coords": [
+      24.46,
+      13.07
+    ],
+    "name": "传说的",
+    "uptime": 120,
+    "lvl": 90,
+    "id": 932,
+    "condition": "鉴别力 4000以上",
+    "bonus": "额外采集奖励发生率＋30%",
+    "patch": 6.4
+  },
+  {
+    "type": "矿脉",
+    "func": "node",
+    "items": [
+      {
+        "item": "软银矿",
+        "itemEN": "Softsilver Ore",
+        "itemJA": "軟銀鉱",
+        "itemFR": "Minerai d'argent ductile",
+        "itemDE": "Weichsilber-Erzklumpen",
+        "icon": 21227,
+        "id": 39706
+      },
+      {
+        "item": "不定性古龙鳞",
+        "itemEN": "Prime Fossilized Dragon's Scale",
+        "itemJA": "不定性古竜の鱗",
+        "itemFR": "Écaille de dragon ancien volatile",
+        "itemDE": "Flüchtige antike Drachenschuppe",
+        "icon": 22251,
+        "id": 41416
+      },
+      {
+        "item": "升华古龙鳞",
+        "itemEN": "Sublime Fossilized Dragon's Scale",
+        "itemJA": "昇華古竜の鱗",
+        "itemFR": "Écaille de dragon ancien sublimée",
+        "itemDE": "Erhabene antike Drachenschuppe",
+        "icon": "t/22266",
+        "id": 41417
+      }
+    ],
+    "stars": 4,
+    "time": [
+      4,
+      16
+    ],
+    "title": "瓦铭癸辛",
+    "zone": "天外天垓",
+    "coords": [
+      16.98,
+      29.39
+    ],
+    "name": "传说的",
+    "uptime": 120,
+    "lvl": 90,
+    "id": 933,
+    "condition": "鉴别力 4000以上",
+    "bonus": "额外采集奖励发生率＋30%",
+    "patch": 6.4
+  },
+  {
+    "type": "矿脉",
+    "func": "node",
+    "items": [
+      {
+        "item": "紫锂辉石原石",
+        "itemEN": "Raw Spodumene",
+        "itemJA": "スポジュメン原石",
+        "itemFR": "Spodumène brut",
+        "itemDE": "Roh-Spodumen",
+        "icon": 21475,
+        "id": 39707
+      }
+    ],
+    "stars": 3,
+    "time": [
+      8,
+      20
+    ],
+    "title": "忘海",
+    "zone": "厄尔庇斯",
+    "coords": [
+      30.29,
+      18.3
+    ],
+    "name": "传说的",
+    "uptime": 120,
+    "lvl": 90,
+    "id": 934,
+    "condition": "鉴别力 4000以上",
+    "bonus": "额外采集奖励发生率＋30%",
+    "patch": 6.4
+  },
+  {
+    "type": "草场",
+    "func": "node",
+    "items": [
+      {
+        "item": "油菜花",
+        "itemEN": "Field Mustard",
+        "itemJA": "アブラナ",
+        "itemFR": "Navette",
+        "itemDE": "Ölrübsen",
+        "icon": "t/22696",
+        "id": 39709
+      }
+    ],
+    "stars": 3,
+    "time": [
+      10,
+      22
+    ],
+    "title": "都市区",
+    "zone": "加雷马",
+    "coords": [
+      17.78,
+      12.49
+    ],
+    "name": "传说的",
+    "uptime": 120,
+    "lvl": 90,
+    "id": 935,
+    "condition": "鉴别力 4000以上",
+    "bonus": "额外采集奖励发生率＋30%",
+    "patch": 6.4
+  },
+  {
+    "type": "草场",
+    "func": "node",
+    "items": [
+      {
+        "item": "爱情花",
+        "itemEN": "Lovingbloom",
+        "itemJA": "ラヴィングフラワー",
+        "itemFR": "Bourgeon d'amour",
+        "itemDE": "Loving-Blume",
+        "icon": "t/25413",
+        "id": 39710
+      }
+    ],
+    "stars": 3,
+    "time": [
+      0,
+      12
+    ],
+    "title": "爱情威的花园",
+    "zone": "叹息海",
+    "coords": [
+      25.88,
+      20.42
+    ],
+    "name": "传说的",
+    "uptime": 120,
+    "lvl": 90,
+    "id": 936,
+    "condition": "鉴别力 4000以上",
+    "bonus": "额外采集奖励发生率＋30%",
+    "patch": 6.4
+  },
+  {
+    "type": "良材",
+    "func": "node",
+    "items": [
+      {
+        "item": "暗樱原木",
+        "itemEN": "Dark Cherry Log",
+        "itemJA": "ブラックチェリー原木",
+        "itemFR": "Rondin de cerisier noir",
+        "itemDE": "Traubenkirsch-Holzscheit",
+        "icon": 22408,
+        "id": 39705
+      },
+      {
+        "item": "不定性可可豆",
+        "itemEN": "Prime Kukuru Beans",
+        "itemJA": "不定性ククルビーン",
+        "itemFR": "Fève kukuru volatile",
+        "itemDE": "Flüchtige Kukuru-Bohnen",
+        "icon": 25314,
+        "id": 41413
+      },
+      {
+        "item": "升华可可豆",
+        "itemEN": "Sublime Kukuru Beans",
+        "itemJA": "昇華ククルビーン",
+        "itemFR": "Fève kukuru sublimée",
+        "itemDE": "Erhabene Kukuru-Bohnen",
+        "icon": "t/25329",
+        "id": 41414
+      }
+    ],
+    "stars": 4,
+    "time": [
+      2,
+      14
+    ],
+    "title": "内环",
+    "zone": "迷津",
+    "coords": [
+      19.06,
+      35.93
+    ],
+    "name": "传说的",
+    "uptime": 120,
+    "lvl": 90,
+    "id": 937,
+    "condition": "鉴别力 4000以上",
+    "bonus": "额外采集奖励发生率＋30%",
+    "patch": 6.4
   }
 ];

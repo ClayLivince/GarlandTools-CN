@@ -121,6 +121,11 @@ namespace Garland.Data.Modules
 
             foreach (var sFishParameter in _builder.Sheet<Saint.FishParameter>())
             {
+                var fishNoteInfo = _builder.Sheet("FishingNoteInfo").First(row =>
+                {
+                    return row.Key == sFishParameter.Key;
+                });
+
                 if (!iFishParameterIndex.TryGetValue(sFishParameter.Key, out var iFishParameter))
                 {
                     DatabaseBuilder.PrintLine($"iFishParameter {sFishParameter.Key}, {sFishParameter.Text} not found.");
@@ -137,9 +142,9 @@ namespace Garland.Data.Modules
                 _builder.Localize.Column(item.fish, sFishParameter, iFishParameter, "Text", "guide", null);
                 item.fish.icon = GetFishIcon((UInt16)sFishParameter.Item.GetRaw("Icon"));
 
-                if (sFishParameter.WeatherRestricted)
+                if (fishNoteInfo.As<Byte>("WeatherRestriction") > 0)
                     item.fish.weatherRestricted = 1;
-                if (sFishParameter.TimeRestricted)
+                if (fishNoteInfo.As<Byte>("TimeRestriction") > 0)
                     item.fish.timeRestricted = 1;
 
                 var sGatheringSubCategory = (Saint.GatheringSubCategory)sFishParameter["GatheringSubCategory"];

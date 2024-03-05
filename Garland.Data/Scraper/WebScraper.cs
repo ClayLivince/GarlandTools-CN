@@ -47,7 +47,7 @@ namespace Garland.Data.Lodestone
                 try
                 {
                     var request = (HttpWebRequest)WebRequest.Create(url);
-                    request.UserAgent = "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.71 Safari/537.36";
+                    request.Headers["User-Agent"] = "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.71 Safari/537.36";
                     return request.GetResponse();
                 }
                 catch (WebException ex)

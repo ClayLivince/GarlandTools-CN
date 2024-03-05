@@ -204,8 +204,6 @@ namespace Garland.Data.Modules
 
             AddPointToNode(node, sGatheringPoint);
 
-            if (sGatheringPoint.Base.IsLimited)
-                node.limited = 1;
 
             // Special case for concealed nodes - take the name of the last node,
             // as these are in order in the files.
@@ -548,7 +546,14 @@ namespace Garland.Data.Modules
                         BuildNodeView(node);
                     }
                 }
+
+                if (node.limitType != null)
+                {
+                    node.limited = 1;
+                }
             }
+
+
 
             foreach (dynamic node in nodesToRemove)
             {

@@ -15,6 +15,11 @@ namespace Garland.Data.Modules
 {
     public class Quests : Module
     {
+        static readonly Dictionary<string, string> VOICE_LINE_LANGS = new Dictionary<string, string>
+            {
+                {"chs", "chs"},
+                {"ja", "ja"}
+            };
         Dictionary<int, List<int>> _npcsByQuestKey = new Dictionary<int, List<int>>();
         Dictionary<string, Dictionary<string, string>> _cutTextByExCode = new Dictionary<string, Dictionary<string, string>>();
 
@@ -494,7 +499,7 @@ namespace Garland.Data.Modules
                     || rawString == "（未使用/预计删除）"
                     || string.IsNullOrWhiteSpace(rawString))
                     continue;
-                
+
                 // We need to get indexed other sheets, so we can get
                 //  some related Item which not listed in instructions.
                 HtmlStringFormatter fmter = new HtmlStringFormatter();
@@ -553,7 +558,7 @@ namespace Garland.Data.Modules
                 cutsceneById[row.Key] = row;
             }
 
-            if (quest.genre?.Value <= 11 && quest.genre?.Value != 0)
+            if (quest.genre?.Value != 0)
             {
                 var cutscenes = new JArray();
                 foreach (var instruction in instructions)
@@ -603,7 +608,8 @@ namespace Garland.Data.Modules
                                     string voicePath = EnsureVoiceLine(sQuest.ExpansionCode, exCode, voiceIndex);
                                     if (voicePath != "notfound")
                                         obj.voice = voicePath;
-                                } catch (Exception e)
+                                }
+                                catch (Exception e)
                                 {
                                     if (System.Diagnostics.Debugger.IsAttached)
                                         System.Diagnostics.Debugger.Break();
@@ -670,41 +676,55 @@ namespace Garland.Data.Modules
         {
             // cut/ex3/sound/VOICEM/VOICEMAN_05300/vo_VOICEMAN_05300_002300_m_ja.scd
             var voiceDirectory = Path.Combine(Config.VoicePath, ex);
-            var voicePath = ex + "/" + voiceIndex + ".ogg";
-            var fullPath = Path.Combine(voiceDirectory, voiceIndex + ".ogg");
-            if (File.Exists(fullPath))
-                return voicePath;
-
-            // Write voices that don't yet exist.
-            Directory.CreateDirectory(voiceDirectory);
-
-            string path = string.Format("cut/{0}/sound/VOICEM/VOICEMAN_{1}/vo_VOICEMAN_{1}_{2}_m_chs.scd", expansionCode, ex, voiceIndex);
-            _builder.Realm.Packs.TryGetFile(path, out var scdRaw);
-            if (scdRaw == null)
+            var returnVoicePath = ex + "/" + voiceIndex;
+            foreach (string langKey in VOICE_LINE_LANGS.Keys)
             {
-                DatabaseBuilder.PrintLine($"Failed to get voice file of {path}.");
-                return "notfound";
+                try
+                {
+                    // var voicePath = ex + "/" + voiceIndex + ".ogg";
+                    var fullPath = Path.Combine(voiceDirectory, voiceIndex + $".{VOICE_LINE_LANGS[langKey]}.ogg");
+                    if (File.Exists(fullPath))
+                        continue;
+
+                    // Write voices that don't yet exist.
+                    Directory.CreateDirectory(voiceDirectory);
+
+                    string path = string.Format("cut/{0}/sound/VOICEM/VOICEMAN_{1}/vo_VOICEMAN_{1}_{2}_m_{3}.scd", expansionCode, ex, voiceIndex, langKey);
+                    _builder.Realm.Packs.TryGetFile(path, out var scdRaw);
+                    if (scdRaw == null)
+                    {
+                        DatabaseBuilder.PrintLine($"Failed to get voice file of {path}.");
+                        return "notfound";
+                    }
+                    var sScdFile = new SaintCoinach.Sound.ScdFile(scdRaw);
+                    var sEntry = sScdFile.Entries[0];
+                    if (sEntry == null)
+                        return "notfound";
+
+                    // File.WriteAllBytes(fullPath, sEntry.GetDecoded());
+
+                    var baseFileName = Path.Combine("output\\input.ogg");
+                    File.WriteAllBytes(baseFileName, sEntry.GetDecoded());
+
+
+                    var ffmpeg = new Process();
+                    ffmpeg.StartInfo = new ProcessStartInfo(Config.FfmpegPath, "-i output\\input.ogg -acodec libvorbis -b:a 128k output\\output.ogg");
+                    ffmpeg.Start();
+                    ffmpeg.WaitForExit();
+
+
+                    File.Move("output\\output.ogg", fullPath);
+                }
+                catch
+                {
+                    DatabaseBuilder.PrintLine($"Some error happened while handling voice line.");
+                    if (Debugger.IsAttached)
+                        Debugger.Break();
+                }
             }
-            var sScdFile = new SaintCoinach.Sound.ScdFile(scdRaw);
-            var sEntry = sScdFile.Entries[0];
-            if (sEntry == null)
-                return "notfound";
 
-            // File.WriteAllBytes(fullPath, sEntry.GetDecoded());
 
-            var baseFileName = Path.Combine("output\\input.ogg");
-            File.WriteAllBytes(baseFileName, sEntry.GetDecoded());
-
-            
-            var ffmpeg = new Process();
-            ffmpeg.StartInfo = new ProcessStartInfo(Config.FfmpegPath, "-i output\\input.ogg -acodec libvorbis -b:a 128k output\\output.ogg");
-            ffmpeg.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-            ffmpeg.Start();
-            ffmpeg.WaitForExit();
-
-            File.Move("output\\output.ogg", fullPath);
-
-            return voicePath;
+            return returnVoicePath;
         }
     }
 }

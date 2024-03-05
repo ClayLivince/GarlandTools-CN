@@ -10,7 +10,7 @@ namespace Garland.Data
 {
     public static class Config
     {
-        public const string BasePath = "..\\..\\..\\";
+        public const string BasePath = "..\\..\\..\\..\\";
         public const string ConfigPath = BasePath + "Config.json";
         public const string SupplementalPath = BasePath + "Supplemental\\";
         public const string UpdatesPath = BasePath + "Updates\\";

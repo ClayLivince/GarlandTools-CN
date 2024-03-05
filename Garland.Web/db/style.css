@@ -420,6 +420,15 @@ a:hover {
     overflow: hidden;
 }
 
+.dialogue-entry p {
+    margin: 0
+}
+
+.dialogue-voice-container{
+    display: flex;
+    margin: 5px 0;
+}
+
 /* Lists */
 
 #list-header {

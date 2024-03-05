@@ -109,7 +109,7 @@ namespace Garland.Data
                                     {
                                         if (sheetName.Contains("Item") || sheetName.Contains("EObjName") || sheetName.Contains("BNpcName"))
                                         {
-                                            
+
                                             return row[0].ToString();
                                         }
                                         else
@@ -134,18 +134,21 @@ namespace Garland.Data
                                     //Console.WriteLine(genericText);
                                     Console.WriteLine("{???}");
                                 }
-                                catch (Exception) {
+                                catch (Exception)
+                                {
                                     //And What?
                                     Console.WriteLine("{???}");
                                 }
-                            } catch (KeyNotFoundException) {
+                            }
+                            catch (KeyNotFoundException)
+                            {
                                 // Check the sheet name! They must made some dumb new things!
 
                                 Console.WriteLine("{???}");
 
                                 //return String.Format("[{0}]", sheetName);
                             }
-                            
+
                         }
                         return "[???]";
                     }
@@ -187,7 +190,8 @@ namespace Garland.Data
                             var sheetKey = int.Parse(genericElementArgs[2].Accept(this).Trim());
                             var row = sheet[sheetKey];
                             return row.ToString();
-                        } catch (KeyNotFoundException e)
+                        }
+                        catch (KeyNotFoundException e)
                         {
                             DatabaseBuilder.PrintLine($"Missing sheet for HTML String Formatter: {sheetName}");
                             return "";
@@ -207,7 +211,8 @@ namespace Garland.Data
 
         public string Visit(DefaultElement defaultElement)
         {
-            switch (defaultElement.Tag) {
+            switch (defaultElement.Tag)
+            {
                 case TagType.Indent:
                     // Skip these - appears in names that I don't want special formatting in.
                     return "";
@@ -234,7 +239,12 @@ namespace Garland.Data
                     return ""; // Skip these.
 
                 default:
-                    throw new NotImplementedException();
+                    if (System.Diagnostics.Debugger.IsAttached)
+                    {
+                        System.Diagnostics.Debugger.Break();
+                    }
+                    return "";
+                    //throw new NotImplementedException();
             }
         }
 
@@ -328,7 +338,8 @@ namespace Garland.Data
         {
             var args = openTag.Arguments.ToArray();
 
-            switch (openTag.Tag) {
+            switch (openTag.Tag)
+            {
                 case TagType.Color:
                     return "<span class=\"" + GetColorClass(args[0].ToString()) + "\">";
 
@@ -336,12 +347,12 @@ namespace Garland.Data
                     return "<span class=\"emphasis\">";
 
                 default:
-                   
+
                     //throw new NotImplementedException();
                     Console.WriteLine("0");
-                    
+
                     return "";
-                    
+
 
             }
         }

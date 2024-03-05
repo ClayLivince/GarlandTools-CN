@@ -45,6 +45,9 @@ namespace Garland.UI.ViewModels
             {
                 foreach (var path in Directory.EnumerateFiles(Config.UpdatesPath))
                 {
+                    if (path.EndsWith("sql"))
+                        continue;
+
                     if (!_updates.Any(u => u.Path == path))
                         _updates.Add(UpdatePackage.Load(path));
                 }
