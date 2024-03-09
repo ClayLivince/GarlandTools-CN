@@ -13,7 +13,7 @@ namespace Garland.Data
     public class GarlandDatabase
     {
         // NOTE: This section must be updated with every patch!
-        public const decimal NextPatch = 6.51m;
+        public const decimal NextPatch = 6.55m;
         public static Patch[] MajorPatches = new[] {
             new Patch(1m, "Legacy", "Legacy"),
 
@@ -54,7 +54,7 @@ namespace Garland.Data
         };
 
         public static int LevelCap = -1; // Filled in from Miscellaneous.
-        public static int BlueMageLevelCap = 50;
+        public static int BlueMageLevelCap = 70;
 
         public HashSet<int> LocationReferences = new HashSet<int>();
         public Dictionary<object, List<DataReference>> DataReferencesBySource = new Dictionary<object, List<DataReference>>();

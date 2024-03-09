@@ -120,7 +120,7 @@ namespace Garland.UI
         void BuildDatabase(bool fetchIconsOnly)
         {
             var libraPath = System.IO.Path.Combine(Config.SupplementalPath, "app_data.sqlite");
-            var realm = new SaintCoinach.ARealmReversed(Config.GamePath, "SaintCoinach.History.zip", SaintCoinach.Ex.Language.English, libraPath);
+            var realm = new SaintCoinach.ARealmReversed(Config.GamePath, "SaintCoinach.History.zip", SaintCoinach.Ex.Language.English);
             var libra = new SQLite.SQLiteConnection(libraPath, SQLite.SQLiteOpenFlags.ReadOnly);
             var builder = new DatabaseBuilder(libra, realm);
 

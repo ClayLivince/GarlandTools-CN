@@ -15,6 +15,8 @@ namespace Garland.Data
         //private bool _wasHqIconEncountered = false;
         //private Regex _number = new Regex(".*?(\\d+).*?");
 
+        private List<(string, int)> _indexedSheetRows = new List<(string, int)>();
+
         private HtmlStringFormatter() { }
 
         public static string Convert(XivString str)
@@ -26,6 +28,11 @@ namespace Garland.Data
         public string Visit(CloseTag closeTag)
         {
             return "</span>";
+        }
+
+        public List<(string, int)> IndexedSheetRows()
+        {
+            return _indexedSheetRows;
         }
 
         public string Visit(GenericElement genericElement)
@@ -69,10 +76,79 @@ namespace Garland.Data
                         var sheetKeyRaw = genericElementArgs[1].Accept(this);
                         if (int.TryParse(sheetKeyRaw.Trim(), out var sheetKey))
                         {
-                            var sheet = DatabaseBuilder.Instance.Realm.GameData.GetSheet(sheetName);
-                            var row = sheet[sheetKey];
-                            var rowIndex = int.Parse(genericElementArgs[2].Accept(this).Trim());
-                            return row[rowIndex].ToString();
+                            SaintCoinach.Xiv.IXivSheet sheet = null;
+
+                            if (sheetName.Trim().Equals("EObj"))
+                                sheetName = "EObjName";
+
+                            if (sheetName.Trim().Equals("ItemHQ"))
+                                sheetName = "Item";
+
+                            if (sheetName.Trim().Equals("ItemMP"))
+                                sheetName = "Item";
+
+                            try
+                            {
+                                sheet = DatabaseBuilder.Instance.Realm.GameData.GetSheet(sheetName);
+                            }
+                            catch (KeyNotFoundException)
+                            {
+                                DatabaseBuilder.PrintLine($"Unknown Sheet Named '{sheetName}'.");
+                                if (System.Diagnostics.Debugger.IsAttached)
+                                    System.Diagnostics.Debugger.Break();
+                            }
+
+                            try
+                            {
+                                var row = sheet[sheetKey];
+                                _indexedSheetRows.Add((sheetName, row.Key));
+                                try
+                                {
+                                    // If length < 3 then it do not have enough arguments
+                                    if (genericElementArgs.Length < 3)
+                                    {
+                                        if (sheetName.Contains("Item") || sheetName.Contains("EObjName") || sheetName.Contains("BNpcName"))
+                                        {
+
+                                            return row[0].ToString();
+                                        }
+                                        else
+                                        {
+                                            Console.WriteLine("{???}");
+                                        }
+                                    }
+                                    var rowIndex = int.Parse(genericElementArgs[2].Accept(this).Trim());
+
+                                    return row[rowIndex].ToString();
+                                }
+                                catch (IndexOutOfRangeException)
+                                {
+                                    // if it runs to here better recheck the tag.
+
+                                    return "[???]";
+                                }
+                                catch (KeyNotFoundException)
+                                {
+                                    // usualy caused by some dumb actions
+
+                                    //Console.WriteLine(genericText);
+                                    Console.WriteLine("{???}");
+                                }
+                                catch (Exception)
+                                {
+                                    //And What?
+                                    Console.WriteLine("{???}");
+                                }
+                            }
+                            catch (KeyNotFoundException)
+                            {
+                                // Check the sheet name! They must made some dumb new things!
+
+                                Console.WriteLine("{???}");
+
+                                //return String.Format("[{0}]", sheetName);
+                            }
+
                         }
                         return "[???]";
                     }
