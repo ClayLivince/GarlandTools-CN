@@ -226,6 +226,9 @@
     <script id="block-template" type="text/x-dot-template">
         <div class="block {{=it.type}} {{?it.blockClass}}{{=it.blockClass}}{{?}}" data-id="{{=it.id}}" data-type="{{=it.type}}">
             <div class="block-title handle">
+                {{?(it.displayName || it.name)}}
+                    <img src="images/site/Copy.svg" title="Copy block name" class="copy-button button">
+                {{?}}
                 {{?it.audio}}
                     <img src="images/site/Speaker.svg" title="Play audio and desktop notifications" class="notifications-button button">
                 {{?}}
@@ -2451,54 +2454,7 @@
             </div>
 
             <div class="lore-page page">
-                <div class="objectives subsection collapsible" data-headername="objectives">
-                    <h3 class="pointer">Objectives</h3>
-
-                    {{~it.objectives :value:index}}
-                        <div class="objective-entry collapse-toggle">&#x2713; {{=value}}</div>
-                    {{~}}
-                </div>
-
-                <div class="journal subsection collapsible collapsed" data-headername="journal">
-                    <h3 class="pointer">Journal</h3>
-
-                    {{~it.journal :value:index}}
-                        <div class="journal-entry collapse-toggle">
-                            {{=value}}
-                            <hr>
-                        </div>
-                    {{~}}
-                </div>
-
-                <div class="dialogue subsection collapsible collapsed" data-headername="dialogue">
-                    <h3 class="pointer">Dialogue</h3>
-
-                    {{~it.dialogue :value:index}}
-                        <div class="dialogue-entry collapse-toggle {{=value.type}}">
-                            {{=value.text}}
-                        </div>
-                    {{~}}
-                </div>
-
-                {{?it.talk}}
-                    <div class="talk subsection collapsible collapsed" data-headername="talk">
-                        <h3 class="pointer">Talk Dialogue</h3>
-
-                        {{~it.talk :value:index}}
-                            {{?value.npc}}
-                                <div class="line block-link pointer hover-highlight collapse-toggle" data-id="{{=value.npc.id}}" data-type="npc">
-                                    <span class="highlight">{{=value.text}}</span>
-                                    {{?value.npc.location}}<span class="location right">{{=value.npc.location}}</span>{{?}}
-                                    <div class="clear"></div>
-                                </div>
-                            {{??}}
-                                <div class="dialogue-entry collapse-toggle {{=value.type}}">
-                                    {{=value.text}}
-                                </div>
-                            {{?}}
-                        {{~}}
-                    </div>
-                {{?}}
+                Lore data is still loading...
             </div>
 
             {{?it.issuer && it.issuer.map}}
@@ -2508,6 +2464,78 @@
                 </div>
             {{?}}
         </div>
+    </script>
+
+    <script id="block-quest-lore-page-template" type="text/x-dot-template">
+        <div class="objectives subsection collapsible" data-headername="objectives">
+            <h3 class="pointer">Objectives</h3>
+
+            {{~it.objectives :value:index}}
+            <div class="objective-entry collapse-toggle">&#x2713; {{=value}}</div>
+            {{~}}
+        </div>
+
+        <div class="journal subsection collapsible collapsed" data-headername="journal">
+            <h3 class="pointer">Journal</h3>
+
+            {{~it.journal :value:index}}
+            <div class="journal-entry collapse-toggle">
+                {{=value}}
+                <hr>
+            </div>
+            {{~}}
+        </div>
+
+        <div class="dialogue subsection collapsible collapsed" data-headername="dialogue">
+            <h3 class="pointer">Dialogue</h3>
+
+            {{~it.dialogue :value:index}}
+            <div class="dialogue-entry collapse-toggle {{=value.type}}">
+                {{=value.text}}
+            </div>
+            {{~}}
+        </div>
+
+        {{?it.cutscenes}}
+        {{~it.cutscenes :cut:cindex}}
+        <div class="cutscene dialogue subsection collapsible collapsed" data-headername="cutscene">
+            <h3 class="pointer">Cutscene #{{=cindex + 1}}</h3>
+
+            {{~cut :value:vindex}}
+            <div class="dialogue-entry collapse-toggle {{=value.type}}">
+                <p style="margin: 0">{{=value.text}}</p>
+                {{?value.voice}}
+                <div class="dialogue-voice-container dialogue-voice-chs">
+                    <audio controls controlsList="nodownload">
+                        <source src="{{=value.voice}}.ogg" type="audio/ogg">
+                    </audio>
+                </div>
+                {{?}}
+            </div>
+            {{~}}
+        </div>
+        {{~}}
+        {{?}}
+
+        {{?it.talk}}
+        <div class="talk subsection collapsible collapsed" data-headername="talk">
+            <h3 class="pointer">Talk Dialogue</h3>
+
+            {{~it.talk :value:index}}
+            {{?value.npc}}
+            <div class="line block-link pointer hover-highlight collapse-toggle" data-id="{{=value.npc.id}}" data-type="npc">
+                <span class="highlight">{{=value.text}}</span>
+                {{?value.npc.location}}<span class="location right">{{=value.npc.location}}</span>{{?}}
+                <div class="clear"></div>
+            </div>
+            {{??}}
+            <div class="dialogue-entry collapse-toggle {{=value.type}}">
+                {{=value.text}}
+            </div>
+            {{?}}
+            {{~}}
+        </div>
+        {{?}}
     </script>
 
     <script id="block-mob-template" type="text/x-dot-template">

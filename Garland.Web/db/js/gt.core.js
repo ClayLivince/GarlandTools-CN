@@ -108,13 +108,13 @@ gt.core = {
     hashExpression: /#?(\w+)\/(.*)/,
     groupHashExpression: /(.+?)\{(.*)\}/,
     errorTemplate: null,
-    isLive: window.location.hostname != 'localhost' && window.location.hostname != 'test.garlandtools.org',
+    isLive: window.location.hostname !== '127.0.0.1' && window.location.hostname !== 'localhost' && window.location.hostname != 'test.garlandtools.org',
     //isLive: true,
 
     initialize: function() {
         try {
-            if (!gt.core.isLive)
-                gt.serverPath = 'http://test.garlandtools.org';
+            //if (!gt.core.isLive)
+            //    gt.serverPath = 'http://test.garlandtools.org';
 
             if (window.Sentry && gt.core.isLive) {
                 Sentry.init({
@@ -414,6 +414,9 @@ gt.core = {
             var view = (obj && obj.error) ? obj : module.getViewModel(obj, blockData);
             var $block = $(gt.core.blockTemplate(view));
             blockLoaded($block, view);
+            if (module.blockLoaded){
+                module.blockLoaded($block, view);
+            }
         } catch (ex) {
             if (!gt.core.retryLoad()) {
                 if (window.Sentry && gt.core.isLive)
@@ -642,6 +645,7 @@ gt.core = {
 
         $('.block-title .close-button', $block).click(gt.core.closeButtonClicked);
         $('.block-title .settings-button', $block).click(gt.core.settingsButtonClicked);
+        $('.block-title .copy-button', $block).click(gt.core.copyButtonClicked);
         $('.settings .unlock-height-link', $block).click(gt.core.unlockHeightLinkClicked);
         $('.block-link', $block).click(gt.core.blockLinkClicked);
 
@@ -689,6 +693,22 @@ gt.core = {
         $block.toggleClass('settings-open');
 
         return false;
+    },
+
+    copyButtonClicked: function(e) {
+        e.stopPropagation();
+
+        var $block = $(this).closest(".block");
+
+        var blockName = $(".name-handle", $block).text()
+        if (blockName){
+            var promise = navigator.clipboard.writeText(blockName);
+            if (promise) {
+                promise.catch(function(err) {
+                    console.error('Clipboard write error', err);
+                });
+            }
+        }
     },
 
     unlockHeightLinkClicked: function(e) {
