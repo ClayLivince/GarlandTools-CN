@@ -17,7 +17,8 @@ namespace Garland.Data
         public const string PatchesPath = SupplementalPath + "patches.json";
 
         public static string IconPath => Path.Combine(FilesPath, "icons");
-
+        public static string VoicePath => Path.Combine(FilesPath, "voices");
+        public static string TempPath => Path.Combine(FilesPath, "temp");
         // These values are configured in Config.json.
         public static string ConnectionString { get; private set; }
         public static string SapphireConnectionString { get; private set; }
@@ -35,6 +36,7 @@ namespace Garland.Data
 
             var text = File.ReadAllText(ConfigPath);
             dynamic values = JsonConvert.DeserializeObject(text);
+            
 
             Config.ConnectionString = values.database;
             Config.SapphireConnectionString = values.sapphireDatabase;
@@ -44,6 +46,8 @@ namespace Garland.Data
             Config.PngCrushPath = values.pngCrush;
             Config.DiffPath = values.diff;
             Config.FfmpegPath = values.ffmpeg;
+
+            Directory.CreateDirectory(TempPath);
         }
     }
     public class CalibrationConfig

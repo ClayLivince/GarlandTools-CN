@@ -13,7 +13,7 @@ namespace Garland.Data
     public class GarlandDatabase
     {
         // NOTE: This section must be updated with every patch!
-        public const decimal NextPatch = 6.55m;
+        public const decimal NextPatch = 6.58m;
         public static Patch[] MajorPatches = new[] {
             new Patch(1m, "Legacy", "Legacy"),
 
@@ -90,6 +90,7 @@ namespace Garland.Data
         public List<dynamic> Jobs = new List<dynamic>();
         public List<dynamic> Dyes = new List<dynamic>();
         public List<dynamic> Statuses = new List<dynamic>();
+        public List<dynamic> QuestLores = new List<dynamic>();
 
         public dynamic MateriaJoinRates;
 
@@ -116,7 +117,7 @@ namespace Garland.Data
 
         public Dictionary<SaintCoinach.Xiv.PlaceName, LocationInfo> LocationIndex;
 
-        public static HashSet<string> LocalizedTypes = new HashSet<string>() { "achievement", "action", "fate", "fishing", "instance", "item", "leve", "quest", "npc", "mob", "status" };
+        public static HashSet<string> LocalizedTypes = new HashSet<string>() { "achievement", "action", "fate", "fishing", "instance", "item", "leve", "quest", "npc", "mob", "status", "questlore" };
 
         // Views
         public List<dynamic> NodeViews = new List<dynamic>();

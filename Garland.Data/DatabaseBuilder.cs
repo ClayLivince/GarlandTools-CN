@@ -138,6 +138,25 @@ namespace Garland.Data
             }
         }
 
+        public void BuildQuestLores()
+        {
+            FileDatabase.Initialize();
+            
+            // All the modules.
+            var modules = new Queue<Module>(new Module[]
+            {
+                new QuestLores()
+            });
+
+            var total = modules.Count;
+            while (modules.Count > 0)
+            {
+                var module = modules.Dequeue();
+                PrintLine($"* {module.Name}... {total - modules.Count}/{total}");
+                module.Start();
+            }
+        }
+
         public void CreateNpcGilShop(GarlandShop gShop, dynamic npc)
         {
             var shopName = gShop.Name == "Shop" ? "Purchase Items" : gShop.Name;

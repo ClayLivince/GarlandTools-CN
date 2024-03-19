@@ -16,6 +16,7 @@ namespace Garland.Data
         private ARealmReversed _realm;
         private readonly XivCollection _data;
         private readonly Tuple<string, Language>[] _langs;
+        public Tuple<string, Language>[] Langs => _langs;
 
         public Localize(ARealmReversed realm)
         {

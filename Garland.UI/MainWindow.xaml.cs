@@ -72,6 +72,19 @@ namespace Garland.UI
             });
         }
 
+        private void ConvertQuestLores_Click(object sender, RoutedEventArgs e)
+        {
+            RunAction(() =>
+            {
+                BuildQuestLores();
+                WriteQuestLores();
+
+                DatabaseBuilder.PrintLine("Done.");
+
+                Dispatcher.Invoke(_updateView.Model.LoadUpdatePackages);
+            });
+        }
+
         private void FetchIcons_Click(object sender, RoutedEventArgs e)
         {
             RunAction(() => BuildDatabase(true));
@@ -137,6 +150,23 @@ namespace Garland.UI
             DatabaseBuilder.PrintLine($"Processing elapsed: {processing.Elapsed}");
         }
 
+        void BuildQuestLores()
+        {
+            var libraPath = System.IO.Path.Combine(Config.SupplementalPath, "app_data.sqlite");
+            var realm = new SaintCoinach.ARealmReversed(Config.GamePath, "SaintCoinach.History.zip", SaintCoinach.Ex.Language.English);
+            var libra = new SQLite.SQLiteConnection(libraPath, SQLite.SQLiteOpenFlags.ReadOnly);
+            var builder = new DatabaseBuilder(libra, realm);
+
+            DatabaseBuilder.PrintLine($"Game version: {realm.GameVersion}");
+            DatabaseBuilder.PrintLine($"Definition version: {realm.DefinitionVersion}");
+
+            var processing = Stopwatch.StartNew();
+            builder.BuildQuestLores();
+
+            processing.Stop();
+            DatabaseBuilder.PrintLine($"Processing elapsed: {processing.Elapsed}");
+        }
+
         void RunAction(Action action)
         {
             Task.Run(() =>
@@ -175,6 +205,24 @@ namespace Garland.UI
             {
                 DatabaseBuilder.PrintLine($"Updating {searchUpdate.RowCount} data rows.");
                 searchUpdate.Write();
+            }
+
+            writing.Stop();
+            DatabaseBuilder.PrintLine($"Writing elapsed: {writing.Elapsed}");
+        }
+
+        void WriteQuestLores()
+        {
+            var writing = Stopwatch.StartNew();
+
+            var dataUpdate = new UpdatePackage("questlore");
+            var loreout = new QuestLoreOutput(dataUpdate);
+            loreout.Write();
+
+            if (dataUpdate.RowCount > 0)
+            {
+                DatabaseBuilder.PrintLine($"Updating {dataUpdate.RowCount} data rows.");
+                dataUpdate.Write();
             }
 
             writing.Stop();

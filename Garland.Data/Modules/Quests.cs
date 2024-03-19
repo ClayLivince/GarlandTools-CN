@@ -7,6 +7,8 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Saint = SaintCoinach.Xiv;
 using Garland.Data.Models;
+using System.IO;
+using System.Text.RegularExpressions;
 
 namespace Garland.Data.Modules
 {
@@ -268,7 +270,7 @@ namespace Garland.Data.Modules
                     }
                 }
 
-                ImportQuestLore(quest, sQuest, instructions);
+                ImportQuestLoreUsedItems(quest, sQuest, instructions);
 
                 if (((JObject)rewards).Count > 0)
                     quest.reward = rewards;
@@ -277,6 +279,28 @@ namespace Garland.Data.Modules
 
                 _builder.Db.Quests.Add(quest);
                 _builder.Db.QuestsById[sQuest.Key] = quest;
+            }
+        }
+
+        void LinkQuestUsedItems(dynamic quest, Saint.Quest sQuest, int key)
+        {
+            if (_builder.Db.ItemsById.TryGetValue(key, out var item))
+            {
+                if (item.usedInQuest == null)
+                    item.usedInQuest = new JArray();
+
+                JArray usedInQuest = item.usedInQuest;
+                if (usedInQuest.Any(i => (int)i == sQuest.Key))
+                    return;
+
+                item.usedInQuest.Add(sQuest.Key);
+
+                if (quest.usedItems == null)
+                    quest.usedItems = new JArray();
+                quest.usedItems.Add(key);
+
+                _builder.Db.AddReference(item, "quest", sQuest.Key, false);
+                _builder.Db.AddReference(quest, "item", key, false);
             }
         }
 
@@ -448,21 +472,15 @@ namespace Garland.Data.Modules
             // sQuest.Requirements.QuestLevelOffset: Not sure what this is for.
         }
 
-        void ImportQuestLore(dynamic quest, Saint.Quest sQuest, ScriptInstruction[] instructions)
+        void ImportQuestLoreUsedItems(dynamic quest, Saint.Quest sQuest, ScriptInstruction[] instructions)
         {
-            // todo: retrieve sheets for all languages, index using english version, then push into localized quest obj.
+            // Lore is imported through QuestsLore Module seperately, not mix it here, because it is way too slow.
 
             var idParts = sQuest.Id.ToString().Split('_');
             var idPath = new string(idParts[1].Take(3).ToArray());
             var textSheetId = string.Format("quest/{0}/{1}", idPath, sQuest.Id);
             var textSheet = _builder.Sheet(textSheetId)
                 .Select(r => new { r.Key, Tokens = r[0].ToString().Split('_'), XivString = (SaintCoinach.Text.XivString)r[1] });
-
-            quest.journal = new JArray();
-            quest.objectives = new JArray();
-            quest.dialogue = new JArray();
-
-            string lastLine = null;
 
             foreach (var row in textSheet)
             {
@@ -473,35 +491,26 @@ namespace Garland.Data.Modules
                     || string.IsNullOrWhiteSpace(rawString))
                     continue;
 
-                var str = HtmlStringFormatter.Convert(row.XivString);
-                //if (str.Contains("Aye, an anima weapon")) // Has IntegerParameter(1) [Error] - need to pass proper eval parameters in.
-                //    System.Diagnostics.Debugger.Break();
-
-                if (row.Tokens.Contains("SEQ"))
-                    quest.journal.Add(str);
-                else if (row.Tokens.Contains("TODO"))
+                // We need to get indexed other sheets, so we can get
+                //  some related Item which not listed in instructions.
+                HtmlStringFormatter fmter = new HtmlStringFormatter();
+                var str = row.XivString.Accept(fmter);
+                foreach (var pair in fmter.IndexedSheetRows())
                 {
-                    if (lastLine == str)
-                    {
-                        //System.Diagnostics.Debug.WriteLine("Skipping duplicate quest {0} objective: {1}", gameData.Key, lastLine);
-                        continue;
-                    }
-                    quest.objectives.Add(str);
-                }
-                else
-                {
-                    dynamic obj = new JObject();
-
-                    if (row.Tokens[3].All(char.IsDigit))
-                        obj.name = row.Tokens[4];
+                    if (pair.Item1.Equals("Item"))
+                        LinkQuestUsedItems(quest, sQuest, pair.Item2);
                     else
-                        obj.name = row.Tokens[3];
-
-                    obj.text = str;
-                    quest.dialogue.Add(obj);
+                    {
+                        if (quest.otherIndexes == null)
+                        {
+                            quest.otherIndexes = new JArray();
+                        }
+                        dynamic obj = new JObject();
+                        obj.sheet = pair.Item1;
+                        obj.row = pair.Item2;
+                        quest.otherIndexes.Add(obj);
+                    }
                 }
-
-                lastLine = str;
             }
 
             // Script instructions

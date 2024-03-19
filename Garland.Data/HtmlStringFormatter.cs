@@ -17,7 +17,7 @@ namespace Garland.Data
 
         private List<(string, int)> _indexedSheetRows = new List<(string, int)>();
 
-        private HtmlStringFormatter() { }
+        public HtmlStringFormatter() { }
 
         public static string Convert(XivString str)
         {
@@ -46,7 +46,52 @@ namespace Garland.Data
                     else if (genericText == "<Split(<Highlight>ObjectParameter(1)</Highlight>, ,2)/>")
                         return "<span class=\"highlight\">Surname</span>";
                     else
+                    {
+                        try
+                        {
+                            var genericElementArgs = genericElement.Arguments.ToArray();
+                            var prefix = "";
+                            var nameArg = genericElementArgs[2] as StaticInteger;
+                            switch (nameArg?.Value)
+                            {
+                                case 1:
+                                    {
+                                        prefix = "<span class=\"highlight\">Forename</span>";
+                                        break;
+                                    }
+                                case 2:
+                                    {
+                                        prefix = "<span class=\"highlight\">Surname</span>";
+                                        break;
+                                    }
+                                default:
+                                    {
+                                        // Unknown Split type encountered, may be not switching player name. ANALYSE IT!
+                                        if (System.Diagnostics.Debugger.IsAttached)
+                                        {
+                                            System.Diagnostics.Debugger.Break();
+                                        }
+                                        break;
+                                    }
+                            }
+                            if (genericElementArgs[0] is XivString)
+                            {
+                                var xivStringArg0 = genericElementArgs[0] as XivString;
+                                return prefix + (xivStringArg0.Children.ToArray()[2]).Accept(this);
+                            }
+                        } catch (Exception e){
+                            if (System.Diagnostics.Debugger.IsAttached)
+                            {
+                                System.Diagnostics.Debugger.Break();
+                            }
+                        }
+                        // Unknown condition and requires analysing
+                        if (System.Diagnostics.Debugger.IsAttached)
+                        {
+                            System.Diagnostics.Debugger.Break();
+                        }
                         throw new NotImplementedException();
+                    }
 
                 case TagType.Highlight:
                     var content = genericElement.Content.Accept(this);
@@ -57,9 +102,11 @@ namespace Garland.Data
                         return "<img class=\"hq-icon small\" src=\"images/item/hq.png\">";
                     else if (genericText.Contains("GCRank"))
                         return "[GC Rank]";
-                    else if (genericText == "<Sheet(Race,PlayerParameter(71),0)/>")
+                    // There are 0 and 1 as param3, don't know what's the difference
+                    else if (genericText.StartsWith("<Sheet(Race,PlayerParameter(71),"))
                         return "[Race]";
-                    else if (genericText == "<Sheet(ClassJob,PlayerParameter(68),0)/>")
+                    // There are 0 and 2 as param3, don't know what's the difference
+                    else if (genericText.StartsWith("<Sheet(ClassJob,PlayerParameter(68),"))
                         return "[Job]";
                     else if (genericText == "<Sheet(Town,PlayerParameter(70),0)/>")
                         return "[Starting City]";
@@ -78,14 +125,22 @@ namespace Garland.Data
                         {
                             SaintCoinach.Xiv.IXivSheet sheet = null;
 
+                            var prefix = "";
+
                             if (sheetName.Trim().Equals("EObj"))
                                 sheetName = "EObjName";
 
                             if (sheetName.Trim().Equals("ItemHQ"))
+                            {
                                 sheetName = "Item";
+                                prefix = "<img class=\"hq-icon small\" src=\"images/item/hq.png\">";
+                            }
 
                             if (sheetName.Trim().Equals("ItemMP"))
+                            {
                                 sheetName = "Item";
+                                prefix = "<img class=\"hq-icon small\" src=\"images/item/mp.png\">";
+                            }
 
                             try
                             {
@@ -110,7 +165,7 @@ namespace Garland.Data
                                         if (sheetName.Contains("Item") || sheetName.Contains("EObjName") || sheetName.Contains("BNpcName"))
                                         {
 
-                                            return row[0].ToString();
+                                            return prefix + row[0].ToString();
                                         }
                                         else
                                         {
@@ -153,7 +208,14 @@ namespace Garland.Data
                         return "[???]";
                     }
                     else
+                    {
+                        if (System.Diagnostics.Debugger.IsAttached)
+                        {
+                            System.Diagnostics.Debugger.Break();
+                        }
                         throw new NotImplementedException();
+                    }
+                        
 
                 case TagType.Clickable:
                     return string.Join("", genericElement.Arguments.Select(v => v.Accept(this)));
@@ -182,17 +244,51 @@ namespace Garland.Data
                         var genericElementArgs = genericElement.Arguments.ToArray();
                         var args = genericElement.Arguments.Select(a => a.Accept(this)).ToArray();
                         var sheetName = genericElementArgs[0].Accept(this);
+
+                        var prefix = "";
+
+                        if (sheetName.Trim().Equals("EObj"))
+                            sheetName = "EObjName";
+
+                        if (sheetName.Trim().Equals("ItemHQ"))
+                        {
+                            sheetName = "Item";
+                            prefix = "<img class=\"hq-icon small\" src=\"images/item/hq.png\">";
+                        }
+
+                        if (sheetName.Trim().Equals("ItemMP"))
+                        {
+                            sheetName = "Item";
+                            prefix = "<img class=\"hq-icon small\" src=\"images/item/mp.png\">";
+                        }
+
+                        var sheetKey = 0;
                         try
                         {
                             var sheet = DatabaseBuilder.Instance.Realm.GameData.GetSheet(sheetName);
                             if (genericElementArgs[2] is Parameter sheetKeyParam)
                                 return "[Error]";
-                            var sheetKey = int.Parse(genericElementArgs[2].Accept(this).Trim());
+                            sheetKey = int.Parse(genericElementArgs[2].Accept(this).Trim());
                             var row = sheet[sheetKey];
-                            return row.ToString();
+                            return prefix + row.ToString();
                         } catch (KeyNotFoundException e)
                         {
-                            DatabaseBuilder.PrintLine($"Missing sheet for HTML String Formatter: {sheetName}");
+                            if (sheetName == "Item")
+                            {
+                                try
+                                {
+                                    var sheet = DatabaseBuilder.Instance.Realm.GameData.GetSheet("EventItem");
+                                    if (genericElementArgs[2] is Parameter sheetKeyParam)
+                                        return "[Error]";
+                                    sheetKey = int.Parse(genericElementArgs[2].Accept(this).Trim());
+                                    var row = sheet[sheetKey];
+                                    return prefix + row.ToString();
+                                } catch (KeyNotFoundException e2)
+                                {
+                                    // Do nothing
+                                }
+                            }
+                            DatabaseBuilder.PrintLine($"Failed to match sheet and row for HTML String Formatter: {sheetName} row {sheetKey}");
                             return "";
                         }
                     }
@@ -236,8 +332,45 @@ namespace Garland.Data
                 case TagType.UIGlow:
                     return ""; // Skip these.
 
+                case TagType.RubyCharaters:
+                    {
+                        // Ruby characters are stored like this:
+                        // <74>FF<PositionIndicator(1Byte)><BottomCharactersInUTF8>FF<PositionIndicator(1Byte)><TopCharactersInUTF8></74>
+                        // PositionIndicator is not clear, anyway ignore it, not really important
+                        // Byte FF will be converted to 65533 by cs Encoding, so we split with 65533 here.
+
+                        var utf8Converted = Encoding.UTF8.GetString(((StaticByteArray)defaultElement.Data).Value);
+                        var convertedList = utf8Converted.Split((char)65533).ToList();
+                        convertedList.Remove("");
+                        //var rawSplited = defaultElement.Data.ToString().Split("FF").ToList();
+                        //rawSplited.Remove("");
+                        try
+                        {
+                            var kanji = convertedList[0].Substring(1).Trim();
+                            var markup = convertedList[1].Substring(1).Trim();
+                            return $"<ruby>{kanji}<rp>(</rp><rt>{markup}</rt><rp>)</rp></ruby>";
+                        } catch (Exception e)
+                        {
+                            DatabaseBuilder.PrintLine($"Failed to parse ruby character sequence {utf8Converted}!");
+                            if (System.Diagnostics.Debugger.IsAttached)
+                            {
+                                System.Diagnostics.Debugger.Break();
+                            }
+                            return "[???]";
+                        }
+                        
+                        // <ruby> 東京<rp>(</ rp > < rt > とうきょう </ rt >< rp >) </ rp ></ ruby >
+                    }
+
                 default:
-                    throw new NotImplementedException();
+                    {
+                        if (System.Diagnostics.Debugger.IsAttached)
+                        {
+                            System.Diagnostics.Debugger.Break();
+                        }
+                        return "";
+                        //throw new NotImplementedException();
+                    }
             }
         }
 
@@ -336,10 +469,17 @@ namespace Garland.Data
                     return "<span class=\"" + GetColorClass(args[0].ToString()) + "\">";
 
                 case SaintCoinach.Text.TagType.Emphasis:
+                    //I am not sure with Emphasis2, just place it as normal emphasis now
+                case SaintCoinach.Text.TagType.Emphasis2:
                     return "<span class=\"emphasis\">";
 
                 default:
-                    throw new NotImplementedException();
+                    if (System.Diagnostics.Debugger.IsAttached)
+                    {
+                        System.Diagnostics.Debugger.Break();
+                    }
+                    return "";
+                    //throw new NotImplementedException();
             }
         }
 
@@ -380,6 +520,7 @@ namespace Garland.Data
                 case "F20223": return "highlight-purple";
                 case "F20215": return "highlight-yellow"; // Unsure about this one.  Used to note "Legacy of Allag" quest needs to be abandoned and reacquired.
                 case "F201FC": return "highlight-red";
+                case "F2023B": return "highlight"; // Used in the dragonsung tool series quest. Nothing different from normal highlight.
                 case "F102": return "highlight-blue"; // Only used by some dancer traits in German.  Maybe a bug?
 
                 default:
