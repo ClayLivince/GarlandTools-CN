@@ -2466,7 +2466,7 @@
         </div>
     </script>
 
-    <script id="block-quest-lore-page-template" type="text/x-dot-template">
+    <script id="page-quest-lore-template" type="text/x-dot-template">
         <div class="objectives subsection collapsible" data-headername="objectives">
             <h3 class="pointer">Objectives</h3>
 
@@ -2496,6 +2496,14 @@
             {{~}}
         </div>
 
+        <div class="dialogue subsection" data-headername="copyright-confirmation">
+            <h3 class="pointer">{{=gt.i18n.get("CopyrightAgreement")}}</h3>
+            <div class="dialogue-entry dialogue-copyright">
+                <input type="checkbox" class="copyright-read-check" style="padding: 5px"/>
+                <span style="padding: 5px">{{=gt.i18n.get("CopyrightAgreementText")}}</span>
+            </div>
+        </div>
+
         {{?it.cutscenes}}
         {{~it.cutscenes :cut:cindex}}
         <div class="cutscene dialogue subsection collapsible collapsed" data-headername="cutscene">
@@ -2505,7 +2513,7 @@
             <div class="dialogue-entry collapse-toggle {{=value.type}}">
                 <p style="margin: 0">{{=value.text}}</p>
                 {{?value.voice}}
-                <div class="dialogue-voice-container dialogue-voice-chs">
+                <div class="dialogue-voice-container dialogue-voice copyright-marked-up">
                     <audio controls controlsList="nodownload">
                         <source src="{{=value.voice}}.ogg" type="audio/ogg">
                     </audio>

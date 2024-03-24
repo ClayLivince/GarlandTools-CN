@@ -26,7 +26,7 @@ gt.quest = {
     initialize: function(data) {
         gt.quest.blockTemplate = doT.template($('#block-quest-template').text());
         gt.quest.linkTemplate = doT.template($('#link-quest-template').text());
-        gt.quest.lorePageTemplate = doT.template($('#block-quest-lore-page-template').text());
+        gt.quest.lorePageTemplate = doT.template($('#page-quest-lore-template').text());
     },
 
     cache: function(data) {
@@ -159,6 +159,7 @@ gt.quest = {
             gt.display.collapsible($block);
             gt.display.draggable($block);
             gt.display.omniscroll($block);
+            $(".copyright-read-check", $block).change(gt.quest.loreAudioCopyrightChecked);
         }
 
         if (gt.quest.loreModule.index[view.id]){
@@ -172,6 +173,16 @@ gt.quest = {
                     loadLorePage(obj.questlore);
                 }
             })
+        }
+    },
+
+    loreAudioCopyrightChecked: function (e){
+        var $page = e.target.closest(".lore-page");
+        var $audios = $(".dialogue-voice", $page);
+        if (e.target.checked){
+            $audios.removeClass("copyright-marked-up");
+        } else {
+            $audios.addClass("copyright-marked-up");
         }
     },
 

@@ -16,6 +16,7 @@ type gt.instance.js >> gt.js
 type gt.search.js >> gt.js
 type gt.settings.js >> gt.js
 type gt.display.js >> gt.js
+type gt.i18n.js >> gt.js
 type gt.list.js >> gt.js
 type gt.quest.js >> gt.js
 type gt.achievement.js >> gt.js

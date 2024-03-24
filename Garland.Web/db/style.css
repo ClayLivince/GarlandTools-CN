@@ -424,9 +424,18 @@ a:hover {
     margin: 0
 }
 
+.dialogue-copyright{
+    display: flex;
+    margin: 5px 0;
+}
+
 .dialogue-voice-container{
     display: flex;
     margin: 5px 0;
+}
+
+.dialogue-voice.copyright-marked-up{
+    display: none;
 }
 
 /* Lists */
