@@ -159,6 +159,7 @@ gt.quest = {
             gt.display.collapsible($block);
             gt.display.draggable($block);
             gt.display.omniscroll($block);
+            gt.display.alternatives($block);
             $(".copyright-read-check", $block).change(gt.quest.loreAudioCopyrightChecked);
         }
 
