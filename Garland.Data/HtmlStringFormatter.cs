@@ -114,7 +114,7 @@ namespace Garland.Data
                                         }
                                         else
                                         {
-                                            Console.WriteLine("{???}");
+                                            if (System.Diagnostics.Debugger.IsAttached) { System.Diagnostics.Debugger.Break(); }
                                         }
                                     }
                                     var rowIndex = int.Parse(genericElementArgs[2].Accept(this).Trim());

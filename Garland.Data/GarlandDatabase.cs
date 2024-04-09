@@ -14,7 +14,7 @@ namespace Garland.Data
     {
         // NOTE: This section must be updated with every patch!
         public const decimal NextPatch = 6.5m;
-        public const decimal GlobalPatch = 6.55m;
+        public const decimal GlobalPatch = 6.58m;
         public static Patch[] MajorPatches = new[] {
             new Patch(1m, "遗产", "遗产"),
 
