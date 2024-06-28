@@ -28,8 +28,6 @@ namespace Garland.Data.Output
             {
                 WriteQuestLores(lang);
             }
-
-            PatchDatabase.WriteMasterPatchList();
         }
 
         void WriteQuestLores(string lang)
