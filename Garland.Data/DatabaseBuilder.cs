@@ -26,6 +26,56 @@ namespace Garland.Data
         public Dictionary<long, List<int>> ItemDropsByMobId = new Dictionary<long, List<int>>();
         public Dictionary<long, int> InstanceIdsByMobId = new Dictionary<long, int>();
         public int[] TomestoneIds = new int[3];
+        public readonly int[] _currencies = new int[] {
+            10309,
+            25199,
+            10311,
+            25200,
+            10307,
+            33913,
+            33914,
+            21072,
+            21073,
+            21074,
+            21075,
+            21076,
+            21077,
+            21078,
+            21079,
+            21080,
+            21081,
+            21172,
+            21173,
+            21935,
+            22525,
+            26533,
+            26807,
+            28063,
+            28186,
+            28187,
+            28188,
+            30341
+        };
+
+        public int GetCurrency(int key)
+        {
+            if (key <= _currencies.Length)
+            {
+                return _currencies[key - 1];
+            }
+            return key;
+        }
+
+        public int GetTomestoneCoveredCurrencies(int key)
+        {
+            if (key <= 3)
+            {
+                return TomestoneIds[key - 1];
+            } else
+            {
+                return GetCurrency(key);
+            }
+        }
         #endregion
 
         public SQLite.SQLiteConnection Libra => _libra;

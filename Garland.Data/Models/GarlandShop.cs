@@ -39,6 +39,67 @@ namespace Garland.Data.Models
             return results;
         }
 
+        public static IEnumerable<GarlandShop> ConvertSpecialShops(DatabaseBuilder builder)
+        {
+            var results = new List<GarlandShop>();
+            var sShops = builder.Sheet<Saint.SpecialShop>();
+
+            foreach (var sShop in sShops)
+            {
+                var iShop = sShop as Saint.IShop;
+                var shop = new GarlandShop(sShop.Name, sShop.ENpcs, FilterListings(iShop.ShopListings, builder));
+                shop.Key = sShop.Key;
+
+                foreach (var shopListing in shop.GtShopListings)
+                {
+                    for (int i = 0; i < shopListing.Costs.Count; i++)
+                    {
+                        shopListing.Costs[i].ItemKey = ProcessSpecialShopCost(builder, sShop, shopListing.Costs[i].ItemKey);
+                    }
+                }
+
+                results.Add(shop);
+            }
+            return results;
+        }
+
+        static int? ProcessSpecialShopCost(DatabaseBuilder builder, Saint.SpecialShop sShop, int? costKeyOptional)
+        {
+            if (!costKeyOptional.HasValue)
+            {
+                return costKeyOptional;
+            }
+            var costKey = costKeyOptional.Value;
+            var result = costKey;
+            var currencyType = sShop.AsInt16("UseCurrencyType");
+            if (sShop.Key == 1770637)
+            {
+                return builder.GetCurrency(costKey);
+            }
+            if (sShop.Key == 1770446 || (sShop.Key == 1770699 && costKey < 10))
+            {
+                return builder.GetTomestoneCoveredCurrencies(costKey);
+            }
+
+            if (currencyType == 16 && costKey != 25)
+            {
+                result = builder.GetCurrency(costKey);
+            }
+
+            if ((currencyType == 2 || sShop.Key == 1770637) && costKey < 10)
+            {
+                result = builder.GetCurrency(costKey);
+            }
+
+            // Looks like we'll have to hardcode some of them
+            if ((currencyType == 4 || currencyType == 16) && costKey < 10 && sShop.Key != 1770637)
+            {
+                result = builder.GetTomestoneCoveredCurrencies(costKey);
+            }
+            return result;
+        }
+
+
         static IEnumerable<Saint.IShopListing> FilterListings(IEnumerable<Saint.IShopListing> sShopListings, DatabaseBuilder builder)
         {
             return sShopListings.Where(l => !IsFilteredShopListing(l, builder));

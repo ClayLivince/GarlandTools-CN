@@ -39,10 +39,11 @@ namespace Garland.Data.Output
         public uint GetJsonHashCode()
         {
             if (_jsonHashCode == 0)
-                _jsonHashCode = (uint)Json.GetHashCode();
+                _jsonHashCode = (uint)Utils.GetDeterministicHashCode(Json);
             return _jsonHashCode;
         }
 
+        
         public static Row ReadFromBatchFile(StreamReader reader)
         {
             var line = reader.ReadLine();

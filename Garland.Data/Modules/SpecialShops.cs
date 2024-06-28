@@ -19,7 +19,7 @@ namespace Garland.Data.Modules
         {
             // Collect and index all shops to use.
             _shops.AddRange(GarlandShop.Convert(_builder.Sheet<Saint.GilShop>(), _builder));
-            _shops.AddRange(GarlandShop.Convert(_builder.Sheet<Saint.SpecialShop>(), _builder));
+            _shops.AddRange(GarlandShop.ConvertSpecialShops(_builder));
             _shops.AddRange(GarlandShop.Convert(_builder.Sheet<Saint.GCShop>(), _builder));
             _shops.AddRange(GarlandShop.Convert(_builder.Sheet<Saint.FccShop>(), _builder));
 
@@ -182,7 +182,7 @@ namespace Garland.Data.Modules
 
                 if (listing.Rewards.Any(r => r.ItemKey.HasValue && !_builder.Db.ItemsById.ContainsKey(r.ItemKey.Value)))
                     isValid = false;
-
+                
                 if (!isValid)
                 {
                     var costNames = listing.Costs.Select(c => c.Count + " " + ((c.ItemKey.HasValue && _builder.Db.ItemsById.ContainsKey(c.ItemKey.Value)) ? _builder.Db.ItemsById[c.ItemKey.Value].en.name : c.ItemId));

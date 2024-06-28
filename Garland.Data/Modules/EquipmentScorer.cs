@@ -80,6 +80,7 @@ namespace Garland.Data.Modules
                 new SW("Critical Hit", .001), new SW("Direct Hit Rate", .001)
             });
             _jobsByKey[29] = _jobsByKey[30]; // Rogue
+            _jobsByKey[41] = _jobsByKey[30]; // Viper
 
             // Samurai
             _jobsByKey[34] = new JobData(GarlandDatabase.LevelCap, new SW[] {
@@ -94,6 +95,7 @@ namespace Garland.Data.Modules
                 new SW("Determination", .001), new SW("Spell Speed", .001),
                 new SW("Critical Hit", .001), new SW("Direct Hit Rate", .001)
             });
+            _jobsByKey[42] = _jobsByKey[35];
 
             // Blue Mage
             _jobsByKey[36] = new JobData(GarlandDatabase.BlueMageLevelCap, new SW[] {

@@ -55,7 +55,16 @@ namespace Garland.Data
                 .Replace("<Indent/>", "");
         }
 
-        public static string RemoveLineBreaks(string str)
+        public static string SanitizeXivTags(XivString str)
+        {
+            return str.ToString()
+                .Replace("<Emphasis>", "")
+                .Replace("</Emphasis>", "")
+                .Replace("<SoftHyphen/>", "")
+                .Replace("<Indent/>", "");
+        }
+
+        public static string RemoveLineBreaks (string str)
         {
             return str
                 .Replace("\r", "")
@@ -84,6 +93,12 @@ namespace Garland.Data
             throw new NotImplementedException();
         }
 
+        public static string SanitizeSpace(XivString str)
+        {
+            return str.ToString()
+                .Replace(' ', ' ');
+        }
+
         public static string SanitizeQuestName(XivString str)
         {
             return str.ToString()
@@ -102,17 +117,18 @@ namespace Garland.Data
                 .Replace("  ", " ");
         }
 
+        public static IEnumerable<string[]> Csv(string path)
+        {
+            var lines = System.IO.File.ReadAllLines(path);
+            return lines.Select(l => l.Split(','));
+        }
+
         public static IEnumerable<string[]> Tsv(string path)
         {
             var lines = System.IO.File.ReadAllLines(path);
             return lines.Select(l => l.Split('\t'));
         }
 
-        public static IEnumerable<string[]> Csv(string path)
-        {
-            var lines = System.IO.File.ReadAllLines(path);
-            return lines.Select(l => l.Split(','));
-        }
 
         public static JToken Json(string path)
         {
@@ -181,6 +197,27 @@ namespace Garland.Data
         public static string ModelCharaKey(SaintCoinach.Xiv.ModelChara model)
         {
             return string.Format("{0}-{1}-{2}", model.ModelKey, model.BaseKey, model.Variant);
+        }
+
+        // This is to fixing the Hashcode Changing issue after upgrading to .net 7
+        // Reference: https://andrewlock.net/why-is-string-gethashcode-different-each-time-i-run-my-program-in-net-core/
+        public static int GetDeterministicHashCode(string str)
+        {
+            unchecked
+            {
+                int hash1 = (5381 << 16) + 5381;
+                int hash2 = hash1;
+
+                for (int i = 0; i < str.Length; i += 2)
+                {
+                    hash1 = ((hash1 << 5) + hash1) ^ str[i];
+                    if (i == str.Length - 1)
+                        break;
+                    hash2 = ((hash2 << 5) + hash2) ^ str[i + 1];
+                }
+
+                return hash1 + (hash2 * 1566083941);
+            }
         }
     }
 }

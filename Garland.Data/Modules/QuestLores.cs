@@ -19,6 +19,7 @@ namespace Garland.Data.Modules
             { 2, "ex2" },
             { 3, "ex3" },
             { 4, "ex4" },
+            { 5, "ex5" },
         };
 
         Regex textRegex = new Regex("TEXT_VOICEMAN_(\\d{5})_(\\d{6})_(.*?)\u0000");

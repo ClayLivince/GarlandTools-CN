@@ -148,6 +148,8 @@ namespace Garland.Data
             ItemPatchCategoryByUICategory[107] = 0; // Dancer's Arm
             ItemPatchCategoryByUICategory[108] = 0; // Reaper's Arm
             ItemPatchCategoryByUICategory[109] = 0; // Sage's Arm
+            ItemPatchCategoryByUICategory[110] = 0; // Viper's Arm
+            ItemPatchCategoryByUICategory[111] = 0; // Pictomancer's Arm
         }
 
         public static void Initialize()
