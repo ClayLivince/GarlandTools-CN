@@ -2258,12 +2258,11 @@
                     "Canopus Stilettos",
                     "Verdant Shortbow",
                     "Bloody Murder",
-                    "Verdant Scepter",
                     "Pupil's Book of Mythril",
                     "Astaroth Cane",
                     "Vega",
-                    "Warlock's Buckler",
-                    "Paladin's Templar Arms (Lv. 47)"
+                    "Paladin's Templar Arms (Lv. 47)",
+                    "Black Mage's Verdant Arms (Lv. 47)"
                 ]
             }
         ],
@@ -2355,15 +2354,14 @@
                             "Canopus Stilettos",
                             "Verdant Shortbow",
                             "Bloody Murder",
-                            "Verdant Scepter",
                             "Pupil's Book of Mythril",
                             "Astaroth Cane",
                             "Vega",
-                            "Warlock's Buckler",
                             "Aurum Sabatons",
                             "Aurum Leg Guards",
                             "Aurum Boots",
                             "Paladin's Templar Arms (Lv. 47)",
+                            "Black Mage's Verdant Arms (Lv. 47)",
                             "Miser's Folly Orchestrion Roll"
                         ]
                     }
@@ -20335,12 +20333,14 @@
                     "Monstrorum Claws",
                     "Monstrorum Katana",
                     "Monstrorum Knives",
+                    "Monstrorum Saberfangs",
                     "Monstrorum Longbow",
                     "Monstrorum Pistol",
                     "Monstrorum War Quoits",
                     "Monstrorum Rod",
                     "Monstrorum Grimoire",
                     "Monstrorum Foil",
+                    "Monstrorum Round Brush",
                     "Monstrorum Signum",
                     "Monstrorum Codex",
                     "Monstrorum Astrometer",
@@ -20478,12 +20478,14 @@
                             "Monstrorum Claws",
                             "Monstrorum Katana",
                             "Monstrorum Knives",
+                            "Monstrorum Saberfangs",
                             "Monstrorum Longbow",
                             "Monstrorum Pistol",
                             "Monstrorum War Quoits",
                             "Monstrorum Rod",
                             "Monstrorum Grimoire",
                             "Monstrorum Foil",
+                            "Monstrorum Round Brush",
                             "Monstrorum Signum",
                             "Monstrorum Codex",
                             "Monstrorum Astrometer",
@@ -20623,12 +20625,14 @@
                     "Imperial Magitek Baghnakhs",
                     "Imperial Magitek Samurai Blade",
                     "Imperial Magitek Cleavers",
+                    "Imperial Magitek Twinfangs",
                     "Imperial Magitek Bow",
                     "Imperial Magitek Handgonne",
                     "Imperial Magitek Glaives",
                     "Imperial Magitek Rod",
                     "Imperial Magitek Index",
                     "Imperial Magitek Tuck",
+                    "Imperial Magitek Brush",
                     "Imperial Magitek Cane",
                     "Imperial Magitek Codex",
                     "Imperial Magitek Planisphere",
@@ -20758,12 +20762,14 @@
                             "Imperial Magitek Baghnakhs",
                             "Imperial Magitek Samurai Blade",
                             "Imperial Magitek Cleavers",
+                            "Imperial Magitek Twinfangs",
                             "Imperial Magitek Bow",
                             "Imperial Magitek Handgonne",
                             "Imperial Magitek Glaives",
                             "Imperial Magitek Rod",
                             "Imperial Magitek Index",
                             "Imperial Magitek Tuck",
+                            "Imperial Magitek Brush",
                             "Imperial Magitek Cane",
                             "Imperial Magitek Codex",
                             "Imperial Magitek Planisphere",
@@ -20903,12 +20909,14 @@
                     "Palaka Sainti",
                     "Palaka Tulwar",
                     "Palaka Cleavers",
+                    "Palaka Saberfangs",
                     "Palaka Shortbow",
                     "Palaka Culverin",
                     "Palaka Chakrams",
                     "Palaka Longpole",
                     "Palaka Grimoire",
                     "Palaka Smallsword",
+                    "Palaka Flat Brush",
                     "Palaka Wand",
                     "Palaka Codex",
                     "Palaka Torquetum",
@@ -21028,12 +21036,14 @@
                             "Palaka Sainti",
                             "Palaka Tulwar",
                             "Palaka Cleavers",
+                            "Palaka Saberfangs",
                             "Palaka Shortbow",
                             "Palaka Culverin",
                             "Palaka Chakrams",
                             "Palaka Longpole",
                             "Palaka Grimoire",
                             "Palaka Smallsword",
+                            "Palaka Flat Brush",
                             "Palaka Wand",
                             "Palaka Codex",
                             "Palaka Torquetum",
@@ -21173,12 +21183,14 @@
                     "Ktiseos Knuckles",
                     "Ktiseos Blade",
                     "Ktiseos Main Gauches",
+                    "Ktiseos Twinfangs",
                     "Ktiseos Compound Bow",
                     "Ktiseos Revolver",
                     "Ktiseos Chakrams",
                     "Ktiseos Rod",
                     "Ktiseos Index",
                     "Ktiseos Smallsword",
+                    "Ktiseos Fan Brush",
                     "Ktiseos Cane",
                     "Ktiseos Codex",
                     "Ktiseos Planisphere",
@@ -21308,12 +21320,14 @@
                             "Ktiseos Knuckles",
                             "Ktiseos Blade",
                             "Ktiseos Main Gauches",
+                            "Ktiseos Twinfangs",
                             "Ktiseos Compound Bow",
                             "Ktiseos Revolver",
                             "Ktiseos Chakrams",
                             "Ktiseos Rod",
                             "Ktiseos Index",
                             "Ktiseos Smallsword",
+                            "Ktiseos Fan Brush",
                             "Ktiseos Cane",
                             "Ktiseos Codex",
                             "Ktiseos Planisphere",
@@ -21662,8 +21676,8 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
-                        "amount": "10"
+                        "name": "Allagan Tomestone of Poetics",
+                        "amount": "4"
                     }
                 ]
             },
@@ -21701,8 +21715,8 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
-                        "amount": "15"
+                        "name": "Allagan Tomestone of Poetics",
+                        "amount": "6"
                     }
                 ]
             },
@@ -21735,12 +21749,8 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
-                        "amount": "25"
-                    },
-                    {
-                        "name": "Allagan Tomestone of Comedy",
-                        "amount": "20"
+                        "name": "Allagan Tomestone of Poetics",
+                        "amount": "10"
                     }
                 ]
             }
@@ -21874,8 +21884,8 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
-                        "amount": "10"
+                        "name": "Allagan Tomestone of Poetics",
+                        "amount": "4"
                     }
                 ]
             },
@@ -21913,8 +21923,8 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
-                        "amount": "15"
+                        "name": "Allagan Tomestone of Poetics",
+                        "amount": "6"
                     }
                 ]
             },
@@ -21947,12 +21957,8 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
-                        "amount": "25"
-                    },
-                    {
-                        "name": "Allagan Tomestone of Comedy",
-                        "amount": "20"
+                        "name": "Allagan Tomestone of Poetics",
+                        "amount": "10"
                     }
                 ]
             }
@@ -22086,8 +22092,8 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
-                        "amount": "10"
+                        "name": "Allagan Tomestone of Poetics",
+                        "amount": "4"
                     }
                 ]
             },
@@ -22125,8 +22131,8 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
-                        "amount": "15"
+                        "name": "Allagan Tomestone of Poetics",
+                        "amount": "6"
                     }
                 ]
             },
@@ -22158,12 +22164,8 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
-                        "amount": "25"
-                    },
-                    {
-                        "name": "Allagan Tomestone of Comedy",
-                        "amount": "20"
+                        "name": "Allagan Tomestone of Poetics",
+                        "amount": "10"
                     }
                 ]
             }
@@ -22363,8 +22365,8 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
-                        "amount": "10"
+                        "name": "Allagan Tomestone of Poetics",
+                        "amount": "5"
                     }
                 ]
             },
@@ -22409,8 +22411,8 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
-                        "amount": "15"
+                        "name": "Allagan Tomestone of Poetics",
+                        "amount": "10"
                     }
                 ]
             },
@@ -22457,12 +22459,8 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
-                        "amount": "25"
-                    },
-                    {
-                        "name": "Allagan Tomestone of Comedy",
-                        "amount": "20"
+                        "name": "Allagan Tomestone of Poetics",
+                        "amount": "15"
                     }
                 ]
             }
@@ -22662,8 +22660,8 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
-                        "amount": "10"
+                        "name": "Allagan Tomestone of Poetics",
+                        "amount": "7"
                     }
                 ]
             },
@@ -22708,8 +22706,8 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
-                        "amount": "20"
+                        "name": "Allagan Tomestone of Poetics",
+                        "amount": "13"
                     }
                 ]
             },
@@ -22759,12 +22757,8 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
-                        "amount": "30"
-                    },
-                    {
-                        "name": "Allagan Tomestone of Comedy",
-                        "amount": "30"
+                        "name": "Allagan Tomestone of Poetics",
+                        "amount": "20"
                     }
                 ]
             }
@@ -22964,7 +22958,7 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Poetics",
                         "amount": "10"
                     }
                 ]
@@ -23010,8 +23004,8 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
-                        "amount": "20"
+                        "name": "Allagan Tomestone of Poetics",
+                        "amount": "15"
                     }
                 ]
             },
@@ -23060,12 +23054,8 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
-                        "amount": "30"
-                    },
-                    {
-                        "name": "Allagan Tomestone of Comedy",
-                        "amount": "30"
+                        "name": "Allagan Tomestone of Poetics",
+                        "amount": "25"
                     }
                 ]
             }
@@ -23265,7 +23255,7 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Poetics",
                         "amount": "15"
                     }
                 ]
@@ -23311,8 +23301,8 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
-                        "amount": "25"
+                        "name": "Allagan Tomestone of Poetics",
+                        "amount": "20"
                     }
                 ]
             },
@@ -23359,12 +23349,8 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
-                        "amount": "40"
-                    },
-                    {
-                        "name": "Allagan Tomestone of Comedy",
-                        "amount": "50"
+                        "name": "Allagan Tomestone of Poetics",
+                        "amount": "35"
                     }
                 ]
             }
@@ -23592,8 +23578,8 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
-                        "amount": "15"
+                        "name": "Allagan Tomestone of Poetics",
+                        "amount": "20"
                     }
                 ]
             },
@@ -23645,8 +23631,8 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
-                        "amount": "25"
+                        "name": "Allagan Tomestone of Poetics",
+                        "amount": "30"
                     }
                 ]
             },
@@ -23660,7 +23646,12 @@
                 ],
                 "drops": [
                     {
-                        "name": "Durante Card"
+                        "name": "Durante Card",
+                        "url": "/lodestone/playguide/db/item/b3d76ff4d9e/",
+                        "condition": [
+                            "* Must first complete the quest \"Triple Triad Trial.\"",
+                            "* Drops at a fixed rate."
+                        ]
                     }
                 ],
                 "treasures": [
@@ -23688,11 +23679,7 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
-                        "amount": "40"
-                    },
-                    {
-                        "name": "Allagan Tomestone of Comedy",
+                        "name": "Allagan Tomestone of Poetics",
                         "amount": "50"
                     }
                 ]
@@ -26684,8 +26671,7 @@
                         ]
                     },
                     {
-                        "amount": 2,
-                        "name": "Hades Totem",
+                        "name": "Hades Totem\u00a0(2)",
                         "url": "/lodestone/playguide/db/item/68138727764/"
                     }
                 ],
@@ -26819,8 +26805,7 @@
                         ]
                     },
                     {
-                        "amount": 2,
-                        "name": "High Legatus Idol",
+                        "name": "High Legatus Idol\u00a0(2)",
                         "url": "/lodestone/playguide/db/item/90a43debed1/"
                     }
                 ],
@@ -27005,8 +26990,7 @@
                         ]
                     },
                     {
-                        "amount": 2,
-                        "name": "Diamond Totem",
+                        "name": "Diamond Totem\u00a0(2)",
                         "url": "/lodestone/playguide/db/item/b06c7ff9a24/"
                     }
                 ],
@@ -27042,35 +27026,6 @@
                     {
                         "name": "Allagan Tomestone of Poetics",
                         "amount": "25"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "category": "trial",
-        "version": "Endwalker",
-        "name": "The Singularity Reactor (Unreal)",
-        "url": "/lodestone/playguide/db/duty/6c96f8da252/",
-        "lvl": "90",
-        "ilvl": "560",
-        "fights": [
-            {
-                "chest": "gold",
-                "boss": [
-                    {
-                        "url": "/lodestone/playguide/db/npc/enemy/51114a972b6/",
-                        "name": "King Thordan"
-                    }
-                ],
-                "token": [
-                    {
-                        "name": "Allagan Tomestone of Causality",
-                        "amount": "20"
-                    },
-                    {
-                        "name": "Allagan Tomestone of Comedy",
-                        "amount": "10"
                     }
                 ]
             }
@@ -27162,12 +27117,8 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Poetics",
                         "amount": "10"
-                    },
-                    {
-                        "name": "Allagan Tomestone of Comedy",
-                        "amount": "5"
                     }
                 ]
             }
@@ -27201,12 +27152,8 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Poetics",
                         "amount": "12"
-                    },
-                    {
-                        "name": "Allagan Tomestone of Comedy",
-                        "amount": "6"
                     }
                 ]
             }
@@ -27240,12 +27187,8 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Poetics",
                         "amount": "12"
-                    },
-                    {
-                        "name": "Allagan Tomestone of Comedy",
-                        "amount": "7"
                     }
                 ]
             }
@@ -27279,12 +27222,8 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Poetics",
                         "amount": "12"
-                    },
-                    {
-                        "name": "Allagan Tomestone of Comedy",
-                        "amount": "8"
                     }
                 ]
             }
@@ -27308,17 +27247,53 @@
                 ],
                 "drops": [
                     {
-                        "name": "Zeromus Card"
+                        "name": "Zeromus Card",
+                        "url": "/lodestone/playguide/db/item/910f3b20645/",
+                        "condition": [
+                            "* Must first complete the quest \"Triple Triad Trial.\"",
+                            "* Drops at a fixed rate."
+                        ]
                     }
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Poetics",
                         "amount": "12"
-                    },
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "category": "trial",
+        "version": "Endwalker",
+        "name": "The Gilded Araya",
+        "url": "/lodestone/playguide/db/duty/17ba391b62b/",
+        "lvl": "90",
+        "ilvl": "625",
+        "fights": [
+            {
+                "chest": "gold",
+                "boss": [
                     {
-                        "name": "Allagan Tomestone of Comedy",
-                        "amount": "9"
+                        "url": "/lodestone/playguide/db/npc/enemy/67ec23173e8/",
+                        "name": "Asura"
+                    }
+                ],
+                "drops": [
+                    {
+                        "name": "Asura Card",
+                        "url": "/lodestone/playguide/db/item/6ac287d2061/",
+                        "condition": [
+                            "* Must first complete the quest \"Triple Triad Trial.\"",
+                            "* Drops at a fixed rate."
+                        ]
+                    }
+                ],
+                "token": [
+                    {
+                        "name": "Allagan Tomestone of Poetics",
+                        "amount": "10"
                     }
                 ]
             }
@@ -27386,12 +27361,8 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Poetics",
                         "amount": "15"
-                    },
-                    {
-                        "name": "Allagan Tomestone of Comedy",
-                        "amount": "8"
                     }
                 ]
             }
@@ -27459,12 +27430,8 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Poetics",
                         "amount": "15"
-                    },
-                    {
-                        "name": "Allagan Tomestone of Comedy",
-                        "amount": "8"
                     }
                 ]
             }
@@ -27496,8 +27463,7 @@
                         ]
                     },
                     {
-                        "amount": 2,
-                        "name": "Ultimatum Totem",
+                        "name": "Ultimatum Totem\u00a0(2)",
                         "url": "/lodestone/playguide/db/item/9d2c4457a2c/"
                     }
                 ],
@@ -27533,12 +27499,8 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Poetics",
                         "amount": "20"
-                    },
-                    {
-                        "name": "Allagan Tomestone of Comedy",
-                        "amount": "10"
                     }
                 ]
             }
@@ -27570,8 +27532,7 @@
                         ]
                     },
                     {
-                        "amount": 2,
-                        "name": "Windswept Archfiend Totem",
+                        "name": "Windswept Archfiend Totem\u00a0(2)",
                         "url": "/lodestone/playguide/db/item/57a8fbfe012/"
                     }
                 ],
@@ -27607,12 +27568,8 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Poetics",
                         "amount": "25"
-                    },
-                    {
-                        "name": "Allagan Tomestone of Comedy",
-                        "amount": "13"
                     }
                 ]
             }
@@ -27644,8 +27601,7 @@
                         ]
                     },
                     {
-                        "amount": 2,
-                        "name": "Flamecloaked Archfiend Totem",
+                        "name": "Flamecloaked Archfiend Totem\u00a0(2)",
                         "url": "/lodestone/playguide/db/item/dd5f1d7fbd3/"
                     }
                 ],
@@ -27681,12 +27637,8 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Poetics",
                         "amount": "25"
-                    },
-                    {
-                        "name": "Allagan Tomestone of Comedy",
-                        "amount": "14"
                     }
                 ]
             }
@@ -27718,8 +27670,7 @@
                         ]
                     },
                     {
-                        "amount": 2,
-                        "name": "Voidcast Archfiend Totem",
+                        "name": "Voidcast Archfiend Totem\u00a0(2)",
                         "url": "/lodestone/playguide/db/item/bb687906a9b/"
                     }
                 ],
@@ -27755,12 +27706,8 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Poetics",
                         "amount": "25"
-                    },
-                    {
-                        "name": "Allagan Tomestone of Comedy",
-                        "amount": "15"
                     }
                 ]
             }
@@ -27784,11 +27731,15 @@
                 ],
                 "drops": [
                     {
-                        "name": "Zeromus Card"
+                        "name": "Zeromus Card",
+                        "url": "/lodestone/playguide/db/item/910f3b20645/",
+                        "condition": [
+                            "* Must first complete the quest \"Triple Triad Trial.\"",
+                            "* Drops at a fixed rate."
+                        ]
                     },
                     {
-                        "amount": 2,
-                        "name": "Voidvessel Totem",
+                        "name": "Voidvessel Totem\u00a0(2)",
                         "url": "/lodestone/playguide/db/item/b9cc0e02f2b/"
                     }
                 ],
@@ -27824,12 +27775,8 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Poetics",
                         "amount": "25"
-                    },
-                    {
-                        "name": "Allagan Tomestone of Comedy",
-                        "amount": "16"
                     }
                 ]
             }
@@ -29419,7 +29366,7 @@
                         "amount": "10"
                     },
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Aesthetics",
                         "amount": "8"
                     }
                 ]
@@ -29463,7 +29410,7 @@
                         "amount": "20"
                     },
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Aesthetics",
                         "amount": "12"
                     }
                 ]
@@ -29503,7 +29450,7 @@
                         "amount": "30"
                     },
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Aesthetics",
                         "amount": "18"
                     }
                 ]
@@ -29574,12 +29521,8 @@
                         "amount": "40"
                     },
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Aesthetics",
                         "amount": "22"
-                    },
-                    {
-                        "name": "Allagan Tomestone of Comedy",
-                        "amount": "8"
                     }
                 ]
             }
@@ -29628,7 +29571,7 @@
                         "amount": "10"
                     },
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Aesthetics",
                         "amount": "8"
                     }
                 ]
@@ -29668,7 +29611,7 @@
                         "amount": "20"
                     },
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Aesthetics",
                         "amount": "12"
                     }
                 ]
@@ -29708,7 +29651,7 @@
                         "amount": "30"
                     },
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Aesthetics",
                         "amount": "18"
                     }
                 ]
@@ -29770,12 +29713,8 @@
                         "amount": "40"
                     },
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Aesthetics",
                         "amount": "22"
-                    },
-                    {
-                        "name": "Allagan Tomestone of Comedy",
-                        "amount": "8"
                     }
                 ]
             }
@@ -29824,7 +29763,7 @@
                         "amount": "10"
                     },
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Aesthetics",
                         "amount": "10"
                     }
                 ]
@@ -29864,7 +29803,7 @@
                         "amount": "20"
                     },
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Aesthetics",
                         "amount": "15"
                     }
                 ]
@@ -29904,7 +29843,7 @@
                         "amount": "30"
                     },
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Aesthetics",
                         "amount": "25"
                     }
                 ]
@@ -29972,12 +29911,8 @@
                         "amount": "40"
                     },
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Aesthetics",
                         "amount": "30"
-                    },
-                    {
-                        "name": "Allagan Tomestone of Comedy",
-                        "amount": "10"
                     }
                 ]
             }
@@ -31328,7 +31263,7 @@
                         "amount": "10"
                     },
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Aesthetics",
                         "amount": "10"
                     }
                 ]
@@ -31368,7 +31303,7 @@
                         "amount": "20"
                     },
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Aesthetics",
                         "amount": "15"
                     }
                 ]
@@ -31409,7 +31344,7 @@
                         "amount": "30"
                     },
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Aesthetics",
                         "amount": "25"
                     }
                 ]
@@ -31472,12 +31407,8 @@
                         "amount": "40"
                     },
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Aesthetics",
                         "amount": "30"
-                    },
-                    {
-                        "name": "Allagan Tomestone of Comedy",
-                        "amount": "10"
                     }
                 ]
             }
@@ -31526,7 +31457,7 @@
                         "amount": "10"
                     },
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Aesthetics",
                         "amount": "10"
                     }
                 ]
@@ -31566,7 +31497,7 @@
                         "amount": "20"
                     },
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Aesthetics",
                         "amount": "15"
                     }
                 ]
@@ -31606,7 +31537,7 @@
                         "amount": "30"
                     },
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Aesthetics",
                         "amount": "25"
                     }
                 ]
@@ -31670,12 +31601,8 @@
                         "amount": "40"
                     },
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Aesthetics",
                         "amount": "30"
-                    },
-                    {
-                        "name": "Allagan Tomestone of Comedy",
-                        "amount": "10"
                     }
                 ]
             }
@@ -31724,7 +31651,7 @@
                         "amount": "10"
                     },
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Aesthetics",
                         "amount": "10"
                     }
                 ]
@@ -31764,7 +31691,7 @@
                         "amount": "20"
                     },
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Aesthetics",
                         "amount": "20"
                     }
                 ]
@@ -31804,7 +31731,7 @@
                         "amount": "30"
                     },
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Aesthetics",
                         "amount": "30"
                     }
                 ]
@@ -31819,8 +31746,7 @@
                 ],
                 "drops": [
                     {
-                        "amount": 2,
-                        "name": "Cracked Cluster",
+                        "name": "Cracked Cluster\u00a0(2)",
                         "url": "/lodestone/playguide/db/item/a9133f968bc/"
                     }
                 ],
@@ -31877,12 +31803,8 @@
                         "amount": "40"
                     },
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Aesthetics",
                         "amount": "40"
-                    },
-                    {
-                        "name": "Allagan Tomestone of Comedy",
-                        "amount": "12"
                     }
                 ]
             }
@@ -33173,7 +33095,7 @@
                         "amount": "10"
                     },
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Aesthetics",
                         "amount": "10"
                     }
                 ]
@@ -33213,7 +33135,7 @@
                         "amount": "20"
                     },
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Aesthetics",
                         "amount": "20"
                     }
                 ]
@@ -33253,7 +33175,7 @@
                         "amount": "30"
                     },
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Aesthetics",
                         "amount": "30"
                     }
                 ]
@@ -33316,12 +33238,8 @@
                         "amount": "40"
                     },
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Aesthetics",
                         "amount": "40"
-                    },
-                    {
-                        "name": "Allagan Tomestone of Comedy",
-                        "amount": "12"
                     }
                 ]
             }
@@ -33370,7 +33288,7 @@
                         "amount": "10"
                     },
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Aesthetics",
                         "amount": "10"
                     }
                 ]
@@ -33418,7 +33336,7 @@
                         "amount": "20"
                     },
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Aesthetics",
                         "amount": "20"
                     }
                 ]
@@ -33458,7 +33376,7 @@
                         "amount": "30"
                     },
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Aesthetics",
                         "amount": "30"
                     }
                 ]
@@ -33519,12 +33437,8 @@
                         "amount": "40"
                     },
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Aesthetics",
                         "amount": "40"
-                    },
-                    {
-                        "name": "Allagan Tomestone of Comedy",
-                        "amount": "12"
                     }
                 ]
             }
@@ -33573,7 +33487,7 @@
                         "amount": "10"
                     },
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Aesthetics",
                         "amount": "15"
                     }
                 ]
@@ -33617,7 +33531,7 @@
                         "amount": "20"
                     },
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Aesthetics",
                         "amount": "25"
                     }
                 ]
@@ -33657,7 +33571,7 @@
                         "amount": "30"
                     },
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Aesthetics",
                         "amount": "35"
                     }
                 ]
@@ -33672,8 +33586,7 @@
                 ],
                 "drops": [
                     {
-                        "amount": 2,
-                        "name": "Cracked Stellacluster",
+                        "name": "Cracked Stellacluster\u00a0(2)",
                         "url": "/lodestone/playguide/db/item/b27acfc4093/"
                     }
                 ],
@@ -33729,12 +33642,8 @@
                         "amount": "40"
                     },
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Aesthetics",
                         "amount": "45"
-                    },
-                    {
-                        "name": "Allagan Tomestone of Comedy",
-                        "amount": "15"
                     }
                 ]
             }
@@ -34984,12 +34893,14 @@
                             "Edenmorn Sainti",
                             "Edenmorn Samurai Blade",
                             "Edenmorn Main Gauches",
+                            "Edenmorn Twinfangs",
                             "Edenmorn Cavalry Bow",
                             "Edenmorn Pistol",
                             "Edenmorn Chakrams",
                             "Edenmorn Rod",
                             "Edenmorn Index",
                             "Edenmorn Rapier",
+                            "Edenmorn Round Brush",
                             "Edenmorn Cane",
                             "Edenmorn Codex",
                             "Edenmorn Torquetum",
@@ -35056,8 +34967,12 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
-                        "amount": "15"
+                        "name": "Allagan Tomestone of Poetics",
+                        "amount": "10"
+                    },
+                    {
+                        "name": "Allagan Tomestone of Aesthetics",
+                        "amount": "10"
                     }
                 ]
             },
@@ -35092,8 +35007,12 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
-                        "amount": "25"
+                        "name": "Allagan Tomestone of Poetics",
+                        "amount": "20"
+                    },
+                    {
+                        "name": "Allagan Tomestone of Aesthetics",
+                        "amount": "20"
                     }
                 ]
             },
@@ -35128,8 +35047,12 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
-                        "amount": "35"
+                        "name": "Allagan Tomestone of Poetics",
+                        "amount": "30"
+                    },
+                    {
+                        "name": "Allagan Tomestone of Aesthetics",
+                        "amount": "30"
                     }
                 ]
             },
@@ -35139,12 +35062,6 @@
                     {
                         "url": "/lodestone/playguide/db/npc/enemy/b7c4741b917/",
                         "name": "Nald'thal"
-                    }
-                ],
-                "drops": [
-                    {
-                        "name": "Aglaia Coin",
-                        "url": "/lodestone/playguide/db/item/da473fcf2f6/"
                     }
                 ],
                 "treasures": [
@@ -35194,12 +35111,12 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
-                        "amount": "45"
+                        "name": "Allagan Tomestone of Poetics",
+                        "amount": "40"
                     },
                     {
-                        "name": "Allagan Tomestone of Comedy",
-                        "amount": "15"
+                        "name": "Allagan Tomestone of Aesthetics",
+                        "amount": "40"
                     }
                 ]
             }
@@ -35244,8 +35161,12 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
-                        "amount": "15"
+                        "name": "Allagan Tomestone of Poetics",
+                        "amount": "10"
+                    },
+                    {
+                        "name": "Allagan Tomestone of Aesthetics",
+                        "amount": "10"
                     }
                 ]
             },
@@ -35284,8 +35205,12 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
-                        "amount": "25"
+                        "name": "Allagan Tomestone of Poetics",
+                        "amount": "20"
+                    },
+                    {
+                        "name": "Allagan Tomestone of Aesthetics",
+                        "amount": "20"
                     }
                 ]
             },
@@ -35320,8 +35245,12 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
-                        "amount": "35"
+                        "name": "Allagan Tomestone of Poetics",
+                        "amount": "30"
+                    },
+                    {
+                        "name": "Allagan Tomestone of Aesthetics",
+                        "amount": "30"
                     }
                 ]
             },
@@ -35331,12 +35260,6 @@
                     {
                         "url": "/lodestone/playguide/db/npc/enemy/5764c48a023/",
                         "name": "Menphina"
-                    }
-                ],
-                "drops": [
-                    {
-                        "name": "Euphrosyne Coin",
-                        "url": "/lodestone/playguide/db/item/d964745727c/"
                     }
                 ],
                 "treasures": [
@@ -35386,12 +35309,212 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
-                        "amount": "45"
+                        "name": "Allagan Tomestone of Poetics",
+                        "amount": "40"
                     },
                     {
-                        "name": "Allagan Tomestone of Comedy",
+                        "name": "Allagan Tomestone of Aesthetics",
+                        "amount": "40"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "category": "raid",
+        "version": "Endwalker",
+        "name": "Thaleia",
+        "url": "/lodestone/playguide/db/duty/d4b9d40f28b/",
+        "lvl": "90",
+        "ilvl": "625",
+        "fights": [
+            {
+                "chest": "silver",
+                "boss": [
+                    {
+                        "url": "/lodestone/playguide/db/npc/enemy/3982c4232ea/",
+                        "name": "Thaliak"
+                    }
+                ],
+                "treasures": [
+                    {
+                        "name": "Treasure Coffer",
+                        "items": [
+                            "Theogonic Headgear of Fending",
+                            "Theogonic Headgear of Maiming",
+                            "Theogonic Circlet of Striking",
+                            "Theogonic Circlet of Scouting",
+                            "Theogonic Circlet of Aiming",
+                            "Theogonic Circlet of Casting",
+                            "Theogonic Circlet of Healing",
+                            "Theogonic Sollerets of Fending",
+                            "Theogonic Sollerets of Maiming",
+                            "Theogonic Shoes of Striking",
+                            "Theogonic Shoes of Scouting",
+                            "Theogonic Shoes of Aiming",
+                            "Theogonic Sandals of Casting",
+                            "Theogonic Sandals of Healing"
+                        ]
+                    }
+                ],
+                "token": [
+                    {
+                        "name": "Allagan Tomestone of Poetics",
+                        "amount": "10"
+                    },
+                    {
+                        "name": "Allagan Tomestone of Aesthetics",
                         "amount": "15"
+                    }
+                ]
+            },
+            {
+                "chest": "silver",
+                "boss": [
+                    {
+                        "url": "/lodestone/playguide/db/npc/enemy/b22ffa2a82a/",
+                        "name": "Llymlaen"
+                    }
+                ],
+                "treasures": [
+                    {
+                        "name": "Treasure Coffer",
+                        "items": [
+                            "Theogonic Gauntlets of Fending",
+                            "Theogonic Gauntlets of Maiming",
+                            "Theogonic Vambraces of Striking",
+                            "Theogonic Vambraces of Scouting",
+                            "Theogonic Vambraces of Aiming",
+                            "Theogonic Armlets of Casting",
+                            "Theogonic Armlets of Healing",
+                            "Theogonic Breeches of Fending",
+                            "Theogonic Breeches of Maiming",
+                            "Theogonic Hose of Striking",
+                            "Theogonic Hose of Scouting",
+                            "Theogonic Hose of Aiming",
+                            "Theogonic Longkilt of Casting",
+                            "Theogonic Longkilt of Healing"
+                        ]
+                    }
+                ],
+                "token": [
+                    {
+                        "name": "Allagan Tomestone of Poetics",
+                        "amount": "20"
+                    },
+                    {
+                        "name": "Allagan Tomestone of Aesthetics",
+                        "amount": "25"
+                    }
+                ]
+            },
+            {
+                "chest": "silver",
+                "boss": [
+                    {
+                        "url": "/lodestone/playguide/db/npc/enemy/29dc296ff28/",
+                        "name": "Oschon"
+                    }
+                ],
+                "treasures": [
+                    {
+                        "name": "Treasure Coffer",
+                        "items": [
+                            "Theogonic Mail of Fending",
+                            "Theogonic Mail of Maiming",
+                            "Theogonic Corselet of Striking",
+                            "Theogonic Corselet of Scouting",
+                            "Theogonic Corselet of Aiming",
+                            "Theogonic Robe of Casting",
+                            "Theogonic Robe of Healing",
+                            "Theogonic Sollerets of Fending",
+                            "Theogonic Sollerets of Maiming",
+                            "Theogonic Shoes of Striking",
+                            "Theogonic Shoes of Scouting",
+                            "Theogonic Shoes of Aiming",
+                            "Theogonic Sandals of Casting",
+                            "Theogonic Sandals of Healing"
+                        ]
+                    }
+                ],
+                "token": [
+                    {
+                        "name": "Allagan Tomestone of Poetics",
+                        "amount": "30"
+                    },
+                    {
+                        "name": "Allagan Tomestone of Aesthetics",
+                        "amount": "35"
+                    }
+                ]
+            },
+            {
+                "chest": "gold",
+                "boss": [
+                    {
+                        "url": "/lodestone/playguide/db/npc/enemy/6b2e2b180bb/",
+                        "name": "Eulogia"
+                    }
+                ],
+                "drops": [
+                    {
+                        "name": "Cracked Anthocluster\u00a0(2)",
+                        "url": "/lodestone/playguide/db/item/c21b9948087/"
+                    }
+                ],
+                "treasures": [
+                    {
+                        "name": "Treasure Coffer 1",
+                        "items": [
+                            "Wind-up Oschon",
+                            "Eulogia Card",
+                            "Fair Winds to Guide Orchestrion Roll",
+                            "Course Uncharted Orchestrion Roll",
+                            "Myths of the Realm Orchestrion Roll"
+                        ]
+                    },
+                    {
+                        "name": "Treasure Coffer 2",
+                        "items": [
+                            "Theogonic Headgear of Fending",
+                            "Theogonic Headgear of Maiming",
+                            "Theogonic Circlet of Striking",
+                            "Theogonic Circlet of Scouting",
+                            "Theogonic Circlet of Aiming",
+                            "Theogonic Circlet of Casting",
+                            "Theogonic Circlet of Healing",
+                            "Theogonic Mail of Fending",
+                            "Theogonic Mail of Maiming",
+                            "Theogonic Corselet of Striking",
+                            "Theogonic Corselet of Scouting",
+                            "Theogonic Corselet of Aiming",
+                            "Theogonic Robe of Casting",
+                            "Theogonic Robe of Healing",
+                            "Theogonic Gauntlets of Fending",
+                            "Theogonic Gauntlets of Maiming",
+                            "Theogonic Vambraces of Striking",
+                            "Theogonic Vambraces of Scouting",
+                            "Theogonic Vambraces of Aiming",
+                            "Theogonic Armlets of Casting",
+                            "Theogonic Armlets of Healing",
+                            "Theogonic Breeches of Fending",
+                            "Theogonic Breeches of Maiming",
+                            "Theogonic Hose of Striking",
+                            "Theogonic Hose of Scouting",
+                            "Theogonic Hose of Aiming",
+                            "Theogonic Longkilt of Casting",
+                            "Theogonic Longkilt of Healing"
+                        ]
+                    }
+                ],
+                "token": [
+                    {
+                        "name": "Allagan Tomestone of Poetics",
+                        "amount": "40"
+                    },
+                    {
+                        "name": "Allagan Tomestone of Aesthetics",
+                        "amount": "45"
                     }
                 ]
             }
@@ -35445,12 +35568,8 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Poetics",
                         "amount": "10"
-                    },
-                    {
-                        "name": "Allagan Tomestone of Comedy",
-                        "amount": "5"
                     }
                 ]
             }
@@ -35494,12 +35613,8 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Poetics",
                         "amount": "10"
-                    },
-                    {
-                        "name": "Allagan Tomestone of Comedy",
-                        "amount": "5"
                     }
                 ]
             }
@@ -35549,12 +35664,8 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Poetics",
                         "amount": "10"
-                    },
-                    {
-                        "name": "Allagan Tomestone of Comedy",
-                        "amount": "5"
                     }
                 ]
             }
@@ -35574,12 +35685,6 @@
                     {
                         "url": "/lodestone/playguide/db/npc/enemy/26a144410c4/",
                         "name": "Hesperos"
-                    }
-                ],
-                "drops": [
-                    {
-                        "name": "Unsung Blade of Asphodelos",
-                        "url": "/lodestone/playguide/db/item/eac97898e30/"
                     }
                 ],
                 "treasures": [
@@ -35611,12 +35716,8 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Poetics",
                         "amount": "10"
-                    },
-                    {
-                        "name": "Allagan Tomestone of Comedy",
-                        "amount": "5"
                     }
                 ]
             }
@@ -35666,12 +35767,8 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Poetics",
                         "amount": "10"
-                    },
-                    {
-                        "name": "Allagan Tomestone of Comedy",
-                        "amount": "5"
                     }
                 ]
             }
@@ -35721,12 +35818,8 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Poetics",
                         "amount": "10"
-                    },
-                    {
-                        "name": "Allagan Tomestone of Comedy",
-                        "amount": "5"
                     }
                 ]
             }
@@ -35776,12 +35869,8 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Poetics",
                         "amount": "10"
-                    },
-                    {
-                        "name": "Allagan Tomestone of Comedy",
-                        "amount": "5"
                     }
                 ]
             }
@@ -35811,10 +35900,6 @@
                             "* Must first complete the quest \"Triple Triad Trial.\"",
                             "* Drops at a fixed rate."
                         ]
-                    },
-                    {
-                        "name": "Unsung Blade of Abyssos",
-                        "url": "/lodestone/playguide/db/item/0df868b30a1/"
                     }
                 ],
                 "treasures": [
@@ -35846,12 +35931,8 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Poetics",
                         "amount": "10"
-                    },
-                    {
-                        "name": "Allagan Tomestone of Comedy",
-                        "amount": "5"
                     }
                 ]
             }
@@ -35901,12 +35982,8 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Poetics",
                         "amount": "20"
-                    },
-                    {
-                        "name": "Allagan Tomestone of Comedy",
-                        "amount": "10"
                     }
                 ]
             }
@@ -35956,12 +36033,8 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Poetics",
                         "amount": "20"
-                    },
-                    {
-                        "name": "Allagan Tomestone of Comedy",
-                        "amount": "10"
                     }
                 ]
             }
@@ -36011,12 +36084,8 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Poetics",
                         "amount": "20"
-                    },
-                    {
-                        "name": "Allagan Tomestone of Comedy",
-                        "amount": "10"
                     }
                 ]
             }
@@ -36045,13 +36114,6 @@
                         "condition": [
                             "* Must first complete the quest \"Triple Triad Trial.\"",
                             "* Drops at a fixed rate."
-                        ]
-                    },
-                    {
-                        "name": "Unsung Blade of Anabaseios",
-                        "url": "/lodestone/playguide/db/item/0d99225a470/",
-                        "condition": [
-                            "* This item can only be obtained once per week."
                         ]
                     }
                 ],
@@ -36084,12 +36146,8 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Causality",
+                        "name": "Allagan Tomestone of Poetics",
                         "amount": "20"
-                    },
-                    {
-                        "name": "Allagan Tomestone of Comedy",
-                        "amount": "10"
                     }
                 ]
             }
@@ -36147,7 +36205,7 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Comedy",
+                        "name": "Allagan Tomestone of Poetics",
                         "amount": "15"
                     }
                 ]
@@ -36180,7 +36238,6 @@
                     {
                         "name": "Treasure Coffer 1",
                         "items": [
-                            "Discal Tomestone",
                             "Asphodelos Head Gear Coffer (IL 600)",
                             "Asphodelos Hand Gear Coffer (IL 600)",
                             "Asphodelos Foot Gear Coffer (IL 600)"
@@ -36189,7 +36246,6 @@
                     {
                         "name": "Treasure Coffer 2",
                         "items": [
-                            "Radiant Coating",
                             "Asphodelos Head Gear Coffer (IL 600)",
                             "Asphodelos Hand Gear Coffer (IL 600)",
                             "Asphodelos Foot Gear Coffer (IL 600)"
@@ -36198,7 +36254,7 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Comedy",
+                        "name": "Allagan Tomestone of Poetics",
                         "amount": "15"
                     }
                 ]
@@ -36237,8 +36293,6 @@
                     {
                         "name": "Treasure Coffer 2",
                         "items": [
-                            "Radiant Roborant",
-                            "Radiant Twine",
                             "Asphodelos Head Gear Coffer (IL 600)",
                             "Asphodelos Hand Gear Coffer (IL 600)",
                             "Asphodelos Foot Gear Coffer (IL 600)"
@@ -36247,7 +36301,7 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Comedy",
+                        "name": "Allagan Tomestone of Poetics",
                         "amount": "15"
                     }
                 ]
@@ -36313,7 +36367,7 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Comedy",
+                        "name": "Allagan Tomestone of Poetics",
                         "amount": "15"
                     }
                 ]
@@ -36364,7 +36418,7 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Comedy",
+                        "name": "Allagan Tomestone of Poetics",
                         "amount": "15"
                     }
                 ]
@@ -36397,7 +36451,6 @@
                     {
                         "name": "Treasure Coffer 1",
                         "items": [
-                            "Ultralight Tomestone",
                             "Abyssos Head Gear Coffer (IL 630)",
                             "Abyssos Hand Gear Coffer (IL 630)",
                             "Abyssos Foot Gear Coffer (IL 630)"
@@ -36406,7 +36459,6 @@
                     {
                         "name": "Treasure Coffer 2",
                         "items": [
-                            "Moonshine Shine",
                             "Abyssos Head Gear Coffer (IL 630)",
                             "Abyssos Hand Gear Coffer (IL 630)",
                             "Abyssos Foot Gear Coffer (IL 630)"
@@ -36415,7 +36467,7 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Comedy",
+                        "name": "Allagan Tomestone of Poetics",
                         "amount": "15"
                     }
                 ]
@@ -36454,8 +36506,6 @@
                     {
                         "name": "Treasure Coffer 2",
                         "items": [
-                            "Moonshine Brine",
-                            "Moonshine Twine",
                             "Abyssos Head Gear Coffer (IL 630)",
                             "Abyssos Hand Gear Coffer (IL 630)",
                             "Abyssos Foot Gear Coffer (IL 630)"
@@ -36464,7 +36514,7 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Comedy",
+                        "name": "Allagan Tomestone of Poetics",
                         "amount": "15"
                     }
                 ]
@@ -36539,7 +36589,7 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Comedy",
+                        "name": "Allagan Tomestone of Poetics",
                         "amount": "15"
                     }
                 ]
@@ -36568,9 +36618,20 @@
                         "url": "/lodestone/playguide/db/item/218e0cabe45/"
                     }
                 ],
+                "treasures": [
+                    {
+                        "name": "Treasure Coffer",
+                        "items": [
+                            "Ascension Earring Coffer (IL 660)",
+                            "Ascension Necklace Coffer (IL 660)",
+                            "Ascension Bracelet Coffer (IL 660)",
+                            "Ascension Ring Coffer (IL 660)"
+                        ]
+                    }
+                ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Comedy",
+                        "name": "Allagan Tomestone of Poetics",
                         "amount": "30"
                     }
                 ]
@@ -36599,9 +36660,19 @@
                         "url": "/lodestone/playguide/db/item/b60e6e77627/"
                     }
                 ],
+                "treasures": [
+                    {
+                        "name": "Treasure Coffer",
+                        "items": [
+                            "Ascension Head Gear Coffer (IL 660)",
+                            "Ascension Hand Gear Coffer (IL 660)",
+                            "Ascension Foot Gear Coffer (IL 660)"
+                        ]
+                    }
+                ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Comedy",
+                        "name": "Allagan Tomestone of Poetics",
                         "amount": "30"
                     }
                 ]
@@ -36630,9 +36701,18 @@
                         "url": "/lodestone/playguide/db/item/ff72beda738/"
                     }
                 ],
+                "treasures": [
+                    {
+                        "name": "Treasure Coffer",
+                        "items": [
+                            "Ascension Chest Gear Coffer (IL 660)",
+                            "Ascension Leg Gear Coffer (IL 660)"
+                        ]
+                    }
+                ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Comedy",
+                        "name": "Allagan Tomestone of Poetics",
                         "amount": "30"
                     }
                 ]
@@ -36673,9 +36753,41 @@
                         ]
                     }
                 ],
+                "treasures": [
+                    {
+                        "name": "Treasure Coffer",
+                        "items": [
+                            "Bardiche of Ascension",
+                            "Greatsword of Ascension",
+                            "Bayonet of Ascension",
+                            "Trident of Ascension",
+                            "War Scythe of Ascension",
+                            "Knuckles of Ascension",
+                            "Samurai Blade of Ascension",
+                            "Knives of Ascension",
+                            "Ascension Twinfangs",
+                            "Harp Bow of Ascension",
+                            "Knifelock of Ascension",
+                            "War Quoits of Ascension",
+                            "Rod of Ascension",
+                            "Grimoire of Ascension",
+                            "Foil of Ascension",
+                            "Brush of Ascension",
+                            "Cane of Ascension",
+                            "Codex of Ascension",
+                            "Planisphere of Ascension",
+                            "Wings of Ascension",
+                            "Ascension Weapon Coffer (IL 665)",
+                            "Paladin's Ascension Arms (IL 665)",
+                            "Wind-up Athena",
+                            "Megaloambystoma Horn",
+                            "Ultima's Perfection (Endwalker) Orchestrion Roll"
+                        ]
+                    }
+                ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Comedy",
+                        "name": "Allagan Tomestone of Poetics",
                         "amount": "30"
                     }
                 ]
@@ -36799,8 +36911,8 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Comedy",
-                        "amount": "30"
+                        "name": "Allagan Tomestone of Poetics",
+                        "amount": "100"
                     }
                 ]
             }
@@ -36830,8 +36942,8 @@
                 ],
                 "token": [
                     {
-                        "name": "Allagan Tomestone of Comedy",
-                        "amount": "30"
+                        "name": "Allagan Tomestone of Poetics",
+                        "amount": "100"
                     }
                 ]
             }
