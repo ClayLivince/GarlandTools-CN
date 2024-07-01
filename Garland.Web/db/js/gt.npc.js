@@ -160,6 +160,27 @@ gt.npc = {
                 });
             }
 
+            if (npc.appalts) {
+                view.appalts = gt.model.partialList(gt.npc, npc.appalts, function(v, id) {
+                    var alt = v.obj;
+                    var altDesc = [];
+                    if (alt.s)
+                        altDesc.push(alt.s + ' ' + gt.util.pluralNum('shop', alt.s));
+                    if (alt.q)
+                        altDesc.push(alt.q + ' ' + gt.util.pluralNum('quest', alt.q));
+                    if (alt.k)
+                        altDesc.push(alt.k + ' ' + gt.util.pluralNum('dialogue', alt.k));
+
+                    if (!altDesc.length)
+                        altDesc.push("Other");
+
+                    v.desc = altDesc.join(', ');
+                    v.isCurrent = alt.i == npc.id;
+                    v.location = v.location || '???';
+                    return v;
+                });
+            }
+
             if (npc.quests)
                 view.quests = gt.model.partialList(gt.quest, npc.quests);
 

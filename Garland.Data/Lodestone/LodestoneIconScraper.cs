@@ -18,10 +18,10 @@ namespace Garland.Data.Lodestone
     public class LodestoneIconScraper : WebScraper
     {
         private const string _baseUrl = "http://na.finalfantasyxiv.com";
-        private const string _baseItemIconUrl = "https://img.finalfantasyxiv.com/lds/pc/global/images/itemicon/";
+        private const string _baseItemIconUrl = "https://lds-img.finalfantasyxiv.com/itemicon/";
         private const string _baseSearchFormat = _baseUrl + "/lodestone/playguide/db/item/?db_search_category=item&category2=&q=\"{0}\"";
         private const string _itemUrlRegexFormat = "<a href=\"(/lodestone/playguide/db/item/.+)/\" .+>{0}</a>";
-        private static Regex _iconSuffixRegex = new Regex("<img src=\"https://img.finalfantasyxiv.com/lds/pc/global/images/itemicon/(.*.png).*\".*>");
+        private static Regex _iconSuffixRegex = new Regex("<img src=\"https://lds-img.finalfantasyxiv.com/itemicon/(.*.png).*\".*>");
         private ItemIconDatabase _itemIconDatabase;
 
         public LodestoneIconScraper(ItemIconDatabase itemIconDatabase)
@@ -39,7 +39,7 @@ namespace Garland.Data.Lodestone
             itemsToFetch.AddRange(_itemIconDatabase.ItemsNeedingIcons.Take(start));
 
             var count = 0;
-            var options = new ParallelOptions() { MaxDegreeOfParallelism = 2 };
+            var options = new ParallelOptions() { MaxDegreeOfParallelism = 3 };
             Parallel.ForEach(itemsToFetch, options, sItem =>
             {
                 try

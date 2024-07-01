@@ -70,7 +70,7 @@ namespace Garland.Data.Modules
                 dynamic rewardScrip = null;
                 try
                 {
-                    rewardScrip = _builder.Db.ItemsById[_builder.GetCurrency(sRewardId - 1)];
+                    rewardScrip = _builder.Db.ItemsById[_builder.GetCurrency(sRewardId)];
                 }
                 catch (IndexOutOfRangeException)
                 {
@@ -234,7 +234,7 @@ namespace Garland.Data.Modules
                             if (rewardCurrencyKey == 0)
                                 continue;
 
-                            var rewardCurrencyItemKey = _builder.GetCurrency(rewardCurrencyKey - 1);
+                            var rewardCurrencyItemKey = _builder.GetCurrency(rewardCurrencyKey);
                             var rewardGameItem = _builder.Sheet<Saint.Item>()[rewardCurrencyItemKey];
 
                             var rewardLow = (int)(UInt16)sSupplyReward["Quantity{Low}[" + i + "]"];

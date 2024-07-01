@@ -86,7 +86,24 @@ namespace Garland.Data
                 if (string.IsNullOrEmpty(toValue))
                     continue;
 
-                strs[toColumn] = toValue;
+                if (toColumn.Contains('.'))
+                {
+                    var pieces = toColumn.Split('.');
+                    var upper = strs as JObject;
+                    foreach (var piece in pieces.SkipLast(1))
+                    {
+                       if (!upper.TryGetValue(piece, out var inner))
+                        {
+                            upper[piece] = inner = new JObject();
+                            upper = inner as JObject;
+                        }
+                    }
+                    upper[pieces.Last()] = toValue;
+                }
+                else
+                {
+                    strs[toColumn] = toValue;
+                }
             }
 
             _data.ActiveLanguage = currentLang;

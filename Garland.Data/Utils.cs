@@ -219,5 +219,39 @@ namespace Garland.Data
                 return hash1 + (hash2 * 1566083941);
             }
         }
+
+        public static void JsonFirstMerge(JObject target, object content)
+        {
+            if (!(content is JObject o))
+            {
+                return;
+            }
+
+            foreach (KeyValuePair<string, JToken?> contentItem in o)
+            {
+                JProperty? existingProperty = target.Property(contentItem.Key);
+
+                if (existingProperty == null)
+                {
+                    
+                    target.AddFirst(new JProperty(contentItem.Key, contentItem.Value));
+                }
+                else if (contentItem.Value != null)
+                {
+                    if (!(existingProperty.Value is JContainer existingContainer) || existingContainer.Type != contentItem.Value.Type)
+                    {
+                        existingProperty.Value = contentItem.Value;
+                    }
+                    else if (existingProperty.Value is JObject existingObject)
+                    {
+                        JsonFirstMerge(existingObject, contentItem.Value);
+                    } 
+                    else
+                    {
+                        existingContainer.Merge(contentItem.Value);
+                    }
+                }
+            }
+        }
     }
 }

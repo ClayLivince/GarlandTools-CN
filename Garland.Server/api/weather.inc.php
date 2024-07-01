@@ -124,11 +124,14 @@ $zoneWeather = array('Limsa Lominsa' => array(array('Rate' => 20, 'Weather' => 3
     'The Rak\'tika Greatwood' => array(array('Rate' => 10, 'Weather' => 4), array('Rate' => 20, 'Weather' => 7), array('Rate' => 30, 'Weather' => 49), array('Rate' => 45, 'Weather' => 1), array('Rate' => 85, 'Weather' => 2), array('Rate' => 100, 'Weather' => 3)),
     'The Tempest' => array(array('Rate' => 20, 'Weather' => 3), array('Rate' => 80, 'Weather' => 2), array('Rate' => 100, 'Weather' => 1)),
     'The Crown of the Immaculate' => array(array('Rate' => 100, 'Weather' => 118)),
+    'The Pendants Personal Suite' => array(array('Rate' => 20, 'Weather' => 1), array('Rate' => 60, 'Weather' => 2), array('Rate' => 75, 'Weather' => 3), array('Rate' => 85, 'Weather' => 4), array('Rate' => 95, 'Weather' => 7), array('Rate' => 100, 'Weather' => 10)),
     'Lyhe Mheg' => array(array('Rate' => 100, 'Weather' => 4)),
     'The Firmament' => array(array('Rate' => 60, 'Weather' => 15), array('Rate' => 70, 'Weather' => 2), array('Rate' => 75, 'Weather' => 1), array('Rate' => 90, 'Weather' => 3), array('Rate' => 100, 'Weather' => 4)),
     'Bozjan Southern Front' => array(array('Rate' => 52, 'Weather' => 2), array('Rate' => 64, 'Weather' => 7), array('Rate' => 76, 'Weather' => 5), array('Rate' => 88, 'Weather' => 9), array('Rate' => 100, 'Weather' => 11)),
     'Zadnor' => array(array('Rate' => 60, 'Weather' => 2), array('Rate' => 70, 'Weather' => 7), array('Rate' => 80, 'Weather' => 5), array('Rate' => 90, 'Weather' => 9), array('Rate' => 100, 'Weather' => 15)),
+    'The Dark Inside' => array(array('Rate' => 100, 'Weather' => 151)),
     'The Mothercrystal' => array(array('Rate' => 100, 'Weather' => 151)),
+    'The Final Day' => array(array('Rate' => 100, 'Weather' => 127)),
     'Old Sharlayan' => array(array('Rate' => 10, 'Weather' => 1), array('Rate' => 50, 'Weather' => 2), array('Rate' => 70, 'Weather' => 3), array('Rate' => 85, 'Weather' => 4), array('Rate' => 100, 'Weather' => 15)),
     'Radz-at-Han' => array(array('Rate' => 10, 'Weather' => 4), array('Rate' => 25, 'Weather' => 7), array('Rate' => 40, 'Weather' => 1), array('Rate' => 80, 'Weather' => 2), array('Rate' => 100, 'Weather' => 3)),
     'Labyrinthos' => array(array('Rate' => 15, 'Weather' => 1), array('Rate' => 60, 'Weather' => 2), array('Rate' => 85, 'Weather' => 3), array('Rate' => 100, 'Weather' => 7)),
@@ -147,6 +150,7 @@ $zoneWeather = array('Limsa Lominsa' => array(array('Rate' => 20, 'Weather' => 3
     'Elysion' => array(array('Rate' => 15, 'Weather' => 149), array('Rate' => 85, 'Weather' => 2), array('Rate' => 100, 'Weather' => 49)),
     'Lapis Manalis - Pes Albus' => array(array('Rate' => 100, 'Weather' => 16)),
     'The Dæmons\' Nest' => array(array('Rate' => 100, 'Weather' => 157)),
+    'The Gilded Araya' => array(array('Rate' => 100, 'Weather' => 105)),
     'Estinien\'s Chambers' => array(array('Rate' => 10, 'Weather' => 4), array('Rate' => 25, 'Weather' => 7), array('Rate' => 40, 'Weather' => 1), array('Rate' => 80, 'Weather' => 2), array('Rate' => 100, 'Weather' => 3)),
     'Senatus' => array(array('Rate' => 45, 'Weather' => 15), array('Rate' => 50, 'Weather' => 9), array('Rate' => 55, 'Weather' => 7), array('Rate' => 60, 'Weather' => 4), array('Rate' => 85, 'Weather' => 3), array('Rate' => 95, 'Weather' => 2), array('Rate' => 100, 'Weather' => 1)),
     'Solution Nine' => array(array('Rate' => 100, 'Weather' => 2)),
@@ -160,6 +164,7 @@ $zoneWeather = array('Limsa Lominsa' => array(array('Rate' => 20, 'Weather' => 3
     'Sunperch' => array(array('Rate' => 40, 'Weather' => 1), array('Rate' => 80, 'Weather' => 2), array('Rate' => 85, 'Weather' => 3), array('Rate' => 95, 'Weather' => 4), array('Rate' => 100, 'Weather' => 7)),
     'The For\'ard Cabins' => array(array('Rate' => 40, 'Weather' => 1), array('Rate' => 80, 'Weather' => 2), array('Rate' => 85, 'Weather' => 3), array('Rate' => 95, 'Weather' => 4), array('Rate' => 100, 'Weather' => 7)),
     'Earthen Sky Hideout' => array(array('Rate' => 5, 'Weather' => 2), array('Rate' => 25, 'Weather' => 3), array('Rate' => 40, 'Weather' => 4), array('Rate' => 45, 'Weather' => 7), array('Rate' => 50, 'Weather' => 10), array('Rate' => 100, 'Weather' => 50)),
+    'Interphos' => array(array('Rate' => 100, 'Weather' => 183)),
     'Summit of Everkeep' => array(array('Rate' => 100, 'Weather' => 181)));
 
 ?>

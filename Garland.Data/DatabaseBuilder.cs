@@ -26,14 +26,15 @@ namespace Garland.Data
         public Dictionary<long, List<int>> ItemDropsByMobId = new Dictionary<long, List<int>>();
         public Dictionary<long, int> InstanceIdsByMobId = new Dictionary<long, int>();
         public int[] TomestoneIds = new int[3];
+        public static int[] _scrips = new int[] { 33913, 33914, 41784, 41785 };
         public readonly int[] _currencies = new int[] {
             10309,
-            25199,
+            _scrips[0],
             10311,
-            25200,
+            _scrips[1],
             10307,
-            33913,
-            33914,
+            _scrips[2],
+            _scrips[3],
             21072,
             21073,
             21074,

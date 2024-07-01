@@ -51,6 +51,9 @@ namespace Garland.Data.Output
             {
                 var key = (string)npc.en.name;
 
+                if (key.Contains("Nameless #"))
+                    continue;
+
                 // NPCs only need to appear once per name.  Skip duplicates.
                 // Alternate instances can be looked up via the alts UI.
                 if (npcNamesUsed.Contains(key))

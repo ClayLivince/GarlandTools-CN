@@ -1,0 +1,3 @@
+On Major Patch:
+SaintCoinach.Xiv.Sheets.InventoryItemSheet : ItemTypes : add new job's weapon category
+SaintCoinach.Xiv.Items.Equipment: GetModelCharacterType: add new character types

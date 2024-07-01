@@ -137,6 +137,8 @@ namespace Garland.UI
             var libra = new SQLite.SQLiteConnection(libraPath, SQLite.SQLiteOpenFlags.ReadOnly);
             var builder = new DatabaseBuilder(libra, realm);
 
+            SaintCoinach.Imaging.IconHelper.PreferHighRes = true;
+
             DatabaseBuilder.PrintLine($"Game version: {realm.GameVersion}");
             DatabaseBuilder.PrintLine($"Definition version: {realm.DefinitionVersion}");
 

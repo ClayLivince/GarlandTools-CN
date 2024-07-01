@@ -339,7 +339,16 @@ namespace Garland.Data.Output
             var relevantLocations = _db.Locations.Where(l => l.id < 0 || _db.LocationReferences.Contains((int)l.id)).ToArray();
             core.locationIndex = new JObject();
             foreach (var location in relevantLocations)
-                core.locationIndex.Add((string)location.id, location);
+            {
+                var localizedLocation = new JObject(location);
+                localizedLocation["name"] = localizedLocation[lang]["name"];
+                localizedLocation.Remove("en");
+                localizedLocation.Remove("ja");
+                localizedLocation.Remove("fr");
+                localizedLocation.Remove("de");
+                core.locationIndex.Add((string)location.id, localizedLocation);
+            }
+                
 
             // Skywatcher
             core.skywatcher = new JObject();

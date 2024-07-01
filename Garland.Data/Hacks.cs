@@ -111,11 +111,11 @@ namespace Garland.Data
 
         public static bool IsNpcSkipped(ENpc sNpc)
         {
-            if (sNpc.Resident == null)
-                return true;
+            //if (sNpc.Resident == null)
+            //    return true;
 
-            if (string.IsNullOrWhiteSpace(sNpc.Resident.Singular))
-                return true;
+            //if (string.IsNullOrWhiteSpace(sNpc.Resident.Singular))
+            //    return true;
 
             return false;
         }

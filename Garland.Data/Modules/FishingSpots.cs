@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using SaintCoinach.Imaging;
+using SaintCoinach.Xiv;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -109,7 +110,7 @@ namespace Garland.Data.Modules
 
                 var item = GarlandDatabase.Instance.ItemsById[sFishParameter.Item.Key];
                 item.fish = new JObject();
-                item.fish.guide = guideText;
+                _builder.Localize.Column((JObject)item, sFishParameter, "Text", "fish.guide", Utils.SanitizeXivTags);
                 item.fish.icon = GetFishIcon((UInt16)sFishParameter.Item.GetRaw("Icon"));
 
                 
@@ -142,7 +143,7 @@ namespace Garland.Data.Modules
                 var sItem = (Saint.Item)sSpearfishingItem["Item"];
                 var item = GarlandDatabase.Instance.ItemsById[sItem.Key];
                 item.fish = new JObject();
-                item.fish.guide = guideText;
+                _builder.Localize.Column((JObject)item, sSpearfishingItem, "Description", "fish.guide", Utils.SanitizeXivTags);
                 item.fish.icon = GetFishIcon((UInt16)sItem.GetRaw("Icon"));
             }
         }

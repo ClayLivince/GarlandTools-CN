@@ -88,17 +88,50 @@ namespace Garland.Data.Modules
             {
                 dynamic npc = new JObject();
                 npc.id = sNpc.Key;
-                _builder.Localize.Column((JObject)npc, sNpc.Resident, "Singular", "name", Utils.CapitalizeWords);
-                string name = npc.en.name;
-                npc.patch = PatchDatabase.Get("npc", sNpc.Key);
-
-                // Set base information.
-                if (!_alternatesByName.TryGetValue(name, out var alts))
+                if (sNpc.Resident == null || !string.IsNullOrWhiteSpace(sNpc.Resident?.Singular))
                 {
-                    alts = new List<dynamic>();
-                    _alternatesByName[name] = alts;
+                    _builder.Localize.Column((JObject)npc, sNpc.Resident, "Singular", "name", Utils.CapitalizeWords);
+
+                    string name = npc.en.name;
+                    npc.patch = PatchDatabase.Get("npc", sNpc.Key);
+
+                    // Set base information.
+                    if (!_alternatesByName.TryGetValue(name, out var alts))
+                    {
+                        alts = new List<dynamic>();
+                        _alternatesByName[name] = alts;
+                    }
+                    alts.Add(npc);
                 }
-                alts.Add(npc);
+                else
+                {
+                    foreach (var langTuple in _builder.Localize.Langs)
+                    {
+                        var code = langTuple.Item1;
+                        var lang = langTuple.Item2;
+                        npc[code] = new JObject();
+                        switch (lang)
+                        {
+                            case SaintCoinach.Ex.Language.English:
+                                npc[code].name = $"Nameless #{sNpc.Key}";
+                                break;
+                            case SaintCoinach.Ex.Language.Japanese:
+                                npc[code].name = $"無名 #{sNpc.Key}";
+                                break;
+                            case SaintCoinach.Ex.Language.French:
+                                npc[code].name = $"Sans nom #{sNpc.Key}";
+                                break;
+                            case SaintCoinach.Ex.Language.German:
+                                npc[code].name = $"Namenlos #{sNpc.Key}";
+                                break;
+                            default:
+                                npc[code].name = $"Unnamed #{sNpc.Key}";
+                                break;
+                        }
+
+                    }
+                    npc.patch = "1.9";
+                }
 
                 var title = sNpc.Title.ToString();
                 if (!string.IsNullOrEmpty(title))

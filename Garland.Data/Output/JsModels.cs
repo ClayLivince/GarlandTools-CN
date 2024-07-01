@@ -101,16 +101,15 @@ namespace Garland.Data.Output
         {
             var data = new JObject(source);
 
-            var strings = data[lang];
+            var strings = data[lang] as JObject;
             data.Remove("en");
             data.Remove("fr");
             data.Remove("de");
             data.Remove("ja");
 
-            foreach (JProperty prop in strings.Reverse())
-                data.AddFirst(new JProperty(prop));
+            strings.Merge(data);
 
-            return data;
+            return strings;
         }
 
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)

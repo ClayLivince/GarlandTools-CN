@@ -16,6 +16,7 @@ namespace Garland.Data
         public const decimal NextPatch = 7.0m;
         public static Patch[] MajorPatches = new[] {
             new Patch(1m, "Legacy", "Legacy"),
+            new Patch(1.9m, "Nameless NPCs", "Legacy"),
 
             new Patch(2m, "A Realm Reborn", "A Realm Reborn"),
             new Patch(2.1m, "A Realm Awoken", "A Realm Reborn"),

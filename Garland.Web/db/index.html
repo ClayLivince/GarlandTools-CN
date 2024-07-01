@@ -382,7 +382,7 @@
                 {{~}}
             </div>
 
-            <div class="menu icon-group" data-menu-name="skywatcher-region-menu">
+            <div class="menu icon-group" data-menu-name="skywatcher-region-menu" style="width: 250px; margin: 6px auto;">
                 {{~it.regions :region:rindex}}
                     <div class="button icon-group skywatcher-icon" data-page="{{=region.page}}" title="{{=region.name}}">
                         <img src="{{=region.icon}}" class="icon size32 skywatcher-icon">
@@ -1865,6 +1865,7 @@
             <div class="menu tab">
                 <div data-page="info-page" class="button">Info</div>
                 {{?it.map}}<div data-page="maps-page" class="button">Map</div>{{?}}
+                {{?it.obj.photo}}<div data-page="photo-page" class="button">Photo</div>{{?}}
             </div>
         </div>
 
@@ -2129,8 +2130,30 @@
                     </div>
                 {{?}}
 
+                {{?it.appalts}}
+                <div class="alts subsection collapsible collapsed" data-headername="appalts">
+                    <h3 class="pointer">Same look Instances</h3>
+
+                    {{~it.appalts :alt:altIndex}}
+                    <div class="block-link pointer hover-highlight collapse-toggle" data-id="{{=alt.id}}" data-type="npc">
+                        {{?alt.isCurrent}}&#9733; {{?}}{{=alt.name}} - {{=alt.desc}}
+                        <span class="right">{{=alt.location}}</span>
+                        <div class="clear"></div>
+                    </div>
+                    {{~}}
+                </div>
+                {{?}}
+
                 <div class="clear"></div>
             </div>
+
+            {{?it.obj.photo}}
+                <div class="photo-page page">
+                    <img src="/files/photos/npc/{{=it.obj.photo}}" alt="NPC In-Game Photo"/>
+                    <p style="text-align: end;display: none">Thanks @Celes for NPC Photos</p>
+                    <p style="text-align: end;">Copyright © SQUARE ENIX CO., LTD.</p>
+                </div>
+            {{?}}
 
             {{?it.map}}
                 <div class="maps-page page">

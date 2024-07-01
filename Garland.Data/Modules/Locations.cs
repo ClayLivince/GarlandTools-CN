@@ -75,7 +75,7 @@ namespace Garland.Data.Modules
                     continue;
 
                 var name = Utils.SanitizeTags(ConvertPlaceNameName(sPlaceName));
-                var loc = CreateLocation(sPlaceName.Key, name);
+                var loc = CreateLocation(sPlaceName, name);
 
                 // Combine map data.
                 if (locationIndex.TryGetValue(sPlaceName, out var info))
@@ -195,13 +195,14 @@ namespace Garland.Data.Modules
             return sPlaceName.Name.ToString();
         }
 
-        dynamic CreateLocation(int id, string name)
+        dynamic CreateLocation(Game.PlaceName sPlaceName, string name)
         {
             dynamic loc = new JObject();
-            loc.id = id;
+            loc.id = sPlaceName.Key;
+            _builder.Localize.Column((JObject)loc, sPlaceName, "Name", "name", Utils.SanitizeXivTags);
             loc.name = name;
             _builder.Db.Locations.Add(loc);
-            _builder.Db.LocationsById[id] = loc;
+            _builder.Db.LocationsById[sPlaceName.Key] = loc;
             return loc;
         }
     }
