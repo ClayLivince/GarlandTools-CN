@@ -4055,8 +4055,8 @@
         "icon": 25015,
         "id": 33151,
         "reduce": {
-          "item": "Dawnlight Aethersand",
-          "icon": 22210
+          "item": "Wind Crystal",
+          "icon": 20010
         }
       },
       {
@@ -5951,7 +5951,11 @@
       {
         "item": "Earthen Quartz",
         "icon": 21458,
-        "id": 38937
+        "id": 38937,
+        "reduce": {
+          "item": "Earthbreak Aethersand",
+          "icon": 21246
+        }
       },
       {
         "item": "Earth Crystal",
@@ -5989,8 +5993,8 @@
         "icon": 21472,
         "id": 36286,
         "reduce": {
-          "item": "Endstone Aethersand",
-          "icon": 21234
+          "item": "Lightning Cluster",
+          "icon": 20017
         }
       },
       {
@@ -6196,12 +6200,20 @@
       {
         "item": "Prime Siderite",
         "icon": 21472,
-        "id": 37694
+        "id": 37694,
+        "reduce": {
+          "item": "Igneous Glioaether",
+          "icon": 22660
+        }
       },
       {
         "item": "Sublime Siderite",
         "icon": 21486,
-        "id": 37695
+        "id": 37695,
+        "reduce": {
+          "item": "Igneous Glioaether",
+          "icon": 22660
+        }
       }
     ],
     "stars": 2,
@@ -6307,7 +6319,11 @@
       {
         "item": "Sophora Roots",
         "icon": 25025,
-        "id": 38938
+        "id": 38938,
+        "reduce": {
+          "item": "Earthbreak Aethersand",
+          "icon": 21246
+        }
       },
       {
         "item": "Wind Crystal",
@@ -6345,8 +6361,8 @@
         "icon": 22418,
         "id": 36288,
         "reduce": {
-          "item": "Endwood Aethersand",
-          "icon": 21236
+          "item": "Fire Cluster",
+          "icon": 20013
         }
       },
       {
@@ -6620,12 +6636,20 @@
       {
         "item": "Prime Crystalbloom",
         "icon": 25039,
-        "id": 37691
+        "id": 37691,
+        "reduce": {
+          "item": "Verdurous Glioaether",
+          "icon": 22668
+        }
       },
       {
         "item": "Sublime Crystalbloom",
         "icon": 25042,
-        "id": 37692
+        "id": 37692,
+        "reduce": {
+          "item": "Verdurous Glioaether",
+          "icon": 22668
+        }
       }
     ],
     "stars": 2,
@@ -6693,12 +6717,20 @@
       {
         "item": "Prime Achondrite",
         "icon": 21210,
-        "id": 39237
+        "id": 39237,
+        "reduce": {
+          "item": "Pure Igneous Glioaether",
+          "icon": 22660
+        }
       },
       {
         "item": "Sublime Achondrite",
         "icon": 21247,
-        "id": 39238
+        "id": 39238,
+        "reduce": {
+          "item": "Pure Igneous Glioaether",
+          "icon": 22660
+        }
       }
     ],
     "stars": 3,
@@ -6732,12 +6764,20 @@
       {
         "item": "Prime Chloroschist",
         "icon": 21252,
-        "id": 39909
+        "id": 39909,
+        "reduce": {
+          "item": "Concentrated Igneous Glioaether",
+          "icon": 22660
+        }
       },
       {
         "item": "Sublime Chloroschist",
         "icon": 21337,
-        "id": 39910
+        "id": 39910,
+        "reduce": {
+          "item": "Concentrated Igneous Glioaether",
+          "icon": 22660
+        }
       }
     ],
     "stars": 3,
@@ -6771,12 +6811,20 @@
       {
         "item": "Prime Sphongos",
         "icon": 25408,
-        "id": 39234
+        "id": 39234,
+        "reduce": {
+          "item": "Pure Verdurous Glioaether",
+          "icon": 22668
+        }
       },
       {
         "item": "Sublime Sphongos",
         "icon": 25411,
-        "id": 39235
+        "id": 39235,
+        "reduce": {
+          "item": "Pure Verdurous Glioaether",
+          "icon": 22668
+        }
       }
     ],
     "stars": 3,
@@ -6810,12 +6858,20 @@
       {
         "item": "Prime Haritaki",
         "icon": 25015,
-        "id": 39906
+        "id": 39906,
+        "reduce": {
+          "item": "Concentrated Verdurous Glioaether",
+          "icon": 22668
+        }
       },
       {
         "item": "Sublime Haritaki",
         "icon": 25043,
-        "id": 39907
+        "id": 39907,
+        "reduce": {
+          "item": "Concentrated Verdurous Glioaether",
+          "icon": 22668
+        }
       }
     ],
     "stars": 3,
@@ -6912,12 +6968,20 @@
       {
         "item": "Prime Fossilized Dragon's Scale",
         "icon": 22251,
-        "id": 41416
+        "id": 41416,
+        "reduce": {
+          "item": "Potent Igneous Glioaether",
+          "icon": 22660
+        }
       },
       {
         "item": "Sublime Fossilized Dragon's Scale",
         "icon": 22266,
-        "id": 41417
+        "id": 41417,
+        "reduce": {
+          "item": "Potent Igneous Glioaether",
+          "icon": 22660
+        }
       }
     ],
     "stars": 4,
@@ -7038,12 +7102,20 @@
       {
         "item": "Prime Kukuru Beans",
         "icon": 25314,
-        "id": 41413
+        "id": 41413,
+        "reduce": {
+          "item": "Potent Verdurous Glioaether",
+          "icon": 22668
+        }
       },
       {
         "item": "Sublime Kukuru Beans",
         "icon": 25329,
-        "id": 41414
+        "id": 41414,
+        "reduce": {
+          "item": "Potent Verdurous Glioaether",
+          "icon": 22668
+        }
       }
     ],
     "stars": 4,
@@ -7072,7 +7144,11 @@
       {
         "item": "Electrocoal",
         "icon": 21205,
-        "id": 43931
+        "id": 43931,
+        "reduce": {
+          "item": "Earth Crystal",
+          "icon": 20012
+        }
       },
       {
         "item": "Earth Crystal",
@@ -7107,7 +7183,11 @@
       {
         "item": "Brightwind Ore",
         "icon": 21212,
-        "id": 43932
+        "id": 43932,
+        "reduce": {
+          "item": "Lightning Crystal",
+          "icon": 20011
+        }
       },
       {
         "item": "Lightning Crystal",
@@ -7142,7 +7222,11 @@
       {
         "item": "Goldbranch",
         "icon": 22416,
-        "id": 43933
+        "id": 43933,
+        "reduce": {
+          "item": "Wind Cluster",
+          "icon": 20016
+        }
       },
       {
         "item": "Wind Crystal",
@@ -7177,7 +7261,11 @@
       {
         "item": "Volcanic Grass",
         "icon": 25035,
-        "id": 43934
+        "id": 43934,
+        "reduce": {
+          "item": "Fire Cluster",
+          "icon": 20013
+        }
       },
       {
         "item": "Fire Crystal",

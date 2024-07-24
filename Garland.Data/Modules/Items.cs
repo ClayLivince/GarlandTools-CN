@@ -78,6 +78,8 @@ namespace Garland.Data.Modules
                 if (sItem.IsDyeable)
                     item.dyeable = 1;
 
+                item.dyecount = sItem.DyeCount;
+
                 if (!sItem.IsUntradable)
                     item.tradeable = 1;
 

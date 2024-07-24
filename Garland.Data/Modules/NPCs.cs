@@ -530,7 +530,7 @@ namespace Garland.Data.Modules
                 // For Hrothgar, these might be faces too?
                 case 13: // Helions 
                 case 14: // The Lost
-                    return 1400;
+                    return isMale ? 1400 : 1500;
                 case 15: // Rava
                 case 16: // Veena
                     return isMale ? 1600 : 1700;

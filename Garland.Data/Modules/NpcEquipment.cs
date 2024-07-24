@@ -163,18 +163,18 @@ namespace Garland.Data.Modules
 
         void StoreModelKeys(Dictionary<Saint.EquipSlot, ModelData> keys, Saint.XivRow row)
         {
-            StoreModelKey(keys, (Saint.Quad)row["Model{MainHand}"], (Saint.Stain)row["Dye{MainHand}"], _slots[0]);
-            StoreModelKey(keys, (Saint.Quad)row["Model{OffHand}"], (Saint.Stain)row["Dye{OffHand}"], _slots[1]);
-            StoreModelKey(keys, (UInt32)row["Model{Head}"], (Saint.Stain)row["Dye{Head}"], _slots[2]);
-            StoreModelKey(keys, (UInt32)row["Model{Body}"], (Saint.Stain)row["Dye{Body}"], _slots[3]);
-            StoreModelKey(keys, (UInt32)row["Model{Hands}"], (Saint.Stain)row["Dye{Hands}"], _slots[4]);
-            StoreModelKey(keys, (UInt32)row["Model{Legs}"], (Saint.Stain)row["Dye{Legs}"], _slots[6]);
-            StoreModelKey(keys, (UInt32)row["Model{Feet}"], (Saint.Stain)row["Dye{Feet}"], _slots[7]);
-            StoreModelKey(keys, (UInt32)row["Model{Ears}"], (Saint.Stain)row["Dye{Ears}"], _slots[8]);
-            StoreModelKey(keys, (UInt32)row["Model{Neck}"], (Saint.Stain)row["Dye{Neck}"], _slots[9]);
-            StoreModelKey(keys, (UInt32)row["Model{Wrists}"], (Saint.Stain)row["Dye{Wrists}"], _slots[10]);
-            StoreModelKey(keys, (UInt32)row["Model{LeftRing}"], (Saint.Stain)row["Dye{LeftRing}"], _slots[11]);
-            StoreModelKey(keys, (UInt32)row["Model{RightRing}"], (Saint.Stain)row["Dye{RightRing}"], _slots[12]);
+            StoreModelKey(keys, (Saint.Quad)row["Model{MainHand}"], (Saint.Stain)row["Dye{MainHand}"], (Saint.Stain)row["Dye2{MainHand}"], _slots[0]);
+            StoreModelKey(keys, (Saint.Quad)row["Model{OffHand}"], (Saint.Stain)row["Dye{OffHand}"], (Saint.Stain)row["Dye2{OffHand}"], _slots[1]);
+            StoreModelKey(keys, (UInt32)row["Model{Head}"], (Saint.Stain)row["Dye{Head}"], (Saint.Stain)row["Dye2{Head}"], _slots[2]);
+            StoreModelKey(keys, (UInt32)row["Model{Body}"], (Saint.Stain)row["Dye{Body}"], (Saint.Stain)row["Dye2{Body}"], _slots[3]);
+            StoreModelKey(keys, (UInt32)row["Model{Hands}"], (Saint.Stain)row["Dye{Hands}"], (Saint.Stain)row["Dye2{Hands}"], _slots[4]);
+            StoreModelKey(keys, (UInt32)row["Model{Legs}"], (Saint.Stain)row["Dye{Legs}"], (Saint.Stain)row["Dye2{Legs}"], _slots[6]);
+            StoreModelKey(keys, (UInt32)row["Model{Feet}"], (Saint.Stain)row["Dye{Feet}"], (Saint.Stain)row["Dye2{Feet}"], _slots[7]);
+            StoreModelKey(keys, (UInt32)row["Model{Ears}"], (Saint.Stain)row["Dye{Ears}"], (Saint.Stain)row["Dye2{Ears}"], _slots[8]);
+            StoreModelKey(keys, (UInt32)row["Model{Neck}"], (Saint.Stain)row["Dye{Neck}"], (Saint.Stain)row["Dye2{Neck}"], _slots[9]);
+            StoreModelKey(keys, (UInt32)row["Model{Wrists}"], (Saint.Stain)row["Dye{Wrists}"], (Saint.Stain)row["Dye2{Wrists}"], _slots[10]);
+            StoreModelKey(keys, (UInt32)row["Model{LeftRing}"], (Saint.Stain)row["Dye{LeftRing}"], (Saint.Stain)row["Dye2{LeftRing}"], _slots[11]);
+            StoreModelKey(keys, (UInt32)row["Model{RightRing}"], (Saint.Stain)row["Dye{RightRing}"], (Saint.Stain)row["Dye2{RightRing}"], _slots[12]);
         }
 
         int EquipSlotToEquipSlotCategoryKey (Saint.EquipSlot sEquipSlot)
@@ -218,15 +218,39 @@ namespace Garland.Data.Modules
                 keys[slot] = new ModelData(new Saint.Quad(model), stain);
         }
 
+        void StoreModelKey(Dictionary<Saint.EquipSlot, ModelData> keys, Saint.Quad model, Saint.Stain stain, Saint.Stain stain2, Saint.EquipSlot slot)
+        {
+            if (!model.IsEmpty)
+                keys[slot] = new ModelData(model, stain, stain2);
+        }
+
+        void StoreModelKey(Dictionary<Saint.EquipSlot, ModelData> keys, UInt32 model, Saint.Stain stain, Saint.Stain stain2, Saint.EquipSlot slot)
+        {
+            // UInt32.MaxValue is an override used to remove a piece from the template.
+            if (model == UInt32.MaxValue)
+                keys.Remove(slot);
+            else if (model > 0)
+                keys[slot] = new ModelData(new Saint.Quad(model), stain, stain2);
+        }
+
         class ModelData
         {
             public Saint.Quad Key;
             public Saint.Stain Stain;
+            public Saint.Stain Stain2;
 
             public ModelData(Saint.Quad key, Saint.Stain stain)
             {
                 Key = key;
                 Stain = stain;
+                Stain2 = null;
+            }
+
+            public ModelData(Saint.Quad key, Saint.Stain stain, Saint.Stain stain2)
+            {
+                Key = key;
+                Stain = stain;
+                Stain2 = stain2;
             }
         }
     }

@@ -13,7 +13,7 @@ namespace Garland.Data
     public class GarlandDatabase
     {
         // NOTE: This section must be updated with every patch!
-        public const decimal NextPatch = 7.0m;
+        public const decimal NextPatch = 7.01m;
         public static Patch[] MajorPatches = new[] {
             new Patch(1m, "Legacy", "Legacy"),
             new Patch(1.9m, "Nameless NPCs", "Legacy"),
@@ -96,6 +96,7 @@ namespace Garland.Data
         public List<dynamic> QuestLores = new List<dynamic>();
 
         public dynamic MateriaJoinRates;
+        public dynamic FreeCompanyVoyages;
 
         public Dictionary<string, JArray> LevelingEquipmentByJob = new Dictionary<string, JArray>();
         public Dictionary<string, JObject> EndGameEquipmentByJob = new Dictionary<string, JObject>();
@@ -149,6 +150,11 @@ namespace Garland.Data
         }
 
         public void AddReference(object source, string type, int id, bool isNested)
+        {
+            AddReference(source, type, id.ToString(), isNested);
+        }
+
+        public void AddReference(object source, string type, JToken id, bool isNested)
         {
             AddReference(source, type, id.ToString(), isNested);
         }

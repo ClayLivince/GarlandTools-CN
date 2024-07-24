@@ -69,6 +69,10 @@ namespace Garland.Data.Models
             {
                 return costKeyOptional;
             }
+            if (sShop.Name?.ToString().Contains("crip") == true)
+            {
+                //System.Diagnostics.Debugger.Break();
+            }
             var costKey = costKeyOptional.Value;
             var result = costKey;
             var currencyType = sShop.AsInt16("UseCurrencyType");
@@ -76,7 +80,7 @@ namespace Garland.Data.Models
             {
                 return builder.GetCurrency(costKey);
             }
-            if (sShop.Key == 1770446 || (sShop.Key == 1770699 && costKey < 10))
+            if (sShop.Key == 1770446 || sShop.Key == 1769500 || (sShop.Key == 1770699 && costKey < 10))
             {
                 return builder.GetTomestoneCoveredCurrencies(costKey);
             }
@@ -86,9 +90,9 @@ namespace Garland.Data.Models
                 result = builder.GetCurrency(costKey);
             }
 
-            if ((currencyType == 2 || sShop.Key == 1770637) && costKey < 10)
+            if ((currencyType == 2) && costKey < 10)
             {
-                result = builder.GetCurrency(costKey);
+                result = builder.GetTomestoneCoveredCurrencies(costKey);
             }
 
             // Looks like we'll have to hardcode some of them

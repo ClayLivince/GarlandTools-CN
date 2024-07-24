@@ -1,6 +1,7 @@
 ﻿using Garland.Data.Models;
 using Garland.Data.Modules;
 using Garland.Data.Output;
+using Garland.Data.Web;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
@@ -20,12 +21,15 @@ namespace Garland.Data
         ItemIconDatabase _itemIconDatabase;
         SQLite.SQLiteConnection _libra;
 
+        public JsonClient WebJsonClient = new JsonClient();
+
         #region Builder state - to organize
         static Dictionary<long, JArray> _bossCurrency = new Dictionary<long, JArray>();
 
         public Dictionary<long, List<int>> ItemDropsByMobId = new Dictionary<long, List<int>>();
         public Dictionary<long, int> InstanceIdsByMobId = new Dictionary<long, int>();
         public int[] TomestoneIds = new int[3];
+        // REMEMBER TO CHANGE SaintCoinach.Xiv.SpecialShopListing Currency !!!!!
         public static int[] _scrips = new int[] { 33913, 33914, 41784, 41785 };
         public readonly int[] _currencies = new int[] {
             10309,
@@ -60,6 +64,7 @@ namespace Garland.Data
 
         public int GetCurrency(int key)
         {
+            // REMEMBER TO CHANGE SaintCoinach.Xiv.SpecialShopListing Currency !!!!!
             if (key <= _currencies.Length)
             {
                 return _currencies[key - 1];

@@ -382,6 +382,9 @@ namespace Garland.Data.Output
             // Materia Join Rates
             core.materiaJoinRates = _db.MateriaJoinRates;
 
+            // Voyages
+            core.voyages = _db.FreeCompanyVoyages;
+
             // Item
             core.item = new JObject();
             core.item.categoryIndex = new JObject();

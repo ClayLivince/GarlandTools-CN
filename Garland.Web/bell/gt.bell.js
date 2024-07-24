@@ -2074,13 +2074,13 @@ gt.time = {
 gt.skywatcher = {
     forecast: function(lDate, zone) {
         zone = zone.trim();
-        var location = _.find(_.values(gt.location.index), function(l) { return l.name == zone; });
+        var location = _.find(_.values(gt.location.index), function(l) { return l.name === zone; });
         var rateIndex = location.weatherRate;
         if (!rateIndex) {
             console.error("No weather rate for zone ", zone);
             return null;
         }
-        var weatherRate = gt.skywatcher.weatherRateIndex[rateIndex];
+        var weatherRate = gt.skywatcher.weatherRateIndex[location.name];
         if (!weatherRate) {
             console.error("Weather rates do not exist. rate: zone: ", rateIndex, zone);
             return null;

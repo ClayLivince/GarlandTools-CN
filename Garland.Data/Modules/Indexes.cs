@@ -23,6 +23,7 @@ namespace Garland.Data.Modules
             IndexRetiredTomestones();
             IndexMapMarkers();
             IndexMateriaJoinRates();
+            IndexVoyages();
         }
 
         void IndexTomestones()
@@ -123,6 +124,39 @@ namespace Garland.Data.Modules
             }
 
             _builder.Db.MateriaJoinRates = rates;
+        }
+
+        void IndexVoyages()
+        {
+            dynamic voyages = new JObject();
+            voyages.airship = new JObject();
+            voyages.submarine = new JObject();
+            
+            var sAirshipExplorationPoints = _builder.Sheet("AirshipExplorationPoint");
+            var sSubmarineExplorations = _builder.Sheet("SubmarineExploration");
+            var submarineMapById = _builder.Sheet("SubmarineMap").ToDictionary(i => i.Key);
+
+            foreach (var sAirshipExplorationPoint in sAirshipExplorationPoints)
+            {
+                dynamic voyage = new JObject();
+                voyage.name = sAirshipExplorationPoint.AsString("Name").ToString();
+                voyages.airship[sAirshipExplorationPoint.Key.ToString()] = voyage;
+            }
+
+            foreach (var sSubmarineExploration in sSubmarineExplorations)
+            {
+                dynamic voyage = new JObject();
+                voyage.name = sSubmarineExploration.AsString("Destination").ToString();
+                var map = sSubmarineExploration.As<XivRow>("Map");
+                voyage.sea = map.AsString("Name").ToString();
+                voyage.stars = sSubmarineExploration.AsInt16("Stars");
+                voyage.rank = sSubmarineExploration.AsInt16("RankReq");
+                voyage.tanks = sSubmarineExploration.AsInt16("CeruleumTankReq");
+
+                voyages.submarine[sSubmarineExploration.Key.ToString()] = voyage;
+            }
+
+            _builder.Db.FreeCompanyVoyages = voyages;
         }
     }
 }

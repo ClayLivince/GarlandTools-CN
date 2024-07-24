@@ -18,6 +18,7 @@ namespace Garland.Data.Modules
         public override void Start()
         {
             // Collect and index all shops to use.
+            //_shops.AddRange(ProcessFateShops());
             _shops.AddRange(GarlandShop.Convert(_builder.Sheet<Saint.GilShop>(), _builder));
             _shops.AddRange(GarlandShop.ConvertSpecialShops(_builder));
             _shops.AddRange(GarlandShop.Convert(_builder.Sheet<Saint.GCShop>(), _builder));

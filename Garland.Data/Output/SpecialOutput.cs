@@ -85,7 +85,7 @@ namespace Garland.Data.Output
 
                 JArray rates = weatherRate.rates;
                 var rateList = string.Join(", ", rates.Select(r => $"{{\"rate\":{r["rate"]},\"weather\":{r["weather"]} }}"));
-                zoneWeather.Add($"\"{zoneID}\":{{\"id\":{zoneID},\"rates\":[{rateList}]}}");
+                zoneWeather.Add($"\"{zoneName}\":{{\"id\":{zoneID},\"rates\":[{rateList}]}}");
             }
 
             parts.Add($"gt.skywatcher.weatherRateIndex = {{{string.Join(",", zoneWeather)}}}");
