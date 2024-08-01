@@ -742,7 +742,7 @@ gt.craft.step.prototype.discoverSource = function(itemSettings) {
 
     if (this.item.voyages) {
         this.sourceType = 'voyage';
-        this.source = { sourceName: this.item.voyages[0], icon: 'images/Voyage.png' };
+        this.source = { sourceName: this.item.voyages[0].type === 0 ? "Airship" : "Submarine", icon: 'images/Voyage.png' };
         this.source.longSourceName = this.source.sourceName;
         this.sourceView = this.source;
         this.setCategory(['Voyage', 'Other']);

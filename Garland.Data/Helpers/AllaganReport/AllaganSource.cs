@@ -75,15 +75,13 @@ namespace Garland.Data.Helpers.AllaganReport
         public void IndexAllaganReport(string source, dynamic item)
         {
             if (item.alla == null)
-            {
                 item.alla = new JObject();
-            }
 
             if (item.alla["source"] == null)
-            {
                 item.alla["source"] = new JArray();
-            }
-            item.alla["source"].Add(source);
+
+            if (!item.alla["source"].Contains(source))
+                item.alla["source"].Add(source);
         }
     }
 }

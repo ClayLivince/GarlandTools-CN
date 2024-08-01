@@ -226,23 +226,28 @@
     <script id="block-template" type="text/x-dot-template">
         <div class="block {{=it.type}} {{?it.blockClass}}{{=it.blockClass}}{{?}}" data-id="{{=it.id}}" data-type="{{=it.type}}">
             <div class="block-title handle">
-                {{?(it.displayName || it.name)}}
-                    <img src="images/site/Copy.svg" title="Copy block name" class="copy-button button">
-                {{?}}
-                {{?it.audio}}
-                    <img src="images/site/Speaker.svg" title="Play audio and desktop notifications" class="notifications-button button">
-                {{?}}
-                {{?it.settings}}
-                    <img src="images/site/Setting.png" class="settings-button button">
-                {{?}}
-                <img src="images/site/x.svg" class="close-button button">
                 {{?it.icon}}
-                    <img src="{{=it.icon}}" class="icon title-icon {{?it.iconBorder}}border{{?}} {{?it.type === 'status'}}status{{?}}">
+                <img src="{{=it.icon}}" class="icon title-icon {{?it.iconBorder}}border{{?}} {{?it.type === 'status'}}status{{?}}">
                 {{?}}
-                <h1 class="name {{?it.nameClass}}{{=it.nameClass}}{{?}}">
-                    {{?it.patch != '??' && it.patch >= gt.patch.current}}<img class="icon patch" src="images/LatestPatch.png" title="Latest Patch {{=it.patch}}">{{?}}
-                    <span class="name-handle">{{=it.displayName || it.name}}</span>
-                </h1>
+                <div class="block-title-row">
+                    <h1 class="name {{?it.nameClass}}{{=it.nameClass}}{{?}}">
+                        {{?it.patch != '??' && it.patch >= gt.patch.current}}<img class="icon patch" src="images/LatestPatch.png" title="Latest Patch {{=it.patch}}">{{?}}
+                        <span class="name-handle">{{=it.displayName || it.name}}</span>
+                    </h1>
+                    <div class="block-corner-button-container">
+                        {{?(it.displayName || it.name)}}
+                        <img src="images/site/Copy.svg" title="Copy block name" class="copy-button button">
+                        {{?}}
+                        {{?it.audio}}
+                        <img src="images/site/Speaker.svg" title="Play audio and desktop notifications" class="notifications-button button">
+                        {{?}}
+                        {{?it.settings}}
+                        <img src="images/site/Setting.png" class="settings-button button">
+                        {{?}}
+                        <img src="images/site/x.svg" class="block-close-button button">
+                    </div>
+                </div>
+
                 {{?it.subheader}}<span class="subheader">{{=it.subheader}}</span>{{?}}
                 <div class="clear"></div>
             </div>
@@ -631,7 +636,7 @@
                             <h3 class="block-name line pointer">
                                 <img src="images/site/x.svg" class="close-button remove-group-block">
                                 <img class="icon small" src="{{=model.view.icon}}">
-                                <input type="number" value="{{=model.amount || 1}}" min="1" max="999" class="amount">
+                                <input type="number" value="{{=model.amount || 1}}" min="1" max="9999" class="amount">
                                 <span class="text">{{=model.view.name}}</span>
                             </h3>
 
@@ -1560,6 +1565,51 @@
                         </div>
                     {{?}}
 
+                    {{?it.voyages}}
+                        <div class="voyages subsection collapsible collapsed" data-headername="voyage">
+                            <img src="images/Voyage.png" class="subsection-icon">
+                            <h2 class="pointer">Voyage <span class="right badge">{{=it.voyages.length}}</span></h2>
+
+                            {{~it.voyages :value:index}}
+                            <div class="block-link collapse-toggle pointer line hover-highlight" data-type="voyage" data-id="{{=value.id}}">
+
+                                {{?value.right}}<span class="right">{{=value.right}}</span>{{?}}
+                                <div class="overflow-wrapper">
+                                    <img class="icon small" src="{{=value.icon}}">
+                                    <span class="highlight">{{=value.name}}</span>
+                                </div>
+                            </div>
+                            {{~}}
+                        </div>
+                    {{?}}
+
+                    {{?it.mog}}
+                    <div class="mog-purchase subsection collapsible collapsed" data-headername="reduction">
+                        <img src="images/item/Mog.png" class="subsection-icon">
+                        <h2 class="pointer">Mog Station</h2>
+
+                        <div class="block-link line pointer hover-highlight collapse-toggle">
+                            Most direct links are outdated, so these links will take you to the first page of FFXIV Online store.
+                        </div>
+
+                        <div class="block-link line pointer hover-highlight collapse-toggle">
+                            <a href="https://store.finalfantasyxiv.com/ffxivstore/en-us/" target="_blank">View on NA FFXIV Online Store.</a>
+                        </div>
+                        <div class="block-link line pointer hover-highlight collapse-toggle">
+                            <a href="https://store.finalfantasyxiv.com/ffxivstore/ja-jp/" target="_blank">View on JP FFXIV Online Store.</a>
+                        </div>
+                        <div class="block-link line pointer hover-highlight collapse-toggle">
+                            <a href="https://store.finalfantasyxiv.com/ffxivstore/en-gb/?lang=en-gb&currency=EUR" target="_blank">View on EU-Great Britian FFXIV Online Store.</a>
+                        </div>
+                        <div class="block-link line pointer hover-highlight collapse-toggle">
+                            <a href="https://store.finalfantasyxiv.com/ffxivstore/fr-fr/?lang=fr-fr&currency=EUR" target="_blank">View on EU-France FFXIV Online Store.</a>
+                        </div>
+                        <div class="block-link line pointer hover-highlight collapse-toggle">
+                            <a href="https://store.finalfantasyxiv.com/ffxivstore/de-de/?lang=de-de&currency=EUR" target="_blank">View on EU-Deutsch FFXIV Online Store.</a>
+                        </div>
+                    </div>
+                    {{?}}
+
                     {{?it.masterpiece}}
                         <div class="masterpiece subsection collapsible collapsed" data-headername="masterpiece">
                             <img src="images/marker/Rowena.png" class="subsection-icon">
@@ -1769,6 +1819,12 @@
                                 {{~}}
                             </div>
                         </div>
+                    {{?}}
+
+                    {{?it.alla}}
+                       <div class="source-footnote">
+                           The {{~it.alla :value:index}}{{=value}} {{~}} source of this item comes from Allagan Report<img class="icon small" style="width: 10px; height: 10px" src="../files/icons/item/65023.png">, which is a player-submitted data source hosted by <a href="http://ffxivteamcraft.com">Teamcraft</a>. Maybe out-dated or not available.
+                       </div>
                     {{?}}
                 </div> <!-- Sources & Uses Page End -->
             {{?}}

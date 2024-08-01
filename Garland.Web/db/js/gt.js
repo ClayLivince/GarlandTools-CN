@@ -170,6 +170,7 @@ gt.core = {
         gt.skywatcher.weatherRateIndex = data.skywatcher.weatherRateIndex;
         gt.quest.genreIndex = data.questGenreIndex;
         gt.venture.index = data.ventureIndex;
+        gt.venture.voyageIndex = data.voyages;
         gt.action.categoryIndex = data.action.categoryIndex;
         gt.achievement.categoryIndex = data.achievementCategoryIndex;
         gt.item.categoryIndex = data.item.categoryIndex;
@@ -643,7 +644,7 @@ gt.core = {
         if (blockData.heightUnlocked)
             $block.addClass('height-unlocked');
 
-        $('.block-title .close-button', $block).click(gt.core.closeButtonClicked);
+        $('.block-title .block-close-button', $block).click(gt.core.closeButtonClicked);
         $('.block-title .settings-button', $block).click(gt.core.settingsButtonClicked);
         $('.block-title .copy-button', $block).click(gt.core.copyButtonClicked);
         $('.settings .unlock-height-link', $block).click(gt.core.unlockHeightLinkClicked);
@@ -2249,14 +2250,39 @@ gt.item = {
         if (item.achievements)
             view.other = _.union(view.other, _.map(gt.model.partialList(gt.achievement, item.achievements), function(i) { return $.extend(i, {right: 'Achievement'}); }));
 
-        if (item.voyages)
-            view.other = _.union(view.other, _.map(item.voyages, function(s) { return { name: s, icon: 'images/Voyage.png', right: 'Voyage' }; }));
-
         if (item.treasure)
             view.other = _.union(view.other, _.map(gt.model.partialList(gt.item, item.treasure), function(i) { return $.extend(i, {right: 'Loot'}); }));
 
         if (item.fates)
             view.other = _.union(view.other, gt.model.partialList(gt.fate, item.fates));
+
+        if (item.mog)
+            view.mog = item.mog;
+
+        if (item.voyages){
+            view.voyages = _.map(item.voyages, function(s) {
+                let voyageType = 'airship';
+                if (s.type === 1){
+                    voyageType = 'submarine';
+                }
+                let voyage = gt.venture.voyageIndex[voyageType][s.id];
+                return {
+                    name: voyage.name,
+                    icon: 'images/Voyage.png',
+                    right: voyageType === 'airship' ? 'Airship Voyage' : 'Submarine - ' + voyage.sea
+                };
+            });
+        }
+
+        if (item.alla){
+            view.alla = [];
+            for (var source of item.alla.source){
+                if (!(source in view.alla)){
+                    view.alla.push(source);
+                }
+            }
+        }
+
 
         // Rowena Masterpiecces
         if (item.masterpiece) {
@@ -2524,7 +2550,7 @@ gt.item = {
             || view.masterpiece || view.supply || view.delivery || view.bingoData || view.other
             || view.satisfaction || view.customize || view.reducedFrom || view.disposal || view.tripletriadReward
             || view.sell_price || view.supplyReward || (!view.unlistable && !view.untradeable) || view.reducesTo
-            || view.gardening);
+            || view.gardening || view.mog);
 
         return view;
     },
@@ -8883,7 +8909,7 @@ gt.craft.step.prototype.discoverSource = function(itemSettings) {
 
     if (this.item.voyages) {
         this.sourceType = 'voyage';
-        this.source = { sourceName: this.item.voyages[0], icon: 'images/Voyage.png' };
+        this.source = { sourceName: this.item.voyages[0].type === 0 ? "Airship" : "Submarine", icon: 'images/Voyage.png' };
         this.source.longSourceName = this.source.sourceName;
         this.sourceView = this.source;
         this.setCategory(['Voyage', 'Other']);
