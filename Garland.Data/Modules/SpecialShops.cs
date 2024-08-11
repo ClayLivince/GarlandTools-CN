@@ -19,7 +19,7 @@ namespace Garland.Data.Modules
         {
             // Collect and index all shops to use.
             _shops.AddRange(GarlandShop.Convert(_builder.Sheet<Saint.GilShop>(), _builder));
-            _shops.AddRange(GarlandShop.Convert(_builder.Sheet<Saint.SpecialShop>(), _builder));
+            _shops.AddRange(GarlandShop.ConvertSpecialShops(_builder));
             _shops.AddRange(GarlandShop.Convert(_builder.Sheet<Saint.GCShop>(), _builder));
             _shops.AddRange(GarlandShop.Convert(_builder.Sheet<Saint.FccShop>(), _builder));
 

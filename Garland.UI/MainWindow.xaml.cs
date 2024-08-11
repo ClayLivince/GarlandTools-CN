@@ -31,15 +31,15 @@ namespace Garland.UI
         {
             InitializeComponent();
 
-            var settings = Settings.Default;
-            if (settings.MainWindowWidth > 0)
-                Width = Settings.Default.MainWindowWidth;
-            if (settings.MainWindowHeight > 0)
-                Height = Settings.Default.MainWindowHeight;
-            if (settings.MainWindowLeft > 0)
-                Left = Settings.Default.MainWindowLeft;
-            if (settings.MainWindowTop > 0)
-                Top = Settings.Default.MainWindowTop;
+            //var settings = Settings.Default;
+            //if (settings.MainWindowWidth > 0)
+            //    Width = Settings.Default.MainWindowWidth;
+            //if (settings.MainWindowHeight > 0)
+            //    Height = Settings.Default.MainWindowHeight;
+            //if (settings.MainWindowLeft > 0)
+            //    Left = Settings.Default.MainWindowLeft;
+            //if (settings.MainWindowTop > 0)
+            //    Top = Settings.Default.MainWindowTop;
 
             _printer = new TextBoxPrinter(OutputText);
             DatabaseBuilder.Printer = _printer;
@@ -131,7 +131,7 @@ namespace Garland.UI
         void BuildDatabase(bool fetchIconsOnly, bool buildNpcOnly)
         {
             var libraPath = System.IO.Path.Combine(Config.SupplementalPath, "app_data.sqlite");
-            var realm = new SaintCoinach.ARealmReversed(Config.GamePath, "SaintCoinachcn.History.zip", SaintCoinach.Ex.Language.ChineseSimplified,null, "cn");
+            var realm = new SaintCoinach.ARealmReversed(Config.GamePath, "SaintCoinachcn.History.zip", SaintCoinach.Ex.Language.ChineseSimplified, null, "cn");
             var interRealm = new SaintCoinach.ARealmReversed(Config.InterGamePath, "SaintCoinach.History.zip", SaintCoinach.Ex.Language.English);
             var libra = new SQLite.SQLiteConnection(libraPath, SQLite.SQLiteOpenFlags.ReadOnly);
             var builder = new DatabaseBuilder(libra, realm, interRealm);

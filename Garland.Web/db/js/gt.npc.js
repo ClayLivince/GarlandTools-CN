@@ -166,6 +166,28 @@ gt.npc = {
                 });
             }
 
+            if (npc.appalts) {
+                view.appalts = gt.model.partialList(gt.npc, npc.appalts, function(v, id) {
+                    var alt = v.obj;
+                    var altDesc = [];
+                    if (alt.s)
+                        altDesc.push(alt.s + ' 商店');
+                    if (alt.q)
+                        altDesc.push(alt.q + ' 任务');
+                    if (alt.k)
+                        altDesc.push(alt.k + ' 对话');
+
+                    if (!altDesc.length)
+                        altDesc.push("其他");
+
+                    v.name = alt.n;
+                    v.desc = altDesc.join(', ');
+                    v.isCurrent = alt.i == npc.id;
+                    v.location = v.location || '???';
+                    return v;
+                });
+            }
+
             if (npc.quests)
                 view.quests = gt.model.partialList(gt.quest, npc.quests);
 

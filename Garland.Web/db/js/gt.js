@@ -113,8 +113,8 @@ gt.core = {
 
     initialize: function() {
         try {
-            if (!gt.core.isLive)
-                gt.serverPath = 'http://localhost';
+            //if (!gt.core.isLive)
+            //    gt.serverPath = 'http://test.garlandtools.org';
 
             if (window.Sentry && gt.core.isLive) {
                 Sentry.init({
@@ -3256,6 +3256,27 @@ gt.npc = {
 
             if (npc.alts) {
                 view.alts = gt.model.partialList(gt.npc, npc.alts, function(v, id) {
+                    var alt = v.obj;
+                    var altDesc = [];
+                    if (alt.s)
+                        altDesc.push(alt.s + ' 商店');
+                    if (alt.q)
+                        altDesc.push(alt.q + ' 任务');
+                    if (alt.k)
+                        altDesc.push(alt.k + ' 对话');
+
+                    if (!altDesc.length)
+                        altDesc.push("其他");
+
+                    v.desc = altDesc.join(', ');
+                    v.isCurrent = alt.i == npc.id;
+                    v.location = v.location || '???';
+                    return v;
+                });
+            }
+
+            if (npc.appalts) {
+                view.appalts = gt.model.partialList(gt.npc, npc.appalts, function(v, id) {
                     var alt = v.obj;
                     var altDesc = [];
                     if (alt.s)

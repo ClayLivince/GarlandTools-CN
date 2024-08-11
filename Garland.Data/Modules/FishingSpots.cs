@@ -193,7 +193,6 @@ namespace Garland.Data.Modules
             JArray currentNodeItems = null;
 
             var lines = Utils.Tsv(Path.Combine(Config.SupplementalPath, "FFXIV Data - Fishing.tsv"));
-            Clay.ClayMySQL clayManager = new Clay.ClayMySQL();
             foreach (var rLine in lines.Skip(1))
             {
                 // Line data

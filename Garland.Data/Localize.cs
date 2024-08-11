@@ -189,5 +189,10 @@ namespace Garland.Data
         public void Column(JObject obj, IXivRow row, string fromColumn, string toColumn, Func<XivString, string> transform = null) {
             Column(obj, row, null, fromColumn, toColumn, transform);
         }
+
+        public Tuple<string, Language>[] AvailableLangs()
+        {
+            return _langs.Concat(_interLangs).ToArray();
+        }
     }
 }

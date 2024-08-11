@@ -2259,6 +2259,7 @@
         <div class="midline">
             <div class="menu tab">
                 <div data-page="info-page" class="button">信息</div>
+                {{?it.obj.photo}}<div data-page="photo-page" class="button">照片</div>{{?}}
                 {{?it.map}}<div data-page="maps-page" class="button">地图</div>{{?}}
                 {{?it.localize}}
                 <div data-page="localization-page" class="button">其他语言</div>
@@ -2515,7 +2516,7 @@
 
                 {{?it.alts}}
                     <div class="alts subsection collapsible collapsed" data-headername="alts">
-                        <h3 class="pointer">其他位置的同一个他</h3>
+                        <h3 class="pointer">其他位置的同一个TA</h3>
 
                         {{~it.alts :alt:altIndex}}
                             <div class="block-link pointer hover-highlight collapse-toggle" data-id="{{=alt.id}}" data-type="npc">
@@ -2527,8 +2528,30 @@
                     </div>
                 {{?}}
 
+                {{?it.appalts}}
+                <div class="alts subsection collapsible collapsed" data-headername="appalts">
+                    <h3 class="pointer">与TA长相一致的人员</h3>
+
+                    {{~it.appalts :alt:altIndex}}
+                    <div class="block-link pointer hover-highlight collapse-toggle" data-id="{{=alt.id}}" data-type="npc">
+                        {{?alt.isCurrent}}&#9733; {{?}}{{=alt.name}} - {{=alt.desc}}
+                        <span class="right">{{=alt.location}}</span>
+                        <div class="clear"></div>
+                    </div>
+                    {{~}}
+                </div>
+                {{?}}
+
                 <div class="clear"></div>
             </div>
+
+            {{?it.obj.photo}}
+                <div class="photo-page page">
+                    <img src="/files/photos/npc/{{=it.obj.photo}}" alt="NPC In-Game Photo"/>
+                    <p style="text-align: end;display: none">鸣谢 @Celes 提供NPC照片</p>
+                    <p style="text-align: end;">Copyright © SQUARE ENIX CO., LTD.</p>
+                </div>
+            {{?}}
 
             {{?it.map}}
                 <div class="maps-page page">
@@ -4058,7 +4081,7 @@
             <div class="content page about-page short">
                 <div id="credits" class="center">
                     Written by Clorifex Ezalor of Zalera, with special thanks to Rogueadyn.  <a href="credits.html" target="_blank">More credits.</a><br>
-                    中文翻译 &amp; 国服数据维护 by ClayLivince 林文栖@晨曦王座 特别鸣谢：尼齐尔拉斯@神意之地 葛溫德琳@晨曦王座 马范恩@萌芽池
+                    中文翻译 &amp; 国服数据维护 by ClayLivince 林文栖@晨曦王座 特别鸣谢：尼齐尔拉斯@神意之地 悠@晨曦王座 马范恩@萌芽池
                 </div>
 
                 <h3>用法</h3>
@@ -4070,8 +4093,7 @@
 
                 <h3>FAQ</h3>
                 <div class="question">我能为数据做出贡献吗？能添加新来源记录吗？</div>
-                国际服：参与编辑这里的表格来贡献数据。 <a href="https://docs.google.com/spreadsheets/d/1pMlRaaFnaVnFeKNu_CaKPrWHdMk94pXumscZVBe3pIA/edit" target="_blank">FFXIV Data Spreadsheet</a>.  请自行向国际服数据维护人员工作组申请权限，并使用英语来贡献条目。
-                或者直接进群敲群主。
+                国际服：直接进群敲群主。
                 国服：直接进群敲群主。
 
                 <div class="separator"></div>
@@ -4096,11 +4118,11 @@
                 啾呜，不胜感激！！！！！ <a href="https://afdian.net/@cyanclay" target="_blank">在爱发电上支持我们</a>
 
                 <div class="question">捐助国际服网站原作者</div>
-                他目前接受网站服务器支出相关的捐献， <a href="https://www.patreon.com/bePatron?u=14110588" target="_blank">在Patreon上支持他</a> 如果你想的话。
+                他目前接受网站服务器支出相关的捐献， <a href="https://www.patreon.com/bePatron?u=14110588" target="_blank">在Patreon上支持他</a>
 
                 <h3>游戏图片与数据声明：</h3>
                 <div>FINAL FANTASY， 最终幻想14 是 Square Enix Holdings Co., Ltd. 史克威尔艾尼克斯公司的注册商标。</div>
-                <div>FINAL FANTASY XIV © 2010 - 2021 SQUARE ENIX CO., LTD. All Rights Reserved. 所有权利保留</div>
+                <div>FINAL FANTASY XIV © 2010 - 2024 SQUARE ENIX CO., LTD. All Rights Reserved. 所有权利保留</div>
                 <div>Garland Tools 不属于 Square Enix. Garland Tools 中文站与盛趣游戏无关。</div>
             </div>
 

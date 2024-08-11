@@ -40,7 +40,6 @@ namespace Garland.Data
             dynamic values = JsonConvert.DeserializeObject(text);
 
             Config.ConnectionString = values.database;
-            Config.TranslationConnectionString = values.translationDatabase;
             Config.SapphireConnectionString = values.sapphireDatabase;
             Config.GamePath = values.gamePath;
             Config.InterGamePath = values.internationalGamePath;

@@ -4,9 +4,11 @@ using Newtonsoft.Json.Linq;
 using SaintCoinach.Imaging;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using Saint = SaintCoinach.Xiv;
 
 namespace Garland.Data.Modules
@@ -23,17 +25,28 @@ namespace Garland.Data.Modules
         const int LightLipFacePaintColorOffset = 7 * 256;
 
         Dictionary<string, List<dynamic>> _alternatesByName = new Dictionary<string, List<dynamic>>();
+        Dictionary<int, List<dynamic>> _alternatesByAppearance = new Dictionary<int, List<dynamic>>();
         Dictionary<int, int> _zoneByNpcId = new Dictionary<int, int>();
         Dictionary<int, Saint.Level> _levelByNpcObjectKey = new Dictionary<int, Saint.Level>();
         Dictionary<int, Libra.ENpcResident> _libraNpcIndex;
+        Dictionary<int, string> _photoFileNameById = new Dictionary<int, string>();
 
         public override string Name => "NPCs";
 
         public override void Start()
         {
+            var lines = Utils.Csv(Path.Combine(Config.SupplementalPath, "ENpcPhotoRef.csv"));
+            foreach (var line in lines.Skip(1))
+            {
+                var eNpcID = line[0];
+                var photoFileName = line[1];
+                _photoFileNameById[int.Parse(eNpcID)] = photoFileName;
+            }
+
             _sCharaMakeCustomize = _builder.Sheet("CharaMakeCustomize");
             _sCharaMakeType = _builder.Sheet("CharaMakeType");
             _colorMap = new SaintCoinach.Graphics.ColorMap(_builder.Realm.GameData.PackCollection.GetFile("chara/xls/charamake/human.cmp"));
+            _alternatesByAppearance.Add(0, new List<dynamic>());
 
             IndexLevels();
             BuildNpcs();
@@ -80,25 +93,49 @@ namespace Garland.Data.Modules
             {
                 dynamic npc = new JObject();
                 npc.id = sNpc.Key;
-                if (iENpcById.TryGetValue(sNpc.Key, out var iNpc))
-                {
-                    _builder.Localize.Column((JObject)npc, sNpc.Resident, iNpc.Resident, "Singular", "name", Utils.CapitalizeWords);
-                }
-                else
-                {
-                    _builder.Localize.Column((JObject)npc, sNpc.Resident, "Singular", "name", Utils.CapitalizeWords);
-                }
 
-                string name = npc.chs.name;
-                npc.patch = PatchDatabase.Get("npc", sNpc.Key);
-
-                // Set base information.
-                if (!_alternatesByName.TryGetValue(name, out var alts))
+                if (sNpc.Resident == null ||!string.IsNullOrWhiteSpace(sNpc.Resident?.Singular))
                 {
-                    alts = new List<dynamic>();
-                    _alternatesByName[name] = alts;
+                    if (iENpcById.TryGetValue(sNpc.Key, out var iNpc))
+                    {
+                        _builder.Localize.Column((JObject)npc, sNpc.Resident, iNpc.Resident, "Singular", "name", Utils.CapitalizeWords);
+                    }
+                    else
+                    {
+                        _builder.Localize.Column((JObject)npc, sNpc.Resident, "Singular", "name", Utils.CapitalizeWords);
+                    }
+
+                    string name = npc.chs.name;
+                    npc.patch = PatchDatabase.Get("npc", sNpc.Key);
+
+                    // Set base information.
+                    if (!_alternatesByName.TryGetValue(name, out var alts))
+                    {
+                        alts = new List<dynamic>();
+                        _alternatesByName[name] = alts;
+                    }
+                    alts.Add(npc);
+                } else
+                {
+                    foreach(var langTuple in _builder.Localize.AvailableLangs())
+                    {
+                        var code = langTuple.Item1;
+                        var lang = langTuple.Item2;
+                        npc[code] = new JObject();
+                        switch (lang)
+                        {
+                            case SaintCoinach.Ex.Language.ChineseSimplified:
+                                npc[code].name = $"无名氏 #{sNpc.Key}";
+                                break;
+                            default:
+                                npc[code].name = $"Unnamed #{sNpc.Key}";
+                                break;
+                        }
+                        
+                    }
+                    npc.patch = "1.9";
                 }
-                alts.Add(npc);
+                
 
                 var title = sNpc.Title.ToString();
                 if (!string.IsNullOrEmpty(title))
@@ -135,11 +172,16 @@ namespace Garland.Data.Modules
 
                 // Other work.
                 BuildAppearanceData(npc, sNpc);
+                if (_photoFileNameById.TryGetValue(sNpc.Key, out var photoFileName))
+                {
+                    npc.photo = photoFileName;
+                }
 
                 _builder.Db.Npcs.Add(npc);
                 _builder.Db.NpcsById[sNpc.Key] = npc;
             }
 
+            /*
             List<dynamic> BNpcs = FetchBNpcs();
             var sBNpcBases = _builder.Realm.GameData.GetSheet<Saint.BNpcBase>().ToArray();
             var sBNpcNames = _builder.Realm.GameData.GetSheet<Saint.BNpcName>().ToArray();
@@ -178,6 +220,7 @@ namespace Garland.Data.Modules
                     _builder.Db.Npcs.Add(bnpc);
                 }
             }
+            */
         }
 
         public void SanitizeBNpc(dynamic bnpc, string sName, Saint.TerritoryType[] sZones)
@@ -291,15 +334,10 @@ namespace Garland.Data.Modules
                 if (!isMale)
                     appearance.bust = (byte)sBNpc.BNpcCustomize["ExtraFeature2OrBust"];
             }
-            else if (race.Key == 6 && isMale)
-            {
-                // Au Ra male muscles
-                appearance.muscle = (byte)sBNpc.BNpcCustomize["BustOrTone1"];
-            }
             else if (!isMale)
             {
                 // Other female bust sizes
-                appearance.bust = (byte)sBNpc.BNpcCustomize["BustOrTone1"];
+                appearance.bust = (byte)sBNpc.BNpcCustomize["ExtraFeature2OrBust"];
             }
 
             // Hair & Highlights
@@ -355,7 +393,7 @@ namespace Garland.Data.Modules
                 appearance.extraFeatureName = extraFeatureName;
 
                 appearance.extraFeatureShape = (byte)sBNpc.BNpcCustomize["ExtraFeature1"];
-                appearance.extraFeatureSize = (byte)sBNpc.BNpcCustomize["ExtraFeature2OrBust"];
+                appearance.extraFeatureSize = (byte)sBNpc.BNpcCustomize["BustOrTone1"];
             }
 
             // Facepaint
@@ -487,15 +525,10 @@ namespace Garland.Data.Modules
                 if (!isMale)
                     appearance.bust = (byte)sNpc.Base["ExtraFeature2OrBust"];
             }
-            else if (race.Key == 6 && isMale)
-            {
-                // Au Ra male muscles
-                appearance.muscle = (byte)sNpc.Base["BustOrTone1"];
-            }
             else if (!isMale)
             {
                 // Other female bust sizes
-                appearance.bust = (byte)sNpc.Base["BustOrTone1"];
+                appearance.bust = (byte)sNpc.Base["ExtraFeature2OrBust"];
             }
 
             // Hair & Highlights
@@ -551,7 +584,7 @@ namespace Garland.Data.Modules
                 appearance.extraFeatureName = extraFeatureName;
 
                 appearance.extraFeatureShape = (byte)sNpc.Base["ExtraFeature1"];
-                appearance.extraFeatureSize = (byte)sNpc.Base["ExtraFeature2OrBust"];
+                appearance.extraFeatureSize = (byte)sNpc.Base["BustOrTone1"];
             }
 
             // Facepaint
@@ -605,6 +638,17 @@ namespace Garland.Data.Modules
             }
 
             // todo: CharaMakeType ExtraFeatureData for faces, extra feature icons.
+
+            string appearanceJsonString = appearance.ToString();
+            int appearanceHashCode = Utils.GetDeterministicHashCode(appearanceJsonString);
+            appearance.hash = appearanceHashCode;
+            if (!_alternatesByAppearance.TryGetValue(appearanceHashCode, out var alts))
+            {
+                alts = new List<dynamic>();
+                _alternatesByAppearance[appearanceHashCode] = alts;
+            }
+            alts.Add(npc);
+
         }
 
         void LinkAlternates()
@@ -612,18 +656,36 @@ namespace Garland.Data.Modules
             foreach (var npc in _builder.Db.Npcs)
             {
                 string name = npc.chs.name ?? "";
-                var alts = _alternatesByName[name];
+                
+                if(_alternatesByName.TryGetValue(name, out var alts)){
+                    var otherAlts = alts.Where(a => a != npc).OrderBy(a => (int)a.id).ToArray();
 
-                var otherAlts = alts.Where(a => a != npc).OrderBy(a => (int)a.id).ToArray();
-                if (otherAlts.Length > 0)
-                {
-                    npc.alts = new JArray();
-
-                    foreach (var alt in otherAlts)
+                    if (otherAlts.Length > 0)
                     {
-                        int altId = alt.id;
-                        npc.alts.Add(altId);
-                        _builder.Db.AddReference(npc, "npc", altId, false);
+                        npc.alts = new JArray();
+
+                        foreach (var alt in otherAlts)
+                        {
+                            int altId = alt.id;
+                            npc.alts.Add(altId);
+                            _builder.Db.AddReference(npc, "npc", altId, false);
+                        }
+                    }
+                }
+
+                int appHash = npc.appearance?.hash ?? 0;
+                if (_alternatesByAppearance.TryGetValue(appHash, out var appAlts)){
+                    var otherAppAlts = appAlts.Where(a => a != npc).OrderBy(a => (int)a.id).ToArray();
+                    if (otherAppAlts.Length > 0)
+                    {
+                        npc.appalts = new JArray();
+
+                        foreach (var alt in otherAppAlts)
+                        {
+                            int altId = alt.id;
+                            npc.appalts.Add(altId);
+                            _builder.Db.AddReference(npc, "npc", altId, false);
+                        }
                     }
                 }
             }

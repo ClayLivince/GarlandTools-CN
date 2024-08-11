@@ -113,8 +113,8 @@ gt.core = {
 
     initialize: function() {
         try {
-            if (!gt.core.isLive)
-                gt.serverPath = 'http://test.garlandtools.org';
+            //if (!gt.core.isLive)
+            //    gt.serverPath = 'http://test.garlandtools.org';
 
             if (window.Sentry && gt.core.isLive) {
                 Sentry.init({

@@ -24,7 +24,7 @@
     <Resource Include="Garland Guy.ico" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\SaintCoinach\SaintCoinach\SaintCoinach.csproj" />
+    <ProjectReference Include="..\..\SaintCoinach-CN\SaintCoinach\SaintCoinach.csproj" />
     <ProjectReference Include="..\Garland.Data\Garland.Data.csproj" />
   </ItemGroup>
   <ItemGroup>

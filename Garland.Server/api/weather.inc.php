@@ -124,11 +124,14 @@ $zoneWeather = array('利姆萨·罗敏萨' => array(array('Rate' => 20, 'Weathe
     '拉凯提卡大森林' => array(array('Rate' => 10, 'Weather' => 4), array('Rate' => 20, 'Weather' => 7), array('Rate' => 30, 'Weather' => 49), array('Rate' => 45, 'Weather' => 1), array('Rate' => 85, 'Weather' => 2), array('Rate' => 100, 'Weather' => 3)),
     '黑风海' => array(array('Rate' => 20, 'Weather' => 3), array('Rate' => 80, 'Weather' => 2), array('Rate' => 100, 'Weather' => 1)),
     '完璧王座' => array(array('Rate' => 100, 'Weather' => 118)),
+    '悬挂公馆起居室' => array(array('Rate' => 20, 'Weather' => 1), array('Rate' => 60, 'Weather' => 2), array('Rate' => 75, 'Weather' => 3), array('Rate' => 85, 'Weather' => 4), array('Rate' => 95, 'Weather' => 7), array('Rate' => 100, 'Weather' => 10)),
     '丽耶美格梦园' => array(array('Rate' => 100, 'Weather' => 4)),
     '天穹街' => array(array('Rate' => 60, 'Weather' => 15), array('Rate' => 70, 'Weather' => 2), array('Rate' => 75, 'Weather' => 1), array('Rate' => 90, 'Weather' => 3), array('Rate' => 100, 'Weather' => 4)),
     '南方博兹雅战线' => array(array('Rate' => 52, 'Weather' => 2), array('Rate' => 64, 'Weather' => 7), array('Rate' => 76, 'Weather' => 5), array('Rate' => 88, 'Weather' => 9), array('Rate' => 100, 'Weather' => 11)),
     '扎杜诺尔高原' => array(array('Rate' => 60, 'Weather' => 2), array('Rate' => 70, 'Weather' => 7), array('Rate' => 80, 'Weather' => 5), array('Rate' => 90, 'Weather' => 9), array('Rate' => 100, 'Weather' => 15)),
+    '月球深处' => array(array('Rate' => 100, 'Weather' => 151)),
     '母水晶' => array(array('Rate' => 100, 'Weather' => 151)),
+    '尽头的终点' => array(array('Rate' => 100, 'Weather' => 127)),
     '旧萨雷安' => array(array('Rate' => 10, 'Weather' => 1), array('Rate' => 50, 'Weather' => 2), array('Rate' => 70, 'Weather' => 3), array('Rate' => 85, 'Weather' => 4), array('Rate' => 100, 'Weather' => 15)),
     '拉札罕' => array(array('Rate' => 10, 'Weather' => 4), array('Rate' => 25, 'Weather' => 7), array('Rate' => 40, 'Weather' => 1), array('Rate' => 80, 'Weather' => 2), array('Rate' => 100, 'Weather' => 3)),
     '迷津' => array(array('Rate' => 15, 'Weather' => 1), array('Rate' => 60, 'Weather' => 2), array('Rate' => 85, 'Weather' => 3), array('Rate' => 100, 'Weather' => 7)),
@@ -147,6 +150,7 @@ $zoneWeather = array('利姆萨·罗敏萨' => array(array('Rate' => 20, 'Weathe
     '至福乐土' => array(array('Rate' => 15, 'Weather' => 149), array('Rate' => 85, 'Weather' => 2), array('Rate' => 100, 'Weather' => 49)),
     '冥魂石洞 - 白岭山麓' => array(array('Rate' => 100, 'Weather' => 16)),
     '万魔的产房' => array(array('Rate' => 100, 'Weather' => 157)),
+    '阿赖耶宝塔' => array(array('Rate' => 100, 'Weather' => 105)),
     '埃斯蒂尼安的房间' => array(array('Rate' => 10, 'Weather' => 4), array('Rate' => 25, 'Weather' => 7), array('Rate' => 40, 'Weather' => 1), array('Rate' => 80, 'Weather' => 2), array('Rate' => 100, 'Weather' => 3)),
     '元老院站' => array(array('Rate' => 45, 'Weather' => 15), array('Rate' => 50, 'Weather' => 9), array('Rate' => 55, 'Weather' => 7), array('Rate' => 60, 'Weather' => 4), array('Rate' => 85, 'Weather' => 3), array('Rate' => 95, 'Weather' => 2), array('Rate' => 100, 'Weather' => 1)));
 

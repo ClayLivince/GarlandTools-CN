@@ -48529,7 +48529,7 @@ gt.bell.fish = [
     "zone": "旧萨雷安"
   },
   {
-    "name": "钴铁光腮鱼",
+    "name": "钴铁光鳃鱼",
     "patch": 6.0,
     "baits": [
       [
@@ -49434,7 +49434,7 @@ gt.bell.fish = [
     "zone": "迷津"
   },
   {
-    "name": "绿腮鲑",
+    "name": "绿鳃鲑",
     "patch": 6.0,
     "baits": [
       [

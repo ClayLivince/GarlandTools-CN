@@ -292,5 +292,10 @@ namespace Garland.Data.Modules
                 _builder.Db.AddReference(item, "instance", instanceId, true);
             }
         }
+
+        void BuildAllaganReport()
+        {
+
+        }
     }
 }
