@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Garland.Data.Lodestone;
 
-namespace Garland.Data.Scraper
+namespace Garland.Data.Web
 {
     public class ChoreScraper : WebScraper
     {
@@ -14,7 +14,7 @@ namespace Garland.Data.Scraper
         {
             EnsureFile("Mappy.csv",
                 "https://xivapi.com/download?data=map_data", refresh);
-            
+
             EnsureFile("Duties.json",
                 "https://github.com/ClayLivince/FFXIV-Lodestone-Duty-Scraper/raw/main/FFXIV%20Data%20-%20Duties.json",
                 refresh);

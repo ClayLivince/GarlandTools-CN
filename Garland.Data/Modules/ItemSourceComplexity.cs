@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json.Linq;
+using SaintCoinach.Xiv.Items;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,7 @@ namespace Garland.Data.Modules
     public class ItemSourceComplexity : Module
     {
         Dictionary<int, SourceComplexity> _complexityByItemId = new Dictionary<int, SourceComplexity>();
+        HashSet<int> _layer2Items = new HashSet<int>();
 
         public override string Name => "Item Source Complexity";
 
@@ -66,6 +68,71 @@ namespace Garland.Data.Modules
         public int GetHqComplexity(int itemId)
         {
             return CalculateComplexity(itemId).HqScore;
+        }
+
+        SourceComplexity Layer2Complexity(int itemId)
+        {
+            if (_complexityByItemId.TryGetValue(itemId, out var complexity))
+                return complexity;
+
+            // Insert a sentinel for cycle guarding.
+            complexity = new SourceComplexity() { HqScore = 99999, NqScore = 99999 };
+            _complexityByItemId[itemId] = complexity;
+
+            // Calculate the complexity of the item.
+            var item = _builder.Db.ItemsById[itemId];
+
+            if (item.desynthedFrom != null)
+            {
+                if (item.desynthedFrom.Count == 0)
+                {
+                    // Easy desynthesis usually
+                    complexity.RecordScores(20);
+                }
+                else
+                {
+                    foreach (int desynthItemId in item.desynthedFrom)
+                    {
+                        if (desynthItemId == (int)item.id)
+                        {
+                            complexity.RecordScores(20);
+                        }
+                        else
+                        {
+                            var child = CalculateComplexity(desynthItemId);
+
+                            complexity.RecordScores(child.NqScore + 5);
+                        }
+                    }
+                }
+            }
+
+            if (item.craft != null)
+            {
+                complexity.Crafts = new List<SourceComplexity>();
+
+                foreach (var craft in item.craft)
+                {
+                    var craftComplexity = new SourceComplexity();
+                    foreach (var ingredient in craft.ingredients)
+                    {
+                        var ingredientAmount = (int)ingredient.amount;
+                        var child = CalculateComplexity((int)ingredient.id);
+                        craftComplexity.NqScore += (child.NqScore * ingredientAmount);
+                        // Intentionally tracks NqScore of child for HQ of parent.
+                        craftComplexity.HqScore += (child.NqScore * ingredientAmount);
+                    }
+
+                    // Crafted items take a complexity penalty for setting up the craft too.
+                    craftComplexity.NqScore += 10;
+                    craftComplexity.HqScore += 30;
+
+                    complexity.Crafts.Add(craftComplexity);
+                    complexity.RecordScores(craftComplexity);
+                }
+            }
+
+            return complexity;
         }
 
         SourceComplexity CalculateComplexity(int itemId)
@@ -159,11 +226,8 @@ namespace Garland.Data.Modules
                 }
                 else
                 {
-                    foreach (int desynthItemId in item.desynthedFrom)
-                    {
-                        var child = CalculateComplexity(desynthItemId);
-                        complexity.RecordScores(child.NqScore + 5);
-                    }
+                    _layer2Items.Add(itemId);
+                    complexity.RecordScores(80);
                 }
             }
 

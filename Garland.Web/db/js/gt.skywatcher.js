@@ -11,6 +11,7 @@ gt.skywatcher = {
         { icon: "images/region/Gyr Abania.png", name: "基拉巴尼亚", page: "GyrAbania", zones: [2403, 2406, 2407, 2408] },
         { icon: "images/region/Kugane.png", name: "远东之国", page: "FarEast", zones: [513, 2412, 2409, 2410, 2411, 3534, 3662] },
         { icon: "images/region/Ilsabard.png", name: "伊尔萨巴德次大陆", page: "Ilsabard", zones: [3707, 3709, 3710, 2414, 2462, 2530, 2545] },
+        { icon: "images/region/Tural.png", name: "图拉尔大陆", page: "Tural", zones: [4504, 4505, 4506, 4507, 4503, 4508, 4509, 4510] },
         { icon: "images/region/Norvrandt.png", name: "诺弗兰特", page: "Norvrandt", zones: [516, 517, 2953, 2954, 2955, 2956, 2957, 2958], },
         { icon: "images/marker/Aetheryte.png", name: "其他", page: "Others", zones: [67, 3706, 3708, 3711, 3712, 3713] }
     ],

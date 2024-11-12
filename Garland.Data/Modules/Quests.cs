@@ -267,10 +267,10 @@ namespace Garland.Data.Modules
                         continue;
 
                     var key = (int)instruction.Argument;
-                    ImportQuestUsedItems(quest, sQuest, key);
+                    LinkQuestUsedItems(quest, sQuest, key);
                 }
 
-                ImportQuestLore(quest, sQuest, instructions);
+                ImportQuestLoreUsedItems(quest, sQuest, instructions);
 
                 if (((JObject)rewards).Count > 0)
                     quest.reward = rewards;
@@ -282,7 +282,7 @@ namespace Garland.Data.Modules
             }
         }
 
-        void ImportQuestUsedItems(dynamic quest, Saint.Quest sQuest, int key)
+        void LinkQuestUsedItems(dynamic quest, Saint.Quest sQuest, int key)
         {
             if (_builder.Db.ItemsById.TryGetValue(key, out var item))
             {
@@ -472,21 +472,15 @@ namespace Garland.Data.Modules
             // sQuest.Requirements.QuestLevelOffset: Not sure what this is for.
         }
 
-        void ImportQuestLore(dynamic quest, Saint.Quest sQuest, ScriptInstruction[] instructions)
+        void ImportQuestLoreUsedItems(dynamic quest, Saint.Quest sQuest, ScriptInstruction[] instructions)
         {
-            // todo: retrieve sheets for all languages, index using english version, then push into localized quest obj.
+            // Lore is imported through QuestsLore Module seperately, not mix it here, because it is way too slow.
 
             var idParts = sQuest.Id.ToString().Split('_');
             var idPath = new string(idParts[1].Take(3).ToArray());
             var textSheetId = string.Format("quest/{0}/{1}", idPath, sQuest.Id);
             var textSheet = _builder.Sheet(textSheetId)
                 .Select(r => new { r.Key, Tokens = r[0].ToString().Split('_'), XivString = (SaintCoinach.Text.XivString)r[1] });
-
-            quest.journal = new JArray();
-            quest.objectives = new JArray();
-            quest.dialogue = new JArray();
-
-            string lastLine = null;
 
             foreach (var row in textSheet)
             {
@@ -507,7 +501,7 @@ namespace Garland.Data.Modules
                 foreach (var pair in fmter.IndexedSheetRows())
                 {
                     if (pair.Item1.Equals("Item"))
-                        ImportQuestUsedItems(quest, sQuest, pair.Item2);
+                        LinkQuestUsedItems(quest, sQuest, pair.Item2);
                     else
                     {
                         if (quest.otherIndexes == null)
@@ -520,121 +514,7 @@ namespace Garland.Data.Modules
                         quest.otherIndexes.Add(obj);
                     }
                 }
-
-                //if (str.Contains("Aye, an anima weapon")) // Has IntegerParameter(1) [Error] - need to pass proper eval parameters in.
-                //    System.Diagnostics.Debugger.Break();
-
-                if (row.Tokens.Contains("SEQ"))
-                    quest.journal.Add(str);
-                else if (row.Tokens.Contains("TODO"))
-                {
-                    if (lastLine == str)
-                    {
-                        //System.Diagnostics.Debug.WriteLine("Skipping duplicate quest {0} objective: {1}", gameData.Key, lastLine);
-                        continue;
-                    }
-                    quest.objectives.Add(str);
-                }
-                else
-                {
-                    dynamic obj = new JObject();
-
-                    if (row.Tokens[3].All(char.IsDigit))
-                        obj.name = row.Tokens[4];
-                    else
-                        obj.name = row.Tokens[3];
-
-                    obj.text = str;
-                    quest.dialogue.Add(obj);
-                }
-
-                lastLine = str;
             }
-
-            Regex textRegex = new Regex("TEXT_VOICEMAN_(\\d{5})_(\\d{6})_(.*?)\u0000");
-            Dictionary<int, Saint.XivRow> cutsceneById = new Dictionary<int, Saint.XivRow>();
-            foreach (var row in _builder.Sheet("Cutscene"))
-            {
-                cutsceneById[row.Key] = row;
-            }
-
-            if (quest.genre?.Value != 0)
-            {
-                var cutscenes = new JArray();
-                foreach (var instruction in instructions)
-                {
-                    if (instruction.Label.StartsWith("NCUT") || instruction.Label.StartsWith("CUTSCENE") || instruction.Label.StartsWith("CUT_SCENE"))
-                    {
-                        var cutscene = new JArray();
-                        try
-                        {
-                            string label = instruction.Label;
-                            int cutsceneId = (int)instruction.Argument;
-                            string path;
-                            if (cutsceneById.TryGetValue(cutsceneId, out var cutsceneRow))
-                            {
-                                path = "cut/" + cutsceneRow["Path"] + ".cutb";
-                            }
-                            else
-                            {
-                                string code = label.Substring(11);
-                                string questCode = sQuest.Id.ToString().Substring(0, 6).ToLower();
-                                path = "cut/" + sQuest.ExpansionCode + "/" + questCode + "/" + questCode + code + "/" + questCode + code + ".cutb";
-                            }
-                            if (!_builder.Realm.Packs.TryGetFile(path, out var cutb))
-                            {
-                                DatabaseBuilder.PrintLine($"cutb file {path} not found.");
-                                continue;
-                            }
-
-                            StreamReader reader = new StreamReader(cutb.GetStream());
-                            string cutbFileText = reader.ReadToEnd();
-
-                            MatchCollection matchCol = textRegex.Matches(cutbFileText);
-                            foreach (Match match in matchCol)
-                            {
-                                dynamic obj = new JObject();
-                                string textIndex = match.Value.Substring(0, match.Value.Length - 1);
-                                string exCode = match.Groups[1].Value.Trim();
-                                string voiceIndex = match.Groups[2].Value.Trim();
-                                string speaker = match.Groups[3].Value.Trim();
-                                string text = GetCutsceneText(exCode, textIndex);
-
-                                obj.name = speaker;
-                                obj.text = text;
-
-                                try
-                                {
-                                    string voicePath = EnsureVoiceLine(sQuest.ExpansionCode, exCode, voiceIndex);
-                                    if (voicePath != "notfound")
-                                        obj.voice = voicePath;
-                                }
-                                catch (Exception e)
-                                {
-                                    if (System.Diagnostics.Debugger.IsAttached)
-                                        System.Diagnostics.Debugger.Break();
-                                }
-
-                                cutscene.Add(obj);
-                            }
-                            if (cutscene.Count > 0)
-                            {
-                                cutscenes.Add(cutscene);
-                            }
-                        }
-                        catch (Exception e)
-                        {
-                            if (System.Diagnostics.Debugger.IsAttached)
-                                System.Diagnostics.Debugger.Break();
-                        }
-                    }
-                }
-                if (cutscenes.Count > 0)
-                {
-                    quest.cutscenes = cutscenes;
-                }
-            }
-
 
             // Script instructions
             //if (instructions.Length > 0)
@@ -648,83 +528,6 @@ namespace Garland.Data.Modules
             //        quest.script.Add(ImportInstruction(_builder, instruction));
             //    }
             //}
-        }
-
-        string GetCutsceneText(string ex, string code)
-        {
-            if (_cutTextByExCode.TryGetValue(ex, out var textByCode))
-            {
-                return textByCode[code];
-            }
-            else
-            {
-                var textSheetId = string.Format("cut_scene/{0}/VoiceMan_{1}", ex.Substring(0, 3), ex);
-                var textSheet = _builder.Sheet(textSheetId);
-
-                Dictionary<string, string> textByCodeN = new Dictionary<string, string>();
-                foreach (var row in textSheet)
-                {
-                    textByCodeN[row[0].ToString()] = row[1].ToString();
-                }
-
-                _cutTextByExCode[ex] = textByCodeN;
-                return textByCodeN[code];
-            }
-        }
-
-        string EnsureVoiceLine(string expansionCode, string ex, string voiceIndex)
-        {
-            // cut/ex3/sound/VOICEM/VOICEMAN_05300/vo_VOICEMAN_05300_002300_m_ja.scd
-            var voiceDirectory = Path.Combine(Config.VoicePath, ex);
-            var returnVoicePath = ex + "/" + voiceIndex;
-            foreach (string langKey in VOICE_LINE_LANGS.Keys)
-            {
-                try
-                {
-                    // var voicePath = ex + "/" + voiceIndex + ".ogg";
-                    var fullPath = Path.Combine(voiceDirectory, voiceIndex + $".{VOICE_LINE_LANGS[langKey]}.ogg");
-                    if (File.Exists(fullPath))
-                        continue;
-
-                    // Write voices that don't yet exist.
-                    Directory.CreateDirectory(voiceDirectory);
-
-                    string path = string.Format("cut/{0}/sound/VOICEM/VOICEMAN_{1}/vo_VOICEMAN_{1}_{2}_m_{3}.scd", expansionCode, ex, voiceIndex, langKey);
-                    _builder.Realm.Packs.TryGetFile(path, out var scdRaw);
-                    if (scdRaw == null)
-                    {
-                        DatabaseBuilder.PrintLine($"Failed to get voice file of {path}.");
-                        return "notfound";
-                    }
-                    var sScdFile = new SaintCoinach.Sound.ScdFile(scdRaw);
-                    var sEntry = sScdFile.Entries[0];
-                    if (sEntry == null)
-                        return "notfound";
-
-                    // File.WriteAllBytes(fullPath, sEntry.GetDecoded());
-
-                    var baseFileName = Path.Combine("output\\input.ogg");
-                    File.WriteAllBytes(baseFileName, sEntry.GetDecoded());
-
-
-                    var ffmpeg = new Process();
-                    ffmpeg.StartInfo = new ProcessStartInfo(Config.FfmpegPath, "-i output\\input.ogg -acodec libvorbis -b:a 128k output\\output.ogg");
-                    ffmpeg.Start();
-                    ffmpeg.WaitForExit();
-
-
-                    File.Move("output\\output.ogg", fullPath);
-                }
-                catch
-                {
-                    DatabaseBuilder.PrintLine($"Some error happened while handling voice line.");
-                    if (Debugger.IsAttached)
-                        Debugger.Break();
-                }
-            }
-
-
-            return returnVoicePath;
         }
     }
 }

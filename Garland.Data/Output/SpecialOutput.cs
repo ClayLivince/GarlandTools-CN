@@ -13,10 +13,11 @@ namespace Garland.Data.Output
         public static void Run()
         {
             //ExportFishTsv();
-            ExportZoneWeather();
+            ExportZoneWeatherPHP();
+            ExportZoneWeatherJS();
         }
 
-        static void ExportZoneWeather()
+        static void ExportZoneWeatherPHP()
         {
             var db = GarlandDatabase.Instance;
             var parts = new List<string>();
@@ -53,6 +54,46 @@ namespace Garland.Data.Output
             parts.Add("");
             var result = "<?php\r\n\r\n" + string.Join(";\r\n\r\n", parts) + "?>\r\n";
             FileDatabase.WriteFile("Garland.Server\\api\\weather.inc.php", result);
+        }
+
+        static void ExportZoneWeatherJS()
+        {
+            var db = GarlandDatabase.Instance;
+            var parts = new List<string>();
+
+            // Weather index
+            var weatherIndex = string.Join(",", db.Weather.Select(w => "\"" + w + "\""));
+            parts.Add($"gt.skywatcher.weatherIndex = [{weatherIndex}]");
+
+            // Zone weather
+            var zoneWeather = new List<string>();
+            foreach (var location in db.Locations)
+            {
+                if (!db.LocationReferences.Contains((int)location.id))
+                    continue;
+
+                if (location.weatherRate == null)
+                    continue;
+
+                string zoneName = location.name;
+                int zoneID = location.id;
+                if (string.IsNullOrEmpty(zoneName))
+                    continue;
+
+                var weatherRateId = (int)location.weatherRate;
+                var weatherRate = db.WeatherRates.First(r => r.id == weatherRateId);
+
+                JArray rates = weatherRate.rates;
+                var rateList = string.Join(", ", rates.Select(r => $"{{\"rate\":{r["rate"]},\"weather\":{r["weather"]} }}"));
+                zoneWeather.Add($"\"{zoneName}\":{{\"id\":{zoneID},\"rates\":[{rateList}]}}");
+            }
+
+            parts.Add($"gt.skywatcher.weatherRateIndex = {{{string.Join(",", zoneWeather)}}}");
+
+            // Done
+            parts.Add("");
+            var result = string.Join(";\n", parts);
+            FileDatabase.WriteFile("Garland.Web\\bell\\gt.weather.js", result);
         }
 
         static string PhpEscape(string str)

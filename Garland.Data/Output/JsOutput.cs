@@ -17,7 +17,7 @@ namespace Garland.Data.Output
         GarlandDatabase _db;
         UpdatePackage _update;
         ConcurrentDictionary<object, HashSet<int>> _componentsByItemId = new ConcurrentDictionary<object, HashSet<int>>();
-        Dictionary<Tuple<string, string>, Dictionary<string, JObject>> _partialsByLangTypeById = new Dictionary<Tuple<string, string>, Dictionary<string, JObject>>();
+        ConcurrentDictionary<Tuple<string, string>, Dictionary<string, JObject>> _partialsByLangTypeById = new ConcurrentDictionary<Tuple<string, string>, Dictionary<string, JObject>>();
         ConcurrentDictionary<dynamic, dynamic> _ingredientsByItem = new ConcurrentDictionary<dynamic, dynamic>();
         readonly static JsonConverter[] _converters = new[] { new WrapperConverter() };
         readonly static string[] _languagesCodes = new[] { "chs" };
@@ -395,7 +395,17 @@ namespace Garland.Data.Output
             var relevantLocations = _db.Locations.Where(l => l.id < 0 || _db.LocationReferences.Contains((int)l.id)).ToArray();
             core.locationIndex = new JObject();
             foreach (var location in relevantLocations)
-                core.locationIndex.Add((string)location.id, location);
+            {
+                var localizedLocation = new JObject(location);
+                localizedLocation["name"] = localizedLocation[lang]["name"];
+                localizedLocation.Remove("en");
+                localizedLocation.Remove("ja");
+                localizedLocation.Remove("fr");
+                localizedLocation.Remove("de");
+                localizedLocation.Remove("chs");
+                core.locationIndex.Add((string)location.id, localizedLocation);
+            }
+
 
             // Skywatcher
             core.skywatcher = new JObject();
@@ -428,6 +438,9 @@ namespace Garland.Data.Output
 
             // Materia Join Rates
             core.materiaJoinRates = _db.MateriaJoinRates;
+
+            // Voyages
+            core.voyages = _db.FreeCompanyVoyages;
 
             // Item
             core.item = new JObject();

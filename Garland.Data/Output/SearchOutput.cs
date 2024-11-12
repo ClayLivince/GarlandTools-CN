@@ -51,6 +51,9 @@ namespace Garland.Data.Output
             {
                 var key = (string)npc.chs.name;
 
+                if (key.Contains("无名氏 #"))
+                    continue;
+
                 // NPCs only need to appear once per name.  Skip duplicates.
                 // Alternate instances can be looked up via the alts UI.
                 if (npcNamesUsed.Contains(key))

@@ -303,7 +303,7 @@ namespace Garland.Data.Modules
         void BuildSupplementalInstances()
         {
             JArray duties = (JArray) Utils.Json(Path.Combine(Config.SupplementalPath, "FFXIV Data - Duties.json"));
-            foreach(dynamic jDuty in duties)
+            foreach (dynamic jDuty in duties)
             {
                 // jump guildhests as it does not drop any thing.
                 if ("guildhest".Equals((string)jDuty.category))
@@ -312,7 +312,7 @@ namespace Garland.Data.Modules
                 }
 
                 // avoid accidents
-                if(!_instanceByEnName.TryGetValue(jDuty.name.Value, out dynamic instance))
+                if (!_instanceByEnName.TryGetValue(jDuty.name.Value, out dynamic instance))
                 {
                     DatabaseBuilder.PrintLine("Failed to find instance named " + jDuty.name);
                     continue;
@@ -332,8 +332,9 @@ namespace Garland.Data.Modules
                             fights.Add(BuildSupplementalFight(instance, jFight, otherItemRewards));
                         }
                     }
-                } 
-                else {
+                }
+                else
+                {
                     // TODO: verify the loot and boss name
                     // currently let's assume it was and is still all correct
                     // due to it was troublesome to re-identify the mob
@@ -362,7 +363,7 @@ namespace Garland.Data.Modules
                         {
                             rewardSet.Add(item.Value.ToString());
                         }
-                        
+
                         foreach (dynamic jItem in otherItemRewards)
                         {
                             if (rewardSet.Contains(jItem.Value.ToString()))
@@ -371,7 +372,8 @@ namespace Garland.Data.Modules
                             rewardSet.Add(jItem.Value.ToString());
                             instance.rewards.Add(jItem);
                         }
-                    } else
+                    }
+                    else
                     {
                         instance.rewards = otherItemRewards;
                     }
@@ -401,19 +403,24 @@ namespace Garland.Data.Modules
             if (jFight.token != null)
             {
                 var currencyArray = new JArray();
-                fight.currency = currencyArray;
+
                 foreach (dynamic jToken in jFight.token as JArray)
                 {
                     try
                     {
                         dynamic currency = new JObject();
-                        currencyArray.Add(currency);
                         currency.id = _tomestoneIdByName[jToken.name.Value];
                         currency.amount = jToken.amount;
-                    } catch(KeyNotFoundException e)
+                        currencyArray.Add(currency);
+                    }
+                    catch (KeyNotFoundException e)
                     {
                         DatabaseBuilder.PrintLine($"Tomestone named {jToken.name.Value} not found.");
                     }
+                }
+                if (currencyArray.Count > 0)
+                {
+                    fight.currency = currencyArray;
                 }
             }
 

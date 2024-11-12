@@ -171,6 +171,7 @@ gt.core = {
         gt.skywatcher.weatherRateIndex = data.skywatcher.weatherRateIndex;
         gt.quest.genreIndex = data.questGenreIndex;
         gt.venture.index = data.ventureIndex;
+        gt.venture.voyageIndex = data.voyages;
         gt.action.categoryIndex = data.action.categoryIndex;
         gt.achievement.categoryIndex = data.achievementCategoryIndex;
         gt.item.categoryIndex = data.item.categoryIndex;
@@ -418,6 +419,9 @@ gt.core = {
             var view = (obj && obj.error) ? obj : module.getViewModel(obj, blockData);
             var $block = $(gt.core.blockTemplate(view));
             blockLoaded($block, view);
+            if (module.blockLoaded){
+                module.blockLoaded($block, view);
+            }
         } catch (ex) {
             if (!gt.core.retryLoad()) {
                 if (window.Sentry && gt.core.isLive)
@@ -644,7 +648,7 @@ gt.core = {
         if (blockData.heightUnlocked)
             $block.addClass('height-unlocked');
 
-        $('.block-title .close-button', $block).click(gt.core.closeButtonClicked);
+        $('.block-title .block-close-button', $block).click(gt.core.closeButtonClicked);
         $('.block-title .settings-button', $block).click(gt.core.settingsButtonClicked);
         $('.block-title .copy-button', $block).click(gt.core.copyButtonClicked);
         $('.settings .unlock-height-link', $block).click(gt.core.unlockHeightLinkClicked);

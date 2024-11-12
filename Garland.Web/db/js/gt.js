@@ -171,6 +171,7 @@ gt.core = {
         gt.skywatcher.weatherRateIndex = data.skywatcher.weatherRateIndex;
         gt.quest.genreIndex = data.questGenreIndex;
         gt.venture.index = data.ventureIndex;
+        gt.venture.voyageIndex = data.voyages;
         gt.action.categoryIndex = data.action.categoryIndex;
         gt.achievement.categoryIndex = data.achievementCategoryIndex;
         gt.item.categoryIndex = data.item.categoryIndex;
@@ -418,6 +419,9 @@ gt.core = {
             var view = (obj && obj.error) ? obj : module.getViewModel(obj, blockData);
             var $block = $(gt.core.blockTemplate(view));
             blockLoaded($block, view);
+            if (module.blockLoaded){
+                module.blockLoaded($block, view);
+            }
         } catch (ex) {
             if (!gt.core.retryLoad()) {
                 if (window.Sentry && gt.core.isLive)
@@ -644,7 +648,7 @@ gt.core = {
         if (blockData.heightUnlocked)
             $block.addClass('height-unlocked');
 
-        $('.block-title .close-button', $block).click(gt.core.closeButtonClicked);
+        $('.block-title .block-close-button', $block).click(gt.core.closeButtonClicked);
         $('.block-title .settings-button', $block).click(gt.core.settingsButtonClicked);
         $('.block-title .copy-button', $block).click(gt.core.copyButtonClicked);
         $('.settings .unlock-height-link', $block).click(gt.core.unlockHeightLinkClicked);
@@ -1239,7 +1243,7 @@ gt.patch = {
     categoryIndex: {},
     version: 2,
     browse: [
-        { type: 'group', prop: 'series' },
+        { type: 'group', prop: 'series', sortFunc: function(e) { return 100 - Number.parseFloat(e.entries[0].id); } },
         { type: 'sort', prop: 'id' }
     ],
     majorPatchBrowse: [
@@ -1543,7 +1547,8 @@ gt.browse = {
         }
 
         // Lots of numbers, needs natural sort.
-        var sortedGroup = _.sortByNatural(group, function(e) { return e.header; });
+        var sortedGroup = _.sortByNatural(group, category.sortFunc ? category.sortFunc :
+            category.sortBy? function(e) { return e[category.sortBy]; } : function(e) { return e.header; });
         return category.reverse ? sortedGroup.reverse() : sortedGroup;
     },
 
@@ -2287,14 +2292,48 @@ gt.item = {
         if (item.achievements)
             view.other = _.union(view.other, _.map(gt.model.partialList(gt.achievement, item.achievements), function(i) { return $.extend(i, {right: '成就'}); }));
 
-        if (item.voyages)
-            view.other = _.union(view.other, _.map(item.voyages, function(s) { return { name: s, icon: 'images/Voyage.png', right: '部队探险' }; }));
-
         if (item.treasure)
             view.other = _.union(view.other, _.map(gt.model.partialList(gt.item, item.treasure), function(i) { return $.extend(i, {right: '掉落'}); }));
 
         if (item.fates)
             view.other = _.union(view.other, gt.model.partialList(gt.fate, item.fates));
+
+        if (item.mog)
+            view.mog = item.mog;
+
+        if (item.voyages){
+            view.voyages = _.map(item.voyages, function(s) {
+                let voyageType = 'airship';
+                if (s.type === 1){
+                    voyageType = 'submarine';
+                }
+
+                let voyage = gt.venture.voyageIndex[voyageType][s.id];
+                if (voyage){
+                    return {
+                        name: voyage.name,
+                        icon: 'images/Voyage.png',
+                        right: voyageType === 'airship' ? 'Airship Voyage' : 'Submarine - ' + voyage.sea
+                    };
+                } else {
+                    return {
+                        name: voyageType,
+                        icon: 'images/Voyage.png'
+                    }
+                }
+
+            });
+        }
+
+        if (item.alla){
+            view.alla = [];
+            for (var source of item.alla.source){
+                if (!(source in view.alla)){
+                    view.alla.push(source);
+                }
+            }
+        }
+
 
         // Rowena Masterpiecces
         if (item.masterpiece) {
@@ -2562,7 +2601,7 @@ gt.item = {
             || view.masterpiece || view.supply || view.delivery || view.bingoData || view.other
             || view.satisfaction || view.customize || view.reducedFrom || view.disposal || view.tripletriadReward
             || view.sell_price || view.supplyReward || (!view.unlistable && !view.untradeable) || view.reducesTo
-            || view.gardening);
+            || view.gardening || view.mog);
 
         return view;
     },
@@ -3289,6 +3328,7 @@ gt.npc = {
                     if (!altDesc.length)
                         altDesc.push("其他");
 
+                    v.name = alt.n;
                     v.desc = altDesc.join(', ');
                     v.isCurrent = alt.i == npc.id;
                     v.location = v.location || '???';
@@ -6092,6 +6132,53 @@ gt.display = {
     }
 };
 
+gt.i18n = {
+    en: {
+        CopyrightAgreement: "Copyright Agreement",
+        CopyrightAgreementText: "FINAL FANTASY XIV © 2010 - 2024 SQUARE ENIX CO., LTD. All Rights Reserved. I fully understand the vocalizations are under Square Enix's copyright protection, and I promise I am only trying to have a preview of game data and not going to use it in any way that violates the copyright regulations in my region."
+    },
+
+    ja: {
+        CopyrightAgreement: "著作権規約",
+        CopyrightAgreementText: "FINAL FANTASY XIV © 2010 - 2024 SQUARE ENIX CO., LTD. All Rights Reserved. ファイナルファンタジーXIV 2010 - 2024 株式会社スクウェア・エニックス 無断転載を禁じます。 私は音声がスクウェア・エニックスの著作権保護下にあることを十分に理解しており、ゲーム データをプレビューするだけであり、地域の著作権規制に違反する方法で使用しないことを約束します。"
+
+    },
+
+    fr: {
+        CopyrightAgreement: "Accord de droits d'auteur",
+        CopyrightAgreementText: "FINAL FANTASY XIV © 2010 - 2024 SQUARE ENIX CO., LTD. All Rights Reserved. Tous droits réservés. Je comprends parfaitement que les vocalisations sont protégées par les droits d'auteur de Square Enix, et je promets que j'essaie uniquement d'avoir un aperçu des données du jeu et que je ne les utiliserai pas d'une manière qui viole les réglementations sur les droits d'auteur dans ma région."
+
+    },
+
+    de: {
+        CopyrightAgreement: "Urheberrechtsvereinbarung",
+        CopyrightAgreementText: "FINAL FANTASY XIV © 2010 - 2024 SQUARE ENIX CO., LTD. All Rights Reserved. Alle Rechte vorbehalten. Ich verstehe voll und ganz, dass die Lautäußerungen dem Urheberrechtsschutz von Square Enix unterliegen, und ich verspreche, dass ich nur versuche, eine Vorschau der Spieldaten zu erhalten und sie nicht in einer Weise zu verwenden, die gegen die Urheberrechtsbestimmungen in meiner Region verstößt."
+    },
+
+    chs: {
+        CopyrightAgreement: "版权协议",
+        CopyrightAgreementText: "最终幻想14 FINAL FANTASY XIV © 2010 - 2024 SQUARE ENIX CO., LTD. All Rights Reserved.史克威尔艾尼克斯公司 所有权利保留。 我完全理解，游戏文件资产版权归Square Enix公司所有, 我承诺仅用于数据预览用途，不会以任何违反我所在国家或地区的法律法规的形式使用这些文件。"
+    },
+
+    kr: {
+
+    },
+
+    get: function(index){
+        let trans = gt.i18n[gt.settings.data.lang];
+        if (trans){
+            let tran = trans[index];
+            if (tran){
+                return tran;
+            } else {
+                if (gt.i18n.en[index]) {
+                    return gt.i18n.en[index];
+                }
+            }
+        }
+        return index;
+    }
+};
 gt.list = {
     sortCounter: 0,
     isInitialized: false,
@@ -6685,10 +6772,20 @@ gt.quest = {
         { type: 'group', prop: 'genre' },
         { type: 'sort', prop: 'sort' }
     ],
+    // This is a hack for generating urls
+    loreModule: {
+        type: "questlore",
+        version: 1,
+        index: {},
+        cache: function(data) {
+            gt.quest.loreModule.index[data.questlore.id] = data.questlore;
+        },
+    },
 
     initialize: function(data) {
         gt.quest.blockTemplate = doT.template($('#block-quest-template').text());
         gt.quest.linkTemplate = doT.template($('#link-quest-template').text());
+        gt.quest.lorePageTemplate = doT.template($('#page-quest-lore-template').text());
     },
 
     cache: function(data) {
@@ -6814,50 +6911,95 @@ gt.quest = {
                     view.lvl = quest.reqs.jobs[0].lvl;
                 }
             }
+        }
 
-            view.dialogue = [];
-            var lastName = null;
-            for (var i = 0; i < quest.dialogue.length; i++) {
-                var line = quest.dialogue[i];
-                if (lastName != line.name)
-                    view.dialogue.push({ type: 'speaker', text: line.name });
-                view.dialogue.push({ type: 'dialogue-line', text: line.text });
-                lastName = line.name;
-            }
+        return view;
+    },
 
-            lastName = null;
-            if (quest.cutscenes) {
-                view.cutscenes = [];
-                for (var i = 0; i < quest.cutscenes.length; i++) {
-                    var cutscene = quest.cutscenes[i];
-                    var viewCut = [];
-                    for (var j = 0; j < cutscene.length; j++) {
-                        var line = cutscene[j];
-                        if (lastName != line.name)
-                            viewCut.push({ type: 'speaker', text: line.name });
-                        var dialogue = { type: 'dialogue-line', text: line.text };
-                        if (line.voice){
-                            dialogue.voice = "../files/voices/" + line.voice;
-                        }
-                        viewCut.push(dialogue);
-                        lastName = line.name;
+    blockLoaded: function($block, view){
+        function loadLorePage(lore){
+            $(".lore-page", $block).html(gt.quest.lorePageTemplate(gt.quest.getLoreViewModel(lore)));
+            gt.display.collapsible($block);
+            gt.display.draggable($block);
+            gt.display.omniscroll($block);
+            gt.display.alternatives($block);
+            $(".copyright-read-check", $block).change(gt.quest.loreAudioCopyrightChecked);
+        }
+
+        if (gt.quest.loreModule.index[view.id]){
+            loadLorePage(gt.quest.loreModule.index[view.id]);
+        } else {
+            gt.core.fetch(this.loreModule, [view.id], function (results){
+                var obj = results[0];
+                if (obj.error){
+                    $block.nearest(".lore-page").html("Lore loading failed! Re-open this block to retry~")
+                } else {
+                    loadLorePage(obj.questlore);
+                }
+            })
+        }
+    },
+
+    loreAudioCopyrightChecked: function (e){
+        var $page = e.target.closest(".lore-page");
+        var $audios = $(".dialogue-voice", $page);
+        if (e.target.checked){
+            $audios.removeClass("copyright-marked-up");
+        } else {
+            $audios.addClass("copyright-marked-up");
+        }
+    },
+
+    getLoreViewModel: function(lore){
+        view = {
+            objectives: lore.objectives,
+            journal: lore.journal,
+        };
+
+        view.dialogue = [];
+        var lastName = null;
+        for (var i = 0; i < lore.dialogue.length; i++) {
+            var line = lore.dialogue[i];
+            if (lastName != line.name)
+                view.dialogue.push({ type: 'speaker', text: line.name });
+            view.dialogue.push({ type: 'dialogue-line', text: line.text });
+            lastName = line.name;
+        }
+
+        lastName = null;
+        if (lore.cutscenes) {
+            view.cutscenes = [];
+            for (var i = 0; i < lore.cutscenes.length; i++) {
+                var cutscene = lore.cutscenes[i];
+                var viewCut = [];
+                for (var j = 0; j < cutscene.length; j++) {
+                    var line = cutscene[j];
+                    if (lastName != line.name)
+                        viewCut.push({ type: 'speaker', text: line.name });
+                    var dialogue = { type: 'dialogue-line', text: line.text };
+                    if (line.voice){
+                        dialogue.voice = "../files/voices/" + gt.settings.data.lang+ "/" + line.voice;
+                        dialogue.voiceJA = "../files/voices/ja/" + line.voice;
                     }
-                    view.cutscenes.push(viewCut);
+                    viewCut.push(dialogue);
+                    lastName = line.name;
                 }
+                view.cutscenes.push(viewCut);
             }
+        }
 
-            if (quest.talk) {
-                view.talk = [];
-                for (var i = 0; i < quest.talk.length; i++) {
-                    var talk = quest.talk[i];
-                    var speakerNpc = gt.model.partial(gt.npc, talk.npcid);
-                    if (!speakerNpc)
-                        continue;
+        // I see talk is not enabled by now, so just put it here ignored......anyway....
+        if (lore.talk) {
+            view.talk = [];
+            for (var i = 0; i < lore.talk.length; i++) {
+                var talk = lore.talk[i];
+                var speakerNpc = gt.model.partial(gt.npc, talk.npcid);
+                if (!speakerNpc)
+                    continue;
 
-                    view.talk.push({ type: 'speaker', npc: speakerNpc, text: talk.name });
-                    for (var ii = 0; ii < talk.lines.length; ii++)
-                        view.talk.push({ type: 'dialogue-line', text: talk.lines[ii] });
-                }
+                view.talk.push({ type: 'speaker', npc: speakerNpc, text: talk.name });
+                for (var ii = 0; ii < talk.lines.length; ii++)
+                    view.talk.push({ type: 'dialogue-line', text: talk.lines[ii] });
             }
         }
 
@@ -6906,7 +7048,6 @@ gt.quest = {
         return '../files/icons/journal/61411.png';
     }
 };
-
 gt.achievement = {
     pluralName: '成就',
     type: 'achievement',
@@ -7834,6 +7975,7 @@ gt.skywatcher = {
         { icon: "images/region/Gyr Abania.png", name: "基拉巴尼亚", page: "GyrAbania", zones: [2403, 2406, 2407, 2408] },
         { icon: "images/region/Kugane.png", name: "远东之国", page: "FarEast", zones: [513, 2412, 2409, 2410, 2411, 3534, 3662] },
         { icon: "images/region/Ilsabard.png", name: "伊尔萨巴德次大陆", page: "Ilsabard", zones: [3707, 3709, 3710, 2414, 2462, 2530, 2545] },
+        { icon: "images/region/Tural.png", name: "图拉尔大陆", page: "Tural", zones: [4504, 4505, 4506, 4507, 4503, 4508, 4509, 4510] },
         { icon: "images/region/Norvrandt.png", name: "诺弗兰特", page: "Norvrandt", zones: [516, 517, 2953, 2954, 2955, 2956, 2957, 2958], },
         { icon: "images/marker/Aetheryte.png", name: "其他", page: "Others", zones: [67, 3706, 3708, 3711, 3712, 3713] }
     ],

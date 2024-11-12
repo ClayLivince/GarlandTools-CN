@@ -161,10 +161,10 @@
                 gt3d.scene.add(gt3d.camera);
 
                 // Lights
-                gt3d.light.ambientLight = new THREE.AmbientLight(0xcccccc, 0.5);
+                gt3d.light.ambientLight = new THREE.AmbientLight(0xcccccc, 1.5);
                 gt3d.scene.add(gt3d.light.ambientLight);
 
-                gt3d.light.pointLight = new THREE.PointLight(0xffffff, 1.5);
+                gt3d.light.pointLight = new THREE.PointLight(0xffffff, 0.5);
                 gt3d.light.pointLight.position.set(0, 0, 20);
                 gt3d.camera.add(gt3d.light.pointLight);
 
@@ -175,9 +175,10 @@
 
                 // Renderer
                 gt3d.renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+                gt3d.renderer.outputEncoding = THREE.sRGBEncoding;
                 gt3d.renderer.setPixelRatio(window.devicePixelRatio);
                 gt3d.renderer.setSize(window.innerWidth, window.innerHeight);
-                gt3d.renderer.setClearColor(0x000000, 0);
+                gt3d.renderer.setClearColor(0xcccccc, 0.5);
 
                 viewer.appendChild(gt3d.renderer.domElement);
 

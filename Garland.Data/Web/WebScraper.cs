@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -14,11 +15,12 @@ namespace Garland.Data.Lodestone
         protected int _sleepMin = 10;
         protected int _sleepMax = 40;
         private Random _random = new Random();
+        private HttpClient _httpClient = new HttpClient();
 
         protected string Request(string url)
         {
             var response = GetResponse(url);
-            var reader = new StreamReader(response.GetResponseStream());
+            var reader = new StreamReader(response.Content.ReadAsStream());
             return reader.ReadToEnd();
         }
 
@@ -26,18 +28,11 @@ namespace Garland.Data.Lodestone
         {
             var response = GetResponse(url);
 
-            var bytes = new byte[response.ContentLength];
-            var stream = response.GetResponseStream();
-
-            int b;
-            var i = 0;
-            while ((b = stream.ReadByte()) != -1)
-                bytes[i++] = (byte)b;
-
+            var bytes = response.Content.ReadAsByteArrayAsync().GetAwaiter().GetResult();
             return bytes;
         }
 
-        private WebResponse GetResponse(string url)
+        private HttpResponseMessage GetResponse(string url)
         {
             var sleep = _random.Next(_sleepMin, _sleepMax);
             Thread.Sleep(sleep);
@@ -46,15 +41,27 @@ namespace Garland.Data.Lodestone
             {
                 try
                 {
-                    var request = (HttpWebRequest)WebRequest.Create(url);
-                    request.Headers["User-Agent"] = "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.71 Safari/537.36";
-                    return request.GetResponse();
+                    var request = new HttpRequestMessage()
+                    {
+                        Method = HttpMethod.Get,
+                        RequestUri = new Uri(url)
+                    };
+                    request.Headers.Add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36");
+                    var res = _httpClient.Send(request);
+                    if (res.IsSuccessStatusCode)
+                    {
+                        return res;
+                    }
+                    else
+                    {
+                        DatabaseBuilder.PrintLine($"{res.StatusCode} : {i} / 5 : {url}");
+                    }
                 }
                 catch (WebException ex)
                 {
                     System.Diagnostics.Debug.WriteLine(ex.Message);
 
-                    if (ex.Message.Contains("50") || ex.Message.Contains("无法连接到"))
+                    if (ex.Message.Contains("Bad Gateway"))
                     {
                         Thread.Sleep(3000);
                         continue;
@@ -66,7 +73,5 @@ namespace Garland.Data.Lodestone
 
             throw new InvalidOperationException("Too many failures retrieving: " + url);
         }
-
-
     }
 }

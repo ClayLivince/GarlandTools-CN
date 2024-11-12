@@ -28,13 +28,16 @@ namespace Garland.Data.Modules
                 if (iItem != null)
                 {
                     var iUnlock = iItem.ItemAction as SaintCoinach.Xiv.ItemActions.CompanionUnlock;
-                    iCompanion = iUnlock.Companion;
-                    iCompanionTransient = iCompanion.CompanionTransient;
+                    if (iUnlock != null)
+                    {
+                        iCompanion = iUnlock.Companion;
+                        iCompanionTransient = iCompanion.CompanionTransient;
+                    }
                 }
                 
 
                 _builder.Localize.Strings(item, sCompanion, iCompanion, "MinionRace");
-                _builder.Localize.Strings(item, sCompanion.CompanionTransient, iCompanion.CompanionTransient, "Tooltip", "MinionSkillType");
+                _builder.Localize.Strings(item, sCompanion.CompanionTransient, iCompanionTransient, "Tooltip", "MinionSkillType");
                 _builder.Localize.HtmlStrings((JObject)item, sCompanion.CompanionTransient, iCompanionTransient, "SpecialAction{Name}", "SpecialAction{Description}");
                 item.cost = sCompanion.Cost;
                 item.skill_angle = sCompanion.SpecialActionAngle;

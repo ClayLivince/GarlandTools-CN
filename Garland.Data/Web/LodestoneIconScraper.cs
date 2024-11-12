@@ -18,10 +18,10 @@ namespace Garland.Data.Lodestone
     public class LodestoneIconScraper : WebScraper
     {
         private const string _baseUrl = "http://na.finalfantasyxiv.com";
-        private const string _baseItemIconUrl = "https://img.finalfantasyxiv.com/lds/pc/global/images/itemicon/";
+        private const string _baseItemIconUrl = "https://lds-img.finalfantasyxiv.com/itemicon/";
         private const string _baseSearchFormat = _baseUrl + "/lodestone/playguide/db/item/?db_search_category=item&category2=&q=\"{0}\"";
         private const string _itemUrlRegexFormat = "<a href=\"(/lodestone/playguide/db/item/.+)/\" .+>{0}</a>";
-        private static Regex _iconSuffixRegex = new Regex("<img src=\"https://img.finalfantasyxiv.com/lds/pc/global/images/itemicon/(.*.png).*\".*>");
+        private static Regex _iconSuffixRegex = new Regex("<img src=\"https://lds-img.finalfantasyxiv.com/itemicon/(.*.png).*\".*>");
         private ItemIconDatabase _itemIconDatabase;
 
         public LodestoneIconScraper(ItemIconDatabase itemIconDatabase)
@@ -29,47 +29,44 @@ namespace Garland.Data.Lodestone
             _itemIconDatabase = itemIconDatabase;
         }
 
-        public void FetchIcons(DatabaseBuilder builder)
+        public void FetchIcons()
         {
+            var badNameStarts = new List<string> { "Augmented ", "Lost ", "Weathered " };
+
             // Start at a random place in the set.
             var start = (new Random()).Next(_itemIconDatabase.ItemsNeedingIcons.Count);
             var itemsToFetch = new List<Saint.Item>(_itemIconDatabase.ItemsNeedingIcons.Skip(start));
             itemsToFetch.AddRange(_itemIconDatabase.ItemsNeedingIcons.Take(start));
 
             var count = 0;
-            var options = new ParallelOptions() { MaxDegreeOfParallelism = 2 };
-            
+            var options = new ParallelOptions() { MaxDegreeOfParallelism = 3 };
             Parallel.ForEach(itemsToFetch, options, sItem =>
             {
-                var num = Interlocked.Increment(ref count);
-
-                string itemName = sItem.Name.ToString();
-                if (itemName.StartsWith("过期") || itemName.StartsWith("风化") || itemName.StartsWith("以太") || itemName.EndsWith("的秘药") || itemName.EndsWith("的仙药") || itemName.EndsWith("的灵药")
-                    || itemName.StartsWith("失传") || itemName.StartsWith("文理") || itemName.EndsWith("+1") || itemName.EndsWith("+2"))
-                    return;
-
-                // A prior item may share this icon, so always check if it was written.
-                var iconId = (UInt16)sItem.GetRaw("Icon");
-                if (_itemIconDatabase.HasIcon(iconId))
-                    return;
-
-                var progress = $"{num}/{itemsToFetch.Count}, {100*num/itemsToFetch.Count}%";
-                if (!builder.iItemById.TryGetValue(sItem.Key, out var iItem))
-                {
-                    return;
-                }
-                var itemEnName = iItem.Name;
-
-                if ("" == itemEnName)
-                    return;
-
                 try
                 {
+                    var num = Interlocked.Increment(ref count);
+
+                    foreach (var bns in badNameStarts)
+                    {
+                        if (sItem.Name.ToString().StartsWith(bns))
+                        {
+                            return;
+                        }
+                    }
+
+
+                    // A prior item may share this icon, so always check if it was written.
+                    var iconId = (UInt16)sItem.GetRaw("Icon");
+                    if (_itemIconDatabase.HasIcon(iconId))
+                        return;
+
+                    var progress = $"{num}/{itemsToFetch.Count}, {100 * num / itemsToFetch.Count}%";
+
                     // Scrape search data from Lodestone.
-                    var itemUrl = SearchItem(iconId, itemEnName, progress);
+                    var itemUrl = SearchItem(iconId, sItem.Name, progress);
                     string hash = null;
                     if (itemUrl != null)
-                        hash = FetchItem(iconId, itemEnName, itemUrl, progress);
+                        hash = FetchItem(iconId, sItem.Name, itemUrl, progress);
 
                     if (hash == null)
                     {
@@ -80,13 +77,11 @@ namespace Garland.Data.Lodestone
                     // Fetch the icon and write entries.
                     WriteIcon(iconId, hash);
                 }
-                catch (WebException e)
+                catch
                 {
-                    Console.WriteLine("Timeout!!!!" + itemName);
+                    return;
                 }
-                catch (Exception ee) {
-                    Console.WriteLine("Error occured when searching " + itemName);
-                }
+
             });
         }
 

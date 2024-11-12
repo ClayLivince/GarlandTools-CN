@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json.Linq;
 using SaintCoinach.Text;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -44,7 +45,7 @@ namespace Garland.Data
         public static int GetIconId(SaintCoinach.Imaging.ImageFile icon)
         {
             if (icon != null)
-                return int.Parse(System.IO.Path.GetFileNameWithoutExtension(icon.Path));
+                return int.Parse(System.IO.Path.GetFileNameWithoutExtension(icon.Path.Replace("_hr1", "")));
             return 0;
         }
 
@@ -224,6 +225,48 @@ namespace Garland.Data
 
                 return hash1 + (hash2 * 1566083941);
             }
+        }
+
+        public static void JsonFirstMerge(JObject target, object content)
+        {
+            if (!(content is JObject o))
+            {
+                return;
+            }
+
+            foreach (KeyValuePair<string, JToken?> contentItem in o)
+            {
+                JProperty? existingProperty = target.Property(contentItem.Key);
+
+                if (existingProperty == null)
+                {
+                    
+                    target.AddFirst(new JProperty(contentItem.Key, contentItem.Value));
+                }
+                else if (contentItem.Value != null)
+                {
+                    if (!(existingProperty.Value is JContainer existingContainer) || existingContainer.Type != contentItem.Value.Type)
+                    {
+                        existingProperty.Value = contentItem.Value;
+                    }
+                    else if (existingProperty.Value is JObject existingObject)
+                    {
+                        JsonFirstMerge(existingObject, contentItem.Value);
+                    } 
+                    else
+                    {
+                        existingContainer.Merge(contentItem.Value);
+                    }
+                }
+            }
+        }
+
+        public static IEnumerable TupleToEnumerable(object tuple)
+        {
+            // You can check if type of tuple is actually Tuple
+            return tuple.GetType()
+                .GetProperties()
+                .Select(property => property.GetValue(tuple));
         }
     }
 }

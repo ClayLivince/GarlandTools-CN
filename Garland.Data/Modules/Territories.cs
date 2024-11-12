@@ -21,34 +21,41 @@ namespace Garland.Data.Modules
                     continue;
 
                 var lgbFileName = "bg/" + bg.Substring(0, bg.IndexOf("/level/") + 1) + "level/planevent.lgb";
-                if (!_builder.Realm.Packs.TryGetFile(lgbFileName, out var sFile))
-                    continue;
-
-                var sLgbFile = new SaintCoinach.Graphics.Lgb.LgbFile(sFile);
-                foreach (var sLgbGroup in sLgbFile.Groups)
+                try
                 {
-                    var sMap = sTerritoryType.GetRelatedMap(sLgbGroup.Header.MapIndex);
-                    foreach (var sLgbENpcEntry in sLgbGroup.Entries.OfType<SaintCoinach.Graphics.Lgb.LgbENpcEntry>())
+                    if (!_builder.Realm.Packs.TryGetFile(lgbFileName, out var sFile))
+                        continue;
+
+                    var sLgbFile = new SaintCoinach.Graphics.Lgb.LgbFile(sFile);
+                    foreach (var sLgbGroup in sLgbFile.Groups)
                     {
-                        var npcId = (int)sLgbENpcEntry.Header.ENpcId;
-                        if (!_builder.Db.NpcsById.TryGetValue(npcId, out var npc))
-                            continue;
-
-                        if (npc.coords != null)
-                            continue;
-
-                        if (npc.zoneid == null && sMap.PlaceName.Key != 0)
+                        var sMap = sTerritoryType.GetRelatedMap(sLgbGroup.Header.MapIndex);
+                        foreach (var sLgbENpcEntry in sLgbGroup.Entries.OfType<SaintCoinach.Graphics.Lgb.LgbENpcEntry>())
                         {
-                            npc.zoneid = sMap.PlaceName.Key;
-                            _builder.Db.AddLocationReference(sMap.PlaceName.Key);
+                            var npcId = (int)sLgbENpcEntry.Header.ENpcId;
+                            if (!_builder.Db.NpcsById.TryGetValue(npcId, out var npc))
+                                continue;
+
+                            if (npc.coords != null)
+                                continue;
+
+                            if (npc.zoneid == null && sMap.PlaceName.Key != 0)
+                            {
+                                npc.zoneid = sMap.PlaceName.Key;
+                                _builder.Db.AddLocationReference(sMap.PlaceName.Key);
+                            }
+
+                            var x = sMap.ToMapCoordinate3d(sLgbENpcEntry.Header.Translation.X, sMap.OffsetX);
+                            var y = sMap.ToMapCoordinate3d(sLgbENpcEntry.Header.Translation.Z, sMap.OffsetY);
+                            npc.coords = new JArray(Math.Round(x, 2), Math.Round(y, 2));
+
+                            NPCs.UpdateArea(_builder, npc, sMap, x, y);
                         }
-
-                        var x = sMap.ToMapCoordinate3d(sLgbENpcEntry.Header.Translation.X, sMap.OffsetX);
-                        var y = sMap.ToMapCoordinate3d(sLgbENpcEntry.Header.Translation.Z, sMap.OffsetY);
-                        npc.coords = new JArray(Math.Round(x, 2), Math.Round(y, 2));
-
-                        NPCs.UpdateArea(_builder, npc, sMap, x, y);
                     }
+                }
+                catch (Exception ex)
+                {
+                    DatabaseBuilder.PrintLine($"Failed to fetch file {bg}");
                 }
             }
         }

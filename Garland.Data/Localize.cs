@@ -18,6 +18,7 @@ namespace Garland.Data
         private readonly XivCollection _data;
         private readonly XivCollection _interData;
         private readonly Tuple<string, Language>[] _langs;
+        public Tuple<string, Language>[] Langs => _langs;
         private readonly Tuple<string, Language>[] _interLangs;
 
         public Localize(ARealmReversed realm, ARealmReversed interRealm)
@@ -77,7 +78,7 @@ namespace Garland.Data
                             continue;
 
                         var sanitizedCol = col.ToLower().Replace("{", "").Replace("}", "");
-                        strs[sanitizedCol] = transform == null ? (value.ToString()) : transform((XivString)value);
+                        strs[sanitizedCol] = transform == null ? (value.ToString().TrimEnd()) : transform((XivString)value);
                     }
                 }
                 _data.ActiveLanguage = currentLang;

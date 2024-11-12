@@ -24343,7 +24343,7 @@ gt.bell.fish = [
     ],
     "radius": 300,
     "zone": "库尔札斯西部高地",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         141,
@@ -24361,7 +24361,7 @@ gt.bell.fish = [
         71500,
         78000
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
         13,
         16,
@@ -24486,7 +24486,7 @@ gt.bell.fish = [
     ],
     "radius": 600,
     "zone": "库尔札斯西部高地",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         49,
@@ -24504,7 +24504,7 @@ gt.bell.fish = [
         36000,
         39500
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
         6,
         7,
@@ -24536,7 +24536,7 @@ gt.bell.fish = [
     ],
     "radius": 300,
     "zone": "库尔札斯西部高地",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         49,
@@ -24554,7 +24554,7 @@ gt.bell.fish = [
         36000,
         39500
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
         6,
         7,
@@ -24716,7 +24716,7 @@ gt.bell.fish = [
     ],
     "radius": 600,
     "zone": "库尔札斯西部高地",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         294,
@@ -24734,7 +24734,7 @@ gt.bell.fish = [
         88179,
         96798
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
         12,
         15,
@@ -24863,7 +24863,7 @@ gt.bell.fish = [
     ],
     "radius": 300,
     "zone": "库尔札斯西部高地",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         19,
@@ -24881,7 +24881,7 @@ gt.bell.fish = [
         302366,
         330106
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
         19,
         24,
@@ -26569,7 +26569,7 @@ gt.bell.fish = [
     ],
     "radius": 1000,
     "zone": "阿巴拉提亚云海",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         74,
@@ -26587,7 +26587,7 @@ gt.bell.fish = [
         75649,
         82390
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
         9,
         11,
@@ -27787,7 +27787,7 @@ gt.bell.fish = [
     ],
     "radius": 800,
     "zone": "阿巴拉提亚云海",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         508,
@@ -27805,7 +27805,7 @@ gt.bell.fish = [
         228855,
         249660
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
         16,
         20,
@@ -27835,7 +27835,7 @@ gt.bell.fish = [
     ],
     "radius": 300,
     "zone": "云冠群岛",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         508,
@@ -27853,7 +27853,7 @@ gt.bell.fish = [
         228855,
         249660
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
         16,
         20,
@@ -27885,7 +27885,7 @@ gt.bell.fish = [
     ],
     "radius": 800,
     "zone": "阿巴拉提亚云海",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         557,
@@ -27903,7 +27903,7 @@ gt.bell.fish = [
         72124,
         79059
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
         5,
         6,
@@ -27933,7 +27933,7 @@ gt.bell.fish = [
     ],
     "radius": 300,
     "zone": "云冠群岛",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         557,
@@ -27951,7 +27951,7 @@ gt.bell.fish = [
         72124,
         79059
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
         5,
         6,
@@ -28818,7 +28818,7 @@ gt.bell.fish = [
     ],
     "radius": 1000,
     "zone": "魔大陆阿济兹拉",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         62,
@@ -28836,7 +28836,7 @@ gt.bell.fish = [
         743008,
         808920
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
         15,
         18,
@@ -28955,7 +28955,7 @@ gt.bell.fish = [
     ],
     "radius": 300,
     "zone": "魔大陆阿济兹拉",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         137,
@@ -28973,7 +28973,7 @@ gt.bell.fish = [
         269078,
         294044
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
         17,
         22,
@@ -29005,7 +29005,7 @@ gt.bell.fish = [
     ],
     "radius": 300,
     "zone": "魔大陆阿济兹拉",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         126,
@@ -29023,7 +29023,7 @@ gt.bell.fish = [
         1246336,
         1360184
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
         23,
         29,
@@ -29237,7 +29237,7 @@ gt.bell.fish = [
     ],
     "radius": 300,
     "zone": "魔大陆阿济兹拉",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         650,
@@ -29255,7 +29255,7 @@ gt.bell.fish = [
         400843,
         438292
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
         26,
         33,
@@ -29407,7 +29407,7 @@ gt.bell.fish = [
     ],
     "radius": 300,
     "zone": "魔大陆阿济兹拉",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         393,
@@ -29425,11 +29425,11 @@ gt.bell.fish = [
         549252,
         599184
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
-        350,
-        438,
-        700
+        250,
+        313,
+        500
       ]
     }
   },
@@ -29565,7 +29565,7 @@ gt.bell.fish = [
     ],
     "radius": 400,
     "zone": "龙堡参天高地",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         209,
@@ -29583,7 +29583,7 @@ gt.bell.fish = [
         229680,
         250560
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
         31,
         39,
@@ -29620,7 +29620,7 @@ gt.bell.fish = [
     ],
     "radius": 600,
     "zone": "龙堡参天高地",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         209,
@@ -29638,7 +29638,7 @@ gt.bell.fish = [
         229680,
         250560
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
         31,
         39,
@@ -29675,7 +29675,7 @@ gt.bell.fish = [
     ],
     "radius": 600,
     "zone": "龙堡参天高地",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         209,
@@ -29693,7 +29693,7 @@ gt.bell.fish = [
         229680,
         250560
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
         31,
         39,
@@ -29995,7 +29995,7 @@ gt.bell.fish = [
     ],
     "radius": 400,
     "zone": "龙堡参天高地",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         19,
@@ -30013,7 +30013,7 @@ gt.bell.fish = [
         457710,
         499320
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
         33,
         41,
@@ -30275,7 +30275,7 @@ gt.bell.fish = [
     ],
     "radius": 600,
     "zone": "龙堡参天高地",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         311,
@@ -30293,7 +30293,7 @@ gt.bell.fish = [
         165933,
         180765
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
         16,
         20,
@@ -30411,7 +30411,7 @@ gt.bell.fish = [
     ],
     "radius": 900,
     "zone": "龙堡参天高地",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         346,
@@ -30429,7 +30429,7 @@ gt.bell.fish = [
         527060,
         574218
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
         55,
         68,
@@ -30464,7 +30464,7 @@ gt.bell.fish = [
     ],
     "radius": 300,
     "zone": "云冠群岛",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         346,
@@ -30482,7 +30482,7 @@ gt.bell.fish = [
         527060,
         574218
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
         55,
         68,
@@ -30519,7 +30519,7 @@ gt.bell.fish = [
     ],
     "radius": 900,
     "zone": "龙堡参天高地",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         622,
@@ -30537,7 +30537,7 @@ gt.bell.fish = [
         527060,
         574218
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
         38,
         47,
@@ -31584,7 +31584,7 @@ gt.bell.fish = [
     ],
     "radius": 400,
     "zone": "龙堡内陆低地",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         376,
@@ -31602,7 +31602,7 @@ gt.bell.fish = [
         171962,
         187705
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
         13,
         16,
@@ -31897,7 +31897,7 @@ gt.bell.fish = [
     ],
     "radius": 800,
     "zone": "龙堡内陆低地",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         1039,
@@ -31915,7 +31915,7 @@ gt.bell.fish = [
         527060,
         574218
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
         35,
         43,
@@ -32258,7 +32258,7 @@ gt.bell.fish = [
     ],
     "radius": 300,
     "zone": "翻云雾海",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         118,
@@ -32276,7 +32276,7 @@ gt.bell.fish = [
         202781,
         221123
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
         15,
         19,
@@ -32306,7 +32306,7 @@ gt.bell.fish = [
     ],
     "radius": 300,
     "zone": "云冠群岛",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         118,
@@ -32324,7 +32324,7 @@ gt.bell.fish = [
         202781,
         221123
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
         15,
         19,
@@ -32443,7 +32443,7 @@ gt.bell.fish = [
     ],
     "radius": 500,
     "zone": "翻云雾海",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         72,
@@ -32461,7 +32461,7 @@ gt.bell.fish = [
         156519,
         170748
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
         17,
         21,
@@ -32497,7 +32497,7 @@ gt.bell.fish = [
     ],
     "radius": 500,
     "zone": "翻云雾海",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         171,
@@ -32515,7 +32515,7 @@ gt.bell.fish = [
         208318,
         227256
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
         17,
         21,
@@ -34588,7 +34588,7 @@ gt.bell.fish = [
     ],
     "radius": 1100,
     "zone": "基拉巴尼亚边区",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         99,
@@ -34606,7 +34606,7 @@ gt.bell.fish = [
         952898,
         1040588
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
         45,
         56,
@@ -34864,7 +34864,7 @@ gt.bell.fish = [
     ],
     "radius": 600,
     "zone": "基拉巴尼亚边区",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         314,
@@ -34882,7 +34882,7 @@ gt.bell.fish = [
         369824,
         403312
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
         23,
         29,
@@ -35773,7 +35773,7 @@ gt.bell.fish = [
     ],
     "radius": 400,
     "zone": "基拉巴尼亚山区",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         377,
@@ -35791,7 +35791,7 @@ gt.bell.fish = [
         707366,
         771672
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
         34,
         42,
@@ -36054,7 +36054,7 @@ gt.bell.fish = [
     ],
     "radius": 500,
     "zone": "基拉巴尼亚山区",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         19,
@@ -36072,7 +36072,7 @@ gt.bell.fish = [
         412143,
         450142
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
         20,
         25,
@@ -36282,7 +36282,7 @@ gt.bell.fish = [
     ],
     "radius": 3000,
     "zone": "基拉巴尼亚湖区",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         785,
@@ -36300,11 +36300,11 @@ gt.bell.fish = [
         982128,
         1069818
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
-        350,
-        438,
-        700
+        250,
+        313,
+        500
       ]
     }
   },
@@ -37421,7 +37421,7 @@ gt.bell.fish = [
     ],
     "radius": 1000,
     "zone": "红玉海",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         53,
@@ -37439,7 +37439,7 @@ gt.bell.fish = [
         361483,
         393903
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
         20,
         25,
@@ -37657,7 +37657,7 @@ gt.bell.fish = [
     ],
     "radius": 1000,
     "zone": "红玉海",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         456,
@@ -37675,7 +37675,7 @@ gt.bell.fish = [
         470603,
         511525
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
         22,
         28,
@@ -37976,7 +37976,7 @@ gt.bell.fish = [
     ],
     "radius": 1000,
     "zone": "红玉海",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         470,
@@ -37994,7 +37994,7 @@ gt.bell.fish = [
         287308,
         312795
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
         15,
         18,
@@ -38622,7 +38622,7 @@ gt.bell.fish = [
     ],
     "radius": 1000,
     "zone": "延夏",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         206,
@@ -38640,7 +38640,7 @@ gt.bell.fish = [
         364640,
         397320
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
         20,
         25,
@@ -38908,7 +38908,7 @@ gt.bell.fish = [
     ],
     "radius": 600,
     "zone": "延夏",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         23,
@@ -38926,7 +38926,7 @@ gt.bell.fish = [
         371221,
         406297
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
         18,
         23,
@@ -39024,7 +39024,7 @@ gt.bell.fish = [
     ],
     "radius": 400,
     "zone": "延夏",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         314,
@@ -39042,7 +39042,7 @@ gt.bell.fish = [
         891515,
         973359
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
         45,
         56,
@@ -39630,7 +39630,7 @@ gt.bell.fish = [
     ],
     "radius": 500,
     "zone": "延夏",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         7,
@@ -39648,7 +39648,7 @@ gt.bell.fish = [
         442208,
         482602
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
         23,
         29,
@@ -39788,7 +39788,7 @@ gt.bell.fish = [
     ],
     "radius": 200,
     "zone": "太阳神草原",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         5,
@@ -39806,7 +39806,7 @@ gt.bell.fish = [
         656572,
         717094
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
         34,
         43,
@@ -39841,7 +39841,7 @@ gt.bell.fish = [
     ],
     "radius": 500,
     "zone": "白银乡",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         5,
@@ -39859,7 +39859,7 @@ gt.bell.fish = [
         656572,
         717094
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
         34,
         43,
@@ -40410,7 +40410,7 @@ gt.bell.fish = [
     ],
     "radius": 300,
     "zone": "太阳神草原",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         17,
@@ -40428,7 +40428,7 @@ gt.bell.fish = [
         701520,
         765826
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
         33,
         41,
@@ -40926,7 +40926,7 @@ gt.bell.fish = [
     ],
     "radius": 300,
     "zone": "太阳神草原",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         23,
@@ -40944,7 +40944,7 @@ gt.bell.fish = [
         429452,
         469846
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
         22,
         28,
@@ -42608,7 +42608,7 @@ gt.bell.fish = [
     ],
     "radius": 1200,
     "zone": "雷克兰德",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         346,
@@ -42626,11 +42626,11 @@ gt.bell.fish = [
         223332,
         241440
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
-        10,
+        9,
         12,
-        20
+        19
       ]
     }
   },
@@ -42720,7 +42720,7 @@ gt.bell.fish = [
     ],
     "radius": 300,
     "zone": "雷克兰德",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         9,
@@ -42738,11 +42738,11 @@ gt.bell.fish = [
         832888,
         910784
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
-        51,
-        63,
-        101
+        34,
+        42,
+        67
       ]
     }
   },
@@ -43481,7 +43481,7 @@ gt.bell.fish = [
     ],
     "radius": 1200,
     "zone": "珂露西亚岛",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         6,
@@ -43499,11 +43499,11 @@ gt.bell.fish = [
         367829,
         401268
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
-        21,
-        26,
-        41
+        15,
+        18,
+        30
       ]
     }
   },
@@ -44308,7 +44308,7 @@ gt.bell.fish = [
     ],
     "radius": 1800,
     "zone": "珂露西亚岛",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         62,
@@ -44326,11 +44326,11 @@ gt.bell.fish = [
         277464,
         302688
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
-        13,
-        16,
-        26
+        12,
+        15,
+        23
       ]
     }
   },
@@ -44368,7 +44368,7 @@ gt.bell.fish = [
     ],
     "radius": 1800,
     "zone": "珂露西亚岛",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         157,
@@ -44386,11 +44386,11 @@ gt.bell.fish = [
         958720,
         1048600
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
-        183,
-        229,
-        367
+        122,
+        153,
+        244
       ]
     }
   },
@@ -44968,7 +44968,7 @@ gt.bell.fish = [
     ],
     "radius": 1200,
     "zone": "安穆·艾兰",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         944,
@@ -44986,11 +44986,11 @@ gt.bell.fish = [
         796936,
         874832
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
-        233,
-        292,
-        467
+        156,
+        195,
+        311
       ]
     }
   },
@@ -46005,7 +46005,7 @@ gt.bell.fish = [
     ],
     "radius": 900,
     "zone": "伊尔美格",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         96,
@@ -46023,11 +46023,11 @@ gt.bell.fish = [
         324944,
         356732
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
+        11,
         14,
-        17,
-        27
+        23
       ]
     }
   },
@@ -46092,7 +46092,7 @@ gt.bell.fish = [
     ],
     "radius": 300,
     "zone": "伊尔美格",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         26,
@@ -46110,11 +46110,11 @@ gt.bell.fish = [
         790944,
         856856
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
-        48,
-        60,
-        95
+        32,
+        40,
+        64
       ]
     }
   },
@@ -46525,7 +46525,7 @@ gt.bell.fish = [
     ],
     "radius": 1800,
     "zone": "拉凯提卡大森林",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         314,
@@ -46543,11 +46543,11 @@ gt.bell.fish = [
         613966,
         666824
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
-        130,
-        163,
-        260
+        100,
+        125,
+        200
       ]
     }
   },
@@ -46736,7 +46736,7 @@ gt.bell.fish = [
     ],
     "radius": 600,
     "zone": "拉凯提卡大森林",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         201,
@@ -46754,11 +46754,11 @@ gt.bell.fish = [
         365940,
         402534
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
-        21,
-        26,
-        41
+        16,
+        20,
+        32
       ]
     }
   },
@@ -47044,7 +47044,7 @@ gt.bell.fish = [
     ],
     "radius": 300,
     "zone": "拉凯提卡大森林",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         14,
@@ -47062,11 +47062,11 @@ gt.bell.fish = [
         509320,
         557256
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
-        30,
-        38,
-        60
+        20,
+        25,
+        40
       ]
     }
   },
@@ -47479,7 +47479,7 @@ gt.bell.fish = [
     ],
     "radius": 900,
     "zone": "黑风海",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         236,
@@ -47497,11 +47497,11 @@ gt.bell.fish = [
         413448,
         449400
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
-        25,
-        31,
-        49
+        16,
+        21,
+        33
       ]
     }
   },
@@ -48011,7 +48011,7 @@ gt.bell.fish = [
     ],
     "radius": 600,
     "zone": "黑风海",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         314,
@@ -48029,11 +48029,11 @@ gt.bell.fish = [
         988680,
         1078560
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
-        525,
-        656,
-        1050
+        250,
+        313,
+        500
       ]
     }
   },
@@ -48116,7 +48116,7 @@ gt.bell.fish = [
     ],
     "radius": 300,
     "zone": "黑风海",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         31,
@@ -48134,11 +48134,11 @@ gt.bell.fish = [
         329560,
         359520
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
-        20,
-        25,
-        40
+        13,
+        16,
+        26
       ]
     }
   },
@@ -49070,7 +49070,7 @@ gt.bell.fish = [
     ],
     "radius": 450,
     "zone": "迷津",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         18,
@@ -49088,11 +49088,11 @@ gt.bell.fish = [
         647955,
         703494
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
-        33,
-        41,
-        66
+        22,
+        28,
+        45
       ]
     }
   },
@@ -49740,9 +49740,9 @@ gt.bell.fish = [
       ],
       "reward": 33914,
       "rewardAmount": [
-        47,
-        59,
-        94
+        35,
+        44,
+        71
       ]
     }
   },
@@ -49819,7 +49819,7 @@ gt.bell.fish = [
     ],
     "radius": 1350,
     "zone": "拉札罕",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         188,
@@ -49837,11 +49837,11 @@ gt.bell.fish = [
         652548,
         708084
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
-        34,
-        42,
-        68
+        23,
+        29,
+        47
       ]
     }
   },
@@ -50166,7 +50166,7 @@ gt.bell.fish = [
     ],
     "radius": 600,
     "zone": "萨维奈岛",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         217,
@@ -50184,11 +50184,11 @@ gt.bell.fish = [
         659684,
         715320
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
-        32,
-        39,
-        63
+        22,
+        28,
+        45
       ]
     }
   },
@@ -50806,9 +50806,9 @@ gt.bell.fish = [
       ],
       "reward": 33914,
       "rewardAmount": [
-        34,
-        43,
-        68
+        26,
+        32,
+        51
       ]
     }
   },
@@ -50845,7 +50845,7 @@ gt.bell.fish = [
     ],
     "radius": 1200,
     "zone": "萨维奈岛",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         211,
@@ -50863,11 +50863,11 @@ gt.bell.fish = [
         784635,
         858483
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
-        41,
-        52,
-        83
+        30,
+        37,
+        60
       ]
     }
   },
@@ -51068,7 +51068,7 @@ gt.bell.fish = [
     ],
     "radius": 450,
     "zone": "萨维奈岛",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         385,
@@ -51086,11 +51086,11 @@ gt.bell.fish = [
         815802,
         889015
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
-        40,
-        50,
-        80
+        29,
+        37,
+        59
       ]
     }
   },
@@ -51371,9 +51371,9 @@ gt.bell.fish = [
       ],
       "reward": 33914,
       "rewardAmount": [
-        105,
-        131,
-        209
+        78,
+        98,
+        157
       ]
     }
   },
@@ -52107,9 +52107,9 @@ gt.bell.fish = [
       ],
       "reward": 33914,
       "rewardAmount": [
-        145,
-        182,
-        291
+        109,
+        136,
+        218
       ]
     }
   },
@@ -52147,7 +52147,7 @@ gt.bell.fish = [
     ],
     "radius": 600,
     "zone": "叹息海",
-    "scrip": "大地白票",
+    "scrip": "大地紫票",
     "masterpiece": {
       "rating": [
         244,
@@ -52165,11 +52165,11 @@ gt.bell.fish = [
         867714,
         941562
       ],
-      "reward": 25200,
+      "reward": 33914,
       "rewardAmount": [
-        54,
-        67,
-        108
+        39,
+        49,
+        78
       ]
     }
   },
@@ -52581,9 +52581,9 @@ gt.bell.fish = [
       ],
       "reward": 33914,
       "rewardAmount": [
-        73,
-        91,
-        146
+        55,
+        68,
+        109
       ]
     }
   },
@@ -53095,9 +53095,9 @@ gt.bell.fish = [
       ],
       "reward": 33914,
       "rewardAmount": [
-        40,
-        50,
-        79
+        30,
+        37,
+        59
       ]
     }
   },
@@ -53921,9 +53921,9 @@ gt.bell.fish = [
       ],
       "reward": 33914,
       "rewardAmount": [
-        38,
-        47,
-        75
+        28,
+        35,
+        56
       ]
     }
   },

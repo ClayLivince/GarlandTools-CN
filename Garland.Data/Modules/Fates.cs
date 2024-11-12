@@ -63,7 +63,6 @@ namespace Garland.Data.Modules
                         foreach (var rewardItemName in rewardItemNames)
                         {
                             var item = _builder.Db.ItemsByEnName[rewardItemName];
-                            //var item = _builder.Db.ItemsById[clayManager.getItemID(rewardItemName)];
                             if (item.fates == null)
                                 item.fates = new JArray();
                             item.fates.Add(id);
@@ -95,7 +94,8 @@ namespace Garland.Data.Modules
 
             dynamic fate = new JObject();
             fate.id = sFate.Key;
-            _builder.Localize.Strings((JObject)fate, sFate, iFate, false, x => Utils.RemoveLineBreaks(Utils.SanitizeTags(x)), "Name");
+            HtmlStringFormatter fmter = new HtmlStringFormatter();
+            _builder.Localize.Strings((JObject)fate, sFate, iFate, false, x => Utils.RemoveLineBreaks(Utils.SanitizeTags(x.Accept(fmter))), "Name");
             _builder.Localize.HtmlStrings(fate, sFate, iFate, "Description");
             fate.patch = PatchDatabase.Get("fate", sFate.Key);
             fate.lvl = sFate.ClassJobLevel;
@@ -149,7 +149,7 @@ namespace Garland.Data.Modules
                 case 63914: return "Bozjan Fight";
 
                 case 60802:
-                case 63915: return "Bozjan Monster";
+                case 63915: return "Bozjan NM";
 
                 case 60803:
                 case 63916: return "Bozjan Gather";

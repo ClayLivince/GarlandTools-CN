@@ -1,6 +1,6 @@
 ﻿<?php
 
-$weatherIndex = array("","碧空","晴朗","阴云","薄雾","微风","强风","小雨","暴雨","打雷","雷雨","扬沙","沙尘暴","高温","热浪","小雪","暴雪","妖雾","极光","黑暗","绝命","阴云","雷云","暴风雨","暴风雨","阴沉","热浪","妖雾","暴风","烟雾","晴朗","晴朗","晴朗","晴朗","晴朗","极光","辉核","辉核","辉核","辉核","滩云","滩云","滩云","滩云","神意","神意","神意","神意","神意","灵风","灵电","烟武","晴朗","兽雷","雷波","兽雷","神意","打雷","打雷","","神秘","神秘","小雨","晴朗","小雨","晴朗","邪天","邪天","晴朗","平衡","平衡","时光","时光","时光","鬼气","鬼气","鬼气","次元","次元","次元","豪雨","豪雨","极乐","极乐","龙威","龙威","豪雨","迅雷","打雷","次元","晴朗","碧空","白旋风","白旋风","白旋风","幻想","白旋风","月夜","月夜","月夜","月夜","红月下","朱炎","朱炎","朱炎","晴朗","晴朗","晴朗","晴朗","烈焰","海啸","龙卷风","地震","青空","青空","青空","乱灵流","青空","无尽光","暴风","末日","末日","妖梦","妖梦","妖梦","光天","光天","末日","末日","无尽光","烟雾","末日","晴朗","灵烈火","灵飘尘","灵飞电","灵罡风","流星雨","记忆乱流","阴云","阴云","极光","极光","雷云","火风暴","幻海流","","决战","月尘","磁暴","末日","星灵","星灵","星灵","星灵","星灵","虚拟","万魔殿","万魔殿","万魔殿","终极","绝望","神域","神域","神域","神域","神域","神域","神域","神域","邪天","虚无","虚无","虚无","次元","次元","次元","万魔殿","万魔殿","","虚无");
+$weatherIndex = array("","碧空","晴朗","阴云","薄雾","微风","强风","小雨","暴雨","打雷","雷雨","扬沙","沙尘暴","高温","热浪","小雪","暴雪","妖雾","极光","黑暗","绝命","阴云","雷云","暴风雨","暴风雨","阴沉","热浪","妖雾","暴风","烟雾","晴朗","晴朗","晴朗","晴朗","晴朗","极光","辉核","辉核","辉核","辉核","滩云","滩云","滩云","滩云","神意","神意","神意","神意","神意","灵风","灵电","烟武","晴朗","兽雷","雷波","兽雷","神意","打雷","打雷","","神秘","神秘","小雨","晴朗","小雨","晴朗","邪天","邪天","晴朗","平衡","平衡","时光","时光","时光","鬼气","鬼气","鬼气","次元","次元","次元","豪雨","豪雨","极乐","极乐","龙威","龙威","豪雨","迅雷","打雷","次元","晴朗","碧空","白旋风","白旋风","白旋风","幻想","白旋风","月夜","月夜","月夜","月夜","红月下","朱炎","朱炎","朱炎","晴朗","晴朗","晴朗","晴朗","烈焰","海啸","龙卷风","地震","青空","青空","青空","乱灵流","青空","无尽光","暴风","末日","末日","妖梦","妖梦","妖梦","光天","光天","末日","末日","无尽光","烟雾","末日","晴朗","灵烈火","灵飘尘","灵飞电","灵罡风","流星雨","记忆乱流","阴云","阴云","极光","极光","雷云","火风暴","幻海流","","决战","月尘","磁暴","末日","星灵","星灵","星灵","星灵","星灵","虚拟","万魔殿","万魔殿","万魔殿","终极","绝望","神域","神域","神域","神域","神域","神域","神域","神域","邪天","虚无","虚无","虚无","次元","次元","次元","万魔殿","万魔殿","诗想","虚无","阈限","阈限","虚拟","虚拟","虚拟","虚拟","记忆","战云");
 
 $zoneWeather = array('利姆萨·罗敏萨' => array(array('Rate' => 20, 'Weather' => 3), array('Rate' => 50, 'Weather' => 1), array('Rate' => 80, 'Weather' => 2), array('Rate' => 90, 'Weather' => 4), array('Rate' => 100, 'Weather' => 7)),
     '利姆萨·罗敏萨上层甲板' => array(array('Rate' => 20, 'Weather' => 3), array('Rate' => 50, 'Weather' => 1), array('Rate' => 80, 'Weather' => 2), array('Rate' => 90, 'Weather' => 4), array('Rate' => 100, 'Weather' => 7)),
@@ -111,7 +111,6 @@ $zoneWeather = array('利姆萨·罗敏萨' => array(array('Rate' => 20, 'Weathe
     '优雷卡丰水之地' => array(array('Rate' => 12, 'Weather' => 2), array('Rate' => 34, 'Weather' => 8), array('Rate' => 56, 'Weather' => 17), array('Rate' => 78, 'Weather' => 10), array('Rate' => 100, 'Weather' => 15)),
     '阿拉米格王立飞空艇着陆场' => array(array('Rate' => 100, 'Weather' => 84)),
     '结晶化空间' => array(array('Rate' => 100, 'Weather' => 84)),
-    '时空狭缝' => array(array('Rate' => 100, 'Weather' => 77)),
     '烈士庵' => array(array('Rate' => 5, 'Weather' => 8), array('Rate' => 15, 'Weather' => 7), array('Rate' => 25, 'Weather' => 4), array('Rate' => 40, 'Weather' => 3), array('Rate' => 80, 'Weather' => 2), array('Rate' => 100, 'Weather' => 1)),
     '多玛飞地' => array(array('Rate' => 5, 'Weather' => 8), array('Rate' => 15, 'Weather' => 7), array('Rate' => 25, 'Weather' => 4), array('Rate' => 40, 'Weather' => 3), array('Rate' => 80, 'Weather' => 2), array('Rate' => 100, 'Weather' => 1)),
     '望海楼' => array(array('Rate' => 10, 'Weather' => 7), array('Rate' => 20, 'Weather' => 4), array('Rate' => 40, 'Weather' => 3), array('Rate' => 80, 'Weather' => 2), array('Rate' => 100, 'Weather' => 1)),
@@ -124,14 +123,10 @@ $zoneWeather = array('利姆萨·罗敏萨' => array(array('Rate' => 20, 'Weathe
     '拉凯提卡大森林' => array(array('Rate' => 10, 'Weather' => 4), array('Rate' => 20, 'Weather' => 7), array('Rate' => 30, 'Weather' => 49), array('Rate' => 45, 'Weather' => 1), array('Rate' => 85, 'Weather' => 2), array('Rate' => 100, 'Weather' => 3)),
     '黑风海' => array(array('Rate' => 20, 'Weather' => 3), array('Rate' => 80, 'Weather' => 2), array('Rate' => 100, 'Weather' => 1)),
     '完璧王座' => array(array('Rate' => 100, 'Weather' => 118)),
-    '悬挂公馆起居室' => array(array('Rate' => 20, 'Weather' => 1), array('Rate' => 60, 'Weather' => 2), array('Rate' => 75, 'Weather' => 3), array('Rate' => 85, 'Weather' => 4), array('Rate' => 95, 'Weather' => 7), array('Rate' => 100, 'Weather' => 10)),
     '丽耶美格梦园' => array(array('Rate' => 100, 'Weather' => 4)),
     '天穹街' => array(array('Rate' => 60, 'Weather' => 15), array('Rate' => 70, 'Weather' => 2), array('Rate' => 75, 'Weather' => 1), array('Rate' => 90, 'Weather' => 3), array('Rate' => 100, 'Weather' => 4)),
     '南方博兹雅战线' => array(array('Rate' => 52, 'Weather' => 2), array('Rate' => 64, 'Weather' => 7), array('Rate' => 76, 'Weather' => 5), array('Rate' => 88, 'Weather' => 9), array('Rate' => 100, 'Weather' => 11)),
     '扎杜诺尔高原' => array(array('Rate' => 60, 'Weather' => 2), array('Rate' => 70, 'Weather' => 7), array('Rate' => 80, 'Weather' => 5), array('Rate' => 90, 'Weather' => 9), array('Rate' => 100, 'Weather' => 15)),
-    '月球深处' => array(array('Rate' => 100, 'Weather' => 151)),
-    '母水晶' => array(array('Rate' => 100, 'Weather' => 151)),
-    '尽头的终点' => array(array('Rate' => 100, 'Weather' => 127)),
     '旧萨雷安' => array(array('Rate' => 10, 'Weather' => 1), array('Rate' => 50, 'Weather' => 2), array('Rate' => 70, 'Weather' => 3), array('Rate' => 85, 'Weather' => 4), array('Rate' => 100, 'Weather' => 15)),
     '拉札罕' => array(array('Rate' => 10, 'Weather' => 4), array('Rate' => 25, 'Weather' => 7), array('Rate' => 40, 'Weather' => 1), array('Rate' => 80, 'Weather' => 2), array('Rate' => 100, 'Weather' => 3)),
     '迷津' => array(array('Rate' => 15, 'Weather' => 1), array('Rate' => 60, 'Weather' => 2), array('Rate' => 85, 'Weather' => 3), array('Rate' => 100, 'Weather' => 7)),
@@ -148,10 +143,22 @@ $zoneWeather = array('利姆萨·罗敏萨' => array(array('Rate' => 20, 'Weathe
     '穹顶皓天' => array(array('Rate' => 5, 'Weather' => 15), array('Rate' => 25, 'Weather' => 2), array('Rate' => 65, 'Weather' => 1), array('Rate' => 80, 'Weather' => 3), array('Rate' => 90, 'Weather' => 4)),
     '生命奥秘研究层' => array(array('Rate' => 100, 'Weather' => 157)),
     '至福乐土' => array(array('Rate' => 15, 'Weather' => 149), array('Rate' => 85, 'Weather' => 2), array('Rate' => 100, 'Weather' => 49)),
-    '冥魂石洞 - 白岭山麓' => array(array('Rate' => 100, 'Weather' => 16)),
+    '雪山奥窟冥石洞 - 白岭山麓' => array(array('Rate' => 100, 'Weather' => 16)),
     '万魔的产房' => array(array('Rate' => 100, 'Weather' => 157)),
-    '阿赖耶宝塔' => array(array('Rate' => 100, 'Weather' => 105)),
     '埃斯蒂尼安的房间' => array(array('Rate' => 10, 'Weather' => 4), array('Rate' => 25, 'Weather' => 7), array('Rate' => 40, 'Weather' => 1), array('Rate' => 80, 'Weather' => 2), array('Rate' => 100, 'Weather' => 3)),
-    '元老院站' => array(array('Rate' => 45, 'Weather' => 15), array('Rate' => 50, 'Weather' => 9), array('Rate' => 55, 'Weather' => 7), array('Rate' => 60, 'Weather' => 4), array('Rate' => 85, 'Weather' => 3), array('Rate' => 95, 'Weather' => 2), array('Rate' => 100, 'Weather' => 1)));
+    '元老院站' => array(array('Rate' => 45, 'Weather' => 15), array('Rate' => 50, 'Weather' => 9), array('Rate' => 55, 'Weather' => 7), array('Rate' => 60, 'Weather' => 4), array('Rate' => 85, 'Weather' => 3), array('Rate' => 95, 'Weather' => 2), array('Rate' => 100, 'Weather' => 1)),
+    '九号解决方案' => array(array('Rate' => 100, 'Weather' => 2)),
+    '图莱尤拉' => array(array('Rate' => 40, 'Weather' => 1), array('Rate' => 80, 'Weather' => 2), array('Rate' => 85, 'Weather' => 3), array('Rate' => 95, 'Weather' => 4), array('Rate' => 100, 'Weather' => 7)),
+    '奥阔帕恰山' => array(array('Rate' => 20, 'Weather' => 1), array('Rate' => 50, 'Weather' => 2), array('Rate' => 70, 'Weather' => 3), array('Rate' => 80, 'Weather' => 4), array('Rate' => 90, 'Weather' => 5), array('Rate' => 100, 'Weather' => 15)),
+    '克扎玛乌卡湿地' => array(array('Rate' => 25, 'Weather' => 1), array('Rate' => 60, 'Weather' => 2), array('Rate' => 75, 'Weather' => 3), array('Rate' => 85, 'Weather' => 4), array('Rate' => 95, 'Weather' => 7), array('Rate' => 100, 'Weather' => 8)),
+    '亚克特尔树海' => array(array('Rate' => 15, 'Weather' => 1), array('Rate' => 55, 'Weather' => 2), array('Rate' => 70, 'Weather' => 3), array('Rate' => 85, 'Weather' => 4), array('Rate' => 100, 'Weather' => 7)),
+    '夏劳尼荒野' => array(array('Rate' => 5, 'Weather' => 1), array('Rate' => 50, 'Weather' => 2), array('Rate' => 70, 'Weather' => 3), array('Rate' => 85, 'Weather' => 11), array('Rate' => 100, 'Weather' => 6)),
+    '遗产之地' => array(array('Rate' => 5, 'Weather' => 2), array('Rate' => 25, 'Weather' => 3), array('Rate' => 40, 'Weather' => 4), array('Rate' => 45, 'Weather' => 7), array('Rate' => 50, 'Weather' => 10), array('Rate' => 100, 'Weather' => 50)),
+    '活着的记忆' => array(array('Rate' => 10, 'Weather' => 7), array('Rate' => 20, 'Weather' => 4), array('Rate' => 40, 'Weather' => 3), array('Rate' => 100, 'Weather' => 2)),
+    '金凰大堂' => array(array('Rate' => 40, 'Weather' => 1), array('Rate' => 80, 'Weather' => 2), array('Rate' => 85, 'Weather' => 3), array('Rate' => 95, 'Weather' => 4), array('Rate' => 100, 'Weather' => 7)),
+    '船头小屋' => array(array('Rate' => 40, 'Weather' => 1), array('Rate' => 80, 'Weather' => 2), array('Rate' => 85, 'Weather' => 3), array('Rate' => 95, 'Weather' => 4), array('Rate' => 100, 'Weather' => 7)),
+    '地中天道秘密基地' => array(array('Rate' => 5, 'Weather' => 2), array('Rate' => 25, 'Weather' => 3), array('Rate' => 40, 'Weather' => 4), array('Rate' => 45, 'Weather' => 7), array('Rate' => 50, 'Weather' => 10), array('Rate' => 100, 'Weather' => 50)),
+    '次元黄道' => array(array('Rate' => 100, 'Weather' => 183)),
+    '永护塔顶层' => array(array('Rate' => 100, 'Weather' => 181)));
 
 ?>

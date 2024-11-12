@@ -45,10 +45,9 @@ namespace Garland.Data.Modules
                     {
                         var ilvl2 = sRetainerTaskParameter.AsInt32("ItemLevel{DoW}[0]");
                         var ilvl3 = sRetainerTaskParameter.AsInt32("ItemLevel{DoW}[1]");
-                        //var ilvl4 = sRetainerTaskParameter.AsInt32("ItemLevel{DoW}[2]");
-                        //var ilvl5 = sRetainerTaskParameter.AsInt32("ItemLevel{DoW}[3]");
-                        //venture.ilvl = new JArray(sVenture.RequiredItemLevel, ilvl2, ilvl3, ilvl4, ilvl5);
-                        venture.ilvl = new JArray(sVenture.RequiredItemLevel, ilvl2, ilvl3);
+                        var ilvl4 = sRetainerTaskParameter.AsInt32("ItemLevel{DoW}[2]");
+                        var ilvl5 = sRetainerTaskParameter.AsInt32("ItemLevel{DoW}[3]");
+                        venture.ilvl = new JArray(sVenture.RequiredItemLevel, ilvl2, ilvl3, ilvl4, ilvl5);
                     }
                     else if (classJobCategoryKey == 17 || classJobCategoryKey == 18)
                     {
@@ -58,7 +57,6 @@ namespace Garland.Data.Modules
                         var gathering4 = sRetainerTaskParameter.AsInt32("Perception{DoL}[2]");
                         var gathering5 = sRetainerTaskParameter.AsInt32("Perception{DoL}[3]");
                         venture.gathering = new JArray(sVenture.RequiredGathering, gathering2, gathering3, gathering4, gathering5);
-                        //venture.gathering = new JArray(sVenture.RequiredGathering, gathering2, gathering3);
                     }
                     else if (classJobCategoryKey == 19)
                     {
@@ -68,7 +66,6 @@ namespace Garland.Data.Modules
                         var gathering4 = sRetainerTaskParameter.AsInt32("Perception{FSH}[2]");
                         var gathering5 = sRetainerTaskParameter.AsInt32("Perception{FSH}[3]");
                         venture.gathering = new JArray(sVenture.RequiredGathering, gathering2, gathering3, gathering4, gathering5);
-                        //venture.gathering = new JArray(sVenture.RequiredGathering, gathering2, gathering3);
                     }
                     else
                         throw new NotImplementedException($"Invalid ClassJobCategory ${classJobCategoryKey} on venture.");

@@ -17,69 +17,6 @@ namespace Garland.Data.Modules
 
         public override string Name => "Supply Duties";
 
-        private static int[] Currencies = new int[]
-        {
-            10309,
-            25199,
-            10311,
-            25200,
-            10307,
-            33913,
-            33914,
-            21072,
-            21073,
-            21074,
-            21075,
-            21076,
-            21077,
-            21078,
-            21079,
-            21080,
-            21081,
-            21172,
-            21173,
-            21935,
-            22525,
-            26533,
-            26807,
-            28063,
-            28186,
-            28187,
-            28188,
-            30341
-        };
-
-        private static int[] CurrenciesGlobal = new int[] {
-            10309,
-            25199,
-            10311,
-            25200,
-            10307,
-            33913,
-            33914,
-            21072,
-            21073,
-            21074,
-            21075,
-            21076,
-            21077,
-            21078,
-            21079,
-            21080,
-            21081,
-            21172,
-            21173,
-            21935,
-            22525,
-            26533,
-            26807,
-            28063,
-            28186,
-            28187,
-            28188,
-            30341
-        };
-
         public SupplyDuties(ItemSourceComplexity complexity)
         {
             _complexity = complexity;
@@ -135,7 +72,7 @@ namespace Garland.Data.Modules
                 dynamic rewardScrip = null;
                 try
                 {
-                    rewardScrip = _builder.Db.ItemsById[Currencies[sRewardId - 1]];
+                    rewardScrip = _builder.Db.ItemsById[_builder.GetCurrency(sRewardId)];
                 }
                 catch (ArgumentOutOfRangeException)
                 {
@@ -307,7 +244,7 @@ namespace Garland.Data.Modules
                             if (rewardCurrencyKey == 0)
                                 continue;
 
-                            var rewardCurrencyItemKey = Currencies[rewardCurrencyKey - 1];
+                            var rewardCurrencyItemKey = _builder.GetCurrency(rewardCurrencyKey);
                             var rewardGameItem = _builder.Sheet<Saint.Item>()[rewardCurrencyItemKey];
 
                             var rewardLow = (int)(UInt16)sSupplyReward["Quantity{Low}[" + i + "]"];

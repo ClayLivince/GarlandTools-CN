@@ -307,20 +307,12 @@ a:hover {
     padding: 6px;
 }
 
-.close-button {
-    width: 22px;
-    height: 22px;
-    padding: 4px;
-    border-radius: 50%;
-    box-sizing: border-box;
-    border: 1px solid transparent;
-    cursor: pointer;
-    position: absolute;
-    right: 1px;
-    top: 2px;
+.block-corner-button-container {
+    display: inline-flex;
+    text-align: end;
 }
 
-.block .settings-button {
+.block-corner-button-container .button {
     width: 22px;
     height: 22px;
     padding: 4px;
@@ -328,37 +320,19 @@ a:hover {
     box-sizing: border-box;
     border: 1px solid transparent;
     cursor: pointer;
-    position: absolute;
-    right: 23px;
-    top: 2px;
+}
+
+.block-title-row {
+    display: flex;
+    justify-content: space-between;
 }
 
 .block .notifications-button {
-    width: 22px;
-    height: 22px;
-    padding: 4px;
-    border-radius: 50%;
-    box-sizing: border-box;
-    border: 1px solid transparent;
-    cursor: pointer;
-    position: absolute;
-    right: 45px;
-    top: 2px;
     filter: invert(40%);
     -webkit-filter: invert(40%);
 }
 
 .block .copy-button {
-    width: 22px;
-    height: 22px;
-    padding: 4px;
-    border-radius: 0;
-    box-sizing: border-box;
-    border: 1px solid transparent;
-    cursor: pointer;
-    position: absolute;
-    right: 45px;
-    top: 2px;
     transition: all 0.3s;
 }
 
@@ -371,6 +345,23 @@ a:hover {
 
 .block.noexpand .notifications-button {
     right: 24px;
+}
+
+.close-button {
+    width: 22px;
+    height: 22px;
+    padding: 4px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    cursor: pointer;
+    position: absolute;
+    right: 1px;
+    top: 2px;
+}
+.block-close-button:hover {
+    border: 1px solid #1c1c1c;
+    background-color: #A83521;
 }
 
 .close-button:hover {
@@ -424,9 +415,18 @@ a:hover {
     margin: 0
 }
 
+.dialogue-copyright{
+    display: flex;
+    margin: 5px 0;
+}
+
 .dialogue-voice-container{
     display: flex;
     margin: 5px 0;
+}
+
+.dialogue-voice.copyright-marked-up{
+    display: none;
 }
 
 /* Lists */
@@ -2440,6 +2440,11 @@ body.dirty #dirty-indicator {
 
 .sources-uses-page .subsection .subsection-header input[type=checkbox] {
     margin-left: 4px;
+}
+
+.sources-uses-page .source-footnote{
+    margin-top: 30px;
+    color: #888;
 }
 
 /* Localization Page */

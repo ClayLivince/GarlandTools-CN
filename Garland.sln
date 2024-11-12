@@ -15,6 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Supplemental", "Supplementa
 		Supplemental\FFXIV Data - Items.tsv = Supplemental\FFXIV Data - Items.tsv
 		Supplemental\FFXIV Data - Nodes.tsv = Supplemental\FFXIV Data - Nodes.tsv
 		Supplemental\FFXIV Data - NPCs.tsv = Supplemental\FFXIV Data - NPCs.tsv
+		Supplemental\patches.json = Supplemental\patches.json
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Garland.Graphics.Exporter", "Garland.Graphics.Exporter\Garland.Graphics.Exporter.csproj", "{0437AECD-D824-4E8D-A5C6-D82B9C66B0CD}"
@@ -23,13 +24,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "xivModdingFramework", "..\x
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YamlDotNet", "..\SaintCoinach\YamlDotNet\YamlDotNet.csproj", "{BF32DE1B-6276-4341-B212-F8862ADBBA7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotSquish", "..\SaintCoinach-CN\DotSquish\DotSquish.csproj", "{F9681545-4BEA-4FD3-9AB9-A67BD37AB36D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotSquish", "..\SaintCoinach-CN\DotSquish\DotSquish.csproj", "{F9681545-4BEA-4FD3-9AB9-A67BD37AB36D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaintCoinach", "..\SaintCoinach-CN\SaintCoinach\SaintCoinach.csproj", "{8A7D65EB-3DE3-4631-B286-CC73A3126002}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SaintCoinach", "..\SaintCoinach-CN\SaintCoinach\SaintCoinach.csproj", "{8A7D65EB-3DE3-4631-B286-CC73A3126002}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaintCoinach.Cmd", "..\SaintCoinach-CN\SaintCoinach.Cmd\SaintCoinach.Cmd.csproj", "{957699E4-8310-4D1E-BA83-13B7A4932807}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SaintCoinach.Cmd", "..\SaintCoinach-CN\SaintCoinach.Cmd\SaintCoinach.Cmd.csproj", "{957699E4-8310-4D1E-BA83-13B7A4932807}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaintCoinach.Graphics.Viewer", "..\SaintCoinach-CN\SaintCoinach.Graphics.Viewer\SaintCoinach.Graphics.Viewer.csproj", "{226BF71E-334F-4585-8FEC-4239704CF539}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SaintCoinach.Graphics.Viewer", "..\SaintCoinach-CN\SaintCoinach.Graphics.Viewer\SaintCoinach.Graphics.Viewer.csproj", "{226BF71E-334F-4585-8FEC-4239704CF539}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

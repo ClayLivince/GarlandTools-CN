@@ -375,14 +375,48 @@ gt.item = {
         if (item.achievements)
             view.other = _.union(view.other, _.map(gt.model.partialList(gt.achievement, item.achievements), function(i) { return $.extend(i, {right: '成就'}); }));
 
-        if (item.voyages)
-            view.other = _.union(view.other, _.map(item.voyages, function(s) { return { name: s, icon: 'images/Voyage.png', right: '部队探险' }; }));
-
         if (item.treasure)
             view.other = _.union(view.other, _.map(gt.model.partialList(gt.item, item.treasure), function(i) { return $.extend(i, {right: '掉落'}); }));
 
         if (item.fates)
             view.other = _.union(view.other, gt.model.partialList(gt.fate, item.fates));
+
+        if (item.mog)
+            view.mog = item.mog;
+
+        if (item.voyages){
+            view.voyages = _.map(item.voyages, function(s) {
+                let voyageType = 'airship';
+                if (s.type === 1){
+                    voyageType = 'submarine';
+                }
+
+                let voyage = gt.venture.voyageIndex[voyageType][s.id];
+                if (voyage){
+                    return {
+                        name: voyage.name,
+                        icon: 'images/Voyage.png',
+                        right: voyageType === 'airship' ? 'Airship Voyage' : 'Submarine - ' + voyage.sea
+                    };
+                } else {
+                    return {
+                        name: voyageType,
+                        icon: 'images/Voyage.png'
+                    }
+                }
+
+            });
+        }
+
+        if (item.alla){
+            view.alla = [];
+            for (var source of item.alla.source){
+                if (!(source in view.alla)){
+                    view.alla.push(source);
+                }
+            }
+        }
+
 
         // Rowena Masterpiecces
         if (item.masterpiece) {
@@ -650,7 +684,7 @@ gt.item = {
             || view.masterpiece || view.supply || view.delivery || view.bingoData || view.other
             || view.satisfaction || view.customize || view.reducedFrom || view.disposal || view.tripletriadReward
             || view.sell_price || view.supplyReward || (!view.unlistable && !view.untradeable) || view.reducesTo
-            || view.gardening);
+            || view.gardening || view.mog);
 
         return view;
     },

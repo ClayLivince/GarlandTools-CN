@@ -228,7 +228,11 @@
         "itemFR": "Agrégat de glace",
         "itemDE": "Eispolykristall",
         "icon": 20015,
-        "id": 15
+        "id": 15,
+        "reduce": {
+          "item": "Verdigris Guppy",
+          "icon": 28544
+        }
       },
       {
         "item": "风之晶簇",
@@ -264,7 +268,11 @@
         "itemFR": "Agrégat d'eau",
         "itemDE": "Wasserpolykristall",
         "icon": 20014,
-        "id": 19
+        "id": 19,
+        "reduce": {
+          "item": "Sunlit Prism",
+          "icon": 28649
+        }
       },
       {
         "item": "无属性水晶",
@@ -964,7 +972,11 @@
         "itemFR": "Agrégat de glace",
         "itemDE": "Eispolykristall",
         "icon": 20015,
-        "id": 15
+        "id": 15,
+        "reduce": {
+          "item": "Verdigris Guppy",
+          "icon": 28544
+        }
       },
       {
         "item": "风之晶簇",
@@ -1000,7 +1012,11 @@
         "itemFR": "Agrégat d'eau",
         "itemDE": "Wasserpolykristall",
         "icon": 20014,
-        "id": 19
+        "id": 19,
+        "reduce": {
+          "item": "Sunlit Prism",
+          "icon": 28649
+        }
       },
       {
         "item": "无属性水晶",
@@ -1745,7 +1761,11 @@
         "itemFR": "Agrégat d'eau",
         "itemDE": "Wasserpolykristall",
         "icon": 20014,
-        "id": 19
+        "id": 19,
+        "reduce": {
+          "item": "Sunlit Prism",
+          "icon": 28649
+        }
       },
       {
         "item": "无属性水晶",
@@ -2256,7 +2276,7 @@
         "icon": 21461,
         "id": 5218,
         "reduce": {
-          "item": "微光灵砂",
+          "item": "Duskborne Aethersand",
           "icon": 22613
         }
       },
@@ -2269,7 +2289,7 @@
         "icon": 21463,
         "id": 15949,
         "reduce": {
-          "item": "白光灵砂",
+          "item": "Light-kissed Aethersand",
           "icon": 22210
         }
       },
@@ -2282,7 +2302,7 @@
         "icon": 21461,
         "id": 5224,
         "reduce": {
-          "item": "大地灵砂",
+          "item": "Landborne Aethersand",
           "icon": 21006
         }
       },
@@ -2295,7 +2315,7 @@
         "icon": 21475,
         "id": 12967,
         "reduce": {
-          "item": "晓光灵砂",
+          "item": "Dawnborne Aethersand",
           "icon": 22648
         }
       },
@@ -2346,7 +2366,7 @@
         "itemDE": "Pyrit (Sammlerstück)",
         "icon": 21207,
         "id": 32970,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       },
       {
         "item": "收藏用辉铜矿",
@@ -2356,7 +2376,7 @@
         "itemDE": "Chalkosin (Sammlerstück)",
         "icon": 21209,
         "id": 32971,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       },
       {
         "item": "收藏用褐铁矿",
@@ -2366,7 +2386,7 @@
         "itemDE": "Braun<SoftHyphen/>ei<SoftHyphen/>sen<SoftHyphen/>stein (Sammlerstück)",
         "icon": 21206,
         "id": 32972,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       }
     ],
     "time": [
@@ -2397,7 +2417,7 @@
         "itemDE": "Abalathisches Quellwasser (Sammlerstück)",
         "icon": 22614,
         "id": 32973,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       },
       {
         "item": "收藏用皇金沙",
@@ -2407,7 +2427,7 @@
         "itemDE": "Königsgold-Sandklumpen (Sammlerstück)",
         "icon": 21220,
         "id": 32974,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       }
     ],
     "time": [
@@ -2438,7 +2458,7 @@
         "itemDE": "Roh-Triphan (Sammlerstück)",
         "icon": 21474,
         "id": 32975,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       },
       {
         "item": "收藏用蓝晶石原石",
@@ -2448,7 +2468,7 @@
         "itemDE": "Roh-Kyanit (Sammlerstück)",
         "icon": 21472,
         "id": 32977,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       }
     ],
     "time": [
@@ -2480,7 +2500,7 @@
         "icon": 21456,
         "id": 5214,
         "reduce": {
-          "item": "微光灵砂",
+          "item": "Duskborne Aethersand",
           "icon": 22613
         }
       },
@@ -2493,7 +2513,7 @@
         "icon": 21463,
         "id": 15949,
         "reduce": {
-          "item": "白光灵砂",
+          "item": "Light-kissed Aethersand",
           "icon": 22210
         }
       },
@@ -2506,7 +2526,7 @@
         "icon": 21456,
         "id": 5220,
         "reduce": {
-          "item": "大地灵砂",
+          "item": "Landborne Aethersand",
           "icon": 21006
         }
       },
@@ -2519,7 +2539,7 @@
         "icon": 21471,
         "id": 12966,
         "reduce": {
-          "item": "晓光灵砂",
+          "item": "Dawnborne Aethersand",
           "icon": 22648
         }
       },
@@ -2570,7 +2590,7 @@
         "itemDE": "Roh-Sternspinell (Sammlerstück)",
         "icon": 21475,
         "id": 32976,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       }
     ],
     "time": [
@@ -2601,7 +2621,7 @@
         "itemDE": "Roh-Azurit (Sammlerstück)",
         "icon": 21472,
         "id": 32978,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       },
       {
         "item": "收藏用清银矿",
@@ -2611,7 +2631,7 @@
         "itemDE": "Silbergunsterz (Sammlerstück)",
         "icon": 21213,
         "id": 32979,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       }
     ],
     "time": [
@@ -2642,7 +2662,7 @@
         "itemDE": "Titanbronze-Erzklumpen (Sammlerstück)",
         "icon": 21202,
         "id": 32980,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       },
       {
         "item": "收藏用透锂长石原石",
@@ -2652,7 +2672,7 @@
         "itemDE": "Roh-Petalit (Sammlerstück)",
         "icon": 21477,
         "id": 32982,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       }
     ],
     "time": [
@@ -2684,7 +2704,7 @@
         "icon": 21456,
         "id": 5214,
         "reduce": {
-          "item": "微光灵砂",
+          "item": "Duskborne Aethersand",
           "icon": 22613
         }
       },
@@ -2697,7 +2717,7 @@
         "icon": 21463,
         "id": 15949,
         "reduce": {
-          "item": "白光灵砂",
+          "item": "Light-kissed Aethersand",
           "icon": 22210
         }
       },
@@ -2710,7 +2730,7 @@
         "icon": 21456,
         "id": 5220,
         "reduce": {
-          "item": "大地灵砂",
+          "item": "Landborne Aethersand",
           "icon": 21006
         }
       },
@@ -2723,7 +2743,7 @@
         "icon": 21471,
         "id": 12966,
         "reduce": {
-          "item": "晓光灵砂",
+          "item": "Dawnborne Aethersand",
           "icon": 22648
         }
       },
@@ -2774,7 +2794,7 @@
         "itemDE": "Roh-Lasurit (Sammlerstück)",
         "icon": 21472,
         "id": 32981,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       }
     ],
     "time": [
@@ -2805,7 +2825,7 @@
         "itemDE": "Meersalzklumpen (Sammlerstück)",
         "icon": 22617,
         "id": 32983,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       },
       {
         "item": "收藏用黑玛瑙原石",
@@ -2815,7 +2835,7 @@
         "itemDE": "Roh-Onyx (Sammlerstück)",
         "icon": 21231,
         "id": 32985,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       }
     ],
     "time": [
@@ -2847,7 +2867,7 @@
         "icon": 21456,
         "id": 5214,
         "reduce": {
-          "item": "微光灵砂",
+          "item": "Duskborne Aethersand",
           "icon": 22613
         }
       },
@@ -2860,7 +2880,7 @@
         "icon": 21463,
         "id": 15949,
         "reduce": {
-          "item": "白光灵砂",
+          "item": "Light-kissed Aethersand",
           "icon": 22210
         }
       },
@@ -2873,7 +2893,7 @@
         "icon": 21456,
         "id": 5220,
         "reduce": {
-          "item": "大地灵砂",
+          "item": "Landborne Aethersand",
           "icon": 21006
         }
       },
@@ -2886,7 +2906,7 @@
         "icon": 21471,
         "id": 12966,
         "reduce": {
-          "item": "晓光灵砂",
+          "item": "Dawnborne Aethersand",
           "icon": 22648
         }
       },
@@ -2938,7 +2958,7 @@
         "icon": 21461,
         "id": 5218,
         "reduce": {
-          "item": "微光灵砂",
+          "item": "Duskborne Aethersand",
           "icon": 22613
         }
       },
@@ -2951,7 +2971,7 @@
         "icon": 21463,
         "id": 15949,
         "reduce": {
-          "item": "白光灵砂",
+          "item": "Light-kissed Aethersand",
           "icon": 22210
         }
       },
@@ -2964,7 +2984,7 @@
         "icon": 21461,
         "id": 5224,
         "reduce": {
-          "item": "大地灵砂",
+          "item": "Landborne Aethersand",
           "icon": 21006
         }
       },
@@ -2977,7 +2997,7 @@
         "icon": 21475,
         "id": 12967,
         "reduce": {
-          "item": "晓光灵砂",
+          "item": "Dawnborne Aethersand",
           "icon": 22648
         }
       },
@@ -3294,7 +3314,7 @@
         "icon": 25010,
         "id": 33148,
         "reduce": {
-          "item": "微光灵砂",
+          "item": "Duskborne Aethersand",
           "icon": 22613
         }
       },
@@ -3316,7 +3336,7 @@
         "icon": 25036,
         "id": 33149,
         "reduce": {
-          "item": "晓光灵砂",
+          "item": "Dawnborne Aethersand",
           "icon": 22648
         }
       },
@@ -3338,7 +3358,7 @@
         "icon": 25034,
         "id": 33150,
         "reduce": {
-          "item": "大树灵砂",
+          "item": "Leafborne Aethersand",
           "icon": 22649
         }
       },
@@ -3351,7 +3371,7 @@
         "icon": 25009,
         "id": 15948,
         "reduce": {
-          "item": "白光灵砂",
+          "item": "Light-kissed Aethersand",
           "icon": 22210
         }
       },
@@ -3412,7 +3432,7 @@
         "icon": 25010,
         "id": 33148,
         "reduce": {
-          "item": "微光灵砂",
+          "item": "Duskborne Aethersand",
           "icon": 22613
         }
       },
@@ -3434,7 +3454,7 @@
         "icon": 25036,
         "id": 33149,
         "reduce": {
-          "item": "晓光灵砂",
+          "item": "Dawnborne Aethersand",
           "icon": 22648
         }
       },
@@ -3456,7 +3476,7 @@
         "icon": 25034,
         "id": 33150,
         "reduce": {
-          "item": "大树灵砂",
+          "item": "Leafborne Aethersand",
           "icon": 22649
         }
       },
@@ -3469,7 +3489,7 @@
         "icon": 25009,
         "id": 15948,
         "reduce": {
-          "item": "白光灵砂",
+          "item": "Light-kissed Aethersand",
           "icon": 22210
         }
       },
@@ -3530,7 +3550,7 @@
         "icon": 22628,
         "id": 33147,
         "reduce": {
-          "item": "大树灵砂",
+          "item": "Leafborne Aethersand",
           "icon": 22649
         }
       },
@@ -3543,7 +3563,7 @@
         "icon": 27407,
         "id": 12968,
         "reduce": {
-          "item": "微光灵砂",
+          "item": "Duskborne Aethersand",
           "icon": 22613
         }
       },
@@ -3556,7 +3576,7 @@
         "icon": 27401,
         "id": 12969,
         "reduce": {
-          "item": "晓光灵砂",
+          "item": "Dawnborne Aethersand",
           "icon": 22648
         }
       },
@@ -3569,7 +3589,7 @@
         "icon": 25009,
         "id": 15948,
         "reduce": {
-          "item": "白光灵砂",
+          "item": "Light-kissed Aethersand",
           "icon": 22210
         }
       },
@@ -3630,7 +3650,7 @@
         "icon": 22628,
         "id": 33147,
         "reduce": {
-          "item": "大树灵砂",
+          "item": "Leafborne Aethersand",
           "icon": 22649
         }
       },
@@ -3643,7 +3663,7 @@
         "icon": 27407,
         "id": 12968,
         "reduce": {
-          "item": "微光灵砂",
+          "item": "Duskborne Aethersand",
           "icon": 22613
         }
       },
@@ -3656,7 +3676,7 @@
         "icon": 27401,
         "id": 12969,
         "reduce": {
-          "item": "晓光灵砂",
+          "item": "Dawnborne Aethersand",
           "icon": 22648
         }
       },
@@ -3669,7 +3689,7 @@
         "icon": 25009,
         "id": 15948,
         "reduce": {
-          "item": "白光灵砂",
+          "item": "Light-kissed Aethersand",
           "icon": 22210
         }
       },
@@ -3730,7 +3750,7 @@
         "icon": 22628,
         "id": 33147,
         "reduce": {
-          "item": "大树灵砂",
+          "item": "Leafborne Aethersand",
           "icon": 22649
         }
       },
@@ -3743,7 +3763,7 @@
         "icon": 27407,
         "id": 12968,
         "reduce": {
-          "item": "微光灵砂",
+          "item": "Duskborne Aethersand",
           "icon": 22613
         }
       },
@@ -3756,7 +3776,7 @@
         "icon": 27401,
         "id": 12969,
         "reduce": {
-          "item": "晓光灵砂",
+          "item": "Dawnborne Aethersand",
           "icon": 22648
         }
       },
@@ -3769,7 +3789,7 @@
         "icon": 25009,
         "id": 15948,
         "reduce": {
-          "item": "白光灵砂",
+          "item": "Light-kissed Aethersand",
           "icon": 22210
         }
       },
@@ -3830,7 +3850,7 @@
         "icon": 21458,
         "id": 33152,
         "reduce": {
-          "item": "悠久灵砂",
+          "item": "Everbright Aethersand",
           "icon": 21006
         }
       },
@@ -3843,7 +3863,7 @@
         "icon": 21466,
         "id": 23220,
         "reduce": {
-          "item": "黄昏灵砂",
+          "item": "Duskglow Aethersand",
           "icon": 21006
         }
       },
@@ -4229,7 +4249,7 @@
         "icon": 21474,
         "id": 33153,
         "reduce": {
-          "item": "夜光灵砂",
+          "item": "Dusklight Aethersand",
           "icon": 21219
         }
       },
@@ -4242,7 +4262,7 @@
         "icon": 21466,
         "id": 23220,
         "reduce": {
-          "item": "黄昏灵砂",
+          "item": "Duskglow Aethersand",
           "icon": 21006
         }
       },
@@ -4253,7 +4273,11 @@
         "itemFR": "Cristal de glace",
         "itemDE": "Eiskristall",
         "icon": 20009,
-        "id": 9
+        "id": 9,
+        "reduce": {
+          "item": "Verdigris Guppy",
+          "icon": 28544
+        }
       },
       {
         "item": "冰之晶簇",
@@ -4262,7 +4286,11 @@
         "itemFR": "Agrégat de glace",
         "itemDE": "Eispolykristall",
         "icon": 20015,
-        "id": 15
+        "id": 15,
+        "reduce": {
+          "item": "Verdigris Guppy",
+          "icon": 28544
+        }
       }
     ],
     "stars": 2,
@@ -4468,7 +4496,7 @@
         "icon": 21476,
         "id": 20009,
         "reduce": {
-          "item": "极光灵砂",
+          "item": "Dawnlight Aethersand",
           "icon": 22210
         }
       },
@@ -4481,7 +4509,7 @@
         "icon": 21466,
         "id": 23220,
         "reduce": {
-          "item": "黄昏灵砂",
+          "item": "Duskglow Aethersand",
           "icon": 21006
         }
       },
@@ -4574,7 +4602,7 @@
         "itemDE": "Tiefenfels (Sammlerstück)",
         "icon": 21203,
         "id": 32984,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       },
       {
         "item": "收藏用重钨矿",
@@ -4584,7 +4612,7 @@
         "itemDE": "Wolframerzklumpen (Sammlerstück)",
         "icon": 21203,
         "id": 32986,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       }
     ],
     "stars": 1,
@@ -4616,7 +4644,7 @@
         "itemDE": "Abanischer Alaun (Sammlerstück)",
         "icon": 22644,
         "id": 32987,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       }
     ],
     "stars": 1,
@@ -4648,7 +4676,7 @@
         "itemDE": "Dunkler Kastaniensaft (Sammlerstück)",
         "icon": 22654,
         "id": 32992,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       },
       {
         "item": "收藏用暗栗木原木",
@@ -4658,7 +4686,7 @@
         "itemDE": "Dunkles Kastanienholz (Sammlerstück)",
         "icon": 22420,
         "id": 32993,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       },
       {
         "item": "收藏用暗栗树枝",
@@ -4668,7 +4696,7 @@
         "itemDE": "Dunkler Kastanienast (Sammlerstück)",
         "icon": 22416,
         "id": 32994,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       }
     ],
     "time": [
@@ -4699,7 +4727,7 @@
         "itemDE": "Dunkle Kastanie (Sammlerstück)",
         "icon": 25302,
         "id": 32995,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       },
       {
         "item": "收藏用暗栗木树脂",
@@ -4709,7 +4737,7 @@
         "itemDE": "Dunkles Kastanienharz (Sammlerstück)",
         "icon": 22674,
         "id": 32996,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       }
     ],
     "time": [
@@ -4741,7 +4769,7 @@
         "icon": 22416,
         "id": 19937,
         "reduce": {
-          "item": "丰饶灵砂",
+          "item": "Everborn Aethersand",
           "icon": 22649
         }
       },
@@ -4754,7 +4782,7 @@
         "icon": 25009,
         "id": 23221,
         "reduce": {
-          "item": "黄昏灵砂",
+          "item": "Duskglow Aethersand",
           "icon": 21006
         }
       },
@@ -4765,7 +4793,11 @@
         "itemFR": "Cristal de glace",
         "itemDE": "Eiskristall",
         "icon": 20009,
-        "id": 9
+        "id": 9,
+        "reduce": {
+          "item": "Verdigris Guppy",
+          "icon": 28544
+        }
       },
       {
         "item": "冰之晶簇",
@@ -4774,7 +4806,11 @@
         "itemFR": "Agrégat de glace",
         "itemDE": "Eispolykristall",
         "icon": 20015,
-        "id": 15
+        "id": 15,
+        "reduce": {
+          "item": "Verdigris Guppy",
+          "icon": 28544
+        }
       }
     ],
     "stars": 2,
@@ -5323,8 +5359,8 @@
         "icon": 25015,
         "id": 33151,
         "reduce": {
-          "item": "极光灵砂",
-          "icon": 22210
+          "item": "Wind Crystal",
+          "icon": 20010
         }
       },
       {
@@ -5336,7 +5372,7 @@
         "icon": 25009,
         "id": 23221,
         "reduce": {
-          "item": "黄昏灵砂",
+          "item": "Duskglow Aethersand",
           "icon": 21006
         }
       },
@@ -5388,7 +5424,7 @@
         "icon": 27407,
         "id": 20012,
         "reduce": {
-          "item": "夜光灵砂",
+          "item": "Dusklight Aethersand",
           "icon": 21219
         }
       },
@@ -5401,7 +5437,7 @@
         "icon": 25009,
         "id": 23221,
         "reduce": {
-          "item": "黄昏灵砂",
+          "item": "Duskglow Aethersand",
           "icon": 21006
         }
       },
@@ -5989,7 +6025,7 @@
         "icon": 21473,
         "id": 27805,
         "reduce": {
-          "item": "闪光灵砂",
+          "item": "Chiaroglow Aethersand",
           "icon": 21235
         }
       },
@@ -6002,7 +6038,7 @@
         "icon": 21482,
         "id": 30591,
         "reduce": {
-          "item": "土之晶簇",
+          "item": "Earth Cluster",
           "icon": 20018
         }
       },
@@ -6013,7 +6049,11 @@
         "itemFR": "Cristal d'eau",
         "itemDE": "Wasserkristall",
         "icon": 20008,
-        "id": 13
+        "id": 13,
+        "reduce": {
+          "item": "Sunlit Prism",
+          "icon": 28649
+        }
       },
       {
         "item": "水之晶簇",
@@ -6022,7 +6062,11 @@
         "itemFR": "Agrégat d'eau",
         "itemDE": "Wasserpolykristall",
         "icon": 20014,
-        "id": 19
+        "id": 19,
+        "reduce": {
+          "item": "Sunlit Prism",
+          "icon": 28649
+        }
       }
     ],
     "stars": 2,
@@ -6054,7 +6098,7 @@
         "icon": 21467,
         "id": 27806,
         "reduce": {
-          "item": "黑暗灵砂",
+          "item": "Scuroglow Aethersand",
           "icon": 21233
         }
       },
@@ -6067,7 +6111,7 @@
         "icon": 21482,
         "id": 30591,
         "reduce": {
-          "item": "土之晶簇",
+          "item": "Earth Cluster",
           "icon": 20018
         }
       },
@@ -6119,7 +6163,7 @@
         "icon": 21482,
         "id": 30591,
         "reduce": {
-          "item": "土之晶簇",
+          "item": "Earth Cluster",
           "icon": 20018
         }
       },
@@ -6132,7 +6176,7 @@
         "icon": 21462,
         "id": 27807,
         "reduce": {
-          "item": "险山灵砂",
+          "item": "Agedeep Aethersand",
           "icon": 21234
         }
       },
@@ -6452,7 +6496,7 @@
         "icon": 25009,
         "id": 27810,
         "reduce": {
-          "item": "古树灵砂",
+          "item": "Agewood Aethersand",
           "icon": 21236
         }
       },
@@ -6465,7 +6509,7 @@
         "icon": 25039,
         "id": 30592,
         "reduce": {
-          "item": "雷之晶簇",
+          "item": "Lightning Cluster",
           "icon": 20017
         }
       },
@@ -6517,7 +6561,7 @@
         "icon": 25015,
         "id": 27809,
         "reduce": {
-          "item": "黑暗灵砂",
+          "item": "Scuroglow Aethersand",
           "icon": 21233
         }
       },
@@ -6530,7 +6574,7 @@
         "icon": 25039,
         "id": 30592,
         "reduce": {
-          "item": "雷之晶簇",
+          "item": "Lightning Cluster",
           "icon": 20017
         }
       },
@@ -6582,7 +6626,7 @@
         "icon": 25039,
         "id": 30592,
         "reduce": {
-          "item": "雷之晶簇",
+          "item": "Lightning Cluster",
           "icon": 20017
         }
       },
@@ -6595,7 +6639,7 @@
         "icon": 22610,
         "id": 27808,
         "reduce": {
-          "item": "闪光灵砂",
+          "item": "Chiaroglow Aethersand",
           "icon": 21235
         }
       },
@@ -6606,7 +6650,11 @@
         "itemFR": "Cristal de glace",
         "itemDE": "Eiskristall",
         "icon": 20009,
-        "id": 9
+        "id": 9,
+        "reduce": {
+          "item": "Verdigris Guppy",
+          "icon": 28544
+        }
       },
       {
         "item": "冰之晶簇",
@@ -6615,7 +6663,11 @@
         "itemFR": "Agrégat de glace",
         "itemDE": "Eispolykristall",
         "icon": 20015,
-        "id": 15
+        "id": 15,
+        "reduce": {
+          "item": "Verdigris Guppy",
+          "icon": 28544
+        }
       }
     ],
     "stars": 2,
@@ -7031,7 +7083,7 @@
         "itemDE": "Lärchen-Holzscheit (Sammlerstück)",
         "icon": 22403,
         "id": 32997,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       },
       {
         "item": "收藏用落叶松树液",
@@ -7041,7 +7093,7 @@
         "itemDE": "Lärchensaft (Sammlerstück)",
         "icon": 22642,
         "id": 32999,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       }
     ],
     "time": [
@@ -7072,7 +7124,7 @@
         "itemDE": "Shiitake-Pilz (Sammlerstück)",
         "icon": 25401,
         "id": 32998,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       }
     ],
     "time": [
@@ -7103,7 +7155,7 @@
         "itemDE": "Kieferharz (Sammlerstück)",
         "icon": 22638,
         "id": 33000,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       },
       {
         "item": "收藏用松木原木",
@@ -7113,7 +7165,7 @@
         "itemDE": "Kiefern-Holzscheit (Sammlerstück)",
         "icon": 22414,
         "id": 33001,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       }
     ],
     "time": [
@@ -7144,7 +7196,7 @@
         "itemDE": "Pixie-Apfel (Sammlerstück)",
         "icon": 25308,
         "id": 33002,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       },
       {
         "item": "收藏用仙果木原木",
@@ -7154,7 +7206,7 @@
         "itemDE": "Wunderapfelholzscheit (Sammlerstück)",
         "icon": 22404,
         "id": 33004,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       }
     ],
     "time": [
@@ -7185,7 +7237,7 @@
         "itemDE": "Weißeichenholzscheit (Sammlerstück)",
         "icon": 22407,
         "id": 33003,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       }
     ],
     "time": [
@@ -7216,7 +7268,7 @@
         "itemDE": "Sandteakholzscheit (Sammlerstück)",
         "icon": 22403,
         "id": 33005,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       },
       {
         "item": "收藏用琥珀丁香",
@@ -7226,7 +7278,7 @@
         "itemDE": "Bernsteinnelke (Sammlerstück)",
         "icon": 25023,
         "id": 33007,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       }
     ],
     "time": [
@@ -7257,7 +7309,7 @@
         "itemDE": "Seegras (Sammlerstück)",
         "icon": 25225,
         "id": 33006,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       },
       {
         "item": "收藏用珊瑚",
@@ -7267,7 +7319,7 @@
         "itemDE": "Koralle (Sammlerstück)",
         "icon": 29062,
         "id": 33008,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       }
     ],
     "stars": 1,
@@ -7299,7 +7351,7 @@
         "itemDE": "Urunday-Holzscheit (Sammlerstück)",
         "icon": 22420,
         "id": 33009,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       }
     ],
     "stars": 1,
@@ -7596,7 +7648,7 @@
         "icon": 21459,
         "id": 36285,
         "reduce": {
-          "item": "晓月灵砂",
+          "item": "Moonlight Aethersand",
           "icon": 21233
         }
       },
@@ -7607,7 +7659,11 @@
         "itemFR": "Quartz terrestre",
         "itemDE": "Erdquarz",
         "icon": 21458,
-        "id": 38937
+        "id": 38937,
+        "reduce": {
+          "item": "Earthbreak Aethersand",
+          "icon": 21246
+        }
       },
       {
         "item": "土之水晶",
@@ -7657,8 +7713,8 @@
         "icon": 21472,
         "id": 36286,
         "reduce": {
-          "item": "巨岩灵砂",
-          "icon": 21234
+          "item": "Lightning Cluster",
+          "icon": 20017
         }
       },
       {
@@ -7707,7 +7763,7 @@
         "itemDE": "Roh-Ametrin (Sammlerstück)",
         "icon": 21475,
         "id": 36293,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       },
       {
         "item": "收藏用北洋岩盐",
@@ -7717,7 +7773,7 @@
         "itemDE": "Nordsteinsalz (Sammlerstück)",
         "icon": 22688,
         "id": 36295,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       }
     ],
     "time": [
@@ -7748,7 +7804,7 @@
         "itemDE": "Bismuterz (Sammlerstück)",
         "icon": 21217,
         "id": 36294,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       }
     ],
     "time": [
@@ -7779,7 +7835,7 @@
         "itemDE": "Phrygien-Gold (Sammlerstück)",
         "icon": 21206,
         "id": 36296,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       },
       {
         "item": "收藏用艾布拉纳明矾",
@@ -7820,7 +7876,7 @@
         "itemDE": "Roh-Blauzirkon (Sammlerstück)",
         "icon": 21472,
         "id": 36297,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       },
       {
         "item": "收藏用铁云母",
@@ -7920,7 +7976,11 @@
         "itemFR": "Sidérite volatile",
         "itemDE": "Flüchtiger Eisenmeteorbrocken",
         "icon": 21472,
-        "id": 37694
+        "id": 37694,
+        "reduce": {
+          "item": "Igneous Glioaether",
+          "icon": 22660
+        }
       },
       {
         "item": "升华铁陨石",
@@ -7928,8 +7988,12 @@
         "itemJA": "昇華鉄隕石",
         "itemFR": "Sidérite sublimée",
         "itemDE": "Erhabener Eisenmeteorbrocken",
-        "icon": "t/21486",
-        "id": 37695
+        "icon": 21486,
+        "id": 37695,
+        "reduce": {
+          "item": "Igneous Glioaether",
+          "icon": 22660
+        }
       }
     ],
     "stars": 2,
@@ -8048,7 +8112,7 @@
         "icon": 21465,
         "id": 36287,
         "reduce": {
-          "item": "晓月灵砂",
+          "item": "Moonlight Aethersand",
           "icon": 21233
         }
       },
@@ -8058,8 +8122,12 @@
         "itemJA": "苦参",
         "itemFR": "Sophora",
         "itemDE": "Sophora-Wurzel",
-        "icon": "t/25025",
-        "id": 38938
+        "icon": 25025,
+        "id": 38938,
+        "reduce": {
+          "item": "Earthbreak Aethersand",
+          "icon": 21246
+        }
       },
       {
         "item": "风之水晶",
@@ -8109,8 +8177,8 @@
         "icon": 22418,
         "id": 36288,
         "reduce": {
-          "item": "巨树灵砂",
-          "icon": 21236
+          "item": "Fire Cluster",
+          "icon": 20013
         }
       },
       {
@@ -8159,7 +8227,7 @@
         "itemDE": "Palmenholzscheit (Sammlerstück)",
         "icon": 22410,
         "id": 36303,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       },
       {
         "item": "收藏用椰子",
@@ -8169,7 +8237,7 @@
         "itemDE": "Kokosnuss (Sammlerstück)",
         "icon": 25323,
         "id": 36305,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       }
     ],
     "time": [
@@ -8200,7 +8268,7 @@
         "itemDE": "Rotkiefer-Holzscheit (Sammlerstück)",
         "icon": 22403,
         "id": 36304,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       }
     ],
     "time": [
@@ -8231,7 +8299,7 @@
         "itemDE": "Lykon-Frucht (Sammlerstück)",
         "icon": 25318,
         "id": 36306,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       },
       {
         "item": "收藏用古代肉豆蔻",
@@ -8272,7 +8340,7 @@
         "itemDE": "Schwarzkorn (Sammlerstück)",
         "icon": 25359,
         "id": 36307,
-        "scrip": "大地白票"
+        "scrip": "大地紫票"
       },
       {
         "item": "收藏用冰山莴苣",
@@ -8456,7 +8524,11 @@
         "itemFR": "Cristofleur volatile",
         "itemDE": "Flüchtige Kristallblume",
         "icon": 25039,
-        "id": 37691
+        "id": 37691,
+        "reduce": {
+          "item": "Verdurous Glioaether",
+          "icon": 22668
+        }
       },
       {
         "item": "升华结晶花",
@@ -8464,8 +8536,12 @@
         "itemJA": "昇華結晶花",
         "itemFR": "Cristofleur sublimée",
         "itemDE": "Erhabene Kristallblume",
-        "icon": "t/25042",
-        "id": 37692
+        "icon": 25042,
+        "id": 37692,
+        "reduce": {
+          "item": "Verdurous Glioaether",
+          "icon": 22668
+        }
       }
     ],
     "stars": 2,
@@ -8549,7 +8625,11 @@
         "itemFR": "Achondrite volatile",
         "itemDE": "Flüchtiger Achondrit",
         "icon": 21210,
-        "id": 39237
+        "id": 39237,
+        "reduce": {
+          "item": "Pure Igneous Glioaether",
+          "icon": 22660
+        }
       },
       {
         "item": "升华无粒陨石",
@@ -8557,8 +8637,12 @@
         "itemJA": "昇華エイコンドライト",
         "itemFR": "Achondrite sublimée",
         "itemDE": "Erhabener Achondrit",
-        "icon": "t/21247",
-        "id": 39238
+        "icon": 21247,
+        "id": 39238,
+        "reduce": {
+          "item": "Pure Igneous Glioaether",
+          "icon": 22660
+        }
       }
     ],
     "stars": 3,
@@ -8600,7 +8684,11 @@
         "itemFR": "Schiste vert volatil",
         "itemDE": "Flüchtiger Grünschieferklumpen",
         "icon": 21252,
-        "id": 39909
+        "id": 39909,
+        "reduce": {
+          "item": "Concentrated Igneous Glioaether",
+          "icon": 22660
+        }
       },
       {
         "item": "升华绿片岩",
@@ -8608,8 +8696,12 @@
         "itemJA": "昇華緑色片岩",
         "itemFR": "Schiste vert sublimé",
         "itemDE": "Erhabener Grünschieferklumpen",
-        "icon": "t/21337",
-        "id": 39910
+        "icon": 21337,
+        "id": 39910,
+        "reduce": {
+          "item": "Concentrated Igneous Glioaether",
+          "icon": 22660
+        }
       }
     ],
     "stars": 3,
@@ -8651,7 +8743,11 @@
         "itemFR": "Morille conique volatile",
         "itemDE": "Flüchtiger Sphongos",
         "icon": 25408,
-        "id": 39234
+        "id": 39234,
+        "reduce": {
+          "item": "Pure Verdurous Glioaether",
+          "icon": 22668
+        }
       },
       {
         "item": "升华海绵菇",
@@ -8659,8 +8755,12 @@
         "itemJA": "昇華スポンゴス茸",
         "itemFR": "Morille conique sublimée",
         "itemDE": "Erhabener Sphongos",
-        "icon": "t/25411",
-        "id": 39235
+        "icon": 25411,
+        "id": 39235,
+        "reduce": {
+          "item": "Pure Verdurous Glioaether",
+          "icon": 22668
+        }
       }
     ],
     "stars": 3,
@@ -8702,7 +8802,11 @@
         "itemFR": "Feuille de myrobolan volatile",
         "itemDE": "Flüchtige Haritaki-Blätter",
         "icon": 25015,
-        "id": 39906
+        "id": 39906,
+        "reduce": {
+          "item": "Concentrated Verdurous Glioaether",
+          "icon": 22668
+        }
       },
       {
         "item": "升华诃子叶",
@@ -8710,8 +8814,12 @@
         "itemJA": "昇華ミロバランリーフ",
         "itemFR": "Feuille de myrobolan sublimée",
         "itemDE": "Erhabene Haritaki-Blätter",
-        "icon": "t/25043",
-        "id": 39907
+        "icon": 25043,
+        "id": 39907,
+        "reduce": {
+          "item": "Concentrated Verdurous Glioaether",
+          "icon": 22668
+        }
       }
     ],
     "stars": 3,
@@ -8828,7 +8936,11 @@
         "itemFR": "Écaille de dragon ancien volatile",
         "itemDE": "Flüchtige antike Drachenschuppe",
         "icon": 22251,
-        "id": 41416
+        "id": 41416,
+        "reduce": {
+          "item": "Potent Igneous Glioaether",
+          "icon": 22660
+        }
       },
       {
         "item": "升华古龙鳞",
@@ -8836,8 +8948,12 @@
         "itemJA": "昇華古竜の鱗",
         "itemFR": "Écaille de dragon ancien sublimée",
         "itemDE": "Erhabene antike Drachenschuppe",
-        "icon": "t/22266",
-        "id": 41417
+        "icon": 22266,
+        "id": 41417,
+        "reduce": {
+          "item": "Potent Igneous Glioaether",
+          "icon": 22660
+        }
       }
     ],
     "stars": 4,
@@ -8902,7 +9018,7 @@
         "itemJA": "アブラナ",
         "itemFR": "Navette",
         "itemDE": "Ölrübsen",
-        "icon": "t/22696",
+        "icon": 22696,
         "id": 39709
       }
     ],
@@ -8935,7 +9051,7 @@
         "itemJA": "ラヴィングフラワー",
         "itemFR": "Bourgeon d'amour",
         "itemDE": "Loving-Blume",
-        "icon": "t/25413",
+        "icon": 25413,
         "id": 39710
       }
     ],
@@ -8978,7 +9094,11 @@
         "itemFR": "Fève kukuru volatile",
         "itemDE": "Flüchtige Kukuru-Bohnen",
         "icon": 25314,
-        "id": 41413
+        "id": 41413,
+        "reduce": {
+          "item": "Potent Verdurous Glioaether",
+          "icon": 22668
+        }
       },
       {
         "item": "升华可可豆",
@@ -8986,8 +9106,12 @@
         "itemJA": "昇華ククルビーン",
         "itemFR": "Fève kukuru sublimée",
         "itemDE": "Erhabene Kukuru-Bohnen",
-        "icon": "t/25329",
-        "id": 41414
+        "icon": 25329,
+        "id": 41414,
+        "reduce": {
+          "item": "Potent Verdurous Glioaether",
+          "icon": 22668
+        }
       }
     ],
     "stars": 4,
@@ -9008,5 +9132,699 @@
     "condition": "鉴别力 4000以上",
     "bonus": "额外采集奖励发生率＋30%",
     "patch": 6.4
+  },
+  {
+    "type": "石场",
+    "func": "node",
+    "items": [
+      {
+        "item": "黑雷岩",
+        "itemEN": "Electrocoal",
+        "itemJA": "黒雷岩",
+        "itemFR": "Roche à électrope noire",
+        "itemDE": "Astralquartz",
+        "icon": 21205,
+        "id": 43931,
+        "reduce": {
+          "item": "Earth Crystal",
+          "icon": 20012
+        }
+      },
+      {
+        "item": "土之水晶",
+        "itemEN": "Earth Crystal",
+        "itemJA": "アースクリスタル",
+        "itemFR": "Cristal de terre",
+        "itemDE": "Erdkristall",
+        "icon": 20012,
+        "id": 11
+      },
+      {
+        "item": "土之晶簇",
+        "itemEN": "Earth Cluster",
+        "itemJA": "アースクラスター",
+        "itemFR": "Agrégat de terre",
+        "itemDE": "Erdpolykristall",
+        "icon": 20018,
+        "id": 17
+      }
+    ],
+    "time": [
+      20
+    ],
+    "title": "亚斯拉尼荒野东部",
+    "zone": "遗产之地",
+    "coords": [
+      26.73,
+      12.21
+    ],
+    "name": "限时的",
+    "uptime": 240,
+    "lvl": 100,
+    "id": 1014,
+    "patch": 7.0
+  },
+  {
+    "type": "石场",
+    "func": "node",
+    "items": [
+      {
+        "item": "阳风岩",
+        "itemEN": "Brightwind Ore",
+        "itemJA": "陽風岩",
+        "itemFR": "Roche des vents ensoleillés",
+        "itemDE": "Kopalquartz",
+        "icon": 21212,
+        "id": 43932,
+        "reduce": {
+          "item": "Lightning Crystal",
+          "icon": 20011
+        }
+      },
+      {
+        "item": "雷之水晶",
+        "itemEN": "Lightning Crystal",
+        "itemJA": "ライトニングクリスタル",
+        "itemFR": "Cristal de foudre",
+        "itemDE": "Blitzkristall",
+        "icon": 20011,
+        "id": 12
+      },
+      {
+        "item": "雷之晶簇",
+        "itemEN": "Lightning Cluster",
+        "itemJA": "ライトニングクラスター",
+        "itemFR": "Agrégat de foudre",
+        "itemDE": "Blitzpolykristall",
+        "icon": 20017,
+        "id": 18
+      }
+    ],
+    "time": [
+      0
+    ],
+    "title": "易知区",
+    "zone": "活着的记忆",
+    "coords": [
+      10.51,
+      11.09
+    ],
+    "name": "限时的",
+    "uptime": 240,
+    "lvl": 100,
+    "id": 1015,
+    "patch": 7.0
+  },
+  {
+    "type": "草场",
+    "func": "node",
+    "items": [
+      {
+        "item": "金色树枝",
+        "itemEN": "Goldbranch",
+        "itemJA": "ゴールデンブッシュ",
+        "itemFR": "Branche d'arbuste doré",
+        "itemDE": "Goldbusch",
+        "icon": 22416,
+        "id": 43933,
+        "reduce": {
+          "item": "Wind Cluster",
+          "icon": 20016
+        }
+      },
+      {
+        "item": "风之水晶",
+        "itemEN": "Wind Crystal",
+        "itemJA": "ウィンドクリスタル",
+        "itemFR": "Cristal de vent",
+        "itemDE": "Windkristall",
+        "icon": 20010,
+        "id": 10
+      },
+      {
+        "item": "风之晶簇",
+        "itemEN": "Wind Cluster",
+        "itemJA": "ウィンドクラスター",
+        "itemFR": "Agrégat de vent",
+        "itemDE": "Windpolykristall",
+        "icon": 20016,
+        "id": 16
+      }
+    ],
+    "time": [
+      4
+    ],
+    "title": "艾休凯亚尼荒原",
+    "zone": "夏劳尼荒野",
+    "coords": [
+      16.25,
+      10.45
+    ],
+    "name": "限时的",
+    "uptime": 240,
+    "lvl": 100,
+    "id": 1016,
+    "patch": 7.0
+  },
+  {
+    "type": "草场",
+    "func": "node",
+    "items": [
+      {
+        "item": "火山草",
+        "itemEN": "Volcanic Grass",
+        "itemJA": "ヴォルカニックグラス",
+        "itemFR": "Herbe volcanique",
+        "itemDE": "Vulkangras",
+        "icon": 25035,
+        "id": 43934,
+        "reduce": {
+          "item": "Fire Cluster",
+          "icon": 20013
+        }
+      },
+      {
+        "item": "火之水晶",
+        "itemEN": "Fire Crystal",
+        "itemJA": "ファイアクリスタル",
+        "itemFR": "Cristal de feu",
+        "itemDE": "Feuerkristall",
+        "icon": 20007,
+        "id": 8
+      },
+      {
+        "item": "火之晶簇",
+        "itemEN": "Fire Cluster",
+        "itemJA": "ファイアクラスター",
+        "itemFR": "Agrégat de feu",
+        "itemDE": "Feuerpolykristall",
+        "icon": 20013,
+        "id": 14
+      }
+    ],
+    "time": [
+      16
+    ],
+    "title": "火绳动物园",
+    "zone": "活着的记忆",
+    "coords": [
+      26.93,
+      7.37
+    ],
+    "name": "限时的",
+    "uptime": 240,
+    "lvl": 100,
+    "id": 1017,
+    "patch": 7.0
+  },
+  {
+    "type": "矿脉",
+    "func": "node",
+    "items": [
+      {
+        "item": "收藏用黑琥珀",
+        "itemEN": "Rarefied Raw Dark Amber",
+        "itemJA": "収集用のダークアンバー原石",
+        "itemFR": "Ambre sombre brut collectionnable",
+        "itemDE": "Roh-Dunkelbernstein (Sammlerstück)",
+        "icon": 21270,
+        "id": 43919,
+        "scrip": "大地紫票"
+      }
+    ],
+    "time": [
+      10,
+      22
+    ],
+    "title": "孵卵树群",
+    "zone": "克扎玛乌卡湿地",
+    "coords": [
+      7.01,
+      7.39
+    ],
+    "name": "未知的",
+    "uptime": 120,
+    "lvl": 95,
+    "id": 1022,
+    "patch": 7.0
+  },
+  {
+    "type": "矿脉",
+    "func": "node",
+    "items": [
+      {
+        "item": "收藏用钛金矿",
+        "itemEN": "Rarefied Titanium Gold Ore",
+        "itemJA": "収集用のゴールドチタン鉱",
+        "itemFR": "Minerai de titane aurifère brut collectionnable",
+        "itemDE": "Titangolderz (Sammlerstück)",
+        "icon": 21212,
+        "id": 43920,
+        "scrip": "大地紫票"
+      },
+      {
+        "item": "收藏用菱镁矿",
+        "itemEN": "Rarefied Magnesite Ore",
+        "itemJA": "収集用のマグネシア鉱石",
+        "itemFR": "Minerai de magnésium collectionnable",
+        "itemDE": "Magnesiumerz (Sammlerstück)",
+        "icon": 21205,
+        "id": 43921,
+        "scrip": "大地橙票"
+      }
+    ],
+    "time": [
+      8,
+      20
+    ],
+    "title": "艾休凯亚尼荒原",
+    "zone": "夏劳尼荒野",
+    "coords": [
+      9.25,
+      24.16
+    ],
+    "name": "未知的",
+    "uptime": 120,
+    "lvl": 100,
+    "id": 1023,
+    "patch": 7.0
+  },
+  {
+    "type": "矿脉",
+    "func": "node",
+    "items": [
+      {
+        "item": "收藏用白黄金矿",
+        "itemEN": "Rarefied White Gold Ore",
+        "itemJA": "収集用のホワイトゴールド鉱",
+        "itemFR": "Minerai d'or blanc collectionnable",
+        "itemDE": "Weißgold-Erzklumpen (Sammlerstück)",
+        "icon": 21217,
+        "id": 44233,
+        "scrip": "大地紫票"
+      },
+      {
+        "item": "收藏用黑铁矿",
+        "itemEN": "Rarefied Ra'Kaznar Ore",
+        "itemJA": "収集用の黒鉄鉱",
+        "itemFR": "Minerai de fer noir collectionnable",
+        "itemDE": "Ra'Kaznar-Erz (Sammlerstück)",
+        "icon": 21231,
+        "id": 43922,
+        "scrip": "大地橙票"
+      }
+    ],
+    "stars": 1,
+    "time": [
+      4,
+      16
+    ],
+    "title": "亚斯拉尼荒野东部",
+    "zone": "遗产之地",
+    "coords": [
+      34.57,
+      8.27
+    ],
+    "name": "未知的",
+    "uptime": 120,
+    "lvl": 100,
+    "id": 1024,
+    "patch": 7.0
+  },
+  {
+    "type": "石场",
+    "func": "node",
+    "items": [
+      {
+        "item": "收藏用火山灰土",
+        "itemEN": "Rarefied Ash Soil",
+        "itemJA": "収集用の火山灰土",
+        "itemFR": "Terre cendrée volcanique collectionnable",
+        "itemDE": "Vulkanerde (Sammlerstück)",
+        "icon": 21233,
+        "id": 43923,
+        "scrip": "大地橙票"
+      }
+    ],
+    "stars": 1,
+    "time": [
+      0,
+      12
+    ],
+    "title": "勇武竞技场",
+    "zone": "活着的记忆",
+    "coords": [
+      25.0,
+      17.34
+    ],
+    "name": "未知的",
+    "uptime": 120,
+    "lvl": 100,
+    "id": 1025,
+    "patch": 7.0
+  },
+  {
+    "type": "草场",
+    "func": "node",
+    "items": [
+      {
+        "item": "收藏用高山亚麻",
+        "itemEN": "Rarefied Mountain Flax",
+        "itemJA": "収集用の高山亜麻",
+        "itemFR": "Lin des montagnes collectionnable",
+        "itemDE": "Bergflachs (Sammlerstück)",
+        "icon": 25033,
+        "id": 43926,
+        "scrip": "大地紫票"
+      }
+    ],
+    "time": [
+      0,
+      12
+    ],
+    "title": "拉托托花田",
+    "zone": "奥阔帕恰山",
+    "coords": [
+      5.9,
+      23.78
+    ],
+    "name": "未知的",
+    "uptime": 120,
+    "lvl": 95,
+    "id": 1026,
+    "patch": 7.0
+  },
+  {
+    "type": "良材",
+    "func": "node",
+    "items": [
+      {
+        "item": "收藏用甜可可豆",
+        "itemEN": "Rarefied Sweet Kukuru Bean",
+        "itemJA": "収集用のスイートククルビーン",
+        "itemFR": "Fève kukuru sucrée collectionnable",
+        "itemDE": "Süße Kukuru-Bohnen (Sammlerstück)",
+        "icon": 25314,
+        "id": 43927,
+        "scrip": "大地紫票"
+      },
+      {
+        "item": "收藏用深红木原木",
+        "itemEN": "Rarefied Dark Mahogany Log",
+        "itemJA": "収集用のダークマホガニー原木",
+        "itemFR": "Rondin d'acajou sombre collectionnable",
+        "itemDE": "Dunkelmahagoni-Holzscheit (Sammlerstück)",
+        "icon": 22426,
+        "id": 43928,
+        "scrip": "大地橙票"
+      }
+    ],
+    "time": [
+      2,
+      14
+    ],
+    "title": "加提卡海心",
+    "zone": "亚克特尔树海",
+    "coords": [
+      36.88,
+      34.83
+    ],
+    "name": "未知的",
+    "uptime": 120,
+    "lvl": 100,
+    "id": 1027,
+    "patch": 7.0
+  },
+  {
+    "type": "良材",
+    "func": "node",
+    "items": [
+      {
+        "item": "收藏用相思木树皮",
+        "itemEN": "Rarefied Acacia Bark",
+        "itemJA": "収集用のアカシア樹皮",
+        "itemFR": "Écorce d'acacia turalien collectionnable",
+        "itemDE": "Acacia-Rinde (Sammlerstück)",
+        "icon": 22418,
+        "id": 44234,
+        "scrip": "大地紫票"
+      },
+      {
+        "item": "收藏用相思木原木",
+        "itemEN": "Rarefied Acacia Log",
+        "itemJA": "収集用のアカシア原木",
+        "itemFR": "Rondin d'acacia turalien collectionnable",
+        "itemDE": "Akazien-Holzscheit (Sammlerstück)",
+        "icon": 22404,
+        "id": 43929,
+        "scrip": "大地橙票"
+      }
+    ],
+    "stars": 1,
+    "time": [
+      6,
+      18
+    ],
+    "title": "帕利尤南沃野",
+    "zone": "夏劳尼荒野",
+    "coords": [
+      31.69,
+      20.44
+    ],
+    "name": "未知的",
+    "uptime": 120,
+    "lvl": 100,
+    "id": 1028,
+    "patch": 7.0
+  },
+  {
+    "type": "草场",
+    "func": "node",
+    "items": [
+      {
+        "item": "收藏用香风月桂叶",
+        "itemEN": "Rarefied Windsbalm Bay Leaf",
+        "itemJA": "収集用のウィンドローレル",
+        "itemFR": "Laurier des vents collectionnable",
+        "itemDE": "Windlorbeer (Sammlerstück)",
+        "icon": 25009,
+        "id": 43930,
+        "scrip": "大地橙票"
+      }
+    ],
+    "stars": 1,
+    "time": [
+      10,
+      22
+    ],
+    "title": "易知区",
+    "zone": "活着的记忆",
+    "coords": [
+      8.75,
+      7.49
+    ],
+    "name": "未知的",
+    "uptime": 120,
+    "lvl": 100,
+    "id": 1029,
+    "patch": 7.0
+  },
+  {
+    "type": "石场",
+    "func": "node",
+    "items": [
+      {
+        "item": "图拉尔明矾",
+        "itemEN": "Turali Alumen",
+        "itemJA": "トラルアルメン",
+        "itemFR": "Alun turalien",
+        "itemDE": "Turalalaun-Klumpen",
+        "icon": 22673,
+        "id": 44139
+      }
+    ],
+    "stars": 1,
+    "time": [
+      8,
+      20
+    ],
+    "title": "纳尤戈纳",
+    "zone": "奥阔帕恰山",
+    "coords": [
+      37.08,
+      29.59
+    ],
+    "name": "传说的",
+    "uptime": 120,
+    "lvl": 100,
+    "id": 1030,
+    "condition": "鉴别力 4907以上",
+    "bonus": "额外采集奖励发生率＋30%",
+    "patch": 7.0
+  },
+  {
+    "type": "矿脉",
+    "func": "node",
+    "items": [
+      {
+        "item": "真银矿",
+        "itemEN": "Fine Silver Ore",
+        "itemJA": "真銀鉱",
+        "itemFR": "Minerai de fer argenté",
+        "itemDE": "Feinsilbererzklumpen",
+        "icon": 21223,
+        "id": 44136
+      }
+    ],
+    "stars": 1,
+    "time": [
+      10,
+      22
+    ],
+    "title": "亚塔纳内草地",
+    "zone": "夏劳尼荒野",
+    "coords": [
+      36.69,
+      28.05
+    ],
+    "name": "传说的",
+    "uptime": 120,
+    "lvl": 100,
+    "id": 1031,
+    "condition": "鉴别力 4907以上",
+    "bonus": "额外采集奖励发生率＋30%",
+    "patch": 7.0
+  },
+  {
+    "type": "矿脉",
+    "func": "node",
+    "items": [
+      {
+        "item": "混铁矿",
+        "itemEN": "Harmonite Ore",
+        "itemJA": "混鉄鉱",
+        "itemFR": "Minerai de fer composite",
+        "itemDE": "Harmoniterzklumpen",
+        "icon": 21221,
+        "id": 44135
+      }
+    ],
+    "stars": 1,
+    "time": [
+      6,
+      18
+    ],
+    "title": "易知区",
+    "zone": "活着的记忆",
+    "coords": [
+      9.33,
+      15.21
+    ],
+    "name": "传说的",
+    "uptime": 120,
+    "lvl": 100,
+    "id": 1032,
+    "condition": "鉴别力 4907以上",
+    "bonus": "额外采集奖励发生率＋30%",
+    "patch": 7.0
+  },
+  {
+    "type": "良材",
+    "func": "node",
+    "items": [
+      {
+        "item": "重蚁木原木",
+        "itemEN": "Ipe Log",
+        "itemJA": "イペー原木",
+        "itemFR": "Rondin d'ipe",
+        "itemDE": "Ipe-Holzscheit",
+        "icon": 22415,
+        "id": 44137
+      }
+    ],
+    "stars": 1,
+    "time": [
+      0,
+      12
+    ],
+    "title": "釉烧河岸",
+    "zone": "克扎玛乌卡湿地",
+    "coords": [
+      7.43,
+      33.07
+    ],
+    "name": "传说的",
+    "uptime": 120,
+    "lvl": 100,
+    "id": 1033,
+    "condition": "鉴别力 4907以上",
+    "bonus": "额外采集奖励发生率＋30%",
+    "patch": 7.0
+  },
+  {
+    "type": "良材",
+    "func": "node",
+    "items": [
+      {
+        "item": "圆扇刺的花",
+        "itemEN": "Nopaliflower",
+        "itemJA": "ノパルフラワー",
+        "itemFR": "Fleur de pampa",
+        "itemDE": "Nopalblüte",
+        "icon": 22697,
+        "id": 44140
+      }
+    ],
+    "stars": 1,
+    "time": [
+      2,
+      14
+    ],
+    "title": "亚塔纳内草地",
+    "zone": "夏劳尼荒野",
+    "coords": [
+      10.87,
+      31.13
+    ],
+    "name": "传说的",
+    "uptime": 120,
+    "lvl": 100,
+    "id": 1034,
+    "condition": "鉴别力 4907以上",
+    "bonus": "额外采集奖励发生率＋30%",
+    "patch": 7.0
+  },
+  {
+    "type": "草场",
+    "func": "node",
+    "items": [
+      {
+        "item": "海岛棉",
+        "itemEN": "Blackseed Cotton Boll",
+        "itemJA": "海島綿",
+        "itemFR": "Fleur de coton des îles",
+        "itemDE": "Schwarzbaumwoll-Samenkapsel",
+        "icon": 25032,
+        "id": 44138
+      }
+    ],
+    "stars": 1,
+    "time": [
+      4,
+      16
+    ],
+    "title": "勇武竞技场",
+    "zone": "活着的记忆",
+    "coords": [
+      28.43,
+      17.42
+    ],
+    "name": "传说的",
+    "uptime": 120,
+    "lvl": 100,
+    "id": 1035,
+    "condition": "鉴别力 4907以上",
+    "bonus": "额外采集奖励发生率＋30%",
+    "patch": 7.0
   }
 ];

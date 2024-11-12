@@ -14,7 +14,7 @@ namespace Garland.Data.Modules
     public class Items : Module
     {
         Dictionary<string, List<dynamic>> _itemsBySlotModelId = new Dictionary<string, List<dynamic>>();
-        HashSet<int> _armoireIndex = new HashSet<int>();
+        HashSet<uint> _armoireIndex = new HashSet<uint>();
         List<Saint.Item> _gardeningSeeds = new List<Saint.Item>();
         Saint.BaseParam[] _crafterParams;
         Saint.BaseParam[] _gathererParams;
@@ -48,7 +48,7 @@ namespace Garland.Data.Modules
 
             foreach (var row in _builder.Sheet("Cabinet"))
             {
-                var id = Convert.ToInt32(row.GetRaw(0));
+                var id = (uint)row.GetRaw("Item");
                 if (id > 0)
                     _armoireIndex.Add(id);
             }
@@ -72,6 +72,8 @@ namespace Garland.Data.Modules
                 if (!string.IsNullOrEmpty((string)item.en.name))
                 {
                     _builder.Db.ItemsByEnName[(string)item.en.name] = item;
+                    if (!_builder.Db.ItemsByName.ContainsKey((string)item.en.name))
+                        _builder.Db.ItemsByName[(string)item.en.name] = item;
                     //_builder.Db.ItemEnNamesById[item.id] = (string)item.en.name;
                 }
                     
@@ -87,6 +89,8 @@ namespace Garland.Data.Modules
 
                 if (sItem.IsDyeable)
                     item.dyeable = 1;
+
+                item.dyecount = sItem.DyeCount;
 
                 if (!sItem.IsUntradable)
                     item.tradeable = 1;
@@ -263,7 +267,7 @@ namespace Garland.Data.Modules
                 if (expertSeals > 0)
                     item.delivery = expertSeals;
 
-                if (_armoireIndex.Contains(sItem.Key))
+                if (_armoireIndex.Contains((uint)sItem.Key))
                     item.storable = 1;
 
                 item.slot = sEquipment.EquipSlotCategory.Key;
@@ -380,6 +384,7 @@ namespace Garland.Data.Modules
                     }
                 }
             }
+
             if (sItem is Saint.Items.Usable sUsable)
             {
                 JObject action = new JObject();
@@ -499,7 +504,7 @@ namespace Garland.Data.Modules
                 };
 
                 foreach (var sItem in sItems)
-                { 
+                {
                     if (sItem.Key == 0)
                         continue;
 

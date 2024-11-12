@@ -140,17 +140,17 @@ namespace Garland.Data.Output
                     while (!reader.EndOfStream)
                     {
                         var row = Row.ReadFromBatchFile(reader);
-                        if(row != null)
+                        if (row != null)
                         {
                             package._rows.Add(row);
-                        }                        
+                        }
                     }
                 }
             }
             return package;
         }
 
-        public void Run (IPrinter output, MySqlConnection conn)
+        public void Run(IPrinter output, MySqlConnection conn)
         {
             if (LastRun != null)
             {

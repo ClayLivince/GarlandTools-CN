@@ -263,15 +263,6 @@ namespace Garland.Data.Modules
             alts.Add(bnpc);
         }
 
-        public List<dynamic> FetchBNpcs()
-        {
-            Clay.ClayMySQL database = new Clay.ClayMySQL();
-
-            List<dynamic> result = database.getAllBNpcs();
-            database.Stop();
-            return result;
-        }
-
         public void BuildBNpcAppearanceData(dynamic npc, Saint.BNpcBase sBNpc)
         {
 
@@ -781,105 +772,58 @@ namespace Garland.Data.Modules
             switch (tribeKey)
             {
                 case 1: // Midlander
-                    return isMale ? 0 : 100;
+                    return isMale ? 0 : 130;
                 case 2: // Highlander
-                    return isMale ? 200 : 300;
+                    return isMale ? 260 : 390;
                 case 3: // Wildwood
                 case 4: // Duskwight
-                    return isMale ? 400 : 500;
+                    return isMale ? 520 : 650;
                 case 5: // Plainsfolks
                 case 6: // Dunesfolk
-                    return isMale ? 600 : 700;
+                    return isMale ? 780 : 910;
                 case 7: // Seeker of the Sun
                 case 8: // Keeper of the Moon
-                    return isMale ? 800 : 900;
+                    return isMale ? 1040 : 1170;
                 case 9: // Sea Wolf
                 case 10: // Hellsguard
-                    return isMale ? 1000 : 1100;
+                    return isMale ? 1300 : 1430;
                 case 11: // Raen
                 case 12: // Xaela
-                    return isMale ? 1200 : 1300;
-
-                // No alternate genders for Hrothgar, Viera.
-                // For Hrothgar, these might be faces too?
+                    return isMale ? 1560 : 1690;
                 case 13: // Helions 
                 case 14: // The Lost
-                    return 1400;
+                    return isMale ? 1820 : 1950;
                 case 15: // Rava
                 case 16: // Veena
-                    switch (client)
-                    {
-                        case Saint.ClientType.GLOBAL:
-                            return isMale ? 1600 : 1700;
-                        case Saint.ClientType.CHINA:
-                            return 1500;
-                    }
-                    break;
+                    return isMale ? 2080 : 2210;
             }
             throw new NotImplementedException();
         }
 
         static int GetFacePaintCustomizeIndex(int tribeKey, bool isMale, Saint.ClientType client)
         {
-            int baseRowKey;
-            switch (client)
+            const int baseRowKey = 2400; // DT - [update by patch required]
+
+            switch (tribeKey)
             {
-                case Saint.ClientType.GLOBAL:
-                    baseRowKey = 2000; // EW - [update by patch required]
-
-                    switch (tribeKey)
-                    {
-                        case 1: // Midlander
-                        case 2: // Highlander
-                        case 3: // Wildwood
-                        case 4: // Duskwight
-                        case 5: // Plainsfolks
-                        case 6: // Dunesfolk
-                        case 7: // Seeker of the Sun
-                        case 8: // Keeper of the Moon
-                        case 9: // Sea Wolf
-                        case 10: // Hellsguard
-                        case 11: // Raen
-                        case 12: // Xaela
-                        case 13: // Helions
-                        case 14: // The Lost
-                        case 15: // Rava
-                        case 16: // Veena
-                            var tribeOffset = baseRowKey + ((tribeKey - 1) * 100);
-                            return isMale ? tribeOffset : tribeOffset + 50;
-                    }
-                    break;
-
-                case Saint.ClientType.CHINA:
-                    baseRowKey = 1600; // SH
-
-                    switch (tribeKey)
-                    {
-                        case 1: // Midlander
-                        case 2: // Highlander
-                        case 3: // Wildwood
-                        case 4: // Duskwight
-                        case 5: // Plainsfolks
-                        case 6: // Dunesfolk
-                        case 7: // Seeker of the Sun
-                        case 8: // Keeper of the Moon
-                        case 9: // Sea Wolf
-                        case 10: // Hellsguard
-                        case 11: // Raen
-                        case 12: // Xaela
-                            var tribeOffset = baseRowKey + ((tribeKey - 1) * 100);
-                            return isMale ? tribeOffset : tribeOffset + 50;
-
-                        case 13: // Helions
-                            return 2800;
-                        case 14: // The Lost
-                            return 2850;
-                        case 15: // Rava
-                            return 2900;
-                        case 16: // Veena
-                            return 2950;
-                    }
-                    break;
+                case 1: // Midlander
+                case 2: // Highlander
+                case 3: // Wildwood
+                case 4: // Duskwight
+                case 5: // Plainsfolks
+                case 6: // Dunesfolk
+                case 7: // Seeker of the Sun
+                case 8: // Keeper of the Moon
+                case 9: // Sea Wolf
+                case 10: // Hellsguard
+                case 11: // Raen
+                case 12: // Xaela
+                case 13: // Helions
+                case 14: // The Lost
+                case 15: // Rava
+                case 16: // Veena
+                    var tribeOffset = baseRowKey + ((tribeKey - 1) * 100);
+                    return isMale ? tribeOffset : tribeOffset + 50;
             }
             throw new NotImplementedException();
         }

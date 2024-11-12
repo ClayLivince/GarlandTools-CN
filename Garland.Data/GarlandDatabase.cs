@@ -13,7 +13,7 @@ namespace Garland.Data
     public class GarlandDatabase
     {
         // NOTE: This section must be updated with every patch!
-        public const decimal NextPatch = 6.58m;
+        public const decimal NextPatch = 7.05m;
         public const decimal GlobalPatch = 7.05m;
         public static Patch[] MajorPatches = new[] {
             new Patch(1m, "遗产", "遗产"),
@@ -52,11 +52,13 @@ namespace Garland.Data
             new Patch(6.2m, "禁断的记忆", "晓月之终途"),
             new Patch(6.3m, "天上欢庆，地下轰鸣", "晓月之终途"),
             new Patch(6.4m, "负罪的王座", "晓月之终途"),
-            new Patch(6.5m, "光明的零点", "晓月之终途")
+            new Patch(6.5m, "光明的零点", "晓月之终途"),
+
+            new Patch(7m, "金曦之遗辉", "金曦之遗辉"),
         };
 
         public static int LevelCap = -1; // Filled in from Miscellaneous.
-        public static int BlueMageLevelCap = 70;
+        public static int BlueMageLevelCap = 80;
 
         public HashSet<int> LocationReferences = new HashSet<int>();
         public Dictionary<object, List<DataReference>> DataReferencesBySource = new Dictionary<object, List<DataReference>>();
@@ -93,8 +95,10 @@ namespace Garland.Data
         public List<dynamic> Jobs = new List<dynamic>();
         public List<dynamic> Dyes = new List<dynamic>();
         public List<dynamic> Statuses = new List<dynamic>();
+        public List<dynamic> QuestLores = new List<dynamic>();
 
         public dynamic MateriaJoinRates;
+        public dynamic FreeCompanyVoyages;
 
         public Dictionary<string, JArray> LevelingEquipmentByJob = new Dictionary<string, JArray>();
         public Dictionary<string, JObject> EndGameEquipmentByJob = new Dictionary<string, JObject>();
@@ -123,7 +127,7 @@ namespace Garland.Data
 
         public Dictionary<SaintCoinach.Xiv.PlaceName, LocationInfo> LocationIndex;
 
-        public static HashSet<string> LocalizedTypes = new HashSet<string>() { "achievement", "action", "fate", "fishing", "instance", "item", "leve", "quest", "npc", "mob", "status" };
+        public static HashSet<string> LocalizedTypes = new HashSet<string>() { "achievement", "action", "fate", "fishing", "instance", "item", "leve", "quest", "npc", "mob", "status", "questlore" };
 
         // Views
         public List<dynamic> NodeViews = new List<dynamic>();
@@ -156,6 +160,11 @@ namespace Garland.Data
         }
 
         public void AddReference(object source, string type, int id, bool isNested)
+        {
+            AddReference(source, type, id.ToString(), isNested);
+        }
+
+        public void AddReference(object source, string type, JToken id, bool isNested)
         {
             AddReference(source, type, id.ToString(), isNested);
         }

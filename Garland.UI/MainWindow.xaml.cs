@@ -72,6 +72,19 @@ namespace Garland.UI
             });
         }
 
+        private void ConvertQuestLores_Click(object sender, RoutedEventArgs e)
+        {
+            RunAction(() =>
+            {
+                BuildQuestLores();
+                WriteQuestLores();
+
+                DatabaseBuilder.PrintLine("Done.");
+
+                Dispatcher.Invoke(_updateView.Model.LoadUpdatePackages);
+            });
+        }
+
         private void FetchIcons_Click(object sender, RoutedEventArgs e)
         {
             RunAction(() => BuildDatabase(true, false));
@@ -135,6 +148,7 @@ namespace Garland.UI
             var interRealm = new SaintCoinach.ARealmReversed(Config.InterGamePath, "SaintCoinach.History.zip", SaintCoinach.Ex.Language.English);
             var libra = new SQLite.SQLiteConnection(libraPath, SQLite.SQLiteOpenFlags.ReadOnly);
             var builder = new DatabaseBuilder(libra, realm, interRealm);
+            SaintCoinach.Imaging.IconHelper.PreferHighRes = true;
 
             DatabaseBuilder.PrintLine($"Game version: {realm.GameVersion}");
             DatabaseBuilder.PrintLine($"Global game version: {interRealm.GameVersion}");
@@ -146,6 +160,24 @@ namespace Garland.UI
 
             if (!fetchIconsOnly && !buildNpcOnly)
                 SpecialOutput.Run();
+
+            processing.Stop();
+            DatabaseBuilder.PrintLine($"Processing elapsed: {processing.Elapsed}");
+        }
+
+        void BuildQuestLores()
+        {
+            var libraPath = System.IO.Path.Combine(Config.SupplementalPath, "app_data.sqlite");
+            var realm = new SaintCoinach.ARealmReversed(Config.GamePath, "SaintCoinachcn.History.zip", SaintCoinach.Ex.Language.ChineseSimplified, null, "cn");
+            var interRealm = new SaintCoinach.ARealmReversed(Config.InterGamePath, "SaintCoinach.History.zip", SaintCoinach.Ex.Language.English);
+            var libra = new SQLite.SQLiteConnection(libraPath, SQLite.SQLiteOpenFlags.ReadOnly);
+            var builder = new DatabaseBuilder(libra, realm, interRealm);
+
+            DatabaseBuilder.PrintLine($"Game version: {realm.GameVersion}");
+            DatabaseBuilder.PrintLine($"Definition version: {realm.DefinitionVersion}");
+
+            var processing = Stopwatch.StartNew();
+            builder.BuildQuestLores();
 
             processing.Stop();
             DatabaseBuilder.PrintLine($"Processing elapsed: {processing.Elapsed}");
@@ -189,6 +221,24 @@ namespace Garland.UI
             {
                 DatabaseBuilder.PrintLine($"Updating {searchUpdate.RowCount} data rows.");
                 searchUpdate.Write();
+            }
+
+            writing.Stop();
+            DatabaseBuilder.PrintLine($"Writing elapsed: {writing.Elapsed}");
+        }
+
+        void WriteQuestLores()
+        {
+            var writing = Stopwatch.StartNew();
+
+            var dataUpdate = new UpdatePackage("questlore");
+            var loreout = new QuestLoreOutput(dataUpdate);
+            loreout.Write();
+
+            if (dataUpdate.RowCount > 0)
+            {
+                DatabaseBuilder.PrintLine($"Updating {dataUpdate.RowCount} data rows.");
+                dataUpdate.Write();
             }
 
             writing.Stop();

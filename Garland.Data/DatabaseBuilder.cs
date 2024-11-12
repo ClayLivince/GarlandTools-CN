@@ -1,6 +1,7 @@
 ﻿using Garland.Data.Models;
 using Garland.Data.Modules;
 using Garland.Data.Output;
+using Garland.Data.Web;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
@@ -21,20 +22,24 @@ namespace Garland.Data
         ItemIconDatabase _itemIconDatabase;
         SQLite.SQLiteConnection _libra;
 
+        public JsonClient WebJsonClient = new JsonClient();
+
         #region Builder state - to organize
         static Dictionary<long, JArray> _bossCurrency = new Dictionary<long, JArray>();
 
         public Dictionary<long, List<int>> ItemDropsByMobId = new Dictionary<long, List<int>>();
         public Dictionary<long, int> InstanceIdsByMobId = new Dictionary<long, int>();
         public int[] TomestoneIds = new int[3];
+        // REMEMBER TO CHANGE SaintCoinach.Xiv.SpecialShopListing Currency !!!!!
+        public static int[] _scrips = new int[] { 33913, 33914, 41784, 41785 };
         public readonly int[] _currencies = new int[] {
             10309,
-            25199,
+            _scrips[0],
             10311,
-            25200,
+            _scrips[1],
             10307,
-            33913,
-            33914,
+            _scrips[2],
+            _scrips[3],
             21072,
             21073,
             21074,
@@ -60,6 +65,7 @@ namespace Garland.Data
 
         public int GetCurrency(int key)
         {
+            // REMEMBER TO CHANGE SaintCoinach.Xiv.SpecialShopListing Currency !!!!!
             if (key <= _currencies.Length)
             {
                 return _currencies[key - 1];
@@ -129,7 +135,7 @@ namespace Garland.Data
 
             if (fetchIconsOnly)
             {
-                new Lodestone.LodestoneIconScraper(_itemIconDatabase).FetchIcons(this);
+                new Lodestone.LodestoneIconScraper(_itemIconDatabase).FetchIcons();
                 PrintLine("All icons fetched.  Stopping.");
                 return;
             }
@@ -247,6 +253,25 @@ namespace Garland.Data
 
 
             itemSourceComplexityModule = null;
+
+            var total = modules.Count;
+            while (modules.Count > 0)
+            {
+                var module = modules.Dequeue();
+                PrintLine($"* {module.Name}... {total - modules.Count}/{total}");
+                module.Start();
+            }
+        }
+
+        public void BuildQuestLores()
+        {
+            FileDatabase.Initialize();
+            
+            // All the modules.
+            var modules = new Queue<Module>(new Module[]
+            {
+                new QuestLores()
+            });
 
             var total = modules.Count;
             while (modules.Count > 0)
