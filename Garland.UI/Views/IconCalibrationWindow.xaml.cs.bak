@@ -74,7 +74,7 @@ namespace Garland.UI.Views
             }
             */
 
-            return new CalibrationConfig(Reextract.IsChecked == true,
+            return new CalibrationConfig(Reextract.IsChecked == true, 
                 Icon40.IsChecked == true,
                 Icon80.IsChecked == true, _itemCsvPath, source);
         }

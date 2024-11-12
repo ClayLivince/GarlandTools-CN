@@ -17,8 +17,8 @@ namespace Garland.Data.Output
         GarlandDatabase _db;
         UpdatePackage _update;
         ConcurrentDictionary<object, HashSet<int>> _componentsByItemId = new ConcurrentDictionary<object, HashSet<int>>();
-        Dictionary<Tuple<string, string>, Dictionary<string, JObject>> _partialsByLangTypeById = new Dictionary<Tuple<string, string>, Dictionary<string, JObject>>();
-        Dictionary<dynamic, dynamic> _ingredientsByItem = new Dictionary<dynamic, dynamic>();
+        ConcurrentDictionary<Tuple<string, string>, Dictionary<string, JObject>> _partialsByLangTypeById = new ConcurrentDictionary<Tuple<string, string>, Dictionary<string, JObject>>();
+        ConcurrentDictionary<dynamic, dynamic> _ingredientsByItem = new ConcurrentDictionary<dynamic, dynamic>();
         readonly static JsonConverter[] _converters = new[] { new WrapperConverter() };
         readonly static string[] _languagesCodes = new[] { "en", "ja", "de", "fr" };
 
@@ -348,7 +348,7 @@ namespace Garland.Data.Output
                 localizedLocation.Remove("de");
                 core.locationIndex.Add((string)location.id, localizedLocation);
             }
-                
+
 
             // Skywatcher
             core.skywatcher = new JObject();

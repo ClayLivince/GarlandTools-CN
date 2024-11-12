@@ -24,6 +24,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SaintCoinach.Graphics.Viewe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotSquish", "lib\SaintCoinach\DotSquish\DotSquish.csproj", "{F9681545-4BEA-4FD3-9AB9-A67BD37AB36D}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SaintCoinach.Cmd", "lib\SaintCoinach\SaintCoinach.Cmd\SaintCoinach.Cmd.csproj", "{957699E4-8310-4D1E-BA83-13B7A4932807}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -94,6 +96,18 @@ Global
 		{F9681545-4BEA-4FD3-9AB9-A67BD37AB36D}.Release-Unsigned|Any CPU.Build.0 = Release|Any CPU
 		{F9681545-4BEA-4FD3-9AB9-A67BD37AB36D}.Release-Unsigned|x64.ActiveCfg = Release|Any CPU
 		{F9681545-4BEA-4FD3-9AB9-A67BD37AB36D}.Release-Unsigned|x64.Build.0 = Release|Any CPU
+		{957699E4-8310-4D1E-BA83-13B7A4932807}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{957699E4-8310-4D1E-BA83-13B7A4932807}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{957699E4-8310-4D1E-BA83-13B7A4932807}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{957699E4-8310-4D1E-BA83-13B7A4932807}.Debug|x64.Build.0 = Debug|Any CPU
+		{957699E4-8310-4D1E-BA83-13B7A4932807}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{957699E4-8310-4D1E-BA83-13B7A4932807}.Release|Any CPU.Build.0 = Release|Any CPU
+		{957699E4-8310-4D1E-BA83-13B7A4932807}.Release|x64.ActiveCfg = Release|Any CPU
+		{957699E4-8310-4D1E-BA83-13B7A4932807}.Release|x64.Build.0 = Release|Any CPU
+		{957699E4-8310-4D1E-BA83-13B7A4932807}.Release-Unsigned|Any CPU.ActiveCfg = Release|Any CPU
+		{957699E4-8310-4D1E-BA83-13B7A4932807}.Release-Unsigned|Any CPU.Build.0 = Release|Any CPU
+		{957699E4-8310-4D1E-BA83-13B7A4932807}.Release-Unsigned|x64.ActiveCfg = Release|Any CPU
+		{957699E4-8310-4D1E-BA83-13B7A4932807}.Release-Unsigned|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

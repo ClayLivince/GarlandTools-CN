@@ -467,6 +467,7 @@ namespace Garland.Data.Modules
         {
             foreach (var sTutorial in _builder.Sheet("Tutorial"))
             {
+                
                 var sItems = new Saint.Item[]
                 {
                     (Saint.Item)sTutorial["Reward{Tank}"],

@@ -378,12 +378,21 @@ gt.item = {
                 if (s.type === 1){
                     voyageType = 'submarine';
                 }
+
                 let voyage = gt.venture.voyageIndex[voyageType][s.id];
-                return {
-                    name: voyage.name,
-                    icon: 'images/Voyage.png',
-                    right: voyageType === 'airship' ? 'Airship Voyage' : 'Submarine - ' + voyage.sea
-                };
+                if (voyage){
+                    return {
+                        name: voyage.name,
+                        icon: 'images/Voyage.png',
+                        right: voyageType === 'airship' ? 'Airship Voyage' : 'Submarine - ' + voyage.sea
+                    };
+                } else {
+                    return {
+                        name: voyageType,
+                        icon: 'images/Voyage.png'
+                    }
+                }
+
             });
         }
 
@@ -465,7 +474,7 @@ gt.item = {
             view.sourceType = itemSettings.sourceType;
             view.sourceId = itemSettings.sourceId;
         }
-        
+
         // Marketboard price
         if (itemSettings.marketPrice) {
             view.marketPrice = itemSettings.marketPrice;
@@ -844,7 +853,7 @@ gt.item = {
         var itemSettings = gt.settings.getItem(data.id);
         itemSettings.recipe = parseInt($this.val());
         gt.settings.setItem(data.id, itemSettings);
-        
+
         gt.core.redisplay($block);
         gt.item.redisplayUses(data.id);
     },
@@ -1100,7 +1109,7 @@ gt.item = {
         var gcTrade = gt.item.findTrade(item.tradeShops, function(tradeItem, type) {
             return type == 'currency' && (tradeItem.id == 20 || tradeItem.id == 21 || tradeItem.id == 22);
         });
-        
+
         if (gcTrade)
             return gcTrade;
 
@@ -1138,7 +1147,7 @@ gt.item = {
     setBlockExpansion: function($block, data) {
         // This function may be called for a group too.  No worries.
         var isExpanded = false;
-        
+
         if (data.craftAmount)
             isExpanded = true;
         else if (data.activePage == 'models-page')

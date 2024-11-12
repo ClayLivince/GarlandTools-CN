@@ -30,7 +30,7 @@ namespace Garland.Data.Modules
                 //new AllaganSourceSpearFishing(_builder),
             };
 
-            foreach(var source in _sources)
+            foreach (var source in _sources)
             {
                 source.QueryAndImport();
             }

@@ -2265,12 +2265,22 @@ gt.item = {
                 if (s.type === 1){
                     voyageType = 'submarine';
                 }
+
                 let voyage = gt.venture.voyageIndex[voyageType][s.id];
-                return {
-                    name: voyage.name,
-                    icon: 'images/Voyage.png',
-                    right: voyageType === 'airship' ? 'Airship Voyage' : 'Submarine - ' + voyage.sea
-                };
+                if (voyage){
+                    return {
+                        name: voyage.name,
+                        icon: 'images/Voyage.png',
+                        right: voyageType === 'airship' ? 'Airship Voyage' : 'Submarine - ' + voyage.sea
+                    };
+                } else {
+                    return {
+                        name: voyageType,
+                        icon: 'images/Voyage.png',
+                        right: "Unknown"
+                    }
+                }
+
             });
         }
 

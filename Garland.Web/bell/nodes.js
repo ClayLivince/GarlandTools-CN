@@ -168,7 +168,11 @@
       {
         "item": "Ice Cluster",
         "icon": 20015,
-        "id": 15
+        "id": 15,
+        "reduce": {
+          "item": "Verdigris Guppy",
+          "icon": 28544
+        }
       },
       {
         "item": "Wind Cluster",
@@ -188,7 +192,11 @@
       {
         "item": "Water Cluster",
         "icon": 20014,
-        "id": 19
+        "id": 19,
+        "reduce": {
+          "item": "Sunlit Prism",
+          "icon": 28649
+        }
       },
       {
         "item": "Unaspected Crystal",
@@ -700,7 +708,11 @@
       {
         "item": "Ice Cluster",
         "icon": 20015,
-        "id": 15
+        "id": 15,
+        "reduce": {
+          "item": "Verdigris Guppy",
+          "icon": 28544
+        }
       },
       {
         "item": "Wind Cluster",
@@ -720,7 +732,11 @@
       {
         "item": "Water Cluster",
         "icon": 20014,
-        "id": 19
+        "id": 19,
+        "reduce": {
+          "item": "Sunlit Prism",
+          "icon": 28649
+        }
       },
       {
         "item": "Unaspected Crystal",
@@ -1257,7 +1273,11 @@
       {
         "item": "Water Cluster",
         "icon": 20014,
-        "id": 19
+        "id": 19,
+        "reduce": {
+          "item": "Sunlit Prism",
+          "icon": 28649
+        }
       },
       {
         "item": "Unaspected Crystal",
@@ -3161,12 +3181,20 @@
       {
         "item": "Ice Crystal",
         "icon": 20009,
-        "id": 9
+        "id": 9,
+        "reduce": {
+          "item": "Verdigris Guppy",
+          "icon": 28544
+        }
       },
       {
         "item": "Ice Cluster",
         "icon": 20015,
-        "id": 15
+        "id": 15,
+        "reduce": {
+          "item": "Verdigris Guppy",
+          "icon": 28544
+        }
       }
     ],
     "stars": 2,
@@ -3577,12 +3605,20 @@
       {
         "item": "Ice Crystal",
         "icon": 20009,
-        "id": 9
+        "id": 9,
+        "reduce": {
+          "item": "Verdigris Guppy",
+          "icon": 28544
+        }
       },
       {
         "item": "Ice Cluster",
         "icon": 20015,
-        "id": 15
+        "id": 15,
+        "reduce": {
+          "item": "Verdigris Guppy",
+          "icon": 28544
+        }
       }
     ],
     "stars": 2,
@@ -4625,12 +4661,20 @@
       {
         "item": "Water Crystal",
         "icon": 20008,
-        "id": 13
+        "id": 13,
+        "reduce": {
+          "item": "Sunlit Prism",
+          "icon": 28649
+        }
       },
       {
         "item": "Water Cluster",
         "icon": 20014,
-        "id": 19
+        "id": 19,
+        "reduce": {
+          "item": "Sunlit Prism",
+          "icon": 28649
+        }
       }
     ],
     "stars": 2,
@@ -5102,12 +5146,20 @@
       {
         "item": "Ice Crystal",
         "icon": 20009,
-        "id": 9
+        "id": 9,
+        "reduce": {
+          "item": "Verdigris Guppy",
+          "icon": 28544
+        }
       },
       {
         "item": "Ice Cluster",
         "icon": 20015,
-        "id": 15
+        "id": 15,
+        "reduce": {
+          "item": "Verdigris Guppy",
+          "icon": 28544
+        }
       }
     ],
     "stars": 2,
@@ -7603,6 +7655,11 @@
         "item": "Harmonite Ore",
         "icon": 21221,
         "id": 44135
+      },
+      {
+        "item": "Alexandrian Ore",
+        "icon": "t/21491",
+        "id": 44845
       }
     ],
     "stars": 1,
@@ -7668,7 +7725,7 @@
       2,
       14
     ],
-    "title": "Yawtanane Grasslands",
+    "title": "Eshceyaani Wilds",
     "zone": "Shaaloani",
     "coords": [
       10.87,
@@ -7690,6 +7747,11 @@
         "item": "Blackseed Cotton Boll",
         "icon": 25032,
         "id": 44138
+      },
+      {
+        "item": "Optical Fibergrass",
+        "icon": "t/22699",
+        "id": 44844
       }
     ],
     "stars": 1,

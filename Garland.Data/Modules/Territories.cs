@@ -52,11 +52,11 @@ namespace Garland.Data.Modules
                             NPCs.UpdateArea(_builder, npc, sMap, x, y);
                         }
                     }
-                } catch (Exception ex)
+                }
+                catch (Exception ex)
                 {
                     DatabaseBuilder.PrintLine($"Failed to fetch file {bg}");
                 }
-                
             }
         }
     }

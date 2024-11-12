@@ -1,4 +1,5 @@
 ﻿using Garland.Data.Output;
+using MySql.Data.MySqlClient;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
@@ -14,7 +15,7 @@ namespace Garland.Data
     public static class PatchDatabase
     {
         private static bool _patchesChanged = false;
-        private static Dictionary<string, Dictionary<string, decimal>> _patchesByIdByType = new Dictionary<string, Dictionary<string, decimal>>();
+        private static Dictionary<string, Dictionary<string, ValueTuple<decimal, decimal>>> _patchesByIdByType = new Dictionary<string, Dictionary<string, ValueTuple<decimal, decimal>>>();
 
         public static Dictionary<int, int> ItemPatchCategoryByUICategory = new Dictionary<int, int>();
         public static Dictionary<int, string> ItemPatchCategories = new Dictionary<int, string>();
@@ -150,6 +151,7 @@ namespace Garland.Data
             ItemPatchCategoryByUICategory[109] = 0; // Sage's Arm
             ItemPatchCategoryByUICategory[110] = 0; // Viper's Arm
             ItemPatchCategoryByUICategory[111] = 0; // Pictomancer's Arm
+            ItemPatchCategoryByUICategory[112] = 3; // Outfits
         }
 
         public static void Initialize()
@@ -161,14 +163,31 @@ namespace Garland.Data
                 var id = (string)obj.id;
                 decimal patch = (decimal)obj.patch;
 
+
+                ValueTuple<decimal, decimal> patchTuple = new(patch, 0);
+
+                if (obj.namingPatch != null)
+                {
+                    decimal namingPatch = (decimal)obj.namingPatch;
+                    patchTuple = new(patch, namingPatch);
+                }
+
                 if (!_patchesByIdByType.TryGetValue(type, out var patchesById))
                 {
-                    patchesById = new Dictionary<string, decimal>();
+                    patchesById = new Dictionary<string, ValueTuple<decimal, decimal>>();
                     _patchesByIdByType[type] = patchesById;
                 }
 
-                patchesById[id] = patch;
+                patchesById[id] = patchTuple;
             }
+
+        }
+
+        public static decimal ResolvePriorPatch(ValueTuple<decimal, decimal> patchTuple)
+        {
+            if (patchTuple.Item2 != 0)
+                return patchTuple.Item2;
+            return patchTuple.Item1;
         }
 
         public static decimal Get(string type, int id)
@@ -181,25 +200,69 @@ namespace Garland.Data
             if (_patchesByIdByType.TryGetValue(type, out var patchesById))
             {
                 if (patchesById.TryGetValue(id, out var patch))
-                    return patch;
+                    return ResolvePriorPatch(patch);
             }
             else
-                _patchesByIdByType[type] = patchesById = new Dictionary<string, decimal>();
+                _patchesByIdByType[type] = patchesById = new Dictionary<string, ValueTuple<decimal, decimal>>();
 
             System.Diagnostics.Debug.WriteLine("Patch not found for {0} {1}", type, id);
             _patchesChanged = true;
 
-            patchesById[id] = GarlandDatabase.NextPatch;
+            patchesById[id] = new(GarlandDatabase.NextPatch, 0);
             return GarlandDatabase.NextPatch;
+        }
+
+        public static bool HasPatch(string type, string id)
+        {
+            if (_patchesByIdByType.TryGetValue(type, out var patchesById))
+            {
+                return patchesById.ContainsKey(id);
+            }
+            else return false;
         }
 
         public static void Set(string type, string id, decimal patch)
         {
             if (!_patchesByIdByType.TryGetValue(type, out var patchesById))
-                _patchesByIdByType[type] = patchesById = new Dictionary<string, decimal>();
+                _patchesByIdByType[type] = patchesById = new Dictionary<string, ValueTuple<decimal, decimal>>();
 
-            patchesById[id] = patch;
+            patchesById[id] = new(patch, 0);
             _patchesChanged = true;
+        }
+
+        public static void SetNamingPatch(string type, string id, decimal patch)
+        {
+            if (!_patchesByIdByType.TryGetValue(type, out var patchesById))
+                _patchesByIdByType[type] = patchesById = new Dictionary<string, ValueTuple<decimal, decimal>>();
+
+            ValueTuple<decimal, decimal> newPatch = (patch, patch);
+            if (patchesById.TryGetValue(id, out var oriPatch))
+            {
+                newPatch = (oriPatch.Item1, patch);
+            }
+            patchesById[id] = newPatch;
+            _patchesChanged = true;
+        }
+
+
+        public static void VerifyNamingPatch(MySqlConnection conn, dynamic obj, string type)
+        {
+            var sql = $"SELECT Json FROM DataJson WHERE Id = '{obj.id}' AND Type = '{type}' AND Lang = 'en' ORDER BY Version DESC LIMIT 1";
+            var json = (string)SqlDatabase.ExecuteScalar(conn, sql);
+            if (json != null)
+            {
+                dynamic originalObject = JsonConvert.DeserializeObject(json);
+                originalObject = originalObject[type];
+
+                if ((originalObject.name == "" || originalObject.name == null) && (obj.en?.name != "" && obj.en?.name != null))
+                {
+                    PatchDatabase.SetNamingPatch(type, obj.id.ToString(), GarlandDatabase.NextPatch);
+                }
+            }
+            else if (PatchDatabase.HasPatch(type, obj.id.ToString()))
+            {
+                PatchDatabase.SetNamingPatch(type, obj.id.ToString(), GarlandDatabase.NextPatch);
+            }
         }
 
         public static void WritePatchLists(JsOutput jsout, UpdatePackage update, string lang)
@@ -217,22 +280,26 @@ namespace Garland.Data
                 {
                     foreach (var idPair in typePair.Value)
                     {
-                        if (idPair.Value < majorPatch.Id || idPair.Value >= majorPatchEnd)
-                            continue;
-
-                        if (!idsByTypeByPatch.TryGetValue(idPair.Value, out var idsByType))
+                        foreach (var patcho in new decimal[] { idPair.Value.Item1, idPair.Value.Item2 })
                         {
-                            idsByType = new Dictionary<string, List<string>>();
-                            idsByTypeByPatch[idPair.Value] = idsByType;
-                        }
+                            decimal patch = (decimal)patcho;
+                            if (patch < majorPatch.Id || patch >= majorPatchEnd)
+                                continue;
 
-                        if (!idsByType.TryGetValue(typePair.Key, out var ids))
-                        {
-                            ids = new List<string>();
-                            idsByType[typePair.Key] = ids;
-                        }
+                            if (!idsByTypeByPatch.TryGetValue(patch, out var idsByType))
+                            {
+                                idsByType = new Dictionary<string, List<string>>();
+                                idsByTypeByPatch[patch] = idsByType;
+                            }
 
-                        ids.Add(idPair.Key);
+                            if (!idsByType.TryGetValue(typePair.Key, out var ids))
+                            {
+                                ids = new List<string>();
+                                idsByType[typePair.Key] = ids;
+                            }
+
+                            ids.Add(idPair.Key);
+                        }
                     }
                 }
 
@@ -299,7 +366,9 @@ namespace Garland.Data
                     dynamic item = new JObject();
                     item.type = typePair.Key;
                     item.id = idPair.Key;
-                    item.patch = idPair.Value;
+                    item.patch = idPair.Value.Item1;
+                    if (idPair.Value.Item2 != 0)
+                        item.namingPatch = idPair.Value.Item2;
                     patches.Add(item);
                 }
             }

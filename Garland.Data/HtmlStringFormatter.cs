@@ -408,7 +408,9 @@ namespace Garland.Data
                     return "[#" + parameterIndex + "]";
 
                 default:
-                    throw new NotImplementedException();
+                    return "[???]";
+                    return $"[{parameter.ParameterType.ToString()}#{parameterIndex}]";
+                    //throw new NotImplementedException();
             }
         }
 

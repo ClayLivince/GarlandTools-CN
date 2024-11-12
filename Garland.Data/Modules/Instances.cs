@@ -271,7 +271,7 @@ namespace Garland.Data.Modules
          */
         void BuildSupplementalInstances()
         {
-            JArray duties = (JArray)Utils.Json(Path.Combine(Config.SupplementalPath, "FFXIV Data - Duties.json"));
+            JArray duties = (JArray) Utils.Json(Path.Combine(Config.SupplementalPath, "FFXIV Data - Duties.json"));
             foreach (dynamic jDuty in duties)
             {
                 // jump guildhests as it does not drop any thing.

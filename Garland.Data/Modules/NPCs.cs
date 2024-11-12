@@ -507,33 +507,30 @@ namespace Garland.Data.Modules
             switch (tribeKey)
             {
                 case 1: // Midlander
-                    return isMale ? 0 : 100;
+                    return isMale ? 0 : 130;
                 case 2: // Highlander
-                    return isMale ? 200 : 300;
+                    return isMale ? 260 : 390;
                 case 3: // Wildwood
                 case 4: // Duskwight
-                    return isMale ? 400 : 500;
+                    return isMale ? 520 : 650;
                 case 5: // Plainsfolks
                 case 6: // Dunesfolk
-                    return isMale ? 600 : 700;
+                    return isMale ? 780 : 910;
                 case 7: // Seeker of the Sun
                 case 8: // Keeper of the Moon
-                    return isMale ? 800 : 900;
+                    return isMale ? 1040 : 1170;
                 case 9: // Sea Wolf
                 case 10: // Hellsguard
-                    return isMale ? 1000 : 1100;
+                    return isMale ? 1300 : 1430;
                 case 11: // Raen
                 case 12: // Xaela
-                    return isMale ? 1200 : 1300;
-
-                // No alternate genders for Hrothgar, Viera.
-                // For Hrothgar, these might be faces too?
+                    return isMale ? 1560 : 1690;
                 case 13: // Helions 
                 case 14: // The Lost
-                    return isMale ? 1400 : 1500;
+                    return isMale ? 1820 : 1950;
                 case 15: // Rava
                 case 16: // Veena
-                    return isMale ? 1600 : 1700;
+                    return isMale ? 2080 : 2210;
             }
 
             throw new NotImplementedException();
@@ -541,7 +538,7 @@ namespace Garland.Data.Modules
 
         static int GetFacePaintCustomizeIndex(int tribeKey, bool isMale)
         {
-            const int baseRowKey = 2000; // EW - [update by patch required]
+            const int baseRowKey = 2400; // DT - [update by patch required]
 
             switch (tribeKey)
             {
