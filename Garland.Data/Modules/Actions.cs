@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using MySql.Data.MySqlClient;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace Garland.Data.Modules
         {
             BuildActionCategories();
 
-            BuildActions();
+            SqlDatabase.WithConnection(Config.ConnectionString, c => BuildActions(c));
             BuildCraftingActions();
             BuildPetActions();
 
@@ -26,20 +27,21 @@ namespace Garland.Data.Modules
             BuildCombos();
         }
 
-        void BuildActions()
+        void BuildActions(MySqlConnection conn)
         {
             foreach (var sAction in _builder.Sheet<Saint.Action>())
-                BuildAction(sAction);
+                BuildAction(sAction, conn);
 
             _linkingActions = _builder.Db.Actions.ToArray();
         }
 
-        dynamic BuildAction(Saint.Action sAction)
+        dynamic BuildAction(Saint.Action sAction, MySqlConnection conn)
         {
             dynamic action = new JObject();
             action.id = sAction.Key;
             _builder.Localize.Strings((JObject)action, sAction, "Name");
             _builder.Localize.HtmlStrings((JObject)action, sAction.ActionTransient, "Description");
+            PatchDatabase.VerifyNamingPatch(conn, action, "action");
             action.patch = PatchDatabase.Get("action", sAction.Key);
             action.category = sAction.ActionCategory.Key;
 

@@ -12,7 +12,7 @@ namespace Garland.Data.Helpers
 {
     public class ItemIconCalibrator
     {
-        static string _iconPath = Config.FilesPath + "icons\\item\\";
+        static string _iconPath = Path.Combine(Config.FilesPath + "\\icons\\item\\");
         static string _definitionPath = _iconPath + "icon.definition.json";
         static string _withdrawPath = _iconPath + "icon.withdraw.json";
         static string _notFoundPath = _iconPath + "icon.notfound.json";

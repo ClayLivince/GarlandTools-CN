@@ -13,7 +13,7 @@ namespace Garland.Data
     public class GarlandDatabase
     {
         // NOTE: This section must be updated with every patch!
-        public const decimal NextPatch = 7.1m;
+        public const decimal NextPatch = 7.16m;
         public static Patch[] MajorPatches = new[] {
             new Patch(1m, "Legacy", "Legacy"),
             new Patch(1.9m, "Nameless NPCs", "Legacy"),

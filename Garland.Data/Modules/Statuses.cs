@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using MySql.Data.MySqlClient;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,31 +15,36 @@ namespace Garland.Data.Modules
 
         public override void Start()
         {
-            BuildStatuses();
+            SqlDatabase.WithConnection(Config.ConnectionString, c => BuildStatuses(c));
         }
 
-        void BuildStatuses()
+        void BuildStatuses(MySqlConnection conn)
         {
             foreach (var sStatus in _builder.Sheet<Saint.Status>())
-                BuildStatus(sStatus);
+                BuildStatus(sStatus, conn);
         }
 
-        dynamic BuildStatus(Saint.Status sStatus)
+        dynamic BuildStatus(Saint.Status sStatus, MySqlConnection conn)
         {
             dynamic status = new JObject();
             status.id = sStatus.Key;
-            _builder.Localize.Strings((JObject)status, sStatus, "Name");
-            _builder.Localize.HtmlStrings((JObject)status, sStatus, "Description");
-            status.patch = PatchDatabase.Get("status", sStatus.Key);
-            status.category = sStatus.Category;
-
-            status.canDispel = sStatus.CanDispel;
-
             // If the status doesn't have an icon, we probably don't want it in our data
             if (sStatus.Icon != null && !sStatus.Icon.Path.EndsWith("000000.tex"))
                 status.icon = IconDatabase.EnsureEntry("status", sStatus.Icon);
             else
                 return null;
+
+            _builder.Localize.Strings((JObject)status, sStatus, "Name");
+            _builder.Localize.HtmlStrings((JObject)status, sStatus, "Description");
+
+            PatchDatabase.VerifyNamingPatch(conn, status, "status");
+
+            status.patch = PatchDatabase.Get("status", sStatus.Key);
+            status.category = sStatus.Category;
+
+            status.canDispel = sStatus.CanDispel;
+
+
 
             _builder.Db.Statuses.Add(status);
             _builder.Db.StatusesById[sStatus.Key] = status;

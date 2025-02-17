@@ -192,11 +192,7 @@
       {
         "item": "Water Cluster",
         "icon": 20014,
-        "id": 19,
-        "reduce": {
-          "item": "Sunlit Prism",
-          "icon": 28649
-        }
+        "id": 19
       },
       {
         "item": "Unaspected Crystal",
@@ -732,11 +728,7 @@
       {
         "item": "Water Cluster",
         "icon": 20014,
-        "id": 19,
-        "reduce": {
-          "item": "Sunlit Prism",
-          "icon": 28649
-        }
+        "id": 19
       },
       {
         "item": "Unaspected Crystal",
@@ -1273,11 +1265,7 @@
       {
         "item": "Water Cluster",
         "icon": 20014,
-        "id": 19,
-        "reduce": {
-          "item": "Sunlit Prism",
-          "icon": 28649
-        }
+        "id": 19
       },
       {
         "item": "Unaspected Crystal",
@@ -4661,20 +4649,12 @@
       {
         "item": "Water Crystal",
         "icon": 20008,
-        "id": 13,
-        "reduce": {
-          "item": "Sunlit Prism",
-          "icon": 28649
-        }
+        "id": 13
       },
       {
         "item": "Water Cluster",
         "icon": 20014,
-        "id": 19,
-        "reduce": {
-          "item": "Sunlit Prism",
-          "icon": 28649
-        }
+        "id": 19
       }
     ],
     "stars": 2,
