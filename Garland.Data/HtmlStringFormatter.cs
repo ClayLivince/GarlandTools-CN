@@ -282,7 +282,9 @@ namespace Garland.Data
                     return "[#" + parameterIndex + "]";
 
                 default:
-                    throw new NotImplementedException();
+                    DatabaseBuilder.PrintLine($"Unknown parameter {parameter.ParameterType.ToString()}#{parameterIndex}]");
+                    return $"[{parameter.ParameterType.ToString()}#{parameterIndex}]";
+                    //throw new NotImplementedException();
             }
         }
 

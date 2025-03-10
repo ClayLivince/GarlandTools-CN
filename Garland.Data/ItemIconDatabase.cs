@@ -72,7 +72,11 @@ namespace Garland.Data
 
             System.Drawing.Image image = null;
 
-            string sIconPath = sItem.Icon.Path;
+            string sIconPath = sItem.Icon?.Path;
+            if (sIconPath == null)
+            {
+                return "null";
+            }
             sIconPath = sIconPath.Replace(".tex", "_hr1.tex");
             _builder.Realm.Packs.TryGetFile(sIconPath, out var fileHQ);
             if (fileHQ != null)

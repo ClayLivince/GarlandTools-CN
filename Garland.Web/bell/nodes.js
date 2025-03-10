@@ -268,11 +268,7 @@
         "itemFR": "Agrégat d'eau",
         "itemDE": "Wasserpolykristall",
         "icon": 20014,
-        "id": 19,
-        "reduce": {
-          "item": "Sunlit Prism",
-          "icon": 28649
-        }
+        "id": 19
       },
       {
         "item": "无属性水晶",
@@ -1012,11 +1008,7 @@
         "itemFR": "Agrégat d'eau",
         "itemDE": "Wasserpolykristall",
         "icon": 20014,
-        "id": 19,
-        "reduce": {
-          "item": "Sunlit Prism",
-          "icon": 28649
-        }
+        "id": 19
       },
       {
         "item": "无属性水晶",
@@ -1761,11 +1753,7 @@
         "itemFR": "Agrégat d'eau",
         "itemDE": "Wasserpolykristall",
         "icon": 20014,
-        "id": 19,
-        "reduce": {
-          "item": "Sunlit Prism",
-          "icon": 28649
-        }
+        "id": 19
       },
       {
         "item": "无属性水晶",
@@ -6049,11 +6037,7 @@
         "itemFR": "Cristal d'eau",
         "itemDE": "Wasserkristall",
         "icon": 20008,
-        "id": 13,
-        "reduce": {
-          "item": "Sunlit Prism",
-          "icon": 28649
-        }
+        "id": 13
       },
       {
         "item": "水之晶簇",
@@ -6062,11 +6046,7 @@
         "itemFR": "Agrégat d'eau",
         "itemDE": "Wasserpolykristall",
         "icon": 20014,
-        "id": 19,
-        "reduce": {
-          "item": "Sunlit Prism",
-          "icon": 28649
-        }
+        "id": 19
       }
     ],
     "stars": 2,
@@ -9142,7 +9122,7 @@
         "itemEN": "Electrocoal",
         "itemJA": "黒雷岩",
         "itemFR": "Roche à électrope noire",
-        "itemDE": "Astralquartz",
+        "itemDE": "Astralquarz",
         "icon": 21205,
         "id": 43931,
         "reduce": {
@@ -9193,7 +9173,7 @@
         "itemEN": "Brightwind Ore",
         "itemJA": "陽風岩",
         "itemFR": "Roche des vents ensoleillés",
-        "itemDE": "Kopalquartz",
+        "itemDE": "Kopalquarz",
         "icon": 21212,
         "id": 43932,
         "reduce": {
@@ -9707,6 +9687,15 @@
         "itemDE": "Harmoniterzklumpen",
         "icon": 21221,
         "id": 44135
+      },
+      {
+        "item": "亚历山德里亚金属矿",
+        "itemEN": "Alexandrian Ore",
+        "itemJA": "アレクサンドリアン鉱",
+        "itemFR": "Minerai alexandrin",
+        "itemDE": "Alexandrisches Erz",
+        "icon": "t/21491",
+        "id": 44845
       }
     ],
     "stars": 1,
@@ -9780,7 +9769,7 @@
       2,
       14
     ],
-    "title": "亚塔纳内草地",
+    "title": "艾休凯亚尼荒原",
     "zone": "夏劳尼荒野",
     "coords": [
       10.87,
@@ -9806,6 +9795,15 @@
         "itemDE": "Schwarzbaumwoll-Samenkapsel",
         "icon": 25032,
         "id": 44138
+      },
+      {
+        "item": "光学纤维草",
+        "itemEN": "Optical Fibergrass",
+        "itemJA": "オプティカルグラス",
+        "itemFR": "Herbe optique",
+        "itemDE": "Optisches Gras",
+        "icon": "t/22699",
+        "id": 44844
       }
     ],
     "stars": 1,

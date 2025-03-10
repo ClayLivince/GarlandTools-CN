@@ -151,6 +151,7 @@ namespace Garland.Data
             ItemPatchCategoryByUICategory[109] = 0; // Sage's Arm
             ItemPatchCategoryByUICategory[110] = 0; // Viper's Arm
             ItemPatchCategoryByUICategory[111] = 0; // Pictomancer's Arm
+            ItemPatchCategoryByUICategory[112] = 3; // Outfits
         }
 
         public static void Initialize()
