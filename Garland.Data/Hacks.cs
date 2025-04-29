@@ -93,9 +93,6 @@ namespace Garland.Data
             {
                 case 17557: // Dated Radz-at-Han Coin
                     return false;
-
-                case 22357: // Wrapped Present (no icon)
-                    return true;
             }
 
             if (name.Length == 0)

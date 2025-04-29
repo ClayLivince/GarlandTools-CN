@@ -80,6 +80,8 @@ namespace Garland.Data.Modules
                         obj.id = equipment.Key;
                         if (modelData.Stain.Key > 0)
                             obj.dye = modelData.Stain.Key;
+                        if (modelData.Stain2.Key > 0)
+                            obj.dye2 = modelData.Stain2.Key;
                         if (uncertainty > 0)
                             obj.uncertainty = uncertainty;
 

@@ -6005,7 +6005,7 @@
     "func": "node",
     "items": [
       {
-        "item": "暴风岩",
+        "item": "暴风性岩",
         "itemEN": "Gale Rock",
         "itemJA": "嵐性岩",
         "itemFR": "Pierre de rafale",
@@ -9694,7 +9694,7 @@
         "itemJA": "アレクサンドリアン鉱",
         "itemFR": "Minerai alexandrin",
         "itemDE": "Alexandrisches Erz",
-        "icon": "t/21491",
+        "icon": 21491,
         "id": 44845
       }
     ],
@@ -9802,7 +9802,7 @@
         "itemJA": "オプティカルグラス",
         "itemFR": "Herbe optique",
         "itemDE": "Optisches Gras",
-        "icon": "t/22699",
+        "icon": 22699,
         "id": 44844
       }
     ],

@@ -106,6 +106,7 @@ gt.item = {
             glamourous: item.glamourous,
             untradeable: !item.tradeable,
             dyeable: item.dyeable,
+            dyecount: item.dyecount,
             unique: item.unique,
             sell_price: item.sell_price,
             price: item.price,

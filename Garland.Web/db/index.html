@@ -1178,6 +1178,7 @@
 
                     {{?it.dyeable}}
                         <img class="icon mini" src="images/item/Dye.png" title="Dye">
+                        <img class="icon mini" src="images/item/dye/{{=it.dyecount}}.png" title="Dye Count">
                     {{?}}
 
                     {{?it.crestworthy}}
@@ -2538,7 +2539,7 @@
                                             <img class="icon small" src="{{=value.item.icon}}">
                                             <span class="highlight text">{{=value.item.name}}</span>
                                             {{?value.uncertainty}}<span class="text" title="Uncertainty: {{=value.uncertainty}}">(不确定)</span>{{?}}
-                                            {{?value.dye}}<span class="right text">{{=value.dye.name}}</span>{{?}}
+                                            {{?value.dyes}}<span class="right text">{{=value.dye[1]}} / {{=value.dye[2]}}</span>{{?}}
                                         </div>
                                     {{?}}
                                 </div>

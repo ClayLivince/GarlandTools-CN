@@ -47456,7 +47456,7 @@ gt.bell.fish = [
     "zone": "黑风海"
   },
   {
-    "name": "鳍人族的鱼叉",
+    "name": "鳍人族的渔叉",
     "patch": 5.0,
     "baits": [
       [

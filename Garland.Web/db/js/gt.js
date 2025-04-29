@@ -2023,6 +2023,7 @@ gt.item = {
             glamourous: item.glamourous,
             untradeable: !item.tradeable,
             dyeable: item.dyeable,
+            dyecount: item.dyecount,
             unique: item.unique,
             sell_price: item.sell_price,
             price: item.price,
@@ -3365,10 +3366,16 @@ gt.npc = {
                 view.equip = [];
                 for (var i = 0; i < npc.equipment.length; i++) {
                     var entry = npc.equipment[i];
+                    var dyes= (entry.dye != null) + (entry.dye2 != null)
+
                     view.equip.push({
                         item: entry.id ? gt.model.partial(gt.item, entry.id) : null,
                         uncertainty: entry.uncertainty,
-                        dye: entry.dye ? gt.dyes[entry.dye] : null,
+                        dye: {
+                            1: entry.dye ? gt.dyes[entry.dye].name : "",
+                            2: entry.dye2 ? gt.dyes[entry.dye2].name : "",
+                        },
+                        dyes: dyes,
                         slot: gt.item.equipSlotNames[entry.slot],
                         model: entry.model
                     });
