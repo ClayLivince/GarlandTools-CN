@@ -9824,5 +9824,203 @@
     "condition": "鉴别力 4907以上",
     "bonus": "额外采集奖励发生率＋30%",
     "patch": 7.0
+  },
+  {
+    "type": "石场",
+    "func": "node",
+    "items": [
+      {
+        "item": "玫瑰红纹石原石",
+        "itemEN": "Raw Rhodochrosite",
+        "itemJA": "ロードクロサイト原石",
+        "itemFR": "Rhodochrosite brute",
+        "itemDE": "Roh-Rhodochrosit",
+        "icon": 21471,
+        "id": 45970
+      }
+    ],
+    "stars": 2,
+    "time": [
+      8,
+      20
+    ],
+    "title": "孵卵树群",
+    "zone": "克扎玛乌卡湿地",
+    "coords": [
+      12.03,
+      17.64
+    ],
+    "name": "传说的",
+    "uptime": 120,
+    "lvl": 100,
+    "id": 1188,
+    "condition": "鉴别力 5254以上",
+    "bonus": "额外采集奖励发生率＋40%",
+    "patch": 7.2
+  },
+  {
+    "type": "矿脉",
+    "func": "node",
+    "items": [
+      {
+        "item": "八面体陨铁矿石",
+        "itemEN": "Octahedrite",
+        "itemJA": "オクタヘドライト鉱石",
+        "itemFR": "Minerai d'octaédrite",
+        "itemDE": "Oktaedrit-Erzklumpen",
+        "icon": 21203,
+        "id": 45969
+      }
+    ],
+    "stars": 2,
+    "time": [
+      10,
+      22
+    ],
+    "title": "绀碧地门",
+    "zone": "亚克特尔树海",
+    "coords": [
+      17.96,
+      36.96
+    ],
+    "name": "传说的",
+    "uptime": 120,
+    "lvl": 100,
+    "id": 1189,
+    "condition": "鉴别力 5254以上",
+    "bonus": "额外采集奖励发生率＋40%",
+    "patch": 7.2
+  },
+  {
+    "type": "石场",
+    "func": "node",
+    "items": [
+      {
+        "item": "雷击石",
+        "itemEN": "Fulgurite",
+        "itemJA": "フルグライト",
+        "itemFR": "Fulgurite",
+        "itemDE": "Fulgurit",
+        "icon": "t/21492",
+        "id": 45973
+      }
+    ],
+    "stars": 2,
+    "time": [
+      2,
+      14
+    ],
+    "title": "永护塔外围",
+    "zone": "遗产之地",
+    "coords": [
+      14.01,
+      16.84
+    ],
+    "name": "传说的",
+    "uptime": 120,
+    "lvl": 100,
+    "id": 1190,
+    "condition": "鉴别力 5254以上",
+    "bonus": "额外采集奖励发生率＋40%",
+    "patch": 7.2
+  },
+  {
+    "type": "良材",
+    "func": "node",
+    "items": [
+      {
+        "item": "破布木原木",
+        "itemEN": "Cordia Log",
+        "itemJA": "コーディア原木",
+        "itemFR": "Rondin de cordia",
+        "itemDE": "Cordia-Holzscheit",
+        "icon": 22414,
+        "id": 45968
+      }
+    ],
+    "stars": 2,
+    "time": [
+      0,
+      12
+    ],
+    "title": "白烬古战场",
+    "zone": "亚克特尔树海",
+    "coords": [
+      35.77,
+      22.34
+    ],
+    "name": "传说的",
+    "uptime": 120,
+    "lvl": 100,
+    "id": 1191,
+    "condition": "鉴别力 5254以上",
+    "bonus": "额外采集奖励发生率＋40%",
+    "patch": 7.2
+  },
+  {
+    "type": "草场",
+    "func": "node",
+    "items": [
+      {
+        "item": "夏劳尼咖啡",
+        "itemEN": "Shaaloani Coffee",
+        "itemJA": "シャーローニ・コーヒー",
+        "itemFR": "Grains de café de Shaaloani",
+        "itemDE": "Shaaloani-Kaffeebohnen",
+        "icon": 27501,
+        "id": 45971
+      }
+    ],
+    "stars": 2,
+    "time": [
+      4,
+      16
+    ],
+    "title": "帕利尤南沃野",
+    "zone": "夏劳尼荒野",
+    "coords": [
+      34.99,
+      16.27
+    ],
+    "name": "传说的",
+    "uptime": 120,
+    "lvl": 100,
+    "id": 1192,
+    "condition": "鉴别力 5254以上",
+    "bonus": "额外采集奖励发生率＋40%",
+    "patch": 7.2
+  },
+  {
+    "type": "良材",
+    "func": "node",
+    "items": [
+      {
+        "item": "洋红虫染料",
+        "itemEN": "Cochineal Pigment",
+        "itemJA": "コチニール染料",
+        "itemFR": "Pigment nopal",
+        "itemDE": "Karmin",
+        "icon": 25011,
+        "id": 45972
+      }
+    ],
+    "stars": 2,
+    "time": [
+      6,
+      18
+    ],
+    "title": "亚斯拉尼荒野东部",
+    "zone": "遗产之地",
+    "coords": [
+      34.25,
+      20.66
+    ],
+    "name": "传说的",
+    "uptime": 120,
+    "lvl": 100,
+    "id": 1193,
+    "condition": "鉴别力 5254以上",
+    "bonus": "额外采集奖励发生率＋40%",
+    "patch": 7.2
   }
 ];
