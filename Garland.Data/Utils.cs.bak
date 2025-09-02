@@ -3,7 +3,6 @@ using SaintCoinach.Text;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -22,11 +21,6 @@ namespace Garland.Data
         public static JToken GetFirst(JArray value)
         {
             return value.First();
-        }
-
-        public static string CapitalizeWordsXiv(SaintCoinach.Text.XivString str)
-        {
-            return CapitalizeWords(str.ToString());
         }
 
         public static string CapitalizeWords(SaintCoinach.Text.XivString str)
@@ -121,15 +115,6 @@ namespace Garland.Data
                 Utils.SanitizeTags(name)))
                 .Replace("–", "-")
                 .Replace("  ", " ");
-        }
-
-        public static string SanitizeFileName(string fileName)
-        {
-            
-            var invalidChars = Path.GetInvalidFileNameChars();
-
-            
-            return new string(fileName.Where(c => !invalidChars.Contains(c)).ToArray());
         }
 
         public static IEnumerable<string[]> Csv(string path)

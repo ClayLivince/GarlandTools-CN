@@ -26,6 +26,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotSquish", "lib\SaintCoina
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SaintCoinach.Cmd", "lib\SaintCoinach\SaintCoinach.Cmd\SaintCoinach.Cmd.csproj", "{957699E4-8310-4D1E-BA83-13B7A4932807}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Godbert", "lib\SaintCoinach\Godbert\Godbert.csproj", "{6A5DA7FF-791E-4A43-BF65-B6942917F7D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -108,6 +110,18 @@ Global
 		{957699E4-8310-4D1E-BA83-13B7A4932807}.Release-Unsigned|Any CPU.Build.0 = Release|Any CPU
 		{957699E4-8310-4D1E-BA83-13B7A4932807}.Release-Unsigned|x64.ActiveCfg = Release|Any CPU
 		{957699E4-8310-4D1E-BA83-13B7A4932807}.Release-Unsigned|x64.Build.0 = Release|Any CPU
+		{6A5DA7FF-791E-4A43-BF65-B6942917F7D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A5DA7FF-791E-4A43-BF65-B6942917F7D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A5DA7FF-791E-4A43-BF65-B6942917F7D9}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{6A5DA7FF-791E-4A43-BF65-B6942917F7D9}.Debug|x64.Build.0 = Debug|Any CPU
+		{6A5DA7FF-791E-4A43-BF65-B6942917F7D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A5DA7FF-791E-4A43-BF65-B6942917F7D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A5DA7FF-791E-4A43-BF65-B6942917F7D9}.Release|x64.ActiveCfg = Release|Any CPU
+		{6A5DA7FF-791E-4A43-BF65-B6942917F7D9}.Release|x64.Build.0 = Release|Any CPU
+		{6A5DA7FF-791E-4A43-BF65-B6942917F7D9}.Release-Unsigned|Any CPU.ActiveCfg = Release|Any CPU
+		{6A5DA7FF-791E-4A43-BF65-B6942917F7D9}.Release-Unsigned|Any CPU.Build.0 = Release|Any CPU
+		{6A5DA7FF-791E-4A43-BF65-B6942917F7D9}.Release-Unsigned|x64.ActiveCfg = Release|Any CPU
+		{6A5DA7FF-791E-4A43-BF65-B6942917F7D9}.Release-Unsigned|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

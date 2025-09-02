@@ -1,5 +1,22 @@
 gt.i18n = {
     en: {
+        Title: "Garland Tools Database",
+
+
+        DoWoM: "DoWoM",
+        DoL: "DoL",
+        DoH: "DoH",
+
+        // Materia Related
+        MateriaMelding: "Materia Melding",
+        NotMelded: "Not Melded",
+        DoWoMMateria: "DoWoM Materia",
+        DoLMateria: "DoL Materia",
+        DoHMateria: "DoH Materia",
+
+        // Miscellaneous
+        Max: "Max",
+
         CopyrightAgreement: "Copyright Agreement",
         CopyrightAgreementText: "FINAL FANTASY XIV © 2010 - 2024 SQUARE ENIX CO., LTD. All Rights Reserved. I fully understand the vocalizations are under Square Enix's copyright protection, and I promise I am only trying to have a preview of game data and not going to use it in any way that violates the copyright regulations in my region."
     },

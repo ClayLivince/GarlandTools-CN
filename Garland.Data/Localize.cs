@@ -95,8 +95,9 @@ namespace Garland.Data
                        if (!upper.TryGetValue(piece, out var inner))
                         {
                             upper[piece] = inner = new JObject();
-                            upper = inner as JObject;
+                            
                         }
+                        upper = inner as JObject;
                     }
                     upper[pieces.Last()] = toValue;
                 }

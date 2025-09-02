@@ -15,6 +15,7 @@ namespace Garland.Data
             1769474, // Currency Test
             1769475, // Materia Test
             1769524, // Items in Development
+            1770766, // Strange Aesthetics shop
         };
 
         public static HashSet<int> NoModelCategories = new HashSet<int>()
@@ -92,9 +93,6 @@ namespace Garland.Data
             {
                 case 17557: // Dated Radz-at-Han Coin
                     return false;
-
-                case 22357: // Wrapped Present (no icon)
-                    return true;
 
                 case 0: // Some weird item added with 6.4
                     return true;

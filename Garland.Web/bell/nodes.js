@@ -7222,6 +7222,15 @@
         }
       },
       {
+        "item": "Levin Quartz",
+        "icon": 21461,
+        "id": 46247,
+        "reduce": {
+          "item": "Levinchrome Aethersand",
+          "icon": "t/21248"
+        }
+      },
+      {
         "item": "Lightning Crystal",
         "icon": 20011,
         "id": 12
@@ -7232,6 +7241,7 @@
         "id": 18
       }
     ],
+    "stars": 2,
     "time": [
       0
     ],
@@ -7300,6 +7310,15 @@
         }
       },
       {
+        "item": "Calamus Root",
+        "icon": "t/22707",
+        "id": 46248,
+        "reduce": {
+          "item": "Levinchrome Aethersand",
+          "icon": "t/21248"
+        }
+      },
+      {
         "item": "Fire Crystal",
         "icon": 20007,
         "id": 8
@@ -7310,6 +7329,7 @@
         "id": 14
       }
     ],
+    "stars": 2,
     "time": [
       16
     ],
@@ -7638,7 +7658,7 @@
       },
       {
         "item": "Alexandrian Ore",
-        "icon": "t/21491",
+        "icon": 21491,
         "id": 44845
       }
     ],
@@ -7730,7 +7750,7 @@
       },
       {
         "item": "Optical Fibergrass",
-        "icon": "t/22699",
+        "icon": 22699,
         "id": 44844
       }
     ],
@@ -7752,5 +7772,189 @@
     "condition": "Perception ≥ 4907",
     "bonus": " Gatherer's Boon Chance +30%",
     "patch": 7.0
+  },
+  {
+    "type": "Rocky Outcropping",
+    "func": "node",
+    "items": [
+      {
+        "item": "Raw Rhodochrosite",
+        "icon": 21471,
+        "id": 45970
+      }
+    ],
+    "stars": 2,
+    "time": [
+      8,
+      20
+    ],
+    "title": "Uyuyub'",
+    "zone": "Kozama'uka",
+    "coords": [
+      12.03,
+      17.64
+    ],
+    "name": "Legendary",
+    "uptime": 120,
+    "lvl": 100,
+    "id": 1188,
+    "condition": "Perception ≥ 5254",
+    "bonus": " Gatherer's Boon Chance +40%",
+    "patch": 7.2
+  },
+  {
+    "type": "Mineral Deposit",
+    "func": "node",
+    "items": [
+      {
+        "item": "Octahedrite",
+        "icon": 21203,
+        "id": 45969
+      }
+    ],
+    "stars": 2,
+    "time": [
+      10,
+      22
+    ],
+    "title": "The Cerulean Cexudross",
+    "zone": "Yak T'el",
+    "coords": [
+      17.96,
+      36.96
+    ],
+    "name": "Legendary",
+    "uptime": 120,
+    "lvl": 100,
+    "id": 1189,
+    "condition": "Perception ≥ 5254",
+    "bonus": " Gatherer's Boon Chance +40%",
+    "patch": 7.2
+  },
+  {
+    "type": "Rocky Outcropping",
+    "func": "node",
+    "items": [
+      {
+        "item": "Fulgurite",
+        "icon": "t/21492",
+        "id": 45973
+      },
+      {
+        "item": "Desert Lapis Ore",
+        "icon": 21472,
+        "id": 46244
+      }
+    ],
+    "stars": 2,
+    "time": [
+      2,
+      14
+    ],
+    "title": "Everkeep Ward",
+    "zone": "Heritage Found",
+    "coords": [
+      14.01,
+      16.84
+    ],
+    "name": "Legendary",
+    "uptime": 120,
+    "lvl": 100,
+    "id": 1190,
+    "condition": "Perception ≥ 5254",
+    "bonus": " Gatherer's Boon Chance +40%",
+    "patch": 7.2
+  },
+  {
+    "type": "Mature Tree",
+    "func": "node",
+    "items": [
+      {
+        "item": "Cordia Log",
+        "icon": 22414,
+        "id": 45968
+      },
+      {
+        "item": "Cordia Sap",
+        "icon": 22687,
+        "id": 46243
+      }
+    ],
+    "stars": 2,
+    "time": [
+      0,
+      12
+    ],
+    "title": "The Xobr'it Cinderfield",
+    "zone": "Yak T'el",
+    "coords": [
+      35.77,
+      22.34
+    ],
+    "name": "Legendary",
+    "uptime": 120,
+    "lvl": 100,
+    "id": 1191,
+    "condition": "Perception ≥ 5254",
+    "bonus": " Gatherer's Boon Chance +40%",
+    "patch": 7.2
+  },
+  {
+    "type": "Lush Vegetation",
+    "func": "node",
+    "items": [
+      {
+        "item": "Shaaloani Coffee",
+        "icon": 27501,
+        "id": 45971
+      }
+    ],
+    "stars": 2,
+    "time": [
+      4,
+      16
+    ],
+    "title": "Pyariyoanaan Plain",
+    "zone": "Shaaloani",
+    "coords": [
+      34.99,
+      16.27
+    ],
+    "name": "Legendary",
+    "uptime": 120,
+    "lvl": 100,
+    "id": 1192,
+    "condition": "Perception ≥ 5254",
+    "bonus": " Gatherer's Boon Chance +40%",
+    "patch": 7.2
+  },
+  {
+    "type": "Mature Tree",
+    "func": "node",
+    "items": [
+      {
+        "item": "Cochineal Pigment",
+        "icon": 25011,
+        "id": 45972
+      }
+    ],
+    "stars": 2,
+    "time": [
+      6,
+      18
+    ],
+    "title": "East Yyasulani",
+    "zone": "Heritage Found",
+    "coords": [
+      34.25,
+      20.66
+    ],
+    "name": "Legendary",
+    "uptime": 120,
+    "lvl": 100,
+    "id": 1193,
+    "condition": "Perception ≥ 5254",
+    "bonus": " Gatherer's Boon Chance +40%",
+    "patch": 7.2
   }
 ];

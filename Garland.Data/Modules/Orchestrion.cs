@@ -13,14 +13,16 @@ namespace Garland.Data.Modules
     public class Orchestrion : Module
     {
         string _resultMusicPath;
+        string _resultMusicPathFull;
 
         public override string Name => "Orchestrion";
 
         public override void Start()
         {
             _resultMusicPath = Path.Combine(Config.FilesPath, "orchestrion");
-
+            _resultMusicPathFull = Path.Combine(Config.SupplementalPath, "orchestrion");
             Directory.CreateDirectory(_resultMusicPath);
+            Directory.CreateDirectory(_resultMusicPathFull);
             Directory.CreateDirectory("output");
 
             //var sOrchestrions = _builder.Sheet("Orchestrion");
@@ -54,6 +56,8 @@ namespace Garland.Data.Modules
         {
             // Skip if the file is already exported.
             var targetFileName = Path.Combine(_resultMusicPath, orchestrionId + ".ogg");
+            var targetFileNameFull = Path.Combine(_resultMusicPathFull, Utils.SanitizeFileName($"{orchestrionId}_{orchestrion.name}.ogg"));
+
             if (File.Exists(targetFileName))
                 return;
 
@@ -64,11 +68,11 @@ namespace Garland.Data.Modules
                 return;
 
             var sScdFile = new SaintCoinach.Sound.ScdFile(sFile);
-            if (!ExportClip(sScdFile, targetFileName))
+            if (!ExportClip(sScdFile, targetFileName, targetFileNameFull))
                 DatabaseBuilder.PrintLine($"No SCD headers for orchestrion #{orchestrionId} {orchestrion.name}");
         }
 
-        bool ExportClip(SaintCoinach.Sound.ScdFile sScdFile, string targetFileName)
+        bool ExportClip(SaintCoinach.Sound.ScdFile sScdFile, string targetFileName, string targetFullFileName)
         {
             for (var i = 0; i < sScdFile.ScdHeader.EntryCount; i++)
             {
@@ -86,6 +90,8 @@ namespace Garland.Data.Modules
                 ffmpeg.WaitForExit();
 
                 File.Move("output\\output.ogg", targetFileName);
+
+                File.Move("output\\input.ogg", targetFullFileName, true);
 
                 return true;
             }

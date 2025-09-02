@@ -96,7 +96,6 @@ gt.item = {
             glamourous: item.glamourous,
             untradeable: !item.tradeable,
             dyeable: item.dyeable,
-            dyecount: item.dyecount,
             unique: item.unique,
             sell_price: item.sell_price,
             price: item.price,
@@ -400,7 +399,7 @@ gt.item = {
         if (item.alla){
             view.alla = [];
             for (var source of item.alla.source){
-                if (! view.alla.includes(source)){
+                if (!(source in view.alla)){
                     view.alla.push(source);
                 }
             }
@@ -1148,7 +1147,7 @@ gt.item = {
     setBlockExpansion: function($block, data) {
         // This function may be called for a group too.  No worries.
         var isExpanded = false;
-
+        
         if (data.craftAmount)
             isExpanded = true;
         else if (data.activePage == 'models-page')

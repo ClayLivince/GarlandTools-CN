@@ -26,7 +26,7 @@ namespace Garland.Data.Modules
             foreach (var sJob in _builder.Sheet<Saint.ClassJob>())
             {
                 var name = sJob.Name.ToString();
-                if (string.IsNullOrEmpty(name))
+                if (string.IsNullOrEmpty(name) && sJob.Key != 0)
                 {
                     DatabaseBuilder.PrintLine($"Skipping unreleased job {sJob.Key}!");
                     continue;

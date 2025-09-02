@@ -1983,6 +1983,7 @@ gt.item = {
             glamourous: item.glamourous,
             untradeable: !item.tradeable,
             dyeable: item.dyeable,
+            dyecount: item.dyecount,
             unique: item.unique,
             sell_price: item.sell_price,
             price: item.price,
@@ -2276,8 +2277,7 @@ gt.item = {
                 } else {
                     return {
                         name: voyageType,
-                        icon: 'images/Voyage.png',
-                        right: "Unknown"
+                        icon: 'images/Voyage.png'
                     }
                 }
 
@@ -2287,7 +2287,7 @@ gt.item = {
         if (item.alla){
             view.alla = [];
             for (var source of item.alla.source){
-                if (!(source in view.alla)){
+                if (! view.alla.includes(source)){
                     view.alla.push(source);
                 }
             }
@@ -2362,7 +2362,7 @@ gt.item = {
             view.sourceType = itemSettings.sourceType;
             view.sourceId = itemSettings.sourceId;
         }
-        
+
         // Marketboard price
         if (itemSettings.marketPrice) {
             view.marketPrice = itemSettings.marketPrice;
@@ -2741,7 +2741,7 @@ gt.item = {
         var itemSettings = gt.settings.getItem(data.id);
         itemSettings.recipe = parseInt($this.val());
         gt.settings.setItem(data.id, itemSettings);
-        
+
         gt.core.redisplay($block);
         gt.item.redisplayUses(data.id);
     },
@@ -2997,7 +2997,7 @@ gt.item = {
         var gcTrade = gt.item.findTrade(item.tradeShops, function(tradeItem, type) {
             return type == 'currency' && (tradeItem.id == 20 || tradeItem.id == 21 || tradeItem.id == 22);
         });
-        
+
         if (gcTrade)
             return gcTrade;
 
@@ -3035,7 +3035,7 @@ gt.item = {
     setBlockExpansion: function($block, data) {
         // This function may be called for a group too.  No worries.
         var isExpanded = false;
-        
+
         if (data.craftAmount)
             isExpanded = true;
         else if (data.activePage == 'models-page')
@@ -3303,10 +3303,16 @@ gt.npc = {
                 view.equip = [];
                 for (var i = 0; i < npc.equipment.length; i++) {
                     var entry = npc.equipment[i];
+                    var dyes= (entry.dye != null) + (entry.dye2 != null)
+
                     view.equip.push({
                         item: entry.id ? gt.model.partial(gt.item, entry.id) : null,
                         uncertainty: entry.uncertainty,
-                        dye: entry.dye ? gt.dyes[entry.dye] : null,
+                        dye: {
+                            1: entry.dye ? gt.dyes[entry.dye].name : "",
+                            2: entry.dye2 ? gt.dyes[entry.dye2].name : "",
+                        },
+                        dyes: dyes,
                         slot: gt.item.equipSlotNames[entry.slot],
                         model: entry.model
                     });

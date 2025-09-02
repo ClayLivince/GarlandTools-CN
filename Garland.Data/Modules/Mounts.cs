@@ -31,10 +31,10 @@ namespace Garland.Data.Modules
 
                 var item = _builder.Db.ItemsById[sItem.Key];
                 item.mount = new JObject();
-                item.mount.name = Utils.CapitalizeWords(sMount.Singular.ToString());
-                item.mount.action = sMountTransient[0].ToString();
-                item.mount.description = sMountTransient[1].ToString();
-                item.mount.tooltip = HtmlStringFormatter.Convert((XivString)sMountTransient[2]);
+                _builder.Localize.Column((JObject)item, sMount, "Singular", "mount.name", Utils.CapitalizeWords);
+                _builder.Localize.Column((JObject)item, sMountTransient, "Description", "mount.action");
+                _builder.Localize.Column((JObject)item, sMountTransient, "Description{Enhanced}", "mount.description");
+                _builder.Localize.Column((JObject)item, sMountTransient, "Tooltip", "mount.tooltip", HtmlStringFormatter.Convert);
 
                 // Icons
                 var iconIndex = (UInt16)sMount.SourceRow.GetRaw("Icon");

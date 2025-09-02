@@ -48,17 +48,17 @@
 
     <script id="materia-select-template" type="text/x-dot-template">
         <div class="materia-select">
-            <h2>Materia Melding</h2>
+            <h2>{{=gt.i18n.get("MateriaMelding")}}</h2>
 
             <div class="filters">
-                <img src="../files/icons/item/20263.png" data-category="category0" class="category0" title="DoWoM Materia">
-                <img src="../files/icons/item/20266.png" data-category="category2" class="category2" title="DoL Materia">
-                <img src="../files/icons/item/20270.png" data-category="category1" class="category1" title="DoH Materia">
+                <img src="../files/icons/item/20263.png" data-category="category0" class="category0" title="{{=gt.i18n.get('DoWoMMateria')}}">
+                <img src="../files/icons/item/20266.png" data-category="category2" class="category2" title="{{=gt.i18n.get('DoLMateria')}}">
+                <img src="../files/icons/item/20270.png" data-category="category1" class="category1" title="{{=gt.i18n.get('DoHMateria')}}">
             </div>
 
             <div class="materia line notmelded hover-highlight pointer row" data-id="0">
                 <img class="icon small" src="images/item/BlankItem.png">
-                <span class="highlight text">Not melded</span>
+                <span class="highlight text">{{=gt.i18n.get("NotMelded")}}</span>
             </div>
 
             <div class="materia-attribute-groups">
@@ -96,7 +96,7 @@
                             <div class="{{?meld.reduced !== undefined}}highlight-red{{?}}">{{=meld.item.materia.attr}} {{=meld.info}}</div>
                         </div>
                     {{??}}
-                        <span class="meld-info highlight">Not melded</span>
+                        <span class="meld-info highlight">{{=gt.i18n.get("NotMelded")}}</span>
                     {{?}}
             </div>
         {{ } }}
@@ -116,9 +116,9 @@
                 {{?}}
                 <hr>
             {{??it.rate}}
-                <span class="value">{{=it.rate}}% (Max {{=it.limit}})</span>
+                <span class="value">{{=it.rate}}% ({{=gt.i18n.get('Max')}} {{=it.limit}})</span>
                 {{?it.rate_hq}}
-                        <span class="value hq">{{=it.rate_hq}}% (Max {{=it.limit_hq}})</span>
+                        <span class="value hq">{{=it.rate_hq}}% ({{=gt.i18n.get('Max')}} {{=it.limit_hq}})</span>
                 {{?}}
             {{??}}
                 <span class="value">{{=it.value}}</span>
@@ -779,6 +779,7 @@
 
                     {{?it.dyeable}}
                         <img class="icon mini" src="images/item/Dye.png" title="Dye">
+                        <img class="icon mini" src="images/item/dye/{{=it.dyecount}}.png" title="Dye Count">
                     {{?}}
 
                     {{?it.crestworthy}}
@@ -2142,7 +2143,7 @@
                                             <img class="icon small" src="{{=value.item.icon}}">
                                             <span class="highlight text">{{=value.item.name}}</span>
                                             {{?value.uncertainty}}<span class="text" title="Uncertainty: {{=value.uncertainty}}">(Guess)</span>{{?}}
-                                            {{?value.dye}}<span class="right text">{{=value.dye.name}}</span>{{?}}
+                                            {{?value.dyes}}<span class="right text">{{=value.dye[1]}} / {{=value.dye[2]}}</span>{{?}}
                                         </div>
                                     {{?}}
                                 </div>
