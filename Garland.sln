@@ -9,6 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Garland.Data", "Garland.Dat
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Supplemental", "Supplemental", "{F30AD40C-B523-4BF7-AC02-872272253577}"
 	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
 		Config.json = Config.json
 		Config.json.default = Config.json.default
 		Supplemental\FFXIV Data - Fates.tsv = Supplemental\FFXIV Data - Fates.tsv
