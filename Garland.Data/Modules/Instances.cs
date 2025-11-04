@@ -86,7 +86,6 @@ namespace Garland.Data.Modules
                 // Find entry conditions.
                 if (!_builder.ContentFinderConditionByInstanceContent.TryGetValue(sInstanceContent, out var sContentFinderCondition))
                     continue; // Skip unreleased content.
-                iContentFinderConditionByID.TryGetValue(sContentFinderCondition.Key, out var iContentFinderCondition);
 
                 // Skip some instances.
                 switch (sContentFinderCondition.ContentType.Key)
@@ -103,18 +102,16 @@ namespace Garland.Data.Modules
                     continue;
 
                 var sContentFinderConditionTransient = _builder.Sheet("ContentFinderConditionTransient")[sContentFinderCondition.Key];
-                var iContentFinderConditionTransient = _builder.InterSheet("ContentFinderConditionTransient")[sContentFinderCondition.Key];
 
                 dynamic instance = new JObject();
                 instance.id = sInstanceContent.Key;
 
-                iContentById.TryGetValue(sInstanceContent.Key, out var iInstanceContent);
-                _builder.Localize.Strings((JObject)instance, sContentFinderCondition, iContentFinderCondition, Utils.SanitizeInstanceName, "Name");
+                _builder.Localize.Strings((JObject)instance, sContentFinderCondition, Utils.SanitizeInstanceName, "Name");
 
                 instance.patch = PatchDatabase.Get("instance", sInstanceContent.Key);
                 instance.categoryIcon = IconDatabase.EnsureEntry("instance/type", sContentFinderCondition.ContentType.Icon);
 
-                _builder.Localize.Column((JObject)instance, sContentFinderCondition.ContentType, iContentFinderCondition.ContentType, "Name", "category",
+                _builder.Localize.Column((JObject)instance, sContentFinderCondition.ContentType, "Name", "category",
                     x => string.IsNullOrEmpty(x) ? Hacks.GetContentTypeNameOverride(sContentFinderCondition.ContentType) : x);
 
                 if (instance.en != null)
@@ -125,7 +122,7 @@ namespace Garland.Data.Modules
                     }
                 }
 
-                _builder.Localize.Strings((JObject)instance, sContentFinderConditionTransient, iContentFinderConditionTransient, "Description");
+                _builder.Localize.Strings((JObject)instance, sContentFinderConditionTransient, "Description");
                 instance.time = (int)sInstanceContent.TimeLimit.TotalMinutes;
                 instance.min_lvl = sContentFinderCondition.RequiredClassJobLevel;
 

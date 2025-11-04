@@ -21,7 +21,7 @@ namespace Garland.Data.Output
         ConcurrentDictionary<dynamic, dynamic> _ingredientsByItem = new ConcurrentDictionary<dynamic, dynamic>();
         readonly static JsonConverter[] _converters = new[] { new WrapperConverter() };
         readonly static string[] _languagesCodes = new[] { "chs" };
-        readonly static string[] _searchLangCodes = new[] { "en", "ja", "de", "fr", "chs" };
+        readonly static string[] _searchLangCodes = new[] { "en", "ja", "de", "fr", "chs", "tc" };
 
         public JsOutput(UpdatePackage update)
         {
@@ -402,6 +402,7 @@ namespace Garland.Data.Output
                 localizedLocation.Remove("ja");
                 localizedLocation.Remove("fr");
                 localizedLocation.Remove("de");
+                localizedLocation.Remove("tc");
                 localizedLocation.Remove("chs");
                 core.locationIndex.Add((string)location.id, localizedLocation);
             }
@@ -662,6 +663,7 @@ namespace Garland.Data.Output
                 tmpCard.Remove("de");
                 tmpCard.Remove("ja");
                 tmpCard.Remove("fr");
+                tmpCard.Remove("tc");
                 tmpCard.Remove("rarity");
                 tmpCard.Remove("icon");
 

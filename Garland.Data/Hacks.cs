@@ -313,6 +313,9 @@ namespace Garland.Data
                 case 27: return "假面狂欢";
             }
 
+            DatabaseBuilder.PrintLine($"While formatting Content type names, we got empty for {sContentType}");
+            return sContentType.ToString();
+
             throw new InvalidOperationException($"Invalid missing ContentType override for {sContentType}.");
         }
 

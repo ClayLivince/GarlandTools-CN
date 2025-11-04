@@ -1,5 +1,6 @@
 gt.localize = {
     localizeTemplate: null,
+    preExtracted: ["name", "location", "description"],
 
 
     initialize: function(){
@@ -19,6 +20,19 @@ gt.localize = {
                 view.localize.ja = obj.ja;
                 view.localize.fr = obj.fr;
                 view.localize.de = obj.de;
+                view.localize.tc = obj.tc;
+
+                for (let localized of ["en", "ja", "fr", "de", "tc"]){
+                    let others = "";
+                    for (let key in view.localize[localized]){
+                        if (this.preExtracted.indexOf(key) === -1){
+                            others += view.localize[localized][key];
+                            others += '\n';
+                        }
+                    }
+                    if (view.localize[localized])
+                        view.localize[localized].other = others;
+                }
             }
         }
     },

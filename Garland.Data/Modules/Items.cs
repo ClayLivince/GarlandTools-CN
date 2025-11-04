@@ -63,9 +63,8 @@ namespace Garland.Data.Modules
             foreach (var sItem in _builder.ItemsToImport)
             {
                 var item = _builder.CreateItem(sItem.Key);
-                _builder.iItemById.TryGetValue(sItem.Key, out var iItem);
-                _builder.Localize.Strings((JObject)item, sItem, iItem, Utils.SanitizeSpace, "Name");
-                _builder.Localize.HtmlStrings(item, sItem, iItem, "Description");
+                _builder.Localize.Strings((JObject)item, sItem, Utils.SanitizeSpace, "Name");
+                _builder.Localize.HtmlStrings(item, sItem, "Description");
                 _builder.Db.ItemsByName[(string)item.chs.name] = item;
 
                 // Index the item if it has english name
@@ -274,23 +273,7 @@ namespace Garland.Data.Modules
                 item.elvl = sEquipment.EquipmentLevel;
                 item.jobs = sEquipment.ClassJobCategory.Key;
 
-                bool iItemAvaliable = true;
-                if (!_builder.iItemById.TryGetValue(sEquipment.Key, out var iItem))
-                {
-                    DatabaseBuilder.PrintLine("Failed to get iItem for " + sItem.Name + " .");
-                    iItemAvaliable = false;
-                }
-
-                bool iEquipmentAvalible = iItemAvaliable;
-                if (iItemAvaliable && !(iItem is Saint.Items.Equipment))
-                {
-                    DatabaseBuilder.PrintLine("sItem is an equipment but iItem is not an equipment." + sItem.Name);
-                    iEquipmentAvalible = false;
-                }
-
-                Saint.Items.Equipment iEquipment = iEquipmentAvalible ? (Saint.Items.Equipment)iItem : null;
-
-                _builder.Localize.Column(item, sEquipment.ClassJobCategory, iEquipmentAvalible ? iEquipment.ClassJobCategory : null, "Name", "jobCategories");
+                _builder.Localize.Column(item, sEquipment.ClassJobCategory, "Name", "jobCategories");
 
                 // Set all normal and hq parameters specified on the item.
                 Saint.BaseParam[] extraParams = null;

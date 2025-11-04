@@ -29,25 +29,20 @@ namespace Garland.Data.Modules
 
         void BuildActions(MySqlConnection conn)
         {
-            Dictionary<int, Saint.Action> iActionById = new Dictionary<int, Saint.Action>();
-            foreach (var iAction in _builder.InterSheet<Saint.Action>())
-                iActionById[iAction.Key] = iAction;
-
             foreach (var sAction in _builder.Sheet<Saint.Action>())
             {
-                iActionById.TryGetValue(sAction.Key, out var iAction);
-                BuildAction(sAction, iAction, conn);
+                BuildAction(sAction, conn);
             }   
 
             _linkingActions = _builder.Db.Actions.ToArray();
         }
 
-        dynamic BuildAction(Saint.Action sAction, Saint.Action iAction, MySqlConnection conn)
+        dynamic BuildAction(Saint.Action sAction, MySqlConnection conn)
         {
             dynamic action = new JObject();
             action.id = sAction.Key;
-            _builder.Localize.Strings((JObject)action, sAction, iAction, false, "Name");
-            _builder.Localize.HtmlStrings((JObject)action, sAction.ActionTransient, iAction.ActionTransient, "Description");
+            _builder.Localize.Strings((JObject)action, sAction, false, "Name");
+            _builder.Localize.HtmlStrings((JObject)action, sAction.ActionTransient, "Description");
             PatchDatabase.VerifyNamingPatch(conn, action, "action");
             action.patch = PatchDatabase.Get("action", sAction.Key);
             action.category = sAction.ActionCategory.Key;
@@ -411,8 +406,6 @@ namespace Garland.Data.Modules
         void BuildCraftingActions()
         {
             Dictionary<int, Saint.CraftAction> iCraftActionById = new Dictionary<int, Saint.CraftAction>();
-            foreach (var iCraftAction in _builder.InterSheet<Saint.CraftAction>())
-                iCraftActionById[iCraftAction.Key] = iCraftAction;
 
             foreach (var sCraftAction in _builder.Sheet<Saint.CraftAction>())
             {
@@ -424,8 +417,7 @@ namespace Garland.Data.Modules
 
                 dynamic action = new JObject();
                 action.id = sCraftAction.Key;
-                iCraftActionById.TryGetValue(sCraftAction.Key, out var iCraftAction);
-                _builder.Localize.HtmlStrings((JObject)action, sCraftAction, iCraftAction, "Name", "Description");
+                _builder.Localize.HtmlStrings((JObject)action, sCraftAction, "Name", "Description");
                 action.category = 7; // DoH ability
                 action.icon = IconDatabase.EnsureEntry("action", sCraftAction.Icon);
                 action.job = sCraftAction.ClassJob.Key;
@@ -482,24 +474,18 @@ namespace Garland.Data.Modules
             traitCategory.name = "职业特性";
             _builder.Db.ActionCategories.Add(traitCategory);
 
-            Dictionary<int, Saint.Trait> iTraitById = new Dictionary<int, Saint.Trait>();
-            foreach (var iTrait in _builder.InterSheet<Saint.Trait>())
-                iTraitById[iTrait.Key] = iTrait;
-
             foreach (var sTrait in _builder.Sheet<Saint.Trait>())
             {
                 if (sTrait.ClassJob.Key == 0)
                     continue; // Skip adventurer traits atm.
 
                 var sTraitTransient = _builder.Sheet("TraitTransient")[sTrait.Key];
-                var iTraitTransient = _builder.InterSheet("TraitTransient")[sTrait.Key];
 
                 dynamic trait = new JObject();
                 trait.id = sTrait.Key + 50000; // Arbitrary!
 
-                iTraitById.TryGetValue(sTrait.Key, out var iTrait);
-                _builder.Localize.Strings((JObject)trait, sTrait, iTrait, "Name");
-                _builder.Localize.HtmlStrings((JObject)trait, sTraitTransient, iTraitTransient, "Description");
+                _builder.Localize.Strings((JObject)trait, sTrait, "Name");
+                _builder.Localize.HtmlStrings((JObject)trait, sTraitTransient, "Description");
                 trait.category = (int)traitCategory.id;
                 trait.icon = IconDatabase.EnsureEntry("action", sTrait.Icon);
                 trait.job = sTrait.ClassJob.Key;

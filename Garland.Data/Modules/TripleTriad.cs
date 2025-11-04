@@ -39,15 +39,7 @@ namespace Garland.Data.Modules
 
                 item.tripletriad = new JObject();
 
-                Game.TripleTriadCard iCard = null;
-                _builder.iItemById.TryGetValue(sItem.Key, out var iItem);
-                if (iItem != null) 
-                {
-                    var iUnlock = iItem.ItemAction as Game.ItemActions.TripleTriadCardUnlock;
-                    iCard = iUnlock.TripleTriadCard;
-                }
-
-                _builder.Localize.Strings(item.tripletriad, unlock.TripleTriadCard, iCard, "Description");
+                _builder.Localize.Strings(item.tripletriad, unlock.TripleTriadCard, "Description");
 
                 var type = sResident.TripleTriadCardType.Name.ToString();
                 if (!string.IsNullOrEmpty(type))

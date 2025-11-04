@@ -18,14 +18,7 @@ namespace Garland.Data.Modules
 
         public override void Start()
         {
-            IndexLocalize();
             BuildAchievements();
-        }
-
-        void IndexLocalize()
-        {
-            foreach (var iAchieve in _builder.InterSheet<Game.Achievement>())
-                iAchieveById[iAchieve.Key] = iAchieve;
         }
 
         public void BuildAchievements()
@@ -40,8 +33,7 @@ namespace Garland.Data.Modules
 
                 dynamic achievement = new JObject();
                 achievement.id = sAchievement.Key;
-                iAchieveById.TryGetValue(sAchievement.Key, out var iAchieve);
-                _builder.Localize.Strings((JObject)achievement, sAchievement, iAchieve, false, "Name", "Description");
+                _builder.Localize.Strings((JObject)achievement, sAchievement, false, "Name", "Description");
                 achievement.patch = PatchDatabase.Get("achievement", sAchievement.Key);
                 achievement.points = sAchievement.Points;
                 achievement.category = sAchievement.AchievementCategory.Key;

@@ -86,8 +86,6 @@ namespace Garland.Data.Modules
                 .ToArray();
 
             Dictionary<int, Saint.ENpc> iENpcById = new Dictionary<int, Saint.ENpc>();
-            foreach (var iENpc in _builder.InterRealm.GameData.ENpcs)
-                iENpcById[iENpc.Key] = iENpc;
 
             foreach (var sNpc in sENpcs)
             {
@@ -96,14 +94,7 @@ namespace Garland.Data.Modules
 
                 if (sNpc.Resident == null ||!string.IsNullOrWhiteSpace(sNpc.Resident?.Singular))
                 {
-                    if (iENpcById.TryGetValue(sNpc.Key, out var iNpc))
-                    {
-                        _builder.Localize.Column((JObject)npc, sNpc.Resident, iNpc.Resident, "Singular", "name", Utils.CapitalizeWords);
-                    }
-                    else
-                    {
-                        _builder.Localize.Column((JObject)npc, sNpc.Resident, "Singular", "name", Utils.CapitalizeWords);
-                    }
+                    _builder.Localize.Column((JObject)npc, sNpc.Resident, "Singular", "name", Utils.CapitalizeWords); 
 
                     string name = npc.chs.name;
                     npc.patch = PatchDatabase.Get("npc", sNpc.Key);

@@ -47,10 +47,8 @@ namespace Garland.Data.Modules
             else
                 return null;
 
-            iStatusById.TryGetValue(sStatus.Key, out var iStatus);
-
-            _builder.Localize.Strings((JObject)status, sStatus, iStatus, false, "Name");
-            _builder.Localize.HtmlStrings((JObject)status, sStatus, iStatus, "Description");
+            _builder.Localize.Strings((JObject)status, sStatus, false, "Name");
+            _builder.Localize.HtmlStrings((JObject)status, sStatus, "Description");
 
             PatchDatabase.VerifyNamingPatch(conn, status, "status");
 

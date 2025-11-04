@@ -181,7 +181,7 @@ namespace Garland.Data.Modules
                     sCompanyCraftDraft.CompanyCraftDraftCategory.Name.ToString() : iCompanyCraftDraft.CompanyCraftDraftCategory.Name.ToString();
 
                 var draft = _builder.CreateItem("draft" + sCompanyCraftDraft.Key);
-                _builder.Localize.Strings((JObject)draft, sCompanyCraftDraft, iCompanyCraftDraft, Utils.CapitalizeWords, "Name");
+                _builder.Localize.Strings((JObject)draft, sCompanyCraftDraft, Utils.CapitalizeWords, "Name");
                 draft.chs.description = "解锁部队合建配方: " + sCompanyCraftDraft.CompanyCraftDraftCategory.Name.ToString() + ".";
                 draft.en.description = "Unlocks company recipes for " + iName + ".";
                 draft.ilvl = 1;

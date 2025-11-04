@@ -69,7 +69,6 @@ namespace Garland.Data.Modules
 
             // Flesh out location/name/map data.
             var placeNameIndex = _builder.Sheet<Game.PlaceName>().ToDictionary(p => p.Key);
-            var iPlaceNameIndex = _builder.InterSheet<Game.PlaceName>().ToDictionary(p => p.Key);
             foreach (var sPlaceName in placeNameIndex.Values)
             {
                 if (sPlaceName.Key == 0)
@@ -77,13 +76,8 @@ namespace Garland.Data.Modules
 
                 
                 var name = Utils.SanitizeTags(ConvertPlaceNameName(sPlaceName));
-                if (iPlaceNameIndex.TryGetValue(sPlaceName.Key, out var iPlaceName))
-                {
-                    var iName = Utils.SanitizeTags(ConvertPlaceNameName(iPlaceName));
-                    CreateInterLocation(iPlaceName.Key, iName);
-                }
                 
-                var loc = CreateLocation(sPlaceName.Key, name, sPlaceName, iPlaceName);
+                var loc = CreateLocation(sPlaceName.Key, name, sPlaceName);
 
                 // Combine map data.
                 if (locationIndex.TryGetValue(sPlaceName, out var info))
@@ -210,11 +204,11 @@ namespace Garland.Data.Modules
             return sPlaceName.Name.ToString();
         }
 
-        dynamic CreateLocation(int id, string name, Game.PlaceName sPlaceName, Game.PlaceName iPlaceName)
+        dynamic CreateLocation(int id, string name, Game.PlaceName sPlaceName)
         {
             dynamic loc = new JObject();
             loc.id = id;
-            _builder.Localize.Column((JObject)loc, sPlaceName, iPlaceName, "Name", "name", Utils.SanitizeXivTags);
+            _builder.Localize.Column((JObject)loc, sPlaceName, "Name", "name", Utils.SanitizeXivTags);
             loc.name = name;
             _builder.Db.Locations.Add(loc);
             _builder.Db.LocationsById[id] = loc;

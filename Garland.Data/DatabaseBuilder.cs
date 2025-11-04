@@ -18,6 +18,7 @@ namespace Garland.Data
     {
         SaintCoinach.ARealmReversed _realm;
         SaintCoinach.ARealmReversed _interRealm;
+        SaintCoinach.ARealmReversed _tcRealm;
         GarlandDatabase _db;
         ItemIconDatabase _itemIconDatabase;
         SQLite.SQLiteConnection _libra;
@@ -101,13 +102,15 @@ namespace Garland.Data
         public Dictionary<Saint.InstanceContent, Saint.ContentFinderCondition> ContentFinderConditionByInstanceContent = new Dictionary<Saint.InstanceContent, Saint.ContentFinderCondition>();
         public static IPrinter Printer;
 
-        public DatabaseBuilder(SQLite.SQLiteConnection libra, SaintCoinach.ARealmReversed realm, SaintCoinach.ARealmReversed interRealm)
+        public DatabaseBuilder(SQLite.SQLiteConnection libra, SaintCoinach.ARealmReversed realm, SaintCoinach.ARealmReversed interRealm, SaintCoinach.ARealmReversed tcRealm)
         {
             _db = GarlandDatabase.Instance;
             _libra = libra;
             _realm = realm;
             _interRealm = interRealm;
-            Localize = new Localize(realm, interRealm);
+            _tcRealm = tcRealm;
+
+            Localize = new Localize(realm, interRealm, tcRealm);
             _instance = this;
         }
 

@@ -15,18 +15,25 @@ namespace Garland.Data
     {
         private ARealmReversed _realm;
         private ARealmReversed _interRealm;
+        private ARealmReversed _tcRealm;
         private readonly XivCollection _data;
         private readonly XivCollection _interData;
+        private readonly XivCollection _tcData;
         private readonly Tuple<string, Language>[] _langs;
         public Tuple<string, Language>[] Langs => _langs;
         private readonly Tuple<string, Language>[] _interLangs;
+        private readonly Tuple<string, Language>[] _tcLangs;
 
-        public Localize(ARealmReversed realm, ARealmReversed interRealm)
+        public Localize(ARealmReversed realm, ARealmReversed interRealm, ARealmReversed tcRealm)
         {
             _realm = realm;
             _interRealm = interRealm;
+            _tcRealm = tcRealm;
+
             _data = realm.GameData;
             _interData = interRealm.GameData;
+            _tcData = tcRealm.GameData;
+
             _langs = new Tuple<string, Language>[]
             {
                 Tuple.Create(Language.ChineseSimplified.GetCode(), Language.ChineseSimplified)
@@ -38,10 +45,32 @@ namespace Garland.Data
                 Tuple.Create(Language.French.GetCode(), Language.French),
                 Tuple.Create(Language.German.GetCode(), Language.German)
             };
+            _tcLangs = new Tuple<string, Language>[]
+            {
+                Tuple.Create(Language.TraditionalChinese.GetCode(), Language.TraditionalChinese)
+            };
         }
 
-        public void Strings(JObject obj, IXivRow row, IXivRow interRow, bool doTry, Func<XivString, string> transform, params string[] cols)
+        public void Strings(JObject obj, IXivRow row, bool doTry, Func<XivString, string> transform, params string[] cols)
         {
+            var key = row.Key;
+            var sheetName = row.Sheet.Name;
+
+            IXivRow interRow = null;
+            IXivRow tcRow = null;
+
+            try
+            {
+                interRow = _interData.GetSheet(sheetName)[key];
+            }
+            catch (Exception ex) { }
+
+            try
+            {
+                tcRow = _tcData.GetSheet(sheetName)[key];
+            }
+            catch (Exception ex) { }
+
             if (row != null) {
                 var currentLang = _data.ActiveLanguage;
                 foreach (var langTuple in _langs)
@@ -106,40 +135,75 @@ namespace Garland.Data
                     }
                 }
                 _interData.ActiveLanguage = iCurrentLang;
-            }    
+            }
+
+            if (tcRow != null)
+            {
+                var tcCurrentLang = _tcData.ActiveLanguage;
+                foreach (var langTuple in _tcLangs)
+                {
+                    var code = langTuple.Item1;
+                    var lang = langTuple.Item2;
+                    _tcData.ActiveLanguage = lang;
+
+                    if (!obj.TryGetValue(code, out var strs))
+                        obj[code] = strs = new JObject();
+
+                    foreach (var col in cols)
+                    {
+                        var value = tcRow[col];
+                        if (value is XivString && string.IsNullOrEmpty((XivString)value))
+                            continue;
+
+                        var sanitizedCol = col.ToLower().Replace("{", "").Replace("}", "");
+                        strs[sanitizedCol] = transform == null ? (value.ToString().TrimEnd()) : transform((XivString)value);
+                    }
+                }
+                _tcData.ActiveLanguage = tcCurrentLang;
+            }
+
         }
 
-        public void Strings(JObject obj, IXivRow row, IXivRow interRow, Func<XivString, string> transform, params string[] cols) {
-            Strings(obj, row, interRow, true, transform, cols);
+        public void Strings(JObject obj, IXivRow row, Func<XivString, string> transform, params string[] cols) {
+            Strings(obj, row, true, transform, cols);
         }
 
-        public void Strings(JObject obj, IXivRow row, IXivRow interRow, params string[] cols)
+        public void Strings(JObject obj, IXivRow row, bool doTry, params string[] cols)
         {
-            Strings(obj, row, interRow, null, cols);
-        }
-
-        public void Strings(JObject obj, IXivRow row, IXivRow interRow, bool doTry, params string[] cols)
-        {
-            Strings(obj, row, interRow, doTry, null, cols);
+            Strings(obj, row, doTry, null, cols);
         }
 
         public void Strings(JObject obj, IXivRow row, params string[] cols)
         {
-            Strings(obj, row, null, null, cols);
-        }
-
-        public void HtmlStrings(JObject obj, IXivRow row, IXivRow interRow, params string[] cols)
-        {
-            Strings(obj, row, interRow, HtmlStringFormatter.Convert, cols);
+            Strings(obj, row, false, null, cols);
         }
 
         public void HtmlStrings(JObject obj, IXivRow row, params string[] cols)
         {
-            Strings(obj, row, null, HtmlStringFormatter.Convert, cols);
+            Strings(obj, row, HtmlStringFormatter.Convert, cols);
         }
 
-        public void Column(JObject obj, IXivRow row, IXivRow interRow, string fromColumn, string toColumn, Func<XivString, string> transform = null)
+
+        public void Column(JObject obj, IXivRow row, string fromColumn, string toColumn, Func<XivString, string> transform = null)
         {
+            var key = row.Key;
+            var sheetName = row.Sheet.Name;
+
+            IXivRow interRow = null;
+            IXivRow tcRow = null;
+
+            try
+            {
+                interRow = _interData.GetSheet(sheetName)[key];
+            }
+            catch (Exception ex) { }
+
+            try
+            {
+                tcRow = _tcData.GetSheet(sheetName)[key];
+            }
+            catch (Exception ex) { }
+
             if (row != null)
             {
                 var currentLang = _data.ActiveLanguage;
@@ -185,10 +249,28 @@ namespace Garland.Data
                 }
                 _interData.ActiveLanguage = currentLang;
             }
-        }
 
-        public void Column(JObject obj, IXivRow row, string fromColumn, string toColumn, Func<XivString, string> transform = null) {
-            Column(obj, row, null, fromColumn, toColumn, transform);
+            if (tcRow != null && (tcRow.Key != 0 || !string.IsNullOrEmpty(tcRow.ToString())))
+            {
+                var currentLang = _tcData.ActiveLanguage;
+                foreach (var langTuple in _tcLangs)
+                {
+                    var code = langTuple.Item1;
+                    var lang = langTuple.Item2;
+                    _tcData.ActiveLanguage = lang;
+
+                    if (!obj.TryGetValue(code, out var strs))
+                        obj[code] = strs = new JObject();
+
+                    var value = tcRow[fromColumn];
+                    var toValue = transform == null ? (value.ToString()) : transform((XivString)value);
+                    if (string.IsNullOrEmpty(toValue))
+                        continue;
+
+                    strs[toColumn] = toValue;
+                }
+                _tcData.ActiveLanguage = currentLang;
+            }
         }
 
         public Tuple<string, Language>[] AvailableLangs()

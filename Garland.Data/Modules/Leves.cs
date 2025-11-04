@@ -27,15 +27,9 @@ namespace Garland.Data.Modules
             foreach (var sLeveRewardItem in _builder.Sheet<Game.LeveRewardItem>())
                 BuildLeveReward(sLeveRewardItem);
 
-            Dictionary<int, Game.Leve> iLeveById = new Dictionary<int, Game.Leve>();
-            foreach (var iLeve in _builder.InterSheet<Game.Leve>())
-                iLeveById[iLeve.Key] = iLeve;
-
-
             foreach (var sLeve in _builder.Sheet<Game.Leve>())
             {
-                iLeveById.TryGetValue(sLeve.Key, out var iLeve);
-                BuildLeve(sLeve, iLeve);
+                BuildLeve(sLeve);
             }
         }
 
@@ -76,14 +70,14 @@ namespace Garland.Data.Modules
             _builder.Db.LeveRewardsById[sLeveRewardItem.Key] = leveRewards;
         }
 
-        void BuildLeve(Game.Leve sLeve, Game.Leve iLeve)
+        void BuildLeve(Game.Leve sLeve)
         {
             if (sLeve.Key <= 20 || sLeve.Name == "")
                 return;
 
             dynamic leve = new JObject();
             leve.id = sLeve.Key;
-            _builder.Localize.HtmlStrings((JObject)leve, sLeve, iLeve, "Name", "Description");
+            _builder.Localize.HtmlStrings((JObject)leve, sLeve, "Name", "Description");
             leve.patch = PatchDatabase.Get("leve", sLeve.Key);
             leve.client = sLeve.LeveClient.Name.ToString().Replace("Client: ", "");
             leve.lvl = sLeve.ClassJobLevel;

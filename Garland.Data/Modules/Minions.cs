@@ -22,23 +22,9 @@ namespace Garland.Data.Modules
                 var item = _builder.Db.ItemsById[sItem.Key];
                 var sCompanion = unlock.Companion;
 
-                _builder.iItemById.TryGetValue(sItem.Key, out var iItem);
-                SaintCoinach.Xiv.Companion iCompanion = null;
-                SaintCoinach.Xiv.CompanionTransient iCompanionTransient = null;
-                if (iItem != null)
-                {
-                    var iUnlock = iItem.ItemAction as SaintCoinach.Xiv.ItemActions.CompanionUnlock;
-                    if (iUnlock != null)
-                    {
-                        iCompanion = iUnlock.Companion;
-                        iCompanionTransient = iCompanion.CompanionTransient;
-                    }
-                }
-                
-
-                _builder.Localize.Strings(item, sCompanion, iCompanion, "MinionRace");
-                _builder.Localize.Strings(item, sCompanion.CompanionTransient, iCompanionTransient, "Tooltip", "MinionSkillType");
-                _builder.Localize.HtmlStrings((JObject)item, sCompanion.CompanionTransient, iCompanionTransient, "SpecialAction{Name}", "SpecialAction{Description}");
+                _builder.Localize.Strings(item, sCompanion, "MinionRace");
+                _builder.Localize.Strings(item, sCompanion.CompanionTransient, "Tooltip", "MinionSkillType");
+                _builder.Localize.HtmlStrings((JObject)item, sCompanion.CompanionTransient, "SpecialAction{Name}", "SpecialAction{Description}");
                 item.cost = sCompanion.Cost;
                 item.skill_angle = sCompanion.SpecialActionAngle;
 

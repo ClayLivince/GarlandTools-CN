@@ -21,13 +21,9 @@ namespace Garland.Data.Modules
         {
             ImportSupplementalData();
 
-            Dictionary<int, Game.Fate> iFateByID = new Dictionary<int, Game.Fate>();
-            foreach (var iFate in _builder.InterSheet<Game.Fate>())
-                iFateByID[iFate.Key] = iFate;
             foreach (var sFate in _builder.Sheet<Game.Fate>())
             {
-                iFateByID.TryGetValue(sFate.Key, out var iFate);
-                BuildFate(sFate, iFate);
+                BuildFate(sFate);
             }
         }
 
@@ -87,7 +83,7 @@ namespace Garland.Data.Modules
             }
         }
 
-        void BuildFate(Game.Fate sFate, Game.Fate iFate)
+        void BuildFate(Game.Fate sFate)
         {
             if (string.IsNullOrEmpty(sFate.Name.ToString()) || sFate.MaximumClassJobLevel <= 1)
                 return;
@@ -95,8 +91,8 @@ namespace Garland.Data.Modules
             dynamic fate = new JObject();
             fate.id = sFate.Key;
             HtmlStringFormatter fmter = new HtmlStringFormatter();
-            _builder.Localize.Strings((JObject)fate, sFate, iFate, false, x => Utils.RemoveLineBreaks(Utils.SanitizeTags(x.Accept(fmter))), "Name");
-            _builder.Localize.HtmlStrings(fate, sFate, iFate, "Description");
+            _builder.Localize.Strings((JObject)fate, sFate, false, x => Utils.RemoveLineBreaks(Utils.SanitizeTags(x.Accept(fmter))), "Name");
+            _builder.Localize.HtmlStrings(fate, sFate, "Description");
             fate.patch = PatchDatabase.Get("fate", sFate.Key);
             fate.lvl = sFate.ClassJobLevel;
             fate.maxlvl = sFate.MaximumClassJobLevel;

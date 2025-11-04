@@ -9182,6 +9182,19 @@
         }
       },
       {
+        "item": "雷石英",
+        "itemEN": "Levin Quartz",
+        "itemJA": "ライトニングクォーツ",
+        "itemFR": "Quartz de foudre",
+        "itemDE": "Blitzquarz",
+        "icon": 21461,
+        "id": 46247,
+        "reduce": {
+          "item": "Levinchrome Aethersand",
+          "icon": "t/21248"
+        }
+      },
+      {
         "item": "雷之水晶",
         "itemEN": "Lightning Crystal",
         "itemJA": "ライトニングクリスタル",
@@ -9200,6 +9213,7 @@
         "id": 18
       }
     ],
+    "stars": 2,
     "time": [
       0
     ],
@@ -9284,6 +9298,19 @@
         }
       },
       {
+        "item": "菖蒲根",
+        "itemEN": "Calamus Root",
+        "itemJA": "菖蒲根",
+        "itemFR": "Racine de jonc odorant",
+        "itemDE": "Kalmuswurzel",
+        "icon": "t/22707",
+        "id": 46248,
+        "reduce": {
+          "item": "Levinchrome Aethersand",
+          "icon": "t/21248"
+        }
+      },
+      {
         "item": "火之水晶",
         "itemEN": "Fire Crystal",
         "itemJA": "ファイアクリスタル",
@@ -9302,6 +9329,7 @@
         "id": 14
       }
     ],
+    "stars": 2,
     "time": [
       16
     ],
@@ -9903,6 +9931,15 @@
         "itemDE": "Fulgurit",
         "icon": "t/21492",
         "id": 45973
+      },
+      {
+        "item": "蓝线石原石",
+        "itemEN": "Desert Lapis Ore",
+        "itemJA": "デザートラピス原石",
+        "itemFR": "Lapis du désert brut",
+        "itemDE": "Roh-Wüstenlapis",
+        "icon": 21472,
+        "id": 46244
       }
     ],
     "stars": 2,
@@ -9936,6 +9973,15 @@
         "itemDE": "Cordia-Holzscheit",
         "icon": 22414,
         "id": 45968
+      },
+      {
+        "item": "破布木树液块",
+        "itemEN": "Cordia Sap",
+        "itemJA": "コーディア樹液塊",
+        "itemFR": "Sève durcie de cordia",
+        "itemDE": "Cordia-Harz",
+        "icon": 22687,
+        "id": 46243
       }
     ],
     "stars": 2,
@@ -9962,7 +10008,7 @@
     "func": "node",
     "items": [
       {
-        "item": "夏劳尼咖啡",
+        "item": "夏劳尼咖啡豆",
         "itemEN": "Shaaloani Coffee",
         "itemJA": "シャーローニ・コーヒー",
         "itemFR": "Grains de café de Shaaloani",
