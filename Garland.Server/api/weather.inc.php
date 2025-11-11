@@ -165,6 +165,7 @@ $zoneWeather = array('Limsa Lominsa' => array(array('Rate' => 20, 'Weather' => 3
     'The For\'ard Cabins' => array(array('Rate' => 40, 'Weather' => 1), array('Rate' => 80, 'Weather' => 2), array('Rate' => 85, 'Weather' => 3), array('Rate' => 95, 'Weather' => 4), array('Rate' => 100, 'Weather' => 7)),
     'Earthen Sky Hideout' => array(array('Rate' => 5, 'Weather' => 2), array('Rate' => 25, 'Weather' => 3), array('Rate' => 40, 'Weather' => 4), array('Rate' => 45, 'Weather' => 7), array('Rate' => 50, 'Weather' => 10), array('Rate' => 100, 'Weather' => 50)),
     'Starlight Stalls' => array(array('Rate' => 100, 'Weather' => 15)),
+    'Zirgorteh the Open-armed' => array(array('Rate' => 20, 'Weather' => 1), array('Rate' => 50, 'Weather' => 2), array('Rate' => 70, 'Weather' => 3), array('Rate' => 80, 'Weather' => 4), array('Rate' => 90, 'Weather' => 5), array('Rate' => 100, 'Weather' => 15)),
     'Interphos' => array(array('Rate' => 100, 'Weather' => 183)),
     'Summit of Everkeep' => array(array('Rate' => 100, 'Weather' => 181)),
     'Yuweyawata - Wawsatenyazeto' => array(array('Rate' => 100, 'Weather' => 50)));

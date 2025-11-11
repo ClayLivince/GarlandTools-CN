@@ -310,6 +310,7 @@ namespace Garland.Data
                 case 22: return "Seasonal Dungeon";
                 case 23: return "Airship Expedition";
                 case 27: return "The Masked Carnivale";
+                case 39: return "Unknown";
             }
 
             throw new InvalidOperationException($"Invalid missing ContentType override for {sContentType}.");
