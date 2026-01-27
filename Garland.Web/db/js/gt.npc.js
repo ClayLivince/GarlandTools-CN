@@ -104,7 +104,7 @@ gt.npc = {
             if (location) {
                 view.fullLocation = view.location = location.name;
                 if (npc.coords) {
-                    view.fullLocation += ' (' + Math.round(npc.coords[0]) + ', ' + Math.round(npc.coords[1]) + ')';
+                    view.fullLocation += ' (' + npc.coords[0] + ', ' + npc.coords[1] + ')';
                     view.map = gt.map.getViewModel({ location: location, coords: npc.coords, approx: npc.approx, icon: view.icon });
                 }
             }

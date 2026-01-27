@@ -168,11 +168,7 @@
       {
         "item": "Ice Cluster",
         "icon": 20015,
-        "id": 15,
-        "reduce": {
-          "item": "Verdigris Guppy",
-          "icon": 28544
-        }
+        "id": 15
       },
       {
         "item": "Wind Cluster",
@@ -704,11 +700,7 @@
       {
         "item": "Ice Cluster",
         "icon": 20015,
-        "id": 15,
-        "reduce": {
-          "item": "Verdigris Guppy",
-          "icon": 28544
-        }
+        "id": 15
       },
       {
         "item": "Wind Cluster",
@@ -3169,20 +3161,12 @@
       {
         "item": "Ice Crystal",
         "icon": 20009,
-        "id": 9,
-        "reduce": {
-          "item": "Verdigris Guppy",
-          "icon": 28544
-        }
+        "id": 9
       },
       {
         "item": "Ice Cluster",
         "icon": 20015,
-        "id": 15,
-        "reduce": {
-          "item": "Verdigris Guppy",
-          "icon": 28544
-        }
+        "id": 15
       }
     ],
     "stars": 2,
@@ -3593,20 +3577,12 @@
       {
         "item": "Ice Crystal",
         "icon": 20009,
-        "id": 9,
-        "reduce": {
-          "item": "Verdigris Guppy",
-          "icon": 28544
-        }
+        "id": 9
       },
       {
         "item": "Ice Cluster",
         "icon": 20015,
-        "id": 15,
-        "reduce": {
-          "item": "Verdigris Guppy",
-          "icon": 28544
-        }
+        "id": 15
       }
     ],
     "stars": 2,
@@ -5126,20 +5102,12 @@
       {
         "item": "Ice Crystal",
         "icon": 20009,
-        "id": 9,
-        "reduce": {
-          "item": "Verdigris Guppy",
-          "icon": 28544
-        }
+        "id": 9
       },
       {
         "item": "Ice Cluster",
         "icon": 20015,
-        "id": 15,
-        "reduce": {
-          "item": "Verdigris Guppy",
-          "icon": 28544
-        }
+        "id": 15
       }
     ],
     "stars": 2,
@@ -7227,7 +7195,7 @@
         "id": 46247,
         "reduce": {
           "item": "Levinchrome Aethersand",
-          "icon": "t/21248"
+          "icon": 21248
         }
       },
       {
@@ -7311,11 +7279,11 @@
       },
       {
         "item": "Calamus Root",
-        "icon": "t/22707",
+        "icon": 22707,
         "id": 46248,
         "reduce": {
           "item": "Levinchrome Aethersand",
-          "icon": "t/21248"
+          "icon": 21248
         }
       },
       {
@@ -7837,7 +7805,7 @@
     "items": [
       {
         "item": "Fulgurite",
-        "icon": "t/21492",
+        "icon": 21492,
         "id": 45973
       },
       {
@@ -7956,5 +7924,179 @@
     "condition": "Perception ≥ 5254",
     "bonus": " Gatherer's Boon Chance +40%",
     "patch": 7.2
+  },
+  {
+    "type": "Rocky Outcropping",
+    "func": "node",
+    "items": [
+      {
+        "item": "Rose Garnet Ore",
+        "icon": 21475,
+        "id": 49209
+      }
+    ],
+    "stars": 3,
+    "time": [
+      0,
+      12
+    ],
+    "title": "Yawtanane Grasslands",
+    "zone": "Shaaloani",
+    "coords": [
+      23.58,
+      27.11
+    ],
+    "name": "Legendary",
+    "uptime": 120,
+    "lvl": 100,
+    "id": 1296,
+    "condition": "Perception ≥ 5600",
+    "bonus": " Gatherer's Boon Chance +30%",
+    "patch": 7.4
+  },
+  {
+    "type": "Mineral Deposit",
+    "func": "node",
+    "items": [
+      {
+        "item": "Dense Aluminum Ore",
+        "icon": 21206,
+        "id": 49208
+      }
+    ],
+    "stars": 3,
+    "time": [
+      10,
+      22
+    ],
+    "title": "Archeo Alexandria",
+    "zone": "Heritage Found",
+    "coords": [
+      23.68,
+      27.95
+    ],
+    "name": "Legendary",
+    "uptime": 120,
+    "lvl": 100,
+    "id": 1297,
+    "condition": "Perception ≥ 5600",
+    "bonus": " Gatherer's Boon Chance +30%",
+    "patch": 7.4
+  },
+  {
+    "type": "Mineral Deposit",
+    "func": "node",
+    "items": [
+      {
+        "item": "Windspath Water",
+        "icon": 22678,
+        "id": 49212
+      }
+    ],
+    "stars": 3,
+    "time": [
+      2,
+      14
+    ],
+    "title": "The Knowable",
+    "zone": "Living Memory",
+    "coords": [
+      8.17,
+      14.15
+    ],
+    "name": "Legendary",
+    "uptime": 120,
+    "lvl": 100,
+    "id": 1298,
+    "condition": "Perception ≥ 5600",
+    "bonus": " Gatherer's Boon Chance +30%",
+    "patch": 7.4
+  },
+  {
+    "type": "Mature Tree",
+    "func": "node",
+    "items": [
+      {
+        "item": "Carnauba Leaf",
+        "icon": 22709,
+        "id": 49210
+      }
+    ],
+    "stars": 3,
+    "time": [
+      4,
+      16
+    ],
+    "title": "Uyuyub'",
+    "zone": "Kozama'uka",
+    "coords": [
+      14.71,
+      10.21
+    ],
+    "name": "Legendary",
+    "uptime": 120,
+    "lvl": 100,
+    "id": 1299,
+    "condition": "Perception ≥ 5600",
+    "bonus": " Gatherer's Boon Chance +30%",
+    "patch": 7.4
+  },
+  {
+    "type": "Lush Vegetation",
+    "func": "node",
+    "items": [
+      {
+        "item": "Urqopacha Flax",
+        "icon": 25033,
+        "id": 49211
+      }
+    ],
+    "stars": 3,
+    "time": [
+      6,
+      18
+    ],
+    "title": "Larh Tortoh",
+    "zone": "Urqopacha",
+    "coords": [
+      5.24,
+      25.18
+    ],
+    "name": "Legendary",
+    "uptime": 120,
+    "lvl": 100,
+    "id": 1300,
+    "condition": "Perception ≥ 5600",
+    "bonus": " Gatherer's Boon Chance +30%",
+    "patch": 7.4
+  },
+  {
+    "type": "Mature Tree",
+    "func": "node",
+    "items": [
+      {
+        "item": "Fulgurpine Log",
+        "icon": 22427,
+        "id": 49207
+      }
+    ],
+    "stars": 3,
+    "time": [
+      8,
+      20
+    ],
+    "title": "The Knowable",
+    "zone": "Living Memory",
+    "coords": [
+      8.49,
+      9.55
+    ],
+    "name": "Legendary",
+    "uptime": 120,
+    "lvl": 100,
+    "id": 1301,
+    "condition": "Perception ≥ 5600",
+    "bonus": " Gatherer's Boon Chance +30%",
+    "patch": 7.4
   }
 ];

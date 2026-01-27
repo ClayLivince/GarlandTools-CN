@@ -13,7 +13,7 @@ namespace Garland.Data
     public class GarlandDatabase
     {
         // NOTE: This section must be updated with every patch!
-        public const decimal NextPatch = 7.38m;
+        public const decimal NextPatch = 7.41m;
         public static Patch[] MajorPatches = new[] {
             new Patch(1m, "Legacy", "Legacy"),
             new Patch(1.9m, "Nameless NPCs", "Legacy"),
@@ -56,7 +56,8 @@ namespace Garland.Data
             new Patch(7m, "Dawntrail", "Dawntrail"),
             new Patch(7.1m, "Crossroads", "Dawntrail"),
             new Patch(7.2m, "Seekers of Eternity", "Dawntrail"),
-            new Patch(7.3m, "The Promise of Tomorrow", "Dawntrail")
+            new Patch(7.3m, "The Promise of Tomorrow", "Dawntrail"),
+            new Patch(7.4m, "Into the Mist", "Dawntrail")
         };
 
         public static int LevelCap = -1; // Filled in from Miscellaneous.

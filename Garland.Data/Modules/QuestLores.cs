@@ -323,9 +323,9 @@ namespace Garland.Data.Modules
 
                     File.Move(outFileName, fullPath);
                 }
-                catch (Exception e)
+                catch (Exception exv)
                 {
-                    DatabaseBuilder.PrintLine($"Some error happened while handling voice line.");
+                    DatabaseBuilder.PrintLine($"Some error happened while handling voice line. {exv}");
                     if (Debugger.IsAttached)
                         Debugger.Break();
                 }
