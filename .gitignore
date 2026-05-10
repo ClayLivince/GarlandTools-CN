@@ -20,3 +20,9 @@ External/*
 /Garland.Web/test.js
 /lib/def/*
 /Supplemental/orchestrion/
+
+# IDE working dir
+Visual Studio 18/
+# WinMerge / pre-edit backups
+*.bak
+*.orig
