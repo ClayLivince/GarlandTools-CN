@@ -20,6 +20,7 @@ namespace Garland.Data.Modules
             // Collect and index all shops to use.
             //_shops.AddRange(ProcessFateShops());
             _shops.AddRange(GarlandShop.Convert(_builder.Sheet<Saint.GilShop>(), _builder));
+            _shops.AddRange(GarlandShop.Convert(_builder.Sheet<Saint.DisposalShop>(), _builder));
             _shops.AddRange(GarlandShop.ConvertSpecialShops(_builder));
             _shops.AddRange(GarlandShop.Convert(_builder.Sheet<Saint.GCShop>(), _builder));
             _shops.AddRange(GarlandShop.Convert(_builder.Sheet<Saint.FccShop>(), _builder));
@@ -77,9 +78,17 @@ namespace Garland.Data.Modules
                     {
                         var fullName = sTopicSelect["Name"].ToString() + "<br>" + sGilShop.Name.ToString();
                         _shops.Add(new GarlandShop(fullName, sNpcs, sGilShop.Items));
+                    } else if (sShop is Saint.DisposalShop sDisposalShop)
+                    {
+                        var shop = _shopsByKey[sShop.Key];
+                        shop.ENpcs = sNpcs.Union(shop.ENpcs).Distinct().ToArray();
                     }
                     else
+                    {
+                        DatabaseBuilder.PrintLine("Unknown Shop Type.");
+                        System.Diagnostics.Debugger.Break();
                         throw new NotImplementedException();
+                    }
                 }
             }
         }

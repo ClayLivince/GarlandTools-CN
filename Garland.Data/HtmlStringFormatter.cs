@@ -77,8 +77,14 @@ namespace Garland.Data
                             if (genericElementArgs[0] is XivString)
                             {
                                 var xivStringArg0 = genericElementArgs[0] as XivString;
-                                return prefix + (xivStringArg0.Children.ToArray()[2]).Accept(this);
+                                if (xivStringArg0.Children.Count() > 2)
+                                {
+                                    return prefix + (xivStringArg0.Children.ToArray()[2]).Accept(this);
+                                }
+                                
                             }
+                            return prefix;
+
                         } catch (Exception e){
                             if (System.Diagnostics.Debugger.IsAttached)
                             {
@@ -90,7 +96,7 @@ namespace Garland.Data
                         {
                             System.Diagnostics.Debugger.Break();
                         }
-                        throw new NotImplementedException();
+                        return genericElement.ToString();
                     }
 
                 case TagType.Highlight:

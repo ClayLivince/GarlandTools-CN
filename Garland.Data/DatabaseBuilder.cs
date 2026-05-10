@@ -388,6 +388,11 @@ namespace Garland.Data
             return Realm.GameData.GetSheet<T>(name);
         }
 
+        public Saint.XivSheet2<T> Sheet2<T>() where T : Saint.XivSubRow
+        {
+            return Realm.GameData.GetSheet2<T>();
+        }
+
         public Saint.IXivSheet<Saint.XivRow> Sheet(string name)
         {
             return Realm.GameData.GetSheet(name);

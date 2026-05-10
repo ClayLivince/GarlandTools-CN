@@ -328,17 +328,29 @@ namespace Garland.Data
                 case 3: // Marauder's Arm
                 case 4: // Archer's Arm
                 case 5: // Lancer's Arm
+    //          case 11: // Shield
                 case 12: // Carpenter's Primary Tool
+    //          case 13: // Carpenter's Secondary Tool
                 case 14: // Blacksmith's Primary Tool
+    //          case 15: // Blacksmith's Secondary Tool
                 case 16: // Armorer's Primary Tool
+    //          case 17: // Armorer's Secondary Tool
                 case 18: // Goldsmith's Primary Tool
+    //          case 19: // Goldsmith's Secondary Tool
                 case 20: // Leatherworker's Primary Tool
+    //          case 21: // Leatherworker's Secondary Tool
                 case 22: // Weaver's Primary Tool
+    //          case 23: // Weaver's Secondary Tool
                 case 24: // Alchemist's Primary Tool
+    //          case 25: // Alchemist's Secondary Tool
                 case 26: // Culinarian's Primary Tool
+    //          case 27: // Culinarian's Secondary Tool
                 case 28: // Miner's Primary Tool
+    //          case 29: // Miner's Secondary Tool
                 case 30: // Botanist's Primary Tool
+    //          case 31: // Botanist's Secondary Tool
                 case 32: // Fisher's Primary Tool
+    //          case 33: // Fisher's Secondary Tool Fishing Tackle
                 case 84: // Rogue's Arms
                 case 87: // Dark Knight's Arm
                 case 88: // Machinist's Arm

@@ -186,6 +186,15 @@ namespace Garland.Data.Modules
                 new SW("Critical Hit", .001), new SW("Direct Hit Rate", .001)
             });
 
+            // Beastmaster
+            _jobsByKey[43] = new JobData(GarlandDatabase.BlueMageLevelCap, new SW[] {
+                new SW("Physical Damage", 15),
+                new SW("Strength", 1),
+                new SW("Dexterity", .1),
+                new SW("Determination", .001), new SW("Spell Speed", .001),
+                new SW("Critical Hit", .001), new SW("Direct Hit Rate", .001)
+            });
+
             // Miner, Botanist, Fisher
             _jobsByKey[16] = new JobData(GarlandDatabase.LevelCap, new SW[] { new SW("Gathering", 1), new SW("Perception", 1), new SW("GP", 1) });
             _jobsByKey[17] = _jobsByKey[16];
