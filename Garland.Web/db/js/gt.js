@@ -1020,8 +1020,9 @@ gt.localize = {
                 view.localize.fr = obj.fr;
                 view.localize.de = obj.de;
                 view.localize.tc = obj.tc;
+                view.localize.ko = obj.ko;
 
-                for (let localized of ["en", "ja", "fr", "de", "tc"]){
+                for (let localized of ["en", "ja", "fr", "de", "tc", "ko"]){
                     let others = "";
                     for (let key in view.localize[localized]){
                         if (this.preExtracted.indexOf(key) === -1){
@@ -3273,7 +3274,7 @@ gt.npc = {
             if (location) {
                 view.fullLocation = view.location = location.name;
                 if (npc.coords) {
-                    view.fullLocation += ' (' + Math.round(npc.coords[0]) + ', ' + Math.round(npc.coords[1]) + ')';
+                    view.fullLocation += ' (' + npc.coords[0] + ', ' + npc.coords[1] + ')';
                     view.map = gt.map.getViewModel({ location: location, coords: npc.coords, approx: npc.approx, icon: view.icon });
                 }
             }

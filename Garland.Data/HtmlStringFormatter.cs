@@ -46,7 +46,60 @@ namespace Garland.Data
                     else if (genericText == "<Split(<Highlight>ObjectParameter(1)</Highlight>, ,2)/>")
                         return "<span class=\"highlight\">Surname</span>";
                     else
-                        throw new NotImplementedException();
+                    {
+                        try
+                        {
+                            var genericElementArgs = genericElement.Arguments.ToArray();
+                            var prefix = "";
+                            var nameArg = genericElementArgs[2] as StaticInteger;
+                            switch (nameArg?.Value)
+                            {
+                                case 1:
+                                    {
+                                        prefix = "<span class=\"highlight\">Forename</span>";
+                                        break;
+                                    }
+                                case 2:
+                                    {
+                                        prefix = "<span class=\"highlight\">Surname</span>";
+                                        break;
+                                    }
+                                default:
+                                    {
+                                        // Unknown Split type encountered, may be not switching player name. ANALYSE IT!
+                                        if (System.Diagnostics.Debugger.IsAttached)
+                                        {
+                                            System.Diagnostics.Debugger.Break();
+                                        }
+                                        break;
+                                    }
+                            }
+                            if (genericElementArgs[0] is XivString)
+                            {
+                                var xivStringArg0 = genericElementArgs[0] as XivString;
+                                if (xivStringArg0.Children.Count() > 2)
+                                {
+                                    return prefix + (xivStringArg0.Children.ToArray()[2]).Accept(this);
+                                }
+
+                            }
+                            return prefix;
+
+                        }
+                        catch (Exception e)
+                        {
+                            if (System.Diagnostics.Debugger.IsAttached)
+                            {
+                                System.Diagnostics.Debugger.Break();
+                            }
+                        }
+                        // Unknown condition and requires analysing
+                        if (System.Diagnostics.Debugger.IsAttached)
+                        {
+                            System.Diagnostics.Debugger.Break();
+                        }
+                        return genericElement.ToString();
+                    }
 
                 case TagType.Highlight:
                     var content = genericElement.Content.Accept(this);

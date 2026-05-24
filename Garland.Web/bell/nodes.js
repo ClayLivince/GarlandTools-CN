@@ -45,7 +45,7 @@
     "uptime": 180,
     "lvl": 50,
     "id": 211,
-    "condition": "鉴别力 327以上",
+    "condition": "鉴别力 大于等于327",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
@@ -95,7 +95,7 @@
     "uptime": 180,
     "lvl": 50,
     "id": 212,
-    "condition": "鉴别力 327以上",
+    "condition": "鉴别力 大于等于327",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
@@ -145,7 +145,7 @@
     "uptime": 180,
     "lvl": 50,
     "id": 213,
-    "condition": "鉴别力 327以上",
+    "condition": "鉴别力 大于等于327",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
@@ -204,7 +204,7 @@
     "uptime": 180,
     "lvl": 50,
     "id": 214,
-    "condition": "鉴别力 327以上",
+    "condition": "鉴别力 大于等于327",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
@@ -228,11 +228,7 @@
         "itemFR": "Agrégat de glace",
         "itemDE": "Eispolykristall",
         "icon": 20015,
-        "id": 15,
-        "reduce": {
-          "item": "Verdigris Guppy",
-          "icon": 28544
-        }
+        "id": 15
       },
       {
         "item": "风之晶簇",
@@ -304,7 +300,7 @@
     "uptime": 180,
     "lvl": 50,
     "id": 215,
-    "condition": "鉴别力 327以上",
+    "condition": "鉴别力 大于等于327",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
@@ -363,7 +359,7 @@
     "uptime": 180,
     "lvl": 50,
     "id": 216,
-    "condition": "鉴别力 327以上",
+    "condition": "鉴别力 大于等于327",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
@@ -422,7 +418,7 @@
     "uptime": 180,
     "lvl": 50,
     "id": 217,
-    "condition": "鉴别力 327以上",
+    "condition": "鉴别力 大于等于327",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
@@ -490,7 +486,7 @@
     "uptime": 180,
     "lvl": 50,
     "id": 218,
-    "condition": "鉴别力 327以上",
+    "condition": "鉴别力 大于等于327",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
@@ -549,7 +545,7 @@
     "uptime": 180,
     "lvl": 50,
     "id": 219,
-    "condition": "鉴别力 327以上",
+    "condition": "鉴别力 大于等于327",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
@@ -608,7 +604,7 @@
     "uptime": 180,
     "lvl": 50,
     "id": 220,
-    "condition": "鉴别力 327以上",
+    "condition": "鉴别力 大于等于327",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
@@ -667,7 +663,7 @@
     "uptime": 180,
     "lvl": 50,
     "id": 221,
-    "condition": "鉴别力 327以上",
+    "condition": "鉴别力 大于等于327",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
@@ -726,7 +722,7 @@
     "uptime": 180,
     "lvl": 50,
     "id": 222,
-    "condition": "鉴别力 327以上",
+    "condition": "鉴别力 大于等于327",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
@@ -794,7 +790,7 @@
     "uptime": 180,
     "lvl": 50,
     "id": 223,
-    "condition": "鉴别力 327以上",
+    "condition": "鉴别力 大于等于327",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
@@ -844,7 +840,7 @@
     "uptime": 180,
     "lvl": 50,
     "id": 224,
-    "condition": "鉴别力 327以上",
+    "condition": "鉴别力 大于等于327",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
@@ -894,7 +890,7 @@
     "uptime": 180,
     "lvl": 50,
     "id": 225,
-    "condition": "鉴别力 327以上",
+    "condition": "鉴别力 大于等于327",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
@@ -944,7 +940,7 @@
     "uptime": 180,
     "lvl": 50,
     "id": 226,
-    "condition": "鉴别力 327以上",
+    "condition": "鉴别力 大于等于327",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
@@ -968,11 +964,7 @@
         "itemFR": "Agrégat de glace",
         "itemDE": "Eispolykristall",
         "icon": 20015,
-        "id": 15,
-        "reduce": {
-          "item": "Verdigris Guppy",
-          "icon": 28544
-        }
+        "id": 15
       },
       {
         "item": "风之晶簇",
@@ -1044,7 +1036,7 @@
     "uptime": 180,
     "lvl": 50,
     "id": 227,
-    "condition": "鉴别力 327以上",
+    "condition": "鉴别力 大于等于327",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
@@ -1094,7 +1086,7 @@
     "uptime": 180,
     "lvl": 50,
     "id": 230,
-    "condition": "鉴别力 327以上",
+    "condition": "鉴别力 大于等于327",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.2
   },
@@ -1144,7 +1136,7 @@
     "uptime": 180,
     "lvl": 50,
     "id": 231,
-    "condition": "鉴别力 327以上",
+    "condition": "鉴别力 大于等于327",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.2
   },
@@ -1203,7 +1195,7 @@
     "uptime": 180,
     "lvl": 50,
     "id": 232,
-    "condition": "鉴别力 327以上",
+    "condition": "鉴别力 大于等于327",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
@@ -1262,7 +1254,7 @@
     "uptime": 180,
     "lvl": 50,
     "id": 233,
-    "condition": "鉴别力 327以上",
+    "condition": "鉴别力 大于等于327",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.2
   },
@@ -1330,7 +1322,7 @@
     "uptime": 180,
     "lvl": 50,
     "id": 234,
-    "condition": "鉴别力 327以上",
+    "condition": "鉴别力 大于等于327",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.2
   },
@@ -1389,7 +1381,7 @@
     "uptime": 180,
     "lvl": 50,
     "id": 235,
-    "condition": "鉴别力 327以上",
+    "condition": "鉴别力 大于等于327",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.2
   },
@@ -1466,7 +1458,7 @@
     "uptime": 180,
     "lvl": 50,
     "id": 236,
-    "condition": "鉴别力 327以上",
+    "condition": "鉴别力 大于等于327",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
@@ -1543,7 +1535,7 @@
     "uptime": 180,
     "lvl": 50,
     "id": 237,
-    "condition": "鉴别力 327以上",
+    "condition": "鉴别力 大于等于327",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
@@ -1611,7 +1603,7 @@
     "uptime": 180,
     "lvl": 50,
     "id": 238,
-    "condition": "鉴别力 327以上",
+    "condition": "鉴别力 大于等于327",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
@@ -1670,7 +1662,7 @@
     "uptime": 180,
     "lvl": 50,
     "id": 239,
-    "condition": "鉴别力 327以上",
+    "condition": "鉴别力 大于等于327",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
@@ -1729,7 +1721,7 @@
     "uptime": 180,
     "lvl": 50,
     "id": 240,
-    "condition": "鉴别力 327以上",
+    "condition": "鉴别力 大于等于327",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.2
   },
@@ -1788,7 +1780,7 @@
     "uptime": 180,
     "lvl": 50,
     "id": 241,
-    "condition": "鉴别力 327以上",
+    "condition": "鉴别力 大于等于327",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
@@ -1838,7 +1830,7 @@
     "uptime": 180,
     "lvl": 50,
     "id": 242,
-    "condition": "鉴别力 327以上",
+    "condition": "鉴别力 大于等于327",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.2
   },
@@ -1888,7 +1880,7 @@
     "uptime": 180,
     "lvl": 50,
     "id": 245,
-    "condition": "鉴别力 327以上",
+    "condition": "鉴别力 大于等于327",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.3
   },
@@ -1938,7 +1930,7 @@
     "uptime": 180,
     "lvl": 50,
     "id": 246,
-    "condition": "鉴别力 327以上",
+    "condition": "鉴别力 大于等于327",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.3
   },
@@ -1997,7 +1989,7 @@
     "uptime": 180,
     "lvl": 50,
     "id": 247,
-    "condition": "鉴别力 327以上",
+    "condition": "鉴别力 大于等于327",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
@@ -2047,7 +2039,7 @@
     "uptime": 180,
     "lvl": 50,
     "id": 248,
-    "condition": "鉴别力 327以上",
+    "condition": "鉴别力 大于等于327",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.0
   },
@@ -2097,7 +2089,7 @@
     "uptime": 180,
     "lvl": 50,
     "id": 249,
-    "condition": "鉴别力 327以上",
+    "condition": "鉴别力 大于等于327",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.45
   },
@@ -2147,7 +2139,7 @@
     "uptime": 180,
     "lvl": 50,
     "id": 250,
-    "condition": "鉴别力 327以上",
+    "condition": "鉴别力 大于等于327",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.45
   },
@@ -2188,7 +2180,7 @@
     "uptime": 180,
     "lvl": 50,
     "id": 251,
-    "condition": "鉴别力 327以上",
+    "condition": "鉴别力 大于等于327",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.5
   },
@@ -2247,7 +2239,7 @@
     "uptime": 180,
     "lvl": 50,
     "id": 252,
-    "condition": "鉴别力 327以上",
+    "condition": "鉴别力 大于等于327",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 2.5
   },
@@ -3061,7 +3053,7 @@
     "uptime": 120,
     "lvl": 60,
     "id": 318,
-    "condition": "鉴别力 631以上",
+    "condition": "鉴别力 大于等于631",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.0
   },
@@ -3093,7 +3085,7 @@
     "uptime": 120,
     "lvl": 60,
     "id": 320,
-    "condition": "鉴别力 656以上",
+    "condition": "鉴别力 大于等于656",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.0
   },
@@ -3135,7 +3127,7 @@
     "uptime": 120,
     "lvl": 60,
     "id": 321,
-    "condition": "鉴别力 829以上",
+    "condition": "鉴别力 大于等于829",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.0
   },
@@ -3177,7 +3169,7 @@
     "uptime": 120,
     "lvl": 60,
     "id": 323,
-    "condition": "鉴别力 829以上",
+    "condition": "鉴别力 大于等于829",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.0
   },
@@ -3210,7 +3202,7 @@
     "uptime": 120,
     "lvl": 60,
     "id": 324,
-    "condition": "鉴别力 829以上",
+    "condition": "鉴别力 大于等于829",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.0
   },
@@ -3243,7 +3235,7 @@
     "uptime": 120,
     "lvl": 60,
     "id": 325,
-    "condition": "鉴别力 829以上",
+    "condition": "鉴别力 大于等于829",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.0
   },
@@ -3276,7 +3268,7 @@
     "uptime": 120,
     "lvl": 60,
     "id": 326,
-    "condition": "鉴别力 829以上",
+    "condition": "鉴别力 大于等于829",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.0
   },
@@ -3954,7 +3946,7 @@
     "uptime": 120,
     "lvl": 55,
     "id": 339,
-    "condition": "鉴别力 617以上",
+    "condition": "鉴别力 大于等于617",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.0
   },
@@ -4005,7 +3997,7 @@
     "uptime": 120,
     "lvl": 50,
     "id": 340,
-    "condition": "鉴别力 327以上",
+    "condition": "鉴别力 大于等于327",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.0
   },
@@ -4046,7 +4038,7 @@
     "uptime": 120,
     "lvl": 55,
     "id": 341,
-    "condition": "鉴别力 612以上",
+    "condition": "鉴别力 大于等于612",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.0
   },
@@ -4087,7 +4079,7 @@
     "uptime": 120,
     "lvl": 60,
     "id": 342,
-    "condition": "鉴别力 631以上",
+    "condition": "鉴别力 大于等于631",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.0
   },
@@ -4128,7 +4120,7 @@
     "uptime": 120,
     "lvl": 60,
     "id": 343,
-    "condition": "鉴别力 635以上",
+    "condition": "鉴别力 大于等于635",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.0
   },
@@ -4160,7 +4152,7 @@
     "uptime": 120,
     "lvl": 60,
     "id": 344,
-    "condition": "鉴别力 656以上",
+    "condition": "鉴别力 大于等于656",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.0
   },
@@ -4211,7 +4203,7 @@
     "uptime": 120,
     "lvl": 60,
     "id": 345,
-    "condition": "鉴别力 829以上",
+    "condition": "鉴别力 大于等于829",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.0
   },
@@ -4261,11 +4253,7 @@
         "itemFR": "Cristal de glace",
         "itemDE": "Eiskristall",
         "icon": 20009,
-        "id": 9,
-        "reduce": {
-          "item": "Verdigris Guppy",
-          "icon": 28544
-        }
+        "id": 9
       },
       {
         "item": "冰之晶簇",
@@ -4274,11 +4262,7 @@
         "itemFR": "Agrégat de glace",
         "itemDE": "Eispolykristall",
         "icon": 20015,
-        "id": 15,
-        "reduce": {
-          "item": "Verdigris Guppy",
-          "icon": 28544
-        }
+        "id": 15
       }
     ],
     "stars": 2,
@@ -4326,7 +4310,7 @@
     "uptime": 120,
     "lvl": 60,
     "id": 347,
-    "condition": "鉴别力 829以上",
+    "condition": "鉴别力 大于等于829",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.0
   },
@@ -4359,7 +4343,7 @@
     "uptime": 120,
     "lvl": 60,
     "id": 348,
-    "condition": "鉴别力 829以上",
+    "condition": "鉴别力 大于等于829",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.0
   },
@@ -4392,7 +4376,7 @@
     "uptime": 120,
     "lvl": 60,
     "id": 349,
-    "condition": "鉴别力 829以上",
+    "condition": "鉴别力 大于等于829",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.0
   },
@@ -4425,7 +4409,7 @@
     "uptime": 120,
     "lvl": 60,
     "id": 350,
-    "condition": "鉴别力 829以上",
+    "condition": "鉴别力 大于等于829",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.0
   },
@@ -4467,7 +4451,7 @@
     "uptime": 120,
     "lvl": 60,
     "id": 395,
-    "condition": "鉴别力 829以上",
+    "condition": "鉴别力 大于等于829",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.2
   },
@@ -4574,7 +4558,7 @@
     "uptime": 120,
     "lvl": 60,
     "id": 397,
-    "condition": "鉴别力 829以上",
+    "condition": "鉴别力 大于等于829",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.2
   },
@@ -4781,11 +4765,7 @@
         "itemFR": "Cristal de glace",
         "itemDE": "Eiskristall",
         "icon": 20009,
-        "id": 9,
-        "reduce": {
-          "item": "Verdigris Guppy",
-          "icon": 28544
-        }
+        "id": 9
       },
       {
         "item": "冰之晶簇",
@@ -4794,11 +4774,7 @@
         "itemFR": "Agrégat de glace",
         "itemDE": "Eispolykristall",
         "icon": 20015,
-        "id": 15,
-        "reduce": {
-          "item": "Verdigris Guppy",
-          "icon": 28544
-        }
+        "id": 15
       }
     ],
     "stars": 2,
@@ -4846,7 +4822,7 @@
     "uptime": 120,
     "lvl": 60,
     "id": 289,
-    "condition": "鉴别力 945以上",
+    "condition": "鉴别力 大于等于945",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.4
   },
@@ -4879,7 +4855,7 @@
     "uptime": 120,
     "lvl": 60,
     "id": 290,
-    "condition": "鉴别力 945以上",
+    "condition": "鉴别力 大于等于945",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.4
   },
@@ -4912,7 +4888,7 @@
     "uptime": 120,
     "lvl": 60,
     "id": 291,
-    "condition": "鉴别力 945以上",
+    "condition": "鉴别力 大于等于945",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.4
   },
@@ -4945,7 +4921,7 @@
     "uptime": 120,
     "lvl": 60,
     "id": 292,
-    "condition": "鉴别力 945以上",
+    "condition": "鉴别力 大于等于945",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.0
   },
@@ -4978,7 +4954,7 @@
     "uptime": 120,
     "lvl": 60,
     "id": 293,
-    "condition": "鉴别力 945以上",
+    "condition": "鉴别力 大于等于945",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.4
   },
@@ -5011,7 +4987,7 @@
     "uptime": 120,
     "lvl": 60,
     "id": 299,
-    "condition": "鉴别力 945以上",
+    "condition": "鉴别力 大于等于945",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.4
   },
@@ -5044,7 +5020,7 @@
     "uptime": 120,
     "lvl": 60,
     "id": 301,
-    "condition": "鉴别力 945以上",
+    "condition": "鉴别力 大于等于945",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 3.4
   },
@@ -5077,7 +5053,7 @@
     "uptime": 120,
     "lvl": 60,
     "id": 497,
-    "condition": "鉴别力 829以上",
+    "condition": "鉴别力 大于等于829",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 4.0
   },
@@ -5109,7 +5085,7 @@
     "uptime": 120,
     "lvl": 65,
     "id": 498,
-    "condition": "鉴别力 1003以上",
+    "condition": "鉴别力 大于等于1003",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 4.0
   },
@@ -5150,7 +5126,7 @@
     "uptime": 120,
     "lvl": 70,
     "id": 499,
-    "condition": "鉴别力 1088以上",
+    "condition": "鉴别力 大于等于1088",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 4.0
   },
@@ -5182,7 +5158,7 @@
     "uptime": 120,
     "lvl": 70,
     "id": 500,
-    "condition": "鉴别力 1067以上",
+    "condition": "鉴别力 大于等于1067",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 4.0
   },
@@ -5214,7 +5190,7 @@
     "uptime": 120,
     "lvl": 70,
     "id": 501,
-    "condition": "鉴别力 1024以上",
+    "condition": "鉴别力 大于等于1024",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 4.0
   },
@@ -5246,7 +5222,7 @@
     "uptime": 120,
     "lvl": 70,
     "id": 502,
-    "condition": "鉴别力 1088以上",
+    "condition": "鉴别力 大于等于1088",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 4.0
   },
@@ -5288,7 +5264,7 @@
     "uptime": 120,
     "lvl": 70,
     "id": 503,
-    "condition": "鉴别力 1206以上",
+    "condition": "鉴别力 大于等于1206",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 4.0
   },
@@ -5321,7 +5297,7 @@
     "uptime": 120,
     "lvl": 70,
     "id": 504,
-    "condition": "鉴别力 1206以上",
+    "condition": "鉴别力 大于等于1206",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 4.0
   },
@@ -5492,7 +5468,7 @@
     "uptime": 120,
     "lvl": 65,
     "id": 522,
-    "condition": "鉴别力 1003以上",
+    "condition": "鉴别力 大于等于1003",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 4.0
   },
@@ -5524,7 +5500,7 @@
     "uptime": 120,
     "lvl": 70,
     "id": 523,
-    "condition": "鉴别力 1109以上",
+    "condition": "鉴别力 大于等于1109",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 4.0
   },
@@ -5557,7 +5533,7 @@
     "uptime": 120,
     "lvl": 70,
     "id": 524,
-    "condition": "鉴别力 1206以上",
+    "condition": "鉴别力 大于等于1206",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 4.0
   },
@@ -5589,7 +5565,7 @@
     "uptime": 120,
     "lvl": 70,
     "id": 525,
-    "condition": "鉴别力 1024以上",
+    "condition": "鉴别力 大于等于1024",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 4.0
   },
@@ -5630,7 +5606,7 @@
     "uptime": 120,
     "lvl": 70,
     "id": 526,
-    "condition": "鉴别力 1067以上",
+    "condition": "鉴别力 大于等于1067",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 4.0
   },
@@ -5663,7 +5639,7 @@
     "uptime": 120,
     "lvl": 70,
     "id": 527,
-    "condition": "鉴别力 1206以上",
+    "condition": "鉴别力 大于等于1206",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 4.0
   },
@@ -5705,7 +5681,7 @@
     "uptime": 120,
     "lvl": 70,
     "id": 528,
-    "condition": "鉴别力 1206以上",
+    "condition": "鉴别力 大于等于1206",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 4.0
   },
@@ -5747,7 +5723,7 @@
     "uptime": 120,
     "lvl": 70,
     "id": 535,
-    "condition": "鉴别力 1399以上",
+    "condition": "鉴别力 大于等于1399",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 4.2
   },
@@ -5789,7 +5765,7 @@
     "uptime": 120,
     "lvl": 70,
     "id": 536,
-    "condition": "鉴别力 1399以上",
+    "condition": "鉴别力 大于等于1399",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 4.2
   },
@@ -5831,7 +5807,7 @@
     "uptime": 120,
     "lvl": 70,
     "id": 537,
-    "condition": "鉴别力 1399以上",
+    "condition": "鉴别力 大于等于1399",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 4.2
   },
@@ -5864,7 +5840,7 @@
     "uptime": 120,
     "lvl": 70,
     "id": 538,
-    "condition": "鉴别力 1399以上",
+    "condition": "鉴别力 大于等于1399",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 4.2
   },
@@ -5897,7 +5873,7 @@
     "uptime": 120,
     "lvl": 70,
     "id": 555,
-    "condition": "鉴别力 1592以上",
+    "condition": "鉴别力 大于等于1592",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 4.4
   },
@@ -5930,7 +5906,7 @@
     "uptime": 120,
     "lvl": 70,
     "id": 556,
-    "condition": "鉴别力 1592以上",
+    "condition": "鉴别力 大于等于1592",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 4.4
   },
@@ -5963,7 +5939,7 @@
     "uptime": 120,
     "lvl": 70,
     "id": 557,
-    "condition": "鉴别力 1592以上",
+    "condition": "鉴别力 大于等于1592",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 4.4
   },
@@ -5996,7 +5972,7 @@
     "uptime": 120,
     "lvl": 70,
     "id": 558,
-    "condition": "鉴别力 1592以上",
+    "condition": "鉴别力 大于等于1592",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 4.4
   },
@@ -6224,7 +6200,7 @@
     "uptime": 120,
     "lvl": 70,
     "id": 603,
-    "condition": "鉴别力 1399以上",
+    "condition": "鉴别力 大于等于1399",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.0
   },
@@ -6256,7 +6232,7 @@
     "uptime": 120,
     "lvl": 75,
     "id": 604,
-    "condition": "鉴别力 1688以上",
+    "condition": "鉴别力 大于等于1688",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.0
   },
@@ -6288,7 +6264,7 @@
     "uptime": 120,
     "lvl": 75,
     "id": 605,
-    "condition": "鉴别力 1737以上",
+    "condition": "鉴别力 大于等于1737",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.0
   },
@@ -6320,7 +6296,7 @@
     "uptime": 120,
     "lvl": 80,
     "id": 606,
-    "condition": "鉴别力 1828以上",
+    "condition": "鉴别力 大于等于1828",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.0
   },
@@ -6352,7 +6328,7 @@
     "uptime": 120,
     "lvl": 80,
     "id": 607,
-    "condition": "鉴别力 1919以上",
+    "condition": "鉴别力 大于等于1919",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.0
   },
@@ -6384,7 +6360,7 @@
     "uptime": 120,
     "lvl": 80,
     "id": 608,
-    "condition": "鉴别力 2010以上",
+    "condition": "鉴别力 大于等于2010",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.0
   },
@@ -6426,7 +6402,7 @@
     "uptime": 120,
     "lvl": 80,
     "id": 609,
-    "condition": "鉴别力 2105以上",
+    "condition": "鉴别力 大于等于2105",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.0
   },
@@ -6459,7 +6435,7 @@
     "uptime": 120,
     "lvl": 80,
     "id": 610,
-    "condition": "鉴别力 2105以上",
+    "condition": "鉴别力 大于等于2105",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.0
   },
@@ -6630,11 +6606,7 @@
         "itemFR": "Cristal de glace",
         "itemDE": "Eiskristall",
         "icon": 20009,
-        "id": 9,
-        "reduce": {
-          "item": "Verdigris Guppy",
-          "icon": 28544
-        }
+        "id": 9
       },
       {
         "item": "冰之晶簇",
@@ -6643,11 +6615,7 @@
         "itemFR": "Agrégat de glace",
         "itemDE": "Eispolykristall",
         "icon": 20015,
-        "id": 15,
-        "reduce": {
-          "item": "Verdigris Guppy",
-          "icon": 28544
-        }
+        "id": 15
       }
     ],
     "stars": 2,
@@ -6694,7 +6662,7 @@
     "uptime": 120,
     "lvl": 75,
     "id": 628,
-    "condition": "鉴别力 1688以上",
+    "condition": "鉴别力 大于等于1688",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.0
   },
@@ -6726,7 +6694,7 @@
     "uptime": 120,
     "lvl": 75,
     "id": 629,
-    "condition": "鉴别力 1737以上",
+    "condition": "鉴别力 大于等于1737",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.0
   },
@@ -6758,7 +6726,7 @@
     "uptime": 120,
     "lvl": 80,
     "id": 630,
-    "condition": "鉴别力 1828以上",
+    "condition": "鉴别力 大于等于1828",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.0
   },
@@ -6790,7 +6758,7 @@
     "uptime": 120,
     "lvl": 80,
     "id": 631,
-    "condition": "鉴别力 1919以上",
+    "condition": "鉴别力 大于等于1919",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.0
   },
@@ -6822,7 +6790,7 @@
     "uptime": 120,
     "lvl": 80,
     "id": 632,
-    "condition": "鉴别力 2010以上",
+    "condition": "鉴别力 大于等于2010",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.0
   },
@@ -6864,7 +6832,7 @@
     "uptime": 120,
     "lvl": 80,
     "id": 633,
-    "condition": "鉴别力 2105以上",
+    "condition": "鉴别力 大于等于2105",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.0
   },
@@ -6897,7 +6865,7 @@
     "uptime": 120,
     "lvl": 80,
     "id": 634,
-    "condition": "鉴别力 2105以上",
+    "condition": "鉴别力 大于等于2105",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.0
   },
@@ -6939,7 +6907,7 @@
     "uptime": 120,
     "lvl": 80,
     "id": 681,
-    "condition": "鉴别力 2316以上",
+    "condition": "鉴别力 大于等于2316",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.2
   },
@@ -6972,7 +6940,7 @@
     "uptime": 120,
     "lvl": 80,
     "id": 682,
-    "condition": "鉴别力 2316以上",
+    "condition": "鉴别力 大于等于2316",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.2
   },
@@ -7005,7 +6973,7 @@
     "uptime": 120,
     "lvl": 80,
     "id": 683,
-    "condition": "鉴别力 2316以上",
+    "condition": "鉴别力 大于等于2316",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.2
   },
@@ -7047,7 +7015,7 @@
     "uptime": 120,
     "lvl": 80,
     "id": 684,
-    "condition": "鉴别力 2316以上",
+    "condition": "鉴别力 大于等于2316",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.2
   },
@@ -7380,7 +7348,7 @@
     "uptime": 120,
     "lvl": 80,
     "id": 713,
-    "condition": "鉴别力 2316以上",
+    "condition": "鉴别力 大于等于2316",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.2
   },
@@ -7413,7 +7381,7 @@
     "uptime": 120,
     "lvl": 80,
     "id": 714,
-    "condition": "鉴别力 2316以上",
+    "condition": "鉴别力 大于等于2316",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.2
   },
@@ -7446,7 +7414,7 @@
     "uptime": 120,
     "lvl": 80,
     "id": 758,
-    "condition": "鉴别力 2605以上",
+    "condition": "鉴别力 大于等于2605",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.4
   },
@@ -7479,7 +7447,7 @@
     "uptime": 120,
     "lvl": 80,
     "id": 759,
-    "condition": "鉴别力 2605以上",
+    "condition": "鉴别力 大于等于2605",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.4
   },
@@ -7512,7 +7480,7 @@
     "uptime": 120,
     "lvl": 80,
     "id": 760,
-    "condition": "鉴别力 2605以上",
+    "condition": "鉴别力 大于等于2605",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.4
   },
@@ -7545,7 +7513,7 @@
     "uptime": 120,
     "lvl": 80,
     "id": 761,
-    "condition": "鉴别力 2605以上",
+    "condition": "鉴别力 大于等于2605",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.4
   },
@@ -7578,7 +7546,7 @@
     "uptime": 120,
     "lvl": 80,
     "id": 762,
-    "condition": "鉴别力 2605以上",
+    "condition": "鉴别力 大于等于2605",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.4
   },
@@ -7611,7 +7579,7 @@
     "uptime": 120,
     "lvl": 80,
     "id": 763,
-    "condition": "鉴别力 2605以上",
+    "condition": "鉴别力 大于等于2605",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 5.4
   },
@@ -7991,7 +7959,7 @@
     "uptime": 120,
     "lvl": 90,
     "id": 834,
-    "condition": "鉴别力 3401以上",
+    "condition": "鉴别力 大于等于3401",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 6.0
   },
@@ -8033,7 +8001,7 @@
     "uptime": 120,
     "lvl": 90,
     "id": 835,
-    "condition": "鉴别力 3401以上",
+    "condition": "鉴别力 大于等于3401",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 6.0
   },
@@ -8075,7 +8043,7 @@
     "uptime": 120,
     "lvl": 90,
     "id": 836,
-    "condition": "鉴别力 3401以上",
+    "condition": "鉴别力 大于等于3401",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 6.0
   },
@@ -8420,7 +8388,7 @@
     "uptime": 120,
     "lvl": 90,
     "id": 856,
-    "condition": "鉴别力 3401以上",
+    "condition": "鉴别力 大于等于3401",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 6.0
   },
@@ -8471,7 +8439,7 @@
     "uptime": 120,
     "lvl": 90,
     "id": 857,
-    "condition": "鉴别力 3401以上",
+    "condition": "鉴别力 大于等于3401",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 6.0
   },
@@ -8539,7 +8507,7 @@
     "uptime": 120,
     "lvl": 90,
     "id": 858,
-    "condition": "鉴别力 3401以上",
+    "condition": "鉴别力 大于等于3401",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 6.0
   },
@@ -8581,7 +8549,7 @@
     "uptime": 120,
     "lvl": 90,
     "id": 338,
-    "condition": "鉴别力 3800以上",
+    "condition": "鉴别力 大于等于3800",
     "bonus": "额外采集奖励发生率＋30%",
     "patch": 0.0
   },
@@ -8640,7 +8608,7 @@
     "uptime": 120,
     "lvl": 90,
     "id": 346,
-    "condition": "鉴别力 3800以上",
+    "condition": "鉴别力 大于等于3800",
     "bonus": "额外采集奖励发生率＋30%",
     "patch": 0.0
   },
@@ -8699,7 +8667,7 @@
     "uptime": 120,
     "lvl": 90,
     "id": 400,
-    "condition": "鉴别力 3800以上",
+    "condition": "鉴别力 大于等于3800",
     "bonus": "额外采集奖励发生率＋30%",
     "patch": 6.2
   },
@@ -8758,7 +8726,7 @@
     "uptime": 120,
     "lvl": 90,
     "id": 463,
-    "condition": "鉴别力 3800以上",
+    "condition": "鉴别力 大于等于3800",
     "bonus": "额外采集奖励发生率＋30%",
     "patch": 6.2
   },
@@ -8817,7 +8785,7 @@
     "uptime": 120,
     "lvl": 90,
     "id": 627,
-    "condition": "鉴别力 3800以上",
+    "condition": "鉴别力 大于等于3800",
     "bonus": "额外采集奖励发生率＋30%",
     "patch": 5.0
   },
@@ -8859,7 +8827,7 @@
     "uptime": 120,
     "lvl": 90,
     "id": 695,
-    "condition": "鉴别力 3800以上",
+    "condition": "鉴别力 大于等于3800",
     "bonus": "额外采集奖励发生率＋30%",
     "patch": 6.2
   },
@@ -8892,7 +8860,7 @@
     "uptime": 120,
     "lvl": 90,
     "id": 932,
-    "condition": "鉴别力 4000以上",
+    "condition": "鉴别力 大于等于4000",
     "bonus": "额外采集奖励发生率＋30%",
     "patch": 6.4
   },
@@ -8951,7 +8919,7 @@
     "uptime": 120,
     "lvl": 90,
     "id": 933,
-    "condition": "鉴别力 4000以上",
+    "condition": "鉴别力 大于等于4000",
     "bonus": "额外采集奖励发生率＋30%",
     "patch": 6.4
   },
@@ -8984,7 +8952,7 @@
     "uptime": 120,
     "lvl": 90,
     "id": 934,
-    "condition": "鉴别力 4000以上",
+    "condition": "鉴别力 大于等于4000",
     "bonus": "额外采集奖励发生率＋30%",
     "patch": 6.4
   },
@@ -9017,7 +8985,7 @@
     "uptime": 120,
     "lvl": 90,
     "id": 935,
-    "condition": "鉴别力 4000以上",
+    "condition": "鉴别力 大于等于4000",
     "bonus": "额外采集奖励发生率＋30%",
     "patch": 6.4
   },
@@ -9050,7 +9018,7 @@
     "uptime": 120,
     "lvl": 90,
     "id": 936,
-    "condition": "鉴别力 4000以上",
+    "condition": "鉴别力 大于等于4000",
     "bonus": "额外采集奖励发生率＋30%",
     "patch": 6.4
   },
@@ -9109,7 +9077,7 @@
     "uptime": 120,
     "lvl": 90,
     "id": 937,
-    "condition": "鉴别力 4000以上",
+    "condition": "鉴别力 大于等于4000",
     "bonus": "额外采集奖励发生率＋30%",
     "patch": 6.4
   },
@@ -9191,7 +9159,7 @@
         "id": 46247,
         "reduce": {
           "item": "Levinchrome Aethersand",
-          "icon": "t/21248"
+          "icon": 21248
         }
       },
       {
@@ -9303,11 +9271,11 @@
         "itemJA": "菖蒲根",
         "itemFR": "Racine de jonc odorant",
         "itemDE": "Kalmuswurzel",
-        "icon": "t/22707",
+        "icon": 22707,
         "id": 46248,
         "reduce": {
           "item": "Levinchrome Aethersand",
-          "icon": "t/21248"
+          "icon": 21248
         }
       },
       {
@@ -9666,7 +9634,7 @@
     "uptime": 120,
     "lvl": 100,
     "id": 1030,
-    "condition": "鉴别力 4907以上",
+    "condition": "鉴别力 大于等于4907",
     "bonus": "额外采集奖励发生率＋30%",
     "patch": 7.0
   },
@@ -9699,7 +9667,7 @@
     "uptime": 120,
     "lvl": 100,
     "id": 1031,
-    "condition": "鉴别力 4907以上",
+    "condition": "鉴别力 大于等于4907",
     "bonus": "额外采集奖励发生率＋30%",
     "patch": 7.0
   },
@@ -9741,7 +9709,7 @@
     "uptime": 120,
     "lvl": 100,
     "id": 1032,
-    "condition": "鉴别力 4907以上",
+    "condition": "鉴别力 大于等于4907",
     "bonus": "额外采集奖励发生率＋30%",
     "patch": 7.0
   },
@@ -9774,7 +9742,7 @@
     "uptime": 120,
     "lvl": 100,
     "id": 1033,
-    "condition": "鉴别力 4907以上",
+    "condition": "鉴别力 大于等于4907",
     "bonus": "额外采集奖励发生率＋30%",
     "patch": 7.0
   },
@@ -9807,7 +9775,7 @@
     "uptime": 120,
     "lvl": 100,
     "id": 1034,
-    "condition": "鉴别力 4907以上",
+    "condition": "鉴别力 大于等于4907",
     "bonus": "额外采集奖励发生率＋30%",
     "patch": 7.0
   },
@@ -9849,7 +9817,7 @@
     "uptime": 120,
     "lvl": 100,
     "id": 1035,
-    "condition": "鉴别力 4907以上",
+    "condition": "鉴别力 大于等于4907",
     "bonus": "额外采集奖励发生率＋30%",
     "patch": 7.0
   },
@@ -9882,7 +9850,7 @@
     "uptime": 120,
     "lvl": 100,
     "id": 1188,
-    "condition": "鉴别力 5254以上",
+    "condition": "鉴别力 大于等于5254",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 7.2
   },
@@ -9915,7 +9883,7 @@
     "uptime": 120,
     "lvl": 100,
     "id": 1189,
-    "condition": "鉴别力 5254以上",
+    "condition": "鉴别力 大于等于5254",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 7.2
   },
@@ -9929,7 +9897,7 @@
         "itemJA": "フルグライト",
         "itemFR": "Fulgurite",
         "itemDE": "Fulgurit",
-        "icon": "t/21492",
+        "icon": 21492,
         "id": 45973
       },
       {
@@ -9957,7 +9925,7 @@
     "uptime": 120,
     "lvl": 100,
     "id": 1190,
-    "condition": "鉴别力 5254以上",
+    "condition": "鉴别力 大于等于5254",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 7.2
   },
@@ -9999,7 +9967,7 @@
     "uptime": 120,
     "lvl": 100,
     "id": 1191,
-    "condition": "鉴别力 5254以上",
+    "condition": "鉴别力 大于等于5254",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 7.2
   },
@@ -10032,7 +10000,7 @@
     "uptime": 120,
     "lvl": 100,
     "id": 1192,
-    "condition": "鉴别力 5254以上",
+    "condition": "鉴别力 大于等于5254",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 7.2
   },
@@ -10065,8 +10033,206 @@
     "uptime": 120,
     "lvl": 100,
     "id": 1193,
-    "condition": "鉴别力 5254以上",
+    "condition": "鉴别力 大于等于5254",
     "bonus": "额外采集奖励发生率＋40%",
     "patch": 7.2
+  },
+  {
+    "type": "石场",
+    "func": "node",
+    "items": [
+      {
+        "item": "玫瑰石榴石原石",
+        "itemEN": "Rose Garnet Ore",
+        "itemJA": "ローズガーネット原石",
+        "itemFR": "Grenat rose brut",
+        "itemDE": "Roh-Rosengranat",
+        "icon": 21475,
+        "id": 49209
+      }
+    ],
+    "stars": 3,
+    "time": [
+      0,
+      12
+    ],
+    "title": "亚塔纳内草地",
+    "zone": "夏劳尼荒野",
+    "coords": [
+      23.58,
+      27.11
+    ],
+    "name": "传说的",
+    "uptime": 120,
+    "lvl": 100,
+    "id": 1296,
+    "condition": "鉴别力 大于等于5600",
+    "bonus": "额外采集奖励发生率＋30%",
+    "patch": 7.4
+  },
+  {
+    "type": "矿脉",
+    "func": "node",
+    "items": [
+      {
+        "item": "高密度轻铝矿",
+        "itemEN": "Dense Aluminum Ore",
+        "itemJA": "高密度軽銀鉱",
+        "itemFR": "Minerai d'aluminium lourd",
+        "itemDE": "Hochkonzentrierter Aluminium-Erzklumpen",
+        "icon": 21206,
+        "id": 49208
+      }
+    ],
+    "stars": 3,
+    "time": [
+      10,
+      22
+    ],
+    "title": "旧亚历山德里亚",
+    "zone": "遗产之地",
+    "coords": [
+      23.68,
+      27.95
+    ],
+    "name": "传说的",
+    "uptime": 120,
+    "lvl": 100,
+    "id": 1297,
+    "condition": "鉴别力 大于等于5600",
+    "bonus": "额外采集奖励发生率＋30%",
+    "patch": 7.4
+  },
+  {
+    "type": "矿脉",
+    "func": "node",
+    "items": [
+      {
+        "item": "园圃软水",
+        "itemEN": "Windspath Water",
+        "itemJA": "ガーデン・ソフトウォーター",
+        "itemFR": "Eau douce des jardins",
+        "itemDE": "Windpfad-Wasser",
+        "icon": 22678,
+        "id": 49212
+      }
+    ],
+    "stars": 3,
+    "time": [
+      2,
+      14
+    ],
+    "title": "易知区",
+    "zone": "活着的记忆",
+    "coords": [
+      8.17,
+      14.15
+    ],
+    "name": "传说的",
+    "uptime": 120,
+    "lvl": 100,
+    "id": 1298,
+    "condition": "鉴别力 大于等于5600",
+    "bonus": "额外采集奖励发生率＋30%",
+    "patch": 7.4
+  },
+  {
+    "type": "良材",
+    "func": "node",
+    "items": [
+      {
+        "item": "蜡棕叶",
+        "itemEN": "Carnauba Leaf",
+        "itemJA": "ロウヤシの葉",
+        "itemFR": "Feuille de palmier à cire",
+        "itemDE": "Copernicia-Blatt",
+        "icon": 22709,
+        "id": 49210
+      }
+    ],
+    "stars": 3,
+    "time": [
+      4,
+      16
+    ],
+    "title": "孵卵树群",
+    "zone": "克扎玛乌卡湿地",
+    "coords": [
+      14.71,
+      10.21
+    ],
+    "name": "传说的",
+    "uptime": 120,
+    "lvl": 100,
+    "id": 1299,
+    "condition": "鉴别力 大于等于5600",
+    "bonus": "额外采集奖励发生率＋30%",
+    "patch": 7.4
+  },
+  {
+    "type": "草场",
+    "func": "node",
+    "items": [
+      {
+        "item": "奥阔亚麻",
+        "itemEN": "Urqopacha Flax",
+        "itemJA": "オルコ亜麻",
+        "itemFR": "Lin d'Urqopacha",
+        "itemDE": "Urqopacha-Flachs",
+        "icon": 25033,
+        "id": 49211
+      }
+    ],
+    "stars": 3,
+    "time": [
+      6,
+      18
+    ],
+    "title": "拉托托花田",
+    "zone": "奥阔帕恰山",
+    "coords": [
+      5.24,
+      25.18
+    ],
+    "name": "传说的",
+    "uptime": 120,
+    "lvl": 100,
+    "id": 1300,
+    "condition": "鉴别力 大于等于5600",
+    "bonus": "额外采集奖励发生率＋30%",
+    "patch": 7.4
+  },
+  {
+    "type": "良材",
+    "func": "node",
+    "items": [
+      {
+        "item": "雷松木原木",
+        "itemEN": "Fulgurpine Log",
+        "itemJA": "エレクトロパイン原木",
+        "itemFR": "Rondin de pin électrique",
+        "itemDE": "Elektrokiefern-Holzscheit",
+        "icon": 22427,
+        "id": 49207
+      }
+    ],
+    "stars": 3,
+    "time": [
+      8,
+      20
+    ],
+    "title": "易知区",
+    "zone": "活着的记忆",
+    "coords": [
+      8.49,
+      9.55
+    ],
+    "name": "传说的",
+    "uptime": 120,
+    "lvl": 100,
+    "id": 1301,
+    "condition": "鉴别力 大于等于5600",
+    "bonus": "额外采集奖励发生率＋30%",
+    "patch": 7.4
   }
 ];

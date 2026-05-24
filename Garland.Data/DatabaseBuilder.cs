@@ -102,7 +102,7 @@ namespace Garland.Data
         public Dictionary<Saint.InstanceContent, Saint.ContentFinderCondition> ContentFinderConditionByInstanceContent = new Dictionary<Saint.InstanceContent, Saint.ContentFinderCondition>();
         public static IPrinter Printer;
 
-        public DatabaseBuilder(SQLite.SQLiteConnection libra, SaintCoinach.ARealmReversed realm, SaintCoinach.ARealmReversed interRealm, SaintCoinach.ARealmReversed tcRealm)
+        public DatabaseBuilder(SQLite.SQLiteConnection libra, SaintCoinach.ARealmReversed realm, SaintCoinach.ARealmReversed interRealm, SaintCoinach.ARealmReversed tcRealm, SaintCoinach.ARealmReversed krRealm = null)
         {
             _db = GarlandDatabase.Instance;
             _libra = libra;
@@ -110,7 +110,7 @@ namespace Garland.Data
             _interRealm = interRealm;
             _tcRealm = tcRealm;
 
-            Localize = new Localize(realm, interRealm, tcRealm);
+            Localize = new Localize(realm, interRealm, tcRealm, krRealm);
             _instance = this;
         }
 
@@ -463,6 +463,11 @@ namespace Garland.Data
         public Saint.IXivSheet<T> Sheet<T>(string name) where T : Saint.IXivRow
         {
             return Realm.GameData.GetSheet<T>(name);
+        }
+
+        public Saint.XivSheet2<T> Sheet2<T>() where T : Saint.XivSubRow
+        {
+            return Realm.GameData.GetSheet2<T>();
         }
 
         public Saint.IXivSheet<Saint.XivRow> Sheet(string name)

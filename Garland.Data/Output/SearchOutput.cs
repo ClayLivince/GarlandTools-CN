@@ -35,7 +35,7 @@ namespace Garland.Data.Output
 
             // Nodes
             foreach (var node in _db.Nodes)
-                WriteIndex(node, "node", (string)node.name, null, null, null, null, null);
+                WriteIndex(node, "node", (string)node.name, null, null, null, null, null, null);
 
             // Fishing Spots
             foreach (var spot in _db.FishingSpots)
@@ -67,7 +67,7 @@ namespace Garland.Data.Output
 
                 dynamic keyO = new JObject();
                 keyO.name = key;
-                WriteIndex(npc, "npc", keyO, npc.en, npc.fr, npc.de, npc.ja, npc.tc, 0);
+                WriteIndex(npc, "npc", keyO, npc.en, npc.fr, npc.de, npc.ja, npc.tc, npc.ko, 0);
             }
 
             // Actions
@@ -151,10 +151,10 @@ namespace Garland.Data.Output
 
         void WriteIndex(dynamic obj, string type)
         {
-            WriteIndex(obj, type, obj.chs, obj.en, obj.fr, obj.de, obj.ja, obj.tc, 0);
+            WriteIndex(obj, type, obj.chs, obj.en, obj.fr, obj.de, obj.ja, obj.tc, obj.ko, 0);
         }
         
-        void WriteIndex(dynamic obj, string type, dynamic obj_chs, dynamic obj_en, dynamic obj_fr, dynamic obj_de, dynamic obj_ja, dynamic obj_tc, int dummy)
+        void WriteIndex(dynamic obj, string type, dynamic obj_chs, dynamic obj_en, dynamic obj_fr, dynamic obj_de, dynamic obj_ja, dynamic obj_tc, dynamic obj_ko, int dummy)
         {
             WriteIndex(obj, type,
                 obj_chs == null ? null : (string)obj_chs.name,
@@ -162,10 +162,11 @@ namespace Garland.Data.Output
                 obj_fr == null ? null : (string)obj_fr.name,
                 obj_de == null ? null : (string)obj_de.name,
                 obj_ja == null ? null : (string)obj_ja.name,
-                obj_tc == null ? null : (string)obj_tc.name);
+                obj_tc == null ? null : (string)obj_tc.name,
+                obj_ko == null ? null : (string)obj_ko.name);
         }
 
-        void WriteIndex(dynamic obj, string type, string key_chs, string key_en, string key_fr, string key_de, string key_ja, string key_tc)
+        void WriteIndex(dynamic obj, string type, string key_chs, string key_en, string key_fr, string key_de, string key_ja, string key_tc, string key_ko)
         {
             var id = (string)obj.id;
 
@@ -187,6 +188,8 @@ namespace Garland.Data.Output
             if (!string.IsNullOrEmpty(key_tc))
                 _update.Include(new SearchRow() { Id = id, Type = type, Lang = "tc", Name = key_tc, Json = JsonConvert.SerializeObject(GetSearchPartial(obj, type, "tc", id)) });
 
+            if (!string.IsNullOrEmpty(key_ko))
+                _update.Include(new SearchRow() { Id = id, Type = type, Lang = "ko", Name = key_ko, Json = JsonConvert.SerializeObject(GetSearchPartial(obj, type, "ko", id)) });
         }
 
         dynamic GetSearchPartial(dynamic obj, string type, string lang, string id)

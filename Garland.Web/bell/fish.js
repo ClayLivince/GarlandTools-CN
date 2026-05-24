@@ -49134,7 +49134,7 @@ gt.bell.fish = [
     "zone": "迷津"
   },
   {
-    "name": "特级以太药虱",
+    "name": "特级以太虱",
     "patch": 6.0,
     "baits": [
       [

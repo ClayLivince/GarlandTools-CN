@@ -32,6 +32,7 @@ namespace Garland.Data.Output
             _languageSort["de"] = 4;
             _languageSort["fr"] = 5;
             _languageSort["tc"] = 6;
+            _languageSort["ko"] = 7;
         }
 
         public UpdatePackage(string name)
@@ -84,6 +85,7 @@ namespace Garland.Data.Output
             languageSort["de"] = 5;
             languageSort["fr"] = 6;
             languageSort["tc"] = 7;
+            languageSort["ko"] = 8;
 
             return _rows
                 .OrderBy(r => languageSort[r.Lang])

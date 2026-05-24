@@ -17,10 +17,10 @@ namespace Garland.Data.Modules
         readonly double[,] OvermeldPenalties = new double[,]
         {
             // T1, T2,  T3,  T4,  T5,  T6,  T7,  T8
-            { 0,   0.5, 1.0, 1.5, 3.0, 6.0, 3.0, 6.0, 10.0, 10.0 }, // Slot 2
-            { 0.5, 1.0, 1.5, 2.0, 3.5, 7.0, 3.5, 7.0, 10.0, 10.0 }, // Slot 3
-            { 1.0, 1.5, 2.0, 2.5, 4.0, 8.0, 4.0, 8.0, 10.0, 10.0 }, // Slot 4
-            { 1.5, 2.0, 2.5, 3.0, 4.5, 9.0, 4.5, 9.0, 10.0, 10.0 }  // Slot 5
+            { 0,   0.5, 1.0, 1.5, 3.0, 6.0, 3.0, 6.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0 }, // Slot 2
+            { 0.5, 1.0, 1.5, 2.0, 3.5, 7.0, 3.5, 7.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0 }, // Slot 3
+            { 1.0, 1.5, 2.0, 2.5, 4.0, 8.0, 4.0, 8.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0 }, // Slot 4
+            { 1.5, 2.0, 2.5, 3.0, 4.5, 9.0, 4.5, 9.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0 }  // Slot 5
         };
         const double OvermeldPenalty = 2.0;
 
@@ -185,6 +185,16 @@ namespace Garland.Data.Modules
                 new SW("信念", .001), new SW("咏唱速度", .001),
                 new SW("暴击", .001), new SW("直击", .001)
             });
+
+            // Beastmaster
+            _jobsByKey[43] = new JobData(GarlandDatabase.BlueMageLevelCap, new SW[] {
+                new SW("物理基本性能", 15),
+                new SW("力量", 1),
+                new SW("灵巧", .1),
+                new SW("信念", .001), new SW("技能速度", .001),
+                new SW("暴击", .001), new SW("直击", .001)
+            });
+
 
             // Miner, Botanist, Fisher
             _jobsByKey[16] = new JobData(GarlandDatabase.LevelCap, new SW[] { new SW("获得力", 1), new SW("鉴别力", 1), new SW("采集力", 1) });

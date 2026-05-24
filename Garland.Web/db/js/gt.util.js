@@ -21,8 +21,9 @@ gt.localize = {
                 view.localize.fr = obj.fr;
                 view.localize.de = obj.de;
                 view.localize.tc = obj.tc;
+                view.localize.ko = obj.ko;
 
-                for (let localized of ["en", "ja", "fr", "de", "tc"]){
+                for (let localized of ["en", "ja", "fr", "de", "tc", "ko"]){
                     let others = "";
                     for (let key in view.localize[localized]){
                         if (this.preExtracted.indexOf(key) === -1){

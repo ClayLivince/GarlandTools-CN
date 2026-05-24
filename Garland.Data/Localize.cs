@@ -16,23 +16,30 @@ namespace Garland.Data
         private ARealmReversed _realm;
         private ARealmReversed _interRealm;
         private ARealmReversed _tcRealm;
+        private ARealmReversed _krRealm;
+
         private readonly XivCollection _data;
         private readonly XivCollection _interData;
         private readonly XivCollection _tcData;
+        private readonly XivCollection _krData;
+
         private readonly Tuple<string, Language>[] _langs;
         public Tuple<string, Language>[] Langs => _langs;
         private readonly Tuple<string, Language>[] _interLangs;
         private readonly Tuple<string, Language>[] _tcLangs;
+        private readonly Tuple<string, Language>[] _krLangs;
 
-        public Localize(ARealmReversed realm, ARealmReversed interRealm, ARealmReversed tcRealm)
+        public Localize(ARealmReversed realm, ARealmReversed interRealm, ARealmReversed tcRealm, ARealmReversed krRealm)
         {
             _realm = realm;
             _interRealm = interRealm;
             _tcRealm = tcRealm;
+            _krRealm = krRealm;
 
             _data = realm.GameData;
             _interData = interRealm.GameData;
             _tcData = tcRealm.GameData;
+            _krData = krRealm.GameData;
 
             _langs = new Tuple<string, Language>[]
             {
@@ -49,6 +56,10 @@ namespace Garland.Data
             {
                 Tuple.Create(Language.TraditionalChinese.GetCode(), Language.TraditionalChinese)
             };
+            _krLangs = new Tuple<string, Language>[]
+            {
+                Tuple.Create(Language.Korean.GetCode(), Language.Korean)
+            };
         }
 
         public void Strings(JObject obj, IXivRow row, bool doTry, Func<XivString, string> transform, params string[] cols)
@@ -58,6 +69,7 @@ namespace Garland.Data
 
             IXivRow interRow = null;
             IXivRow tcRow = null;
+            IXivRow krRow = null;
 
             try
             {
@@ -68,6 +80,12 @@ namespace Garland.Data
             try
             {
                 tcRow = _tcData.GetSheet(sheetName)[key];
+            }
+            catch (Exception ex) { }
+
+            try
+            {
+                 krRow = _krData.GetSheet(sheetName)[key];
             }
             catch (Exception ex) { }
 
@@ -162,6 +180,28 @@ namespace Garland.Data
                 _tcData.ActiveLanguage = tcCurrentLang;
             }
 
+            if (krRow != null)
+            {
+                _krData.ActiveLanguage = Language.Korean;
+                foreach (var langTuple in _krLangs)
+                {
+                    var code = langTuple.Item1;
+                    var lang = langTuple.Item2;
+                    
+                    if (!obj.TryGetValue(code, out var strs))
+                        obj[code] = strs = new JObject();
+
+                    foreach (var col in cols)
+                    {
+                        var value = krRow[col];
+                        if (value is XivString && string.IsNullOrEmpty((XivString)value))
+                            continue;
+
+                        var sanitizedCol = col.ToLower().Replace("{", "").Replace("}", "");
+                        strs[sanitizedCol] = transform == null ? (value.ToString().TrimEnd()) : transform((XivString)value);
+                    }
+                }
+            }
         }
 
         public void Strings(JObject obj, IXivRow row, Func<XivString, string> transform, params string[] cols) {
@@ -191,6 +231,7 @@ namespace Garland.Data
 
             IXivRow interRow = null;
             IXivRow tcRow = null;
+            IXivRow krRow = null;
 
             try
             {
@@ -201,6 +242,12 @@ namespace Garland.Data
             try
             {
                 tcRow = _tcData.GetSheet(sheetName)[key];
+            }
+            catch (Exception ex) { }
+
+            try
+            {
+                krRow = _krData.GetSheet(sheetName)[key];
             }
             catch (Exception ex) { }
 
@@ -270,6 +317,27 @@ namespace Garland.Data
                     strs[toColumn] = toValue;
                 }
                 _tcData.ActiveLanguage = currentLang;
+            }
+
+            if (krRow != null && (krRow.Key != 0 || !string.IsNullOrEmpty(krRow.ToString())))
+            {
+                _krData.ActiveLanguage = Language.Korean;
+                foreach (var langTuple in _krLangs)
+                {
+                    var code = langTuple.Item1;
+                    var lang = langTuple.Item2;
+                    
+
+                    if (!obj.TryGetValue(code, out var strs))
+                        obj[code] = strs = new JObject();
+
+                    var value = krRow[fromColumn];
+                    var toValue = transform == null ? (value.ToString()) : transform((XivString)value);
+                    if (string.IsNullOrEmpty(toValue))
+                        continue;
+
+                    strs[toColumn] = toValue;
+                }
             }
         }
 

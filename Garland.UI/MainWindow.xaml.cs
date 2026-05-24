@@ -147,9 +147,10 @@ namespace Garland.UI
             var realm = new SaintCoinach.ARealmReversed(Config.GamePath, "SaintCoinachcn.History.zip", SaintCoinach.Ex.Language.ChineseSimplified, null, "cn");
             var interRealm = new SaintCoinach.ARealmReversed(Config.InterGamePath, "SaintCoinach.History.zip", SaintCoinach.Ex.Language.English);
             var tcRealm = new SaintCoinach.ARealmReversed(Config.TCGamePath, "SaintCoinach.tc.History.zip", SaintCoinach.Ex.Language.TraditionalChinese, null, "tc");
+            var krRealm = new SaintCoinach.ARealmReversed(Config.KRGamePath, "SaintCoinach.ko.History.zip", SaintCoinach.Ex.Language.Korean, null, "ko");
 
             var libra = new SQLite.SQLiteConnection(libraPath, SQLite.SQLiteOpenFlags.ReadOnly);
-            var builder = new DatabaseBuilder(libra, realm, interRealm, tcRealm);
+            var builder = new DatabaseBuilder(libra, realm, interRealm, tcRealm, krRealm);
             SaintCoinach.Imaging.IconHelper.PreferHighRes = true;
 
             DatabaseBuilder.PrintLine($"HAVE YOU CHANGED VERSION CODE ??????");
@@ -161,9 +162,11 @@ namespace Garland.UI
             DatabaseBuilder.PrintLine($"Game version: {realm.GameVersion}");
             DatabaseBuilder.PrintLine($"Global game version: {interRealm.GameVersion}");
             DatabaseBuilder.PrintLine($"TC game version: {tcRealm.GameVersion}");
+            DatabaseBuilder.PrintLine($"KO game version: {krRealm.GameVersion}");
             DatabaseBuilder.PrintLine($"Definition version: {realm.DefinitionVersion}");
             DatabaseBuilder.PrintLine($"Global Definition version: {interRealm.DefinitionVersion}");
             DatabaseBuilder.PrintLine($"TC Definition version: {tcRealm.DefinitionVersion}");
+            DatabaseBuilder.PrintLine($"KO Definition version: {krRealm.DefinitionVersion}");
 
             var processing = Stopwatch.StartNew();
             builder.Build(fetchIconsOnly, buildNpcOnly);
@@ -181,9 +184,11 @@ namespace Garland.UI
             var realm = new SaintCoinach.ARealmReversed(Config.GamePath, "SaintCoinachcn.History.zip", SaintCoinach.Ex.Language.ChineseSimplified, null, "cn");
             var interRealm = new SaintCoinach.ARealmReversed(Config.InterGamePath, "SaintCoinach.History.zip", SaintCoinach.Ex.Language.English);
             var tcRealm = new SaintCoinach.ARealmReversed(Config.TCGamePath, "SaintCoinach.tc.History.zip", SaintCoinach.Ex.Language.TraditionalChinese, null, "tc");
+            var krRealm = new SaintCoinach.ARealmReversed(Config.KRGamePath, "SaintCoinach.ko.History.zip", SaintCoinach.Ex.Language.Korean, null, "ko");
+
 
             var libra = new SQLite.SQLiteConnection(libraPath, SQLite.SQLiteOpenFlags.ReadOnly);
-            var builder = new DatabaseBuilder(libra, realm, interRealm, tcRealm);
+            var builder = new DatabaseBuilder(libra, realm, interRealm, tcRealm, krRealm);
 
             DatabaseBuilder.PrintLine($"HAVE YOU CHANGED VERSION CODE ??????");
             DatabaseBuilder.PrintLine($"HAVE YOU CHANGED VERSION CODE ??????");

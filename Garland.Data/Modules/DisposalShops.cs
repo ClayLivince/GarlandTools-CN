@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json.Linq;
+using SaintCoinach.Xiv;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,7 +36,7 @@ namespace Garland.Data.Modules
             var shopName = sDisposalShop["ShopName"].ToString();
             var npcIds = sNpcs.Select(n => n.Key).ToArray();
 
-            foreach (var sDisposalShopItem in builder.Sheet2("DisposalShopItem"))
+            foreach (var sDisposalShopItem in builder.Sheet2<DisposalShopItem>())
             {
                 if (sDisposalShopItem.ParentKey != disposalShopKey)
                     continue;

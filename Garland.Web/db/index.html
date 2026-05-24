@@ -344,6 +344,30 @@
                      </span>
                 </div>
             </div>
+            {{?it.ko}}
+            <div class="subsection collapsible collapsed" data-headername="localize">
+                <img src="images/ko.png" class="subsection-icon">
+                <h2 class="pointer">{{=it.ko.name}}</h2>
+
+                <div class="source-link collapse-toggle line">
+                    <span class="help">
+                        {{=it.ko.name}}
+                        <br>
+                        {{?it.ko.location}}
+                            <i class="xiv arrow-right"></i>{{=it.ko.location}}
+                        {{?}}
+                        <br>
+                        {{?it.ko.description}}
+                            {{=it.ko.description}}
+                        {{?}}
+                        <br>
+                        {{?it.ko.other}}
+                            {{=it.ko.other}}
+                        {{?}}
+                     </span>
+                </div>
+            </div>
+            {{?}}
         </div>
     </script>
 
@@ -3969,6 +3993,7 @@
                             <option value="ja" data-img-src="images/jp.png">日语</option>
                             <option value="fr" data-img-src="images/fr.png">法语</option>
                             <option value="de" data-img-src="images/de.png">德语</option>
+                            <option value="ko" data-img-src="images/ko.png">韩语</option>
                             <option value="global" data-img-src="images/global.png">全部(慢)</option>
                         </select>
                         <script>

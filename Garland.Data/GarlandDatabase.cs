@@ -13,8 +13,8 @@ namespace Garland.Data
     public class GarlandDatabase
     {
         // NOTE: This section must be updated with every patch!
-        public const decimal NextPatch = 7.38m;
-        public const decimal GlobalPatch = 7.35m;
+        public const decimal NextPatch = 7.5m;
+        public const decimal GlobalPatch = 7.5m;
         public static Patch[] MajorPatches = new[] {
             new Patch(1m, "遗产", "遗产"),
             new Patch(1.9m, "Wiki特供", "遗产"),
@@ -58,6 +58,8 @@ namespace Garland.Data
             new Patch(7.1m, "与未知邂逅", "金曦之遗辉"),
             new Patch(7.2m, "永久探求者", "金曦之遗辉"),
             new Patch(7.3m, "明日的路标", "金曦之遗辉"),
+            new Patch(7.4m, "雾中奇境", "金曦之遗辉"),
+            new Patch(7.5m, "天际的行路", "金曦之遗辉"),
         };
 
         public static int LevelCap = -1; // Filled in from Miscellaneous.
