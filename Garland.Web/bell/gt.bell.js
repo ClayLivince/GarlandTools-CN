@@ -367,11 +367,11 @@ gt.bell = {
                 return true;
             if (!filters.botanist && (def.type == "良材" || def.type == "草场"))
                 return true;
-            if (!filters.unspoiled && def.name == "Unspoiled")
+            if (!filters.unspoiled && def.name == "未知的")
                 return true;
-            if (!filters.ephemeral && def.name == "Ephemeral")
+            if (!filters.ephemeral && def.name == "限时的")
                 return true;
-            if (!filters.legendary && def.name == "Legendary")
+            if (!filters.legendary && def.name == "传说的")
                 return true;
             if (filters.reducibleOnly && !_.any(def.items, function(i) { return i.reduce; }))
                 return true;
